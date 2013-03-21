@@ -1,0 +1,79 @@
+{
+  "id": "65dbe2fb692af40001944ba7",
+  "name": "XR (Pirate Talk)",
+  "slug": "pirate-talk",
+  "description": "XR, MR, VR, and AR!!! The Future According to Pirates",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/tumblr_m8an4oaur71qc37j4o1_500.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/pirate-talk/",
+  "posts": [
+    {
+      "id": "6777d402e9cf8d00018d42d6",
+      "title": "The Invisible Resolution—NVIDIA's Neural Optics and the Death of Computing as We Know It",
+      "slug": "the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it",
+      "published_at": "2025-01-03T05:55:37.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "67722b029d10560001d201d7",
+      "title": "The Perfect Platform Heist: The Greatest Trick Google Ever Pulled",
+      "slug": "the-perfect-platform-heist-the-greatest-trick-google-ever-pulled",
+      "published_at": "2024-12-29T22:02:56.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-perfect-platform-heist-the-greatest-trick-google-ever-pulled/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "673c00af2031060001730f74",
+      "title": "The Simulation Trap: How Virtual Tourism Is Killing Real Culture",
+      "slug": "the-simulation-trap-how-virtual-tourism-is-killing-real-culture",
+      "published_at": "2024-08-29T19:15:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-simulation-trap-how-virtual-tourism-is-killing-real-culture/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "671ed18f8c814100011b02b4",
+      "title": "VR's Quest for 50 Million: The Ultimate Experience Economy Catalyst",
+      "slug": "vrs-quest-for-50-million",
+      "published_at": "2024-07-11T17:23:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/vrs-quest-for-50-million/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "660adb03945b2e000170f06d",
+      "title": "Disney’s Autonomatronics Odyssey",
+      "slug": "disneys-autonomatronics-odyssey",
+      "published_at": "2024-04-01T23:11:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/disneys-autonomatronics-odyssey/",
+      "featured": false,
+      "reading_time": 22
+    },
+    {
+      "id": "65dac628692af40001944900",
+      "title": "From AR Glasses to Reality-Bending Lenses",
+      "slug": "from-ar-glasses-to-reality-bending-lenses",
+      "published_at": "2024-02-25T20:21:18.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-ar-glasses-to-reality-bending-lenses/",
+      "featured": false,
+      "reading_time": 8
+    }
+  ],
+  "post_count": 6,
+  "local_feature_image": "pirate-talk_feature__tumblr_m8an4oaur71qc37j4o1_500.gif"
+}

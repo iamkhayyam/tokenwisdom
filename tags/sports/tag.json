@@ -1,0 +1,61 @@
+{
+  "id": "65ac202b4cf93c000184bb16",
+  "name": "Sports \\ Tech",
+  "slug": "sports",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/3D-run-analysis.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/sports/",
+  "posts": [
+    {
+      "id": "66f773b0ffed3900014150e8",
+      "title": "Decoding AI: Why Transparent Models Matter in the Age of Machine Learning",
+      "slug": "decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning",
+      "published_at": "2024-05-09T05:55:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "6630b6e3a7d59a000155ff4e",
+      "title": "Tech Titans Exposed for Profiting from Our Personal Secrets",
+      "slug": "tech-titans-exposed-for-profiting-from-our-personal-secrets",
+      "published_at": "2024-04-30T21:20:40.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/tech-titans-exposed-for-profiting-from-our-personal-secrets/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "65de6867d11d04000135b0c5",
+      "title": "Innovations and Challenges in WBAN for Healthcare",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare",
+      "published_at": "2024-01-19T15:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65ab51bb4cf93c000184b74e",
+      "title": "Innovation Is CallawayGolf's Secret Weapon",
+      "slug": "callawaygolf-has-a-secret-weapon-innovation",
+      "published_at": "2013-07-03T12:18:56.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/callawaygolf-has-a-secret-weapon-innovation/",
+      "featured": false,
+      "reading_time": 7
+    }
+  ],
+  "post_count": 4,
+  "local_feature_image": "sports_feature__3D-run-analysis.gif"
+}

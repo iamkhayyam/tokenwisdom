@@ -1,0 +1,115 @@
+{
+  "id": "65ac22034cf93c000184bb45",
+  "name": "Creative \\ Design",
+  "slug": "creative-design",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/7ElementsGH_Animations_DVP_2_7Elements---01.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/creative-design/",
+  "posts": [
+    {
+      "id": "683b9e0cec2e7e0001fee938",
+      "title": "The Art of Productive Theft: Steve Jobs' Real Genius",
+      "slug": "the-art-of-productive-theft-steve-jobs-real-genius",
+      "published_at": "2025-05-31T18:35:27.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-productive-theft-steve-jobs-real-genius/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67575ea4a7db91000127376a",
+      "title": "The Science of Subjective Value: Understanding the Architecture of Experience",
+      "slug": "the-science-of-subjective-value-2",
+      "published_at": "2024-11-28T13:21:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-science-of-subjective-value-2/",
+      "featured": false,
+      "reading_time": 21
+    },
+    {
+      "id": "670790a847b6c200019d0143",
+      "title": "Embracing Creativity: Your Gateway to Success in the Digital Landscape",
+      "slug": "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2",
+      "published_at": "2024-10-11T05:55:11.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2/",
+      "featured": false,
+      "reading_time": 20
+    },
+    {
+      "id": "670aafea47b6c200019d051a",
+      "title": "The Creator Economy: From Experience to Creation",
+      "slug": "the-creator-economy-from-experience-to-creation",
+      "published_at": "2024-06-20T10:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-creator-economy-from-experience-to-creation/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "670aa07d47b6c200019d04c8",
+      "title": "The Power of 'What If': Exploring the World Through Thought Experiments",
+      "slug": "the-power-of-what-if-exploring-the-world-through-through-experiments",
+      "published_at": "2024-06-20T09:24:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-what-if-exploring-the-world-through-through-experiments/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "66131f2001e9e40001950fe9",
+      "title": "Constraint as a Catalyst: Unlocking Lego's Innovation Through Limitation",
+      "slug": "constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation",
+      "published_at": "2024-04-09T01:32:01.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "65f6733aed6d88000174d0e6",
+      "title": "A Comprehensive Exploration of NeRF and Gaussian Splatting",
+      "slug": "a-comprehensive-exploration-of-nerf-and-gaussian-splatting",
+      "published_at": "2024-03-11T01:08:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/a-comprehensive-exploration-of-nerf-and-gaussian-splatting/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65aa0ff5ebf14f0001f3c04f",
+      "title": "Experience Futures: The Rise of Human Experience (HX)",
+      "slug": "experience-futures-the-rise-of-human-experience-hx",
+      "published_at": "2023-05-04T23:08:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/experience-futures-the-rise-of-human-experience-hx/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65a9f8c5ebf14f0001f3c012",
+      "title": "Art & Technology; The Longest Romance Going and What it Means in the Era of AI",
+      "slug": "art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai",
+      "published_at": "2023-04-26T21:31:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65ab51bb4cf93c000184b73a",
+      "title": "LinkedIn, Isn’t Good Enough",
+      "slug": "linkedin-isnt-good-enough",
+      "published_at": "2014-05-27T15:55:07.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/linkedin-isnt-good-enough/",
+      "featured": true,
+      "reading_time": 5
+    }
+  ],
+  "post_count": 10,
+  "local_feature_image": "creative-design_feature__7ElementsGH_Animations_DVP_2_7Elements---01.gif"
+}

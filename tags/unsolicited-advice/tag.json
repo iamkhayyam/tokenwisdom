@@ -1,0 +1,322 @@
+{
+  "id": "65ab965d4cf93c000184b9bd",
+  "name": "Unsolicited Advice",
+  "slug": "unsolicited-advice",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/9a226oeswecb1.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/unsolicited-advice/",
+  "posts": [
+    {
+      "id": "69c9c04e371584000109bc34",
+      "title": "The Sky Has Been Warning Us Since 1859",
+      "slug": "the-sky-has-been-warning-us-since-1859",
+      "published_at": "2026-03-26T17:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-sky-has-been-warning-us-since-1859/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "69b71aa405f1150001507a67",
+      "title": "The Room Was Already Set Before You Walked In",
+      "slug": "the-room-was-already-set-before-you-walked-in",
+      "published_at": "2026-03-12T14:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-room-was-already-set-before-you-walked-in/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "698ccfc4829448000107b212",
+      "title": "Threading a Very Fine Needle",
+      "slug": "threading-a-very-fine-needle",
+      "published_at": "2026-02-12T22:37:27.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/threading-a-very-fine-needle/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "6987fd592424b80001899146",
+      "title": "How Does Order Emerge in a Universe Built for Chaos?",
+      "slug": "how-does-order-emerge-in-a-universe-built-for-chaos",
+      "published_at": "2026-02-05T23:02:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/how-does-order-emerge-in-a-universe-built-for-chaos/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "6974bab905e0200001eea917",
+      "title": "The Greengrocer Goes To Davos",
+      "slug": "the-greengrocer-goes-to-davos",
+      "published_at": "2026-01-22T04:43:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-greengrocer-goes-to-davos/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "688590e5845b5c0001afe00d",
+      "title": "I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You",
+      "slug": "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you",
+      "published_at": "2025-07-31T09:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "684a950265e4ce000100570b",
+      "title": "The Last Human Standing and How We Learned to Stop Thinking",
+      "slug": "the-last-human-standing-and-how-we-learned-to-stop-thinking",
+      "published_at": "2025-06-05T12:51:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-last-human-standing-and-how-we-learned-to-stop-thinking/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "682a01fd7054e000010513f0",
+      "title": "The Grand Delusion: Why Our Models of Reality Are Fundamentally Incomplete",
+      "slug": "the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete",
+      "published_at": "2025-05-18T11:29:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67d301e976f8a70001440ab5",
+      "title": "Economic Uncharted Territory—Moving Beyond Obsolete Maps",
+      "slug": "economic-uncharted-territory-moving-beyond-obsolete-maps",
+      "published_at": "2025-03-13T12:28:01.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/economic-uncharted-territory-moving-beyond-obsolete-maps/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67a72f40df16bb00019a29fc",
+      "title": "The Bible—Humanity's First Large Language Model?",
+      "slug": "the-bible-humanitys-first-large-language-model-2",
+      "published_at": "2025-02-08T12:32:57.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-bible-humanitys-first-large-language-model-2/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6791ecbc81993f00014a74e3",
+      "title": "The Political Singularity—Welcome to the First Algorithmic State",
+      "slug": "the-political-singularity-welcome-to-the-first-algorithmic-state",
+      "published_at": "2025-01-23T08:08:58.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-political-singularity-welcome-to-the-first-algorithmic-state/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "674bc975fa728b0001fe1fe8",
+      "title": "From Tasks to Systems: The True AI Revolution in Services",
+      "slug": "from-tasks-to-systems-the-true-ai-revolution-in-services",
+      "published_at": "2024-11-07T18:48:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-tasks-to-systems-the-true-ai-revolution-in-services/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "674bd374fa728b0001fe201d",
+      "title": "Beyond the Silicon Dream: Why Consciousness Can't Be Computed",
+      "slug": "beyond-the-silicon-dream-why-consciousness-cant-be-computed",
+      "published_at": "2024-10-24T20:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/beyond-the-silicon-dream-why-consciousness-cant-be-computed/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "674b56a5fa728b0001fe1ef9",
+      "title": "The AI Revolution Isn't What You Think It Is",
+      "slug": "the-ai-revolution-isnt-what-you-think-it-is",
+      "published_at": "2024-10-17T12:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-ai-revolution-isnt-what-you-think-it-is/",
+      "featured": false,
+      "reading_time": 4
+    },
+    {
+      "id": "670790a847b6c200019d0143",
+      "title": "Embracing Creativity: Your Gateway to Success in the Digital Landscape",
+      "slug": "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2",
+      "published_at": "2024-10-11T05:55:11.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2/",
+      "featured": false,
+      "reading_time": 20
+    },
+    {
+      "id": "67424d2d7cd669000121393e",
+      "title": "The Power of Questioning: Revolutionizing Learning in the AI Era",
+      "slug": "the-power-of-questioning-revolutionizing-learning-in-the-ai-era",
+      "published_at": "2024-09-26T14:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-questioning-revolutionizing-learning-in-the-ai-era/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "673c00af2031060001730f74",
+      "title": "The Simulation Trap: How Virtual Tourism Is Killing Real Culture",
+      "slug": "the-simulation-trap-how-virtual-tourism-is-killing-real-culture",
+      "published_at": "2024-08-29T19:15:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-simulation-trap-how-virtual-tourism-is-killing-real-culture/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "672ec9f9a5ffdf000161a28c",
+      "title": "Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis",
+      "slug": "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self",
+      "published_at": "2024-08-08T18:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6726aebfe558fc000153557d",
+      "title": "The Loyalty Revolution: From Punch Cards to Predictive Analytics",
+      "slug": "the-loyalty-revolution-from-punch-cards-to-predictive-analytics",
+      "published_at": "2024-07-25T16:10:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-loyalty-revolution-from-punch-cards-to-predictive-analytics/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "670aafea47b6c200019d051a",
+      "title": "The Creator Economy: From Experience to Creation",
+      "slug": "the-creator-economy-from-experience-to-creation",
+      "published_at": "2024-06-20T10:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-creator-economy-from-experience-to-creation/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "670aa07d47b6c200019d04c8",
+      "title": "The Power of 'What If': Exploring the World Through Thought Experiments",
+      "slug": "the-power-of-what-if-exploring-the-world-through-through-experiments",
+      "published_at": "2024-06-20T09:24:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-what-if-exploring-the-world-through-through-experiments/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "6709bfb747b6c200019d03d0",
+      "title": "Yes, Chef! The Startup Chef's Gourmet Guide to TAM, SAM, and SOM",
+      "slug": "yes-chef-the-startup-chefs-guide-to-tam-sam-and-som",
+      "published_at": "2024-05-29T18:11:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/yes-chef-the-startup-chefs-guide-to-tam-sam-and-som/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65fd1c985d866c0001163970",
+      "title": "Ask Me Anything! No, Really. Ask Me Any Thing!",
+      "slug": "no-really-ask-me-anything",
+      "published_at": "2024-03-21T22:22:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/no-really-ask-me-anything/",
+      "featured": false,
+      "reading_time": 0
+    },
+    {
+      "id": "65fa3184b29fd300012f676b",
+      "title": "I'm an ElevenLabs Pro!",
+      "slug": "im-an-elevenlabs-pro",
+      "published_at": "2024-03-20T13:41:12.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/im-an-elevenlabs-pro/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65f73d79ed6d88000174d2ac",
+      "title": "The Transformative Power of Generalists in a Specialized World",
+      "slug": "the-transformative-power-of-generalists-in-a-specialized-world",
+      "published_at": "2024-03-17T12:22:29.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-transformative-power-of-generalists-in-a-specialized-world/",
+      "featured": true,
+      "reading_time": 23
+    },
+    {
+      "id": "65deaf76d11d04000135b111",
+      "title": "Crash Course on What’s Coming",
+      "slug": "crash-course-on-whats-coming",
+      "published_at": "2024-01-11T21:14:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/crash-course-on-whats-coming/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65ab51bb4cf93c000184b735",
+      "title": "Writing as a Process of Self-Discovery",
+      "slug": "writing-as-a-process-of-self-discovery",
+      "published_at": "2023-12-05T11:08:58.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/writing-as-a-process-of-self-discovery/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "65ab51bb4cf93c000184b739",
+      "title": "LinkedIn Is Just Like Dating: Courtship Rules",
+      "slug": "linkedin-is-just-like-dating-courtship-rules",
+      "published_at": "2014-04-30T13:28:51.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/linkedin-is-just-like-dating-courtship-rules/",
+      "featured": false,
+      "reading_time": 4
+    },
+    {
+      "id": "65a9c7b7ebf14f0001f3bebb",
+      "title": "You Can Sell Your Time, But You Can Never Buy It Back",
+      "slug": "you-can-sell-your-time-but-you-can-never-buy-it-back",
+      "published_at": "2013-06-22T17:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/you-can-sell-your-time-but-you-can-never-buy-it-back/",
+      "featured": true,
+      "reading_time": 4
+    },
+    {
+      "id": "65ab51bb4cf93c000184b751",
+      "title": "Say Viral One More Time! I'll Punch You in the Throat =)",
+      "slug": "say-viral-one-more-time-ill-punch-you-in-the-throat",
+      "published_at": "2013-05-20T11:20:34.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/say-viral-one-more-time-ill-punch-you-in-the-throat/",
+      "featured": false,
+      "reading_time": 4
+    },
+    {
+      "id": "65ab51bb4cf93c000184b744",
+      "title": "For The (Jet Bound) Digital Nomads",
+      "slug": "for-the-jet-bound-digital-nomads",
+      "published_at": "2013-05-11T09:32:44.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/for-the-jet-bound-digital-nomads/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b743",
+      "title": "My Love Affair with Ellipsis…",
+      "slug": "my-love-affair-with-the-ellipsis",
+      "published_at": "2013-05-07T19:03:57.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/my-love-affair-with-the-ellipsis/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b752",
+      "title": "The Five Things That Will Get You Nowhere Fast",
+      "slug": "the-five-things-that-will-get-you-nowhere-fast",
+      "published_at": "2013-05-06T20:09:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-five-things-that-will-get-you-nowhere-fast/",
+      "featured": true,
+      "reading_time": 1
+    }
+  ],
+  "post_count": 33,
+  "local_feature_image": "unsolicited-advice_feature__9a226oeswecb1.gif"
+}

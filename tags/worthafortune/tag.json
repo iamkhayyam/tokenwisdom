@@ -1,0 +1,736 @@
+{
+  "id": "65cf03eedae46f00014de101",
+  "name": "✨ Pearls of Wisdom",
+  "slug": "worthafortune",
+  "description": "A finely curated collection of the wonderful web we weave with a weekly roundup of bits and pieces from the far corners of the super information highway ✨",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/05/tumblr_lk1bjustCg1qzznnqo1_500-2.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/worthafortune/",
+  "posts": [
+    {
+      "id": "69c9ea16371584000109bc83",
+      "title": "153rd Edition 🔮 Token Wisdom \\ Week 13",
+      "slug": "153rd-edition-token-wisdom-week-13",
+      "published_at": "2026-03-31T08:42:26.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/153rd-edition-token-wisdom-week-13/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "69c1d5e876853700012a557f",
+      "title": "152nd Edition 🔮 Token Wisdom \\ Week 12",
+      "slug": "152nd-edition-token-wisdom-week-12",
+      "published_at": "2026-03-24T07:24:58.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/152nd-edition-token-wisdom-week-12/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "69b720e405f1150001507aba",
+      "title": "151st Edition 🔮 Token Wisdom \\ Week 11",
+      "slug": "151st-edition-token-wisdom-week-11",
+      "published_at": "2026-03-16T08:24:45.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/151st-edition-token-wisdom-week-11/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "69af5c07408a6400011c940e",
+      "title": "150th Edition 🔮 Token Wisdom \\ Week 10",
+      "slug": "150th-edition-token-wisdom-week-10",
+      "published_at": "2026-03-10T08:44:59.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/150th-edition-token-wisdom-week-10/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "69a571ebb950650001160ea1",
+      "title": "149th Edition 🔮 Token Wisdom \\ Week 09",
+      "slug": "149th-edition-token-wisdom-week-09",
+      "published_at": "2026-03-02T13:22:41.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/149th-edition-token-wisdom-week-09/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "699bf62e0cf975000157defb",
+      "title": "148th Edition 🔮 Token Wisdom \\ Week 08",
+      "slug": "148th-edition-token-wisdom-week-08",
+      "published_at": "2026-02-23T08:08:52.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/148th-edition-token-wisdom-week-08/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "6992d34d23b3640001566e9f",
+      "title": "147th Edition 🔮 Token Wisdom \\ Week 07",
+      "slug": "147th-edition-token-wisdom-week-07",
+      "published_at": "2026-02-16T08:11:29.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/147th-edition-token-wisdom-week-07/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "6988fc802424b80001899202",
+      "title": "146th Edition 🔮 Token Wisdom \\ Week 06",
+      "slug": "146th-edition-token-wisdom-week-06",
+      "published_at": "2026-02-08T14:24:22.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/146th-edition-token-wisdom-week-06/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "6980683e32c75a000188f63a",
+      "title": "145th Edition 🔮 Token Wisdom \\ Week 05",
+      "slug": "145th-edition-token-wisdom-week-05",
+      "published_at": "2026-02-02T10:40:50.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/145th-edition-token-wisdom-week-05/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6976a1b405e0200001eea9f4",
+      "title": "144th Edition 🔮 Token Wisdom \\ Week 04",
+      "slug": "144th-edition-token-wisdom-week-04",
+      "published_at": "2026-01-25T16:44:24.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/144th-edition-token-wisdom-week-04/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "696d805fb7bc620001983baf",
+      "title": "143rd Edition 🔮 Token Wisdom \\ Week 03",
+      "slug": "143rd-edition-token-wisdom-week-03",
+      "published_at": "2026-01-18T18:37:12.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/143rd-edition-token-wisdom-week-03/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6963b8a259cfb10001d21916",
+      "title": "142nd Edition 🔮 Token Wisdom \\ Week 02",
+      "slug": "142nd-edition-token-wisdom-week-02",
+      "published_at": "2026-01-11T14:00:07.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/142nd-edition-token-wisdom-week-02/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6958fd24cb780e0001af79aa",
+      "title": "141st Edition 🔮 Token Wisdom \\ Week 01",
+      "slug": "141st-edition-token-wisdom-week-01",
+      "published_at": "2026-01-04T10:10:22.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/141st-edition-token-wisdom-week-01/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "694f710c3483180001155498",
+      "title": "140th Edition 🔮 Token Wisdom \\ Week 52",
+      "slug": "140th-edition-token-wisdom-week-52",
+      "published_at": "2025-12-28T11:11:40.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/140th-edition-token-wisdom-week-52/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "69464688bc99830001492c85",
+      "title": "139th Edition 🔮 Token Wisdom \\ Week 51",
+      "slug": "139th-edition-token-wisdom-week-51",
+      "published_at": "2025-12-21T11:11:05.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/139th-edition-token-wisdom-week-51/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "69410ac43563ae000122a199",
+      "title": "138th Edition 🔮 Token Wisdom \\ Week 50",
+      "slug": "138th-edition-token-wisdom-week-50-2",
+      "published_at": "2025-12-16T08:41:46.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/138th-edition-token-wisdom-week-50-2/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6935efcae13a2b000178a1fb",
+      "title": "137th Edition 🔮 Token Wisdom \\ Week 49",
+      "slug": "137th-edition-token-wisdom-week-49",
+      "published_at": "2025-12-07T14:02:09.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/137th-edition-token-wisdom-week-49/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6930b7070aed6600010adaa8",
+      "title": "136th Edition 🔮 Token Wisdom \\ Week 48",
+      "slug": "136th-edition-token-wisdom-week-48",
+      "published_at": "2025-12-01T13:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/136th-edition-token-wisdom-week-48/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "692e76360c7b0d000112f03b",
+      "title": "135th Edition 🔮 Token Wisdom \\ Week 47",
+      "slug": "135th-edition-token-wisdom-week-47",
+      "published_at": "2025-11-24T07:55:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/135th-edition-token-wisdom-week-47/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "691b71328444b4000102a6bb",
+      "title": "134th Edition 🔮 Token Wisdom \\ Week 46",
+      "slug": "134th-edition-token-wisdom-week-46",
+      "published_at": "2025-11-17T12:08:13.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/134th-edition-token-wisdom-week-46/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "690fb101b8e6da000168a023",
+      "title": "133rd Edition 🔮 Token Wisdom \\ Week 45",
+      "slug": "133rd-edition-token-wisdom-week-45",
+      "published_at": "2025-11-09T11:11:01.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/133rd-edition-token-wisdom-week-45/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6907b5c4351b220001b26d26",
+      "title": "132nd Edition 🔮 Token Wisdom \\ Week 44",
+      "slug": "132nd-edition-token-wisdom-week-44",
+      "published_at": "2025-11-02T12:20:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/132nd-edition-token-wisdom-week-44/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "690288433f915c00018cf24b",
+      "title": "131st Edition 🔮 Token Wisdom \\ Week 43",
+      "slug": "131st-edition-token-wisdom-week-43",
+      "published_at": "2025-10-29T15:25:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/131st-edition-token-wisdom-week-43/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68f593e12f35090001ee8d8f",
+      "title": "130th Edition 🔮 Token Wisdom \\\\ Week 42",
+      "slug": "130th-edition-token-wisdom-week-42",
+      "published_at": "2025-10-20T11:29:22.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/130th-edition-token-wisdom-week-42/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68ead553483d610001a87054",
+      "title": "129th Edition 🔮 Token Wisdom \\\\ Week 41",
+      "slug": "129th-edition-token-wisdom-week-41",
+      "published_at": "2025-10-12T09:57:41.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/129th-edition-token-wisdom-week-41/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68e5e9e7a6c145000155c1ef",
+      "title": "128th Edition 🔮 Token Wisdom \\\\ Week 40",
+      "slug": "128th-edition-token-wisdom-week-40",
+      "published_at": "2025-10-05T22:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/128th-edition-token-wisdom-week-40/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68dad60585dd8a000165523f",
+      "title": "127th Edition 🔮 Token Wisdom \\\\ Week 39",
+      "slug": "127th-edition-token-wisdom-week-39",
+      "published_at": "2025-09-29T12:27:22.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/127th-edition-token-wisdom-week-39/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68d853c21c11b20001eb00e0",
+      "title": "126th Edition 🔮 Token Wisdom \\\\ Week 38",
+      "slug": "126th-edition-token-wisdom-week-38",
+      "published_at": "2025-09-21T14:28:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/126th-edition-token-wisdom-week-38/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68d0dd5cc03c2700012d9a9a",
+      "title": "125th Edition 🔮 Token Wisdom \\\\ Week 37",
+      "slug": "125th-edition-token-wisdom-week-37",
+      "published_at": "2025-09-14T22:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/125th-edition-token-wisdom-week-37/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68c86400da7f68000106e9bd",
+      "title": "124th Edition 🔮 Token Wisdom \\\\ Week 36",
+      "slug": "124th-edition-token-wisdom-week-36",
+      "published_at": "2025-09-07T12:23:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/124th-edition-token-wisdom-week-36/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68c723b1ce413500019d5fb8",
+      "title": "123rd Edition 🔮 Token Wisdom ⑊ W35",
+      "slug": "123rd-edition-token-wisdom-week-35",
+      "published_at": "2025-08-31T20:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/123rd-edition-token-wisdom-week-35/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68c723b3ce413500019d5fbe",
+      "title": "122nd Edition 🔮 Token Wisdom  ⑊ W34",
+      "slug": "122nd-edition-token-wisdom-week-34",
+      "published_at": "2025-08-24T19:21:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/122nd-edition-token-wisdom-week-34/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68c723b5ce413500019d5fc4",
+      "title": "121st Edition 🔮 Token Wisdom ⑊ W33",
+      "slug": "121st-edition-token-wisdom-week-33",
+      "published_at": "2025-08-18T17:30:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/121st-edition-token-wisdom-week-33/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68c723adce413500019d5fb2",
+      "title": "120th Edition 🔮 Token Wisdom ⑊ W32",
+      "slug": "120th-edition-token-wisdom-week-32",
+      "published_at": "2025-08-10T15:36:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/120th-edition-token-wisdom-week-32/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68c6f8a1603aa500019a866d",
+      "title": "119th Edition 🔮 Token Wisdom ⑊ W31",
+      "slug": "119th-edition-token-wisdom-week-31",
+      "published_at": "2025-08-03T13:17:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/119th-edition-token-wisdom-week-31/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "688f85150839ea000123e3b9",
+      "title": "118th Edition 🔮 Pearls of Wisdom ⑊ W30",
+      "slug": "118th-edition-pearls-of-wisdom-w30",
+      "published_at": "2025-07-28T09:20:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/118th-edition-pearls-of-wisdom-w30/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "688af2e8aa4a950001545b7d",
+      "title": "117th Edition 🔮 Pearls of Wisdom ⑊ W29",
+      "slug": "117th-edition-pearls-of-wisdom-w29",
+      "published_at": "2025-07-21T21:54:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/117th-edition-pearls-of-wisdom-w29/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68892323efb976000149f752",
+      "title": "116th Edition 🔮 Pearls of Wisdom ⑊ W28",
+      "slug": "116th-edition-pearls-of-wisdom-w28-copy",
+      "published_at": "2025-07-14T23:14:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/116th-edition-pearls-of-wisdom-w28-copy/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6884ae07bf67a80001661d10",
+      "title": "115th Edition 🔮 Pearls of Wisdom ⑊ W27",
+      "slug": "115th-edition-pearls-of-wisdom-w27",
+      "published_at": "2025-07-07T12:34:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/115th-edition-pearls-of-wisdom-w27/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "686ac9b885d4080001460345",
+      "title": "114th Edition 🔮 Pearls of Wisdom ⑊ W26",
+      "slug": "114th-edition-pearls-of-wisdom-w26",
+      "published_at": "2025-06-29T13:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/114th-edition-pearls-of-wisdom-w26/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "685b9e02ed1d9d0001db1874",
+      "title": "113th Edition 🔮 Pearls of Wisdom ⑊ W25",
+      "slug": "113th-edition-pearls-of-wisdom-w25",
+      "published_at": "2025-06-25T00:29:48.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/113th-edition-pearls-of-wisdom-w25/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68510c3529a871000115d88e",
+      "title": "112th Edition 🔮 Pearls of Wisdom ⑊ W24",
+      "slug": "112th-edition-pearls-of-wisdom-w24",
+      "published_at": "2025-06-16T09:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/112th-edition-pearls-of-wisdom-w24/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "684b24af65e4ce000100579f",
+      "title": "111th Edition 🔮 Pearls of Wisdom ⑊ W23",
+      "slug": "111th-edition-pearls-of-wisdom-w23",
+      "published_at": "2025-06-09T13:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/111th-edition-pearls-of-wisdom-w23/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "683de0df62abb3000196ab66",
+      "title": "110th Edition 🔮 Pearls of Wisdom ⑊ W22",
+      "slug": "110th-edition-pearls-of-wisdom-w22",
+      "published_at": "2025-06-02T11:53:41.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/110th-edition-pearls-of-wisdom-w22/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "683b9255ec2e7e0001fee8f3",
+      "title": "109th Edition 🔮 Pearls of Wisdom ⑊ W21",
+      "slug": "109th-edition-pearls-of-wisdom-w21",
+      "published_at": "2025-05-26T17:24:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/109th-edition-pearls-of-wisdom-w21/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "682a2a3f7054e000010514bd",
+      "title": "108th Edition 🔮 Pearls of Wisdom ⑊ W20",
+      "slug": "108th-edition-pearls-of-wisdom-w20",
+      "published_at": "2025-05-19T07:52:48.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/108th-edition-pearls-of-wisdom-w20/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6827aaff7054e000010513b3",
+      "title": "107th Edition 🔮 Pearls of Wisdom ⑊ W19",
+      "slug": "107th-edition-pearls-of-wisdom-w19",
+      "published_at": "2025-05-11T17:36:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/107th-edition-pearls-of-wisdom-w19/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68190fc48dc73700011a9571",
+      "title": "106th Edition 🔮 Pearls of Wisdom ⑊ W18",
+      "slug": "106th-edition-pearls-of-wisdom-w18",
+      "published_at": "2025-05-05T13:41:52.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/106th-edition-pearls-of-wisdom-w18/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "681298c7b183f4000172f25e",
+      "title": "105th Edition 🔮 Pearls of Wisdom ⑊ W17",
+      "slug": "105th-edition-pearls-of-wisdom-w17",
+      "published_at": "2025-04-28T14:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/105th-edition-pearls-of-wisdom-w17/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6806a1eae95f790001ea196e",
+      "title": "104th Edition 🔮 Pearls of Wisdom ⑊ W16",
+      "slug": "104th-edition-pearls-of-wisdom-w16",
+      "published_at": "2025-04-21T13:44:07.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/104th-edition-pearls-of-wisdom-w16/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6800920b17bdb7000150e8fb",
+      "title": "103rd Edition 🔮 Pearls of Wisdom ⑊ W15",
+      "slug": "103rd-edition-pearls-of-wisdom-w15",
+      "published_at": "2025-04-14T06:14:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/103rd-edition-pearls-of-wisdom-w15/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67f4b1ab5dd0910001b89daa",
+      "title": "102nd Edition 🔮 Pearls of Wisdom ⑊ W14",
+      "slug": "102nd-edition-pearls-of-wisdom-w14",
+      "published_at": "2025-04-07T23:36:18.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/102nd-edition-pearls-of-wisdom-w14/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "67eaf11634edd40001f99cd4",
+      "title": "101st Edition 🔮 Pearls of Wisdom ⑊ W13",
+      "slug": "101st-edition-pearls-of-wisdom-w13",
+      "published_at": "2025-03-31T13:34:30.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/101st-edition-pearls-of-wisdom-w13/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67e1b33876728b00010c31b6",
+      "title": "100th Edition 🔮 Pearls of Wisdom ⑊ W12",
+      "slug": "100th-edition-pearls-of-wisdom-w12",
+      "published_at": "2025-03-24T13:09:09.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/100th-edition-pearls-of-wisdom-w12/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "67d854cd87ccd80001e4ca03",
+      "title": "99th Edition 🔮 Pearls of Wisdom ⑊ W11",
+      "slug": "99th-edition-pearls-of-wisdom-w11",
+      "published_at": "2025-03-17T10:16:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/99th-edition-pearls-of-wisdom-w11/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67cf1ce9a05bb40001b267e9",
+      "title": "98th Edition 🔮 Pearls of Wisdom ⑊ W10",
+      "slug": "98th-edition-pearls-of-wisdom-w10",
+      "published_at": "2025-03-10T10:28:07.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/98th-edition-pearls-of-wisdom-w10/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67c61ad4ab19990001aa9df6",
+      "title": "97th Edition 🔮 Pearls of Wisdom ⑊ W09",
+      "slug": "97th-edition-pearls-of-wisdom-w09",
+      "published_at": "2025-03-03T13:34:46.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/97th-edition-pearls-of-wisdom-w09/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67bbaffa5f98d20001d9e752",
+      "title": "96th Edition 🔮 Pearls of Wisdom ⑊ W08",
+      "slug": "96th-edition-pearls-of-wisdom-w08",
+      "published_at": "2025-02-23T15:58:53.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/96th-edition-pearls-of-wisdom-w08/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "67b374aa86cbbf000197c4c7",
+      "title": "95th Edition 🔮 Pearls of Wisdom ⑊ W07",
+      "slug": "95th-edition-pearls-of-wisdom-w07",
+      "published_at": "2025-02-17T11:21:26.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/95th-edition-pearls-of-wisdom-w07/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "67ac0777e23e1d0001789ae1",
+      "title": "94th Edition 🔮 Pearls of Wisdom ⑊ W06",
+      "slug": "94th-edition-pearls-of-wisdom-w05",
+      "published_at": "2025-02-11T18:53:12.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/94th-edition-pearls-of-wisdom-w05/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67a674d3df16bb00019a29a1",
+      "title": "93rd Edition 🔮 Pearls of Wisdom ⑊ W05",
+      "slug": "93rd-edition-pearls-of-wisdom-w04",
+      "published_at": "2025-02-06T13:14:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/93rd-edition-pearls-of-wisdom-w04/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6795ed0144db1f0001119342",
+      "title": "92nd Edition 🔮 Pearls of Wisdom ⑊ W04",
+      "slug": "92nd-edition-pearls-of-wisdom-w03",
+      "published_at": "2025-01-26T01:17:48.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/92nd-edition-pearls-of-wisdom-w03/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "678cfcd878b17200019cf0e9",
+      "title": "91st Edition 🔮 Pearls of Wisdom ⑊ W03",
+      "slug": "91st-edition-pearls-of-wisdom-w02",
+      "published_at": "2025-01-19T05:49:08.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/91st-edition-pearls-of-wisdom-w02/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "678361a0e0cdc0000175cbef",
+      "title": "90th Edition 🔮 Pearls of Wisdom \\ W02",
+      "slug": "pearls-of-wisdom-90th-edition",
+      "published_at": "2025-01-12T05:33:59.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/pearls-of-wisdom-90th-edition/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "6630b6e6a7d59a000155ff5a",
+      "title": "54th Edition 🔮 Pearls of Wisdom ⑊ W17",
+      "slug": "52nd-edition-token-wisdom",
+      "published_at": "2024-05-06T21:41:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/52nd-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "66a0a3a856b81b00018d9a09",
+      "title": "53rd Edition 🔮 Pearls of Wisdom ⑊ W16",
+      "slug": "51st-edition-token-wisdom-2",
+      "published_at": "2024-04-29T23:58:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/51st-edition-token-wisdom-2/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "66131f2301e9e40001950ff9",
+      "title": "50th Edition 🔮 Pearls of Wisdom ⑊ W13",
+      "slug": "50th-edition-token-wisdom",
+      "published_at": "2024-04-09T10:23:53.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/50th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "660adb00945b2e000170f066",
+      "title": "49th Edition 🔮 Pearls of Wisdom ⑊ W12",
+      "slug": "49th-edition-token-wisdom",
+      "published_at": "2024-04-01T23:43:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/49th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "6601456a19bcd2000130a9e6",
+      "title": "48th Edition 🔮 Pearls of Wisdom ⑊ W11",
+      "slug": "48th-edition-token-wisdom",
+      "published_at": "2024-03-25T17:29:29.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/48th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65f734b4ed6d88000174d2a4",
+      "title": "47th Edition 🔮 Pearls of Wisdom ⑊ W10",
+      "slug": "47th-edition-token-wisdom",
+      "published_at": "2024-03-18T06:27:53.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/47th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65f48994ed6d88000174ce13",
+      "title": "46th Edition 🔮 Pearls of Wisdom ⑊ W09",
+      "slug": "46th-edition-token-wisdom",
+      "published_at": "2024-03-17T04:44:23.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/46th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65e55c1f39bf4b0001412d5a",
+      "title": "45th Edition 🔮 Pearls of Wisdom ⑊ W08",
+      "slug": "45th-edition-token-wisdom",
+      "published_at": "2024-03-04T12:32:45.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/45th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65dac626692af400019448f9",
+      "title": "44th Edition 🔮 Pearls of Wisdom ⑊ W07",
+      "slug": "44th-edition-token-wisdom",
+      "published_at": "2024-02-26T06:49:33.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/44th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65d530a4692af40001944783",
+      "title": "43rd Edition 🔮 Pearls of Wisdom ⑊ W06",
+      "slug": "43rd-edition-token-wisdom",
+      "published_at": "2024-02-20T16:06:18.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/43rd-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "65cbdfbcc8eca20001466cd7",
+      "title": "42nd Edition 🔮 Pearls of Wisdom ⑊ W05",
+      "slug": "tokenwisdom-w06-24",
+      "published_at": "2024-02-16T05:55:29.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/tokenwisdom-w06-24/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "65cb139e62726e000102c7c5",
+      "title": "41st Edition 🔮 Pearls of Wisdom ⑊ W04",
+      "slug": "41st-edition-token-wisdom",
+      "published_at": "2024-02-05T11:16:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/41st-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "65c11969470b1400012b7a5f",
+      "title": "40th Edition 🔮 Pearls of Wisdom ⑊ W03",
+      "slug": "40th-edition-token-wisdom",
+      "published_at": "2024-01-27T22:22:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/40th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65af831fa55bec000142372f",
+      "title": "39th Edition 🔮 Pearls of Wisdom ⑊ W02",
+      "slug": "39th-edition-token-wisdom",
+      "published_at": "2024-01-21T16:52:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/39th-edition-token-wisdom/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "65a9a157ebf14f0001f3bd5b",
+      "title": "38th Edition 🔮 Pearls of Wisdom ⑊ W01",
+      "slug": "token-wisdom-38th-edition",
+      "published_at": "2024-01-15T14:07:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/worthafortune/token-wisdom-38th-edition/",
+      "featured": false,
+      "reading_time": 8
+    }
+  ],
+  "post_count": 79,
+  "local_feature_image": "worthafortune_feature__tumblr_lk1bjustCg1qzznnqo1_500-2.gif"
+}

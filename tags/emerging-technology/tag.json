@@ -1,0 +1,232 @@
+{
+  "id": "65ab6df74cf93c000184b931",
+  "name": "Emerging Tech",
+  "slug": "emerging-technology",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/05Techfix-illo-articleLarge.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/emerging-technology/",
+  "posts": [
+    {
+      "id": "68c7787f5979e300016d611d",
+      "title": "How Your Driver's License is Just Santa Claus With Government Backing",
+      "slug": "how-your-drivers-license-is-just-santa-claus-with-government-backing",
+      "published_at": "2025-08-28T19:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-your-drivers-license-is-just-santa-claus-with-government-backing/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68c75eccfeb9ac00017a2aac",
+      "title": "Digital Supersaturation of Why Everything is About to Crystallize",
+      "slug": "the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up",
+      "published_at": "2025-08-21T17:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67b6e9b27c53cd0001c39f6f",
+      "title": "No Collar Jobs—Beyond the AI Disruption",
+      "slug": "no-collar-jobs-beyond-the-ai-disruption",
+      "published_at": "2025-02-20T15:08:30.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/no-collar-jobs-beyond-the-ai-disruption/",
+      "featured": false,
+      "reading_time": 23
+    },
+    {
+      "id": "678032bf346c9d0001d90383",
+      "title": "From Likes to Leaves—When Trust Became the Ultimate Unfriend",
+      "slug": "from-likes-to-leaves-when-trust-became-the-ultimate-unfriend",
+      "published_at": "2025-01-11T06:42:50.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-likes-to-leaves-when-trust-became-the-ultimate-unfriend/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "6777d402e9cf8d00018d42d6",
+      "title": "The Invisible Resolution—NVIDIA's Neural Optics and the Death of Computing as We Know It",
+      "slug": "the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it",
+      "published_at": "2025-01-03T05:55:37.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "6742453b7cd66900012138dd",
+      "title": "The Audio Revolution: AI and the Future of Sound",
+      "slug": "the-audio-revolution-ai-and-the-future-of-sound",
+      "published_at": "2024-09-19T13:25:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-audio-revolution-ai-and-the-future-of-sound/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "674197037cd6690001213886",
+      "title": "Ultra-Wideband (UWB) Technology: Revolutionizing the Internet of Things",
+      "slug": "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things",
+      "published_at": "2024-09-12T02:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "673c14862031060001730fa0",
+      "title": "The Digital Biomarker Revolution: Transforming Healthcare by 2030",
+      "slug": "the-digital-biomarker-revolution-transforming-healthcare-by-2030",
+      "published_at": "2024-09-05T21:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-digital-biomarker-revolution-transforming-healthcare-by-2030/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "672f1f71a5ffdf000161a2c9",
+      "title": "Why Everything You Think About Deep Tech Is Right—And Wrong",
+      "slug": "why-everything-you-think-about-deep-tech-is-right-and-wrong",
+      "published_at": "2024-08-15T01:45:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/why-everything-you-think-about-deep-tech-is-right-and-wrong/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "672e874ca5ffdf000161a22c",
+      "title": "The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance",
+      "slug": "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance",
+      "published_at": "2024-08-01T08:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "67267ae3e558fc0001535482",
+      "title": "The Dangerous Delusion of Digital Spatial Intelligence: Silicon Valley's Trillion-Dollar Mistake",
+      "slug": "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake",
+      "published_at": "2024-07-18T14:38:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "671ed18f8c814100011b02b4",
+      "title": "VR's Quest for 50 Million: The Ultimate Experience Economy Catalyst",
+      "slug": "vrs-quest-for-50-million",
+      "published_at": "2024-07-11T17:23:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/vrs-quest-for-50-million/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "6713f6dc144af500017fd425",
+      "title": "From Pages to Vectors: How Vector Embeddings are Reshaping the Internet",
+      "slug": "how-vector-embeddings-are-reshaping-the-internet",
+      "published_at": "2024-06-13T11:34:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-vector-embeddings-are-reshaping-the-internet/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "6709a86647b6c200019d0394",
+      "title": "Bridging the Digital Divide: Creating Equitable and Inclusive Digital Experiences",
+      "slug": "bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences",
+      "published_at": "2024-05-23T15:36:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "66221b2a7bdbdb00011e47cf",
+      "title": "Revolutionary Technology Allows Seeing Through Walls Using Wi-Fi Signals",
+      "slug": "revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals",
+      "published_at": "2024-04-30T10:31:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "6708eb9447b6c200019d02be",
+      "title": "How CNN's Work Wonders and Bypasses Copyright",
+      "slug": "how-cnns-work-wonders-and-bypasses-copyright",
+      "published_at": "2024-04-25T02:29:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-cnns-work-wonders-and-bypasses-copyright/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "660adb03945b2e000170f06d",
+      "title": "Disney’s Autonomatronics Odyssey",
+      "slug": "disneys-autonomatronics-odyssey",
+      "published_at": "2024-04-01T23:11:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/disneys-autonomatronics-odyssey/",
+      "featured": false,
+      "reading_time": 22
+    },
+    {
+      "id": "65f6733aed6d88000174d0e6",
+      "title": "A Comprehensive Exploration of NeRF and Gaussian Splatting",
+      "slug": "a-comprehensive-exploration-of-nerf-and-gaussian-splatting",
+      "published_at": "2024-03-11T01:08:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/a-comprehensive-exploration-of-nerf-and-gaussian-splatting/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65dac628692af40001944900",
+      "title": "From AR Glasses to Reality-Bending Lenses",
+      "slug": "from-ar-glasses-to-reality-bending-lenses",
+      "published_at": "2024-02-25T20:21:18.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-ar-glasses-to-reality-bending-lenses/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "65de6867d11d04000135b0c5",
+      "title": "Innovations and Challenges in WBAN for Healthcare",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare",
+      "published_at": "2024-01-19T15:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65ab51bb4cf93c000184b72d",
+      "title": "Apple’s Privacy: Stretching Across An Ultra-Wideband",
+      "slug": "apples-privacy-stretching-across-an-ultra-wideband",
+      "published_at": "2023-12-01T13:03:06.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/apples-privacy-stretching-across-an-ultra-wideband/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "65aa1b9febf14f0001f3c079",
+      "title": "Truth or Deception? The Double-Edged Sword of Digital Authenticity",
+      "slug": "truth-or-deception-the-double-edged-sword-of-digital-authenticity",
+      "published_at": "2023-11-27T22:53:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/truth-or-deception-the-double-edged-sword-of-digital-authenticity/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65aa1cfcebf14f0001f3c08a",
+      "title": "Unmasking Biases in Pre-Trained Transformers with Laundered Data",
+      "slug": "laundered-data",
+      "published_at": "2023-07-07T00:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/laundered-data/",
+      "featured": true,
+      "reading_time": 9
+    }
+  ],
+  "post_count": 23,
+  "local_feature_image": "emerging-technology_feature__05Techfix-illo-articleLarge.gif"
+}

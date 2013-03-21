@@ -1,0 +1,133 @@
+{
+  "id": "65ab2eb64cf93c000184b6d2",
+  "name": "📺 Time Well Spent",
+  "slug": "timewellspent",
+  "description": "The week's top ten must-watch YouTube videos that is Time Well Spent, curated to save you time and deliver the Alph-alpha™️",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/200w-2.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": "#eb510f",
+  "url": "https://tokenwisdom.ghost.io/tag/timewellspent/",
+  "posts": [
+    {
+      "id": "66a079d356b81b00018d993e",
+      "title": "W17: 54th Edition \\ Side B 📺",
+      "slug": "w17-54th-edition-side-b",
+      "published_at": "2024-05-05T00:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w17-54th-edition-side-b/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "6630b6e1a7d59a000155ff46",
+      "title": "W16: 53rd Edition \\ Side B 📺",
+      "slug": "w16-timewellspent-52",
+      "published_at": "2024-04-30T19:22:24.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w16-timewellspent-52/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "661e2033d992e10001514bce",
+      "title": "W15: 52nd Edition \\ Side B 📺",
+      "slug": "w15-timewellspent-51",
+      "published_at": "2024-04-17T13:53:47.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w15-timewellspent-51/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "66131f1c01e9e40001950fe1",
+      "title": "W14: 51st Edition \\ Side B 📺",
+      "slug": "w14-timewellspent-50",
+      "published_at": "2024-04-07T23:06:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w14-timewellspent-50/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "660adaf6945b2e000170f055",
+      "title": "W13: 50th Edition \\ Side B 📺",
+      "slug": "w13-timewellspent-49",
+      "published_at": "2024-04-01T12:12:07.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w13-timewellspent-49/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6601456819bcd2000130a9dd",
+      "title": "W12: 49th Edition \\ Side B 📺",
+      "slug": "w12-timewellspent-48",
+      "published_at": "2024-03-24T11:50:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w12-timewellspent-48/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "65f734aeed6d88000174d29b",
+      "title": "W11: 48th Edition \\ Side B 📺",
+      "slug": "w11-timewellspent-47",
+      "published_at": "2024-03-17T23:59:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w11-timewellspent-47/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65f48991ed6d88000174ce0a",
+      "title": "W10: 47th Edition \\ Side B📺",
+      "slug": "w10-timewellspent-46",
+      "published_at": "2024-03-10T17:33:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w10-timewellspent-46/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65e3edb639bf4b0001412a5e",
+      "title": "W09: 45th Edition \\ Side B📺",
+      "slug": "w08-timewellspent-45",
+      "published_at": "2024-03-03T12:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w08-timewellspent-45/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "65dac61f692af400019448e5",
+      "title": "W08: 44th Edition \\ Side B📺",
+      "slug": "w08-timewellspent-44",
+      "published_at": "2024-02-25T19:52:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w08-timewellspent-44/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "65d3851795b6a9000173121a",
+      "title": "W07: 43rd Edition \\ Side B📺",
+      "slug": "w07-timewellspent-43",
+      "published_at": "2024-02-18T13:51:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w07-timewellspent-43/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "65cecd7adae46f00014ddf9c",
+      "title": "W06: 42nd Edition \\ Side B📺",
+      "slug": "w06-timewellspent-42",
+      "published_at": "2024-02-11T19:35:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/timewellspent/w06-timewellspent-42/",
+      "featured": false,
+      "reading_time": 15
+    }
+  ],
+  "post_count": 12,
+  "local_feature_image": "timewellspent_feature__200w-2.gif"
+}

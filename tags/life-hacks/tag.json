@@ -1,0 +1,106 @@
+{
+  "id": "65ac1e314cf93c000184bb00",
+  "name": "Life Hacks",
+  "slug": "life-hacks",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/L9Go1v.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/life-hacks/",
+  "posts": [
+    {
+      "id": "670790a847b6c200019d0143",
+      "title": "Embracing Creativity: Your Gateway to Success in the Digital Landscape",
+      "slug": "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2",
+      "published_at": "2024-10-11T05:55:11.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2/",
+      "featured": false,
+      "reading_time": 20
+    },
+    {
+      "id": "67424d2d7cd669000121393e",
+      "title": "The Power of Questioning: Revolutionizing Learning in the AI Era",
+      "slug": "the-power-of-questioning-revolutionizing-learning-in-the-ai-era",
+      "published_at": "2024-09-26T14:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-questioning-revolutionizing-learning-in-the-ai-era/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "672ec9f9a5ffdf000161a28c",
+      "title": "Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis",
+      "slug": "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self",
+      "published_at": "2024-08-08T18:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "65f73d79ed6d88000174d2ac",
+      "title": "The Transformative Power of Generalists in a Specialized World",
+      "slug": "the-transformative-power-of-generalists-in-a-specialized-world",
+      "published_at": "2024-03-17T12:22:29.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-transformative-power-of-generalists-in-a-specialized-world/",
+      "featured": true,
+      "reading_time": 23
+    },
+    {
+      "id": "65ab51bb4cf93c000184b735",
+      "title": "Writing as a Process of Self-Discovery",
+      "slug": "writing-as-a-process-of-self-discovery",
+      "published_at": "2023-12-05T11:08:58.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/writing-as-a-process-of-self-discovery/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "65a9c748ebf14f0001f3bead",
+      "title": "The 5 Whys Guys? Toyota’s Ingeniously Persistent Curiosity",
+      "slug": "the-5-whys-guys-toyotas-ingeniously-persistent-curiosity",
+      "published_at": "2023-09-28T17:51:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-5-whys-guys-toyotas-ingeniously-persistent-curiosity/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b739",
+      "title": "LinkedIn Is Just Like Dating: Courtship Rules",
+      "slug": "linkedin-is-just-like-dating-courtship-rules",
+      "published_at": "2014-04-30T13:28:51.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/linkedin-is-just-like-dating-courtship-rules/",
+      "featured": false,
+      "reading_time": 4
+    },
+    {
+      "id": "65ab51bb4cf93c000184b736",
+      "title": "Sometimes, Life Thrusts You Into What You Were Always Meant To Do",
+      "slug": "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do",
+      "published_at": "2013-06-25T17:50:09.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do/",
+      "featured": false,
+      "reading_time": 1
+    },
+    {
+      "id": "65a9c7b7ebf14f0001f3bebb",
+      "title": "You Can Sell Your Time, But You Can Never Buy It Back",
+      "slug": "you-can-sell-your-time-but-you-can-never-buy-it-back",
+      "published_at": "2013-06-22T17:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/you-can-sell-your-time-but-you-can-never-buy-it-back/",
+      "featured": true,
+      "reading_time": 4
+    }
+  ],
+  "post_count": 9,
+  "local_feature_image": "life-hacks_feature__L9Go1v.gif"
+}

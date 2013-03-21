@@ -1,0 +1,142 @@
+{
+  "id": "65ab5be34cf93c000184b8d5",
+  "name": "Personal Growth",
+  "slug": "personal-growth",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/Muniz-Education-GIF.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/personal-growth/",
+  "posts": [
+    {
+      "id": "693d2a92adf4ac0001a79109",
+      "title": "The Speed Trap",
+      "slug": "the-speed-trap",
+      "published_at": "2025-12-11T01:33:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-speed-trap/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "688590e5845b5c0001afe00d",
+      "title": "I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You",
+      "slug": "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you",
+      "published_at": "2025-07-31T09:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "684a950265e4ce000100570b",
+      "title": "The Last Human Standing and How We Learned to Stop Thinking",
+      "slug": "the-last-human-standing-and-how-we-learned-to-stop-thinking",
+      "published_at": "2025-06-05T12:51:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-last-human-standing-and-how-we-learned-to-stop-thinking/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "683b9e0cec2e7e0001fee938",
+      "title": "The Art of Productive Theft: Steve Jobs' Real Genius",
+      "slug": "the-art-of-productive-theft-steve-jobs-real-genius",
+      "published_at": "2025-05-31T18:35:27.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-productive-theft-steve-jobs-real-genius/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "670790a847b6c200019d0143",
+      "title": "Embracing Creativity: Your Gateway to Success in the Digital Landscape",
+      "slug": "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2",
+      "published_at": "2024-10-11T05:55:11.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2/",
+      "featured": false,
+      "reading_time": 20
+    },
+    {
+      "id": "673775bf2031060001730e1c",
+      "title": "Pixels and Perceptions: Unraveling AI's Influence on Children's Reality",
+      "slug": "pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality",
+      "published_at": "2024-08-22T06:27:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "672ec9f9a5ffdf000161a28c",
+      "title": "Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis",
+      "slug": "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self",
+      "published_at": "2024-08-08T18:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "66efd73c75497b0001948d6f",
+      "title": "The Art of Persuasion: How Aristotle's Ancient Wisdom Still Shapes Our World",
+      "slug": "the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world",
+      "published_at": "2024-04-14T01:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65ab51bb4cf93c000184b735",
+      "title": "Writing as a Process of Self-Discovery",
+      "slug": "writing-as-a-process-of-self-discovery",
+      "published_at": "2023-12-05T11:08:58.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/writing-as-a-process-of-self-discovery/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "65ab51bb4cf93c000184b747",
+      "title": "Thanks Be Given",
+      "slug": "thanks-be-given",
+      "published_at": "2015-10-11T16:18:36.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/thanks-be-given/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b736",
+      "title": "Sometimes, Life Thrusts You Into What You Were Always Meant To Do",
+      "slug": "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do",
+      "published_at": "2013-06-25T17:50:09.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do/",
+      "featured": false,
+      "reading_time": 1
+    },
+    {
+      "id": "65ab51bb4cf93c000184b743",
+      "title": "My Love Affair with Ellipsis…",
+      "slug": "my-love-affair-with-the-ellipsis",
+      "published_at": "2013-05-07T19:03:57.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/my-love-affair-with-the-ellipsis/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b752",
+      "title": "The Five Things That Will Get You Nowhere Fast",
+      "slug": "the-five-things-that-will-get-you-nowhere-fast",
+      "published_at": "2013-05-06T20:09:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-five-things-that-will-get-you-nowhere-fast/",
+      "featured": true,
+      "reading_time": 1
+    }
+  ],
+  "post_count": 13,
+  "local_feature_image": "personal-growth_feature__Muniz-Education-GIF.gif"
+}

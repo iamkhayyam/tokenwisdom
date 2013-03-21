@@ -1,0 +1,466 @@
+{
+  "id": "65ab30784cf93c000184b6ea",
+  "name": "Innovation",
+  "slug": "innovation",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/Bviewmaster.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/innovation/",
+  "posts": [
+    {
+      "id": "69c9c04e371584000109bc34",
+      "title": "The Sky Has Been Warning Us Since 1859",
+      "slug": "the-sky-has-been-warning-us-since-1859",
+      "published_at": "2026-03-26T17:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-sky-has-been-warning-us-since-1859/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "69c18d9976853700012a5526",
+      "title": "The Proentropic Weed Manifesto",
+      "slug": "the-proentropic-weed-manifesto",
+      "published_at": "2026-03-20T13:38:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-proentropic-weed-manifesto/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6957a560510d1a0001d21a75",
+      "title": "The $20 Billion Distraction",
+      "slug": "the-20-billion-distraction",
+      "published_at": "2026-01-01T11:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-20-billion-distraction/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "694511d3bc99830001492c0c",
+      "title": "Again, No One Leaves A Good Company",
+      "slug": "again-no-one-leaves-a-good-company",
+      "published_at": "2025-12-18T23:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/again-no-one-leaves-a-good-company/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "69351e704ec7380001940c84",
+      "title": "Architecture Over Scale",
+      "slug": "google-just-admitted-i-was-right-i-didnt-even-flinch",
+      "published_at": "2025-12-04T22:28:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/google-just-admitted-i-was-right-i-didnt-even-flinch/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "693006587341820001acfb6f",
+      "title": "Intelligence Without Experience",
+      "slug": "intelligence-without-experience",
+      "published_at": "2025-11-27T13:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/intelligence-without-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "691b712e8444b4000102a6ab",
+      "title": "When Two's Company, Three's a Revolution",
+      "slug": "when-twos-company-threes-a-revolution",
+      "published_at": "2025-11-13T11:34:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/when-twos-company-threes-a-revolution/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68e5de54a6c145000155c19f",
+      "title": "The Age of Experience",
+      "slug": "the-age-of-experience",
+      "published_at": "2025-10-02T21:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-age-of-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68d85b4e1c11b20001eb00f3",
+      "title": "How Beautiful Failures Create Innovation Breakthroughs",
+      "slug": "how-beautiful-failures-create-innovation-breakthroughs",
+      "published_at": "2025-09-25T11:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-beautiful-failures-create-innovation-breakthroughs/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68d0f7d2c03c2700012d9b07",
+      "title": "The Hard Truths About Our Technological Moment",
+      "slug": "the-hard-truths-about-our-technological-moment",
+      "published_at": "2025-09-23T08:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-hard-truths-about-our-technological-moment/",
+      "featured": false,
+      "reading_time": 17
+    },
+    {
+      "id": "68c7787f5979e300016d611d",
+      "title": "How Your Driver's License is Just Santa Claus With Government Backing",
+      "slug": "how-your-drivers-license-is-just-santa-claus-with-government-backing",
+      "published_at": "2025-08-28T19:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-your-drivers-license-is-just-santa-claus-with-government-backing/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68c75eccfeb9ac00017a2aac",
+      "title": "Digital Supersaturation of Why Everything is About to Crystallize",
+      "slug": "the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up",
+      "published_at": "2025-08-21T17:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68c743acfeb9ac00017a2a38",
+      "title": "Why Engineers Build, Not Code",
+      "slug": "move-fast-and-build-things-why-engineers-build-not-code",
+      "published_at": "2025-08-14T15:51:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/move-fast-and-build-things-why-engineers-build-not-code/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68c73a84feb9ac00017a29ca",
+      "title": "The Blindness of the Visionary—Why Most People Can't See Around Corners",
+      "slug": "the-blindness-of-the-visionary-why-most-people-cant-see-around-corners",
+      "published_at": "2025-08-07T15:16:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-blindness-of-the-visionary-why-most-people-cant-see-around-corners/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "684c998ac694b2000157a9cb",
+      "title": "The Startup States of America",
+      "slug": "the-startup-states-of-america",
+      "published_at": "2025-06-14T11:37:12.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-startup-states-of-america/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "683b9e0cec2e7e0001fee938",
+      "title": "The Art of Productive Theft: Steve Jobs' Real Genius",
+      "slug": "the-art-of-productive-theft-steve-jobs-real-genius",
+      "published_at": "2025-05-31T18:35:27.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-productive-theft-steve-jobs-real-genius/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "681332de7c9de4000138af6b",
+      "title": "\"You're Not Special\" - Human Irrelevance in the Age of Exponential AI",
+      "slug": "youre-not-special-human-irrelevance-in-the-age-of-exponential-ai",
+      "published_at": "2025-05-01T07:48:16.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/youre-not-special-human-irrelevance-in-the-age-of-exponential-ai/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "680a05dba9017d00015a0096",
+      "title": "The Moral Bankruptcy of \"Cheat on Everything\" AI",
+      "slug": "the-moral-bankruptcy-of-cheat-on-everything-ai",
+      "published_at": "2025-04-24T08:47:25.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-moral-bankruptcy-of-cheat-on-everything-ai/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6800920e17bdb7000150e902",
+      "title": "The Digital Coup—How Technology Is Reshaping Power",
+      "slug": "the-digital-coup",
+      "published_at": "2025-04-17T07:19:03.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-digital-coup/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67f77aaf2bf4e90001e39da5",
+      "title": "The Consulting Industry's Terminal Diagnosis",
+      "slug": "the-consulting-industrys-terminal-diagnosis",
+      "published_at": "2025-04-10T07:27:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-consulting-industrys-terminal-diagnosis/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67eecdd590d96f000163b782",
+      "title": "Capital Disrupted—The AI Native Shift Across Industries",
+      "slug": "capital-disrupted-the-ai-native-shift-across-industries",
+      "published_at": "2025-04-03T12:48:37.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/capital-disrupted-the-ai-native-shift-across-industries/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "67ddb15a41c5920001342506",
+      "title": "The Emerging Security Paradigm in AI Development",
+      "slug": "the-emerging-security-paradigm-in-ai-development",
+      "published_at": "2025-03-21T12:38:43.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-emerging-security-paradigm-in-ai-development/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "67d301e976f8a70001440ab5",
+      "title": "Economic Uncharted Territory—Moving Beyond Obsolete Maps",
+      "slug": "economic-uncharted-territory-moving-beyond-obsolete-maps",
+      "published_at": "2025-03-13T12:28:01.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/economic-uncharted-territory-moving-beyond-obsolete-maps/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "679b4cd1d5bf6e00019c277f",
+      "title": "Not Just Another Essay About DeepSeek—The Ransomware Edition",
+      "slug": "not-just-another-essay-about-deepseek-a-ransomware-edition",
+      "published_at": "2025-01-30T12:45:32.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/not-just-another-essay-about-deepseek-a-ransomware-edition/",
+      "featured": false,
+      "reading_time": 30
+    },
+    {
+      "id": "6777d402e9cf8d00018d42d6",
+      "title": "The Invisible Resolution—NVIDIA's Neural Optics and the Death of Computing as We Know It",
+      "slug": "the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it",
+      "published_at": "2025-01-03T05:55:37.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "676e89929d10560001d2014c",
+      "title": "No One Leaves a Good Company: An OpenAI Story",
+      "slug": "no-one-leaves-a-good-company-an-openai-story",
+      "published_at": "2024-12-27T03:38:05.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/no-one-leaves-a-good-company-an-openai-story/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "676e1f859d10560001d200b9",
+      "title": "I Call Dibs: An Intellectual Property Paradox",
+      "slug": "i-call-dibs-an-intellectual-property-paradox",
+      "published_at": "2024-12-19T19:53:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/i-call-dibs-an-intellectual-property-paradox/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "6750e24b7cdec10001948613",
+      "title": "The Home Depot Revolution: Amazon's Unconventional Path to Chip Innovation",
+      "slug": "the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation",
+      "published_at": "2024-12-05T09:00:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "674bc975fa728b0001fe1fe8",
+      "title": "From Tasks to Systems: The True AI Revolution in Services",
+      "slug": "from-tasks-to-systems-the-true-ai-revolution-in-services",
+      "published_at": "2024-11-07T18:48:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-tasks-to-systems-the-true-ai-revolution-in-services/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "674197037cd6690001213886",
+      "title": "Ultra-Wideband (UWB) Technology: Revolutionizing the Internet of Things",
+      "slug": "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things",
+      "published_at": "2024-09-12T02:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "672f1f71a5ffdf000161a2c9",
+      "title": "Why Everything You Think About Deep Tech Is Right—And Wrong",
+      "slug": "why-everything-you-think-about-deep-tech-is-right-and-wrong",
+      "published_at": "2024-08-15T01:45:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/why-everything-you-think-about-deep-tech-is-right-and-wrong/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67267ae3e558fc0001535482",
+      "title": "The Dangerous Delusion of Digital Spatial Intelligence: Silicon Valley's Trillion-Dollar Mistake",
+      "slug": "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake",
+      "published_at": "2024-07-18T14:38:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "671ed18f8c814100011b02b4",
+      "title": "VR's Quest for 50 Million: The Ultimate Experience Economy Catalyst",
+      "slug": "vrs-quest-for-50-million",
+      "published_at": "2024-07-11T17:23:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/vrs-quest-for-50-million/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "670ada9a47b6c200019d054b",
+      "title": "Gravity Batteries: Harnessing the Power of Weight as a Renewable Energy Storage",
+      "slug": "gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage",
+      "published_at": "2024-06-27T13:23:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6713f6dc144af500017fd425",
+      "title": "From Pages to Vectors: How Vector Embeddings are Reshaping the Internet",
+      "slug": "how-vector-embeddings-are-reshaping-the-internet",
+      "published_at": "2024-06-13T11:34:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-vector-embeddings-are-reshaping-the-internet/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "66221b2a7bdbdb00011e47cf",
+      "title": "Revolutionary Technology Allows Seeing Through Walls Using Wi-Fi Signals",
+      "slug": "revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals",
+      "published_at": "2024-04-30T10:31:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "6708eb9447b6c200019d02be",
+      "title": "How CNN's Work Wonders and Bypasses Copyright",
+      "slug": "how-cnns-work-wonders-and-bypasses-copyright",
+      "published_at": "2024-04-25T02:29:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-cnns-work-wonders-and-bypasses-copyright/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "66efd73c75497b0001948d6f",
+      "title": "The Art of Persuasion: How Aristotle's Ancient Wisdom Still Shapes Our World",
+      "slug": "the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world",
+      "published_at": "2024-04-14T01:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "66131f2001e9e40001950fe9",
+      "title": "Constraint as a Catalyst: Unlocking Lego's Innovation Through Limitation",
+      "slug": "constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation",
+      "published_at": "2024-04-09T01:32:01.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "660adb03945b2e000170f06d",
+      "title": "Disney’s Autonomatronics Odyssey",
+      "slug": "disneys-autonomatronics-odyssey",
+      "published_at": "2024-04-01T23:11:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/disneys-autonomatronics-odyssey/",
+      "featured": false,
+      "reading_time": 22
+    },
+    {
+      "id": "65f6733aed6d88000174d0e6",
+      "title": "A Comprehensive Exploration of NeRF and Gaussian Splatting",
+      "slug": "a-comprehensive-exploration-of-nerf-and-gaussian-splatting",
+      "published_at": "2024-03-11T01:08:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/a-comprehensive-exploration-of-nerf-and-gaussian-splatting/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65dac628692af40001944900",
+      "title": "From AR Glasses to Reality-Bending Lenses",
+      "slug": "from-ar-glasses-to-reality-bending-lenses",
+      "published_at": "2024-02-25T20:21:18.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-ar-glasses-to-reality-bending-lenses/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "65d4929f692af4000194452c",
+      "title": "Navigating the Consequences of Intellectual Property Law",
+      "slug": "navigating-the-consequences-of-intellectual-property-law",
+      "published_at": "2024-02-18T17:40:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/navigating-the-consequences-of-intellectual-property-law/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "65de6867d11d04000135b0c5",
+      "title": "Innovations and Challenges in WBAN for Healthcare",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare",
+      "published_at": "2024-01-19T15:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65a9c53bebf14f0001f3be81",
+      "title": "France’s Mistral AI: Stepping into the Arena",
+      "slug": "frances-mistral-ai-stepping-into-the-arena-to-challenge-the-giants",
+      "published_at": "2023-09-30T17:45:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/frances-mistral-ai-stepping-into-the-arena-to-challenge-the-giants/",
+      "featured": true,
+      "reading_time": 10
+    },
+    {
+      "id": "65ab51bb4cf93c000184b74e",
+      "title": "Innovation Is CallawayGolf's Secret Weapon",
+      "slug": "callawaygolf-has-a-secret-weapon-innovation",
+      "published_at": "2013-07-03T12:18:56.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/callawaygolf-has-a-secret-weapon-innovation/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "65a9e70aebf14f0001f3bf1f",
+      "title": "The Cult(ure) of Innovation",
+      "slug": "the-cult-ure-of-innovation",
+      "published_at": "2013-05-15T16:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-cult-ure-of-innovation/",
+      "featured": true,
+      "reading_time": 5
+    },
+    {
+      "id": "65ab51bb4cf93c000184b74f",
+      "title": "The Art of Confidence",
+      "slug": "the-art-of-confidence",
+      "published_at": "2013-05-12T09:58:45.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-art-of-confidence/",
+      "featured": true,
+      "reading_time": 6
+    },
+    {
+      "id": "65fd1f665d866c000116398a",
+      "title": "Without The Knowledge, What Do You Have?",
+      "slug": "the-knowledge",
+      "published_at": "2013-03-21T00:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-knowledge/",
+      "featured": false,
+      "reading_time": 1
+    }
+  ],
+  "post_count": 49,
+  "local_feature_image": "innovation_feature__Bviewmaster.gif"
+}

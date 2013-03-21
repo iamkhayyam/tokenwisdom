@@ -1,0 +1,61 @@
+{
+  "id": "65ab96a14cf93c000184b9d4",
+  "name": "Advertising",
+  "slug": "advertising",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/header-1200.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/advertising/",
+  "posts": [
+    {
+      "id": "67574c39a7db91000127370f",
+      "title": "The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception",
+      "slug": "the-great-marketing-delusion",
+      "published_at": "2024-11-21T13:17:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-great-marketing-delusion/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "6726aebfe558fc000153557d",
+      "title": "The Loyalty Revolution: From Punch Cards to Predictive Analytics",
+      "slug": "the-loyalty-revolution-from-punch-cards-to-predictive-analytics",
+      "published_at": "2024-07-25T16:10:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-loyalty-revolution-from-punch-cards-to-predictive-analytics/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65a9e70aebf14f0001f3bf1f",
+      "title": "The Cult(ure) of Innovation",
+      "slug": "the-cult-ure-of-innovation",
+      "published_at": "2013-05-15T16:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-cult-ure-of-innovation/",
+      "featured": true,
+      "reading_time": 5
+    },
+    {
+      "id": "65ab51bb4cf93c000184b74f",
+      "title": "The Art of Confidence",
+      "slug": "the-art-of-confidence",
+      "published_at": "2013-05-12T09:58:45.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-art-of-confidence/",
+      "featured": true,
+      "reading_time": 6
+    }
+  ],
+  "post_count": 4,
+  "local_feature_image": "advertising_feature__header-1200.gif"
+}

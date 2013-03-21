@@ -1,0 +1,97 @@
+{
+  "id": "65ab96854cf93c000184b9c8",
+  "name": "Persuasion",
+  "slug": "grifters",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/original--2-.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/grifters/",
+  "posts": [
+    {
+      "id": "69b71aa405f1150001507a67",
+      "title": "The Room Was Already Set Before You Walked In",
+      "slug": "the-room-was-already-set-before-you-walked-in",
+      "published_at": "2026-03-12T14:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-room-was-already-set-before-you-walked-in/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68548aa3550c8300014ca1bf",
+      "title": "When Intelligence Becomes Its Own Enemy",
+      "slug": "when-intelligence-becomes-its-own-enemy",
+      "published_at": "2025-06-19T18:37:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/when-intelligence-becomes-its-own-enemy/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67c08175a27f550001a55d4e",
+      "title": "The $1.5 Billion Fishing Trip—How North Korea Caught the Biggest Crypto Whale Without Writing a Single Line of Code",
+      "slug": "the-1-5-billion-fishing-trip",
+      "published_at": "2025-02-27T07:39:07.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-1-5-billion-fishing-trip/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67b0bed11f633d0001f18a77",
+      "title": "Love in the Time of Algorithms—An Open Letter to Valentine’s Day",
+      "slug": "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day",
+      "published_at": "2025-02-14T12:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "676e89929d10560001d2014c",
+      "title": "No One Leaves a Good Company: An OpenAI Story",
+      "slug": "no-one-leaves-a-good-company-an-openai-story",
+      "published_at": "2024-12-27T03:38:05.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/no-one-leaves-a-good-company-an-openai-story/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67574c39a7db91000127370f",
+      "title": "The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception",
+      "slug": "the-great-marketing-delusion",
+      "published_at": "2024-11-21T13:17:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-great-marketing-delusion/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "66efd73c75497b0001948d6f",
+      "title": "The Art of Persuasion: How Aristotle's Ancient Wisdom Still Shapes Our World",
+      "slug": "the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world",
+      "published_at": "2024-04-14T01:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65ab51bb4cf93c000184b74f",
+      "title": "The Art of Confidence",
+      "slug": "the-art-of-confidence",
+      "published_at": "2013-05-12T09:58:45.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-art-of-confidence/",
+      "featured": true,
+      "reading_time": 6
+    }
+  ],
+  "post_count": 8,
+  "local_feature_image": "grifters_feature__original--2-.gif"
+}

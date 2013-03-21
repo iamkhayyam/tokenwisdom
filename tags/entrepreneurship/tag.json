@@ -1,0 +1,133 @@
+{
+  "id": "65ac1daf4cf93c000184baec",
+  "name": "Entrepreneurial",
+  "slug": "entrepreneurship",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/rocket-1.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/entrepreneurship/",
+  "posts": [
+    {
+      "id": "69351e704ec7380001940c84",
+      "title": "Architecture Over Scale",
+      "slug": "google-just-admitted-i-was-right-i-didnt-even-flinch",
+      "published_at": "2025-12-04T22:28:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/google-just-admitted-i-was-right-i-didnt-even-flinch/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68c73a84feb9ac00017a29ca",
+      "title": "The Blindness of the Visionary—Why Most People Can't See Around Corners",
+      "slug": "the-blindness-of-the-visionary-why-most-people-cant-see-around-corners",
+      "published_at": "2025-08-07T15:16:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-blindness-of-the-visionary-why-most-people-cant-see-around-corners/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "683b9e0cec2e7e0001fee938",
+      "title": "The Art of Productive Theft: Steve Jobs' Real Genius",
+      "slug": "the-art-of-productive-theft-steve-jobs-real-genius",
+      "published_at": "2025-05-31T18:35:27.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-productive-theft-steve-jobs-real-genius/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "681332de7c9de4000138af6b",
+      "title": "\"You're Not Special\" - Human Irrelevance in the Age of Exponential AI",
+      "slug": "youre-not-special-human-irrelevance-in-the-age-of-exponential-ai",
+      "published_at": "2025-05-01T07:48:16.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/youre-not-special-human-irrelevance-in-the-age-of-exponential-ai/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "680a05dba9017d00015a0096",
+      "title": "The Moral Bankruptcy of \"Cheat on Everything\" AI",
+      "slug": "the-moral-bankruptcy-of-cheat-on-everything-ai",
+      "published_at": "2025-04-24T08:47:25.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-moral-bankruptcy-of-cheat-on-everything-ai/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6800920e17bdb7000150e902",
+      "title": "The Digital Coup—How Technology Is Reshaping Power",
+      "slug": "the-digital-coup",
+      "published_at": "2025-04-17T07:19:03.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-digital-coup/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67f77aaf2bf4e90001e39da5",
+      "title": "The Consulting Industry's Terminal Diagnosis",
+      "slug": "the-consulting-industrys-terminal-diagnosis",
+      "published_at": "2025-04-10T07:27:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-consulting-industrys-terminal-diagnosis/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67eecdd590d96f000163b782",
+      "title": "Capital Disrupted—The AI Native Shift Across Industries",
+      "slug": "capital-disrupted-the-ai-native-shift-across-industries",
+      "published_at": "2025-04-03T12:48:37.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/capital-disrupted-the-ai-native-shift-across-industries/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "6709bfb747b6c200019d03d0",
+      "title": "Yes, Chef! The Startup Chef's Gourmet Guide to TAM, SAM, and SOM",
+      "slug": "yes-chef-the-startup-chefs-guide-to-tam-sam-and-som",
+      "published_at": "2024-05-29T18:11:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/yes-chef-the-startup-chefs-guide-to-tam-sam-and-som/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65f73d79ed6d88000174d2ac",
+      "title": "The Transformative Power of Generalists in a Specialized World",
+      "slug": "the-transformative-power-of-generalists-in-a-specialized-world",
+      "published_at": "2024-03-17T12:22:29.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-transformative-power-of-generalists-in-a-specialized-world/",
+      "featured": true,
+      "reading_time": 23
+    },
+    {
+      "id": "65ab51bb4cf93c000184b736",
+      "title": "Sometimes, Life Thrusts You Into What You Were Always Meant To Do",
+      "slug": "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do",
+      "published_at": "2013-06-25T17:50:09.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do/",
+      "featured": false,
+      "reading_time": 1
+    },
+    {
+      "id": "65ab51bb4cf93c000184b753",
+      "title": "Why Everyone Should Hire An Amateur, Once",
+      "slug": "why-everyone-should-hire-an-amateur-once",
+      "published_at": "2013-05-26T10:12:57.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/why-everyone-should-hire-an-amateur-once/",
+      "featured": false,
+      "reading_time": 2
+    }
+  ],
+  "post_count": 12,
+  "local_feature_image": "entrepreneurship_feature__rocket-1.gif"
+}

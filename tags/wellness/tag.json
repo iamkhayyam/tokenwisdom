@@ -1,0 +1,43 @@
+{
+  "id": "670a400d47b6c200019d046c",
+  "name": "Wellness",
+  "slug": "wellness",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/10/wellness-wednesday.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/wellness/",
+  "posts": [
+    {
+      "id": "673c14862031060001730fa0",
+      "title": "The Digital Biomarker Revolution: Transforming Healthcare by 2030",
+      "slug": "the-digital-biomarker-revolution-transforming-healthcare-by-2030",
+      "published_at": "2024-09-05T21:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-digital-biomarker-revolution-transforming-healthcare-by-2030/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "670a3e6647b6c200019d0454",
+      "title": "The AI Revolution in Healthcare: Reshaping the Future of Medicine",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare-copy",
+      "published_at": "2024-01-25T02:23:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare-copy/",
+      "featured": false,
+      "reading_time": 10
+    }
+  ],
+  "post_count": 2,
+  "local_feature_image": "wellness_feature__wellness-wednesday.gif"
+}

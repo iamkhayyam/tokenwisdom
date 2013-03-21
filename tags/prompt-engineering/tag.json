@@ -1,0 +1,43 @@
+{
+  "id": "65ace9284cf93c000184bcdf",
+  "name": "Prompt \\ Engineering",
+  "slug": "prompt-engineering",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/giphy-downsized-large-1.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/prompt-engineering/",
+  "posts": [
+    {
+      "id": "67a72f40df16bb00019a29fc",
+      "title": "The Bible—Humanity's First Large Language Model?",
+      "slug": "the-bible-humanitys-first-large-language-model-2",
+      "published_at": "2025-02-08T12:32:57.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-bible-humanitys-first-large-language-model-2/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "65a9dad0ebf14f0001f3bf0b",
+      "title": "Command Engineering: A New Skill Prompting the Future",
+      "slug": "the-rise-of-command-engineering",
+      "published_at": "2023-04-04T19:16:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-rise-of-command-engineering/",
+      "featured": false,
+      "reading_time": 4
+    }
+  ],
+  "post_count": 2,
+  "local_feature_image": "prompt-engineering_feature__giphy-downsized-large-1.gif"
+}

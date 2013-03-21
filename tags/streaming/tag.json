@@ -1,0 +1,34 @@
+{
+  "id": "65aacc524cf93c000184b676",
+  "name": "Streaming \\ Video",
+  "slug": "streaming",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/1_gOzBp0ueU1IyjD_zZlX9eQ---01.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/streaming/",
+  "posts": [
+    {
+      "id": "65aa261cebf14f0001f3c0d9",
+      "title": "The Great Hollywood Heist: Streaming's Struggle to Generate Cash Flow",
+      "slug": "the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow",
+      "published_at": "2023-12-14T23:38:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow/",
+      "featured": false,
+      "reading_time": 3
+    }
+  ],
+  "post_count": 1,
+  "local_feature_image": "streaming_feature__1_gOzBp0ueU1IyjD_zZlX9eQ---01.gif"
+}

@@ -1,0 +1,412 @@
+{
+  "id": "65ab9e304cf93c000184ba0b",
+  "name": "Philosophical",
+  "slug": "philosophy",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/giphy-downsized-large.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/philosophy/",
+  "posts": [
+    {
+      "id": "69c9c04e371584000109bc34",
+      "title": "The Sky Has Been Warning Us Since 1859",
+      "slug": "the-sky-has-been-warning-us-since-1859",
+      "published_at": "2026-03-26T17:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-sky-has-been-warning-us-since-1859/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "69c18d9976853700012a5526",
+      "title": "The Proentropic Weed Manifesto",
+      "slug": "the-proentropic-weed-manifesto",
+      "published_at": "2026-03-20T13:38:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-proentropic-weed-manifesto/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "69af41ff408a6400011c9381",
+      "title": "The Race That Eats Its Own Rules",
+      "slug": "the-race-that-eats-its-own-rules",
+      "published_at": "2026-03-06T15:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-race-that-eats-its-own-rules/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "69a37e91b950650001160e27",
+      "title": "The Double Collapse",
+      "slug": "the-double-collapse",
+      "published_at": "2026-02-26T16:12:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-double-collapse/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "699e7e4e58732800011e3c56",
+      "title": "Dear Sam,",
+      "slug": "dear-sam",
+      "published_at": "2026-02-24T22:32:30.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/featured/dear-sam/",
+      "featured": true,
+      "reading_time": 25
+    },
+    {
+      "id": "699bd1600cf975000157de5f",
+      "title": "The Persistence of Inferior Standards",
+      "slug": "the-persistence-of-inferior-standards",
+      "published_at": "2026-02-19T22:35:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-persistence-of-inferior-standards/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "698ccfc4829448000107b212",
+      "title": "Threading a Very Fine Needle",
+      "slug": "threading-a-very-fine-needle",
+      "published_at": "2026-02-12T22:37:27.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/threading-a-very-fine-needle/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "6987fd592424b80001899146",
+      "title": "How Does Order Emerge in a Universe Built for Chaos?",
+      "slug": "how-does-order-emerge-in-a-universe-built-for-chaos",
+      "published_at": "2026-02-05T23:02:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/how-does-order-emerge-in-a-universe-built-for-chaos/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "69798e109f969100018528d8",
+      "title": "Dear Dario,",
+      "slug": "dear-dario",
+      "published_at": "2026-01-27T22:36:11.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/featured/dear-dario/",
+      "featured": true,
+      "reading_time": 18
+    },
+    {
+      "id": "6974bab905e0200001eea917",
+      "title": "The Greengrocer Goes To Davos",
+      "slug": "the-greengrocer-goes-to-davos",
+      "published_at": "2026-01-22T04:43:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-greengrocer-goes-to-davos/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "696ab7cbb7bc620001983ae8",
+      "title": "AI Didn't Break Democracy. We Did. Four Decades Ago.",
+      "slug": "ai-didnt-break-democracy-we-did-four-decades-ago",
+      "published_at": "2026-01-15T11:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/ai-didnt-break-democracy-we-did-four-decades-ago/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "695f3a1559cfb10001d21896",
+      "title": "Building Without Blueprints",
+      "slug": "building-without-blueprints",
+      "published_at": "2026-01-08T00:12:05.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/building-without-blueprints/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "694ae2748d521d0001e1735f",
+      "title": "The Amnesia Machine",
+      "slug": "the-amnesia-machine-2",
+      "published_at": "2025-12-25T10:57:02.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-amnesia-machine-2/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "693d2a92adf4ac0001a79109",
+      "title": "The Speed Trap",
+      "slug": "the-speed-trap",
+      "published_at": "2025-12-11T01:33:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-speed-trap/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "693006587341820001acfb6f",
+      "title": "Intelligence Without Experience",
+      "slug": "intelligence-without-experience",
+      "published_at": "2025-11-27T13:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/intelligence-without-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "690410a91bc34d000188c823",
+      "title": "The 10% Delusion",
+      "slug": "the-10-delusion",
+      "published_at": "2025-10-31T14:43:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-10-delusion/",
+      "featured": false,
+      "reading_time": 26
+    },
+    {
+      "id": "68ead0cd483d610001a8700b",
+      "title": "Mirror World of the Three-Body Problem",
+      "slug": "mirror-world-of-the-three-body-problem",
+      "published_at": "2025-10-09T15:01:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/mirror-world-of-the-three-body-problem/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "68e5de54a6c145000155c19f",
+      "title": "The Age of Experience",
+      "slug": "the-age-of-experience",
+      "published_at": "2025-10-02T21:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-age-of-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68d85b4e1c11b20001eb00f3",
+      "title": "How Beautiful Failures Create Innovation Breakthroughs",
+      "slug": "how-beautiful-failures-create-innovation-breakthroughs",
+      "published_at": "2025-09-25T11:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-beautiful-failures-create-innovation-breakthroughs/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68d0f7d2c03c2700012d9b07",
+      "title": "The Hard Truths About Our Technological Moment",
+      "slug": "the-hard-truths-about-our-technological-moment",
+      "published_at": "2025-09-23T08:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-hard-truths-about-our-technological-moment/",
+      "featured": false,
+      "reading_time": 17
+    },
+    {
+      "id": "68d0e5d7c03c2700012d9ac8",
+      "title": "The Magic Kingdom Crumbles in Corporate Cowardice",
+      "slug": "the-magic-kingdom-crumbles-in-corporate-cowardice",
+      "published_at": "2025-09-18T07:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-magic-kingdom-crumbles-in-corporate-cowardice/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68d0d05cc03c2700012d9a3e",
+      "title": "The Luddite's Last Stand",
+      "slug": "the-luddites-last-stand",
+      "published_at": "2025-09-11T21:52:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-luddites-last-stand/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68c7787f5979e300016d611d",
+      "title": "How Your Driver's License is Just Santa Claus With Government Backing",
+      "slug": "how-your-drivers-license-is-just-santa-claus-with-government-backing",
+      "published_at": "2025-08-28T19:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-your-drivers-license-is-just-santa-claus-with-government-backing/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68c73a84feb9ac00017a29ca",
+      "title": "The Blindness of the Visionary—Why Most People Can't See Around Corners",
+      "slug": "the-blindness-of-the-visionary-why-most-people-cant-see-around-corners",
+      "published_at": "2025-08-07T15:16:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-blindness-of-the-visionary-why-most-people-cant-see-around-corners/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "68858d74845b5c0001afdfe7",
+      "title": "America’s Broken Funny Bone",
+      "slug": "americas-broken-funny-bone",
+      "published_at": "2025-07-17T10:58:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/americas-broken-funny-bone/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "6884ac17bf67a80001661ce0",
+      "title": "Divided We Stand, United We Fall",
+      "slug": "divided-we-stand-united-we-fall",
+      "published_at": "2025-07-10T12:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/divided-we-stand-united-we-fall/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "686ad01c85d4080001460371",
+      "title": "We're Not Creating God, We're Discovering God",
+      "slug": "were-not-creating-god-were-discovering-god",
+      "published_at": "2025-07-06T14:09:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/were-not-creating-god-were-discovering-god/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68548aa3550c8300014ca1bf",
+      "title": "When Intelligence Becomes Its Own Enemy",
+      "slug": "when-intelligence-becomes-its-own-enemy",
+      "published_at": "2025-06-19T18:37:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/when-intelligence-becomes-its-own-enemy/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "684c998ac694b2000157a9cb",
+      "title": "The Startup States of America",
+      "slug": "the-startup-states-of-america",
+      "published_at": "2025-06-14T11:37:12.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-startup-states-of-america/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "683b9e0cec2e7e0001fee938",
+      "title": "The Art of Productive Theft: Steve Jobs' Real Genius",
+      "slug": "the-art-of-productive-theft-steve-jobs-real-genius",
+      "published_at": "2025-05-31T18:35:27.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-productive-theft-steve-jobs-real-genius/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "682fc09aca8e790001a200fd",
+      "title": "The Day We Made Ourselves Obsolete",
+      "slug": "the-day-we-made-ourselves-obsolete",
+      "published_at": "2025-05-23T07:49:25.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-day-we-made-ourselves-obsolete/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "682a01fd7054e000010513f0",
+      "title": "The Grand Delusion: Why Our Models of Reality Are Fundamentally Incomplete",
+      "slug": "the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete",
+      "published_at": "2025-05-18T11:29:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67b0bed11f633d0001f18a77",
+      "title": "Love in the Time of Algorithms—An Open Letter to Valentine’s Day",
+      "slug": "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day",
+      "published_at": "2025-02-14T12:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6791ecbc81993f00014a74e3",
+      "title": "The Political Singularity—Welcome to the First Algorithmic State",
+      "slug": "the-political-singularity-welcome-to-the-first-algorithmic-state",
+      "published_at": "2025-01-23T08:08:58.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-political-singularity-welcome-to-the-first-algorithmic-state/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "6788ac8a78b17200019cef64",
+      "title": "The Computational Autocracy—Inside the UAE's Blueprint for AI-Powered Control",
+      "slug": "the-computational-autocracy",
+      "published_at": "2025-01-16T06:22:08.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-computational-autocracy/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "676e89929d10560001d2014c",
+      "title": "No One Leaves a Good Company: An OpenAI Story",
+      "slug": "no-one-leaves-a-good-company-an-openai-story",
+      "published_at": "2024-12-27T03:38:05.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/no-one-leaves-a-good-company-an-openai-story/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67574c39a7db91000127370f",
+      "title": "The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception",
+      "slug": "the-great-marketing-delusion",
+      "published_at": "2024-11-21T13:17:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-great-marketing-delusion/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "674bc975fa728b0001fe1fe8",
+      "title": "From Tasks to Systems: The True AI Revolution in Services",
+      "slug": "from-tasks-to-systems-the-true-ai-revolution-in-services",
+      "published_at": "2024-11-07T18:48:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-tasks-to-systems-the-true-ai-revolution-in-services/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "674bf2ddfa728b0001fe2075",
+      "title": "The Quantum Dance: Shattering Our Understanding of Matter",
+      "slug": "the-quantum-dance-shattering-our-understanding-of-matter",
+      "published_at": "2024-10-31T21:24:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-quantum-dance-shattering-our-understanding-of-matter/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "674bd374fa728b0001fe201d",
+      "title": "Beyond the Silicon Dream: Why Consciousness Can't Be Computed",
+      "slug": "beyond-the-silicon-dream-why-consciousness-cant-be-computed",
+      "published_at": "2024-10-24T20:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/beyond-the-silicon-dream-why-consciousness-cant-be-computed/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "670aafea47b6c200019d051a",
+      "title": "The Creator Economy: From Experience to Creation",
+      "slug": "the-creator-economy-from-experience-to-creation",
+      "published_at": "2024-06-20T10:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-creator-economy-from-experience-to-creation/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "670aa07d47b6c200019d04c8",
+      "title": "The Power of 'What If': Exploring the World Through Thought Experiments",
+      "slug": "the-power-of-what-if-exploring-the-world-through-through-experiments",
+      "published_at": "2024-06-20T09:24:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-what-if-exploring-the-world-through-through-experiments/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "65ab51bb4cf93c000184b743",
+      "title": "My Love Affair with Ellipsis…",
+      "slug": "my-love-affair-with-the-ellipsis",
+      "published_at": "2013-05-07T19:03:57.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/my-love-affair-with-the-ellipsis/",
+      "featured": false,
+      "reading_time": 3
+    }
+  ],
+  "post_count": 43,
+  "local_feature_image": "philosophy_feature__giphy-downsized-large.gif"
+}

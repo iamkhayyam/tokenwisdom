@@ -1,0 +1,34 @@
+{
+  "id": "65ac202b4cf93c000184bb17",
+  "name": "Interview with...",
+  "slug": "interview",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/interview-lestat.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/interview/",
+  "posts": [
+    {
+      "id": "65ab51bb4cf93c000184b74e",
+      "title": "Innovation Is CallawayGolf's Secret Weapon",
+      "slug": "callawaygolf-has-a-secret-weapon-innovation",
+      "published_at": "2013-07-03T12:18:56.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/callawaygolf-has-a-secret-weapon-innovation/",
+      "featured": false,
+      "reading_time": 7
+    }
+  ],
+  "post_count": 1,
+  "local_feature_image": "interview_feature__interview-lestat.gif"
+}

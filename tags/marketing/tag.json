@@ -1,0 +1,88 @@
+{
+  "id": "65ac282a4cf93c000184bbc4",
+  "name": "Marketing",
+  "slug": "marketing",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/80.-entrepreneur-marketing.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/marketing/",
+  "posts": [
+    {
+      "id": "69b71aa405f1150001507a67",
+      "title": "The Room Was Already Set Before You Walked In",
+      "slug": "the-room-was-already-set-before-you-walked-in",
+      "published_at": "2026-03-12T14:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-room-was-already-set-before-you-walked-in/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "67e6c51234edd40001f99bf7",
+      "title": "Consuming Connections—How Corporations Colonized Our Third Place",
+      "slug": "consuming-connections-how-corporations-colonized-our-third-place",
+      "published_at": "2025-03-28T09:37:25.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/consuming-connections-how-corporations-colonized-our-third-place/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "67b0bed11f633d0001f18a77",
+      "title": "Love in the Time of Algorithms—An Open Letter to Valentine’s Day",
+      "slug": "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day",
+      "published_at": "2025-02-14T12:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67575ea4a7db91000127376a",
+      "title": "The Science of Subjective Value: Understanding the Architecture of Experience",
+      "slug": "the-science-of-subjective-value-2",
+      "published_at": "2024-11-28T13:21:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-science-of-subjective-value-2/",
+      "featured": false,
+      "reading_time": 21
+    },
+    {
+      "id": "67574c39a7db91000127370f",
+      "title": "The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception",
+      "slug": "the-great-marketing-delusion",
+      "published_at": "2024-11-21T13:17:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-great-marketing-delusion/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "6726aebfe558fc000153557d",
+      "title": "The Loyalty Revolution: From Punch Cards to Predictive Analytics",
+      "slug": "the-loyalty-revolution-from-punch-cards-to-predictive-analytics",
+      "published_at": "2024-07-25T16:10:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-loyalty-revolution-from-punch-cards-to-predictive-analytics/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65ab51bb4cf93c000184b751",
+      "title": "Say Viral One More Time! I'll Punch You in the Throat =)",
+      "slug": "say-viral-one-more-time-ill-punch-you-in-the-throat",
+      "published_at": "2013-05-20T11:20:34.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/say-viral-one-more-time-ill-punch-you-in-the-throat/",
+      "featured": false,
+      "reading_time": 4
+    }
+  ],
+  "post_count": 7,
+  "local_feature_image": "marketing_feature__80.-entrepreneur-marketing.gif"
+}

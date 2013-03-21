@@ -1,0 +1,133 @@
+{
+  "id": "65ab9d254cf93c000184ba02",
+  "name": "Neuroscience",
+  "slug": "neuroscience",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/4d101c3762b9aa35b49a74ff2bcf0398.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/neuroscience/",
+  "posts": [
+    {
+      "id": "69b71aa405f1150001507a67",
+      "title": "The Room Was Already Set Before You Walked In",
+      "slug": "the-room-was-already-set-before-you-walked-in",
+      "published_at": "2026-03-12T14:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-room-was-already-set-before-you-walked-in/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "693d2a92adf4ac0001a79109",
+      "title": "The Speed Trap",
+      "slug": "the-speed-trap",
+      "published_at": "2025-12-11T01:33:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-speed-trap/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "693006587341820001acfb6f",
+      "title": "Intelligence Without Experience",
+      "slug": "intelligence-without-experience",
+      "published_at": "2025-11-27T13:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/intelligence-without-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68858d74845b5c0001afdfe7",
+      "title": "America’s Broken Funny Bone",
+      "slug": "americas-broken-funny-bone",
+      "published_at": "2025-07-17T10:58:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/americas-broken-funny-bone/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "686ad01c85d4080001460371",
+      "title": "We're Not Creating God, We're Discovering God",
+      "slug": "were-not-creating-god-were-discovering-god",
+      "published_at": "2025-07-06T14:09:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/were-not-creating-god-were-discovering-god/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "67b0bed11f633d0001f18a77",
+      "title": "Love in the Time of Algorithms—An Open Letter to Valentine’s Day",
+      "slug": "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day",
+      "published_at": "2025-02-14T12:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67575ea4a7db91000127376a",
+      "title": "The Science of Subjective Value: Understanding the Architecture of Experience",
+      "slug": "the-science-of-subjective-value-2",
+      "published_at": "2024-11-28T13:21:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-science-of-subjective-value-2/",
+      "featured": false,
+      "reading_time": 21
+    },
+    {
+      "id": "67574c39a7db91000127370f",
+      "title": "The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception",
+      "slug": "the-great-marketing-delusion",
+      "published_at": "2024-11-21T13:17:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-great-marketing-delusion/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "674bd374fa728b0001fe201d",
+      "title": "Beyond the Silicon Dream: Why Consciousness Can't Be Computed",
+      "slug": "beyond-the-silicon-dream-why-consciousness-cant-be-computed",
+      "published_at": "2024-10-24T20:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/beyond-the-silicon-dream-why-consciousness-cant-be-computed/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "674b56a5fa728b0001fe1ef9",
+      "title": "The AI Revolution Isn't What You Think It Is",
+      "slug": "the-ai-revolution-isnt-what-you-think-it-is",
+      "published_at": "2024-10-17T12:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-ai-revolution-isnt-what-you-think-it-is/",
+      "featured": false,
+      "reading_time": 4
+    },
+    {
+      "id": "672ec9f9a5ffdf000161a28c",
+      "title": "Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis",
+      "slug": "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self",
+      "published_at": "2024-08-08T18:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "65aa0ff5ebf14f0001f3c04f",
+      "title": "Experience Futures: The Rise of Human Experience (HX)",
+      "slug": "experience-futures-the-rise-of-human-experience-hx",
+      "published_at": "2023-05-04T23:08:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/experience-futures-the-rise-of-human-experience-hx/",
+      "featured": false,
+      "reading_time": 6
+    }
+  ],
+  "post_count": 12,
+  "local_feature_image": "neuroscience_feature__4d101c3762b9aa35b49a74ff2bcf0398.gif"
+}

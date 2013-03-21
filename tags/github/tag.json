@@ -1,0 +1,34 @@
+{
+  "id": "65ace9904cf93c000184bced",
+  "name": "Github",
+  "slug": "github",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/KdwHDJSqNs.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/github/",
+  "posts": [
+    {
+      "id": "65a9f1e5ebf14f0001f3bfa9",
+      "title": "Co-Pilot X: The AI-Powered Developer Experience",
+      "slug": "co-pilot-x-the-ai-powered-developer-experience",
+      "published_at": "2023-04-05T20:56:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/co-pilot-x-the-ai-powered-developer-experience/",
+      "featured": false,
+      "reading_time": 7
+    }
+  ],
+  "post_count": 1,
+  "local_feature_image": "github_feature__KdwHDJSqNs.gif"
+}

@@ -1,0 +1,97 @@
+{
+  "id": "65ca745062726e000102c63b",
+  "name": "Semiconductor",
+  "slug": "semiconductor",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/ChipElectro-TopArt.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/semiconductor/",
+  "posts": [
+    {
+      "id": "691b712e8444b4000102a6ab",
+      "title": "When Two's Company, Three's a Revolution",
+      "slug": "when-twos-company-threes-a-revolution",
+      "published_at": "2025-11-13T11:34:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/when-twos-company-threes-a-revolution/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68ffc27c78e9190001044cdc",
+      "title": "Silicon Valley Is Building a $600 Billion Casino With Chips That Expire in Three Years",
+      "slug": "silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years",
+      "published_at": "2025-10-23T22:43:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67eecdd590d96f000163b782",
+      "title": "Capital Disrupted—The AI Native Shift Across Industries",
+      "slug": "capital-disrupted-the-ai-native-shift-across-industries",
+      "published_at": "2025-04-03T12:48:37.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/capital-disrupted-the-ai-native-shift-across-industries/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "6750e24b7cdec10001948613",
+      "title": "The Home Depot Revolution: Amazon's Unconventional Path to Chip Innovation",
+      "slug": "the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation",
+      "published_at": "2024-12-05T09:00:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "672f1f71a5ffdf000161a2c9",
+      "title": "Why Everything You Think About Deep Tech Is Right—And Wrong",
+      "slug": "why-everything-you-think-about-deep-tech-is-right-and-wrong",
+      "published_at": "2024-08-15T01:45:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/why-everything-you-think-about-deep-tech-is-right-and-wrong/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "672e874ca5ffdf000161a22c",
+      "title": "The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance",
+      "slug": "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance",
+      "published_at": "2024-08-01T08:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "66019ada19bcd2000130aa60",
+      "title": "An Apple a Day Keeps the Privacy Away",
+      "slug": "an-apple-a-day-keeps-the-privacy-away",
+      "published_at": "2024-03-25T15:33:40.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/an-apple-a-day-keeps-the-privacy-away/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "65c11a1c470b1400012b7a81",
+      "title": "The Lone Star State Transforms into a Tech Powerhouse",
+      "slug": "texas-an-american-chipmaking-oasis",
+      "published_at": "2024-02-04T11:37:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/texas-an-american-chipmaking-oasis/",
+      "featured": false,
+      "reading_time": 12
+    }
+  ],
+  "post_count": 8,
+  "local_feature_image": "semiconductor_feature__ChipElectro-TopArt.gif"
+}

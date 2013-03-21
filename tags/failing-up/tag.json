@@ -1,0 +1,97 @@
+{
+  "id": "65ac1daf4cf93c000184baed",
+  "name": "Failing Up \\ Often",
+  "slug": "failing-up",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/if_you_fail.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/failing-up/",
+  "posts": [
+    {
+      "id": "69af41ff408a6400011c9381",
+      "title": "The Race That Eats Its Own Rules",
+      "slug": "the-race-that-eats-its-own-rules",
+      "published_at": "2026-03-06T15:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-race-that-eats-its-own-rules/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68d85b4e1c11b20001eb00f3",
+      "title": "How Beautiful Failures Create Innovation Breakthroughs",
+      "slug": "how-beautiful-failures-create-innovation-breakthroughs",
+      "published_at": "2025-09-25T11:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-beautiful-failures-create-innovation-breakthroughs/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67eecdd590d96f000163b782",
+      "title": "Capital Disrupted—The AI Native Shift Across Industries",
+      "slug": "capital-disrupted-the-ai-native-shift-across-industries",
+      "published_at": "2025-04-03T12:48:37.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/capital-disrupted-the-ai-native-shift-across-industries/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "6750e24b7cdec10001948613",
+      "title": "The Home Depot Revolution: Amazon's Unconventional Path to Chip Innovation",
+      "slug": "the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation",
+      "published_at": "2024-12-05T09:00:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "6709a86647b6c200019d0394",
+      "title": "Bridging the Digital Divide: Creating Equitable and Inclusive Digital Experiences",
+      "slug": "bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences",
+      "published_at": "2024-05-23T15:36:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "66efd70175497b0001948d60",
+      "title": "Crowdstrike: Authorization Not Recognized",
+      "slug": "crowdstrike-authorization-not-recognized",
+      "published_at": "2024-05-10T03:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/crowdstrike-authorization-not-recognized/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "65ab51bb4cf93c000184b735",
+      "title": "Writing as a Process of Self-Discovery",
+      "slug": "writing-as-a-process-of-self-discovery",
+      "published_at": "2023-12-05T11:08:58.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/writing-as-a-process-of-self-discovery/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "65ab51bb4cf93c000184b753",
+      "title": "Why Everyone Should Hire An Amateur, Once",
+      "slug": "why-everyone-should-hire-an-amateur-once",
+      "published_at": "2013-05-26T10:12:57.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/why-everyone-should-hire-an-amateur-once/",
+      "featured": false,
+      "reading_time": 2
+    }
+  ],
+  "post_count": 8,
+  "local_feature_image": "failing-up_feature__if_you_fail.gif"
+}

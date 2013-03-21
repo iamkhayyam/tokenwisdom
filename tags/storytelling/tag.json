@@ -1,0 +1,277 @@
+{
+  "id": "65ab9e304cf93c000184ba0a",
+  "name": "A Story to Tell",
+  "slug": "storytelling",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/giphy--2-.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/storytelling/",
+  "posts": [
+    {
+      "id": "69a37e91b950650001160e27",
+      "title": "The Double Collapse",
+      "slug": "the-double-collapse",
+      "published_at": "2026-02-26T16:12:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-double-collapse/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "699bd1600cf975000157de5f",
+      "title": "The Persistence of Inferior Standards",
+      "slug": "the-persistence-of-inferior-standards",
+      "published_at": "2026-02-19T22:35:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-persistence-of-inferior-standards/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6987fd592424b80001899146",
+      "title": "How Does Order Emerge in a Universe Built for Chaos?",
+      "slug": "how-does-order-emerge-in-a-universe-built-for-chaos",
+      "published_at": "2026-02-05T23:02:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/how-does-order-emerge-in-a-universe-built-for-chaos/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "6980588132c75a000188f5c7",
+      "title": "The Zombie Singularity of Intelligence Without Understanding",
+      "slug": "the-zombie-singularity-of-intelligence-without-understanding",
+      "published_at": "2026-01-30T00:20:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-zombie-singularity-of-intelligence-without-understanding/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "68d0f7d2c03c2700012d9b07",
+      "title": "The Hard Truths About Our Technological Moment",
+      "slug": "the-hard-truths-about-our-technological-moment",
+      "published_at": "2025-09-23T08:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-hard-truths-about-our-technological-moment/",
+      "featured": false,
+      "reading_time": 17
+    },
+    {
+      "id": "688590e5845b5c0001afe00d",
+      "title": "I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You",
+      "slug": "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you",
+      "published_at": "2025-07-31T09:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68858d74845b5c0001afdfe7",
+      "title": "America’s Broken Funny Bone",
+      "slug": "americas-broken-funny-bone",
+      "published_at": "2025-07-17T10:58:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/americas-broken-funny-bone/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "686ad01c85d4080001460371",
+      "title": "We're Not Creating God, We're Discovering God",
+      "slug": "were-not-creating-god-were-discovering-god",
+      "published_at": "2025-07-06T14:09:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/were-not-creating-god-were-discovering-god/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "683b9e0cec2e7e0001fee938",
+      "title": "The Art of Productive Theft: Steve Jobs' Real Genius",
+      "slug": "the-art-of-productive-theft-steve-jobs-real-genius",
+      "published_at": "2025-05-31T18:35:27.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-productive-theft-steve-jobs-real-genius/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67b0bed11f633d0001f18a77",
+      "title": "Love in the Time of Algorithms—An Open Letter to Valentine’s Day",
+      "slug": "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day",
+      "published_at": "2025-02-14T12:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67a72f40df16bb00019a29fc",
+      "title": "The Bible—Humanity's First Large Language Model?",
+      "slug": "the-bible-humanitys-first-large-language-model-2",
+      "published_at": "2025-02-08T12:32:57.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-bible-humanitys-first-large-language-model-2/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "678032bf346c9d0001d90383",
+      "title": "From Likes to Leaves—When Trust Became the Ultimate Unfriend",
+      "slug": "from-likes-to-leaves-when-trust-became-the-ultimate-unfriend",
+      "published_at": "2025-01-11T06:42:50.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/from-likes-to-leaves-when-trust-became-the-ultimate-unfriend/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "67424d2d7cd669000121393e",
+      "title": "The Power of Questioning: Revolutionizing Learning in the AI Era",
+      "slug": "the-power-of-questioning-revolutionizing-learning-in-the-ai-era",
+      "published_at": "2024-09-26T14:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-questioning-revolutionizing-learning-in-the-ai-era/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6726aebfe558fc000153557d",
+      "title": "The Loyalty Revolution: From Punch Cards to Predictive Analytics",
+      "slug": "the-loyalty-revolution-from-punch-cards-to-predictive-analytics",
+      "published_at": "2024-07-25T16:10:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-loyalty-revolution-from-punch-cards-to-predictive-analytics/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "67267ae3e558fc0001535482",
+      "title": "The Dangerous Delusion of Digital Spatial Intelligence: Silicon Valley's Trillion-Dollar Mistake",
+      "slug": "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake",
+      "published_at": "2024-07-18T14:38:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "670aafea47b6c200019d051a",
+      "title": "The Creator Economy: From Experience to Creation",
+      "slug": "the-creator-economy-from-experience-to-creation",
+      "published_at": "2024-06-20T10:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-creator-economy-from-experience-to-creation/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "670aa07d47b6c200019d04c8",
+      "title": "The Power of 'What If': Exploring the World Through Thought Experiments",
+      "slug": "the-power-of-what-if-exploring-the-world-through-through-experiments",
+      "published_at": "2024-06-20T09:24:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-what-if-exploring-the-world-through-through-experiments/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "66efd70175497b0001948d60",
+      "title": "Crowdstrike: Authorization Not Recognized",
+      "slug": "crowdstrike-authorization-not-recognized",
+      "published_at": "2024-05-10T03:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/crowdstrike-authorization-not-recognized/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "66efd73c75497b0001948d6f",
+      "title": "The Art of Persuasion: How Aristotle's Ancient Wisdom Still Shapes Our World",
+      "slug": "the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world",
+      "published_at": "2024-04-14T01:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65fd1c985d866c0001163970",
+      "title": "Ask Me Anything! No, Really. Ask Me Any Thing!",
+      "slug": "no-really-ask-me-anything",
+      "published_at": "2024-03-21T22:22:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/no-really-ask-me-anything/",
+      "featured": false,
+      "reading_time": 0
+    },
+    {
+      "id": "65f73d79ed6d88000174d2ac",
+      "title": "The Transformative Power of Generalists in a Specialized World",
+      "slug": "the-transformative-power-of-generalists-in-a-specialized-world",
+      "published_at": "2024-03-17T12:22:29.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-transformative-power-of-generalists-in-a-specialized-world/",
+      "featured": true,
+      "reading_time": 23
+    },
+    {
+      "id": "65deaf76d11d04000135b111",
+      "title": "Crash Course on What’s Coming",
+      "slug": "crash-course-on-whats-coming",
+      "published_at": "2024-01-11T21:14:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/crash-course-on-whats-coming/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65ab51bb4cf93c000184b735",
+      "title": "Writing as a Process of Self-Discovery",
+      "slug": "writing-as-a-process-of-self-discovery",
+      "published_at": "2023-12-05T11:08:58.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/writing-as-a-process-of-self-discovery/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "65a9c748ebf14f0001f3bead",
+      "title": "The 5 Whys Guys? Toyota’s Ingeniously Persistent Curiosity",
+      "slug": "the-5-whys-guys-toyotas-ingeniously-persistent-curiosity",
+      "published_at": "2023-09-28T17:51:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-5-whys-guys-toyotas-ingeniously-persistent-curiosity/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b747",
+      "title": "Thanks Be Given",
+      "slug": "thanks-be-given",
+      "published_at": "2015-10-11T16:18:36.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/thanks-be-given/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65a9e70aebf14f0001f3bf1f",
+      "title": "The Cult(ure) of Innovation",
+      "slug": "the-cult-ure-of-innovation",
+      "published_at": "2013-05-15T16:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-cult-ure-of-innovation/",
+      "featured": true,
+      "reading_time": 5
+    },
+    {
+      "id": "65ab51bb4cf93c000184b743",
+      "title": "My Love Affair with Ellipsis…",
+      "slug": "my-love-affair-with-the-ellipsis",
+      "published_at": "2013-05-07T19:03:57.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/my-love-affair-with-the-ellipsis/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b752",
+      "title": "The Five Things That Will Get You Nowhere Fast",
+      "slug": "the-five-things-that-will-get-you-nowhere-fast",
+      "published_at": "2013-05-06T20:09:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-five-things-that-will-get-you-nowhere-fast/",
+      "featured": true,
+      "reading_time": 1
+    }
+  ],
+  "post_count": 28,
+  "local_feature_image": "storytelling_feature__giphy--2-.gif"
+}

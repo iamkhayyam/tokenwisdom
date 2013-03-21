@@ -1,0 +1,178 @@
+{
+  "id": "65ab76674cf93c000184b95a",
+  "name": "Future of Work",
+  "slug": "future-of-work",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/im-862822.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/future-of-work/",
+  "posts": [
+    {
+      "id": "69af41ff408a6400011c9381",
+      "title": "The Race That Eats Its Own Rules",
+      "slug": "the-race-that-eats-its-own-rules",
+      "published_at": "2026-03-06T15:19:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-race-that-eats-its-own-rules/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "69a37e91b950650001160e27",
+      "title": "The Double Collapse",
+      "slug": "the-double-collapse",
+      "published_at": "2026-02-26T16:12:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-double-collapse/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "696ab7cbb7bc620001983ae8",
+      "title": "AI Didn't Break Democracy. We Did. Four Decades Ago.",
+      "slug": "ai-didnt-break-democracy-we-did-four-decades-ago",
+      "published_at": "2026-01-15T11:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/ai-didnt-break-democracy-we-did-four-decades-ago/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "695f3a1559cfb10001d21896",
+      "title": "Building Without Blueprints",
+      "slug": "building-without-blueprints",
+      "published_at": "2026-01-08T00:12:05.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/building-without-blueprints/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "694511d3bc99830001492c0c",
+      "title": "Again, No One Leaves A Good Company",
+      "slug": "again-no-one-leaves-a-good-company",
+      "published_at": "2025-12-18T23:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/again-no-one-leaves-a-good-company/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "692e76330c7b0d000112f02b",
+      "title": "AI Won't Take Your Job. It'll Take Your Purpose. That's Worse.",
+      "slug": "ai-wont-take-your-job-itll-take-your-purpose-thats-worse",
+      "published_at": "2025-11-20T21:48:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/ai-wont-take-your-job-itll-take-your-purpose-thats-worse/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "690f90ead8e4cb0001a2fa05",
+      "title": "Power in the Background",
+      "slug": "power-in-the-background",
+      "published_at": "2025-11-06T12:49:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/power-in-the-background/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "681332de7c9de4000138af6b",
+      "title": "\"You're Not Special\" - Human Irrelevance in the Age of Exponential AI",
+      "slug": "youre-not-special-human-irrelevance-in-the-age-of-exponential-ai",
+      "published_at": "2025-05-01T07:48:16.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/youre-not-special-human-irrelevance-in-the-age-of-exponential-ai/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "680a05dba9017d00015a0096",
+      "title": "The Moral Bankruptcy of \"Cheat on Everything\" AI",
+      "slug": "the-moral-bankruptcy-of-cheat-on-everything-ai",
+      "published_at": "2025-04-24T08:47:25.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-moral-bankruptcy-of-cheat-on-everything-ai/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "6800920e17bdb7000150e902",
+      "title": "The Digital Coup—How Technology Is Reshaping Power",
+      "slug": "the-digital-coup",
+      "published_at": "2025-04-17T07:19:03.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-digital-coup/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67f77aaf2bf4e90001e39da5",
+      "title": "The Consulting Industry's Terminal Diagnosis",
+      "slug": "the-consulting-industrys-terminal-diagnosis",
+      "published_at": "2025-04-10T07:27:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-consulting-industrys-terminal-diagnosis/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "67b6e9b27c53cd0001c39f6f",
+      "title": "No Collar Jobs—Beyond the AI Disruption",
+      "slug": "no-collar-jobs-beyond-the-ai-disruption",
+      "published_at": "2025-02-20T15:08:30.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/no-collar-jobs-beyond-the-ai-disruption/",
+      "featured": false,
+      "reading_time": 23
+    },
+    {
+      "id": "670790a847b6c200019d0143",
+      "title": "Embracing Creativity: Your Gateway to Success in the Digital Landscape",
+      "slug": "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2",
+      "published_at": "2024-10-11T05:55:11.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2/",
+      "featured": false,
+      "reading_time": 20
+    },
+    {
+      "id": "65f73d79ed6d88000174d2ac",
+      "title": "The Transformative Power of Generalists in a Specialized World",
+      "slug": "the-transformative-power-of-generalists-in-a-specialized-world",
+      "published_at": "2024-03-17T12:22:29.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-transformative-power-of-generalists-in-a-specialized-world/",
+      "featured": true,
+      "reading_time": 23
+    },
+    {
+      "id": "65aa0ff5ebf14f0001f3c04f",
+      "title": "Experience Futures: The Rise of Human Experience (HX)",
+      "slug": "experience-futures-the-rise-of-human-experience-hx",
+      "published_at": "2023-05-04T23:08:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/experience-futures-the-rise-of-human-experience-hx/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65e510c339bf4b0001412d44",
+      "title": "ChatGPT: Transforming AI Technology",
+      "slug": "chatgpt-transforming-ai-technology",
+      "published_at": "2023-05-04T14:21:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/chatgpt-transforming-ai-technology/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65a9e70aebf14f0001f3bf1f",
+      "title": "The Cult(ure) of Innovation",
+      "slug": "the-cult-ure-of-innovation",
+      "published_at": "2013-05-15T16:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-cult-ure-of-innovation/",
+      "featured": true,
+      "reading_time": 5
+    }
+  ],
+  "post_count": 17,
+  "local_feature_image": "future-of-work_feature__im-862822.gif"
+}

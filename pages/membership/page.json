@@ -1,0 +1,43 @@
+{
+  "id": "65b75ca4a477580001830f3c",
+  "uuid": "7b46e5ca-0456-446e-a6f1-726c24c35536",
+  "title": "Membership Has Its Privileges",
+  "slug": "membership",
+  "html": null,
+  "feature_image": null,
+  "featured": false,
+  "visibility": "public",
+  "created_at": "2024-01-29T00:07:00.000-08:00",
+  "updated_at": "2024-01-29T00:07:14.000-08:00",
+  "published_at": "2024-01-29T00:07:14.000-08:00",
+  "custom_excerpt": null,
+  "tags": [],
+  "authors": [
+    {
+      "id": "6895a3000d912d00085b277d",
+      "name": "🌶️ @iamkhayyam ",
+      "slug": "iamkhayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "meta_title": null,
+      "meta_description": null,
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+    }
+  ],
+  "url": "https://tokenwisdom.ghost.io/membership/",
+  "excerpt": null,
+  "meta_title": null,
+  "meta_description": null
+}

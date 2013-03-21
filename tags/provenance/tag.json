@@ -1,0 +1,61 @@
+{
+  "id": "65aacc884cf93c000184b682",
+  "name": "Provenance",
+  "slug": "provenance",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/tumblr_nq37a9SXrw1u7o3wio1_500-1.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/provenance/",
+  "posts": [
+    {
+      "id": "699bd1600cf975000157de5f",
+      "title": "The Persistence of Inferior Standards",
+      "slug": "the-persistence-of-inferior-standards",
+      "published_at": "2026-02-19T22:35:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-persistence-of-inferior-standards/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "676e1f859d10560001d200b9",
+      "title": "I Call Dibs: An Intellectual Property Paradox",
+      "slug": "i-call-dibs-an-intellectual-property-paradox",
+      "published_at": "2024-12-19T19:53:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/i-call-dibs-an-intellectual-property-paradox/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65d4929f692af4000194452c",
+      "title": "Navigating the Consequences of Intellectual Property Law",
+      "slug": "navigating-the-consequences-of-intellectual-property-law",
+      "published_at": "2024-02-18T17:40:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/navigating-the-consequences-of-intellectual-property-law/",
+      "featured": false,
+      "reading_time": 16
+    },
+    {
+      "id": "65aa1b9febf14f0001f3c079",
+      "title": "Truth or Deception? The Double-Edged Sword of Digital Authenticity",
+      "slug": "truth-or-deception-the-double-edged-sword-of-digital-authenticity",
+      "published_at": "2023-11-27T22:53:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/truth-or-deception-the-double-edged-sword-of-digital-authenticity/",
+      "featured": false,
+      "reading_time": 9
+    }
+  ],
+  "post_count": 4,
+  "local_feature_image": "provenance_feature__tumblr_nq37a9SXrw1u7o3wio1_500-1.gif"
+}

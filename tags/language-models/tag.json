@@ -1,0 +1,124 @@
+{
+  "id": "65ace8de4cf93c000184bcd5",
+  "name": "LLMs - Language Models",
+  "slug": "language-models",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/aa7ebad9-472f-4af2-84ae-63d080791ea5.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/language-models/",
+  "posts": [
+    {
+      "id": "698ccfc4829448000107b212",
+      "title": "Threading a Very Fine Needle",
+      "slug": "threading-a-very-fine-needle",
+      "published_at": "2026-02-12T22:37:27.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/threading-a-very-fine-needle/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "6980588132c75a000188f5c7",
+      "title": "The Zombie Singularity of Intelligence Without Understanding",
+      "slug": "the-zombie-singularity-of-intelligence-without-understanding",
+      "published_at": "2026-01-30T00:20:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-zombie-singularity-of-intelligence-without-understanding/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "67a72f40df16bb00019a29fc",
+      "title": "The Bible—Humanity's First Large Language Model?",
+      "slug": "the-bible-humanitys-first-large-language-model-2",
+      "published_at": "2025-02-08T12:32:57.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-bible-humanitys-first-large-language-model-2/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "679b4cd1d5bf6e00019c277f",
+      "title": "Not Just Another Essay About DeepSeek—The Ransomware Edition",
+      "slug": "not-just-another-essay-about-deepseek-a-ransomware-edition",
+      "published_at": "2025-01-30T12:45:32.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/not-just-another-essay-about-deepseek-a-ransomware-edition/",
+      "featured": false,
+      "reading_time": 30
+    },
+    {
+      "id": "673a7bcc2031060001730ee4",
+      "title": "The Strategic Manifesto: Anthropic's Calculated Move in the AI Race",
+      "slug": "the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race",
+      "published_at": "2024-11-14T16:17:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "67424d2d7cd669000121393e",
+      "title": "The Power of Questioning: Revolutionizing Learning in the AI Era",
+      "slug": "the-power-of-questioning-revolutionizing-learning-in-the-ai-era",
+      "published_at": "2024-09-26T14:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-questioning-revolutionizing-learning-in-the-ai-era/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6742453b7cd66900012138dd",
+      "title": "The Audio Revolution: AI and the Future of Sound",
+      "slug": "the-audio-revolution-ai-and-the-future-of-sound",
+      "published_at": "2024-09-19T13:25:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-audio-revolution-ai-and-the-future-of-sound/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "65fa3184b29fd300012f676b",
+      "title": "I'm an ElevenLabs Pro!",
+      "slug": "im-an-elevenlabs-pro",
+      "published_at": "2024-03-20T13:41:12.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/im-an-elevenlabs-pro/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65e510c339bf4b0001412d44",
+      "title": "ChatGPT: Transforming AI Technology",
+      "slug": "chatgpt-transforming-ai-technology",
+      "published_at": "2023-05-04T14:21:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/chatgpt-transforming-ai-technology/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65a9dad0ebf14f0001f3bf0b",
+      "title": "Command Engineering: A New Skill Prompting the Future",
+      "slug": "the-rise-of-command-engineering",
+      "published_at": "2023-04-04T19:16:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-rise-of-command-engineering/",
+      "featured": false,
+      "reading_time": 4
+    },
+    {
+      "id": "65a9c163ebf14f0001f3be43",
+      "title": "Explosive Growth of AI: From Chat GPT to AGI Sparks",
+      "slug": "the-explosive-growth-of-ai",
+      "published_at": "2023-04-01T17:28:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-explosive-growth-of-ai/",
+      "featured": false,
+      "reading_time": 2
+    }
+  ],
+  "post_count": 11,
+  "local_feature_image": "language-models_feature__aa7ebad9-472f-4af2-84ae-63d080791ea5.gif"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "65ace8474cf93c000184bcb2",
+  "name": "Pre-Crime",
+  "slug": "pre-crime",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/y70ib8fm87591.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/pre-crime/",
+  "posts": [
+    {
+      "id": "69b71aa405f1150001507a67",
+      "title": "The Room Was Already Set Before You Walked In",
+      "slug": "the-room-was-already-set-before-you-walked-in",
+      "published_at": "2026-03-12T14:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-room-was-already-set-before-you-walked-in/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "67ddb15a41c5920001342506",
+      "title": "The Emerging Security Paradigm in AI Development",
+      "slug": "the-emerging-security-paradigm-in-ai-development",
+      "published_at": "2025-03-21T12:38:43.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-emerging-security-paradigm-in-ai-development/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65a9e88bebf14f0001f3bf3b",
+      "title": "Revolutionizing Omnichain Transactions with LayerZero",
+      "slug": "revolutionizing-omnichain-transactions-with-layerzero",
+      "published_at": "2022-12-21T19:22:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/revolutionizing-omnichain-transactions-with-layerzero/",
+      "featured": false,
+      "reading_time": 8
+    }
+  ],
+  "post_count": 3,
+  "local_feature_image": "pre-crime_feature__y70ib8fm87591.gif"
+}

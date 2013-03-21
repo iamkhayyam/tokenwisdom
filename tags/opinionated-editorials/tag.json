@@ -1,0 +1,475 @@
+{
+  "id": "65ac26994cf93c000184bba8",
+  "name": "🚨 OP-ED",
+  "slug": "opinionated-editorials",
+  "description": "Debating ideas is a valuable mental exercise central to dialectic. However, without strong opinions, you might frequently shift between perspectives, avoiding commitment to any particular solution or advocacy for it. \n\n\"If you don't stand for something, you'll fall for anything.\"",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/211dce52115917.5937475d559c5.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": "#c52626",
+  "url": "https://tokenwisdom.ghost.io/tag/opinionated-editorials/",
+  "posts": [
+    {
+      "id": "69c9c04e371584000109bc34",
+      "title": "The Sky Has Been Warning Us Since 1859",
+      "slug": "the-sky-has-been-warning-us-since-1859",
+      "published_at": "2026-03-26T17:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-sky-has-been-warning-us-since-1859/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "699e7e4e58732800011e3c56",
+      "title": "Dear Sam,",
+      "slug": "dear-sam",
+      "published_at": "2026-02-24T22:32:30.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/featured/dear-sam/",
+      "featured": true,
+      "reading_time": 25
+    },
+    {
+      "id": "699bd1600cf975000157de5f",
+      "title": "The Persistence of Inferior Standards",
+      "slug": "the-persistence-of-inferior-standards",
+      "published_at": "2026-02-19T22:35:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-persistence-of-inferior-standards/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "6980588132c75a000188f5c7",
+      "title": "The Zombie Singularity of Intelligence Without Understanding",
+      "slug": "the-zombie-singularity-of-intelligence-without-understanding",
+      "published_at": "2026-01-30T00:20:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-zombie-singularity-of-intelligence-without-understanding/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "69798e109f969100018528d8",
+      "title": "Dear Dario,",
+      "slug": "dear-dario",
+      "published_at": "2026-01-27T22:36:11.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/featured/dear-dario/",
+      "featured": true,
+      "reading_time": 18
+    },
+    {
+      "id": "6974bab905e0200001eea917",
+      "title": "The Greengrocer Goes To Davos",
+      "slug": "the-greengrocer-goes-to-davos",
+      "published_at": "2026-01-22T04:43:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-greengrocer-goes-to-davos/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "696ab7cbb7bc620001983ae8",
+      "title": "AI Didn't Break Democracy. We Did. Four Decades Ago.",
+      "slug": "ai-didnt-break-democracy-we-did-four-decades-ago",
+      "published_at": "2026-01-15T11:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/ai-didnt-break-democracy-we-did-four-decades-ago/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "695f3a1559cfb10001d21896",
+      "title": "Building Without Blueprints",
+      "slug": "building-without-blueprints",
+      "published_at": "2026-01-08T00:12:05.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/building-without-blueprints/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "6957a560510d1a0001d21a75",
+      "title": "The $20 Billion Distraction",
+      "slug": "the-20-billion-distraction",
+      "published_at": "2026-01-01T11:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-20-billion-distraction/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "694ae2748d521d0001e1735f",
+      "title": "The Amnesia Machine",
+      "slug": "the-amnesia-machine-2",
+      "published_at": "2025-12-25T10:57:02.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-amnesia-machine-2/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "694511d3bc99830001492c0c",
+      "title": "Again, No One Leaves A Good Company",
+      "slug": "again-no-one-leaves-a-good-company",
+      "published_at": "2025-12-18T23:11:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/again-no-one-leaves-a-good-company/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "693d2a92adf4ac0001a79109",
+      "title": "The Speed Trap",
+      "slug": "the-speed-trap",
+      "published_at": "2025-12-11T01:33:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-speed-trap/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "69351e704ec7380001940c84",
+      "title": "Architecture Over Scale",
+      "slug": "google-just-admitted-i-was-right-i-didnt-even-flinch",
+      "published_at": "2025-12-04T22:28:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/google-just-admitted-i-was-right-i-didnt-even-flinch/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "693006587341820001acfb6f",
+      "title": "Intelligence Without Experience",
+      "slug": "intelligence-without-experience",
+      "published_at": "2025-11-27T13:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/intelligence-without-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "692e76330c7b0d000112f02b",
+      "title": "AI Won't Take Your Job. It'll Take Your Purpose. That's Worse.",
+      "slug": "ai-wont-take-your-job-itll-take-your-purpose-thats-worse",
+      "published_at": "2025-11-20T21:48:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/ai-wont-take-your-job-itll-take-your-purpose-thats-worse/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "691b712e8444b4000102a6ab",
+      "title": "When Two's Company, Three's a Revolution",
+      "slug": "when-twos-company-threes-a-revolution",
+      "published_at": "2025-11-13T11:34:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/when-twos-company-threes-a-revolution/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "690410a91bc34d000188c823",
+      "title": "The 10% Delusion",
+      "slug": "the-10-delusion",
+      "published_at": "2025-10-31T14:43:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-10-delusion/",
+      "featured": false,
+      "reading_time": 26
+    },
+    {
+      "id": "68ffc27c78e9190001044cdc",
+      "title": "Silicon Valley Is Building a $600 Billion Casino With Chips That Expire in Three Years",
+      "slug": "silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years",
+      "published_at": "2025-10-23T22:43:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68f593bc2f35090001ee8d6e",
+      "title": "The Bullet Holes We Can't See",
+      "slug": "the-bullet-holes-we-cant-see",
+      "published_at": "2025-10-16T19:33:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-bullet-holes-we-cant-see/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68ead0cd483d610001a8700b",
+      "title": "Mirror World of the Three-Body Problem",
+      "slug": "mirror-world-of-the-three-body-problem",
+      "published_at": "2025-10-09T15:01:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/mirror-world-of-the-three-body-problem/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "68e5de54a6c145000155c19f",
+      "title": "The Age of Experience",
+      "slug": "the-age-of-experience",
+      "published_at": "2025-10-02T21:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-age-of-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68d85b4e1c11b20001eb00f3",
+      "title": "How Beautiful Failures Create Innovation Breakthroughs",
+      "slug": "how-beautiful-failures-create-innovation-breakthroughs",
+      "published_at": "2025-09-25T11:49:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-beautiful-failures-create-innovation-breakthroughs/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68d0e5d7c03c2700012d9ac8",
+      "title": "The Magic Kingdom Crumbles in Corporate Cowardice",
+      "slug": "the-magic-kingdom-crumbles-in-corporate-cowardice",
+      "published_at": "2025-09-18T07:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-magic-kingdom-crumbles-in-corporate-cowardice/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68d0d05cc03c2700012d9a3e",
+      "title": "The Luddite's Last Stand",
+      "slug": "the-luddites-last-stand",
+      "published_at": "2025-09-11T21:52:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-luddites-last-stand/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68c782c65979e300016d6199",
+      "title": "When Silicon Valley's Children Go to War",
+      "slug": "when-silicon-valleys-children-go-to-war",
+      "published_at": "2025-09-04T20:25:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/when-silicon-valleys-children-go-to-war/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68c7787f5979e300016d611d",
+      "title": "How Your Driver's License is Just Santa Claus With Government Backing",
+      "slug": "how-your-drivers-license-is-just-santa-claus-with-government-backing",
+      "published_at": "2025-08-28T19:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-your-drivers-license-is-just-santa-claus-with-government-backing/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68c75eccfeb9ac00017a2aac",
+      "title": "Digital Supersaturation of Why Everything is About to Crystallize",
+      "slug": "the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up",
+      "published_at": "2025-08-21T17:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "68c743acfeb9ac00017a2a38",
+      "title": "Why Engineers Build, Not Code",
+      "slug": "move-fast-and-build-things-why-engineers-build-not-code",
+      "published_at": "2025-08-14T15:51:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/move-fast-and-build-things-why-engineers-build-not-code/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68c73a84feb9ac00017a29ca",
+      "title": "The Blindness of the Visionary—Why Most People Can't See Around Corners",
+      "slug": "the-blindness-of-the-visionary-why-most-people-cant-see-around-corners",
+      "published_at": "2025-08-07T15:16:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-blindness-of-the-visionary-why-most-people-cant-see-around-corners/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "688590e5845b5c0001afe00d",
+      "title": "I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You",
+      "slug": "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you",
+      "published_at": "2025-07-31T09:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68858ddc845b5c0001afdffa",
+      "title": "Scrapyard Futures in the Digital Ruins",
+      "slug": "scrapyard-futures-in-the-digital-ruins",
+      "published_at": "2025-07-24T09:20:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/scrapyard-futures-in-the-digital-ruins/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "6884ac17bf67a80001661ce0",
+      "title": "Divided We Stand, United We Fall",
+      "slug": "divided-we-stand-united-we-fall",
+      "published_at": "2025-07-10T12:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/divided-we-stand-united-we-fall/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "685ba5b2ed1d9d0001db189e",
+      "title": "The Misinformation Industrial Complex",
+      "slug": "the-misinformation-industrial-complex",
+      "published_at": "2025-06-26T18:28:33.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-misinformation-industrial-complex/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "68548aa3550c8300014ca1bf",
+      "title": "When Intelligence Becomes Its Own Enemy",
+      "slug": "when-intelligence-becomes-its-own-enemy",
+      "published_at": "2025-06-19T18:37:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/when-intelligence-becomes-its-own-enemy/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "684c998ac694b2000157a9cb",
+      "title": "The Startup States of America",
+      "slug": "the-startup-states-of-america",
+      "published_at": "2025-06-14T11:37:12.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-startup-states-of-america/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "682fc09aca8e790001a200fd",
+      "title": "The Day We Made Ourselves Obsolete",
+      "slug": "the-day-we-made-ourselves-obsolete",
+      "published_at": "2025-05-23T07:49:25.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-day-we-made-ourselves-obsolete/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "682a01fd7054e000010513f0",
+      "title": "The Grand Delusion: Why Our Models of Reality Are Fundamentally Incomplete",
+      "slug": "the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete",
+      "published_at": "2025-05-18T11:29:20.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "67c08175a27f550001a55d4e",
+      "title": "The $1.5 Billion Fishing Trip—How North Korea Caught the Biggest Crypto Whale Without Writing a Single Line of Code",
+      "slug": "the-1-5-billion-fishing-trip",
+      "published_at": "2025-02-27T07:39:07.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-1-5-billion-fishing-trip/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "676e1f859d10560001d200b9",
+      "title": "I Call Dibs: An Intellectual Property Paradox",
+      "slug": "i-call-dibs-an-intellectual-property-paradox",
+      "published_at": "2024-12-19T19:53:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/i-call-dibs-an-intellectual-property-paradox/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "673a7bcc2031060001730ee4",
+      "title": "The Strategic Manifesto: Anthropic's Calculated Move in the AI Race",
+      "slug": "the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race",
+      "published_at": "2024-11-14T16:17:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "674b85b1fa728b0001fe1fa1",
+      "title": "The Internet of Things: Why Our Obsession with Connected Devices May Be Our Undoing",
+      "slug": "the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing",
+      "published_at": "2024-10-03T14:18:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing/",
+      "featured": false,
+      "reading_time": 17
+    },
+    {
+      "id": "673c00af2031060001730f74",
+      "title": "The Simulation Trap: How Virtual Tourism Is Killing Real Culture",
+      "slug": "the-simulation-trap-how-virtual-tourism-is-killing-real-culture",
+      "published_at": "2024-08-29T19:15:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-simulation-trap-how-virtual-tourism-is-killing-real-culture/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "672e874ca5ffdf000161a22c",
+      "title": "The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance",
+      "slug": "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance",
+      "published_at": "2024-08-01T08:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "67267ae3e558fc0001535482",
+      "title": "The Dangerous Delusion of Digital Spatial Intelligence: Silicon Valley's Trillion-Dollar Mistake",
+      "slug": "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake",
+      "published_at": "2024-07-18T14:38:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "66f773b0ffed3900014150e8",
+      "title": "Decoding AI: Why Transparent Models Matter in the Age of Machine Learning",
+      "slug": "decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning",
+      "published_at": "2024-05-09T05:55:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "6630b6e3a7d59a000155ff4e",
+      "title": "Tech Titans Exposed for Profiting from Our Personal Secrets",
+      "slug": "tech-titans-exposed-for-profiting-from-our-personal-secrets",
+      "published_at": "2024-04-30T21:20:40.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/tech-titans-exposed-for-profiting-from-our-personal-secrets/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "66019ada19bcd2000130aa60",
+      "title": "An Apple a Day Keeps the Privacy Away",
+      "slug": "an-apple-a-day-keeps-the-privacy-away",
+      "published_at": "2024-03-25T15:33:40.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/an-apple-a-day-keeps-the-privacy-away/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "65e62bfc507b600001e20fcf",
+      "title": "Navigating the Tightrope of AI Transparency and the Risk of Overexposure",
+      "slug": "navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure",
+      "published_at": "2024-03-04T12:36:48.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65b0bc9e4912bb0001d14f2f",
+      "title": "Meta Doubles Down on AGI",
+      "slug": "meta-doubles-down-on-agi",
+      "published_at": "2024-01-21T00:09:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/meta-doubles-down-on-agi/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65ab51bb4cf93c000184b72d",
+      "title": "Apple’s Privacy: Stretching Across An Ultra-Wideband",
+      "slug": "apples-privacy-stretching-across-an-ultra-wideband",
+      "published_at": "2023-12-01T13:03:06.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/apples-privacy-stretching-across-an-ultra-wideband/",
+      "featured": false,
+      "reading_time": 16
+    }
+  ],
+  "post_count": 50,
+  "local_feature_image": "opinionated-editorials_feature__211dce52115917.5937475d559c5.gif"
+}

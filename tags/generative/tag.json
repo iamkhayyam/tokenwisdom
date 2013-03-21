@@ -1,0 +1,115 @@
+{
+  "id": "65ab28e24cf93c000184b68e",
+  "name": "Generative AI",
+  "slug": "generative",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/original--1-.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/generative/",
+  "posts": [
+    {
+      "id": "688590e5845b5c0001afe00d",
+      "title": "I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You",
+      "slug": "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you",
+      "published_at": "2025-07-31T09:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "67a72f40df16bb00019a29fc",
+      "title": "The Bible—Humanity's First Large Language Model?",
+      "slug": "the-bible-humanitys-first-large-language-model-2",
+      "published_at": "2025-02-08T12:32:57.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-bible-humanitys-first-large-language-model-2/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "6742453b7cd66900012138dd",
+      "title": "The Audio Revolution: AI and the Future of Sound",
+      "slug": "the-audio-revolution-ai-and-the-future-of-sound",
+      "published_at": "2024-09-19T13:25:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-audio-revolution-ai-and-the-future-of-sound/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "6708eb9447b6c200019d02be",
+      "title": "How CNN's Work Wonders and Bypasses Copyright",
+      "slug": "how-cnns-work-wonders-and-bypasses-copyright",
+      "published_at": "2024-04-25T02:29:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/how-cnns-work-wonders-and-bypasses-copyright/",
+      "featured": false,
+      "reading_time": 5
+    },
+    {
+      "id": "65fa3184b29fd300012f676b",
+      "title": "I'm an ElevenLabs Pro!",
+      "slug": "im-an-elevenlabs-pro",
+      "published_at": "2024-03-20T13:41:12.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/im-an-elevenlabs-pro/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65a9b75cebf14f0001f3bdf4",
+      "title": "Revolutionizing Education: When Silicon Meets Chalk",
+      "slug": "revolutionizing-education-the-impact-of-artificial-intelligence",
+      "published_at": "2023-10-23T16:50:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/revolutionizing-education-the-impact-of-artificial-intelligence/",
+      "featured": true,
+      "reading_time": 11
+    },
+    {
+      "id": "65a9c298ebf14f0001f3be58",
+      "title": "The Rise of Algorithms: Are They Taking Over?",
+      "slug": "the-rise-of-algorithms-are-they-taking-over",
+      "published_at": "2023-05-10T17:34:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/the-rise-of-algorithms-are-they-taking-over/",
+      "featured": true,
+      "reading_time": 7
+    },
+    {
+      "id": "65e510c339bf4b0001412d44",
+      "title": "ChatGPT: Transforming AI Technology",
+      "slug": "chatgpt-transforming-ai-technology",
+      "published_at": "2023-05-04T14:21:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/chatgpt-transforming-ai-technology/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65a9f8c5ebf14f0001f3c012",
+      "title": "Art & Technology; The Longest Romance Going and What it Means in the Era of AI",
+      "slug": "art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai",
+      "published_at": "2023-04-26T21:31:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65a9dad0ebf14f0001f3bf0b",
+      "title": "Command Engineering: A New Skill Prompting the Future",
+      "slug": "the-rise-of-command-engineering",
+      "published_at": "2023-04-04T19:16:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-rise-of-command-engineering/",
+      "featured": false,
+      "reading_time": 4
+    }
+  ],
+  "post_count": 10,
+  "local_feature_image": "generative_feature__original--1-.gif"
+}

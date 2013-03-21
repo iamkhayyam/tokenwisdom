@@ -1,0 +1,61 @@
+{
+  "id": "65de72dbd11d04000135b0e6",
+  "name": "Human Body Communication",
+  "slug": "human-body-communication",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/Dipole_xmting_antenna_animation_4_408x318x150ms.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/human-body-communication/",
+  "posts": [
+    {
+      "id": "674197037cd6690001213886",
+      "title": "Ultra-Wideband (UWB) Technology: Revolutionizing the Internet of Things",
+      "slug": "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things",
+      "published_at": "2024-09-12T02:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "673c14862031060001730fa0",
+      "title": "The Digital Biomarker Revolution: Transforming Healthcare by 2030",
+      "slug": "the-digital-biomarker-revolution-transforming-healthcare-by-2030",
+      "published_at": "2024-09-05T21:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-digital-biomarker-revolution-transforming-healthcare-by-2030/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "670a3e6647b6c200019d0454",
+      "title": "The AI Revolution in Healthcare: Reshaping the Future of Medicine",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare-copy",
+      "published_at": "2024-01-25T02:23:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare-copy/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "65de6867d11d04000135b0c5",
+      "title": "Innovations and Challenges in WBAN for Healthcare",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare",
+      "published_at": "2024-01-19T15:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare/",
+      "featured": false,
+      "reading_time": 6
+    }
+  ],
+  "post_count": 4,
+  "local_feature_image": "human-body-communication_feature__Dipole_xmting_antenna_animation_4_408x318x150ms.gif"
+}

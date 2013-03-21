@@ -1,0 +1,52 @@
+{
+  "id": "65ac1d3d4cf93c000184badf",
+  "name": "Viral Content",
+  "slug": "viral-content",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/viral-marketing-spread.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/viral-content/",
+  "posts": [
+    {
+      "id": "68858ddc845b5c0001afdffa",
+      "title": "Scrapyard Futures in the Digital Ruins",
+      "slug": "scrapyard-futures-in-the-digital-ruins",
+      "published_at": "2025-07-24T09:20:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/scrapyard-futures-in-the-digital-ruins/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "685ba5b2ed1d9d0001db189e",
+      "title": "The Misinformation Industrial Complex",
+      "slug": "the-misinformation-industrial-complex",
+      "published_at": "2025-06-26T18:28:33.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-misinformation-industrial-complex/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65ab51bb4cf93c000184b751",
+      "title": "Say Viral One More Time! I'll Punch You in the Throat =)",
+      "slug": "say-viral-one-more-time-ill-punch-you-in-the-throat",
+      "published_at": "2013-05-20T11:20:34.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/say-viral-one-more-time-ill-punch-you-in-the-throat/",
+      "featured": false,
+      "reading_time": 4
+    }
+  ],
+  "post_count": 3,
+  "local_feature_image": "viral-content_feature__viral-marketing-spread.gif"
+}

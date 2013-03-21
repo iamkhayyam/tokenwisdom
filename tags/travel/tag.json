@@ -1,0 +1,43 @@
+{
+  "id": "65ab965d4cf93c000184b9be",
+  "name": "Explore \\ Travel",
+  "slug": "travel",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/plane-export.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/travel/",
+  "posts": [
+    {
+      "id": "673c00af2031060001730f74",
+      "title": "The Simulation Trap: How Virtual Tourism Is Killing Real Culture",
+      "slug": "the-simulation-trap-how-virtual-tourism-is-killing-real-culture",
+      "published_at": "2024-08-29T19:15:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-simulation-trap-how-virtual-tourism-is-killing-real-culture/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "65ab51bb4cf93c000184b744",
+      "title": "For The (Jet Bound) Digital Nomads",
+      "slug": "for-the-jet-bound-digital-nomads",
+      "published_at": "2013-05-11T09:32:44.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/for-the-jet-bound-digital-nomads/",
+      "featured": false,
+      "reading_time": 3
+    }
+  ],
+  "post_count": 2,
+  "local_feature_image": "travel_feature__plane-export.gif"
+}

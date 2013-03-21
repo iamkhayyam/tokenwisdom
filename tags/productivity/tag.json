@@ -1,0 +1,70 @@
+{
+  "id": "65ac1e314cf93c000184bb01",
+  "name": "Productivity",
+  "slug": "productivity",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/PC-352806-My_Life_with_OCD-How_OCD_Blocks_Productivity_and_What_to_Do-Gif-1296x728-Header-v2.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/productivity/",
+  "posts": [
+    {
+      "id": "67b6e9b27c53cd0001c39f6f",
+      "title": "No Collar Jobs—Beyond the AI Disruption",
+      "slug": "no-collar-jobs-beyond-the-ai-disruption",
+      "published_at": "2025-02-20T15:08:30.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/no-collar-jobs-beyond-the-ai-disruption/",
+      "featured": false,
+      "reading_time": 23
+    },
+    {
+      "id": "67424d2d7cd669000121393e",
+      "title": "The Power of Questioning: Revolutionizing Learning in the AI Era",
+      "slug": "the-power-of-questioning-revolutionizing-learning-in-the-ai-era",
+      "published_at": "2024-09-26T14:05:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-power-of-questioning-revolutionizing-learning-in-the-ai-era/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65a9c748ebf14f0001f3bead",
+      "title": "The 5 Whys Guys? Toyota’s Ingeniously Persistent Curiosity",
+      "slug": "the-5-whys-guys-toyotas-ingeniously-persistent-curiosity",
+      "published_at": "2023-09-28T17:51:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-5-whys-guys-toyotas-ingeniously-persistent-curiosity/",
+      "featured": false,
+      "reading_time": 3
+    },
+    {
+      "id": "65e510c339bf4b0001412d44",
+      "title": "ChatGPT: Transforming AI Technology",
+      "slug": "chatgpt-transforming-ai-technology",
+      "published_at": "2023-05-04T14:21:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/chatgpt-transforming-ai-technology/",
+      "featured": false,
+      "reading_time": 6
+    },
+    {
+      "id": "65a9c7b7ebf14f0001f3bebb",
+      "title": "You Can Sell Your Time, But You Can Never Buy It Back",
+      "slug": "you-can-sell-your-time-but-you-can-never-buy-it-back",
+      "published_at": "2013-06-22T17:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/featured/you-can-sell-your-time-but-you-can-never-buy-it-back/",
+      "featured": true,
+      "reading_time": 4
+    }
+  ],
+  "post_count": 5,
+  "local_feature_image": "productivity_feature__PC-352806-My_Life_with_OCD-How_OCD_Blocks_Productivity_and_What_to_Do-Gif-1296x728-Header-v2.gif"
+}

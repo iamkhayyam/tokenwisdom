@@ -1,0 +1,43 @@
+{
+  "id": "674b9077fa728b0001fe1fca",
+  "name": "Internet of Things (IoT)",
+  "slug": "internet-of-things-iot",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/11/1647581604179-1.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/internet-of-things-iot/",
+  "posts": [
+    {
+      "id": "674b85b1fa728b0001fe1fa1",
+      "title": "The Internet of Things: Why Our Obsession with Connected Devices May Be Our Undoing",
+      "slug": "the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing",
+      "published_at": "2024-10-03T14:18:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing/",
+      "featured": false,
+      "reading_time": 17
+    },
+    {
+      "id": "674197037cd6690001213886",
+      "title": "Ultra-Wideband (UWB) Technology: Revolutionizing the Internet of Things",
+      "slug": "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things",
+      "published_at": "2024-09-12T02:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things/",
+      "featured": false,
+      "reading_time": 11
+    }
+  ],
+  "post_count": 2,
+  "local_feature_image": "internet-of-things-iot_feature__1647581604179-1.gif"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "65aceb3d4cf93c000184bd05",
+  "name": "Renewable Energy",
+  "slug": "renewable-energy",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/thumb-1.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/renewable-energy/",
+  "posts": [
+    {
+      "id": "672f1f71a5ffdf000161a2c9",
+      "title": "Why Everything You Think About Deep Tech Is Right—And Wrong",
+      "slug": "why-everything-you-think-about-deep-tech-is-right-and-wrong",
+      "published_at": "2024-08-15T01:45:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/why-everything-you-think-about-deep-tech-is-right-and-wrong/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "670ada9a47b6c200019d054b",
+      "title": "Gravity Batteries: Harnessing the Power of Weight as a Renewable Energy Storage",
+      "slug": "gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage",
+      "published_at": "2024-06-27T13:23:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "65ccf5f1c3b7eb0001ca2547",
+      "title": "Demystifying AI's Role in Eco-Energy",
+      "slug": "role-of-ai-in-eco-energy",
+      "published_at": "2024-02-12T09:53:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/role-of-ai-in-eco-energy/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "65a9f350ebf14f0001f3bfc0",
+      "title": "The Promise of Perovskite Solar Cells — Solar 3.0",
+      "slug": "the-promise-of-perovskite-solar-cells-solar-3-0",
+      "published_at": "2023-04-13T21:07:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-promise-of-perovskite-solar-cells-solar-3-0/",
+      "featured": false,
+      "reading_time": 5
+    }
+  ],
+  "post_count": 4,
+  "local_feature_image": "renewable-energy_feature__thumb-1.gif"
+}

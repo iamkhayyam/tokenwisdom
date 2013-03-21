@@ -1,0 +1,259 @@
+{
+  "id": "65de7235d11d04000135b0e4",
+  "name": "Human Computer Interaction",
+  "slug": "human-computer-interaction",
+  "description": null,
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/1_-Y3ihGFW1GUoDRwhOVfPcg.gif",
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://tokenwisdom.ghost.io/tag/human-computer-interaction/",
+  "posts": [
+    {
+      "id": "698ccfc4829448000107b212",
+      "title": "Threading a Very Fine Needle",
+      "slug": "threading-a-very-fine-needle",
+      "published_at": "2026-02-12T22:37:27.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/threading-a-very-fine-needle/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "693d2a92adf4ac0001a79109",
+      "title": "The Speed Trap",
+      "slug": "the-speed-trap",
+      "published_at": "2025-12-11T01:33:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-speed-trap/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "68e5de54a6c145000155c19f",
+      "title": "The Age of Experience",
+      "slug": "the-age-of-experience",
+      "published_at": "2025-10-02T21:32:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-age-of-experience/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68d0e5d7c03c2700012d9ac8",
+      "title": "The Magic Kingdom Crumbles in Corporate Cowardice",
+      "slug": "the-magic-kingdom-crumbles-in-corporate-cowardice",
+      "published_at": "2025-09-18T07:42:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-magic-kingdom-crumbles-in-corporate-cowardice/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68d0d05cc03c2700012d9a3e",
+      "title": "The Luddite's Last Stand",
+      "slug": "the-luddites-last-stand",
+      "published_at": "2025-09-11T21:52:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-luddites-last-stand/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "68c75eccfeb9ac00017a2aac",
+      "title": "Digital Supersaturation of Why Everything is About to Crystallize",
+      "slug": "the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up",
+      "published_at": "2025-08-21T17:53:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "688590e5845b5c0001afe00d",
+      "title": "I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You",
+      "slug": "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you",
+      "published_at": "2025-07-31T09:40:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "68548aa3550c8300014ca1bf",
+      "title": "When Intelligence Becomes Its Own Enemy",
+      "slug": "when-intelligence-becomes-its-own-enemy",
+      "published_at": "2025-06-19T18:37:06.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/when-intelligence-becomes-its-own-enemy/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "682fc09aca8e790001a200fd",
+      "title": "The Day We Made Ourselves Obsolete",
+      "slug": "the-day-we-made-ourselves-obsolete",
+      "published_at": "2025-05-23T07:49:25.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-day-we-made-ourselves-obsolete/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "67c751255e07b200018d825b",
+      "title": "How Apple and Companion AI Killed Privacy Without Anyone Noticing",
+      "slug": "how-apple-and-companion-ai-killed-privacy-without-anyone-noticing",
+      "published_at": "2025-03-05T12:08:26.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/how-apple-and-companion-ai-killed-privacy-without-anyone-noticing/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "67b6e9b27c53cd0001c39f6f",
+      "title": "No Collar Jobs—Beyond the AI Disruption",
+      "slug": "no-collar-jobs-beyond-the-ai-disruption",
+      "published_at": "2025-02-20T15:08:30.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/no-collar-jobs-beyond-the-ai-disruption/",
+      "featured": false,
+      "reading_time": 23
+    },
+    {
+      "id": "67722b029d10560001d201d7",
+      "title": "The Perfect Platform Heist: The Greatest Trick Google Ever Pulled",
+      "slug": "the-perfect-platform-heist-the-greatest-trick-google-ever-pulled",
+      "published_at": "2024-12-29T22:02:56.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/the-perfect-platform-heist-the-greatest-trick-google-ever-pulled/",
+      "featured": false,
+      "reading_time": 8
+    },
+    {
+      "id": "674bf2ddfa728b0001fe2075",
+      "title": "The Quantum Dance: Shattering Our Understanding of Matter",
+      "slug": "the-quantum-dance-shattering-our-understanding-of-matter",
+      "published_at": "2024-10-31T21:24:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-quantum-dance-shattering-our-understanding-of-matter/",
+      "featured": false,
+      "reading_time": 12
+    },
+    {
+      "id": "674bd374fa728b0001fe201d",
+      "title": "Beyond the Silicon Dream: Why Consciousness Can't Be Computed",
+      "slug": "beyond-the-silicon-dream-why-consciousness-cant-be-computed",
+      "published_at": "2024-10-24T20:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/beyond-the-silicon-dream-why-consciousness-cant-be-computed/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "674b56a5fa728b0001fe1ef9",
+      "title": "The AI Revolution Isn't What You Think It Is",
+      "slug": "the-ai-revolution-isnt-what-you-think-it-is",
+      "published_at": "2024-10-17T12:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-ai-revolution-isnt-what-you-think-it-is/",
+      "featured": false,
+      "reading_time": 4
+    },
+    {
+      "id": "674b85b1fa728b0001fe1fa1",
+      "title": "The Internet of Things: Why Our Obsession with Connected Devices May Be Our Undoing",
+      "slug": "the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing",
+      "published_at": "2024-10-03T14:18:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing/",
+      "featured": false,
+      "reading_time": 17
+    },
+    {
+      "id": "674197037cd6690001213886",
+      "title": "Ultra-Wideband (UWB) Technology: Revolutionizing the Internet of Things",
+      "slug": "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things",
+      "published_at": "2024-09-12T02:37:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "673c14862031060001730fa0",
+      "title": "The Digital Biomarker Revolution: Transforming Healthcare by 2030",
+      "slug": "the-digital-biomarker-revolution-transforming-healthcare-by-2030",
+      "published_at": "2024-09-05T21:02:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-digital-biomarker-revolution-transforming-healthcare-by-2030/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
+      "id": "673c00af2031060001730f74",
+      "title": "The Simulation Trap: How Virtual Tourism Is Killing Real Culture",
+      "slug": "the-simulation-trap-how-virtual-tourism-is-killing-real-culture",
+      "published_at": "2024-08-29T19:15:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-simulation-trap-how-virtual-tourism-is-killing-real-culture/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
+      "id": "672f1f71a5ffdf000161a2c9",
+      "title": "Why Everything You Think About Deep Tech Is Right—And Wrong",
+      "slug": "why-everything-you-think-about-deep-tech-is-right-and-wrong",
+      "published_at": "2024-08-15T01:45:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/why-everything-you-think-about-deep-tech-is-right-and-wrong/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "672e874ca5ffdf000161a22c",
+      "title": "The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance",
+      "slug": "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance",
+      "published_at": "2024-08-01T08:00:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "67267ae3e558fc0001535482",
+      "title": "The Dangerous Delusion of Digital Spatial Intelligence: Silicon Valley's Trillion-Dollar Mistake",
+      "slug": "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake",
+      "published_at": "2024-07-18T14:38:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake/",
+      "featured": false,
+      "reading_time": 7
+    },
+    {
+      "id": "660adb03945b2e000170f06d",
+      "title": "Disney’s Autonomatronics Odyssey",
+      "slug": "disneys-autonomatronics-odyssey",
+      "published_at": "2024-04-01T23:11:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/disneys-autonomatronics-odyssey/",
+      "featured": false,
+      "reading_time": 22
+    },
+    {
+      "id": "65f6733aed6d88000174d0e6",
+      "title": "A Comprehensive Exploration of NeRF and Gaussian Splatting",
+      "slug": "a-comprehensive-exploration-of-nerf-and-gaussian-splatting",
+      "published_at": "2024-03-11T01:08:00.000-07:00",
+      "url": "https://tokenwisdom.ghost.io/a-comprehensive-exploration-of-nerf-and-gaussian-splatting/",
+      "featured": false,
+      "reading_time": 11
+    },
+    {
+      "id": "670a3e6647b6c200019d0454",
+      "title": "The AI Revolution in Healthcare: Reshaping the Future of Medicine",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare-copy",
+      "published_at": "2024-01-25T02:23:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare-copy/",
+      "featured": false,
+      "reading_time": 10
+    },
+    {
+      "id": "65de6867d11d04000135b0c5",
+      "title": "Innovations and Challenges in WBAN for Healthcare",
+      "slug": "innovations-and-challenges-in-wban-for-healthcare",
+      "published_at": "2024-01-19T15:45:00.000-08:00",
+      "url": "https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare/",
+      "featured": false,
+      "reading_time": 6
+    }
+  ],
+  "post_count": 26,
+  "local_feature_image": "human-computer-interaction_feature__1_-Y3ihGFW1GUoDRwhOVfPcg.gif"
+}
