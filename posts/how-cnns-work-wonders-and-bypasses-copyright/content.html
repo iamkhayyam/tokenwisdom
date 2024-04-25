@@ -1,0 +1,137 @@
+<blockquote class="kg-blockquote-alt"><strong><em>"The journey of life is sweeter when traveled with a dog."</em></strong></blockquote><hr><h3 id="how-cnns-work-the-pasta-maker-that-recognizes-dogs">How CNNs Work: The Pasta Maker That Recognizes Dogs</h3><p>Imagine having a magical pasta maker that can recognize dogs. As whimsical as it sounds, this analogy helps demystify Convolutional Neural Networks (CNNs), a type of artificial intelligence remarkably adept at recognizing patterns in visual data. Let's break this down step by step, with some insights from helpful resources.</p><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://www.linkedin.com/posts/andreashorn1_deeplearning-artificialintelligence-ai-ugcPost-7229025509534318593-QWRz/?utm_source=share&utm_medium=member_desktop"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Andreas Horn on LinkedIn: #deeplearning #artificialintelligence #ai | 113 comments</div><div class="kg-bookmark-description">𝗧𝗵𝗶𝘀 𝗶𝘀 𝗯𝘆 𝗳𝗮𝗿 𝘁𝗵𝗲 𝗯𝗲𝘀𝘁 𝗮𝗻𝗱 𝘀𝗶𝗺𝗽𝗹𝗲𝘀𝘁 𝗲𝘅𝗽𝗹𝗮𝗻𝗮𝘁𝗶𝗼𝗻 𝗼𝗳 𝗖𝗡𝗡𝘀 (𝗖𝗼𝗻𝘃𝗼𝗹𝘂𝘁𝗶𝗼𝗻𝗮𝗹 𝗡𝗲𝘂𝗿𝗮𝗹… | 113 comments on LinkedIn</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://tokenwisdom.ghost.io/content/images/icon/al2o9zrvru7aqj8e1x2rzsrca" alt=""><span class="kg-bookmark-author">LinkedIn</span><span class="kg-bookmark-publisher">Andreas Horn</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://tokenwisdom.ghost.io/content/images/thumbnail/1723533991638" alt="" onerror="this.style.display = 'none'"></div></a></figure><h3 id="the-input-your-dog-photo">The Input: Your Dog Photo</h3><p>Imagine feeding a photo of a dog into this fantastic pasta maker, much like you place dough into the machine. The photo, composed of pixels, each with color and intensity information, enters the CNN prepared for intricate processing through multiple stages.</p><h3 id="the-pasta-maker-vertical-and-horizontal-cuts">The Pasta Maker: Vertical and Horizontal Cuts</h3><p>Convolutional layers in CNNs work in stages, much like our pasta maker, which cuts the image into strips:</p><ol><li><strong>First Pass: Vertical Strips</strong> The original image passes through the pasta maker, which cuts it vertically into 'n' strips. For simplicity, let's say the image is divided into even and odd-numbered strips. These are then combined to create two new images:<ul><li><strong>Even Strips:</strong> One image containing all even-numbered vertical strips.</li><li><strong>Odd Strips:</strong> Another image containing all odd-numbered vertical strips.</li></ul></li><li><strong>Second Pass: Horizontal Strips</strong> Each of these two images now goes through the pasta maker again, but this time horizontally, creating new strips. We then alternate and combine these strips to create four new images:<ul><li><strong>Top Even strips from Vertical-Even:</strong> Contains alternating horizontal strips from the even-strips image.</li><li><strong>Top Even strips from Vertical-Odd:</strong> Contains alternating horizontal strips from the odd-strips image.</li><li><strong>Bottom Even strips from Vertical-Even:</strong> Similarly divided.</li><li><strong>Bottom Even strips from Vertical-Odd:</strong> Similarly divided.</li></ul></li></ol><p>Through these layered steps, the convolutional layers of CNNs increasingly capture both broad and fine details like shapes, textures, and complex features.</p><h3 id="the-pooling-layers-compressing-the-pasta">The Pooling Layers: Compressing the Pasta</h3><p>Pooling layers function as a means to compress the information collected so far. Think of it as taking your freshly made pasta and rolling it into a tidy, compacted bundle. Despite the compression, vital qualities remain preserved, making the data easier to process in subsequent layers.</p><h3 id="the-fully-connected-layers-the-taste-test">The Fully Connected Layers: The Taste Test</h3><p>Finally, the fully connected layers act as the connoisseur in our analogy. All collected and refined data is brought together, and these layers analyze the compacted details to make a final decision, akin to a taste test that declares, "Indeed, that's a dog!"</p><h3 id=""></h3><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
+            
+        <picture><img class="kg-signup-card-image" src="https://tokenwisdom.ghost.io/content/images/2024/02/a-wider-perspective-2.gif" alt=""></picture>
+    
+            <div class="kg-signup-card-content">
+                
+                <div class="kg-signup-card-text ">
+                    <h2 class="kg-signup-card-heading" style="color: #000000;"><span style="white-space: pre-wrap;">Sign up for Token Wisdom ✨</span></h2>
+                    <p class="kg-signup-card-subheading" style="color: #000000;"><span style="white-space: pre-wrap;">Invest in knowledge. It provides great returns.</span></p>
+                    
+        <form class="kg-signup-card-form" data-members-form="signup">
+            
+            <div class="kg-signup-card-fields">
+                <input class="kg-signup-card-input" id="email" data-members-email="" type="email" required="true" placeholder="Your email">
+                <button class="kg-signup-card-button " style="background-color: #000000;color: #FFFFFF;" type="submit">
+                    <span class="kg-signup-card-button-default">Subscribe</span>
+                    <span class="kg-signup-card-button-loading"><svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
+        <g stroke-linecap="round" stroke-width="2" fill="currentColor" stroke="none" stroke-linejoin="round" class="nc-icon-wrapper">
+            <g class="nc-loop-dots-4-24-icon-o">
+                <circle cx="4" cy="12" r="3"></circle>
+                <circle cx="12" cy="12" r="3"></circle>
+                <circle cx="20" cy="12" r="3"></circle>
+            </g>
+            <style data-cap="butt">
+                .nc-loop-dots-4-24-icon-o{--animation-duration:0.8s}
+                .nc-loop-dots-4-24-icon-o *{opacity:.4;transform:scale(.75);animation:nc-loop-dots-4-anim var(--animation-duration) infinite}
+                .nc-loop-dots-4-24-icon-o :nth-child(1){transform-origin:4px 12px;animation-delay:-.3s;animation-delay:calc(var(--animation-duration)/-2.666)}
+                .nc-loop-dots-4-24-icon-o :nth-child(2){transform-origin:12px 12px;animation-delay:-.15s;animation-delay:calc(var(--animation-duration)/-5.333)}
+                .nc-loop-dots-4-24-icon-o :nth-child(3){transform-origin:20px 12px}
+                @keyframes nc-loop-dots-4-anim{0%,100%{opacity:.4;transform:scale(.75)}50%{opacity:1;transform:scale(1)}}
+            </style>
+        </g>
+    </svg></span>
+                </button>
+            </div>
+            <div class="kg-signup-card-success" style="color: #000000;">
+                Email sent! Check your inbox to complete your signup.
+            </div>
+            <div class="kg-signup-card-error" style="color: #000000;" data-members-error=""></div>
+        </form>
+        
+                    <p class="kg-signup-card-disclaimer" style="color: #000000;"><span style="white-space: pre-wrap;">No spam. Unsubscribe anytime.</span></p>
+                </div>
+            </div>
+        </div><h3 id="algorithm-pasta-dog-detector">Algorithm: Pasta Dog Detector</h3><p>To encapsulate this process, let's define an algorithm for our "Pasta Dog Detector," which simplifies the methodology:</p><figure class="kg-card kg-video-card kg-width-full" data-kg-thumbnail="https://tokenwisdom.ghost.io/content/media/2024/10/How-A-CNN-Works---01-1_thumb.jpg" data-kg-custom-thumbnail="">
+            <div class="kg-video-container">
+                <video src="https://storage.ghost.io/c/0c/27/0c278543-d238-40a1-9309-14c2095c923d/content/media/2024/10/How-A-CNN-Works---01-1.mp4" poster="https://img.spacergif.org/v1/360x360/0a/spacer.png" width="360" height="360" loop="" autoplay="" muted="" playsinline="" preload="metadata" style="background: transparent url('https://storage.ghost.io/c/0c/27/0c278543-d238-40a1-9309-14c2095c923d/content/media/2024/10/How-A-CNN-Works---01-1_thumb.jpg') 50% 50% / cover no-repeat;"></video>
+                <div class="kg-video-overlay">
+                    <button class="kg-video-large-play-icon" aria-label="Play video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="kg-video-player-container kg-video-hide">
+                    <div class="kg-video-player">
+                        <button class="kg-video-play-icon" aria-label="Play video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-pause-icon kg-video-hide" aria-label="Pause video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="3" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                                <rect x="14" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                            </svg>
+                        </button>
+                        <span class="kg-video-current-time">0:00</span>
+                        <div class="kg-video-time">
+                            /<span class="kg-video-duration">0:15</span>
+                        </div>
+                        <input type="range" class="kg-video-seek-slider" max="100" value="0">
+                        <button class="kg-video-playback-rate" aria-label="Adjust playback speed">1×</button>
+                        <button class="kg-video-unmute-icon" aria-label="Unmute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M15.189 2.021a9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1.794a.249.249 0 0 1 .221.133 9.73 9.73 0 0 0 7.924 4.85h.06a1 1 0 0 0 1-1V3.02a1 1 0 0 0-1.06-.998Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-mute-icon kg-video-hide" aria-label="Mute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.177 4.3a.248.248 0 0 0 .073-.176v-1.1a1 1 0 0 0-1.061-1 9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h.114a.251.251 0 0 0 .177-.073ZM23.707 1.706A1 1 0 0 0 22.293.292l-22 22a1 1 0 0 0 0 1.414l.009.009a1 1 0 0 0 1.405-.009l6.63-6.631A.251.251 0 0 1 8.515 17a.245.245 0 0 1 .177.075 10.081 10.081 0 0 0 6.5 2.92 1 1 0 0 0 1.061-1V9.266a.247.247 0 0 1 .073-.176Z"></path>
+                            </svg>
+                        </button>
+                        <input type="range" class="kg-video-volume-slider" max="100" value="100">
+                    </div>
+                </div>
+            </div>
+            
+        </figure><ol><li><strong>Initialization</strong><ul><li>Load the image of a dog (or any object) as the input.</li><li>Pre-process the image by normalizing the pixel values.</li></ul></li><li><strong>First Pass: Vertical Strips</strong><ul><li>Divide the image into 'n' vertical strips.</li><li>Create two new images:<ul><li><strong>Even Strips Image:</strong> Combine all even-numbered vertical strips.</li><li><strong>Odd Strips Image:</strong> Combine all odd-numbered vertical strips.</li></ul></li></ul></li><li><strong>Second Pass: Horizontal Strips</strong><ul><li>For both the Even Strips Image and the Odd Strips Image:<ul><li>Divide each image into 'm' horizontal strips.</li><li>Create four new images:<ul><li><strong>Top Even strips from Vertical-Even:</strong> Alternating horizontal strips from the even-strips image.</li><li><strong>Top Even strips from Vertical-Odd:</strong> Alternating horizontal strips from the odd-strips image.</li><li><strong>Bottom Even strips from Vertical-Even:</strong> Similarly divided.</li><li><strong>Bottom Even strips from Vertical-Odd:</strong> Similarly divided.</li></ul></li></ul></li></ul></li></ol><figure class="kg-card kg-video-card kg-width-full" data-kg-thumbnail="https://tokenwisdom.ghost.io/content/media/2024/10/How-A-CNN-Works---02_thumb.jpg" data-kg-custom-thumbnail="">
+            <div class="kg-video-container">
+                <video src="https://storage.ghost.io/c/0c/27/0c278543-d238-40a1-9309-14c2095c923d/content/media/2024/10/How-A-CNN-Works---02.mp4" poster="https://img.spacergif.org/v1/360x360/0a/spacer.png" width="360" height="360" loop="" autoplay="" muted="" playsinline="" preload="metadata" style="background: transparent url('https://storage.ghost.io/c/0c/27/0c278543-d238-40a1-9309-14c2095c923d/content/media/2024/10/How-A-CNN-Works---02_thumb.jpg') 50% 50% / cover no-repeat;"></video>
+                <div class="kg-video-overlay">
+                    <button class="kg-video-large-play-icon" aria-label="Play video">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="kg-video-player-container kg-video-hide">
+                    <div class="kg-video-player">
+                        <button class="kg-video-play-icon" aria-label="Play video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M23.14 10.608 2.253.164A1.559 1.559 0 0 0 0 1.557v20.887a1.558 1.558 0 0 0 2.253 1.392L23.14 13.393a1.557 1.557 0 0 0 0-2.785Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-pause-icon kg-video-hide" aria-label="Pause video">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <rect x="3" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                                <rect x="14" y="1" width="7" height="22" rx="1.5" ry="1.5"></rect>
+                            </svg>
+                        </button>
+                        <span class="kg-video-current-time">0:00</span>
+                        <div class="kg-video-time">
+                            /<span class="kg-video-duration">0:28</span>
+                        </div>
+                        <input type="range" class="kg-video-seek-slider" max="100" value="0">
+                        <button class="kg-video-playback-rate" aria-label="Adjust playback speed">1×</button>
+                        <button class="kg-video-unmute-icon" aria-label="Unmute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M15.189 2.021a9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h1.794a.249.249 0 0 1 .221.133 9.73 9.73 0 0 0 7.924 4.85h.06a1 1 0 0 0 1-1V3.02a1 1 0 0 0-1.06-.998Z"></path>
+                            </svg>
+                        </button>
+                        <button class="kg-video-mute-icon kg-video-hide" aria-label="Mute">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.177 4.3a.248.248 0 0 0 .073-.176v-1.1a1 1 0 0 0-1.061-1 9.728 9.728 0 0 0-7.924 4.85.249.249 0 0 1-.221.133H5.25a3 3 0 0 0-3 3v2a3 3 0 0 0 3 3h.114a.251.251 0 0 0 .177-.073ZM23.707 1.706A1 1 0 0 0 22.293.292l-22 22a1 1 0 0 0 0 1.414l.009.009a1 1 0 0 0 1.405-.009l6.63-6.631A.251.251 0 0 1 8.515 17a.245.245 0 0 1 .177.075 10.081 10.081 0 0 0 6.5 2.92 1 1 0 0 0 1.061-1V9.266a.247.247 0 0 1 .073-.176Z"></path>
+                            </svg>
+                        </button>
+                        <input type="range" class="kg-video-volume-slider" max="100" value="100">
+                    </div>
+                </div>
+            </div>
+            
+        </figure><ol><li><strong>Convolutional Layers: Feature Extraction</strong><ul><li>Apply a series of convolutional operations to each of the four images to capture key features:<ul><li>Detect edges and basic shapes.</li><li>Detect textures and patterns.</li><li>Detect complex features like eyes and paws.</li></ul></li></ul></li><li><strong>Pooling Layers: Data Compression</strong><ul><li>Apply pooling operations to reduce the spatial dimensions of the images while preserving important information.</li></ul></li><li><strong>Fully Connected Layers: Decision Making</strong><ul><li>Flatten the pooled feature maps into a 1D vector.</li><li>Pass the flattened vectors through fully connected layers.</li><li>Use activation functions to introduce non-linearity.</li><li>The final layer provides probabilities indicating the likelihood that the input image is of a specific class (e.g., dog).</li></ul></li><li><strong>Model Training</strong><ul><li>Train the detector using labeled image datasets.</li><li>Use optimization techniques such as gradient descent.</li></ul></li><li><strong>Inference and Classification</strong><ul><li>Feed a new input image through the trained detector.</li><li>Obtain the final classification result.</li></ul></li></ol><h3 id="diffusion-models-legal-and-ethical-considerations">Diffusion Models: Legal and Ethical Considerations</h3><p>While CNNs are traditionally used for image recognition, it's important to mention diffusion models, particularly in the context of AI-generated art. Diffusion models work by iteratively refining a noisy version of an image back into a clear, high-fidelity representation. Unlike CNNs, diffusion models do not store actual image data. Rather, they process the data to such an extent that the original image is essentially diffused beyond recognition, thus theoretically circumventing direct copyright infringement.</p><p>However, the ethical sourcing of training material for these models is often contentious. The datasets used to train diffusion models are frequently acquired through nefarious means or under "ask for forgiveness later" scenarios. This practice raises significant ethical questions regarding the rights of original content creators and the overall moral responsibility of utilizing such training data.</p><h3 id="the-magic-of-cnns-and-real-world-implications">The Magic of CNNs and Real-World Implications</h3><p>Think of the viral video where you can still recognize a dog even when the image is minimized to 25% of its actual size. This vivid example showcases how CNNs recognize what's essential without needing the full image, making the process faster and more efficient.</p><p>The prowess of CNNs extends far beyond recognizing our furry friends. In healthcare, they aid in detecting diseases by pinpointing subtle changes in medical imagery, raising diagnostic accuracy. In the realm of self-driving cars, CNNs identify and respond to road signs, pedestrians, and other driving conditions, ensuring safety and efficacy. In essence, these "pasta makers" are revolutionizing how machines perceive and interact with visual information.</p><h3 id="a-nod-to-everyday-magic">A Nod to Everyday Magic</h3><p>Next time you’re making pasta, remember that while your pasta maker might not distinguish a dog from a cat, the AI behind your everyday technology can. Convolutional Neural Networks, functioning similarly to our whimsical pasta maker, encapsulate the astounding technological advances that simplify complex visual recognition and transform numerous industries.</p><p>However, as we expand the capabilities of AI with models like diffusion models, we must do so ethically. Proper sourcing of training material is crucial to ensure that we respect the rights of original creators while continuing to innovate.</p><h2 id="-1"></h2><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/02/diamonds_are_forever-2.gif" class="kg-image" alt="" loading="lazy" width="917" height="150" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/02/diamonds_are_forever-2.gif 600w, https://tokenwisdom.ghost.io/content/images/2024/02/diamonds_are_forever-2.gif 917w" sizes="(min-width: 720px) 720px"></figure>
+<!--kg-card-begin: html-->
+<div style="height: 333px"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-background-color="#1a1a1c" data-text-color="#FFFFFF" data-button-color="#2a1002" data-button-text-color="#FFFFFF" data-title="Token Wisdom ✨ " data-description="Invest in knowledge. It provides great returns." data-icon="https://tokenwisdom.ghost.io/content/images/size/w192h192/size/w256h256/2024/02/rocketMan.gif" data-site="https://tokenwisdom.ghost.io/" async></script></div>
+<!--kg-card-end: html-->
+<p>Don't forget to check out the weekly roundup: <a href="https://tokenwisdom.ghost.io/worthafortune/" rel="noreferrer">It's Worth A Fortune!</a></p>
