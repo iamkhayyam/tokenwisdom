@@ -1,0 +1,91 @@
+{
+  "id": "66a079d756b81b00018d9945",
+  "uuid": "9f91d80e-0ed3-415f-82b3-e1877d456623",
+  "title": "W17: 54th Edition \\ Side A 🎉",
+  "slug": "w17-54th-edition-side-a",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/10/img-LDtybHMVJyUj6Wh4GfrqV.jpeg",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2024-07-23T20:49:43.000-07:00",
+  "updated_at": "2024-10-11T01:09:37.000-07:00",
+  "published_at": "2024-05-05T00:22:00.000-07:00",
+  "custom_excerpt": "\nAI composes future hits while our eyes predict health. We're repatriating art digitally and chasing online clout. Analog comfort persists in digital chaos. As tech reshapes our world, we dance between innovation and humanity. The rhythm? Constant change.",
+  "canonical_url": null,
+  "comment_id": "66a079d756b81b00018d9945",
+  "tags": [
+    {
+      "id": "65ce63b8dae46f00014dde9a",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "description": "Hand-picked and carefully curated content in a consumed collection of noteworthy articles that may shed some light on the future.",
+      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/download--1-.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://tokenwisdom.ghost.io/tag/newestlatest/"
+    }
+  ],
+  "authors": [
+    {
+      "id": "6895a3000d912d00085b277d",
+      "name": "🌶️ @iamkhayyam ",
+      "slug": "iamkhayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "meta_title": null,
+      "meta_description": null,
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+    }
+  ],
+  "url": "https://tokenwisdom.ghost.io/newestlatest/w17-54th-edition-side-a/",
+  "excerpt": "",
+  "reading_time": 9,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "65ce63b8dae46f00014dde9a",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "6895a3000d912d00085b277d",
+      "name": "🌶️ @iamkhayyam ",
+      "slug": "iamkhayyam"
+    }
+  ],
+  "local_feature_image": "w17-54th-edition-side-a_feature__img-LDtybHMVJyUj6Wh4GfrqV.jpeg"
+}
