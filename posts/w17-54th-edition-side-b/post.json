@@ -1,0 +1,91 @@
+{
+  "id": "66a079d356b81b00018d993e",
+  "uuid": "afe2b815-0c1c-4cd6-9c6f-ba49979b335f",
+  "title": "W17: 54th Edition \\ Side B 📺",
+  "slug": "w17-54th-edition-side-b",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/10/opener-horizontal-optimized--2-.gif",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2024-07-23T20:49:39.000-07:00",
+  "updated_at": "2024-10-11T01:08:48.000-07:00",
+  "published_at": "2024-05-05T00:42:00.000-07:00",
+  "custom_excerpt": "Explore a labyrinth of emerging technologies and cultural shifts in this week's Token Wisdom! Dive into analog allure, digital repatriation, AI innovations, and beyond. Unpack how today's tech reshapes our connections and values. Get ready to be challenged and inspired.",
+  "canonical_url": null,
+  "comment_id": "66a079d356b81b00018d993e",
+  "tags": [
+    {
+      "id": "65ab2eb64cf93c000184b6d2",
+      "name": "📺 Time Well Spent",
+      "slug": "timewellspent",
+      "description": "The week's top ten must-watch YouTube videos that is Time Well Spent, curated to save you time and deliver the Alph-alpha™️",
+      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/200w-2.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": "#eb510f",
+      "url": "https://tokenwisdom.ghost.io/tag/timewellspent/"
+    }
+  ],
+  "authors": [
+    {
+      "id": "6895a3000d912d00085b277d",
+      "name": "🌶️ @iamkhayyam ",
+      "slug": "iamkhayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "meta_title": null,
+      "meta_description": null,
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+    }
+  ],
+  "url": "https://tokenwisdom.ghost.io/timewellspent/w17-54th-edition-side-b/",
+  "excerpt": "",
+  "reading_time": 5,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "65ab2eb64cf93c000184b6d2",
+      "name": "📺 Time Well Spent",
+      "slug": "timewellspent",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "6895a3000d912d00085b277d",
+      "name": "🌶️ @iamkhayyam ",
+      "slug": "iamkhayyam"
+    }
+  ],
+  "local_feature_image": "w17-54th-edition-side-b_feature__opener-horizontal-optimized--2-.gif"
+}
