@@ -31,6 +31,19 @@ SITE_SIGN_OFF_LINES = [
 SITE_URL = "https://iamkhayyam.github.io/tokenwisdom"
 GHOST_URL = "https://tokenwisdom.ghost.io"
 
+# Section tag slugs — these are treated as "section" markers and hidden from the
+# normal eyebrow/pill display on post pages (they move into the top-bar issue code).
+SECTION_TAGS = {
+    "a-closer-look": ("ACL", "A Closer Look"),
+    "worthafortune": ("POW", "Pearls of Wisdom"),
+    "newest-latest": ("NNL", "Newest / Latest"),
+    "time-well-spent": ("TWS", "Time Well Spent"),
+    "worthawarning": ("WAW", "Worth a Warning"),
+    "ask-me-anything": ("AMA", "Ask Me Anything"),
+}
+NEWSLETTER_TAG_SLUG = "worthafortune"
+ESSAY_TAG_SLUG = "a-closer-look"
+
 
 # ============================================================
 # DATA
@@ -121,17 +134,9 @@ def is_newsletter(post):
     title = (post.get("title") or "").lower()
     tags = [t.get("slug", "") for t in (post.get("tags") or [])]
 
-    nl_tags = {
-        "pearls-of-wisdom",
-        "token-wisdom",
-        "newsletter",
-        "weekly-edition",
-        "week",
-        "thenewestlatest",
-    }
-    if any(t in nl_tags for t in tags):
+    if NEWSLETTER_TAG_SLUG in tags:
         return True
-    if "pearls-of-wisdom" in slug or "token-wisdom-week" in slug or "thenewestlatest" in slug:
+    if "pearls-of-wisdom" in slug or "token-wisdom-week" in slug:
         return True
     if re.search(r"pearls of wisdom", title):
         return True
@@ -140,6 +145,77 @@ def is_newsletter(post):
     if re.search(r"\d+(st|nd|rd|th)\s+edition", title):
         return True
     return False
+
+
+def section_code(post):
+    """
+    Return ('ACL', 'A Closer Look') style section marker based on the post's
+    primary section tag. Used for the top-bar issue code ('ACL.164 · W14 · …').
+    Essays default to ACL, newsletters default to POW.
+    """
+    tag_slugs = [t.get("slug", "") for t in (post.get("tags") or [])]
+    for slug in tag_slugs:
+        if slug in SECTION_TAGS:
+            return SECTION_TAGS[slug]
+    # Fallbacks by detection
+    if is_newsletter(post):
+        return SECTION_TAGS.get(NEWSLETTER_TAG_SLUG, ("POW", "Pearls of Wisdom"))
+    return SECTION_TAGS.get(ESSAY_TAG_SLUG, ("ACL", "A Closer Look"))
+
+
+def issue_number_map(posts):
+    """
+    Build a per-post issue number dict keyed by slug.
+    Numbering is per-section, chronological (earliest = 1).
+    For newsletters we prefer the explicit 'Nth Edition' number from the title
+    when present; otherwise fall back to chronological index.
+    """
+    # Group posts by their section code
+    by_section = defaultdict(list)
+    for p in posts:
+        code, _ = section_code(p)
+        by_section[code].append(p)
+
+    numbers = {}
+    for code, group in by_section.items():
+        # Sort chronologically (oldest first)
+        group_sorted = sorted(
+            group,
+            key=lambda p: p.get("published_at") or p.get("created_at") or "",
+        )
+        for i, p in enumerate(group_sorted, start=1):
+            # Prefer explicit edition number from title if it exists
+            title = p.get("title") or ""
+            m = EDITION_RX.search(title)
+            if m:
+                try:
+                    numbers[p["slug"]] = int(m.group(1))
+                    continue
+                except ValueError:
+                    pass
+            numbers[p["slug"]] = i
+    return numbers
+
+
+def issue_code_string(post, number):
+    """Return 'ACL.164 · W14 · Mar 26, 2026' style string."""
+    code, _ = section_code(post)
+    parts = [f"{code}.{number:03d}"]
+    # Week number from title if available
+    title = post.get("title") or ""
+    slug = post.get("slug") or ""
+    wk = WEEK_RX.search(title) or WEEK_RX.search(slug)
+    if wk:
+        parts.append(f"W{int(wk.group(1)):02d}")
+    elif post.get("published_at"):
+        try:
+            dt = datetime.fromisoformat(post["published_at"].replace("Z", "+00:00"))
+            parts.append(f"W{dt.isocalendar()[1]:02d}")
+        except Exception:
+            pass
+    if post.get("published_at"):
+        parts.append(fmt_date_short(post["published_at"]))
+    return " · ".join(parts)
 
 
 EDITION_RX = re.compile(r"(\d+)(st|nd|rd|th)\s+edition", re.IGNORECASE)
@@ -229,6 +305,42 @@ body {
 a { color: var(--ink); text-decoration: none; transition: color .2s ease; }
 a:hover { color: var(--accent); }
 img { max-width: 100%; height: auto; }
+
+/* ---------- POST TOP-BAR (article masthead strip) ---------- */
+.post-top-bar {
+  border-bottom: 2px solid var(--ink);
+  background: var(--paper);
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: baseline;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  max-width: var(--max-wide);
+  margin: 0 auto;
+}
+.post-top-bar .ptb-brand {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.post-top-bar .ptb-brand strong {
+  font-weight: 500;
+  color: var(--ink);
+}
+.post-top-bar .ptb-issue {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.post-top-bar .ptb-issue .ptb-num {
+  color: var(--accent);
+  font-weight: 500;
+}
 
 /* ---------- SITE CHROME ---------- */
 .site-top {
@@ -894,11 +1006,120 @@ img { max-width: 100%; height: auto; }
   margin-top: 4px;
 }
 
-/* ---------- TAG PAGE ---------- */
+/* ---------- TAG PAGE HEADER (magnified GIF background) ---------- */
+.tag-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid var(--ink);
+  isolation: isolate;
+  padding: 4.5rem 1.5rem 3.5rem;
+  text-align: center;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tag-hero::before {
+  content: '';
+  position: absolute;
+  inset: -8%;
+  background-image: var(--tag-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(36px) saturate(1.15) brightness(.82);
+  transform: scale(1.25);
+  z-index: -2;
+}
+.tag-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(250,248,244,.55) 0%,
+    rgba(250,248,244,.45) 50%,
+    rgba(250,248,244,.82) 100%);
+  z-index: -1;
+}
+.tag-hero-inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+.tag-hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--paper);
+  padding: 6px 14px;
+  border: 0.5px solid var(--accent-muted);
+  border-radius: 2px;
+}
+.tag-hero-gif {
+  width: clamp(180px, 22vw, 260px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid var(--ink);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px -20px rgba(26, 24, 20, .4);
+  background: var(--paper);
+}
+.tag-hero h1 {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -.02em;
+  color: var(--ink);
+  margin: 0;
+  text-shadow: 0 2px 20px rgba(250,248,244,.9);
+}
+.tag-hero .desc {
+  font-family: var(--display);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  color: var(--ink);
+  max-width: var(--max-read);
+  line-height: 1.5;
+  margin: 0;
+}
+.tag-hero .meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  background: var(--paper);
+  padding: 5px 12px;
+  border: 0.5px solid var(--paper-rule);
+  border-radius: 2px;
+}
+.tag-list {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 3rem 24px 3rem;
+}
+.tag-list > .tag-list-heading {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  border-top: 1.5px solid var(--ink);
+  padding: 14px 0 10px;
+  margin-bottom: 1.4rem;
+}
+
+/* Simple reused .tag-header for Archive / Tags-index (no GIF background) */
 .tag-header {
   max-width: var(--max-wide);
   margin: 0 auto;
-  padding: 3rem 24px 2rem;
+  padding: 3.5rem 24px 2rem;
   border-bottom: 2px solid var(--ink);
   margin-bottom: 2rem;
 }
@@ -934,10 +1155,116 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
   color: var(--ink-faint);
 }
-.tag-list {
+
+/* ---------- TOPICS INDEX (billboard grid) ---------- */
+.topics-wrap {
   max-width: var(--max-wide);
   margin: 0 auto;
-  padding: 0 24px 3rem;
+  padding: 2.5rem 24px 4rem;
+}
+.topics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+.topic-card {
+  display: block;
+  position: relative;
+  background: var(--paper-warm);
+  border: 1px solid var(--paper-rule);
+  border-radius: 4px;
+  overflow: hidden;
+  color: var(--ink);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.topic-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 18px 40px -20px rgba(26, 24, 20, .35);
+  color: var(--ink);
+}
+.topic-card .gif-frame {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--ink);
+}
+.topic-card .gif-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.topic-card:hover .gif-frame img { transform: scale(1.04); }
+.topic-card .gif-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(26, 24, 20, 0) 45%,
+    rgba(26, 24, 20, .75) 100%);
+}
+.topic-card .label {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: rgba(26, 24, 20, .72);
+  padding: 5px 10px;
+  border-radius: 2px;
+  z-index: 2;
+}
+.topic-card .name {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 14px;
+  font-family: var(--display);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.15;
+  color: var(--paper);
+  letter-spacing: -.01em;
+  text-shadow: 0 2px 16px rgba(0,0,0,.5);
+  z-index: 2;
+}
+.topic-card .desc {
+  padding: 1rem 1.1rem 1.1rem;
+  font-family: var(--sans);
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--paper-rule);
+  min-height: 4.5em;
+}
+.topic-card .desc:empty { display: none; }
+
+/* Featured topic billboards (first two) take full width */
+.topic-card.is-featured {
+  grid-column: span 3;
+}
+.topic-card.is-featured .gif-frame {
+  aspect-ratio: 21 / 9;
+}
+.topic-card.is-featured .name {
+  font-size: 2.6rem;
+  max-width: 70%;
+}
+@media (max-width: 1024px) {
+  .topics-grid { grid-template-columns: repeat(2, 1fr); }
+  .topic-card.is-featured { grid-column: span 2; }
+}
+@media (max-width: 640px) {
+  .topics-grid { grid-template-columns: 1fr; gap: 1.2rem; }
+  .topic-card.is-featured { grid-column: span 1; }
+  .topic-card.is-featured .gif-frame { aspect-ratio: 16 / 10; }
+  .topic-card.is-featured .name { font-size: 1.6rem; max-width: 100%; }
 }
 
 /* ---------- ARCHIVE ---------- */
@@ -1098,9 +1425,9 @@ def site_top(from_dir="root"):
     <nav class="site-top-nav">
       <a href="{prefix}index.html">Home</a>
       <a href="{prefix}archive.html">Archive</a>
-      <a href="{prefix}tags/index.html">Tags</a>
+      <a href="{prefix}tags/index.html">Topics</a>
       <a href="{prefix}tags/a-closer-look.html">Essays</a>
-      <a href="{prefix}tags/thenewestlatest.html">Newsletters</a>
+      <a href="{prefix}tags/worthafortune.html">Newsletters</a>
     </nav>
     <span class="site-top-date">{today}</span>
   </div>
@@ -1166,12 +1493,46 @@ def page_shell(title, body, css_path, from_dir="root"):
 # POST PAGES
 # ============================================================
 
-def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years_span, top_tags):
-    tag = primary_tag(post)
+def render_post_top_bar(post, issue_num):
+    """Top-bar masthead strip: 'Token Wisdom · by @iamkhayyam'  |  'ACL.164 · W14 · Mar 26, 2026'"""
+    issue = issue_code_string(post, issue_num)
+    code, label = section_code(post)
+    return f"""
+<div class="post-top-bar">
+  <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
+  <span class="ptb-issue"><span class="ptb-num">{esc(issue)}</span></span>
+</div>
+"""
+
+
+def secondary_eyebrow_tags(post):
+    """
+    Return up to 3 non-section tags as a descriptive eyebrow string
+    ('Mathematics · Origin Story · Constitutional Forcing'). Section tags
+    like A Closer Look / Pearls of Wisdom are filtered out because they
+    now live in the top-bar issue code.
+    """
+    out = []
+    for t in post.get("tags") or []:
+        slug = t.get("slug", "")
+        name = t.get("name", "") or ""
+        if slug in SECTION_TAGS:
+            continue
+        if name.startswith("#"):
+            continue
+        out.append(name)
+        if len(out) >= 3:
+            break
+    return " · ".join(out)
+
+
+def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years_span, top_tags, issue_num):
     tags = post.get("tags") or []
+
+    eyebrow_text = secondary_eyebrow_tags(post)
     tag_eyebrow = ""
-    if tag:
-        tag_eyebrow = f'<div class="essay-eyebrow"><a href="../tags/{tag["slug"]}.html">{esc(tag["name"])}</a></div>'
+    if eyebrow_text:
+        tag_eyebrow = f'<div class="essay-eyebrow">{esc(eyebrow_text)}</div>'
 
     deck = ""
     custom = post.get("custom_excerpt") or post.get("excerpt") or ""
@@ -1182,9 +1543,11 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years
     if tags:
         pills = "".join(
             f'<a class="post-tag" href="../tags/{t["slug"]}.html">{esc(t.get("name", ""))}</a>'
-            for t in tags if not (t.get("name", "") or "").startswith("#")
+            for t in tags
+            if not (t.get("name", "") or "").startswith("#")
+            and t.get("slug", "") not in SECTION_TAGS
         )
-        tag_pills = f'<div class="post-tags">{pills}</div>'
+        tag_pills = f'<div class="post-tags">{pills}</div>' if pills else ""
 
     content = post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>"
 
@@ -1207,7 +1570,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years
     else:
         nav_next = '<div></div>'
 
-    body = f"""
+    body = render_post_top_bar(post, issue_num) + f"""
 <article class="essay-wrap">
   {tag_eyebrow}
   <h1 class="essay-title">{esc(post.get('title', ''))}</h1>
@@ -1234,25 +1597,31 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years
     return page
 
 
-def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, years_span, top_tags):
+def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, years_span, top_tags, issue_num):
     tags = post.get("tags") or []
     meta = edition_meta(post)
     nice_title = clean_title(post).strip() or post.get("title", "")
 
-    subtitle_parts = []
+    # Subtitle row: left = edition meta, right = week range / badge
+    left_parts = []
     if meta:
-        subtitle_parts.append(esc(meta))
-    subtitle_parts.append(esc(fmt_date(post.get("published_at"))))
-    subtitle_parts.append("🔮 100% Authentic Humanly Chosen")
-    subtitle_html = '<span>' + '</span><span>'.join(subtitle_parts) + '</span>'
+        left_parts.append(esc(meta))
+    left_parts.append(esc(fmt_date(post.get("published_at"))))
+    left_html = " · ".join(left_parts)
+    subtitle_html = (
+        f'<span>{left_html}</span>'
+        f'<span>🔮 100% Authentic Humanly Chosen</span>'
+    )
 
     tag_pills = ""
     if tags:
         pills = "".join(
             f'<a class="post-tag" href="../tags/{t["slug"]}.html">{esc(t.get("name", ""))}</a>'
-            for t in tags if not (t.get("name", "") or "").startswith("#")
+            for t in tags
+            if not (t.get("name", "") or "").startswith("#")
+            and t.get("slug", "") not in SECTION_TAGS
         )
-        tag_pills = f'<div class="post-tags">{pills}</div>'
+        tag_pills = f'<div class="post-tags">{pills}</div>' if pills else ""
 
     content = post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>"
 
@@ -1275,7 +1644,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
     else:
         nav_next = '<div></div>'
 
-    body = f"""
+    body = render_post_top_bar(post, issue_num) + f"""
 <article class="nl-wrap">
   <header class="nl-masthead">
     <div class="nl-masthead-eyebrow">{esc(SITE_TAGLINE)}</div>
@@ -1413,7 +1782,7 @@ def render_homepage(posts, tags_by_slug, tag_to_posts, top_tags, years_span):
         <h4>🔮 Recent Editions</h4>
         {nl_items}
         <div style="margin-top: 1rem; text-align: right;">
-          <a href="tags/thenewestlatest.html" style="font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent);">All editions →</a>
+          <a href="tags/worthafortune.html" style="font-family: var(--mono); font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent);">All editions →</a>
         </div>
       </div>
       <div class="sidebar-block">
@@ -1469,14 +1838,30 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
     desc = tag.get("description") or ""
     desc_html = f'<p class="desc">{esc(desc)}</p>' if desc else ""
 
+    feature_img = tag.get("feature_image") or ""
+    date_range = ""
+    if sorted_posts:
+        latest = fmt_date_short(sorted_posts[0].get("published_at"))
+        earliest = fmt_date_short(sorted_posts[-1].get("published_at"))
+        date_range = f"{earliest} – {latest}"
+
+    count_label = f"{len(sorted_posts)} Post{'s' if len(sorted_posts) != 1 else ''}"
+    gif_html = ""
+    if feature_img:
+        gif_html = f'<img class="tag-hero-gif" src="{esc(feature_img)}" alt="{esc(tag.get("name", ""))}" loading="eager">'
+
     body = f"""
-<header class="tag-header">
-  <div class="eyebrow">§ Topic</div>
-  <h1>{esc(tag.get('name', ''))}</h1>
-  {desc_html}
-  <div class="meta">{len(sorted_posts)} Post{'s' if len(sorted_posts) != 1 else ''} · {esc(fmt_date_short(sorted_posts[-1].get('published_at')) if sorted_posts else '')} – {esc(fmt_date_short(sorted_posts[0].get('published_at')) if sorted_posts else '')}</div>
+<header class="tag-hero" style="--tag-bg: url('{esc(feature_img)}');">
+  <div class="tag-hero-inner">
+    <span class="tag-hero-eyebrow">§ Topic</span>
+    {gif_html}
+    <h1>{esc(tag.get('name', ''))}</h1>
+    {desc_html}
+    <span class="meta">{count_label} · {esc(date_range)}</span>
+  </div>
 </header>
 <div class="tag-list">
+  <div class="tag-list-heading">§ All posts</div>
   {rows}
 </div>
 """
@@ -1544,25 +1929,35 @@ def render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, t
     visible.sort(key=lambda t: len(tag_to_posts.get(t["slug"], [])), reverse=True)
 
     cards = ""
-    for t in visible:
+    for i, t in enumerate(visible):
         count = len(tag_to_posts.get(t["slug"], []))
         desc = (t.get("description") or "").strip()
-        desc_html = f'<div class="desc">{esc(desc[:120])}{"…" if len(desc) > 120 else ""}</div>' if desc else ""
+        desc_html = f'<div class="desc">{esc(desc[:140])}{"…" if len(desc) > 140 else ""}</div>' if desc else '<div class="desc"></div>'
+        feature_img = t.get("feature_image") or ""
+        img_html = ""
+        if feature_img:
+            img_html = f'<img src="{esc(feature_img)}" alt="{esc(t.get("name", ""))}" loading="lazy">'
+        # The two highest-post-count tags become full-width featured billboards
+        featured_class = " is-featured" if i < 2 else ""
         cards += f"""
-  <a class="tag-card" href="{t['slug']}.html">
-    <div class="count">{count} post{'s' if count != 1 else ''}</div>
-    <div class="name">{esc(t['name'])}</div>
+  <a class="topic-card{featured_class}" href="{t['slug']}.html">
+    <div class="gif-frame">
+      {img_html}
+      <span class="label">{count} post{'s' if count != 1 else ''}</span>
+      <div class="name">{esc(t['name'])}</div>
+    </div>
     {desc_html}
   </a>"""
 
     body = f"""
 <header class="tag-header">
-  <div class="eyebrow">§ Index</div>
-  <h1>All Tags</h1>
-  <p class="desc">{len(visible)} tags across {posts_count} posts. Click any tag to see every post filed under it.</p>
+  <div class="eyebrow">§ Topics Index</div>
+  <h1>Explore Topics</h1>
+  <p class="desc">{len(visible)} topics across {posts_count} posts. Every tag, every GIF, every thread in one place. Click anything to dive in.</p>
+  <div class="meta">{esc(years_span)} · {len(visible)} tags · 100% authentic humanly chosen</div>
 </header>
-<div class="tags-index-wrap">
-  <div class="tags-grid">
+<div class="topics-wrap">
+  <div class="topics-grid">
   {cards}
   </div>
 </div>
@@ -1604,6 +1999,9 @@ def main():
         key=lambda p: p["published_at"],
     )
     index_of = {p["slug"]: i for i, p in enumerate(chrono)}
+
+    # Per-section issue numbers (ACL.001, POW.153, etc.)
+    issue_nums = issue_number_map(posts)
 
     # Prev/next within same category (essay/newsletter) for more contextual nav
     def siblings(post):
@@ -1648,11 +2046,12 @@ def main():
     for i, post in enumerate(posts):
         slug = post.get("slug", "unknown")
         prev_p, next_p = siblings(post)
+        num = issue_nums.get(slug, 0)
         if is_newsletter(post):
-            html_out = render_newsletter_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags)
+            html_out = render_newsletter_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num)
             nl_count += 1
         else:
-            html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags)
+            html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num)
             essay_count += 1
         with open(DOCS_DIR / "posts" / f"{slug}.html", "w") as f:
             f.write(html_out)
