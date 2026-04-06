@@ -13,6 +13,8 @@ import html
 import os
 import re
 import shutil
+import urllib.request
+import xml.etree.ElementTree as ET
 from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
@@ -43,6 +45,9 @@ SECTION_TAGS = {
 }
 NEWSLETTER_TAG_SLUG = "worthafortune"
 ESSAY_TAG_SLUG = "a-closer-look"
+
+PODCAST_FEED_URL = "https://feeds.captivate.fm/tokenwisdom-and-notebooklm/"
+PODCAST_CACHE = BACKUP_DIR / "data" / "podcast_feed.xml"
 
 
 # ============================================================
@@ -1365,6 +1370,195 @@ img { max-width: 100%; height: auto; }
   line-height: 1.55;
 }
 
+/* ---------- PODCAST ---------- */
+.podcast-hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid var(--ink);
+  isolation: isolate;
+  padding: 4.5rem 1.5rem 3.5rem;
+}
+.podcast-hero::before {
+  content: '';
+  position: absolute;
+  inset: -8%;
+  background-image: var(--pod-bg);
+  background-size: cover;
+  background-position: center;
+  filter: blur(40px) saturate(1.2) brightness(.55);
+  transform: scale(1.25);
+  z-index: -2;
+}
+.podcast-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(26,24,20,.85) 0%, rgba(26,24,20,.7) 100%);
+  z-index: -1;
+}
+.podcast-hero-inner {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+.podcast-hero-art img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 3px solid var(--paper);
+  border-radius: 8px;
+  box-shadow: 0 30px 80px -20px rgba(0,0,0,.6);
+  display: block;
+}
+.podcast-hero-copy { color: var(--paper); }
+.podcast-hero-eyebrow {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--accent-muted);
+  margin-bottom: 14px;
+}
+.podcast-hero-title {
+  font-family: var(--display);
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -.02em;
+  color: var(--paper);
+  margin-bottom: 14px;
+}
+.podcast-hero-desc {
+  font-family: var(--serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  line-height: 1.55;
+  color: #d4d0c8;
+  margin-bottom: 18px;
+  max-width: 620px;
+}
+.podcast-hero-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: #a29c91;
+  margin-bottom: 20px;
+}
+.podcast-hero-cta {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.podcast-hero-cta a {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--paper);
+  border: 0.5px solid var(--accent-muted);
+  padding: 10px 16px;
+  border-radius: 2px;
+  transition: all .2s ease;
+}
+.podcast-hero-cta a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--paper);
+}
+
+.podcast-wrap {
+  max-width: var(--max-wide);
+  margin: 0 auto;
+  padding: 3rem 24px 4rem;
+}
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.episode {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 2rem;
+  padding: 2rem 0;
+  border-bottom: 0.5px solid var(--paper-rule);
+}
+.episode:first-child { border-top: 0.5px solid var(--paper-rule); }
+.ep-art-col { position: relative; }
+.ep-art {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border: 1px solid var(--paper-rule);
+  border-radius: 4px;
+  display: block;
+}
+.ep-body { min-width: 0; }
+.ep-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 8px;
+}
+.ep-title {
+  font-family: var(--display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 10px;
+  letter-spacing: -.01em;
+}
+.ep-summary {
+  font-family: var(--sans);
+  font-size: .95rem;
+  line-height: 1.65;
+  color: var(--ink-muted);
+  margin-bottom: 16px;
+}
+.ep-audio {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 14px;
+  border-radius: 4px;
+}
+.ep-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+.ep-actions a {
+  color: var(--ink-muted);
+  border-bottom: 0.5px solid var(--paper-rule);
+  padding-bottom: 2px;
+}
+.ep-post-link { color: var(--accent) !important; border-color: var(--accent-muted) !important; }
+.ep-actions a:hover { color: var(--accent); border-color: var(--accent); }
+
+@media (max-width: 768px) {
+  .podcast-hero { padding: 3rem 1.5rem 2.5rem; }
+  .podcast-hero-inner { grid-template-columns: 1fr; gap: 2rem; text-align: center; }
+  .podcast-hero-art { max-width: 220px; margin: 0 auto; }
+  .podcast-hero-desc { margin: 0 auto 18px; }
+  .podcast-hero-cta { justify-content: center; }
+  .episode { grid-template-columns: 120px 1fr; gap: 1.2rem; padding: 1.6rem 0; }
+  .ep-title { font-size: 1.2rem; }
+}
+@media (max-width: 480px) {
+  .episode { grid-template-columns: 1fr; }
+  .ep-art-col { max-width: 160px; }
+}
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 900px) {
   .home-grid { grid-template-columns: 1fr; gap: 2rem; }
@@ -1428,6 +1622,7 @@ def site_top(from_dir="root"):
       <a href="{prefix}tags/index.html">Topics</a>
       <a href="{prefix}tags/a-closer-look.html">Essays</a>
       <a href="{prefix}tags/worthafortune.html">Newsletters</a>
+      <a href="{prefix}podcast.html">Podcast</a>
     </nav>
     <span class="site-top-date">{today}</span>
   </div>
@@ -1456,8 +1651,10 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
       <ul>
         <li><a href="{prefix}index.html">Home</a></li>
         <li><a href="{prefix}archive.html">Archive</a></li>
-        <li><a href="{prefix}tags/index.html">All Tags</a></li>
+        <li><a href="{prefix}tags/index.html">All Topics</a></li>
         <li><a href="{prefix}tags/a-closer-look.html">Essays</a></li>
+        <li><a href="{prefix}tags/worthafortune.html">Newsletters</a></li>
+        <li><a href="{prefix}podcast.html">Podcast</a></li>
       </ul>
     </div>
     <div>
@@ -1968,6 +2165,272 @@ def render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, t
 
 
 # ============================================================
+# PODCAST
+# ============================================================
+
+NS = {
+    "itunes": "http://www.itunes.com/dtds/podcast-1.0.dtd",
+    "content": "http://purl.org/rss/1.0/modules/content/",
+}
+
+
+def fetch_podcast_feed():
+    """Download and cache the podcast RSS feed."""
+    PODCAST_CACHE.parent.mkdir(exist_ok=True)
+    try:
+        print(f"Fetching podcast feed…")
+        req = urllib.request.Request(PODCAST_FEED_URL, headers={"User-Agent": "TokenWisdom/1.0"})
+        with urllib.request.urlopen(req, timeout=30) as resp:
+            data = resp.read()
+        PODCAST_CACHE.write_bytes(data)
+        print(f"  Cached {len(data) // 1024}KB")
+        return data
+    except Exception as e:
+        print(f"  [WARN] Fetch failed ({e}); using cached copy if available")
+        if PODCAST_CACHE.exists():
+            return PODCAST_CACHE.read_bytes()
+        return None
+
+
+def parse_podcast(feed_bytes):
+    """Return (channel_info, [episodes])."""
+    if not feed_bytes:
+        return None, []
+    try:
+        root = ET.fromstring(feed_bytes)
+    except ET.ParseError as e:
+        print(f"  [WARN] Podcast feed parse error: {e}")
+        return None, []
+
+    ch = root.find("channel")
+    if ch is None:
+        return None, []
+
+    def text(el, tag, ns=None):
+        node = el.find(tag, NS) if ns else el.find(tag)
+        return (node.text or "").strip() if node is not None and node.text else ""
+
+    channel = {
+        "title": text(ch, "title"),
+        "description": text(ch, "description"),
+        "summary": text(ch, "itunes:summary", NS),
+        "link": text(ch, "link"),
+        "image": "",
+        "author": text(ch, "itunes:author", NS),
+        "copyright": text(ch, "copyright"),
+    }
+    img_node = ch.find("image/url")
+    if img_node is not None and img_node.text:
+        channel["image"] = img_node.text.strip()
+    itunes_img = ch.find("itunes:image", NS)
+    if itunes_img is not None:
+        channel["image"] = itunes_img.attrib.get("href", channel["image"])
+
+    episodes = []
+    for item in ch.findall("item"):
+        title = text(item, "title")
+        pub_date = text(item, "pubDate")
+        duration = text(item, "itunes:duration", NS)
+        summary = text(item, "itunes:summary", NS) or text(item, "description")
+        # Strip HTML tags for a clean excerpt, keep full HTML separately
+        html_body = text(item, "content:encoded", NS) or text(item, "description")
+        plain = re.sub(r"<[^>]+>", " ", summary or "")
+        plain = re.sub(r"\s+", " ", plain).strip()
+
+        enclosure = item.find("enclosure")
+        audio_url = enclosure.attrib.get("url", "") if enclosure is not None else ""
+        audio_type = enclosure.attrib.get("type", "audio/mpeg") if enclosure is not None else "audio/mpeg"
+
+        ep_img = channel["image"]
+        img_node = item.find("itunes:image", NS)
+        if img_node is not None:
+            ep_img = img_node.attrib.get("href", ep_img)
+
+        episode_num = text(item, "itunes:episode", NS)
+        season = text(item, "itunes:season", NS)
+        guid = text(item, "guid")
+
+        # Try to parse pubDate into a datetime for formatting
+        pub_dt = None
+        try:
+            from email.utils import parsedate_to_datetime
+            pub_dt = parsedate_to_datetime(pub_date)
+        except Exception:
+            pass
+
+        episodes.append({
+            "title": title,
+            "summary_plain": plain,
+            "summary_html": html_body,
+            "pub_date_raw": pub_date,
+            "pub_date": pub_dt,
+            "duration": duration,
+            "audio_url": audio_url,
+            "audio_type": audio_type,
+            "image": ep_img,
+            "episode_num": episode_num,
+            "season": season,
+            "guid": guid,
+        })
+
+    return channel, episodes
+
+
+def format_duration(s):
+    """Turn '38:56' or '2345' (seconds) into '38 min'."""
+    if not s:
+        return ""
+    if ":" in s:
+        parts = s.split(":")
+        if len(parts) == 3:
+            h, m, _sec = parts
+            total = int(h) * 60 + int(m)
+            return f"{total} min"
+        if len(parts) == 2:
+            m, _sec = parts
+            return f"{int(m)} min"
+    try:
+        total = int(s) // 60
+        return f"{total} min" if total else ""
+    except ValueError:
+        return s
+
+
+def episode_match_post(episode, posts):
+    """Try to link an episode to the post it covers, by slug/title overlap."""
+    ep_title = (episode["title"] or "").lower()
+    # Strip leading "W13 •A• " style prefix
+    cleaned = re.sub(r"^w\d+\s*[•\*]?\s*[ab]?\s*[•\*]?\s*", "", ep_title)
+    cleaned = re.sub(r"[✨🔮🌶️]", "", cleaned)
+    cleaned = re.sub(r"[^\w\s-]", "", cleaned).strip()
+
+    best = None
+    best_score = 0
+    ep_tokens = set(cleaned.split())
+    if not ep_tokens:
+        return None
+    for p in posts:
+        title = (p.get("title") or "").lower()
+        title = re.sub(r"[✨🔮🌶️]", "", title)
+        title = re.sub(r"[^\w\s-]", "", title)
+        p_tokens = set(title.split())
+        if not p_tokens:
+            continue
+        overlap = len(ep_tokens & p_tokens)
+        # Only count meaningful overlap (≥3 tokens or ≥60% of the smaller set)
+        min_len = min(len(ep_tokens), len(p_tokens))
+        if overlap >= 3 and overlap / max(min_len, 1) >= 0.5:
+            if overlap > best_score:
+                best_score = overlap
+                best = p
+    return best
+
+
+def render_podcast_page(channel, episodes, posts, posts_count, tags_count, years_span, top_tags):
+    if not channel:
+        return ""
+
+    feed_title = channel.get("title", "Podcast")
+    feed_image = channel.get("image", "")
+    feed_desc = (channel.get("summary") or channel.get("description") or "").strip()
+    # Trim lines starting with http
+    feed_desc = re.sub(r"https?://\S+", "", feed_desc).strip()
+
+    # Episode cards
+    eps_html_parts = []
+    for i, ep in enumerate(episodes):
+        ep_num_display = ""
+        if ep.get("pub_date"):
+            ep_num_display = ep["pub_date"].strftime("%b %-d, %Y").upper()
+        elif ep.get("pub_date_raw"):
+            ep_num_display = ep["pub_date_raw"][:16]
+
+        duration = format_duration(ep.get("duration", ""))
+        meta_bits = [b for b in [f"EP {len(episodes) - i:03d}", ep_num_display, duration] if b]
+        meta_line = " · ".join(meta_bits)
+
+        # Match to post
+        matched = episode_match_post(ep, posts)
+        post_link = ""
+        if matched:
+            post_link = f'<a class="ep-post-link" href="posts/{matched["slug"]}.html">Read the essay →</a>'
+
+        summary = ep.get("summary_plain") or ""
+        if len(summary) > 420:
+            summary = summary[:420].rsplit(" ", 1)[0] + "…"
+
+        audio_url = ep.get("audio_url", "")
+        audio_block = ""
+        if audio_url:
+            audio_block = f"""
+      <audio controls preload="none" class="ep-audio">
+        <source src="{esc(audio_url)}" type="{esc(ep.get('audio_type') or 'audio/mpeg')}">
+        Your browser doesn't support audio playback.
+        <a href="{esc(audio_url)}">Download the MP3</a>
+      </audio>"""
+
+        image = ep.get("image") or feed_image
+        img_block = ""
+        if image:
+            img_block = f'<img class="ep-art" src="{esc(image)}" alt="" loading="lazy">'
+
+        eps_html_parts.append(f"""
+  <article class="episode" id="ep-{esc(ep.get('guid', str(i)))[:24]}">
+    <div class="ep-art-col">
+      {img_block}
+    </div>
+    <div class="ep-body">
+      <div class="ep-meta">{esc(meta_line)}</div>
+      <h3 class="ep-title">{esc(ep.get('title', ''))}</h3>
+      <p class="ep-summary">{esc(summary)}</p>
+      {audio_block}
+      <div class="ep-actions">
+        {post_link}
+        <a class="ep-download" href="{esc(audio_url)}" download>Download MP3 ↓</a>
+      </div>
+    </div>
+  </article>""")
+
+    eps_html = "\n".join(eps_html_parts)
+
+    body = f"""
+<div class="podcast-hero" style="--pod-bg: url('{esc(feed_image)}');">
+  <div class="podcast-hero-inner">
+    <div class="podcast-hero-art">
+      <img src="{esc(feed_image)}" alt="{esc(feed_title)}">
+    </div>
+    <div class="podcast-hero-copy">
+      <div class="podcast-hero-eyebrow">§ Podcast · Powered by NotebookLM</div>
+      <h1 class="podcast-hero-title">{esc(feed_title)}</h1>
+      <p class="podcast-hero-desc">{esc(feed_desc)}</p>
+      <div class="podcast-hero-meta">{len(episodes)} Episodes · Updated weekly · Free</div>
+      <div class="podcast-hero-cta">
+        <a href="{esc(PODCAST_FEED_URL)}" target="_blank" rel="noopener">RSS Feed →</a>
+        <a href="https://podcasts.apple.com/podcast/notebooklm-token-wisdom/id1773842822" target="_blank" rel="noopener">Apple Podcasts →</a>
+        <a href="https://open.spotify.com/show/5mSXO8bJmZbaRkiL7TnXop" target="_blank" rel="noopener">Spotify →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="podcast-wrap">
+  <div class="section-header">
+    <span class="section-label">§ All Episodes</span>
+    <span class="section-title">The Feed</span>
+    <span class="section-note">{len(episodes)} episodes · newest first</span>
+  </div>
+
+  <div class="episode-list">
+    {eps_html}
+  </div>
+</div>
+"""
+    page = page_shell(feed_title, body, "style.css", from_dir="root")
+    page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="root")
+    return page
+
+
+# ============================================================
 # MAIN
 # ============================================================
 
@@ -2038,6 +2501,17 @@ def main():
     print("Archive…")
     with open(DOCS_DIR / "archive.html", "w") as f:
         f.write(render_archive(posts, posts_count, tags_count, years_span, top_tags))
+
+    # Podcast
+    print("Podcast…")
+    feed_bytes = fetch_podcast_feed()
+    channel, episodes = parse_podcast(feed_bytes)
+    if channel:
+        print(f"  {len(episodes)} episodes")
+        with open(DOCS_DIR / "podcast.html", "w") as f:
+            f.write(render_podcast_page(channel, episodes, posts, posts_count, tags_count, years_span, top_tags))
+    else:
+        print("  [WARN] Podcast page skipped (feed unavailable)")
 
     # Post pages
     nl_count = 0
