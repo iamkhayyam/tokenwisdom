@@ -434,6 +434,7 @@ def render_masthead():
       <a href="tags/worthafortune.html">Newsletters</a>
       <a href="podcast.html">Podcast</a>
       <a href="metrics.html">Report</a>
+      <a href="about/index.html">About</a>
     </nav>
     <a class="mast-sub" href="{gs.GHOST_URL}/subscribe">Subscribe</a>
   </div>
