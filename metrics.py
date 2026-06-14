@@ -383,7 +383,6 @@ def render(d):
     # ---- masthead ----
     head = f'''
 <header class="fm">
-  <div class="fm-rule"></div>
   <div class="fm-top">
     <div class="fm-meta">{d['span']} · The Quantified Corpus</div>
     <div class="fm-meta fm-meta-r">Compiled {d['now']}</div>
@@ -568,19 +567,19 @@ CSS = """
 /* ---------- masthead ---------- */
 .fm { padding: 4rem 0 0; }
 .fm-rule { height: 2px; background: var(--ink); }
-.fm-rule-b { height: 1px; background: var(--rule); margin-top: 1.6rem; }
-.fm-top { display: flex; justify-content: space-between; padding: .8rem 0 1.8rem; }
+.fm-rule-b { height: 2px; background: var(--ink); margin-top: 1.6rem; }
+.fm-top { display: flex; justify-content: space-between; padding: .2rem 0 1.8rem; }
 .fm-meta {
   font-family: var(--fmono); font-size: 10.5px; letter-spacing: .18em;
-  text-transform: uppercase; color: var(--ink-muted); font-weight: 300;
+  text-transform: uppercase; color: var(--accent); font-weight: 300;
 }
-.fm-meta-r { color: var(--accent); }
+.fm-meta-r { color: var(--ink-faint); }
 .fm-title {
   font-family: var(--fdisp); font-weight: 400; line-height: 1;
   font-size: clamp(2.8rem, 8.4vw, 5.8rem); letter-spacing: -.01em; color: var(--ink);
 }
 .fm-sub {
-  font-family: var(--fserif); font-style: italic; font-weight: 400;
+  font-family: var(--fserif); font-weight: 400;
   font-size: clamp(1.1rem, 2.4vw, 1.5rem); color: var(--ink-muted);
   max-width: 46ch; margin-top: 1.1rem; line-height: 1.45;
 }

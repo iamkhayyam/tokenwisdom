@@ -2475,18 +2475,14 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
         date_range = f"{earliest} – {latest}"
 
     count_label = f"{len(sorted_posts)} Post{'s' if len(sorted_posts) != 1 else ''}"
-    gif_html = ""
-    if feature_img:
-        gif_html = f'<img class="tag-hero-gif" src="{esc(feature_img)}" alt="{esc(tag.get("name", ""))}" loading="eager">'
 
+    # Clean Stack-style hero (matches Archive / Topics / The Stack) — no image hero
     body = f"""
-<header class="tag-hero" style="--tag-bg: url('{esc(feature_img)}');">
-  <div class="tag-hero-inner">
-    {gif_html}
-    <h1>{esc(tag.get('name', ''))}</h1>
-    {desc_html}
-    <span class="meta">{count_label} · {esc(date_range)}</span>
-  </div>
+<header class="tag-header">
+  <div class="eyebrow">Topic</div>
+  <h1>{esc(tag.get('name', ''))}</h1>
+  {desc_html}
+  <span class="meta">{count_label} · {esc(date_range)}</span>
 </header>
 <div class="tag-list">
   <div class="tag-list-heading">All posts</div>
