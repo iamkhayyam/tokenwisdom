@@ -320,7 +320,7 @@ def render_index(terms, qkeys, gs, ctx):
     all_data = json.dumps([[t["name"], t["slug"]] for t in terms], ensure_ascii=False)
     body = f'''
 <header class="lex-hero">
-  <div class="kicker kicker-accent">§ The Lexicon</div>
+  <div class="kicker kicker-accent">The Lexicon</div>
   <h1 class="lex-h1">The Lexicon</h1>
   <p class="lex-lede">The working vocabulary of the future of now — {len(terms):,} terms, defined by hand in <em>The Less You Know</em> across {ctx['edition_count']} editions. Every definition is the newsletter's own; recurring terms trace how the language of the field accumulated, week over week.</p>
   <div class="lex-metaline">{total_entries:,} definitions · {len(core)} recurring terms · {span} · 100% authentic humanly chosen</div>
@@ -361,7 +361,7 @@ def render_category(c, items, gs, ctx):
     body = f'''
 <header class="lex-hero">
   <a class="lex-back" href="index.html">&larr; The Lexicon</a>
-  <div class="kicker kicker-accent">§ Lexicon · Category</div>
+  <div class="kicker kicker-accent">Lexicon · Category</div>
   <h1 class="lex-h1">{esc(c)}</h1>
   <div class="lex-metaline">{len(items)} terms · sorted by how often they're glossed</div>
 </header>
@@ -415,7 +415,7 @@ def render_term(t, gs, ctx):
     body = f'''
 <div class="term-wrap">
   <a class="term-back" href="index.html">&larr; The Lexicon</a>
-  <div class="term-eyebrow lex-text-{color}">§ {esc(t['category'])}</div>
+  <div class="term-eyebrow lex-text-{color}">{esc(t['category'])}</div>
   <h1 class="term-title">{esc(t['name'])}</h1>
   <p class="term-def">{esc(defn)}</p>
   {src_line}

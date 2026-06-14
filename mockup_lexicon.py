@@ -109,7 +109,7 @@ def render_category_page(c):
     body = f"""
 <header class="lex-hero">
   <a class="lex-back" href="lexicon-v2.html">&larr; The Lexicon</a>
-  <div class="kicker kicker-accent">§ Lexicon · Category</div>
+  <div class="kicker kicker-accent">Lexicon · Category</div>
   <h1 class="lex-h1">{e(c)}</h1>
   <p class="lex-metaline">{len(items)} terms · sorted by how often they're glossed</p>
 </header>
@@ -226,7 +226,7 @@ def build(out_name="lexicon-v2.html"):
     all_data = json.dumps([[t["name"], t["slug"]] for t in terms], ensure_ascii=False)
     body = f"""
 <header class="lex-hero">
-  <div class="kicker kicker-accent">§ The Lexicon</div>
+  <div class="kicker kicker-accent">The Lexicon</div>
   <h1 class="lex-h1">The Lexicon</h1>
   <p class="lex-lede">The working vocabulary of the future of now — {len(terms):,} terms,
   defined by hand in <em>The Less You Know</em> across {lex['edition_count']} editions.

@@ -46,7 +46,7 @@ BODY = """
 <div class="about-wrap">
 
   <div class="about-hero">
-    <div class="about-eyebrow">§ About</div>
+    <div class="about-eyebrow">About</div>
     <h1 class="about-title">Token Wisdom</h1>
     <div class="about-handle">@iamkhayyam</div>
   </div>

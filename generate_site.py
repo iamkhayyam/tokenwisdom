@@ -2316,7 +2316,7 @@ def render_homepage(posts, tags_by_slug, tag_to_posts, top_tags, years_span):
   <div class="home-grid">
     <div>
       <div class="section-header">
-        <span class="section-label">§ 01</span>
+        <span class="section-label">01</span>
         <span class="section-title">This Week</span>
         <span class="section-note">Latest Edition</span>
       </div>
@@ -2330,7 +2330,7 @@ def render_homepage(posts, tags_by_slug, tag_to_posts, top_tags, years_span):
       </article>
 
       <div class="section-header">
-        <span class="section-label">§ 02</span>
+        <span class="section-label">02</span>
         <span class="section-title">A Closer Look</span>
         <span class="section-note">Essays</span>
       </div>
@@ -2427,7 +2427,7 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
   </div>
 </header>
 <div class="tag-list">
-  <div class="tag-list-heading">§ All posts</div>
+  <div class="tag-list-heading">All posts</div>
   {rows}
 </div>
 """
@@ -3177,7 +3177,7 @@ def render_archive(posts, posts_count, tags_count, years_span, top_tags):
 
     body = f"""
 <header class="tag-header">
-  <div class="eyebrow">§ Complete Archive</div>
+  <div class="eyebrow">Complete Archive</div>
   <h1>The Archive</h1>
   <p class="desc">Every post published, grouped by year. {len(sorted_posts)} posts across {len(by_year)} years.</p>
   <div class="meta">{years_span}</div>
@@ -3229,7 +3229,7 @@ def render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, t
 
     body = f"""
 <header class="tag-header">
-  <div class="eyebrow">§ Topics Index</div>
+  <div class="eyebrow">Topics Index</div>
   <h1>Explore Topics</h1>
   <p class="desc">{len(visible)} topics across {posts_count} posts. Every tag, every GIF, every thread in one place. Click anything to dive in.</p>
   <div class="meta">{esc(years_span)} · {len(visible)} tags · 100% authentic humanly chosen</div>
@@ -3481,7 +3481,7 @@ def render_podcast_page(channel, episodes, posts, posts_count, tags_count, years
       <img src="{esc(feed_image)}" alt="{esc(feed_title)}">
     </div>
     <div class="podcast-hero-copy">
-      <div class="podcast-hero-eyebrow">§ Podcast · Powered by NotebookLM</div>
+      <div class="podcast-hero-eyebrow">Podcast · Powered by NotebookLM</div>
       <h1 class="podcast-hero-title">{esc(feed_title)}</h1>
       <p class="podcast-hero-desc">{esc(feed_desc)}</p>
       <div class="podcast-hero-meta">{len(episodes)} Episodes · Updated weekly · Free</div>
@@ -3496,7 +3496,7 @@ def render_podcast_page(channel, episodes, posts, posts_count, tags_count, years
 
 <div class="podcast-wrap">
   <div class="section-header">
-    <span class="section-label">§ All Episodes</span>
+    <span class="section-label">All Episodes</span>
     <span class="section-title">The Feed</span>
     <span class="section-note">{len(episodes)} episodes · newest first</span>
   </div>
