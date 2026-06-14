@@ -739,10 +739,11 @@ img { max-width: 100%; height: auto; }
   margin-top: 4px;
 }
 
-/* ---------- TAG PAGE HEADER (dithered GIF background) ---------- */
+/* ---------- TAG PAGE HEADER (magnified GIF background) ---------- */
 .tag-hero {
   position: relative;
   overflow: hidden;
+  border-bottom: 2px solid var(--ink);
   isolation: isolate;
   padding: 4.5rem 1.5rem 3.5rem;
   text-align: center;
@@ -754,15 +755,13 @@ img { max-width: 100%; height: auto; }
 .tag-hero::before {
   content: '';
   position: absolute;
-  inset: 0;
-  background-image:
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23fff'/%3E%3Crect x='0' y='0' width='1' height='1' fill='%23000'/%3E%3Crect x='2' y='0' width='1' height='1' fill='%23000'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='3' y='1' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%23000'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%23000'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%23000' opacity='.45'/%3E%3C/svg%3E"),
-    var(--tag-bg);
-  background-size: 8px 8px, cover;
-  background-position: 0 0, center;
-  background-repeat: repeat, no-repeat;
-  background-blend-mode: multiply, normal;
-  filter: grayscale(1) contrast(1.4) brightness(0.88);
+  inset: -8%;
+  background-image: var(--tag-bg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(36px) saturate(1.15) brightness(.82);
+  transform: scale(1.25);
   z-index: -2;
 }
 .tag-hero::after {
@@ -770,10 +769,9 @@ img { max-width: 100%; height: auto; }
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-    rgba(250,248,244,0) 0%,
-    rgba(250,248,244,0) 30%,
-    rgba(250,248,244,.75) 65%,
-    rgba(250,248,244,1) 100%);
+    rgba(250,248,244,.55) 0%,
+    rgba(250,248,244,.45) 50%,
+    rgba(250,248,244,.82) 100%);
   z-index: -1;
 }
 .tag-hero-inner {

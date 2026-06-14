@@ -94,6 +94,9 @@ a{color:inherit;text-decoration:none}
 /* recent */
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
 .recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
+.pairlink{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);align-self:flex-start;margin-top:.7rem;border-bottom:1px solid transparent;transition:border-color .15s}
+.pairlink:hover{border-color:var(--accent)}
 .story-figure{aspect-ratio:16/10;overflow:hidden;background:var(--surface);margin-bottom:14px}
 .story-figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
 .story:hover .story-figure img{transform:scale(1.03)}
@@ -226,7 +229,6 @@ a{color:inherit;text-decoration:none}
   .lexcard{border-right:1px solid var(--rule)!important}
 }
 </style>
-<link rel="icon" type="image/svg+xml" href="assets/crystal-ball.svg">
 </head><body>
 
 <div class="nameplate">
@@ -258,6 +260,7 @@ a{color:inherit;text-decoration:none}
   <span class="tw-meta">153rd Edition · Week 13 · The essay &amp; the edition, like clockwork</span>
 </section>
 <section class="lead">
+  <div class="lead-col">
   <a class="lead-main" href="posts/the-sky-has-been-warning-us-since-1859.html">
     <div class="lead-figure"><img src="https://tokenwisdom.ghost.io/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg" alt="The Sky Has Been Warning Us Since 1859" loading="eager">
       <span class="figure-tag">Essay</span></div>
@@ -268,6 +271,8 @@ a{color:inherit;text-decoration:none}
       <div class="meta">🌶️ @iamkhayyam  · 9 min read · Mar 26, 2026</div>
     </div>
   </a>
+  <a class="pairlink" href="podcast.html#ep-313d8470-c110-4ed0-a880-">&#127911; Hear the 153rd Edition &rarr;</a>
+  </div>
   <aside class="lead-side">
     <a class="edition-feature" href="posts/153rd-edition-token-wisdom-week-13.html">
       <div class="ef-figure">
@@ -328,6 +333,7 @@ a{color:inherit;text-decoration:none}
   <div class="rule-head"><h2 class="rule-label">A Closer Look</h2><span class="rule-meta">Essays &amp; OP-EDs</span></div>
   <div class="recent">
     <div class="recent-cards">
+    <div class="story-wrap">
     <a class="story" href="posts/the-proentropic-weed-manifesto.html">
       <div class="story-figure"><img src="https://tokenwisdom.ghost.io/content/images/2026/03/a-new-yorker-style-editorial-illustratio_QjfqSMFuQaKvReFwk6dShg_fSrVTEJbSXGHFtAca4Cj4w_cover_sd.jpeg" alt="The Proentropic Weed Manifesto" loading="lazy"></div>
       <div class="kicker kicker-accent">A Closer Look · A.I. (and Subsets)</div>
@@ -335,6 +341,9 @@ a{color:inherit;text-decoration:none}
       <p class="story-dek">W12 - We prize orchids — for rarity, for control, for perfect optimization — and we scrub away the mess. Reality isn’t a greenhouse; orchids perish…</p>
       <div class="meta">🌶️ @iamkhayyam  · 10 min read · Mar 20, 2026</div>
     </a>
+    <a class="pairlink" href="podcast.html#ep-f57a932a-6f1e-4441-bbe4-">&#127911; Hear the 152nd Edition &rarr;</a>
+    </div>
+    <div class="story-wrap">
     <a class="story" href="posts/the-room-was-already-set-before-you-walked-in.html">
       <div class="story-figure"><img src="https://tokenwisdom.ghost.io/content/images/2026/03/a-ink-illustrated-new-yorker-cover-style_1sDinQ6sSUOYZ0X72o6G0A_6qT4cZoKT9aNuL00Bg3Kqw_cover_sd.jpeg" alt="The Room Was Already Set Before You Walked In" loading="lazy"></div>
       <div class="kicker kicker-accent">A Closer Look · Persuasion</div>
@@ -342,6 +351,8 @@ a{color:inherit;text-decoration:none}
       <p class="story-dek">W11 - You have spent your whole life learning to spot the argument. Nobody told you the argument was never the point. The persuasion is the last…</p>
       <div class="meta">🌶️ @iamkhayyam  · 9 min read · Mar 12, 2026</div>
     </a>
+    <a class="pairlink" href="podcast.html#ep-bc9f9da5-849f-4d74-ba3a-">&#127911; Hear the 151st Edition &rarr;</a>
+    </div>
     </div>
     <div class="recent-list">
       <div class="kicker">More to read</div>
