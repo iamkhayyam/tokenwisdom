@@ -739,7 +739,7 @@ img { max-width: 100%; height: auto; }
   margin-top: 4px;
 }
 
-/* ---------- TAG PAGE HEADER (Bayer dithered GIF background) ---------- */
+/* ---------- TAG PAGE HEADER (magnified GIF background) ---------- */
 .tag-hero {
   position: relative;
   overflow: hidden;

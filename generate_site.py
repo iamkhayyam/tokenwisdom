@@ -49,6 +49,93 @@ ESSAY_TAG_SLUG = "a-closer-look"
 PODCAST_FEED_URL = "https://feeds.captivate.fm/tokenwisdom-and-notebooklm/"
 PODCAST_CACHE = BACKUP_DIR / "data" / "podcast_feed.xml"
 
+TAG_DESCRIPTIONS = {
+    "a-closer-look": "A weekly essay from a bucket of topics consisting of all things blockchain, artificial intelligence, extended reality, quantum computing, renewable energy, and regenerative practices.",
+    "advertising": "The business of attention — how brands court, capture, and occasionally lose us. Ad tech, creative strategy, targeting ethics, and the ever-shifting economics of getting noticed in a noisy world.",
+    "agency": "Who's in control — humans, algorithms, or institutions? Explores autonomy, decision-making power, and what it means to act with intention in systems designed to nudge us in predetermined directions.",
+    "agi": "The horizon everyone's racing toward and no one agrees on. Tracking the milestones, the hype, the safety debates, and what artificial general intelligence would actually mean for the rest of us.",
+    "ai": "The defining technology of the moment — machine learning, neural networks, large language models, and the tools reshaping every industry. News, analysis, and the questions worth asking.",
+    "ask-me-anything": "Every week the most provocative reader question gets a full answer. No topic is off limits. Equal parts advice column, op-ed, and open office hours for the curious and the opinionated.",
+    "automation": "Robots aren't coming for your job — they're already here. Covering the tools, workflows, and economic forces turning repetitive tasks into code, and what that displacement actually looks like.",
+    "big-tech": "Apple, Google, Meta, Amazon, Microsoft — the companies that built the modern internet and now operate as de facto infrastructure. Strategy, power, policy battles, and the occasional implosion.",
+    "bitcoin": "Digital gold, speculative asset, libertarian dream, or monetary revolution? Tracking Bitcoin's price, politics, adoption, and its complicated relationship with the rest of crypto.",
+    "blockchain": "The ledger technology beneath crypto and beyond — smart contracts, decentralized apps, supply chain verification, and every other use case that may or may not need a blockchain to work.",
+    "brain-health": "The organ running everything deserves more attention. Neuroscience meets wellness: sleep, cognitive performance, mental health, neuroplasticity, and the habits that actually move the needle.",
+    "business-intelligence": "Data transformed into decisions. BI tools, dashboards, analytics stacks, and the organizational discipline of actually knowing what's happening inside your business before it's too late.",
+    "challenges": "The hard problems — technical, societal, ethical — that don't have easy answers. A place to sit with difficulty, examine trade-offs, and think carefully before reaching for the obvious fix.",
+    "code-no-code": "The blurring line between builders and non-builders. Low-code platforms, visual programming, AI-assisted development, and what it means when almost anyone can ship a working product.",
+    "content-creation": "The craft and commerce of making things online — writing, video, audio, newsletters, social. Creator economy economics, audience building, and the tools that make or break a content operation.",
+    "copyright": "Who owns an idea in the age of generative AI? Intellectual property law colliding with machine learning, remix culture, and platforms that profit from content they didn't create.",
+    "creative-design": "Aesthetics with intent — UI, graphic design, branding, motion, and the creative decisions that make products feel inevitable rather than assembled. The intersection of taste and function.",
+    "culture": "The ambient stuff we swim in — memes, movements, generational shifts, and the shared references that shape how we think. Tech culture, internet culture, and the culture tech is making.",
+    "customs": "The inherited rules nobody voted for. Social norms, professional rituals, and the unwritten expectations that govern behavior — and the fascinating friction when they collide with new technology.",
+    "cybersecurity": "The permanent arms race between attackers and defenders. Breaches, exploits, ransomware, zero-days, and the organizations trying to keep the lights on while adversaries look for the next door.",
+    "data": "The raw material of the information age — how it's collected, stored, sold, regulated, and weaponized. Privacy, data rights, governance, and the pipelines moving petabytes around the planet.",
+    "dear-______-letters": "Open letters to institutions, industries, technologies, and ideas that deserve a frank conversation. Part satire, part sincere — the format that lets you say the thing nobody else is saying.",
+    "deeptech": "Science-forward startups building in quantum, biotech, materials science, aerospace, and climate — companies where the R&D cycle is measured in years and the upside is genuinely civilization-scale.",
+    "economic-inequality": "The widening gap between those who own the systems and those who run them. How technology amplifies wealth concentration, and the policies, movements, and ideas pushing back.",
+    "education": "Learning at every age and stage — from K-12 to corporate training to the informal education happening on YouTube at 2am. EdTech, pedagogy, credentialing, and what school is actually for.",
+    "emerging-technology": "The stuff that's almost ready — spatial computing, brain-computer interfaces, fusion energy, synthetic biology. Early signals on technologies that will feel obvious in retrospect.",
+    "entertainment-lbe": "Location-based entertainment: immersive experiences, theme parks, escape rooms, AR activations, and the physical spaces being reimagined now that the screen is no longer the only portal.",
+    "entrepreneurship": "The unglamorous reality of building something from nothing — fundraising, hiring, product, pivots, and the psychological weight of being responsible for it all. Stories from the arena.",
+    "ethical": "The moral weight of what we build. AI ethics, platform responsibility, design decisions with downstream consequences, and the frameworks for thinking carefully about technology's human impact.",
+    "explainable-ai": "Black boxes are a liability. XAI covers the tools, methods, and regulatory pressures pushing AI systems toward interpretability — so humans can understand, audit, and trust the outputs.",
+    "failing-up": "The entrepreneurial tradition of treating failure as tuition. Honest post-mortems, lessons from shutdowns, and the pattern of people who stumbled badly and built something better after.",
+    "flow": "The psychology of peak performance and deep work — getting into the state where time disappears and output compounds. Attention, focus, environment design, and the conditions that make it possible.",
+    "future-of-work": "What work looks like when AI handles the routine, offices are optional, and careers span five different industries. Remote work, the gig economy, automation, and the shape of Monday morning.",
+    "future-trends": "Pattern recognition at scale — the weak signals, macro forces, and emerging behaviors that suggest where things are heading. Not prediction, but informed direction-finding for what comes next.",
+    "generative": "The models that make things — text, images, audio, video, code, and the synthetic media they produce. Generative AI's capabilities, limits, business models, and cultural consequences.",
+    "github": "Where code lives and collaboration happens. Open source projects, developer tools, copilot features, and the platform that became essential infrastructure for anyone building software.",
+    "gpt": "OpenAI's flagship and the model that changed the public conversation about AI. GPT-4, ChatGPT, the API ecosystem, jailbreaks, business applications, and what the benchmark numbers actually mean.",
+    "grifters": "Snake oil in a hoodie. Crypto scams, AI hype merchants, MLM-adjacent tech plays, and the recurring pattern of charismatic founders selling futures that conveniently never arrive.",
+    "human-body-communication": "The signals we send without speaking — gesture, posture, biometrics, haptics, and the frontier of interfaces that read and respond to the body rather than waiting for keyboard input.",
+    "human-computer-interaction": "The discipline of making technology feel human. HCI research, interface design, accessibility, conversational UI, and the long history of trying to make machines easier to talk to.",
+    "innovation": "Real breakthroughs versus rebranded incrementalism. What innovation actually requires — dissent, resources, time, culture — and why most organizations say they want it but can't quite get there.",
+    "internet-of-things-iot": "Billions of connected devices collecting data from the physical world — smart homes, industrial sensors, wearables, and the infrastructure questions nobody asked until the hack happened.",
+    "interview": "Conversations with founders, researchers, practitioners, and contrarians. The long-form format where people say more than they would in a press release and less than they would in a memoir.",
+    "language-models": "The architecture powering the AI moment — transformers, tokenization, context windows, fine-tuning, and the research papers explaining why these things work when they work.",
+    "layerzero": "Cross-chain infrastructure and omnichain messaging — the plumbing connecting isolated blockchains and the controversy that came with it. The story of interoperability and its discontents.",
+    "lessons-learned": "Distilled experience from people who built things, broke things, and rebuilt them smarter. The practical wisdom that only comes from having been wrong about something expensive.",
+    "life-hacks": "Small interventions with outsized returns — productivity systems, habit design, tools, shortcuts, and the recurring realization that most efficiency gains come from eliminating work, not speeding it up.",
+    "linkedin": "The professional internet and all its contradictions — thought leadership theater, recruiter DMs, algorithmic engagement bait, and the occasional genuine insight hiding in the feed.",
+    "marketing": "Demand generation in the attention economy. Brand strategy, growth tactics, content marketing, influencer economics, and the eternal question of what actually moves people to act.",
+    "misinformation": "False information spreading faster than corrections. Platform responsibility, media literacy, AI-generated fakery, and the structural incentives that make lies more shareable than truth.",
+    "networking": "Building relationships that matter — the difference between collecting contacts and creating genuine professional community. In-person, digital, and the etiquette of showing up for people.",
+    "neuroscience": "The brain as a system — neuroplasticity, decision-making architecture, memory consolidation, and the research illuminating why humans behave the way we do and what that means for design.",
+    "newestlatest": "Hand-picked and carefully curated content in a consumed collection of noteworthy news, emerging trends, and must-read insights delivered fresh each week.",
+    "nlp": "Natural language processing — the field teaching machines to read, understand, and generate human language. Named entity recognition, sentiment analysis, and the steps between syntax and meaning.",
+    "open-source": "Software built in public, by anyone, for everyone. The licenses, communities, economics, and governance models that make open source work — and the corporations that complicate it.",
+    "opinionated-editorials": "Takes with teeth. Strong positions on technology, culture, business, and the intersection of all three — written for people who'd rather read a point of view than another balanced take.",
+    "perovskite": "The solar material promising to outperform silicon — cheaper, more flexible, and potentially more efficient. Tracking the science, the startups, and the durability problem standing in the way.",
+    "personal-growth": "The long project of becoming better at being you — mindset, habits, learning systems, relationships, and the honest acknowledgment that growth is rarely linear or comfortable.",
+    "philosophy": "The foundational questions applied to contemporary problems. Ethics, epistemology, consciousness, and the thinkers whose frameworks help make sense of a world moving faster than intuition.",
+    "pirate-talk": "The unconventional, the subversive, the off-script. Ideas that don't fit in the approved channels — contrarian takes, creative rebellion, and thinking that refuses to stay in its lane.",
+    "pre-crime": "Predictive policing, algorithmic risk scoring, and the ethics of systems that act before harm occurs. The tension between prevention and presumption of innocence in a data-rich world.",
+    "privacy": "The shrinking space between you and the systems that know you. Data collection, surveillance capitalism, regulation, and the practical steps individuals and organizations can actually take.",
+    "productivity": "Getting the right things done without burning out. Systems, tools, time management, prioritization, and the uncomfortable truth that most productivity problems are actually clarity problems.",
+    "prompt-engineering": "The craft of talking to AI models effectively — structuring inputs, controlling outputs, chain-of-thought techniques, and the emerging discipline of getting reliable results from probabilistic systems.",
+    "provenance": "Where did this come from and can you prove it? Content authenticity, digital watermarking, supply chain transparency, and the infrastructure for trusting information in an era of synthetic media.",
+    "quantum": "Computing with qubits, superposition, and entanglement — and why the timelines keep slipping. Quantum advantage, error correction, cryptography implications, and what's actually shipping.",
+    "regenerative": "Beyond sustainability — designing systems that restore rather than deplete. Regenerative agriculture, circular economy, biomimicry, and the businesses building net-positive into their model.",
+    "renewable-energy": "The energy transition in real time — solar, wind, storage, grid modernization, and the policy, economics, and engineering questions determining how fast we actually get there.",
+    "resume": "The artifact that summarizes a career and the conventions that make it harder than it should be. Hiring signals, skills gaps, portfolio thinking, and the future of credentialing.",
+    "risk-reward": "The calculus of consequential decisions — venture bets, career pivots, product launches, policy choices. Framework thinking for situations where the downside is real and the upside uncertain.",
+    "semiconductor": "The chips the world runs on — design, fabrication, supply chains, geopolitics, and the companies competing to build the silicon that everything else depends on.",
+    "solar": "The fastest-growing energy source on earth. Panel efficiency, installation economics, utility-scale projects, rooftop adoption, and the storage question that determines when solar truly wins.",
+    "sports": "Athletics as a lens on performance, business, culture, and data. The analytics revolution, athlete economics, sports tech, and the human stories that make winning and losing matter.",
+    "storytelling": "The oldest technology and still the most persuasive. Narrative structure, brand storytelling, documentary craft, and the science of why a well-told story lands where data and argument fail.",
+    "strategic": "Thinking in systems, second-order effects, and time horizons longer than this quarter. Competitive strategy, organizational design, and the decisions that shape everything that comes after.",
+    "streaming": "The attention economy's most contested real estate — streaming wars, content economics, bundling fatigue, and the algorithmic taste machines determining what gets made and what gets buried.",
+    "technology": "The broad sweep of what technology is doing to the world — tools, platforms, infrastructure, and the cultural shifts happening because of them. Curious, critical, and occasionally alarmed.",
+    "timewellspent": "The week's top must-watch YouTube videos curated to earn back your screen time with something worth remembering. Quality over quantity, depth over distraction.",
+    "travel": "Moving through the world with intention — destinations, logistics, the psychology of being elsewhere, and how the experience of travel changes the traveler in ways that are hard to explain at home.",
+    "unsolicited-advice": "Opinions nobody asked for, delivered anyway. Practical guidance, strong suggestions, and the occasional correction offered in the spirit of genuine helpfulness rather than just being right.",
+    "user-experience": "Design that serves the person using it. UX research, usability principles, accessibility, information architecture, and the gap between how designers imagine products and how people actually use them.",
+    "viral-content": "What spreads and why — the mechanics of sharing, the psychology of contagion, platform amplification, and the uncomfortable truth that emotional resonance matters more than accuracy.",
+    "wellness": "Health beyond the absence of illness — sleep, movement, nutrition, mental health, and the growing body of evidence about what actually sustains energy and mood over a lifetime.",
+    "worthafortune": "A finely curated collection of the wonderful web we weave with a weekly roundup of the most interesting things worth your attention — links, reads, and discoveries that earned their place.",
+}
+
 
 # ============================================================
 # DATA
@@ -1015,7 +1102,6 @@ img { max-width: 100%; height: auto; }
 .tag-hero {
   position: relative;
   overflow: hidden;
-  border-bottom: 2px solid var(--ink);
   isolation: isolate;
   padding: 4.5rem 1.5rem 3.5rem;
   text-align: center;
@@ -1027,13 +1113,15 @@ img { max-width: 100%; height: auto; }
 .tag-hero::before {
   content: '';
   position: absolute;
-  inset: -8%;
-  background-image: var(--tag-bg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  filter: blur(36px) saturate(1.15) brightness(.82);
-  transform: scale(1.25);
+  inset: 0;
+  background-image:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23fff'/%3E%3Crect x='0' y='0' width='1' height='1' fill='%23000'/%3E%3Crect x='2' y='0' width='1' height='1' fill='%23000'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='3' y='1' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%23000'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%23000'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%23000' opacity='.45'/%3E%3C/svg%3E"),
+    var(--tag-bg);
+  background-size: 8px 8px, cover;
+  background-position: 0 0, center;
+  background-repeat: repeat, no-repeat;
+  background-blend-mode: multiply, normal;
+  filter: grayscale(1) contrast(1.4) brightness(0.88);
   z-index: -2;
 }
 .tag-hero::after {
@@ -1041,9 +1129,10 @@ img { max-width: 100%; height: auto; }
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-    rgba(250,248,244,.55) 0%,
-    rgba(250,248,244,.45) 50%,
-    rgba(250,248,244,.82) 100%);
+    rgba(250,248,244,0) 0%,
+    rgba(250,248,244,0) 30%,
+    rgba(250,248,244,.75) 65%,
+    rgba(250,248,244,1) 100%);
   z-index: -1;
 }
 .tag-hero-inner {
@@ -1809,7 +1898,7 @@ img { max-width: 100%; height: auto; }
 # FRAGMENT BUILDERS
 # ============================================================
 
-def head_tag(title):
+def head_tag(title, favicon_path="assets/crystal-ball.svg"):
     fonts = (
         "https://fonts.googleapis.com/css2?"
         "family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&"
@@ -1824,6 +1913,7 @@ def head_tag(title):
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)} — {SITE_NAME}</title>
 <meta name="description" content="{esc(SITE_TAGLINE)}">
+<link rel="icon" type="image/svg+xml" href="{favicon_path}">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{fonts}" rel="stylesheet">
@@ -1835,13 +1925,12 @@ def head_tag(title):
 
 def site_top(from_dir="root"):
     prefix = "" if from_dir == "root" else "../"
-    today = datetime.now().strftime("%a · %b %-d, %Y").upper()
+    orb = f'<img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb">'
     return f"""
 <div class="site-top">
   <div class="site-top-inner">
-    <a href="{prefix}index.html" class="site-top-wordmark">🔮 Token Wisdom</a>
+    <a href="{prefix}index.html" class="site-top-wordmark">{orb} Token Wisdom</a>
     <nav class="site-top-nav">
-      <a href="{prefix}index.html">Home</a>
       <a href="{prefix}archive.html">Archive</a>
       <a href="{prefix}tags/index.html">Topics</a>
       <a href="{prefix}lexicon/index.html">Lexicon</a>
@@ -1849,7 +1938,6 @@ def site_top(from_dir="root"):
       <a href="{prefix}tags/worthafortune.html">Newsletters</a>
       <a href="{prefix}podcast.html">Podcast</a>
     </nav>
-    <span class="site-top-date">{today}</span>
   </div>
 </div>
 """
@@ -1908,7 +1996,8 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
 
 
 def page_shell(title, body, css_path, from_dir="root"):
-    head = head_tag(title).format(css_path=css_path)
+    favicon = "assets/crystal-ball.svg" if from_dir == "root" else "../assets/crystal-ball.svg"
+    head = head_tag(title, favicon_path=favicon).format(css_path=css_path)
     return head + site_top(from_dir) + body
 
 
@@ -2258,7 +2347,7 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
     <p>{excerpt(p, 220)}</p>
   </article>"""
 
-    desc = tag.get("description") or ""
+    desc = TAG_DESCRIPTIONS.get(tag.get("slug", "")) or tag.get("description") or ""
     desc_html = f'<p class="desc">{esc(desc)}</p>' if desc else ""
 
     feature_img = tag.get("feature_image") or ""
@@ -2276,7 +2365,6 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
     body = f"""
 <header class="tag-hero" style="--tag-bg: url('{esc(feature_img)}');">
   <div class="tag-hero-inner">
-    <span class="tag-hero-eyebrow">§ Topic</span>
     {gif_html}
     <h1>{esc(tag.get('name', ''))}</h1>
     {desc_html}

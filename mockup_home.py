@@ -11,6 +11,7 @@ Preview:  http://localhost:8765/home-v2.html
 """
 
 import json
+import re as _re
 from pathlib import Path
 import generate_site as gs
 import lexicon as lx
@@ -61,6 +62,12 @@ def paired_edition(p):
     wk = _week_of(p)
     return ed_by_yw.get(((p.get("published_at") or "")[:4], wk)) if wk else None
 
+
+def _ep_week(ep):
+    t = ep.get("title", "") or ""
+    m = gs.WEEK_RX.search(t) or _WK_RX.search(t)
+    return int(m.group(1)) if m else None
+
 tag_to_posts = {}
 for p in posts:
     for t in p.get("tags", []) or []:
@@ -94,6 +101,22 @@ _week = int(_wk.group(1)) if _wk else None
 essay_ep = _find_ep("A", _week)
 edition_ep = _find_ep("B", _week)
 
+# (year, week) -> the edition's •B• podcast episode, so an essay can link its
+# correlating edition audio on the podcast page.
+epB_by_yw = {}
+for _ep in _eps:
+    if "•B•" not in (_ep.get("title", "") or ""):
+        continue
+    _w = _ep_week(_ep)
+    _y = str(_ep.get("pub_date") or "")[:4]
+    if _w and (_y, _w) not in epB_by_yw:
+        epB_by_yw[(_y, _w)] = _ep
+
+
+def paired_audio(p):
+    wk = _week_of(p)
+    return epB_by_yw.get(((p.get("published_at") or "")[:4], wk)) if wk else None
+
 
 def ep_title(ep):
     t = ep.get("title", "") or ""
@@ -123,11 +146,14 @@ def href(p):
 
 
 def pair_link(p):
-    ed = paired_edition(p)
-    if not ed:
+    ep = paired_audio(p)
+    if not ep:
         return ""
-    return (f'<a class="pairlink" href="{href(ed)}">&#8627; Paired newsletter · '
-            f'{e(gs.edition_meta(ed) or gs.clean_title(ed))}</a>')
+    m = gs.EDITION_RX.search(ep.get("title", "") or "")
+    label = m.group(0) if m else "the edition"
+    anchor = "ep-" + e(ep.get("guid", "") or "")[:24]
+    return (f'<a class="pairlink" href="podcast.html#{anchor}">'
+            f'&#127911; Hear the {label} &rarr;</a>')
 
 
 # ---- sections ----
