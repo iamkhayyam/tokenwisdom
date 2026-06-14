@@ -7,7 +7,10 @@ from tw_theme import page
 DOCS = Path(__file__).parent / "docs"
 
 ABOUT_CSS = """
-.about-wrap{max-width:720px;margin:0 auto;padding:3rem 28px 5rem}
+/* Match the shared page width (--w, 1080px) like Links/Lexicon/the rest;
+   keep the running prose in a readable column so lines don't sprawl. */
+.about-wrap{max-width:var(--w);margin:0 auto;padding:3rem 28px 5rem}
+.about-body p,.about-body h2,.about-body h3,.about-body hr,.about-body blockquote{max-width:680px}
 .about-hero{border-bottom:2px solid var(--ink);padding-bottom:1.4rem;margin-bottom:2.4rem}
 .about-eyebrow{font-family:var(--mono);font-weight:300;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.6rem}
 .about-title{font-family:var(--display);font-weight:400;font-size:clamp(2.6rem,6vw,4.2rem);line-height:.94;letter-spacing:-.025em;color:var(--ink)}
