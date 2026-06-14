@@ -33,6 +33,17 @@ SITE_SIGN_OFF_LINES = [
 SITE_URL = "https://iamkhayyam.github.io/tokenwisdom"
 GHOST_URL = "https://tokenwisdom.ghost.io"
 
+# Community layer (highlights / notes / responses) — base URL of our self-hosted
+# API or the Cloudflare Worker that fronts it. Overridable at build time.
+TW_API_BASE = os.environ.get("TW_API_BASE", "http://localhost:3000")
+
+
+def community_assets(prefix="../"):
+    """Stylesheet + config + annotate client. Injected on post pages only."""
+    return f"""<link rel="stylesheet" href="{prefix}assets/annotate.css">
+<script>window.TW_API={json.dumps(TW_API_BASE)};</script>
+<script src="{prefix}assets/annotate.js" defer></script>"""
+
 # Section tag slugs — these are treated as "section" markers and hidden from the
 # normal eyebrow/pill display on post pages (they move into the top-bar issue code).
 SECTION_TAGS = {
@@ -498,10 +509,10 @@ img { max-width: 100%; height: auto; }
   color: var(--ink-muted); white-space: nowrap; transition: color 0.15s;
 }
 .site-top-back:hover { color: var(--accent); }
-/* Inline text nav — visible on desktop, swapped for the menu button on mobile */
+/* Inline text nav — visible on desktop, swapped for the menu button below 1080 */
 .site-top-nav {
   display: flex; align-items: center; flex: 1;
-  gap: 22px; margin-left: 6px; flex-wrap: wrap;
+  gap: 16px; margin-left: 6px; flex-wrap: wrap;
 }
 /* Menu button — opens the full-page takeover on mobile only */
 .site-top-toggle {
@@ -1743,11 +1754,13 @@ img { max-width: 100%; height: auto; }
   .archive-item { grid-template-columns: 90px 1fr; }
   .archive-item .tag { grid-column: 2; justify-self: start; margin-top: 2px; }
 }
-/* ---------- MOBILE — swap inline nav for the menu button ---------- */
-@media (max-width: 860px) {
-  .site-top-inner { padding: 10px 16px; gap: 14px; }
+/* ---------- Below 1080: swap inline nav for the menu button ---------- */
+@media (max-width: 1080px) {
   .site-top-nav { display: none; }
   .site-top-toggle { display: inline-flex; }
+}
+@media (max-width: 860px) {
+  .site-top-inner { padding: 10px 16px; gap: 14px; }
 }
 @media (max-width: 600px) {
   body { font-size: 17px; }
@@ -2199,6 +2212,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years
   </div>
   {tag_pills}
 </article>
+<section id="tw-responses"></section>
 <nav class="post-nav">
   {nav_prev}
   {nav_next}
@@ -2206,6 +2220,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
+    page = page.replace("</body>", community_assets() + "\n</body>", 1)
     return page
 
 
@@ -2270,6 +2285,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
   </div>
   {tag_pills}
 </article>
+<section id="tw-responses"></section>
 <nav class="post-nav">
   {nav_prev}
   {nav_next}
@@ -2277,6 +2293,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
+    page = page.replace("</body>", community_assets() + "\n</body>", 1)
     return page
 
 
@@ -3697,6 +3714,12 @@ def main():
     assets_dir.mkdir(exist_ok=True)
     for asset in ("crystal-ball.svg", "fortune_teller.gif"):
         src_asset = BACKUP_DIR / "images" / asset
+        if src_asset.exists():
+            shutil.copy(src_asset, assets_dir / asset)
+    # Community layer client (highlights / notes / responses) — source lives in
+    # assets/ (outside docs/, which is wiped on every build).
+    for asset in ("annotate.js", "annotate.css"):
+        src_asset = BACKUP_DIR / "assets" / asset
         if src_asset.exists():
             shutil.copy(src_asset, assets_dir / asset)
     fonts_src = BACKUP_DIR / "fonts"

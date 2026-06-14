@@ -1,0 +1,19 @@
+{
+  "name": "token-wisdom-api",
+  "version": "1.0.0",
+  "description": "REST API over the Token Wisdom corpus (lexicon + posts + tags)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "seed": "node seed.js",
+    "migrate": "node migrate.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "mysql2": "^3.12.0",
+    "resend": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

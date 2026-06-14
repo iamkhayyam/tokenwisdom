@@ -6,6 +6,11 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
+/* FauxCRA — brand faces, matching the other pages (depth-1 pages → ../assets) */
+@font-face{font-family:'FauxCRA';src:url('../assets/fonts/FauxCRA-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA';src:url('../assets/fonts/FauxCRA-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA';src:url('../assets/fonts/FauxCRA-Bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA Mono';src:url('../assets/fonts/FauxCRA-Monospaced.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
 :root{
   --bg: oklch(0.992 0.004 70);
   --surface: oklch(0.972 0.005 70);
@@ -24,8 +29,8 @@
   --display:'Libre Caslon Display',Georgia,serif;
   --display-weight:400;
   --serif:'Source Serif 4',Georgia,serif;
-  --mono:'DM Mono',ui-monospace,monospace;
-  --w:1220px;
+  --mono:'FauxCRA Mono','FauxCRA','DM Mono',ui-monospace,'SFMono-Regular',Consolas,monospace;
+  --w:1080px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -53,7 +58,7 @@ a{color:inherit;text-decoration:none}
 .site-top-back{display:inline-flex;align-items:center;gap:.4em;font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;transition:color .15s}
 .site-top-back:hover{color:var(--accent)}
 /* Inline text nav — visible on desktop, swapped for the menu button on mobile */
-.site-top-nav{display:flex;align-items:center;flex:1;gap:22px;margin-left:6px;flex-wrap:wrap}
+.site-top-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
 .site-top-nav a{font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
 .site-top-nav a:hover{color:var(--ink)}
 .site-top-nav a.is-active{color:var(--accent);border-color:var(--accent)}
@@ -224,7 +229,9 @@ a{color:inherit;text-decoration:none}
   .lexcard:nth-child(2n){border-right:none}
 }
 /* mobile — tighten the menu bar */
-@media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}.site-top-nav{display:none}.site-top-toggle{display:inline-flex}}
+/* Below 1080 the 9-item inline nav can't fit alongside Back + Subscribe — use the menu button */
+@media(max-width:1080px){.site-top-nav{display:none}.site-top-toggle{display:inline-flex}}
+@media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}}
 @media(max-width:620px){
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
@@ -445,7 +452,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(2)</span></h3>
       <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/143rd-edition-token-wisdom-week-03.html">143th Edition</a></span><span class="tp-meta">W03 · Jan 18, 2026</span></div><div class="term-post"><span class="tp-title"><a href="../posts/122nd-edition-token-wisdom-week-34.html">122th Edition</a></span><span class="tp-meta">W34 · Aug 24, 2025</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="ai.html">AI <span>2</span></a><a class="lex-chip" href="entropy.html">Entropy <span>2</span></a><a class="lex-chip" href="swarm-intelligence-applications.html">Swarm Intelligence Applications <span>1</span></a><a class="lex-chip" href="ru1.html">RU1 <span>1</span></a><a class="lex-chip" href="information-theory-advancements.html">Information Theory Advancements <span>1</span></a><a class="lex-chip" href="entrepreneurship.html">Entrepreneurship <span>1</span></a><a class="lex-chip" href="democratic-systems.html">Democratic Systems <span>1</span></a><a class="lex-chip" href="resource-management-simulation.html">Resource Management Simulation <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="ai.html">AI <span>2</span></a><a class="lex-chip" href="entropy.html">Entropy <span>2</span></a><a class="lex-chip" href="ultrathin-semiconductor-manufacturing.html">Ultrathin Semiconductor Manufacturing <span>1</span></a><a class="lex-chip" href="democratic-systems.html">Democratic Systems <span>1</span></a><a class="lex-chip" href="llm.html">LLM <span>1</span></a><a class="lex-chip" href="systems-thinking.html">Systems Thinking <span>1</span></a><a class="lex-chip" href="ai-in-consulting.html">AI in Consulting <span>1</span></a><a class="lex-chip" href="swarm-intelligence.html">Swarm Intelligence <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>

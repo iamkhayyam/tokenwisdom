@@ -139,10 +139,10 @@ img { max-width: 100%; height: auto; }
   color: var(--ink-muted); white-space: nowrap; transition: color 0.15s;
 }
 .site-top-back:hover { color: var(--accent); }
-/* Inline text nav — visible on desktop, swapped for the menu button on mobile */
+/* Inline text nav — visible on desktop, swapped for the menu button below 1080 */
 .site-top-nav {
   display: flex; align-items: center; flex: 1;
-  gap: 22px; margin-left: 6px; flex-wrap: wrap;
+  gap: 16px; margin-left: 6px; flex-wrap: wrap;
 }
 /* Menu button — opens the full-page takeover on mobile only */
 .site-top-toggle {
@@ -1384,11 +1384,13 @@ img { max-width: 100%; height: auto; }
   .archive-item { grid-template-columns: 90px 1fr; }
   .archive-item .tag { grid-column: 2; justify-self: start; margin-top: 2px; }
 }
-/* ---------- MOBILE — swap inline nav for the menu button ---------- */
-@media (max-width: 860px) {
-  .site-top-inner { padding: 10px 16px; gap: 14px; }
+/* ---------- Below 1080: swap inline nav for the menu button ---------- */
+@media (max-width: 1080px) {
   .site-top-nav { display: none; }
   .site-top-toggle { display: inline-flex; }
+}
+@media (max-width: 860px) {
+  .site-top-inner { padding: 10px 16px; gap: 14px; }
 }
 @media (max-width: 600px) {
   body { font-size: 17px; }
