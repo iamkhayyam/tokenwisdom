@@ -78,13 +78,23 @@ top_tags = sorted(public_tags, key=lambda t: len(tag_to_posts.get(t["slug"], [])
 
 lex = json.load(open(BACKUP / "data" / "lexicon.json"))
 lex_by_name = {t["name"]: t for t in lex["terms"]}
-feature_terms = [n for n in ["Constitutional Forcing", "Substrate Failure", "Spiralism",
-                             "Cognitive Sovereignty", "Quantum Computing"] if n in lex_by_name][:4]
+# Pick 4 terms by edition frequency, rotating by ISO week so they change each build
+_lex_pool = sorted(
+    [t for t in lex["terms"] if t.get("edition_count", 0) >= 2 and len(t["name"]) > 5 and t.get("definition")],
+    key=lambda t: t.get("edition_count", 0), reverse=True
+)[:40]
+from datetime import datetime as _dt
+_offset = _dt.now().isocalendar()[1] % max(len(_lex_pool) - 3, 1)
+feature_terms = [t["name"] for t in _lex_pool[_offset:_offset + 4]]
 
 # Podcast — each week ships an A/B pair: •A• is the essay dive, •B• is the edition
 # dive. Surface the most recent of each (matched to the featured week when present).
 import re as _re
-_ch, _eps = gs.parse_podcast(gs.fetch_podcast_feed())
+# Read the cached feed deterministically (generate_site refreshes the cache in its
+# podcast step before building the homepage). Avoids a flaky import-time network
+# fetch that could yield 0 episodes for a given build.
+_feed = gs.PODCAST_CACHE.read_bytes() if gs.PODCAST_CACHE.exists() else gs.fetch_podcast_feed()
+_ch, _eps = gs.parse_podcast(_feed)
 
 
 def _find_ep(marker, week=None):
@@ -478,11 +488,15 @@ a{color:inherit;text-decoration:none}
 .list-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 
 /* topics */
-.topics{display:flex;flex-wrap:wrap;gap:.6rem}
-.topic{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;padding:.55em .85em;border:1px solid var(--rule);color:var(--ink);display:inline-flex;align-items:center;gap:.55em;transition:border-color .15s,color .15s}
-.topic span{color:var(--ink-faint);font-size:.9em}
-.topic:hover{border-color:var(--accent);color:var(--accent)}
-.topic:hover span{color:var(--accent)}
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem 1.2rem}
+.topic-card{display:block}
+.tc-figure{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface)}
+.tc-figure img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
+.topic-card:hover .tc-figure img{transform:scale(1.06)}
+.tc-count{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;padding:.4em .6em}
+.tc-name{font-family:var(--display);font-weight:var(--display-weight);font-size:1.2rem;line-height:1.08;letter-spacing:-.01em;margin-top:.65rem;color:var(--ink)}
+.topic-card:hover .tc-name{color:var(--accent)}
+@media(max-width:820px){.topic-grid{grid-template-columns:1fr 1fr}}
 
 /* lexicon strip */
 .block-lex{background:var(--surface);margin:0 -100vw;padding-left:100vw;padding-right:100vw}
