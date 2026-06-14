@@ -287,14 +287,22 @@ def render_recent():
 
 
 def render_topics():
-    chips = "".join(
-        f'<a class="topic" href="tags/{t["slug"]}.html">{e(t["name"])}<span>{len(tag_to_posts.get(t["slug"],[]))}</span></a>'
-        for t in top_tags)
+    cards = ""
+    for t in top_tags[:8]:
+        n = len(tag_to_posts.get(t["slug"], []))
+        fig = t.get("feature_image") or ""
+        figure = f'<img src="{e(fig)}" alt="" loading="lazy">' if fig else ""
+        cards += f"""
+    <a class="topic-card" href="tags/{t['slug']}.html">
+      <div class="tc-figure">{figure}<span class="tc-count">{n}</span></div>
+      <div class="tc-name">{e(t['name'])}</div>
+    </a>"""
     return f"""
 <section class="block">
   <div class="rule-head"><h2 class="rule-label">Browse by Idea</h2>
-    <a class="rule-meta linky" href="tags/index.html">All topics &rarr;</a></div>
-  <div class="topics">{chips}</div>
+    <a class="rule-meta linky" href="tags/index.html">All {len(top_tags)} topics &rarr;</a></div>
+  <div class="topic-grid">{cards}
+  </div>
 </section>"""
 
 
@@ -451,7 +459,7 @@ a{color:inherit;text-decoration:none}
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
 .recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
-.story-wrap .player-rail{margin-top:.9rem;margin-bottom:0}
+.story-wrap .player-rail{margin-top:auto;padding-top:.9rem;margin-bottom:0}
 .pairlink{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);align-self:flex-start;margin-top:.7rem;border-bottom:1px solid transparent;transition:border-color .15s}
 .pairlink:hover{border-color:var(--accent)}
 .story-figure{aspect-ratio:16/10;overflow:hidden;background:var(--surface);margin-bottom:14px}
