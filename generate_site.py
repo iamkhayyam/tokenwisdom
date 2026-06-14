@@ -1977,22 +1977,19 @@ def head_tag(title, favicon_path="assets/crystal-ball.svg"):
 
 
 def site_top(from_dir="root"):
+    from tw_theme import NAV
     prefix = "" if from_dir == "root" else "../"
     orb = f'<img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb">'
+    nav_links = "\n      ".join(
+        f'<a href="{prefix}{href}">{label}</a>'
+        for _, label, href in NAV
+    )
     return f"""
 <header class="site-top">
   <div class="site-top-inner">
     <a href="{prefix}index.html" class="site-top-mark" aria-label="Token Wisdom — home">{orb}</a>
     <nav class="site-top-nav">
-      <a href="{prefix}archive.html">Archive</a>
-      <a href="{prefix}tags/index.html">Topics</a>
-      <a href="{prefix}lexicon/index.html">Lexicon</a>
-      <a href="{prefix}links/index.html">Links</a>
-      <a href="{prefix}tags/a-closer-look.html">Essays</a>
-      <a href="{prefix}tags/worthafortune.html">Newsletters</a>
-      <a href="{prefix}podcast.html">Podcast</a>
-      <a href="{prefix}metrics.html">Report</a>
-      <a href="{prefix}about/index.html">About</a>
+      {nav_links}
     </nav>
     <a class="site-top-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
   </div>

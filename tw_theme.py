@@ -344,22 +344,23 @@ SEARCH_JS = r'''
 
 GHOST_URL = "https://tokenwisdom.ghost.io"
 
-_NAV = [
-    ("archive", "Archive", "archive.html"),
-    ("topics", "Topics", "tags/index.html"),
-    ("lexicon", "Lexicon", "lexicon/index.html"),
-    ("links", "Links", "links/index.html"),
-    ("essays", "Essays", "tags/a-closer-look.html"),
+NAV = [
+    ("archive",     "Archive",     "archive.html"),
+    ("topics",      "Topics",      "tags/index.html"),
+    ("lexicon",     "Lexicon",     "lexicon/index.html"),
+    ("links",       "Links",       "links/index.html"),
+    ("essays",      "Essays",      "tags/a-closer-look.html"),
     ("newsletters", "Newsletters", "tags/worthafortune.html"),
-    ("podcast", "Podcast", "podcast.html"),
-    ("about", "About", "about/index.html"),
+    ("podcast",     "Podcast",     "podcast.html"),
+    ("report",      "Report",      "metrics.html"),
+    ("about",       "About",       "about/index.html"),
 ]
 
 
 def masthead(prefix="", active=""):
     nav = "".join(
         f'<a class="{("is-active" if active==k else "")}" href="{prefix}{href}">{label}</a>'
-        for k, label, href in _NAV)
+        for k, label, href in NAV)
     return f"""
 <div class="nameplate">
   <div class="np-inner">

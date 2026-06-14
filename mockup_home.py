@@ -15,6 +15,7 @@ import re as _re
 from pathlib import Path
 import generate_site as gs
 import lexicon as lx
+import tw_theme
 
 BACKUP = Path(__file__).parent
 DOCS = BACKUP / "docs"
@@ -426,15 +427,7 @@ def render_masthead():
   <div class="mast-inner">
     <a class="mast-mark" href="index.html" aria-label="Token Wisdom — home"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"></a>
     <nav class="mast-nav">
-      <a href="archive.html">Archive</a>
-      <a href="tags/index.html">Topics</a>
-      <a class="is-active" href="lexicon/index.html">Lexicon</a>
-      <a href="links/index.html">Links</a>
-      <a href="tags/a-closer-look.html">Essays</a>
-      <a href="tags/worthafortune.html">Newsletters</a>
-      <a href="podcast.html">Podcast</a>
-      <a href="metrics.html">Report</a>
-      <a href="about/index.html">About</a>
+      {''.join(f'<a href="{href}">{label}</a>' for _, label, href in tw_theme.NAV)}
     </nav>
     <a class="mast-sub" href="{gs.GHOST_URL}/subscribe">Subscribe</a>
   </div>
