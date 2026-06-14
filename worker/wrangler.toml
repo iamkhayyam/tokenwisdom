@@ -5,14 +5,14 @@ compatibility_date = "2024-11-01"
 # Origin Express API (Railway). Override per-environment as needed.
 [vars]
 ORIGIN = "https://token-wisdom-api.up.railway.app"
-ALLOWED_ORIGIN = "https://tokenwisdom.ai"
+ALLOWED_ORIGIN = "https://tokenwisdom.pages.dev"
 
 # Rate-limit counters. Create with:
 #   wrangler kv namespace create RL
 # then paste the returned id below.
 [[kv_namespaces]]
 binding = "RL"
-id = "REPLACE_WITH_KV_NAMESPACE_ID"
+id = "5284f671271d437cb3ce7d6165279893"
 
 # Shared secret the origin checks (X-Edge-Secret). Set with:
 #   wrangler secret put EDGE_SHARED_SECRET
