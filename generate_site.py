@@ -1578,6 +1578,230 @@ img { max-width: 100%; height: auto; }
   .post-nav .pn-next { text-align: left; }
   .home-masthead-title { letter-spacing: -.03em; }
 }
+
+/* ============================================================ */
+/* LEXICON                                                      */
+/* ============================================================ */
+.lex-header { max-width: var(--max-wide); }
+.lex-chips { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 1.4rem; }
+.lex-chip {
+  font-family: var(--mono);
+  font-size: .64rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: .42em .7em;
+  border: 0.5px solid var(--paper-rule);
+  border-radius: 2px;
+  background: var(--paper);
+  color: var(--ink-muted);
+  display: inline-flex; align-items: center; gap: .5em;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
+}
+.lex-chip span {
+  font-size: .9em; color: var(--ink-faint);
+  border-left: 0.5px solid var(--paper-rule); padding-left: .5em;
+}
+.lex-chip:hover { color: var(--ink); }
+.lex-chip-accent:hover { border-color: var(--accent); color: var(--accent); }
+.lex-chip-teal:hover   { border-color: var(--teal);   color: var(--teal); }
+.lex-chip-gold:hover   { border-color: var(--gold);   color: var(--gold); }
+
+.lex-wrap { max-width: var(--max-wide); margin: 0 auto; padding: 2.5rem 24px 4rem; }
+.lex-cat { margin-bottom: 3.5rem; scroll-margin-top: 70px; }
+.lex-cat-head {
+  display: flex; align-items: baseline; gap: 1rem;
+  border-top: 2px solid var(--ink);
+  padding-top: .8rem; margin-bottom: 1.6rem;
+}
+.lex-cat-head h2 {
+  font-family: var(--display); font-style: italic;
+  font-size: 1.7rem; font-weight: 700; color: var(--ink);
+}
+.lex-bar-accent { border-top-color: var(--accent); }
+.lex-bar-teal   { border-top-color: var(--teal); }
+.lex-bar-gold   { border-top-color: var(--gold); }
+.lex-cat-count {
+  font-family: var(--mono); font-size: .66rem; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ink-faint); margin-left: auto;
+}
+.lex-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.lex-row {
+  display: grid;
+  grid-template-columns: 1fr 130px;
+  grid-template-areas: "head spark" "def spark";
+  gap: .15rem 1rem;
+  align-items: start;
+  padding: 1.1rem 1.2rem;
+  border-bottom: 0.5px solid var(--paper-rule);
+  border-right: 0.5px solid var(--paper-rule);
+}
+.lex-grid .lex-row:nth-child(odd) { border-left: 0.5px solid var(--paper-rule); }
+.lex-row:hover { background: var(--paper-warm); }
+.lex-row-head { grid-area: head; display: flex; flex-direction: column; gap: .15rem; }
+.lex-term {
+  font-family: var(--display); font-weight: 700; font-size: 1.18rem;
+  color: var(--ink); line-height: 1.15;
+}
+.lex-row:hover .lex-term { color: var(--accent); }
+.lex-count {
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+.lex-row-def {
+  grid-area: def; font-family: var(--serif); font-size: .92rem;
+  line-height: 1.5; color: var(--ink-muted); margin-top: .3rem;
+}
+.lex-row-spark { grid-area: spark; align-self: center; }
+.spark { display: block; width: 100%; height: auto; opacity: .9; }
+
+/* search + filter */
+.lex-search {
+  width: 100%; margin-top: 1.4rem; padding: .85rem 1rem;
+  font-family: var(--mono); font-size: .8rem; letter-spacing: .02em;
+  color: var(--ink); background: var(--paper);
+  border: 0.5px solid var(--ink); border-radius: 2px;
+}
+.lex-search:focus { outline: none; border-color: var(--accent); }
+.lex-search::placeholder { color: var(--ink-faint); }
+.lex-noresults { font-family: var(--mono); font-size: .8rem; color: var(--ink-faint); margin-top: 1rem; }
+
+/* core vocabulary hero */
+.lex-core { margin-bottom: 3.5rem; }
+
+/* compact category listing */
+.lex-badge {
+  font-family: var(--mono); font-size: .62em; color: var(--accent);
+  vertical-align: super; margin-left: .35em; letter-spacing: 0;
+}
+.lex-lines { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+.lex-line {
+  display: grid; grid-template-columns: minmax(140px, 38%) 1fr; gap: 1rem;
+  align-items: baseline; padding: .7rem 1.1rem;
+  border-bottom: 0.5px solid var(--paper-rule); border-right: 0.5px solid var(--paper-rule);
+}
+.lex-lines .lex-line:nth-child(odd) { border-left: 0.5px solid var(--paper-rule); }
+.lex-line:hover { background: var(--paper-warm); }
+.lex-line-term { font-family: var(--display); font-weight: 700; font-size: 1.02rem; color: var(--ink); line-height: 1.2; }
+.lex-line:hover .lex-line-term { color: var(--accent); }
+.lex-line-def { font-family: var(--serif); font-size: .85rem; line-height: 1.45; color: var(--ink-muted); }
+
+/* definition history */
+.def-history { list-style: none; margin: 0; }
+.def-history li {
+  font-family: var(--serif); font-size: .95rem; line-height: 1.55; color: var(--ink-muted);
+  padding: .7rem 0; border-bottom: 0.5px solid var(--paper-rule);
+}
+.dh-ed {
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--accent); margin-right: .7em;
+}
+
+.lex-soon {
+  margin-top: 2rem; padding: 1.8rem 2rem;
+  background: var(--paper-warm); border: 0.5px solid var(--paper-rule);
+}
+.lex-soon h3 {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: .8rem;
+}
+.lex-soon p { font-family: var(--serif); color: var(--ink-muted); margin-bottom: .8rem; }
+.lex-soon ul { margin: 0 0 0 1.2rem; }
+.lex-soon li { font-family: var(--serif); color: var(--ink); margin-bottom: .5rem; line-height: 1.5; }
+.lex-soon strong { color: var(--ink); }
+
+/* ---------- TERM PAGE ---------- */
+.term-page { max-width: var(--max-wide); margin: 0 auto; padding: 2.6rem 24px 1rem; }
+.term-eyebrow {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .18em;
+  text-transform: uppercase; margin-bottom: .8rem;
+}
+.lex-text-accent { color: var(--accent); }
+.lex-text-teal   { color: var(--teal); }
+.lex-text-gold   { color: var(--gold); }
+.term-title {
+  font-family: var(--display); font-weight: 700; font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.02; letter-spacing: -.02em; color: var(--ink); margin-bottom: 1.2rem;
+}
+.term-def {
+  font-family: var(--display); font-style: italic; font-weight: 400;
+  font-size: clamp(1.3rem, 3vw, 1.7rem); line-height: 1.4;
+  color: var(--ink); max-width: 820px; margin-bottom: .7rem;
+}
+.term-def-src {
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .04em;
+  color: var(--ink-faint); margin-bottom: 2.2rem;
+}
+.term-def-src a { color: var(--ink-muted); border-bottom: 1px solid var(--paper-rule); }
+.term-def-src a:hover { color: var(--accent); }
+.term-def-gloss { font-style: italic; }
+
+.term-stats {
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  border-top: 2px solid var(--ink); border-bottom: 0.5px solid var(--paper-rule);
+  margin-bottom: 3rem;
+}
+.term-stat { padding: 1.1rem 0; border-right: 0.5px solid var(--paper-rule); }
+.term-stat:last-child { border-right: none; }
+.ts-num {
+  display: block; font-family: var(--display); font-weight: 700;
+  font-size: 1.5rem; color: var(--ink); line-height: 1;
+}
+.ts-lbl {
+  display: block; font-family: var(--mono); font-size: .58rem;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint); margin-top: .4rem;
+}
+
+.term-section { margin-bottom: 2.8rem; }
+.term-h3 {
+  font-family: var(--display); font-style: italic; font-weight: 700;
+  font-size: 1.4rem; color: var(--ink); margin-bottom: .5rem;
+}
+.term-h3-count { font-family: var(--mono); font-style: normal; font-size: .8rem; color: var(--ink-faint); }
+.term-arc-note { font-family: var(--serif); color: var(--ink-muted); font-size: .95rem; margin-bottom: 1.2rem; max-width: 680px; }
+.term-arc-note a { color: var(--accent); border-bottom: 1px solid var(--accent-muted); }
+
+.bar-timeline {
+  display: flex; align-items: flex-end; gap: 2px;
+  height: var(--bt-h, 120px);
+  border-bottom: 0.5px solid var(--ink);
+  padding-bottom: 0;
+}
+.bt-col { display: flex; align-items: flex-end; justify-content: center; height: 100%; }
+.bt-bar { width: 70%; min-height: 1px; opacity: .82; transition: opacity .15s ease; border-radius: 1px 1px 0 0; }
+.bt-col:hover .bt-bar { opacity: 1; }
+
+.term-body { display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
+.term-posts { display: flex; flex-direction: column; }
+.term-post {
+  display: flex; justify-content: space-between; align-items: baseline; gap: 1rem;
+  padding: .7rem 0; border-bottom: 0.5px solid var(--paper-rule);
+}
+.term-post:hover { color: var(--accent); }
+.tp-title { font-family: var(--serif); font-size: 1rem; color: inherit; }
+.tp-meta {
+  font-family: var(--mono); font-size: .6rem; letter-spacing: .08em;
+  text-transform: uppercase; color: var(--ink-faint); white-space: nowrap; flex-shrink: 0;
+}
+.term-more { font-family: var(--mono); font-size: .66rem; color: var(--ink-faint); margin-top: .8rem; letter-spacing: .1em; }
+.term-side { position: sticky; top: 70px; }
+.term-side-block { margin-bottom: 1.8rem; }
+.term-side-block h4 {
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .16em;
+  text-transform: uppercase; color: var(--ink-muted); margin-bottom: .7rem;
+}
+.term-back { font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; color: var(--accent); }
+
+@media (max-width: 820px) {
+  .lex-grid { grid-template-columns: 1fr; }
+  .lex-grid .lex-row { border-left: 0.5px solid var(--paper-rule); }
+  .lex-lines { grid-template-columns: 1fr; }
+  .lex-lines .lex-line { border-left: 0.5px solid var(--paper-rule); grid-template-columns: 1fr; gap: .2rem; }
+  .term-body { grid-template-columns: 1fr; gap: 2rem; }
+  .term-side { position: static; }
+  .term-stats { grid-template-columns: 1fr 1fr; }
+  .term-stat:nth-child(2) { border-right: none; }
+  .term-stat:nth-child(1), .term-stat:nth-child(2) { border-bottom: 0.5px solid var(--paper-rule); }
+}
 """
 
 
@@ -1620,6 +1844,7 @@ def site_top(from_dir="root"):
       <a href="{prefix}index.html">Home</a>
       <a href="{prefix}archive.html">Archive</a>
       <a href="{prefix}tags/index.html">Topics</a>
+      <a href="{prefix}lexicon/index.html">Lexicon</a>
       <a href="{prefix}tags/a-closer-look.html">Essays</a>
       <a href="{prefix}tags/worthafortune.html">Newsletters</a>
       <a href="{prefix}podcast.html">Podcast</a>
@@ -1652,6 +1877,7 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
         <li><a href="{prefix}index.html">Home</a></li>
         <li><a href="{prefix}archive.html">Archive</a></li>
         <li><a href="{prefix}tags/index.html">All Topics</a></li>
+        <li><a href="{prefix}lexicon/index.html">The Lexicon</a></li>
         <li><a href="{prefix}tags/a-closer-look.html">Essays</a></li>
         <li><a href="{prefix}tags/worthafortune.html">Newsletters</a></li>
         <li><a href="{prefix}podcast.html">Podcast</a></li>
@@ -2543,6 +2769,29 @@ def main():
     # Tags index
     with open(DOCS_DIR / "tags" / "index.html", "w") as f:
         f.write(render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, top_tags))
+
+    # The Lexicon — living glossary built from the corpus
+    print("Lexicon…")
+    import lexicon
+    lex_ctx = {
+        "posts_count": posts_count, "tags_count": tags_count,
+        "years_span": years_span, "top_tags": top_tags,
+        "now": datetime.now().strftime("%Y-%m-%d"),
+    }
+    lexicon.build(posts, lex_ctx, __import__("sys").modules[__name__])
+
+    # Homepage (redesigned) — overrides the index.html written above.
+    # Self-contained doc (own fonts/CSS) so it doesn't clash with the legacy
+    # chrome the other pages still use; assets are copied into docs/assets/.
+    print("Homepage (v2)…")
+    assets_dir = DOCS_DIR / "assets"
+    assets_dir.mkdir(exist_ok=True)
+    for asset in ("crystal-ball.svg", "fortune_teller.gif"):
+        src_asset = BACKUP_DIR / "images" / asset
+        if src_asset.exists():
+            shutil.copy(src_asset, assets_dir / asset)
+    import mockup_home
+    mockup_home.build("index.html")
 
     # .nojekyll
     with open(DOCS_DIR / ".nojekyll", "w") as f:
