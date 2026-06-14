@@ -1,0 +1,159 @@
+id,title,note,excerpt,url,tags,created,cover,highlights,favorite
+1165129383,McDonald's Warning Stuns USA/Customers,,"🚑 Chapter Medicare Advisers: http://askchapter.org/azul (affiliate link)
+📊 Boldin/New Retirement: https://go.boldin.com/azul (affiliate link)
+🔥 Azul's Newsletter:  https://www.azulwells.com/
+❓ Ask Azul a question ➡  https://forms.gle/85rVsosyqb4XikVB6
+
+💲 NEED FINANCIAL ADVICE? 💲
+1) Google ""fee-only financial adviser"" or visit www.NAPFA.org (largest association of fee-only financial advisers). NOT an affiliate link
+2) The first question to ask any financial adviser is, ""Are you a fiduciary to me 100% of the time"". Get the answer in writing
+3) Please note that some people call themselves ""fee-based"". This is NOT the same as fee-only. Fee-only advisers have committed to being fiduciary to you 100% of the time.  
+4) Personally, I would only hire an adviser who is a fiduciary to me 100% of the time. This is not a suggestion on what you should do. Just sharing my personal preference.
+
+⚠️ Azul's ""Scammer"" Warning ➡ PLEASE READ! ⚠️
+Be careful of scammers. In the comments section, I will NEVER ask you to contact me, offer any investment products, recommend a stock broker, or anything similar. Some scam bot commenters 'ask' for investment help, and later, other comment bots reply with ""how great X idea/investment/person is"" in the replies. These are scam threads. Do not fall for them. 
+
+🚨 Azul's VIDEOS ARE NOT FINANCIAL ADVICE (Disclaimer) 🚨
+This information is only provided as an informational resource and should not be viewed as investment advice or recommendations. To get professional financial advice from a fee-only financial advisor near you, please visit www.napfa.org.
+
+The decisions on how to invest, when to retire, and other financial planning topics are some of the most important financial decisions you will make in your life. I urge you to seek professional financial advice as you make this decision. Ideally, from a financial adviser, AND a CPA AND an attorney. Having the perspective of all three professions will help you make the right decision for you and your family.
+
+This information is being presented without consideration of the investment objectives, risk tolerance, or financial circumstances of any specific investor and may NOT be suitable for all investors. 
+
+This information is NOT intended to, and should NOT, form a primary basis for any investment decision that you may make. Always consult your own legal, tax, and/or investment advisor before making any investment/tax/estate/financial planning considerations or decisions.
+
+Spoiler Alert: There are no ""get rich"" programs. Rather, just basic blocking & tackling and putting in time and care.  Do your homework, choose wisely and (IMHO) work with experienced professionals who are fiduciary to you 100% of the time.
+
+*649 McDonald's Warning Stuns USA/Customers",https://www.youtube.com/watch?v=nOuuJ9Rls7s&t=25s,,2025-06-14T20:35:54.996Z,https://i.ytimg.com/vi/nOuuJ9Rls7s/maxresdefault.jpg,,false.js
+1163616947,"He Finally Broke Silence, AI Situation is Worse Than We Thought!",,"This video dives into the recent statements by Ilya Sutskever, former chief AI scientist at OpenAI, regarding his concerns about artificial general intellige...",https://youtu.be/tdxAi8pt-yU?si=De2dL2s5u97rRVhT,,2025-06-14T06:05:54.141Z,https://i.ytimg.com/vi/tdxAi8pt-yU/maxresdefault.jpg,,false.js
+1162491716,The Truth About Burning Waymos,,"Over the past week tech people, right wing figures and the media have been freaking out about Waymos being set on fire in downtown Los Angeles. The Waymos were burned during last weekend’s protests against ICE. 
+
+A lot of people online seem deeply confused about the burnings of the cars. So, I'm going to break down why there's so much anti-Waymo sentiment, the rise of surveillance technology at protests, and how it all affects free speech. 
+
+***** Buy a subscription to my Tech and Online Culture newsletter, User Magazine to support my work!! 🙏 https://www.usermag.co ***** 
+
+Subscribe to my newsletter: ⁠⁠https://www.usermag.co⁠⁠
+https://www.instagram.com/taylorlorenz 
+https://www.instagram.com/taylorlorenz3.0 
+https://www.tiktok.com/@taylorlorenz
+https://bsky.app/profile/taylorlorenz.bsky.social
+
+
+
+
+#tech #technology #selfdrivecars #cars #automobile #auto #selfdriving #google #waymo #tesla #elon #elonmusk #musk",https://www.youtube.com/watch?v=pTOPOinAy_I,,2025-06-13T17:32:10.491Z,https://i.ytimg.com/vi/pTOPOinAy_I/maxresdefault.jpg,,false.js
+1161146799,The trick that solves Rubik’s Cubes and breaks ciphers,,"What do the Rubik's cube and a cipher from the 70s have in common? Let's find out.
+
+Our Patreon: https://www.patreon.com/Polylog
+
+0:00 Rubik's cube
+9:40 DES
+
+------------------------
+Links:
+
+Feliks setting the 4.73 record
+https://www.youtube.com/watch?v=R07JiT0PlcE&ab_channel=FeliksZemdegs
+
+webpage ""God's number is 20"" 
+http://www.cube20.org/
+The fact it was verified computationally that every cube can be solved in at most 20 moves is super impressive and much more complicated than the problem of solving just one cube that we covered in this video!
+
+Four degrees of separation on Facebook
+https://arxiv.org/pdf/1111.4570.pdf
+
+Code:
+https://github.com/polylog-cs/rubiks-cube-video/blob/main/code/rubik_mitm_solution.cpp
+
+
+------------------------
+Fill in the gaps:
+
+Convince yourself that the meet in the middle algorithm finds the shortest path!
+
+Convince yourself that the meet in the middle algorithm for Rubik's cube does not need to know that every cube can be solved in 20 steps. 
+
+------------------------
+Real Algorithms:
+
+The first algorithms solving a random scramble like Korf's algorithm
+https://www.cs.princeton.edu/courses/archive/fall06/cos402/papers/korfrubik.pdf
+work roughly as follows:
+
+First, although there are around 10^20 possible cube configurations, if you focus on just the possible configurations of 8 corner cubies, the number of possibilities drops to around 10^8. Using breadth first search, you can precompute for each such configuration of corner cubies how many steps you need to put them into the correct position. You need at least that many steps to solve the full cube configuration, probably even more as you need to solve not just the corners but also the edges. 
+
+You can now iterate a breadth first search from your scrambled cube, each time looking into further distance from it. For each cube you look up in your table of size 10^8 to find how many steps, at least, are needed to finish the search. If it is more than the current maximum distance you are looking at, you stop searching, as you can be sure you will not find the solved cube in this branch of the breadth first search. 
+
+This approach is similar to the meet in the middle algorithm in that we first precompute some information from the solved cube and then run breadth first search from the scrambled cube. However, now you need much less memory. 
+
+The actual state of the art algorithms are more complicated than that. You can read more about it e.g. here. 
+https://en.wikipedia.org/wiki/Optimal_solutions_for_Rubik%27s_Cube
+
+------------------------
+More Connections:
+
+The meet in the middle trick is also called ""bidirectional search"" in the context of searching graphs. 
+https://en.wikipedia.org/wiki/Bidirectional_search
+
+Computing the exact number of states of a Rubik's cube (we used it is around 10^20) is not so hard. 
+https://www.youtube.com/watch?v=z2-d0x_qxSM&ab_channel=JPerm
+
+The graphs where the number of nodes in your distance grows exponentially are pretty important in computer science. For example, there are scale-free networks and expander graphs. 
+https://en.wikipedia.org/wiki/Scale-free_network
+https://en.wikipedia.org/wiki/Expander_graph
+
+Triple DES is kind of a hack made to prolong the life of the DES cipher when it became apparent that it is not strong enough. However, because of the meet in the middle attack, its ""security level"" is only 2*56 bits and not 3*56 bits as one would naively expect. But you still need to apply DES three times. So you can guess it is not the most efficient way of doing the encryption; it is now superseded by the so-called AES standard. 
+https://en.wikipedia.org/wiki/Advanced_Encryption_Standard
+
+------------------------
+Riddles:
+
+If you like to solve algorithmic puzzles, here you can find more algorithmic problems that can be solved with this technique:
+https://www.youtube.com/watch?v=18sJ3mK173s&ab_channel=Errichto2
+https://wiki.algo.is/Meet-in-the-middle
+
+Try to prove, just with pen, paper and calculator that there is a cube for which at least 16 moves are needed to solve it. 
+
+Try to convince yourself that by blind search of the cube graph you cannot beat the sqrt(N) time, at least if you do not use anything else than that the graph ""looks random"". Hint: Birthday paradox
+
+------------------------
+Attributions:
+
+To make this video, we used manim, a Python library: 
+https://docs.manim.community/en/stable/
+
+The color palette we use: 
+https://ethanschoonover.com/solarized/
+
+Photo of Grant Sanderson:
+https://www.youtube.com/c/grantsanderson
+
+Thumbnail: Alžběta Volhejnová",https://www.youtube.com/watch?v=wL3uWO-KLUE,,2025-06-13T01:13:53.583Z,https://i.ytimg.com/vi/wL3uWO-KLUE/maxresdefault.jpg,,false.js
+1160618754,Palantir EXPOSED: The New Deep State,,"This is a clip from our show SYSTEM UPDATE, now airing every weeknight at 7pm ET on Rumble. You can watch the full episode for FREE here: https://rumble.com/...",https://www.youtube.com/watch?v=JypG_o7HWT0,,2025-06-12T18:53:38.939Z,https://i.ytimg.com/vi/JypG_o7HWT0/maxresdefault.jpg,,false.js
+1160584625,How Companies Sidestep Protections to Spy on You,,"Episode 228: Meta & Yandex skirt around Android's sandboxing to violate your privacy even further, Apple turned over thousands of push notification data requ...",https://www.youtube.com/watch?v=I1Setcl0Gd0,,2025-06-12T18:01:48.428Z,https://i.ytimg.com/vi/I1Setcl0Gd0/maxresdefault.jpg,,false.js
+1159331436,Farmers Close Down Production In U.S. As Agricultural Crisis Accelerates,,"What we're witnessing isn't just another agricultural downturn – it's the systematic collapse of the most powerful food production system the world has ever known. From the cornfields of Iowa to the wheat plains of Kansas, from the soybean farms of Illinois to the cattle ranches of Texas, American farmers are making a decision that will shake the global food supply to its core: they're shutting down.
+This isn't a strike. This isn't a protest. This is survival. And the consequences are already rippling through every grocery store, every restaurant, every dinner table in America and beyond.
+
+Three weeks ago, what started as routine border inspections became the spark that ignited a powder keg decades in the making. At the Laredo and Nogales border crossings, over 140 John Deere tractors and harvesting machines sat baking under the scorching sun – not because of bureaucratic delays, but because of a calculated blockade targeting America's most iconic agricultural equipment manufacturer.
+While competitors like Case IH and Kubota sailed through with minimal delays, John Deere faced what Mexican customs officials euphemistically called ""enhanced agricultural equipment inspection protocols."" But this was no routine check. This was surgical warfare, timed perfectly to disrupt Mexico's critical planting season just weeks away.
+For farmers who had prepaid for equipment, watching their machinery trapped mere meters away across an invisible line, this wasn't just an inconvenience – it was catastrophic. In Sinaloa, Eduardo Vasquez stared helplessly at 5,000 acres of unplanted land, his fully paid $300,000 tractor unreachable across the border. Time was bleeding away, and with it, an entire season's livelihood.
+But this border blockade was just the match. The real explosives had been accumulating for years.",https://www.youtube.com/watch?v=BuogVDlkip4,,2025-06-12T08:12:13.814Z,https://i.ytimg.com/vi/BuogVDlkip4/maxresdefault.jpg,,false.js
+1159316760,Real ID Is Not About Keeping You Safe,,"With the deadline for obtaining the federal government‘s Real ID technically upon us, it‘s important to understand that this is not an irritating but necessary program to keep Americans safe. It's the latest example of the government using 9/11 as an excuse to grab more power.
+
+Read the article here: https://mises.org/mises-wire/real-id-not-about-keeping-you-safe
+
+The Mises Institute is giving away 100,000 copies of Murray Rothbard’s, What Has Government Done to Our Money? Get your free copy at https://mises.org/gabfreebook
+
+Be sure to follow the Guns and Butter podcast at https://Mises.org/GB
+
+Connor O’Keeffe produces media and content at the Mises Institute. He has a master’s in economics and a bachelor’s in geology. https://x.com/ConnorMOKeeffe",https://www.youtube.com/watch?v=zedJ5DmWdWA,,2025-06-12T07:58:42.428Z,https://i.ytimg.com/vi/zedJ5DmWdWA/maxresdefault.jpg,,false.js
+1158866816,Why I’m so Mad Right Now,,"This video is almost a real-time look at my move from anger and hopelessness into acceptance and strategic pragmatism. 
+
+This young man helped me a lot with that. Here's his video on TikTok
+https://www.tiktok.com/t/ZP8M3yD9a/
+
+And here's his video on Instagram
+https://www.instagram.com/reel/DKsXBGdJH40/?igsh=MTc2aDRhd2h0a3N4aw==
+
+Video edited by Digital Gator: http://twitch.tv/digigator",https://www.youtube.com/watch?v=9ChIo3Ubdbo,,2025-06-12T04:53:14.905Z,https://i.ytimg.com/vi/9ChIo3Ubdbo/maxresdefault.jpg,,false.js
+1154055318,From $10 Billion To Nothing: How Wish.com Lost Everything,,"Go to https://ground.news/logically for a better way to stay informed. Subscribe for 40% off unlimited access to worldwide coverage!In the 2010s, Wish ads we...",https://youtu.be/0O9okfu1hm8?si=Ak50BMZ7NGDcaOl5,,2025-06-10T15:53:08.063Z,https://i.ytimg.com/vi/0O9okfu1hm8/hqdefault.jpg,,false.js

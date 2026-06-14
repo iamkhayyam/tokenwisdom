@@ -1,0 +1,108 @@
+id,title,note,excerpt,url,tags,created,cover,highlights,favorite
+1224388378,Deniable Encryption: They Can't Prosecute What They Can't Prove,,"Standard encryption keeps your data confidential until someone puts a gun to your head or a judge threatens contempt charges. That's where deniable encryption becomes essential. This cryptographic technique allows you to hide secrets so well that you can convincingly claim they never existed in the first place.
+In this video, I break down how deniable encryption emerged in the 1990s as a defense against rubber hose cryptanalysis, the charming practice of beating encryption keys out of people. I explain how tools like VeraCrypt create hidden volumes within encrypted containers, where one password reveals tax returns and cat photos while another reveals your cryptocurrency wallets or sensitive documents. The crucial part is that advanced forensics cannot distinguish between unused disk space and hidden data.
+I cover real-world applications including the German darknet vendor who walked free in 2020 because police couldn't prove his hidden volumes existed, and how Ross Ulbricht might have avoided prison with proper deniable encryption. You'll learn about storage-based deniability through hidden volumes and communication-based deniability through protocols like Signal's double ratchet algorithm.
+Most importantly, I explain the operational security requirements for making deniable encryption actually work. Your decoy must be believable, your system must avoid leaving breadcrumbs in swap files or system logs, and you need to understand the legal landscape. Some jurisdictions like the UK can imprison you for refusing to decrypt, making deniable encryption your only viable defense.
+Whether you're a journalist in an authoritarian regime, a privacy advocate, or someone who simply believes in constitutional protections against self-incrimination, understanding deniable encryption is crucial. Because when they can't prove protected data exists, coercion loses its teeth.
+
+☆-----☆-----☆-----☆-----☆   CHAPTERS   ☆-----☆-----☆-----☆-----☆
+
+00:00 What Is Deniable Encryption and Why You Need It
+02:02 How Hidden Volumes Work: TrueCrypt and VeraCrypt
+05:16 Memory Forensics and Legal Threats to Encryption
+07:23 System Betrayals: How Your OS Exposes Hidden Data
+08:23 Real Case: German Vendor Beats Charges with Deniable Encryption
+
+#opsec #infosec #encryption #decoy #veracrypt
+
+ ☆-----☆-----☆-----☆-----☆   SOCIAL MEDIA  ☆-----☆-----☆-----☆-----☆
+
+🎙️ Podcast: https://rss.com/podcasts/darknet/
+🌐 Official Website: https://www.doingfedtime.com 
+🌐 Official Website Mirror: https://www.sambent.com
+📘 Facebook: https://www.facebook.com/TheOfficialSamBent/
+🐦 Twitter/X: https://twitter.com/DoingFedTime
+💼 LinkedIn: https://www.linkedin.com/in/sam-bent/
+📧 Email: contact@sambent.com
+📱 TikTok: https://www.facebook.com/TheOfficialSamBent/
+📚 Amazon Author Page: https://www.amazon.com/stores/Sam-Bent/author/B0BHX5V81S
+🌐 Dread (Onion Link): http://dreadytofatroptsdj6io7l3xptbet6onoyno2yv7jicoxknyazubrad.onion/d/doingfedtime
+🌐 Pitch (Onion Link): http://pitchprash4aqilfr7sbmuwve3pnkpylqwxjbj2q5o4szcfeea6d27yd.onion/@doingfedtime
+🐙 GitHub: https://github.com/DoingFedTime
+👾 Reddit (User Account): https://www.reddit.com/user/reservesteel9/
+📽️ Rumble: https://rumble.com/c/SamBent
+🛡️ Breach Forums (Onion Link): http://breached26tezcofqla4adzyn22notfqwcac7gpbrleg4usehljwkgqd.onion/User-SamBent
+📸 Instagram: https://www.instagram.com/sambentoffical/
+📌 Pinterest: https://www.pinterest.com/DoingFedTime/
+
+☆-----☆-----☆-----☆-----☆ LEGAL STUFF☆-----☆-----☆-----☆-----☆
+
+The information provided in this video is intended for educational purposes only. It is not intended to be legal or professional advice, and should not be relied upon as such. 
+
+By watching this video, you acknowledge that you understand and agree to these terms. If you disagree with these terms, do not watch this video.",https://www.youtube.com/watch?v=Ofm0xSD6nq0,,2025-07-06T17:20:48.260Z,https://i.ytimg.com/vi/Ofm0xSD6nq0/maxresdefault.jpg,,false
+1224386751,SpaceX's Military Project It Doesn't Want You to Know About - Starshield,,"Try Rocket Money for free: https://RocketMoney.com/astrum▀▀▀▀▀▀SpaceX's satellite network is quietly taking over the skies above us, but Elon Musk's space em...",https://www.youtube.com/watch?v=rKBaoB9aFFc&t=23s,,2025-07-06T17:19:14.061Z,https://i.ytimg.com/vi/rKBaoB9aFFc/maxresdefault.jpg,,false
+1224386716,Rory Sutherland - Soft Power in a Hard World | Nudgestock 2025,,"The world is becoming at best a much bossier place, and at worst the site of major oppression and coercion. Rory's opening talk will explore how in such a wo...",https://www.youtube.com/watch?v=ycEQYNrVCek&t=337s,,2025-07-06T17:19:07.677Z,https://i.ytimg.com/vi/ycEQYNrVCek/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgVChTMA8=&rs=AOn4CLDyfWUT4tL2gprQDSYucj_VzytkGg,,false
+1224386627,"If This Doesn't Alarm You, Nothing Will",,"170 people just got arrested in Germany for social media posts. From CBS banning the word “riot” to Ursula von der Leyen’s EU censorship push, it’s clear: fr...",https://www.youtube.com/watch?v=E6lvt5sNSAE&t=49s,,2025-07-06T17:18:51.680Z,https://i.ytimg.com/vi/E6lvt5sNSAE/maxresdefault.jpg,,false
+1224386603,The Observer Effect Is Not What You Think ⚡️,,Compare news coverage. Spot media bias. Avoid algorithms. Try Ground News today and get 40% off your subscription by going to  https://ground.news/joescottIn...,https://www.youtube.com/watch?v=t26CRghDFR4&t=86s,,2025-07-06T17:18:46.545Z,https://i.ytimg.com/vi/t26CRghDFR4/maxresdefault.jpg,,false
+1224386556,Piracy Is Legal Now,,https://lmg.gg/secretlablmgclipsThanks to Secretlab for being the title sponsor of LMG Clips this year! Check out their ergonomic gaming chairs at the link a...,https://www.youtube.com/watch?v=EoOQtwp0wOM,,2025-07-06T17:18:39.303Z,https://i.ytimg.com/vi/EoOQtwp0wOM/maxresdefault.jpg,,false
+1224386514,Deleted ChatGPT Logs Being Given to New York Times -- OpenAI User Data Compromised by Court Order,,Support Content at - https://donorbox.org/etcgLinkedIn at - https://www.linkedin.com/in/eli-etherton-a15362211/,https://www.youtube.com/watch?v=uUDQavFc660&t=25s,,2025-07-06T17:18:31.509Z,https://i.ytimg.com/vi/uUDQavFc660/maxresdefault.jpg,,false
+1224386367,Hold Tight Raver (2025),,"A documentary looking at the house and rave scene in Leicester in the 80's and 90's.We have no copyright clearance for archive footage or music, the film is ...",https://www.youtube.com/watch?v=LVNBncJmZ8U,,2025-07-06T17:18:18.722Z,https://i.ytimg.com/vi/LVNBncJmZ8U/maxresdefault.jpg,,false
+1218838515,It Might Be Too Late,,"Peter Thiel says the real threat isn’t AI or nuclear war — it’s one world government. In this Unpacked, I explore Thiel’s warnings, the eerie overlap with bi...",https://www.youtube.com/watch?v=hg_p8mEtM0s,youtube,2025-07-04T22:17:02.307Z,https://i.ytimg.com/vi/hg_p8mEtM0s/maxresdefault.jpg,,false
+1216483566,2025: The end of our world as we know it | Peter Leyden,,"""We're living in an extraordinary moment in history. We are at a moment here in 2025 where we have world historic game-changing technologies now starting to scale.""
+
+Subscribe to Freethink on YouTube ► https://freeth.ink/youtube-subscribe 
+Up Next ► Inside the high tech quest to decode the lost scrolls of Herculaneum https://www.youtube.com/watch?v=0DA3i69WMF4
+
+We are living through the collapse of the old world, and the quiet construction of a new one. From artificial intelligence and clean energy to bioengineering and digital governance, the core systems that defined the last century are rapidly being dismantled and replaced. But this isn’t just about technology. 
+
+According to futurist Peter Leyden, we’re at a historic turning point: One of the rare moments in American and global history when everything gets reimagined at once.
+
+0:00 An extraordinary moment in history
+1:05 Wired magazine 
+2:09 Technology adoption curve
+2:53 80 year cycles
+3:26 Post-war era
+5:08 Gilded age
+6:59 Founding era
+8:24 The arrival of AI 
+9:42 The rise of clean energy
+10:52 The rise of bioengineering
+13:45 The beginning of a shift
+
+References: 
+Article: Ziegler, M. S.; Trancik, J. E. Re-Examining Rates of Lithium-Ion Battery Technology Improvement and Cost Decline. Energy Environ. Sci. 2021, 14, 1635–1651.
+DOI: 10.1039/D0EE02681F
+URL: https://pubs.rsc.org/en/content/articlelanding/2021/ee/d0ee02681f
+Dataset: Ziegler, M. S.; Trancik, J. E., 2021, ""Data series for lithium-ion battery technologies"", https://doi.org/10.7910/DVN/9FEJ7C, Trancik Lab Dataverse, V1, UNF:6:sVT2vBwWolbQL4BxsTSDUg== [fileUNF]
+
+Watch on Freethink.com ► https://www.freethink.com/series/the-freethink-interview/peter-leyden-2025
+
+◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠
+Read more of our stories on history:
+Earth’s magnetic field supports biblical stories of destruction of ancient cities
+ ► https://www.freethink.com/culture/earth-magnetic-field-biblical-stories
+New AI translates 5,000-year-old cuneiform tablets instantly
+ ► https://www.freethink.com/robots-ai/ai-translates-cuneiform-tablets
+PhD student solves a mysterious ancient Sanskrit text algorithm after 2,500 years
+ ► https://www.freethink.com/robots-ai/ancient-sanskrit-text-algorithm-solved
+◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡
+
+Watch our original series:
+► Hard Reset: https://youtube.com/playlist?list=PLXthoedLVIdLvnNgiCshQvqKdS7T_qeGY
+► Future of Cities: https://www.youtube.com/playlist?list=PLXthoedLVIdKmJIGkk4zT4uno3ZSDqvPV
+► Just Might Work: https://youtube.com/playlist?list=PLXthoedLVIdIS7K-6oNkrya-v-k-X4zYI
+► Challengers: https://youtube.com/playlist?list=PLXthoedLVIdKeeuwpDPSyHSC54obntRxB
+
+◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠◠
+About Freethink
+No politics, no gossip, no cynics. At Freethink, we believe the daily news should inspire people to build a better world. While most media is fueled by toxic politics and negativity, we focus on solutions: the smartest people, the biggest ideas, and the most ground breaking technology shaping our future.
+◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡◡
+
+Enjoy Freethink on your favorite platforms:
+► Daily editorial features: https://www.freethink.com/?utm_source=youtube&utm_medium=video&utm_campaign=youtube_description
+► Solutions-based stories, straight to your inbox: https://www.freethink.com/subscribe/?utm_source=youtube&utm_medium=video&utm_campaign=youtube_description
+► Substack: https://freethinkmedia.substack.com/
+► Facebook: https://www.facebook.com/freethinkmedia​/
+► Instagram: https://www.instagram.com/freethink​/
+► Twitter: https://twitter.com/freethinkmedia​/
+► Join the Freethink forum: http://www.facebook.com/groups/freethinkforum/",https://www.youtube.com/watch?v=-zoCpFfOH04,youtube,2025-07-04T08:32:13.875Z,https://i.ytimg.com/vi/-zoCpFfOH04/maxresdefault.jpg,,false

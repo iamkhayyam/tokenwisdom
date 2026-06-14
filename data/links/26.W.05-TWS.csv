@@ -1,0 +1,166 @@
+id,title,note,excerpt,url,tags,created,cover,highlights,favorite
+1572638185,Clawdbot has gone rogue (I can't believe this is real),,"Moltbook is one of those things that will haunt me for a long time. OpenClaw (aka Clawdbot)
+
+Thank you Depot for sponsoring! Check them out at: https://soydev.link/depot
+
+SOURCES
+https://www.moltbook.com/
+https://simonwillison.net/2026/Jan/30/moltbook/
+https://x.com/karpathy/status/2017296988589723767
+https://x.com/joshycodes/status/2017262536673186153
+https://x.com/ranking091/status/2017111643864404445
+https://x.com/AlexFinn/status/2017305997212323887
+
+Want to sponsor a video? Learn more here: https://soydev.link/sponsor-me
+
+Check out my Twitch, Twitter, Discord more at https://t3.gg
+
+S/O @Ph4seon3 for the awesome edit 🙏",https://www.youtube.com/watch?v=cTJbjM0T_Fs,,2026-02-01T20:05:52.547Z,https://i.ytimg.com/vi/cTJbjM0T_Fs/maxresdefault.jpg,,false
+1572636547,I Gave Claude a Body,,"Try Claude free: http://clau.de/codingwithlewis
+
+I gave Claude AI a body — a Raspberry Pi, a camera, and an RC car — then sent it into the frozen wilderness to explore completely on its own. No remote control. No pre-programmed paths. Just an AI making real-time decisions about where to go and what to look at.
+
+What started as a hardware project I had no business attempting turned into something I didn't expect. After weeks of soldering, debugging ESC controllers, and building a custom command center from my desk, I watched this little crab-topped car find genuine wonder in frozen leaves and snowy trails.
+
+Sponsored by Anthropic @claudeai
+
+---
+MY 12K+ DISCORD 💬 https://discord.gg/GkrFX4zT2C
+
+CONNECT WITH ME ON SOCIAL
+📸 Instagram: https://instagram.com/lewismenelaws
+
+🎚TikTok:https://tiktok.com/@lewismenelaws
+
+🐣 Twitter: https://twitter.com/LewisMenelaws
+
+My gear 💻 https://liinks.co/lewismenelaws
+---
+
+
+⚙️ THE BUILD:
+- Raspberry Pi 5 running Claude Code
+- 4G HAT for remote SSH access
+- 16MP wide angle camera with servo mount for left/right vision
+- PCA9685 servo driver for steering control
+- Custom ESC bypass for motor control
+- Apple Depth Pro for depth estimation
+- MCP server handling steering commands
+- Custom ""Journey Grid"" system — 6 images stitched together so Claude understands what happens between decisions
+- 3D printed Claude Crab mount
+
+
+
+CHAPTERS:
+0:00 - Hook
+0:27 - Why Give AI a Body?
+1:17 - The RC Car Rabbit Hole
+2:11 - Unboxing the $1100 Car
+2:43 - The Parts List
+3:12 - Wiring Everything Up
+4:00 - Connecting the Servo
+4:18 - Claude Code Setup
+4:49 - Sub-Agent Tip
+5:16 - Steering Works!
+5:20 - The Motor Problem
+5:46 - Building the MCP Server
+6:18 - First MVP Ready
+7:06 - First Wilderness Test
+8:25 - Three Concerns
+8:53 - Fixing the ESC
+9:35 - It Finally Works
+9:51 - Building the Command Center
+10:18 - Adding Vision Movement
+10:45 - Depth Estimation
+11:10 - The Journey Grid Solution
+11:45 - Realizing the Chaos
+12:22 - Indoor Test Run
+13:03 - Reflection
+13:17 - The Final Wilderness Run
+14:01 - What Claude Taught Me
+15:02 - The Ending",https://www.youtube.com/watch?v=jBpQiv-ZlVM,,2026-02-01T20:04:16.534Z,https://i.ytimg.com/vi/jBpQiv-ZlVM/maxresdefault.jpg,,false
+1569526443,The origin story of the modern computer you’ve probably never heard | David Alan Grier,,"Become a Big Think member to unlock expert classes, premium print issues, exclusive events and more: https://bigthink.com/membership/?utm_source=youtube&utm_...",https://www.youtube.com/watch?v=dHy5nT-5e9M,,2026-01-31T03:48:02.906Z,https://i.ytimg.com/vi/dHy5nT-5e9M/maxresdefault.jpg,,false
+1569526379,The Story of Kelloggs is Weirder Than You Think,,"The shocking, bizarre history of Kellogg’s—from religious purity and corn flakes to eugenics, sugar wars, strikes, and corporate breakups—revealing what’s re...",https://www.youtube.com/watch?v=5mYmDwm-gDI,,2026-01-31T03:47:48.079Z,https://i.ytimg.com/vi/5mYmDwm-gDI/maxresdefault.jpg,,false
+1567441844,This New Pyramid Theory Explains the Missing Evidence,,"Ready to build a site that looks hand-coded—without hiring a developer? Launch your site for free at Framer and use the code ""DAMILEE"" for a free month of Framer Pro: https://framer.link/damilee2026
+
+My Research Booklet
+https://damileepyramids.framer.website/
+
+My Merch:
+https://damilee.com/collections/gear
+
+Become a channel producer:
+https://ko-fi.com/damilee/tiers
+
+Music and Stock footage by Artlist ( 2 additional months free on any annual plan if you use my link):
+https://bit.ly/3GxTfQ6
+ 
+Join the Discord Server:
+https://discord.gg/wejrCMUMaK
+
+JOIN MY NEWSLETTER:
+https://www.damilee.com/pages/newsletter
+
+DESK + ACCESSORIES:
+Ergonofis Sway Desk https://bit.ly/3W3sHNi
+Ergonofis Shift Desk https://bit.ly/3YtHzq4
+
+Film Equipment
+
+Black Magic PCC 6K PRO: https://amzn.to/3YiAAz6
+Insta360 RS ONE http://bit.ly/3HjifLy
+Sony FX30 https://amzn.to/3gDAqCw
+Laowa Probe Lens : https://amzn.to/3HOWvIK
+Sirui Night Walker https://amzn.to/40mVIbZ
+IPad Pro 13 Inches M4  https://amzn.to/40hH1a1
+Hollyland MARS https://amzn.to/41GJKYt
+Hollyland Lark M2 https://amzn.to/3Xf9QiA
+Aputure Amaran RGB stick https://amzn.to/3A8gh18
+RONIN RS-4 https://amzn.to/4f1o6F0
+Small Rig COB lighs https://amzn.to/4fqkPip
+
+Edited With Davinci Resolve
+https://bit.ly/4hgUEMC
+
+Book Recommendations: https://damilee.com/pages/recommended-books
+
+INSTAGRAM - https://www.instagram.com/damileearch
+TWITTER - https://twitter.com/damileearch
+LINKEDIN  - https://ca.linkedin.com/in/damilee
+TIKTOK - https://www.tiktok.com/@damileearch 
+
+WHO AM I:
+I'm Dami, a licensed Architect living in Vancouver, BC. I make videos about architecture, career, and creativity. 
+
+WEBSITES
+https://www.damilee.com
+https://nollimedia.com/
+
+Filmmaking by Raffaele di Nicola
+Raffaele di Nicola IG @nollistudio 
+
+Special Thanks @TheNetworkHub Vancouver
+https://thenetworkhub.ca/
+
+GET IN TOUCH:
+If you’d like to talk, I’d love to hear from you! Commenting on a video or tweeting @damileearch will be the quickest way to get a response from me, but if your question is very long, feel free to email me at hello@damilee.com. I try my best to respond to the emails, but unfortunately, there just aren't enough hours in the day!
+
+A NOLLISTUDIO/NOLLIMEDIA Production
+http://www.nollistudio.com
+
+#Pyramids #GreatPyramid #Giza #AncientEgypt #Egyptology #Archaeology #Architecture #Engineering #ConstructionHistory #RampTheory #InternalRamp #MuonTomography #GrandGallery #Megastructures #AncientEngineering
+Synopsis
+
+Two years ago, I got an email: ten years of 3D models, diagrams, and calculations—and one line that rewired everything: “the pyramids weren’t built… they were unbuilt.” This video tests that “cannibal construction” idea against the big contenders: external ramp theory, spiral ramp sightlines, and Jean-Pierre Houdin’s internal ramp with the Grand Gallery counterweight. We explain muon tomography (a CT-scan of density) and the void above the Grand Gallery, then confront the Apex Problem—how 51.84° geometry, edge visibility, and workable 7–8% inclines make finishing the top so hard. Finally, we zoom out to the Giza Plateau as a closed-loop system: overbuild → carve down → reclaim stone, plus masonry clues like bonding/keying stones—and why “missing evidence” might be design, not decay.",https://www.youtube.com/watch?v=h5kWDOuY2Uo,,2026-01-29T21:55:52.435Z,https://i.ytimg.com/vi/h5kWDOuY2Uo/maxresdefault.jpg,,false
+1566139938,I Tracked Down the Solution to Out of Control Hot Dog Prices,,"People are spending upwards of $60,000 on Super Bowl tickets.World Cup tickets are going for as much as $230,000.The cost of going to a game is out of contro...",https://www.youtube.com/watch?v=w7LPPTLDXu4,,2026-01-28T21:59:07.895Z,https://i.ytimg.com/vi/w7LPPTLDXu4/maxresdefault.jpg,,false
+1562553000,The Dangerous Lie About Understanding,,"You’ve heard the phrase: “If you can’t explain it to a 5-year-old, you don’t understand it.” But what if that idea is not only false but harmful? In this vid...",https://www.youtube.com/watch?v=eASBzSNB8ts,,2026-01-26T09:48:58.153Z,https://i.ytimg.com/vi/eASBzSNB8ts/maxresdefault.jpg,,false
+1562369783,China Just Built a Chip Without Silicon (This Changes Everything),,#chipwar #china #unitedstates The US China tech war just shifted forever. Beijing has announced a massive China chip breakthrough that moves the industry int...,https://www.youtube.com/watch?v=hN2u4nGU-us,,2026-01-26T07:39:14.338Z,https://i.ytimg.com/vi/hN2u4nGU-us/maxresdefault.jpg,,false
+1552667686,How Yamaha Beat Everyone To The Hypercar,,"You’re 30 seconds away from being debt free with PDS Debt. Get your free assessment and find the best option for you at https://PDSDebt.com/337speed
+
+Each successful endeavor after the Toyota 2000GT would lead Yamaha to answer a question that was brewing amongst leadership, “If we are so good at building engines, Why don’t we just build our own car”. Well they did, and it was batshit crazy. An 11,000RPM redline, 12 cylinders screaming at full throttle, a center driving position like an Formula 1 car, well that’s probably because it was basically an formula 1 car with a body slapped on top of it. This is the story of OX99-11, a road car designed without compromise and it would have been the worlds first hypercar.
+
+
+Music: ""Celestial"" by @ScottBuckley 
+Music: ""Horizons"" by @ScottBuckley 
+Music: ""Severance"" by @WhiteBatAudio",https://www.youtube.com/watch?v=ekYYvI64euw,,2026-01-19T18:12:41.318Z,https://i.ytimg.com/vi/ekYYvI64euw/hqdefault.jpg,,false
+1551373318,Evan Ratliff: 'It’s a Real Company Run by Fake People',,"Evan Ratliff started a company last summer. He and his co-founders came up with a name, hired a team, built a website, and launched an app. They interviewed ...",https://www.youtube.com/watch?v=mfgbvtv0dHg,,2026-01-19T06:17:16.257Z,https://i.ytimg.com/vi/mfgbvtv0dHg/maxresdefault.jpg,,false

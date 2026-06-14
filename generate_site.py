@@ -5,7 +5,7 @@ Token Wisdom static site generator.
 Builds two consistent post templates — the essay (A Closer Look) and the
 newsletter (Pearls of Wisdom / Token Wisdom Week) — plus a homepage,
 tag pages, archive, and tags index, all sharing one editorial design system
-(Playfair Display / Source Serif 4 / DM Sans / DM Mono).
+(Libre Caslon Display / Source Serif 4 opsz17 / Archivo / DM Mono 300).
 """
 
 import json
@@ -374,9 +374,10 @@ CSS = r"""
   --gold-light: #f5e9c4;
 
   --serif: 'Source Serif 4', Georgia, serif;
-  --display: 'Playfair Display', Georgia, serif;
-  --sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --display: 'Libre Caslon Display', Georgia, serif;
+  --sans: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
   --mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
+  --mono-weight: 300;
 
   --max-read: 680px;
   --max-wide: 1080px;
@@ -385,6 +386,26 @@ CSS = r"""
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+/* Source Serif 4 — optical size 17 (editorial register) */
+:where(body, .prose, .essay-deck, .lex-row-def, .lex-line-def, .def-history li, .tp-title, .term-arc-note) {
+  font-optical-sizing: none;
+  font-variation-settings: "opsz" 17;
+}
+
+/* DM Mono — Light 300 */
+:where(.site-top-inner, .post-top-bar, .essay-eyebrow, .essay-byline,
+  .nl-masthead-eyebrow, .nl-masthead-subtitle, .home-masthead-eyebrow,
+  .home-masthead-sub, .section-label, .section-note, .hero-eyebrow,
+  .hero-meta, .hero-cta, .essay-row-eyebrow, .post-nav, .colophon h4,
+  .colophon-bottom, .post-tag, .tag-cloud a, .stat .label,
+  .sidebar-block h4, .sidebar-item .edition, .archive-item .when,
+  .archive-item .tag, .prose h4, .prose figcaption, .prose th,
+  .prose .kg-bookmark-metadata, .lex-chip, .lex-cat-count, .lex-count,
+  .tag-hero-eyebrow, .tag-hero .meta, .tag-header .eyebrow, .tag-header .meta,
+  .ep-meta, .ep-actions, .podcast-hero-eyebrow, .podcast-hero-meta) {
+  font-weight: var(--mono-weight);
+}
 
 body {
   background: var(--paper);
@@ -1910,10 +1931,10 @@ img { max-width: 100%; height: auto; }
 def head_tag(title, favicon_path="assets/crystal-ball.svg"):
     fonts = (
         "https://fonts.googleapis.com/css2?"
-        "family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,700&"
+        "family=Libre+Caslon+Display&"
+        "family=Archivo:wght@400;500;600;700&"
         "family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&"
-        "family=DM+Sans:wght@300;400;500;600&"
-        "family=DM+Mono:wght@400;500&display=swap"
+        "family=DM+Mono:wght@300;400;500&display=swap"
     )
     return f"""<!DOCTYPE html>
 <html lang="en">

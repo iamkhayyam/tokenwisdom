@@ -31,17 +31,20 @@ img{max-width:100%;height:auto;display:block}
 a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
 
+/* Source Serif 4 — optical size 17 (editorial/display register) */
+:where(.lead-dek,.edition-dek,.story-dek,.lex-intro,.lex-lede,.lexcard-def,.sub-dek,.term-def,.term-arc-note,.lex-cc-def,.lex-line-def,.def-history li,.tp-title,.lex-soon p,.foot-tag,.podcast-hero-desc){font-optical-sizing:none;font-variation-settings:"opsz" 17}
+
 /* kicker / meta */
-.kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
+.kicker{font-family:var(--mono);font-weight:300;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
 .kicker-accent{color:var(--accent)}
 .kicker-on-dark{color:oklch(0.78 0.10 55)}
-.meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+.meta{font-family:var(--mono);font-weight:300;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 
 /* nameplate — the signature front-page moment */
 .nameplate{border-bottom:1px solid var(--ink);background:var(--bg)}
 .np-inner{max-width:var(--w);margin:0 auto;padding:20px 28px 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
-.np-left{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
-.np-right{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
+.np-left{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
+.np-right{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
 .np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
 /* masthead nav */
 .mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
@@ -345,6 +348,7 @@ _NAV = [
     ("archive", "Archive", "archive.html"),
     ("topics", "Topics", "tags/index.html"),
     ("lexicon", "Lexicon", "lexicon/index.html"),
+    ("links", "Links", "links/index.html"),
     ("essays", "Essays", "tags/a-closer-look.html"),
     ("newsletters", "Newsletters", "tags/worthafortune.html"),
     ("podcast", "Podcast", "podcast.html"),
@@ -386,8 +390,8 @@ def page(title, body, prefix="", lex=False, active="", extra_js=""):
     import html as _h
     css = BASE_CSS + (LEX_CSS + TERM_CSS if lex else "")
     fonts = ("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900"
-             "&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400"
-             "&family=DM+Mono:wght@400;500&display=swap")
+             "&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400"
+             "&family=DM+Mono:wght@300;400;500&display=swap")
     return f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">

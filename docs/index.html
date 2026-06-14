@@ -4,8 +4,13 @@
 <title>Token Wisdom — The Newsletter of Record for the Future of Now</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
 <style>
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Light.otf') format('opentype');font-weight:300;font-style:normal}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Regular.otf') format('opentype');font-weight:400;font-style:normal}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Bold.otf') format('opentype');font-weight:700;font-style:normal}
+@font-face{font-family:'FauxCRA Mono';src:url('assets/fonts/FauxCRA-Monospaced.otf') format('opentype');font-weight:400;font-style:normal}
+
 :root{
   --bg: oklch(0.992 0.004 70);
   --surface: oklch(0.972 0.005 70);
@@ -24,7 +29,7 @@
   --display:'Libre Caslon Display',Georgia,serif;
   --display-weight:400;
   --serif:'Source Serif 4',Georgia,serif;
-  --mono:'DM Mono',ui-monospace,monospace;
+  --mono:'FauxCRA Mono','FauxCRA',ui-monospace,monospace;
   --w:1220px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -35,16 +40,16 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
 
 /* kicker / meta */
-.kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
+.kicker{font-family:var(--mono);font-weight:300;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
 .kicker-accent{color:var(--accent)}
 .kicker-on-dark{color:oklch(0.78 0.10 55)}
-.meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+.meta{font-family:var(--mono);font-weight:300;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 
 /* nameplate — the signature front-page moment */
 .nameplate{border-bottom:1px solid var(--ink);background:var(--bg)}
 .np-inner{max-width:var(--w);margin:0 auto;padding:20px 28px 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
-.np-left{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
-.np-right{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
+.np-left{font-family:'FauxCRA',var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
+.np-right{font-family:'FauxCRA',var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
 .np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
 /* masthead nav */
 .mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
@@ -53,10 +58,10 @@ a{color:inherit;text-decoration:none}
 .tw-orb{height:30px;width:auto;display:block}
 .foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
 .mast-nav{display:flex;gap:22px;margin-left:6px;flex-wrap:wrap}
-.mast-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.mast-nav a{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
 .mast-nav a:hover{color:var(--ink)}
 .mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
-.mast-sub{margin-left:auto;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.mast-sub{margin-left:auto;font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .mast-sub:hover{background:var(--accent-deep)}
 
 /* lead */
@@ -66,6 +71,7 @@ a{color:inherit;text-decoration:none}
 .lead-main:hover .lead-figure img{transform:scale(1.04)}
 .lead-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,5.6vw,5.2rem);line-height:.93;letter-spacing:-.035em;margin:.7rem 0 .9rem;text-wrap:balance}
 .lead-main:hover .lead-title{color:oklch(0.34 0.07 45)}
+:where(.lead-dek,.edition-dek,.story-dek,.lexcard-def,.lex-intro,.sub-dek){font-optical-sizing:none;font-variation-settings:"opsz" 17}
 .lead-dek{font-family:var(--serif);font-size:1.22rem;line-height:1.5;color:var(--ink-muted);max-width:48ch;margin-bottom:1rem}
 .lead-side{align-self:stretch}
 .rail-head{border-top:2px solid var(--rule-strong);padding-top:.7rem;margin-bottom:1.1rem}
@@ -83,6 +89,16 @@ a{color:inherit;text-decoration:none}
 .side-row:hover{color:var(--accent)}
 .side-kicker{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.25rem}
 .side-title{font-family:var(--sans);font-weight:600;font-size:1.02rem;line-height:1.25}
+
+/* edition accordion */
+.ed-item{border-top:1px solid var(--rule)}
+.ed-row{display:flex;align-items:center;width:100%;background:none;border:none;padding:.72rem 0;cursor:pointer;text-align:left;gap:.5rem}
+.ed-row-title{font-family:var(--sans);font-weight:600;font-size:.96rem;line-height:1.2;color:var(--ink-muted);flex:1;transition:color .15s}
+.ed-row:hover .ed-row-title,.ed-row[aria-expanded=true] .ed-row-title{color:var(--ink)}
+.ed-row-caret{font-size:.65rem;color:var(--ink-faint);transition:transform .2s;flex-shrink:0}
+.ed-row[aria-expanded=true] .ed-row-caret{transform:rotate(180deg)}
+.ed-body{padding-bottom:1rem}
+.ed-body[hidden]{display:none}
 
 /* section rule head */
 .block{padding:46px 0}
@@ -114,15 +130,29 @@ a{color:inherit;text-decoration:none}
 .list-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 
 /* topics */
-.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem 1.2rem}
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .topic-card{display:block}
-.tc-figure{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface)}
+.tc-figure{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface)}
 .tc-figure img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
 .topic-card:hover .tc-figure img{transform:scale(1.06)}
-.tc-count{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;padding:.4em .6em}
-.tc-name{font-family:var(--display);font-weight:var(--display-weight);font-size:1.2rem;line-height:1.08;letter-spacing:-.01em;margin-top:.65rem;color:var(--ink)}
-.topic-card:hover .tc-name{color:var(--accent)}
+.tc-bar{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:baseline;gap:.55em;background:oklch(0.235 0.012 60 / 20%);padding:.45em .65em}
+.tc-count{font-family:var(--mono);font-weight:300;font-size:.58rem;letter-spacing:.08em;color:#fff;opacity:.6;flex-shrink:0}
+.tc-name{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topic-card:hover .tc-name{color:#fff}
 @media(max-width:820px){.topic-grid{grid-template-columns:1fr 1fr}}
+
+/* stack — this week's top 5 TNL + TWS */
+.block-stack{padding:2.4rem 0 2rem}
+.stack-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.85rem;margin-top:1rem}
+.stack-card{display:block;color:var(--ink);border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--surface);transition:border-color .2s,transform .2s}
+.stack-card:hover{border-color:var(--accent);transform:translateY(-2px);color:var(--ink)}
+.stack-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--rule)}
+.stack-card-ph{width:100%;aspect-ratio:16/9;background:var(--rule)}
+.stack-card-body{padding:.7rem .8rem .85rem}
+.stack-card-type{font-family:var(--mono);font-weight:300;font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.35rem}
+.stack-card-title{font-family:var(--sans);font-weight:600;font-size:.88rem;line-height:1.3;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.stack-card-excerpt{font-family:var(--serif);font-optical-sizing:none;font-variation-settings:"opsz" 17;font-size:.78rem;line-height:1.4;color:var(--ink-muted);margin-top:.3rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.stack-row-label{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:.2rem 0 .15rem}
 
 /* lexicon strip */
 .block-lex{background:var(--surface);margin:0 -100vw;padding-left:100vw;padding-right:100vw}
@@ -167,9 +197,9 @@ a{color:inherit;text-decoration:none}
 
 /* this-week pair header */
 .thisweek-head{display:flex;align-items:center;gap:1.1rem;max-width:var(--w);margin:0 auto;padding:46px 28px 0}
-.tw-eyebrow{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.tw-eyebrow{font-family:var(--mono);font-weight:500;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 .tw-line{flex:1;height:2px;background:var(--rule-strong)}
-.tw-meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.tw-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
 .lead{padding-top:26px}
 .lead-figure{position:relative}
 .figure-tag{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:.45em .75em}
@@ -250,6 +280,7 @@ a{color:inherit;text-decoration:none}
       <a href="archive.html">Archive</a>
       <a href="tags/index.html">Topics</a>
       <a class="is-active" href="lexicon/index.html">Lexicon</a>
+      <a href="links/index.html">Links</a>
       <a href="tags/a-closer-look.html">Essays</a>
       <a href="tags/worthafortune.html">Newsletters</a>
       <a href="podcast.html">Podcast</a>
@@ -279,6 +310,14 @@ a{color:inherit;text-decoration:none}
   <a class="pairlink" href="podcast.html#ep-313d8470-c110-4ed0-a880-">&#127911; Hear the 153rd Edition &rarr;</a>
   </div>
   <aside class="lead-side">
+    <div class="side-list">
+      
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="true" onclick="edToggle(this)">
+    <span class="ed-row-title">153rd Edition · Week 13</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body">
     <a class="edition-feature" href="posts/153rd-edition-token-wisdom-week-13.html">
       <div class="ef-figure">
         <img src="https://tokenwisdom.ghost.io/content/images/2026/03/mysterious-fortune-teller-reading-what-s_urQ-x6ztThu4v26v_MpwEQ_-Dc3XRSMSB6eKUj4huNDqQ_sd.jpeg" alt="153rd Edition 🔮 Token Wisdom \ Week 13" loading="lazy">
@@ -299,17 +338,176 @@ a{color:inherit;text-decoration:none}
         <span class="ptime"><span class="pcur">0:00</span> / 27:37</span>
       </div>
     </div>
-    <div class="side-list">
-      <div class="kicker">Recent editions</div>
-      <a class="side-row" href="posts/152nd-edition-token-wisdom-week-12.html">
-        <span class="side-title">152nd Edition · Week 12</span>
-      </a><a class="side-row" href="posts/151st-edition-token-wisdom-week-11.html">
-        <span class="side-title">151st Edition · Week 11</span>
-      </a><a class="side-row" href="posts/150th-edition-token-wisdom-week-10.html">
-        <span class="side-title">150th Edition · Week 10</span>
-      </a><a class="side-row" href="posts/149th-edition-token-wisdom-week-09.html">
-        <span class="side-title">149th Edition · Week 09</span>
-      </a>
+  </div>
+</div>
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
+    <span class="ed-row-title">152nd Edition · Week 12</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body" hidden>
+    <a class="edition-feature" href="posts/152nd-edition-token-wisdom-week-12.html">
+      <div class="ef-figure">
+        <img src="https://tokenwisdom.ghost.io/content/images/2026/03/fortune_teller_crystal_ball_bw.gif" alt="152nd Edition 🔮 Token Wisdom \ Week 12" loading="lazy">
+        <span class="figure-tag">Newsletter</span>
+      </div>
+      <div class="kicker kicker-accent">POW.152 · W12 · Mar 24, 2026</div>
+      <h2 class="edition-title">152nd Edition · Week 12</h2>
+      <p class="edition-dek">This week: physicists near &#x27;ideal glass&#x27;; inequality far worse than perceived; rogue AI agents abused passwords and bypassed antivirus; a student solved a classic math problem;…</p>
+      <span class="readlink">Read the edition &rarr;</span>
+    </a>
+    
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/f57a932a-6f1e-4441-bbe4-a6017d3d4f2d.mp3">
+      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 48:37</div>
+      <a class="ptitle" href="posts/152nd-edition-token-wisdom-week-12.html">152nd Edition</a>
+      <div class="prow">
+        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
+        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
+        <span class="ptime"><span class="pcur">0:00</span> / 48:37</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
+    <span class="ed-row-title">151st Edition · Week 11</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body" hidden>
+    <a class="edition-feature" href="posts/151st-edition-token-wisdom-week-11.html">
+      <div class="ef-figure">
+        <img src="https://tokenwisdom.ghost.io/content/images/2026/03/a-prince-of-persia-arabian-nights-themed_PujAhE5RReOzJBvnp69lOw_h5_JM337QWy9dUKcxErDsA_sd.jpeg" alt="151st Edition 🔮 Token Wisdom \ Week 11" loading="lazy">
+        <span class="figure-tag">Newsletter</span>
+      </div>
+      <div class="kicker kicker-accent">POW.151 · W11 · Mar 16, 2026</div>
+      <h2 class="edition-title">151st Edition · Week 11</h2>
+      <p class="edition-dek">This week: The brain delivers precision error signals that mirror machine learning. Canada is leaving Starlink. AI data centers are drinking the water table dry. A 10-year-old&#x27;s…</p>
+      <span class="readlink">Read the edition &rarr;</span>
+    </a>
+    
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/bc9f9da5-849f-4d74-ba3a-a96880c829fc.mp3">
+      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 54:00</div>
+      <a class="ptitle" href="posts/151st-edition-token-wisdom-week-11.html">151st Edition</a>
+      <div class="prow">
+        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
+        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
+        <span class="ptime"><span class="pcur">0:00</span> / 54:00</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
+    <span class="ed-row-title">150th Edition · Week 10</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body" hidden>
+    <a class="edition-feature" href="posts/150th-edition-token-wisdom-week-10.html">
+      <div class="ef-figure">
+        <img src="https://tokenwisdom.ghost.io/content/images/2026/03/a-prince-of-persia-arabian-nights-themed_kqOLowBKRNuvppPqzeF4aQ_ntW4toPgTc61fj5YUgu9Sg_sd.jpeg" alt="150th Edition 🔮 Token Wisdom \ Week 10" loading="lazy">
+        <span class="figure-tag">Newsletter</span>
+      </div>
+      <div class="kicker kicker-accent">POW.150 · W10 · Mar 10, 2026</div>
+      <h2 class="edition-title">150th Edition · Week 10</h2>
+      <p class="edition-dek">This week: RSA encryption just got 10x easier to crack. Google quietly quantum-proofed HTTPS. Iranian drones hit Amazon data centers. And MIT found mastery lives in your eyes…</p>
+      <span class="readlink">Read the edition &rarr;</span>
+    </a>
+    
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/28730c6d-480a-4c6e-a4b2-a602fd0acc9f.mp3">
+      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 47:01</div>
+      <a class="ptitle" href="posts/150th-edition-token-wisdom-week-10.html">150th Edition</a>
+      <div class="prow">
+        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
+        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
+        <span class="ptime"><span class="pcur">0:00</span> / 47:01</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
+    <span class="ed-row-title">149th Edition · Week 09</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body" hidden>
+    <a class="edition-feature" href="posts/149th-edition-token-wisdom-week-09.html">
+      <div class="ef-figure">
+        <img src="https://tokenwisdom.ghost.io/content/images/2026/03/Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_0.jpg" alt="149th Edition 🔮 Token Wisdom \ Week 09" loading="lazy">
+        <span class="figure-tag">Newsletter</span>
+      </div>
+      <div class="kicker kicker-accent">POW.149 · W09 · Mar 2, 2026</div>
+      <h2 class="edition-title">149th Edition · Week 09</h2>
+      <p class="edition-dek">This week: A rogue AI published a hit piece, and thermodynamic tech rivals GPUs at lower energy. Britain aims to predict crimes, while Terence Tao sees AI reshaping math. We…</p>
+      <span class="readlink">Read the edition &rarr;</span>
+    </a>
+    
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/8515da96-d1cc-493c-a1a7-8d017c8a68b2.mp3">
+      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 30:11</div>
+      <a class="ptitle" href="posts/149th-edition-token-wisdom-week-09.html">149th Edition</a>
+      <div class="prow">
+        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
+        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
+        <span class="ptime"><span class="pcur">0:00</span> / 30:11</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
+    <span class="ed-row-title">148th Edition · Week 08</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body" hidden>
+    <a class="edition-feature" href="posts/148th-edition-token-wisdom-week-08.html">
+      <div class="ef-figure">
+        <img src="https://tokenwisdom.ghost.io/content/images/2026/02/200.gif" alt="148th Edition 🔮 Token Wisdom \ Week 08" loading="lazy">
+        <span class="figure-tag">Newsletter</span>
+      </div>
+      <div class="kicker kicker-accent">POW.148 · W08 · Feb 23, 2026</div>
+      <h2 class="edition-title">148th Edition · Week 08</h2>
+      <p class="edition-dek">This week: Mini brains solve engineering problems. AI reads MRIs at 97.5% accuracy without explaining why. Consciousness might live in electromagnetic fields. Forests changing how…</p>
+      <span class="readlink">Read the edition &rarr;</span>
+    </a>
+    
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/354b7378-7312-434c-8361-994bd28f39af.mp3">
+      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 27:57</div>
+      <a class="ptitle" href="posts/148th-edition-token-wisdom-week-08.html">148th Edition</a>
+      <div class="prow">
+        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
+        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
+        <span class="ptime"><span class="pcur">0:00</span> / 27:57</span>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
+    <span class="ed-row-title">147th Edition · Week 07</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body" hidden>
+    <a class="edition-feature" href="posts/147th-edition-token-wisdom-week-07.html">
+      <div class="ef-figure">
+        <img src="https://tokenwisdom.ghost.io/content/images/2026/02/giphy.webp" alt="147th Edition 🔮 Token Wisdom \ Week 07" loading="lazy">
+        <span class="figure-tag">Newsletter</span>
+      </div>
+      <div class="kicker kicker-accent">POW.147 · W07 · Feb 16, 2026</div>
+      <h2 class="edition-title">147th Edition · Week 07</h2>
+      <p class="edition-dek">This week: Systems so capable they&#x27;ve become fragile. So optimized they have no room left to fail. So advanced they&#x27;ve made us hostages to their own perfection. It takes 250…</p>
+      <span class="readlink">Read the edition &rarr;</span>
+    </a>
+    
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/df53ecde-87c0-45a8-921b-a470a36a81f4.mp3">
+      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 27:06</div>
+      <a class="ptitle" href="posts/147th-edition-token-wisdom-week-07.html">147th Edition</a>
+      <div class="prow">
+        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
+        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
+        <span class="ptime"><span class="pcur">0:00</span> / 27:06</span>
+      </div>
+    </div>
+  </div>
+</div>
     </div>
   </aside>
 </section>
@@ -332,6 +530,88 @@ a{color:inherit;text-decoration:none}
       </div>
     </div>
   </div>
+</section>
+
+<section class="block block-stack">
+  <div class="rule-head">
+    <h2 class="rule-label">This Week</h2>
+    <span class="rule-meta">2026 · W23</span>
+    <a class="rule-meta linky" href="links/index.html" style="margin-left:auto">Full reading room &rarr;</a>
+  </div>
+  <div class="stack-row-label">The Newest Latest</div>
+  <div class="stack-grid"><a class="stack-card" href="https://www.scientificamerican.com/article/humans-conquered-the-planet-300-times-faster-than-genetic-evolution-can-explain/" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://static.scientificamerican.com/dam/asset/1d69aca3-3255-41d7-a7d2-270e532991a0/saw070826Adva09.jpg?m=1779977611.811&amp;w=1200" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Article</div>
+    <div class="stack-card-title">Humans conquered the planet 300 times faster than genetic evolution can explain | Scientific American</div>
+    <div class="stack-card-excerpt">Culture is humanity’s secret for world domination. This calculation shows just how powerful it is</div>
+  </div>
+</a><a class="stack-card" href="https://scitechdaily.com/mit-engineers-solve-a-major-lidar-problem-that-has-stumped-researchers-for-years/" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://scitechdaily.com/images/Array-of-Integrated-Antennas-Minimizing-Unwanted-Crosstalk.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Article</div>
+    <div class="stack-card-title">MIT Engineers Solve a Major Lidar Problem That Has Stumped Researchers for Years</div>
+    <div class="stack-card-excerpt">A new MIT-designed lidar chip uses specially engineered antennas to reduce interference and widen the sensor’s field of view.</div>
+  </div>
+</a><a class="stack-card" href="https://www.bloomberg.com/news/articles/2026-06-07/nvidia-s-ceo-says-new-vera-chip-will-use-sk-hynix-s-memory-chips" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iggbProiBFQE/v1/1200x800.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Article</div>
+    <div class="stack-card-title">Nvidia’s CEO Says New Vera Chip Will Use SK Hynix’s Memory Chips - Bloomberg</div>
+    <div class="stack-card-excerpt">Nvidia Corp. Chief Executive Officer Jensen Huang said its new Vera central processing units will use SK Hynix Inc.’s memory chips as the two companies prepare </div>
+  </div>
+</a><a class="stack-card" href="https://www.reuters.com/business/media-telecom/chip-selloff-erases-over-1-trillion-stock-market-value-2026-06-05/" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://www.reuters.com/resizer/v2/BBGCU7ZMQVIK3H7OMT5LRCLGH4.jpg?auth=811526f533ebdbc0fbac445aa2feefdae5e66b720b53e6ddfc4cdec3b865da32&amp;height=1005&amp;width=1920&amp;quality=80&amp;smart=true" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Article</div>
+    <div class="stack-card-title">Chip slump erases $1.3 trillion in stock market value | Reuters</div>
+    <div class="stack-card-excerpt">U.S.-traded chipmakers plunged on Friday, losing about $1.3 trillion in market value, with deep losses in AI heavy ​hitters including Nvidia , Micron Technology</div>
+  </div>
+</a><a class="stack-card" href="https://www.ecoticias.com/en/two-young-inventors-design-a-brick-that-can-cool-cities-using-electricity-and-the-idea-points-to-buildings-that-stop-being-part-of-the-heat-problem/32986/" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://www.ecoticias.com/en/wp-content/uploads/2026/06/bloc-terracotta-cooling-brick-urban-heat-island-1.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Article</div>
+    <div class="stack-card-title">Two young inventors design a brick that can cool cities using electricity, and the idea points to buildings that stop being part of the heat problem</div>
+    <div class="stack-card-excerpt">Two inventors designed a 3D-printed brick that cools city streets by 16°F. See how this eco-friendly tech fights urban heat islands.</div>
+  </div>
+</a></div>
+  <div class="stack-row-label" style="margin-top:1.4rem">Time Well Spent</div>
+  <div class="stack-grid"><a class="stack-card" href="https://youtu.be/8ekndZwyOzo?si=TX-4HPA58AU2V7ET" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://i.ytimg.com/vi/8ekndZwyOzo/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Video</div>
+    <div class="stack-card-title">How Huawei Just Built an Impossible Chip</div>
+    <div class="stack-card-excerpt">Since 2019, US export controls have blocked Huawei from accessing t...</div>
+  </div>
+</a><a class="stack-card" href="https://youtu.be/9YeHm4ZbL60?si=eTFuC8DdBwOuqiWj" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://i.ytimg.com/vi/9YeHm4ZbL60/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Video</div>
+    <div class="stack-card-title">Every Level of AI Taking Jobs Explained</div>
+    <div class="stack-card-excerpt">In this conversation, Patrick Dwyer and Greg Pool explore how artif...</div>
+  </div>
+</a><a class="stack-card" href="https://youtu.be/Vn1sP2WevnY?si=VlmGxUFBtJcNDSSM" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://i.ytimg.com/vi/Vn1sP2WevnY/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Video</div>
+    <div class="stack-card-title">Spiritual Awakening Is God Realizing It Hates Its Existence</div>
+    <div class="stack-card-excerpt">Get access To my Substack and future announcements here→ https://t...</div>
+  </div>
+</a><a class="stack-card" href="https://www.youtube.com/watch?v=vhrJqOGrXGo" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://i.ytimg.com/vi/vhrJqOGrXGo/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Video</div>
+    <div class="stack-card-title">Welp, everyone HATES A.I.</div>
+    <div class="stack-card-excerpt">Everyone besides tech CEOs has been saying it. Now they’re starting to say it too. Visit https://groundnews.com/factually to stay fully informed, see through...</div>
+  </div>
+</a><a class="stack-card" href="https://www.youtube.com/watch?v=tBE2ZYx7MWw" target="_blank" rel="noopener">
+  <img class="stack-card-img" src="https://i.ytimg.com/vi/tBE2ZYx7MWw/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="stack-card-body">
+    <div class="stack-card-type">Video</div>
+    <div class="stack-card-title">What Makes Software a &quot;Place&quot;?</div>
+    <div class="stack-card-excerpt">Join &quot;Interface Studies&quot; to help make more videos. Your support keeps new content coming. https://www.youtube.com/channel/UCqv7gk4p_rB4nRz0j7B5yFA/joinWhen d...</div>
+  </div>
+</a></div>
 </section>
 
 <section class="block">
@@ -415,39 +695,31 @@ a{color:inherit;text-decoration:none}
 
 <section class="block">
   <div class="rule-head"><h2 class="rule-label">Browse by Idea</h2>
-    <a class="rule-meta linky" href="tags/index.html">All 12 topics &rarr;</a></div>
+    <a class="rule-meta linky" href="tags/index.html">All 81 topics &rarr;</a></div>
   <div class="topic-grid">
     <a class="topic-card" href="tags/technology.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/8a5af1148221413.62d15cea5fce4.gif" alt="" loading="lazy"><span class="tc-count">90</span></div>
-      <div class="tc-name">Technology</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/8a5af1148221413.62d15cea5fce4.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">90</span><span class="tc-name">Technology</span></div></div>
     </a>
     <a class="topic-card" href="tags/ai.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/ai_button_2.gif" alt="" loading="lazy"><span class="tc-count">71</span></div>
-      <div class="tc-name">A.I. (and Subsets)</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/ai_button_2.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">71</span><span class="tc-name">A.I. (and Subsets)</span></div></div>
     </a>
     <a class="topic-card" href="tags/future-trends.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/04/200w.gif" alt="" loading="lazy"><span class="tc-count">71</span></div>
-      <div class="tc-name">Future Trends</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/04/200w.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">71</span><span class="tc-name">Future Trends</span></div></div>
     </a>
     <a class="topic-card" href="tags/ethical.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/fff63b50-0943-11ee-a9dd-649a2dab66a0.gif" alt="" loading="lazy"><span class="tc-count">63</span></div>
-      <div class="tc-name">Ethics \ Principles</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/fff63b50-0943-11ee-a9dd-649a2dab66a0.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">63</span><span class="tc-name">Ethics \ Principles</span></div></div>
     </a>
     <a class="topic-card" href="tags/challenges.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/18-38-04-285_512.gif" alt="" loading="lazy"><span class="tc-count">58</span></div>
-      <div class="tc-name">Challenges</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/18-38-04-285_512.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">58</span><span class="tc-name">Challenges</span></div></div>
     </a>
     <a class="topic-card" href="tags/strategic.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0_xWjZ64O5lcAehxrD.gif" alt="" loading="lazy"><span class="tc-count">53</span></div>
-      <div class="tc-name">Strategic Measures</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0_xWjZ64O5lcAehxrD.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">53</span><span class="tc-name">Strategic Measures</span></div></div>
     </a>
     <a class="topic-card" href="tags/opinionated-editorials.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/211dce52115917.5937475d559c5.gif" alt="" loading="lazy"><span class="tc-count">50</span></div>
-      <div class="tc-name">🚨 OP-ED</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/211dce52115917.5937475d559c5.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">50</span><span class="tc-name">🚨 OP-ED</span></div></div>
     </a>
     <a class="topic-card" href="tags/innovation.html">
-      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/Bviewmaster.gif" alt="" loading="lazy"><span class="tc-count">49</span></div>
-      <div class="tc-name">Innovation</div>
+      <div class="tc-figure"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/Bviewmaster.gif" alt="" loading="lazy"><div class="tc-bar"><span class="tc-count">49</span><span class="tc-name">Innovation</span></div></div>
     </a>
   </div>
 </section>
@@ -534,6 +806,13 @@ a{color:inherit;text-decoration:none}
     });
   });
 })();
+function edToggle(btn){
+  var expanded=btn.getAttribute('aria-expanded')==='true';
+  var list=btn.closest('.side-list');
+  list.querySelectorAll('.ed-row').forEach(function(b){b.setAttribute('aria-expanded','false');});
+  list.querySelectorAll('.ed-body').forEach(function(d){d.hidden=true;});
+  if(!expanded){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.hidden=false;}
+}
 </script>
 
 </body></html>

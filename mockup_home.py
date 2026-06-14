@@ -77,6 +77,7 @@ public_tags = [t for t in tags if not (t.get("name", "") or "").startswith("#")
 top_tags = sorted(public_tags, key=lambda t: len(tag_to_posts.get(t["slug"], [])), reverse=True)[:12]
 
 lex = json.load(open(BACKUP / "data" / "lexicon.json"))
+links_db = json.load(open(BACKUP / "data" / "links.json"))
 lex_by_name = {t["name"]: t for t in lex["terms"]}
 # Pick 4 terms by edition frequency, rotating by ISO week so they change each build
 _lex_pool = sorted(
@@ -168,6 +169,38 @@ def pair_link(p):
 
 # ---- sections ----
 
+def _render_ed_accordion(all_eds, all_eps):
+    items = ""
+    for i, (p, ep) in enumerate(zip(all_eds, all_eps)):
+        issue_str = e(gs.issue_code_string(p, issue_nums.get(p["slug"], 0)))
+        ed_title = e(gs.edition_meta(p) or gs.clean_title(p))
+        feat_img = img(p.get("feature_image"))
+        player_html = render_player(ep, "The Edition", href(p), rail=True) if ep else ""
+        expanded = "true" if i == 0 else "false"
+        body_hidden = "" if i == 0 else " hidden"
+        items += f"""
+<div class="ed-item">
+  <button class="ed-row" aria-expanded="{expanded}" onclick="edToggle(this)">
+    <span class="ed-row-title">{ed_title}</span>
+    <span class="ed-row-caret">▾</span>
+  </button>
+  <div class="ed-body"{body_hidden}>
+    <a class="edition-feature" href="{href(p)}">
+      <div class="ef-figure">
+        <img src="{e(feat_img)}" alt="{e(p.get('title'))}" loading="lazy">
+        <span class="figure-tag">Newsletter</span>
+      </div>
+      <div class="kicker kicker-accent">{issue_str}</div>
+      <h2 class="edition-title">{ed_title}</h2>
+      <p class="edition-dek">{gs.excerpt(p, 180)}</p>
+      <span class="readlink">Read the edition &rarr;</span>
+    </a>
+    {player_html}
+  </div>
+</div>"""
+    return items
+
+
 def render_hero():
     wk = gs.edition_meta(latest_ed) or "This Week"
     return f"""
@@ -191,22 +224,11 @@ def render_hero():
   {pair_link(hero)}
   </div>
   <aside class="lead-side">
-    <a class="edition-feature" href="{href(latest_ed)}">
-      <div class="ef-figure">
-        <img src="{e(img(latest_ed.get('feature_image')))}" alt="{e(latest_ed.get('title'))}" loading="lazy">
-        <span class="figure-tag">Newsletter</span>
-      </div>
-      <div class="kicker kicker-accent">{e(gs.issue_code_string(latest_ed, issue_nums.get(latest_ed['slug'],0)))}</div>
-      <h2 class="edition-title">{e(gs.edition_meta(latest_ed) or 'Latest Edition')}</h2>
-      <p class="edition-dek">{gs.excerpt(latest_ed, 180)}</p>
-      <span class="readlink">Read the edition &rarr;</span>
-    </a>
-    {render_player(edition_ep, "The Edition", href(latest_ed), rail=True)}
     <div class="side-list">
-      <div class="kicker">Recent editions</div>
-      {''.join(f'''<a class="side-row" href="{href(p)}">
-        <span class="side-title">{e(gs.edition_meta(p) or gs.clean_title(p))}</span>
-      </a>''' for p in editions[1:5])}
+      {_render_ed_accordion(
+          editions[0:7],
+          [edition_ep] + [epB_by_yw.get(((p.get("published_at") or "")[:4], _week_of(p))) for p in editions[1:7]]
+      )}
     </div>
   </aside>
 </section>"""
@@ -304,15 +326,52 @@ def render_topics():
         figure = f'<img src="{e(fig)}" alt="" loading="lazy">' if fig else ""
         cards += f"""
     <a class="topic-card" href="tags/{t['slug']}.html">
-      <div class="tc-figure">{figure}<span class="tc-count">{n}</span></div>
-      <div class="tc-name">{e(t['name'])}</div>
+      <div class="tc-figure">{figure}<div class="tc-bar"><span class="tc-count">{n}</span><span class="tc-name">{e(t['name'])}</span></div></div>
     </a>"""
     return f"""
 <section class="block">
   <div class="rule-head"><h2 class="rule-label">Browse by Idea</h2>
-    <a class="rule-meta linky" href="tags/index.html">All {len(top_tags)} topics &rarr;</a></div>
+    <a class="rule-meta linky" href="tags/index.html">All {len(public_tags)} topics &rarr;</a></div>
   <div class="topic-grid">{cards}
   </div>
+</section>"""
+
+
+def render_stack():
+    cw = next((w for w in links_db["weeks"]
+               if w["year"] == links_db["current_year"] and w["week"] == links_db["current_week"]), None)
+    if not cw:
+        return ""
+
+    week_label = f"{cw['year']} · W{cw['week']:02d}"
+
+    def card(item, label):
+        cover = (f'<img class="stack-card-img" src="{e(item["cover"])}" alt="" loading="lazy">'
+                 if item.get("cover") else '<div class="stack-card-ph"></div>')
+        excerpt = e((item.get("excerpt") or item.get("note") or "")[:160])
+        return f"""<a class="stack-card" href="{e(item['url'])}" target="_blank" rel="noopener">
+  {cover}
+  <div class="stack-card-body">
+    <div class="stack-card-type">{label}</div>
+    <div class="stack-card-title">{e(item['title'])}</div>
+    {'<div class="stack-card-excerpt">' + excerpt + '</div>' if excerpt else ''}
+  </div>
+</a>"""
+
+    tnl_cards = "".join(card(i, "Article") for i in cw["tnl"][:5])
+    tws_cards = "".join(card(i, "Video")   for i in cw["tws"][:5])
+
+    return f"""
+<section class="block block-stack">
+  <div class="rule-head">
+    <h2 class="rule-label">This Week</h2>
+    <span class="rule-meta">{week_label}</span>
+    <a class="rule-meta linky" href="links/index.html" style="margin-left:auto">Full reading room &rarr;</a>
+  </div>
+  <div class="stack-row-label">The Newest Latest</div>
+  <div class="stack-grid">{tnl_cards}</div>
+  <div class="stack-row-label" style="margin-top:1.4rem">Time Well Spent</div>
+  <div class="stack-grid">{tws_cards}</div>
 </section>"""
 
 
@@ -370,6 +429,7 @@ def render_masthead():
       <a href="archive.html">Archive</a>
       <a href="tags/index.html">Topics</a>
       <a class="is-active" href="lexicon/index.html">Lexicon</a>
+      <a href="links/index.html">Links</a>
       <a href="tags/a-closer-look.html">Essays</a>
       <a href="tags/worthafortune.html">Newsletters</a>
       <a href="podcast.html">Podcast</a>
@@ -380,6 +440,11 @@ def render_masthead():
 
 
 CSS = r"""
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Light.otf') format('opentype');font-weight:300;font-style:normal}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Regular.otf') format('opentype');font-weight:400;font-style:normal}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Bold.otf') format('opentype');font-weight:700;font-style:normal}
+@font-face{font-family:'FauxCRA Mono';src:url('assets/fonts/FauxCRA-Monospaced.otf') format('opentype');font-weight:400;font-style:normal}
+
 :root{
   --bg: oklch(0.992 0.004 70);
   --surface: oklch(0.972 0.005 70);
@@ -398,7 +463,7 @@ CSS = r"""
   --display:'Libre Caslon Display',Georgia,serif;
   --display-weight:400;
   --serif:'Source Serif 4',Georgia,serif;
-  --mono:'DM Mono',ui-monospace,monospace;
+  --mono:'FauxCRA Mono','FauxCRA',ui-monospace,monospace;
   --w:1220px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
@@ -409,16 +474,16 @@ a{color:inherit;text-decoration:none}
 .wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
 
 /* kicker / meta */
-.kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
+.kicker{font-family:var(--mono);font-weight:300;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
 .kicker-accent{color:var(--accent)}
 .kicker-on-dark{color:oklch(0.78 0.10 55)}
-.meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+.meta{font-family:var(--mono);font-weight:300;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 
 /* nameplate — the signature front-page moment */
 .nameplate{border-bottom:1px solid var(--ink);background:var(--bg)}
 .np-inner{max-width:var(--w);margin:0 auto;padding:20px 28px 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
-.np-left{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
-.np-right{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
+.np-left{font-family:'FauxCRA',var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
+.np-right{font-family:'FauxCRA',var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
 .np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
 /* masthead nav */
 .mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
@@ -427,10 +492,10 @@ a{color:inherit;text-decoration:none}
 .tw-orb{height:30px;width:auto;display:block}
 .foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
 .mast-nav{display:flex;gap:22px;margin-left:6px;flex-wrap:wrap}
-.mast-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.mast-nav a{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
 .mast-nav a:hover{color:var(--ink)}
 .mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
-.mast-sub{margin-left:auto;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.mast-sub{margin-left:auto;font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .mast-sub:hover{background:var(--accent-deep)}
 
 /* lead */
@@ -440,6 +505,7 @@ a{color:inherit;text-decoration:none}
 .lead-main:hover .lead-figure img{transform:scale(1.04)}
 .lead-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,5.6vw,5.2rem);line-height:.93;letter-spacing:-.035em;margin:.7rem 0 .9rem;text-wrap:balance}
 .lead-main:hover .lead-title{color:oklch(0.34 0.07 45)}
+:where(.lead-dek,.edition-dek,.story-dek,.lexcard-def,.lex-intro,.sub-dek){font-optical-sizing:none;font-variation-settings:"opsz" 17}
 .lead-dek{font-family:var(--serif);font-size:1.22rem;line-height:1.5;color:var(--ink-muted);max-width:48ch;margin-bottom:1rem}
 .lead-side{align-self:stretch}
 .rail-head{border-top:2px solid var(--rule-strong);padding-top:.7rem;margin-bottom:1.1rem}
@@ -457,6 +523,16 @@ a{color:inherit;text-decoration:none}
 .side-row:hover{color:var(--accent)}
 .side-kicker{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.25rem}
 .side-title{font-family:var(--sans);font-weight:600;font-size:1.02rem;line-height:1.25}
+
+/* edition accordion */
+.ed-item{border-top:1px solid var(--rule)}
+.ed-row{display:flex;align-items:center;width:100%;background:none;border:none;padding:.72rem 0;cursor:pointer;text-align:left;gap:.5rem}
+.ed-row-title{font-family:var(--sans);font-weight:600;font-size:.96rem;line-height:1.2;color:var(--ink-muted);flex:1;transition:color .15s}
+.ed-row:hover .ed-row-title,.ed-row[aria-expanded=true] .ed-row-title{color:var(--ink)}
+.ed-row-caret{font-size:.65rem;color:var(--ink-faint);transition:transform .2s;flex-shrink:0}
+.ed-row[aria-expanded=true] .ed-row-caret{transform:rotate(180deg)}
+.ed-body{padding-bottom:1rem}
+.ed-body[hidden]{display:none}
 
 /* section rule head */
 .block{padding:46px 0}
@@ -488,15 +564,29 @@ a{color:inherit;text-decoration:none}
 .list-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 
 /* topics */
-.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.4rem 1.2rem}
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
 .topic-card{display:block}
-.tc-figure{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface)}
+.tc-figure{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface)}
 .tc-figure img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1)}
 .topic-card:hover .tc-figure img{transform:scale(1.06)}
-.tc-count{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;padding:.4em .6em}
-.tc-name{font-family:var(--display);font-weight:var(--display-weight);font-size:1.2rem;line-height:1.08;letter-spacing:-.01em;margin-top:.65rem;color:var(--ink)}
-.topic-card:hover .tc-name{color:var(--accent)}
+.tc-bar{position:absolute;bottom:0;left:0;right:0;display:flex;align-items:baseline;gap:.55em;background:oklch(0.235 0.012 60 / 20%);padding:.45em .65em}
+.tc-count{font-family:var(--mono);font-weight:300;font-size:.58rem;letter-spacing:.08em;color:#fff;opacity:.6;flex-shrink:0}
+.tc-name{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.topic-card:hover .tc-name{color:#fff}
 @media(max-width:820px){.topic-grid{grid-template-columns:1fr 1fr}}
+
+/* stack — this week's top 5 TNL + TWS */
+.block-stack{padding:2.4rem 0 2rem}
+.stack-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.85rem;margin-top:1rem}
+.stack-card{display:block;color:var(--ink);border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--surface);transition:border-color .2s,transform .2s}
+.stack-card:hover{border-color:var(--accent);transform:translateY(-2px);color:var(--ink)}
+.stack-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--rule)}
+.stack-card-ph{width:100%;aspect-ratio:16/9;background:var(--rule)}
+.stack-card-body{padding:.7rem .8rem .85rem}
+.stack-card-type{font-family:var(--mono);font-weight:300;font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.35rem}
+.stack-card-title{font-family:var(--sans);font-weight:600;font-size:.88rem;line-height:1.3;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.stack-card-excerpt{font-family:var(--serif);font-optical-sizing:none;font-variation-settings:"opsz" 17;font-size:.78rem;line-height:1.4;color:var(--ink-muted);margin-top:.3rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.stack-row-label{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:.2rem 0 .15rem}
 
 /* lexicon strip */
 .block-lex{background:var(--surface);margin:0 -100vw;padding-left:100vw;padding-right:100vw}
@@ -541,9 +631,9 @@ a{color:inherit;text-decoration:none}
 
 /* this-week pair header */
 .thisweek-head{display:flex;align-items:center;gap:1.1rem;max-width:var(--w);margin:0 auto;padding:46px 28px 0}
-.tw-eyebrow{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.tw-eyebrow{font-family:var(--mono);font-weight:500;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
 .tw-line{flex:1;height:2px;background:var(--rule-strong)}
-.tw-meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.tw-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
 .lead{padding-top:26px}
 .lead-figure{position:relative}
 .figure-tag{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:.45em .75em}
@@ -643,6 +733,13 @@ PLAYER_JS = r"""
     });
   });
 })();
+function edToggle(btn){
+  var expanded=btn.getAttribute('aria-expanded')==='true';
+  var list=btn.closest('.side-list');
+  list.querySelectorAll('.ed-row').forEach(function(b){b.setAttribute('aria-expanded','false');});
+  list.querySelectorAll('.ed-body').forEach(function(d){d.hidden=true;});
+  if(!expanded){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.hidden=false;}
+}
 </script>
 """
 
@@ -656,13 +753,14 @@ def build(out_name="home-v2.html"):
 <title>Token Wisdom — The Newsletter of Record for the Future of Now</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
 <style>{CSS}</style>
 </head><body>
 {render_masthead()}
 <main class="wrap">
 {render_hero()}
 {render_listen()}
+{render_stack()}
 {render_recent()}
 {render_topics()}
 {render_lexicon()}
