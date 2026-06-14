@@ -270,6 +270,20 @@ a{color:inherit;text-decoration:none}
 /* mobile — tighten the menu bar */
 @media(max-width:860px){.mast-inner{padding:10px 16px;gap:14px}}
 @media(max-width:380px){.mast-toggle .mtxt{display:none}.mast-toggle{padding:0 12px}}
+/* mobile — "This Week" card rows become edge-to-edge swipe rails */
+@media(max-width:860px){
+  .stack-grid{
+    display:flex;grid-template-columns:none;gap:.75rem;
+    overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;-ms-overflow-style:none;
+    margin-inline:-28px;padding:0 28px .4rem;scroll-padding-left:28px;
+    overscroll-behavior-x:contain;
+  }
+  .stack-grid::-webkit-scrollbar{display:none}
+  .stack-card{flex:0 0 clamp(200px,70vw,250px);scroll-snap-align:start}
+  .stack-row-label{display:flex;align-items:baseline;gap:.5em}
+  .stack-row-label::after{content:"swipe →";margin-left:auto;color:var(--ink-faint);letter-spacing:.12em}
+}
 @media(max-width:620px){
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
