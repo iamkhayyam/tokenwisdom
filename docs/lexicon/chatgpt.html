@@ -232,7 +232,7 @@ html.nav-open{overflow:hidden}
   --nto-bg:#15110b;--nto-text:#f4eee1;--nto-muted:#9b9082;--nto-rule:rgba(244,238,225,.13);
   background:var(--nto-bg);color:var(--nto-text);
   display:flex;flex-direction:column;
-  padding:clamp(1.1rem,3.5vw,2.4rem) clamp(1.2rem,5vw,3.6rem) clamp(1.3rem,3.5vw,2.6rem);
+  padding:clamp(.9rem,3vh,1.7rem) clamp(1.2rem,5vw,3.6rem);
   opacity:0;visibility:hidden;pointer-events:none;
   clip-path:inset(0 0 100% 0);
   transition:clip-path .55s cubic-bezier(.7,0,.18,1),opacity .01s linear .55s,visibility 0s linear .55s;
@@ -242,6 +242,7 @@ html.nav-open .nav-takeover{
   opacity:1;visibility:visible;pointer-events:auto;clip-path:inset(0 0 0 0);
   transition:clip-path .62s cubic-bezier(.16,1,.3,1),opacity .01s;
 }
+.nto-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
 .nto-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(115% 75% at 88% -12%,color-mix(in srgb,var(--accent) 40%,transparent),transparent 58%)}
 .nto-monogram{position:absolute;right:clamp(-1rem,1vw,1.5rem);bottom:clamp(-4rem,-5vw,-1.5rem);font-family:var(--display);font-weight:400;font-size:min(48vh,40vw);line-height:.7;color:var(--nto-text);opacity:.045;pointer-events:none;user-select:none}
 .nto-bar,.nto-nav,.nto-foot{position:relative;width:100%;max-width:1180px;margin-inline:auto}
@@ -251,19 +252,19 @@ html.nav-open .nav-takeover{
 .nto-close{display:inline-flex;align-items:center;gap:.65em;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--nto-text);background:transparent;border:1px solid var(--nto-rule);padding:.7em 1em;cursor:pointer;transition:border-color .2s,color .2s}
 .nto-close:hover{color:var(--accent);border-color:var(--accent)}
 .nto-close .x{font-size:1.05em;line-height:1}
-.nto-nav{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(1rem,3vh,2.4rem) 0}
-.nto-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:clamp(.8rem,2vw,1.6rem);padding:clamp(.5rem,1.5vh,1.05rem) 0;border-top:1px solid var(--nto-rule);color:var(--nto-text);text-decoration:none;opacity:0;transform:translateY(30px)}
+.nto-nav{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(.4rem,1.4vh,1.3rem) 0}
+.nto-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:clamp(.8rem,2vw,1.6rem);padding:clamp(.3rem,1.05vh,.95rem) 0;border-top:1px solid var(--nto-rule);color:var(--nto-text);text-decoration:none;opacity:0;transform:translateY(30px)}
 .nto-row:last-of-type{border-bottom:1px solid var(--nto-rule)}
 html.nav-open .nto-row{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:calc(.14s + var(--i,0)*.05s)}
 .nto-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--accent);min-width:2.2em}
-.nto-label{font-family:var(--display);font-weight:400;font-size:clamp(2.05rem,8vw,4.7rem);line-height:.96;letter-spacing:-.02em;transition:transform .4s cubic-bezier(.16,1,.3,1),color .25s ease}
+.nto-label{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,min(7.5vw,5vh),4.4rem);line-height:.96;letter-spacing:-.02em;transition:transform .4s cubic-bezier(.16,1,.3,1),color .25s ease}
 .nto-desc{justify-self:end;text-align:right;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--nto-muted);max-width:16ch;opacity:0;transform:translateX(-10px);transition:opacity .3s ease,transform .3s ease}
 .nto-arrow{display:none}
 @media(hover:hover){
   .nto-row:hover .nto-label{color:var(--accent);transform:translateX(clamp(8px,1.6vw,22px))}
   .nto-row:hover .nto-desc{opacity:1;transform:none}
 }
-.nto-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem;padding-top:clamp(1rem,2.5vh,1.8rem);border-top:1px solid var(--nto-rule);opacity:0;transform:translateY(20px)}
+.nto-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem;padding-top:clamp(.7rem,1.8vh,1.4rem);border-top:1px solid var(--nto-rule);opacity:0;transform:translateY(20px)}
 html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:.62s}
 .nto-sub{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.95em 1.6em;transition:background .2s}
 .nto-sub:hover{background:var(--accent-deep)}
@@ -388,8 +389,10 @@ html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,tra
 </header>
 
 <div class="nav-takeover" id="nav-takeover" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true">
-  <div class="nto-glow" aria-hidden="true"></div>
-  <div class="nto-monogram" aria-hidden="true">&amp;</div>
+  <div class="nto-bg" aria-hidden="true">
+    <div class="nto-glow"></div>
+    <div class="nto-monogram">&amp;</div>
+  </div>
   <div class="nto-bar">
     <span class="nto-eyebrow">The Index <b>·</b> Token Wisdom</span>
     <button class="nto-close" data-nav-close aria-label="Close menu">Close <span class="x">✕</span></button>
@@ -433,7 +436,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(3)</span></h3>
       <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/145th-edition-token-wisdom-week-05.html">145th Edition</a></span><span class="tp-meta">W05 · Feb 2, 2026</span></div><div class="term-post"><span class="tp-title"><a href="../posts/127th-edition-token-wisdom-week-39.html">127th Edition</a></span><span class="tp-meta">W39 · Sep 29, 2025</span></div><div class="term-post"><span class="tp-title"><a href="../posts/100th-edition-pearls-of-wisdom-w12.html">100th Edition</a></span><span class="tp-meta"> · Mar 24, 2025</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="ai.html">AI <span>3</span></a><a class="lex-chip" href="darpa.html">DARPA <span>2</span></a><a class="lex-chip" href="technological-existential-risks.html">Technological Existential Risks <span>1</span></a><a class="lex-chip" href="ceo.html">CEO <span>1</span></a><a class="lex-chip" href="generalist-vision-language-action-models.html">Generalist Vision-Language-Action Models <span>1</span></a><a class="lex-chip" href="immigration-system-flaws.html">Immigration System Flaws <span>1</span></a><a class="lex-chip" href="ai-emotional-impact.html">AI Emotional Impact <span>1</span></a><a class="lex-chip" href="social-experiment.html">Social Experiment <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="ai.html">AI <span>3</span></a><a class="lex-chip" href="darpa.html">DARPA <span>2</span></a><a class="lex-chip" href="ethical-ai-development.html">Ethical AI Development <span>1</span></a><a class="lex-chip" href="long-term-intelligence-studies.html">Long-Term Intelligence Studies <span>1</span></a><a class="lex-chip" href="biomimetics.html">Biomimetics <span>1</span></a><a class="lex-chip" href="helix-ai-model.html">Helix AI Model <span>1</span></a><a class="lex-chip" href="future-self-visualization.html">Future Self Visualization <span>1</span></a><a class="lex-chip" href="existential-risk.html">Existential Risk <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>
