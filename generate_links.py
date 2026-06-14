@@ -27,8 +27,9 @@ LINKS_CSS = """
 .rr-featured-title{font-family:var(--display);font-weight:400;font-size:1.5rem;color:var(--ink)}
 .rr-week-badge{margin-left:auto;font-family:var(--mono);font-weight:300;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 
-.rr-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
-.rr-card{display:block;color:var(--ink);border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--surface);transition:border-color .2s,transform .2s}
+.rr-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:.5rem}
+.rr-grid::-webkit-scrollbar{height:4px}.rr-grid::-webkit-scrollbar-track{background:var(--rule)}.rr-grid::-webkit-scrollbar-thumb{background:var(--ink-faint);border-radius:2px}
+.rr-card{display:block;flex:0 0 220px;color:var(--ink);border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--surface);transition:border-color .2s,transform .2s;scroll-snap-align:start}
 .rr-card:hover{border-color:var(--accent);transform:translateY(-2px);color:var(--ink)}
 .rr-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--rule)}
 .rr-card-img-placeholder{width:100%;aspect-ratio:16/9;background:var(--rule);display:flex;align-items:center;justify-content:center}
@@ -66,8 +67,7 @@ LINKS_CSS = """
 .rr-stat-num{font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--ink);line-height:1}
 .rr-stat-lbl{font-family:var(--mono);font-weight:300;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.3rem}
 
-@media(max-width:860px){.rr-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:580px){.rr-grid{grid-template-columns:1fr 1fr}.rr-stats{gap:1.5rem}}
+@media(max-width:580px){.rr-stats{gap:1.5rem}}
 """
 
 
@@ -119,11 +119,9 @@ def render_featured(db):
         return ""
 
     week_label = f"2026 · W{cw['week']:02d}"
-    tnl5 = cw["tnl"][:5]
-    tws5 = cw["tws"][:5]
 
-    tnl_cards = "".join(card(i, "tnl") for i in tnl5)
-    tws_cards = "".join(card(i, "tws") for i in tws5)
+    tnl_cards = "".join(card(i, "tnl") for i in cw["tnl"])
+    tws_cards = "".join(card(i, "tws") for i in cw["tws"])
 
     return f"""
 <section class="rr-featured">

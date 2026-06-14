@@ -1,12 +1,15 @@
 """
-The Corpus Report — a Feltron-style quantified portrait of Token Wisdom.
+The Corpus Report — a Feltron Annual Report for Token Wisdom.
 
-Renders docs/metrics.html from the corpus (all_posts.json), the Lexicon
-(data/lexicon.json), and the curated link graph (data/links.json). The page
-shares the site chrome (nav + colophon) via generate_site.page_shell, and
-carries its own scoped <style> block for the report layout + inline SVG charts.
+A quantified portrait of the corpus from 2023 onward in the structural grammar
+of Nicholas Felton's Annual Reports — big hero numerals, small-caps label→value
+rows, dotted-leader ranked lists, hatched overlapping area charts, italic-serif
+subtitles — dressed in the Token Wisdom design system: warm paper, Libre Caslon
+serif numerals, burnt-orange accent with teal and gold.
 
-Run standalone with:  python3 metrics.py   (after generate_site has data)
+Scope: 2023–present. Earlier years (2013–2015, 2022) are handled separately.
+
+Run standalone:  python3 metrics.py
 Wired into the full build via generate_site.main().
 """
 
@@ -21,8 +24,13 @@ BACKUP_DIR = Path(__file__).resolve().parent
 DOCS_DIR = BACKUP_DIR / "docs"
 DATA_DIR = BACKUP_DIR / "data"
 
+START_YEAR = 2023  # report scope — pre-2023 lives in a separate supplement
+
 WORD_RX = re.compile(r"[A-Za-z']+")
 SENT_RX = re.compile(r"(?<=[.!?])\s+")
+
+MONTHS = ["JAN", "FEB", "MAR", "APR", "MAY", "JUN",
+          "JUL", "AUG", "SEP", "OCT", "NOV", "DEC"]
 
 
 # ============================================================
@@ -42,97 +50,93 @@ def _post_text(p):
 
 
 def compute(posts, gs):
-    """Crunch the corpus into the report's figures. Returns a dict."""
-    pub = [p for p in posts if p.get("published_at")]
+    pub = [p for p in posts
+           if p.get("published_at") and p["published_at"][:4].isdigit()
+           and int(p["published_at"][:4]) >= START_YEAR]
     pub.sort(key=lambda p: p["published_at"])
 
     nl = [p for p in pub if gs.is_newsletter(p)]
     essays = [p for p in pub if not gs.is_newsletter(p)]
 
-    # ---- volume ----
-    wc = {p["slug"]: len(_words(_post_text(p))) for p in pub}
+    wc = {id(p): len(_words(_post_text(p))) for p in pub}
     total_words = sum(wc.values())
     total_rt = sum(p.get("reading_time") or 0 for p in pub)
-    words_nl = sum(wc[p["slug"]] for p in nl)
-    words_essay = sum(wc[p["slug"]] for p in essays)
+    words_nl = sum(wc[id(p)] for p in nl)
+    words_essay = sum(wc[id(p)] for p in essays)
 
     counts = sorted(wc.values())
-    longest = max(pub, key=lambda p: wc[p["slug"]])
+    longest = max(pub, key=lambda p: wc[id(p)])
     median_wc = int(statistics.median(counts))
     mean_wc = total_words // len(pub)
 
-    # corpus vocabulary
     vocab = set()
     for p in pub:
         vocab.update(w.lower() for w in _words(_post_text(p)))
+
+    # ---- monthly series (essays vs newsletters) for the area chart ----
+    month_keys = []
+    y0 = START_YEAR
+    last = pub[-1]["published_at"][:7]
+    y, m = START_YEAR, 1
+    while f"{y:04d}-{m:02d}" <= last:
+        month_keys.append(f"{y:04d}-{m:02d}")
+        m += 1
+        if m > 12:
+            m, y = 1, y + 1
+    mo_nl = {k: 0 for k in month_keys}
+    mo_es = {k: 0 for k in month_keys}
+    for p in pub:
+        k = p["published_at"][:7]
+        if k in mo_nl:
+            (mo_nl if gs.is_newsletter(p) else mo_es)[k] += wc[id(p)]
 
     # ---- by year ----
     by_year = defaultdict(list)
     for p in pub:
         by_year[p["published_at"][:4]].append(p)
-
-    years = sorted(by_year)
     year_rows = []
-    for y in years:
-        ps = by_year[y]
+    for yk in sorted(by_year):
+        ps = by_year[yk]
         txt = " ".join(_post_text(p) for p in ps)
-        w = _words(txt)
-        s = _sentences(txt)
+        w, s = _words(txt), _sentences(txt)
         if not w:
             continue
-        # length-normalised vocabulary richness: mean TTR over 1k-word windows
         ttrs = []
         for i in range(0, len(w), 1000):
             chunk = w[i:i + 1000]
             if len(chunk) >= 250:
                 ttrs.append(len(set(c.lower() for c in chunk)) / len(chunk))
         year_rows.append({
-            "year": y,
-            "posts": len(ps),
-            "words": len(w),
+            "year": yk, "posts": len(ps), "words": len(w),
             "rt": sum(p.get("reading_time") or 0 for p in ps),
-            "asl": len(w) / max(1, len(s)),                 # avg sentence length
-            "awl": sum(len(x) for x in w) / len(w),         # avg word length
+            "asl": len(w) / max(1, len(s)),
+            "awl": sum(len(x) for x in w) / len(w),
             "ttr": (statistics.mean(ttrs) * 100) if ttrs else None,
-            "uniq": len(set(x.lower() for x in w)),
         })
 
     # ---- read-time distribution ----
     rt_buckets = Counter()
     for p in pub:
         rt = p.get("reading_time") or 0
-        if rt <= 3:
-            rt_buckets["≤3"] += 1
-        elif rt <= 6:
-            rt_buckets["4–6"] += 1
-        elif rt <= 10:
-            rt_buckets["7–10"] += 1
-        elif rt <= 15:
-            rt_buckets["11–15"] += 1
-        else:
-            rt_buckets["16+"] += 1
+        b = ("1–3" if rt <= 3 else "4–6" if rt <= 6 else
+             "7–10" if rt <= 10 else "11–15" if rt <= 15 else "16+")
+        rt_buckets[b] += 1
 
-    # ---- lexicon ----
+    # ---- lexicon (filter to terms seen from START_YEAR on) ----
     lex = json.load(open(DATA_DIR / "lexicon.json"))
-    terms = lex["terms"]
-    ed_count = lex.get("edition_count", 0)
+    terms = [t for t in lex["terms"]
+             if (t.get("latest") or {}).get("date", "9999")[:4] >= str(START_YEAR)]
     cats = Counter(t["category"] for t in terms)
-    cat_color = {}
-    for t in terms:
-        cat_color.setdefault(t["category"], t.get("color", "ink"))
     recurring = [t for t in terms if t.get("edition_count", 0) >= 3]
     multi = [t for t in terms if t.get("edition_count", 0) > 1]
-    top_terms = sorted(terms, key=lambda t: t.get("edition_count", 0), reverse=True)[:14]
+    top_terms = sorted(terms, key=lambda t: t.get("edition_count", 0), reverse=True)[:12]
 
-    # new terms first-defined per quarter
     coin_q = Counter()
     for t in terms:
-        d = (t.get("first") or {}).get("date", "")
-        if len(d) >= 7:
-            mo = int(d[5:7])
-            coin_q[f"{d[:4]} Q{(mo - 1) // 3 + 1}"] += 1
+        dt = (t.get("first") or {}).get("date", "")
+        if len(dt) >= 7 and dt[:4] >= str(START_YEAR):
+            coin_q[f"{dt[:4]} Q{(int(dt[5:7]) - 1) // 3 + 1}"] += 1
 
-    # terms per edition (concentration)
     ed_terms = defaultdict(set)
     for t in terms:
         for e in t.get("editions", []):
@@ -140,541 +144,544 @@ def compute(posts, gs):
                 ed_terms[e["edition"]].add(t["name"])
     ed_sizes = [len(v) for v in ed_terms.values()]
 
-    # ---- links / interconnectedness ----
     links = json.load(open(DATA_DIR / "links.json"))
 
     return {
         "now": datetime.now().strftime("%B %-d, %Y"),
-        "span": f"{years[0]}–{years[-1]}",
-        "span_years": int(years[-1]) - int(years[0]),
+        "span": f"{pub[0]['published_at'][:4]}–{pub[-1]['published_at'][:4]}",
+        "n_years": len({p["published_at"][:4] for p in pub}),
         "n_posts": len(pub), "n_nl": len(nl), "n_essay": len(essays),
         "total_words": total_words, "total_rt": total_rt,
         "max_rt": max((p.get("reading_time") or 0) for p in pub),
         "words_nl": words_nl, "words_essay": words_essay,
-        "longest": longest, "longest_wc": wc[longest["slug"]],
-        "median_wc": median_wc, "mean_wc": mean_wc,
-        "vocab": len(vocab),
-        "year_rows": year_rows,
-        "rt_buckets": rt_buckets,
-        "n_terms": len(terms), "ed_count": ed_count,
-        "cats": cats, "cat_color": cat_color,
-        "recurring": len(recurring), "multi": len(multi),
+        "longest": longest, "longest_wc": wc[id(longest)],
+        "median_wc": median_wc, "mean_wc": mean_wc, "vocab": len(vocab),
+        "month_keys": month_keys, "mo_nl": mo_nl, "mo_es": mo_es,
+        "year_rows": year_rows, "rt_buckets": rt_buckets,
+        "n_terms": len(terms), "ed_count": len(ed_terms),
+        "cats": cats, "recurring": len(recurring), "multi": len(multi),
         "top_terms": top_terms, "coin_q": coin_q,
         "ed_terms_avg": statistics.mean(ed_sizes) if ed_sizes else 0,
         "ed_terms_max": max(ed_sizes) if ed_sizes else 0,
-        "n_editions_termed": len(ed_terms),
         "n_links": len(links.get("all_links", [])),
         "link_weeks": links.get("total_weeks", 0),
-        "tnl": links.get("total_tnl", 0), "tws": links.get("total_tws", 0),
         "gs": gs,
     }
 
 
 # ============================================================
-# FORMAT + SVG HELPERS
+# FORMAT HELPERS
 # ============================================================
 
 def _n(x):
     return f"{int(round(x)):,}"
 
 
-def _color(name):
-    """Map a lexicon color keyword to a CSS var; default to accent."""
-    return {
-        "teal": "var(--teal)", "gold": "var(--gold)",
-        "orange": "var(--accent)", "accent": "var(--accent)",
-    }.get(name, "var(--accent)")
+_ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight",
+         "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen",
+         "sixteen", "seventeen", "eighteen", "nineteen"]
+_TENS = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy",
+         "eighty", "ninety"]
 
 
-def svg_col(data, w=560, h=200, pad_b=34, label_fmt=None, accent="var(--accent)",
-            faint=None, value_fmt=_n):
-    """Vertical column chart. data: list of (label, value[, is_faint])."""
+def spell(n):
+    """Spell an int 0–99 in Title Case: Forty-Eight, Nine, Twelve."""
+    n = int(n)
+    if n < 20:
+        w = _ONES[n]
+    elif n < 100:
+        w = _TENS[n // 10] + (f"-{_ONES[n % 10]}" if n % 10 else "")
+    else:
+        return _n(n)
+    return w.title()
+
+
+# ============================================================
+# SVG CHARTS
+# ============================================================
+
+def _smooth_path(pts):
+    """Catmull-Rom → cubic bezier for a soft Feltron ridge."""
+    if len(pts) < 2:
+        return ""
+    d = [f"M{pts[0][0]:.1f} {pts[0][1]:.1f}"]
+    for i in range(len(pts) - 1):
+        p0 = pts[i - 1] if i > 0 else pts[i]
+        p1, p2 = pts[i], pts[i + 1]
+        p3 = pts[i + 2] if i + 2 < len(pts) else p2
+        c1 = (p1[0] + (p2[0] - p0[0]) / 6, p1[1] + (p2[1] - p0[1]) / 6)
+        c2 = (p2[0] - (p3[0] - p1[0]) / 6, p2[1] - (p3[1] - p1[1]) / 6)
+        d.append(f"C{c1[0]:.1f} {c1[1]:.1f} {c2[0]:.1f} {c2[1]:.1f} {p2[0]:.1f} {p2[1]:.1f}")
+    return " ".join(d)
+
+
+def area_chart(d, w=720, h=300):
+    """Two overlapping hatched areas — newsletters vs essays words per month."""
+    keys = d["month_keys"]
+    nl = [d["mo_nl"][k] for k in keys]
+    es = [d["mo_es"][k] for k in keys]
+    vmax = max(max(nl), max(es)) or 1
+    pad_l, pad_r, pad_t, pad_b = 2, 2, 26, 30
+    pw, ph = w - pad_l - pad_r, h - pad_t - pad_b
+    n = len(keys)
+    base = pad_t + ph
+
+    def pts(series):
+        return [(pad_l + (i / (n - 1)) * pw, pad_t + ph - (v / vmax) * ph)
+                for i, v in enumerate(series)]
+
+    def area(series, fill, stroke):
+        p = pts(series)
+        line = _smooth_path(p)
+        d_attr = f"{line} L{p[-1][0]:.1f} {base:.1f} L{p[0][0]:.1f} {base:.1f} Z"
+        return (f'<path d="{d_attr}" fill="{fill}" stroke="none"/>'
+                f'<path d="{line}" fill="none" stroke="{stroke}" stroke-width="1.6"/>')
+
+    # year gridlines + labels
+    grid = []
+    seen = set()
+    for i, k in enumerate(keys):
+        yr = k[:4]
+        x = pad_l + (i / (n - 1)) * pw
+        if k[5:7] == "01" or i == 0:
+            if yr not in seen:
+                seen.add(yr)
+                grid.append(f'<line x1="{x:.1f}" y1="{pad_t}" x2="{x:.1f}" y2="{base:.1f}" class="fx-grid"/>')
+                grid.append(f'<text x="{x + 4:.1f}" y="{h - 9:.1f}" class="fx-axis">{yr}</text>')
+
+    # peak callout (essays usually peak highest)
+    peak_i = max(range(n), key=lambda i: es[i])
+    px = pad_l + (peak_i / (n - 1)) * pw
+    py = pad_t + ph - (es[peak_i] / vmax) * ph
+
+    return f'''<svg class="fx-svg" viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMid meet" role="img">
+<defs>
+  <pattern id="hatchTeal" width="6" height="6" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="var(--teal)" stroke-width="0.9" stroke-opacity="0.55"/></pattern>
+  <pattern id="hatchAccent" width="6" height="6" patternTransform="rotate(-45)" patternUnits="userSpaceOnUse">
+    <line x1="0" y1="0" x2="0" y2="6" stroke="var(--accent)" stroke-width="0.9" stroke-opacity="0.7"/></pattern>
+</defs>
+{''.join(grid)}
+<line x1="{pad_l}" y1="{base:.1f}" x2="{w - pad_r}" y2="{base:.1f}" class="fx-base"/>
+{area(es, 'url(#hatchTeal)', 'var(--teal)')}
+{area(nl, 'url(#hatchAccent)', 'var(--accent-deep)')}
+<circle cx="{px:.1f}" cy="{py:.1f}" r="3" fill="var(--paper)" stroke="var(--ink)" stroke-width="1.4"/>
+<line x1="{px:.1f}" y1="{py - 4:.1f}" x2="{px:.1f}" y2="{pad_t + 4:.1f}" class="fx-callout"/>
+<text x="{px + 5:.1f}" y="{pad_t + 12:.1f}" class="fx-note">PEAK · {keys[peak_i][:4]} {MONTHS[int(keys[peak_i][5:7]) - 1]}</text>
+</svg>'''
+
+
+def ranked(data, w=520, row_h=30, color="var(--teal)", value_fmt=_n):
+    """Feltron 'passport stamp' list: caps label · bar · dotted leader · value."""
     if not data:
         return ""
-    vals = [d[1] for d in data]
-    vmax = max(vals) or 1
-    n = len(data)
-    pad_l, pad_t, pad_r = 4, 16, 4
-    plot_w = w - pad_l - pad_r
-    plot_h = h - pad_t - pad_b
-    slot = plot_w / n
-    bw = min(slot * 0.62, 46)
-    bars = []
-    for i, d in enumerate(data):
-        lab, val = d[0], d[1]
-        is_faint = len(d) > 2 and d[2]
-        bh = (val / vmax) * plot_h
-        x = pad_l + i * slot + (slot - bw) / 2
-        y = pad_t + (plot_h - bh)
-        fill = (faint or "var(--paper-rule)") if is_faint else accent
-        bars.append(
-            f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{bh:.1f}" '
-            f'fill="{fill}" rx="1"/>'
-        )
-        # value above bar
-        bars.append(
-            f'<text x="{x + bw / 2:.1f}" y="{y - 5:.1f}" class="m-svg-val" '
-            f'text-anchor="middle">{value_fmt(val)}</text>'
-        )
-        # label below
-        lbl = label_fmt(lab) if label_fmt else lab
-        bars.append(
-            f'<text x="{x + bw / 2:.1f}" y="{h - 8:.1f}" class="m-svg-lbl" '
-            f'text-anchor="middle">{lbl}</text>'
-        )
-    baseline = pad_t + plot_h
-    return (
-        f'<svg class="m-svg" viewBox="0 0 {w} {h}" role="img" '
-        f'preserveAspectRatio="xMidYMid meet">'
-        f'<line x1="{pad_l}" y1="{baseline:.1f}" x2="{w - pad_r}" y2="{baseline:.1f}" '
-        f'class="m-svg-axis"/>'
-        + "".join(bars) + "</svg>"
-    )
-
-
-def svg_ranked(data, w=560, row_h=26, accent="var(--accent)", value_fmt=_n):
-    """Horizontal ranked bars. data: list of (label, value)."""
-    if not data:
-        return ""
-    vmax = max(d[1] for d in data) or 1
-    label_w = 168
-    val_w = 52
-    bar_max = w - label_w - val_w - 10
+    vmax = max(v for _, v in data) or 1
+    label_w, val_w = 200, 46
+    bar_max = w - label_w - val_w - 14
     h = row_h * len(data)
     rows = []
     for i, (lab, val) in enumerate(data):
         y = i * row_h
         cy = y + row_h / 2
-        bw = (val / vmax) * bar_max
+        bw = max(2, (val / vmax) * bar_max)
         rows.append(
-            f'<text x="{label_w - 10}" y="{cy:.1f}" class="m-rank-lbl" '
-            f'text-anchor="end" dominant-baseline="central">{lab}</text>'
-            f'<rect x="{label_w}" y="{y + 4:.1f}" width="{bw:.1f}" '
-            f'height="{row_h - 9:.1f}" fill="{accent}" rx="1"/>'
-            f'<text x="{label_w + bw + 7:.1f}" y="{cy:.1f}" class="m-rank-val" '
-            f'dominant-baseline="central">{value_fmt(val)}</text>'
+            f'<text x="0" y="{cy:.1f}" class="fx-rank-lbl" dominant-baseline="central">{lab}</text>'
+            f'<rect x="{label_w}" y="{cy - 2.5:.1f}" width="{bw:.1f}" height="5" fill="{color}"/>'
+            f'<line x1="{label_w + bw + 4:.1f}" y1="{cy:.1f}" x2="{w - val_w:.1f}" y2="{cy:.1f}" class="fx-leader"/>'
+            f'<text x="{w:.1f}" y="{cy:.1f}" class="fx-rank-val" text-anchor="end" dominant-baseline="central">{value_fmt(val)}</text>'
         )
-    return (
-        f'<svg class="m-svg" viewBox="0 0 {w} {h}" role="img" '
-        f'preserveAspectRatio="xMidYMid meet">' + "".join(rows) + "</svg>"
-    )
+        if i:
+            rows.append(f'<line x1="0" y1="{y:.1f}" x2="{w}" y2="{y:.1f}" class="fx-rowrule"/>')
+    return (f'<svg class="fx-svg" viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMid meet" role="img">'
+            + "".join(rows) + "</svg>")
 
 
-def svg_line(rows, key, w=560, h=160, accent="var(--accent)", value_fmt="{:.1f}",
-             dot_faint_below=5):
-    """Single-metric line over years. rows: compute()['year_rows']."""
-    pts = [(r["year"], r[key], r["posts"]) for r in rows if r.get(key) is not None]
+def line_mini(rows, key, w=300, h=150, color="var(--teal)", fmt="{:.0f}"):
+    pts = [(r["year"], r[key]) for r in rows if r.get(key) is not None]
     if len(pts) < 2:
         return ""
     vals = [p[1] for p in pts]
     vmin, vmax = min(vals), max(vals)
     span = (vmax - vmin) or 1
-    pad_l, pad_r, pad_t, pad_b = 6, 6, 22, 26
-    plot_w = w - pad_l - pad_r
-    plot_h = h - pad_t - pad_b
+    pad_l, pad_r, pad_t, pad_b = 6, 6, 24, 26
+    pw, ph = w - pad_l - pad_r, h - pad_t - pad_b
     n = len(pts)
-
-    def xy(i, v):
-        x = pad_l + (i / (n - 1)) * plot_w
-        y = pad_t + plot_h - ((v - vmin) / span) * plot_h
-        return x, y
-
-    path = []
+    coords = [(pad_l + (i / (n - 1)) * pw, pad_t + ph - ((v - vmin) / span) * ph)
+              for i, (_, v) in enumerate(pts)]
+    path = "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in coords)
     dots = []
-    for i, (yr, v, posts) in enumerate(pts):
-        x, y = xy(i, v)
-        path.append(f"{'M' if i == 0 else 'L'}{x:.1f} {y:.1f}")
-        faint = posts < dot_faint_below
-        r = 2.4 if faint else 3.4
-        dots.append(
-            f'<circle cx="{x:.1f}" cy="{y:.1f}" r="{r}" '
-            f'fill="{"var(--paper)" if faint else accent}" '
-            f'stroke="{accent}" stroke-width="{1.4 if faint else 0}"/>'
-        )
-        dots.append(
-            f'<text x="{x:.1f}" y="{y - 9:.1f}" class="m-svg-val" '
-            f'text-anchor="middle">{value_fmt.format(v)}</text>'
-        )
-        dots.append(
-            f'<text x="{x:.1f}" y="{h - 8:.1f}" class="m-svg-lbl" '
-            f'text-anchor="middle">{yr[2:]}</text>'
-        )
-    return (
-        f'<svg class="m-svg" viewBox="0 0 {w} {h}" role="img" '
-        f'preserveAspectRatio="xMidYMid meet">'
-        f'<path d="{" ".join(path)}" fill="none" stroke="{accent}" '
-        f'stroke-width="1.6" stroke-linejoin="round"/>'
-        + "".join(dots) + "</svg>"
-    )
+    for i, ((yr, v), (x, yy)) in enumerate(zip(pts, coords)):
+        dots.append(f'<circle cx="{x:.1f}" cy="{yy:.1f}" r="3.2" fill="{color}"/>')
+        dots.append(f'<text x="{x:.1f}" y="{yy - 9:.1f}" class="fx-pt" text-anchor="middle">{fmt.format(v)}</text>')
+        dots.append(f'<text x="{x:.1f}" y="{h - 8:.1f}" class="fx-axis" text-anchor="middle">{yr[2:]}</text>')
+    return (f'<svg class="fx-svg" viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMid meet" role="img">'
+            f'<path d="{path}" fill="none" stroke="{color}" stroke-width="1.6" stroke-linejoin="round"/>'
+            + "".join(dots) + "</svg>")
 
 
-def svg_stack(segments, w=560, h=30):
-    """Single horizontal stacked bar. segments: list of (label, value, color)."""
-    total = sum(s[1] for s in segments) or 1
-    x = 0.0
-    parts = []
-    for lab, val, col in segments:
-        seg_w = (val / total) * w
-        parts.append(f'<rect x="{x:.1f}" y="0" width="{seg_w:.1f}" height="{h}" fill="{col}"/>')
-        x += seg_w
-    return (
-        f'<svg class="m-svg" viewBox="0 0 {w} {h}" role="img" '
-        f'preserveAspectRatio="none" style="height:{h}px">' + "".join(parts) + "</svg>"
-    )
+def columns(data, w=520, h=200, color="var(--teal)", value_fmt=_n):
+    if not data:
+        return ""
+    vmax = max(v for _, v in data) or 1
+    pad_t, pad_b = 18, 30
+    pw, ph = w - 8, h - pad_t - pad_b
+    n = len(data)
+    slot = pw / n
+    bw = min(slot * 0.5, 40)
+    base = pad_t + ph
+    out = [f'<line x1="4" y1="{base:.1f}" x2="{w - 4:.1f}" y2="{base:.1f}" class="fx-base"/>']
+    for i, (lab, val) in enumerate(data):
+        bh = (val / vmax) * ph
+        x = 4 + i * slot + (slot - bw) / 2
+        y = base - bh
+        out.append(f'<rect x="{x:.1f}" y="{y:.1f}" width="{bw:.1f}" height="{bh:.1f}" fill="{color}"/>')
+        out.append(f'<text x="{x + bw / 2:.1f}" y="{y - 6:.1f}" class="fx-pt" text-anchor="middle">{value_fmt(val)}</text>')
+        out.append(f'<text x="{x + bw / 2:.1f}" y="{h - 9:.1f}" class="fx-axis" text-anchor="middle">{lab}</text>')
+    return (f'<svg class="fx-svg" viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMid meet" role="img">'
+            + "".join(out) + "</svg>")
+
+
+# ============================================================
+# HTML BUILDERS
+# ============================================================
+
+def cell(label, value, note="", tone="ink", size="big"):
+    """Feltron label→value cell: tiny caps label, giant numeral, tiny note."""
+    note_h = f'<div class="fc-note">{note}</div>' if note else ""
+    return (f'<div class="fc fc-{size}">'
+            f'<div class="fc-label">{label}</div>'
+            f'<div class="fc-value t-{tone}">{value}</div>{note_h}</div>')
+
+
+def spread(kicker, title, subtitle, body):
+    return f'''
+<section class="fs">
+  <div class="fs-head">
+    <div class="fs-kicker">{kicker}</div>
+    <h2 class="fs-title">{title}</h2>
+    <p class="fs-sub">{subtitle}</p>
+  </div>
+  {body}
+</section>'''
+
+
+def chart(label, svg, foot=""):
+    foot_h = f'<div class="fx-foot">{foot}</div>' if foot else ""
+    return f'<figure class="fx"><figcaption class="fx-label">{label}</figcaption>{svg}{foot_h}</figure>'
 
 
 # ============================================================
 # RENDER
 # ============================================================
 
-def _stat(num, label, sub=""):
-    sub_html = f'<div class="m-stat-sub">{sub}</div>' if sub else ""
-    return (
-        f'<div class="m-stat"><div class="m-stat-num">{num}</div>'
-        f'<div class="m-stat-lbl">{label}</div>{sub_html}</div>'
-    )
-
-
-def _section(idx, kicker, title, note=""):
-    note_html = f'<p class="m-sec-note">{note}</p>' if note else ""
-    return f"""
-<section class="m-sec">
-  <div class="m-sec-head">
-    <span class="m-sec-no">{idx}</span>
-    <div>
-      <div class="m-sec-kicker">{kicker}</div>
-      <h2 class="m-sec-title">{title}</h2>
-    </div>
-  </div>
-  {note_html}
-"""
-
-
 def render(d):
     gs = d["gs"]
     hrs = d["total_rt"] / 60
-    pct_nl = d["words_nl"] / d["total_words"] * 100
+    pct_nl = round(d["words_nl"] / d["total_words"] * 100)
+    longest_t = gs.clean_title(d["longest"])
 
-    # ----- masthead + headline figures -----
-    head = f"""
-<header class="m-masthead">
-  <div class="m-mast-kicker">Annual Report · The Quantified Corpus</div>
-  <h1 class="m-mast-title">The Corpus Report</h1>
-  <p class="m-mast-sub">A measured portrait of <strong>Token Wisdom</strong> —
-     every word, edition, and idea, counted. {d['span']}.</p>
-  <div class="m-mast-meta">Compiled {d['now']} · {d['n_posts']} entries ·
-     {d['span_years']} years on record</div>
+    # ---- masthead ----
+    head = f'''
+<header class="fm">
+  <div class="fm-rule"></div>
+  <div class="fm-top">
+    <div class="fm-meta">{d['span']} · The Quantified Corpus</div>
+    <div class="fm-meta fm-meta-r">Compiled {d['now']}</div>
+  </div>
+  <h1 class="fm-title">The Corpus Report</h1>
+  <p class="fm-sub">A record of the writing — every word, edition, and idea
+     counted, from {d['span'].split('–')[0]} to today.</p>
+  <div class="fm-rule fm-rule-b"></div>
 </header>
 
-<div class="m-hero-grid">
-  {_stat(_n(d['total_words']), 'Words written', f"across {d['n_posts']} entries")}
-  {_stat(f"{hrs:.0f}", 'Hours of reading', f"{_n(d['total_rt'])} minutes, cover to cover")}
-  {_stat(_n(d['n_terms']), 'Terms defined', 'in The Lexicon')}
-  {_stat(_n(d['vocab']), 'Distinct words', 'the working vocabulary')}
-  {_stat(_n(d['n_links']), 'Links curated', f"over {d['link_weeks']} weeks")}
-  {_stat(d['span_years'], 'Years on record', d['span'])}
-</div>
-"""
+<div class="fg fg-hero">
+  {cell('WORDS WRITTEN', _n(d['total_words']), f"across {d['n_posts']} entries", 'ink', 'xl')}
+  {cell('HOURS OF READING', f"{hrs:.0f}", f"{_n(d['total_rt'])} minutes, cover to cover", 'accent')}
+  {cell('ENTRIES PUBLISHED', _n(d['n_posts']), f"{d['n_nl']} editions · {d['n_essay']} essays", 'ink')}
+  {cell('TERMS DEFINED', _n(d['n_terms']), 'in The Lexicon', 'teal')}
+  {cell('DISTINCT WORDS', _n(d['vocab']), 'the working vocabulary', 'ink')}
+  {cell('LINKS CURATED', _n(d['n_links']), f"over {d['link_weeks']} weeks", 'accent')}
+  {cell('YEARS ON RECORD', spell(d['n_years']), d['span'], 'gold')}
+  {cell('AVERAGE ENTRY', _n(d['mean_wc']), 'words', 'ink')}
+  {cell('LONGEST ENTRY', _n(d['longest_wc']), 'words, single piece', 'teal')}
+</div>'''
 
-    # ----- §1 word count -----
-    year_words = [(r["year"], r["words"], r["posts"] < 5) for r in d["year_rows"]]
-    longest_t = gs.clean_title(d["longest"]) if hasattr(gs, "clean_title") else d["longest"].get("title", "")
-    s1 = _section("01", "Volume", "Word Count",
-                  "538-thousand words is a long shelf. Here is how the corpus splits "
-                  "between the weekly digest and the long-form essays, and how it "
-                  "accumulated year over year.") + f"""
-  <div class="m-split">
-    <div class="m-split-bar">
-      {svg_stack([('Newsletters', d['words_nl'], 'var(--accent)'),
-                  ('Essays', d['words_essay'], 'var(--teal)')])}
-      <div class="m-legend">
-        <span><i style="background:var(--accent)"></i>Newsletters · {_n(d['words_nl'])} words ({pct_nl:.0f}%) · {d['n_nl']} editions</span>
-        <span><i style="background:var(--teal)"></i>Essays · {_n(d['words_essay'])} words ({100 - pct_nl:.0f}%) · {d['n_essay']} pieces</span>
-      </div>
-    </div>
-    <div class="m-mini-stats">
-      {_stat(_n(d['mean_wc']), 'Average entry', 'words')}
-      {_stat(_n(d['median_wc']), 'Median entry', 'words')}
-      {_stat(_n(d['longest_wc']), 'Longest entry', 'words')}
-    </div>
+    # ---- §01 Volume ----
+    stamp_split = ranked([("NEWSLETTERS", d["words_nl"]), ("ESSAYS", d["words_essay"])],
+                         w=520, row_h=40, color="var(--ink)",
+                         value_fmt=lambda v: _n(v))
+    vol = spread(
+        "01 · Volume", "Word Count",
+        "A record of consumption — what the corpus is made of, and when it arrived.",
+        f'''
+  <div class="fg fg-3">
+    {cell('AVERAGE ENTRY', _n(d['mean_wc']), 'words', 'ink', 'big')}
+    {cell('MEDIAN ENTRY', _n(d['median_wc']), 'words', 'ink', 'big')}
+    {cell('LONGEST', _n(d['longest_wc']), gs.esc(longest_t[:40]), 'teal', 'big')}
   </div>
-  <p class="m-caption">The longest single entry — <em>{gs.esc(longest_t)}</em> —
-     runs {_n(d['longest_wc'])} words on its own.</p>
-
-  <div class="m-chart">
-    <div class="m-chart-label">Words published per year</div>
-    {svg_col(year_words, label_fmt=lambda y: y[2:], value_fmt=lambda v: f"{v/1000:.0f}k")}
-    <div class="m-chart-foot">Faint columns are years with fewer than five entries.</div>
+  <div class="fsplit">
+    <div class="fc-label">NEWSLETTERS vs ESSAYS · words</div>
+    {stamp_split}
+    <div class="fx-foot">Newsletters {pct_nl}% · essays {100 - pct_nl}% of the {_n(d['total_words'])}-word corpus.</div>
   </div>
-"""
+  {chart("WORDS PUBLISHED PER MONTH — NEWSLETTERS (ORANGE) vs ESSAYS (TEAL)",
+         area_chart(d),
+         "Each band is words shipped that month; the curves track the publication's two voices.")}''')
 
-    # ----- §2 read time -----
-    rt_order = ["≤3", "4–6", "7–10", "11–15", "16+"]
+    # ---- §02 Read Time ----
+    rt_order = ["1–3", "4–6", "7–10", "11–15", "16+"]
     rt_data = [(b, d["rt_buckets"].get(b, 0)) for b in rt_order]
-    year_rt = [(r["year"], r["rt"], r["posts"] < 5) for r in d["year_rows"]]
-    s2 = _section("02", "Attention", "Read Time",
-                  f"At a steady pace the whole corpus is {hrs:.0f} hours of reading — "
-                  "a full work-week and then some. Most entries, though, ask for far less.") + f"""
-  <div class="m-two">
-    <div class="m-chart">
-      <div class="m-chart-label">Entries by reading time (minutes)</div>
-      {svg_col(rt_data, w=420, accent="var(--teal)")}
-    </div>
-    <div class="m-chart">
-      <div class="m-chart-label">Reading minutes added per year</div>
-      {svg_col(year_rt, w=420, label_fmt=lambda y: y[2:], accent="var(--teal)")}
-    </div>
+    year_rt = [(r["year"][2:], r["rt"]) for r in d["year_rows"]]
+    read = spread(
+        "02 · Attention", "Read Time",
+        f"At a steady pace the whole corpus is {hrs:.0f} hours — a work-week of reading. "
+        "Most single entries ask for far less.",
+        f'''
+  <div class="fg fg-3">
+    {cell('TOTAL', f"{hrs:.0f}", 'hours, end to end', 'teal', 'big')}
+    {cell('AVERAGE ENTRY', f"{d['total_rt'] / d['n_posts']:.0f}", 'minutes', 'ink', 'big')}
+    {cell('LONGEST READ', _n(d['max_rt']), 'minutes', 'gold', 'big')}
   </div>
-  <p class="m-caption">{hrs:.1f} hours all told · {d['total_rt'] / d['n_posts']:.0f} minutes
-     for the average entry · the single longest read runs {d['max_rt']} minutes.</p>
-"""
+  <div class="fg fg-2">
+    {chart("ENTRIES BY READING TIME · minutes", columns(rt_data, w=520, color="var(--teal)"))}
+    {chart("READING MINUTES ADDED PER YEAR", columns(year_rt, w=520, color="var(--gold)"))}
+  </div>''')
 
-    # ----- §3 concentration -----
+    # ---- §03 Concentration / Lexicon ----
     cat_order = sorted(d["cats"].items(), key=lambda kv: kv[1], reverse=True)
-    cat_segs = [(c, n, _color(d["cat_color"].get(c, "accent"))) for c, n in cat_order]
-    cat_legend = "".join(
-        f'<span><i style="background:{_color(d["cat_color"].get(c, "accent"))}"></i>'
-        f'{c} · {_n(n)}</span>'
-        for c, n in cat_order
-    )
-    coin_keys = sorted(d["coin_q"])
-    coin_data = [(k, d["coin_q"][k]) for k in coin_keys]
-    s3 = _section("03", "Density", "Concentration of Writing",
-                  "The Lexicon is the corpus distilled. Every edition mints new "
-                  "vocabulary; the average edition introduces dozens of defined terms, "
-                  "and the rate of coinage tells you when the field — and the writing — "
-                  "accelerated.") + f"""
-  <div class="m-mini-stats m-mini-4">
-    {_stat(f"{d['ed_terms_avg']:.0f}", 'Terms per edition', 'on average')}
-    {_stat(_n(d['ed_terms_max']), 'Densest edition', 'defined terms')}
-    {_stat(_n(d['n_terms']), 'Terms total', f"from {d['ed_count']} editions")}
-    {_stat(f"{d['n_terms'] / max(1, d['ed_count']):.0f}", 'Net new / edition', 'across the run')}
+    cat_rank = ranked([(c.upper(), n) for c, n in cat_order], w=520, color="var(--gold)")
+    coin_data = [(k.split()[0][2:] + k.split()[1], d["coin_q"][k]) for k in sorted(d["coin_q"])]
+    conc = spread(
+        "03 · Density", "The Lexicon",
+        "The corpus distilled. Every edition mints vocabulary; the rate of coinage "
+        "marks when the field — and the writing — accelerated.",
+        f'''
+  <div class="fg fg-4">
+    {cell('TERMS DEFINED', _n(d['n_terms']), f"from {d['ed_count']} editions", 'gold', 'big')}
+    {cell('PER EDITION', f"{d['ed_terms_avg']:.0f}", 'on average', 'ink', 'big')}
+    {cell('DENSEST EDITION', _n(d['ed_terms_max']), 'defined terms', 'ink', 'big')}
+    {cell('CATEGORIES', spell(len(cat_order)), 'fields of knowledge', 'teal', 'big')}
   </div>
-
-  <div class="m-chart">
-    <div class="m-chart-label">The Lexicon by category</div>
-    {svg_stack(cat_segs)}
-    <div class="m-legend m-legend-wrap">{cat_legend}</div>
-  </div>
-
-  <div class="m-chart">
-    <div class="m-chart-label">New terms first defined, by quarter</div>
-    {svg_col(coin_data, w=620, label_fmt=lambda k: k.replace(' ', '<tspan class="m-q"> ') + '</tspan>',
-             accent="var(--gold)")}
-    <div class="m-chart-foot">Each column counts terms making their first
-       appearance that quarter — the corpus's rate of new ideas.</div>
-  </div>
-"""
-
-    # ----- §4 interconnectedness -----
-    top_rank = [(gs.esc(t["name"]), t.get("edition_count", 0)) for t in d["top_terms"]]
-    pct_multi = d["multi"] / d["n_terms"] * 100
-    s4 = _section("04", "The Graph", "Interconnectedness",
-                  "Ideas don't live in one edition. Terms recur, binding issues "
-                  "together into a web — and a curated trail of outside reading "
-                  "anchors the whole thing to the wider world.") + f"""
-  <div class="m-mini-stats m-mini-4">
-    {_stat(_n(d['multi']), 'Recurring terms', f"appear in 2+ editions ({pct_multi:.0f}%)")}
-    {_stat(_n(d['recurring']), 'Connective tissue', 'terms in 3+ editions')}
-    {_stat(_n(d['n_links']), 'Outbound links', f"across {d['link_weeks']} weeks")}
-    {_stat(f"{d['n_links'] / max(1, d['link_weeks']):.0f}", 'Links per week', 'curated, on average')}
-  </div>
-
-  <div class="m-chart">
-    <div class="m-chart-label">Most-connected terms — appearances across editions</div>
-    {svg_ranked(top_rank)}
-    <div class="m-chart-foot">The terms that thread through the most issues are the
-       corpus's load-bearing concepts.</div>
-  </div>
-"""
-
-    # ----- §5 writing style progression -----
-    style_rows = [r for r in d["year_rows"] if r["posts"] >= 5]
-    first, last = style_rows[0], style_rows[-1]
-    peak_asl = max(style_rows, key=lambda r: r["asl"])
-    peak_awl = max(style_rows, key=lambda r: r["awl"])
-    s5 = _section("05", "Evolution", "Progress in Writing Style",
-                  f"Measured across {len(style_rows)} substantial years, the prose "
-                  "lengthened and thickened: longer sentences, longer words, a denser "
-                  "register. The corpus grew up.") + f"""
-  <div class="m-three">
-    <div class="m-chart">
-      <div class="m-chart-label">Average sentence length (words)</div>
-      {svg_line(d['year_rows'], 'asl', w=360, value_fmt="{:.0f}")}
+  <div class="fg fg-2 fg-top">
+    <div class="fsplit">
+      <div class="fc-label">THE LEXICON BY CATEGORY</div>
+      {cat_rank}
     </div>
-    <div class="m-chart">
-      <div class="m-chart-label">Average word length (letters)</div>
-      {svg_line(d['year_rows'], 'awl', w=360, accent="var(--teal)", value_fmt="{:.1f}")}
-    </div>
-    <div class="m-chart">
-      <div class="m-chart-label">Vocabulary richness (TTR %)</div>
-      {svg_line(d['year_rows'], 'ttr', w=360, accent="var(--gold)", value_fmt="{:.0f}")}
-    </div>
+    {chart("NEW TERMS FIRST DEFINED, BY QUARTER", columns(coin_data, w=520, color="var(--gold)"),
+           "Each column counts terms making their first appearance — the corpus's rate of new ideas.")}
+  </div>''')
+
+    # ---- §04 Interconnectedness ----
+    top_rank = ranked([(gs.esc(t["name"]).upper(), t.get("edition_count", 0)) for t in d["top_terms"]],
+                      w=520, color="var(--teal)")
+    pct_multi = round(d["multi"] / d["n_terms"] * 100)
+    inter = spread(
+        "04 · The Graph", "Interconnectedness",
+        "Ideas don't live in one edition. Terms recur, binding issues into a web — "
+        "and a curated trail of outside reading anchors it to the wider world.",
+        f'''
+  <div class="fg fg-4">
+    {cell('RECURRING TERMS', _n(d['multi']), f"in 2+ editions ({pct_multi}%)", 'teal', 'big')}
+    {cell('LOAD-BEARING', _n(d['recurring']), 'terms in 3+ editions', 'ink', 'big')}
+    {cell('OUTBOUND LINKS', _n(d['n_links']), f"over {d['link_weeks']} weeks", 'gold', 'big')}
+    {cell('PER WEEK', f"{d['n_links'] / max(1, d['link_weeks']):.0f}", 'links curated', 'ink', 'big')}
   </div>
-  <p class="m-caption">From {first['year']}'s {first['asl']:.0f}-word sentences the prose
-     stretched to a peak of {peak_asl['asl']:.0f} words in {peak_asl['year']}, before
-     settling back; average word length thickened from {first['awl']:.1f} letters to a high
-     of {peak_awl['awl']:.1f} in {peak_awl['year']}. Vocabulary richness is measured on
-     length-normalised 1,000-word windows, so it compares fairly across years of very
-     different size.</p>
-"""
+  <div class="fsplit">
+    <div class="fc-label">MOST-CONNECTED TERMS · appearances across editions</div>
+    {top_rank}
+    <div class="fx-foot">The concepts that thread through the most issues are the corpus's load-bearing ideas.</div>
+  </div>''')
 
-    # ----- methodology -----
-    method = f"""
-<section class="m-method">
-  <div class="m-sec-kicker">Methodology</div>
-  <p>Figures are computed directly from {d['n_posts']} published entries
-     ({d['span']}). Word counts tokenise the plain-text body of each post;
-     reading time is Ghost's own estimate. Lexicon figures come from
-     {d['n_terms']} terms harvested from every edition's <em>“The Less You Know”</em>
-     section across {d['ed_count']} editions. The link graph counts
-     {_n(d['n_links'])} curated outbound references logged over {d['link_weeks']}
-     weeks. Vocabulary richness uses the mean type–token ratio over consecutive
-     1,000-word windows to stay comparable across years. Compiled {d['now']}.</p>
-</section>
-"""
+    # ---- §05 Style ----
+    sr = d["year_rows"]
+    first, last = sr[0], sr[-1]
+    peak_ttr = max(r["ttr"] for r in sr if r["ttr"] is not None)
+    style = spread(
+        "05 · Evolution", "Progress in Style",
+        "Measured year over year within this window, the prose tightened even as the "
+        "ideas thickened — leaner sentences carrying a denser, richer vocabulary.",
+        f'''
+  <div class="fg fg-c3">
+    {chart("AVG SENTENCE LENGTH · words", line_mini(sr, 'asl', w=320, color="var(--ink)", fmt="{:.0f}"))}
+    {chart("AVG WORD LENGTH · letters", line_mini(sr, 'awl', w=320, color="var(--teal)", fmt="{:.1f}"))}
+    {chart("VOCABULARY RICHNESS · TTR %", line_mini(sr, 'ttr', w=320, color="var(--gold-deep)", fmt="{:.0f}"))}
+  </div>
+  <p class="fs-caption">Across {first['year']}–{last['year']} the average sentence tightened
+     from {first['asl']:.0f} to {last['asl']:.0f} words, while vocabulary richness climbed
+     from {first['ttr']:.0f}% toward a high of {peak_ttr:.0f}% — leaner prose carrying denser
+     ideas. Richness is measured on length-normalised 1,000-word windows, comparable across
+     years of very different size.</p>''')
 
-    return CSS + head + s1 + "</section>" + s2 + "</section>" + s3 + "</section>" \
-        + s4 + "</section>" + s5 + "</section>" + method
+    method = f'''
+<section class="fmeth">
+  <div class="fs-kicker">Methodology &amp; Scope</div>
+  <p>This report covers {d['n_posts']} entries published from {d['span'].split('–')[0]} onward;
+     earlier writing (2013–2022) is documented in a separate supplement. Word counts tokenise
+     the plain-text body of each post; reading time is Ghost's own estimate. Lexicon figures
+     cover {_n(d['n_terms'])} terms harvested from every edition's <em>“The Less You Know”</em>
+     across {d['ed_count']} editions. The link graph counts {_n(d['n_links'])} curated outbound
+     references logged over {d['link_weeks']} weeks. Set in the Token Wisdom house style —
+     Libre Caslon numerals on warm paper, with the burnt-orange accent. Compiled {d['now']}.</p>
+</section>'''
+
+    return CSS + '<div class="fwrap">' + head + vol + read + conc + inter + style + method + "</div>"
 
 
 # ============================================================
-# SCOPED STYLES
+# STYLES — Feltron grammar, Token Wisdom palette
 # ============================================================
 
 CSS = """
 <style>
-.m-wrap { max-width: var(--max-wide); margin: 0 auto; padding: 0 24px 5rem; }
+.fwrap {
+  --ink:        #1a1814;   /* primary ink — warm charcoal          */
+  --ink-muted:  #6b6760;   /* deks, labels                         */
+  --ink-faint:  #a39e96;   /* notes, timestamps                    */
+  --accent:     #c8521a;   /* Token Wisdom burnt orange — the soul */
+  --accent-deep:#8a3610;
+  --teal:       #1a6b5c;
+  --gold:       #b8860b;
+  --gold-deep:  #8a6309;
+  --paper:      #faf8f4;   /* warm near-white                      */
+  --paper-2:    #f4f1ea;
+  --rule:       #e6e2d9;
+  --fdisp: 'Libre Caslon Display', Georgia, serif;  /* the elegant numerals */
+  --fsans: 'Archivo', -apple-system, sans-serif;
+  --fmono: 'DM Mono', monospace;
+  --fserif: 'Source Serif 4', Georgia, serif;
 
-/* masthead */
-.m-masthead { padding: 4rem 0 2.4rem; border-bottom: 2px solid var(--ink); }
-.m-mast-kicker {
-  font-family: var(--mono); font-weight: var(--mono-weight);
-  font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
-  color: var(--accent); margin-bottom: 1.1rem;
+  background: var(--paper);
+  color: var(--ink);
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 40px 6rem;
+  font-family: var(--fsans);
 }
-.m-mast-title {
-  font-family: var(--display); font-weight: 700; line-height: .95;
-  font-size: clamp(3rem, 9vw, 6.4rem); letter-spacing: -.02em; color: var(--ink);
-}
-.m-mast-sub {
-  font-family: var(--serif); font-size: clamp(1.05rem, 2.2vw, 1.45rem);
-  line-height: 1.5; color: var(--ink-muted); max-width: 40ch; margin-top: 1.2rem;
-}
-.m-mast-sub strong { color: var(--ink); font-weight: 600; }
-.m-mast-meta {
-  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
-  margin-top: 1.4rem;
-}
+.fwrap ::selection { background: var(--accent); color: var(--paper); }
 
-/* hero figures */
-.m-hero-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr);
-  border-top: 1px solid var(--paper-rule); margin-top: 2.4rem;
-}
-.m-hero-grid .m-stat {
-  border-bottom: 1px solid var(--paper-rule); border-right: 1px solid var(--paper-rule);
-  padding: 1.6rem 1.4rem;
-}
-.m-hero-grid .m-stat:nth-child(3n) { border-right: none; }
+/* tone helpers */
+.fwrap .t-ink    { color: var(--ink); }
+.fwrap .t-teal   { color: var(--teal); }
+.fwrap .t-gold   { color: var(--gold); }
+.fwrap .t-accent { color: var(--accent); }
 
-.m-stat-num {
-  font-family: var(--display); font-weight: 700; line-height: 1;
-  font-size: clamp(2.1rem, 4.5vw, 3.2rem); letter-spacing: -.02em; color: var(--ink);
-  font-variant-numeric: tabular-nums;
+/* ---------- masthead ---------- */
+.fm { padding: 4rem 0 0; }
+.fm-rule { height: 2px; background: var(--ink); }
+.fm-rule-b { height: 1px; background: var(--rule); margin-top: 1.6rem; }
+.fm-top { display: flex; justify-content: space-between; padding: .8rem 0 1.8rem; }
+.fm-meta {
+  font-family: var(--fmono); font-size: 10.5px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--ink-muted); font-weight: 300;
 }
-.m-stat-lbl {
-  font-family: var(--mono); font-weight: 400; font-size: 11px;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--ink); margin-top: .7rem;
+.fm-meta-r { color: var(--accent); }
+.fm-title {
+  font-family: var(--fdisp); font-weight: 400; line-height: 1;
+  font-size: clamp(2.8rem, 8.4vw, 5.8rem); letter-spacing: -.01em; color: var(--ink);
 }
-.m-stat-sub {
-  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
-  letter-spacing: .04em; color: var(--ink-faint); margin-top: .25rem;
-}
-
-/* sections */
-.m-sec { padding: 3.6rem 0 0.5rem; }
-.m-sec-head { display: flex; gap: 1.2rem; align-items: baseline; border-top: 2px solid var(--ink); padding-top: 1rem; }
-.m-sec-no {
-  font-family: var(--mono); font-weight: 500; font-size: 13px;
-  letter-spacing: .1em; color: var(--accent);
-}
-.m-sec-kicker {
-  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
-  letter-spacing: .2em; text-transform: uppercase; color: var(--ink-muted);
-}
-.m-sec-title {
-  font-family: var(--display); font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.9rem);
-  letter-spacing: -.015em; color: var(--ink); line-height: 1.04; margin-top: .15rem;
-}
-.m-sec-note {
-  font-family: var(--serif); font-size: 1.12rem; line-height: 1.65;
-  color: var(--ink-muted); max-width: 62ch; margin: 1.4rem 0 2rem;
-}
-.m-caption {
-  font-family: var(--serif); font-size: .98rem; line-height: 1.6;
-  color: var(--ink-muted); max-width: 64ch; margin: 1.6rem 0 0;
-}
-.m-caption em, .m-sec-note em, .m-method em { font-style: italic; color: var(--ink); }
-
-/* layout helpers */
-.m-split { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2.4rem; align-items: start; margin-top: .5rem; }
-.m-two { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; }
-.m-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
-.m-mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--paper-rule); }
-.m-mini-4 { grid-template-columns: repeat(4, 1fr); }
-.m-mini-stats .m-stat { padding: 1.1rem 1.2rem 1.1rem 0; border-bottom: 1px solid var(--paper-rule); }
-.m-mini-stats .m-stat-num { font-size: clamp(1.6rem, 3.2vw, 2.3rem); }
-
-/* charts */
-.m-chart { margin-top: 2.2rem; }
-.m-chart-label {
-  font-family: var(--mono); font-weight: 400; font-size: 11px;
-  letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
-  padding-bottom: .7rem; border-bottom: 1px solid var(--paper-rule); margin-bottom: 1.1rem;
-}
-.m-chart-foot, .m-legend {
-  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
-  letter-spacing: .03em; color: var(--ink-faint); margin-top: .9rem; line-height: 1.5;
-}
-.m-svg { width: 100%; height: auto; overflow: visible; display: block; }
-.m-svg-val { font-family: var(--mono); font-weight: 400; font-size: 11px; fill: var(--ink-muted); }
-.m-svg-lbl { font-family: var(--mono); font-weight: var(--mono-weight); font-size: 10px; fill: var(--ink-faint); letter-spacing: .05em; }
-.m-svg-axis { stroke: var(--ink); stroke-width: 1; }
-.m-rank-lbl { font-family: var(--mono); font-weight: 400; font-size: 12px; fill: var(--ink); }
-.m-rank-val { font-family: var(--mono); font-weight: 500; font-size: 12px; fill: var(--accent); }
-.m-q { fill: var(--ink-faint); }
-
-.m-legend { display: flex; flex-wrap: wrap; gap: 1.4rem; color: var(--ink-muted); }
-.m-legend-wrap span { font-size: 11px; }
-.m-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: .5rem; vertical-align: middle; }
-.m-split-bar .m-svg { border-radius: 2px; overflow: hidden; }
-.m-mini-stats.m-mini-4 + .m-chart { margin-top: 2.6rem; }
-
-/* methodology */
-.m-method {
-  margin-top: 4rem; padding: 2rem 0 0; border-top: 2px solid var(--ink);
-}
-.m-method p {
-  font-family: var(--serif); font-size: .98rem; line-height: 1.7;
-  color: var(--ink-muted); max-width: 72ch; margin-top: 1rem;
+.fm-sub {
+  font-family: var(--fserif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.1rem, 2.4vw, 1.5rem); color: var(--ink-muted);
+  max-width: 46ch; margin-top: 1.1rem; line-height: 1.45;
 }
 
-@media (max-width: 860px) {
-  .m-hero-grid { grid-template-columns: repeat(2, 1fr); }
-  .m-hero-grid .m-stat:nth-child(3n) { border-right: 1px solid var(--paper-rule); }
-  .m-hero-grid .m-stat:nth-child(2n) { border-right: none; }
-  .m-split, .m-two, .m-three { grid-template-columns: 1fr; gap: 1.6rem; }
-  .m-mini-4 { grid-template-columns: repeat(2, 1fr); }
+/* ---------- grids of cells ---------- */
+.fg { display: grid; gap: 0; }
+.fg-hero { grid-template-columns: repeat(3, 1fr); margin-top: 2.4rem;
+           border-top: 1px solid var(--rule); }
+.fg-2 { grid-template-columns: 1fr 1fr; gap: 2.6rem; }
+.fg-c3 { grid-template-columns: repeat(3, 1fr); gap: 0 2.6rem; }
+.fg-3 { grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); }
+.fg-4 { grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); }
+.fg-top { align-items: start; }
+
+.fc {
+  padding: 1.5rem 1.4rem 1.5rem 0;
+  border-bottom: 1px solid var(--rule);
 }
-@media (max-width: 520px) {
-  .m-hero-grid { grid-template-columns: 1fr; }
-  .m-hero-grid .m-stat, .m-hero-grid .m-stat:nth-child(n) { border-right: none; }
-  .m-mini-stats, .m-mini-4 { grid-template-columns: 1fr 1fr; }
+.fg-hero .fc {
+  border-right: 1px solid var(--rule); padding-left: 1.4rem;
+}
+.fg-hero .fc:nth-child(3n) { border-right: none; }
+.fc-label {
+  font-family: var(--fmono); font-size: 10px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ink-muted); font-weight: 300;
+  margin-bottom: .6rem;
+}
+.fc-value {
+  font-family: var(--fdisp); font-weight: 400; line-height: .95;
+  letter-spacing: -.01em; font-variant-numeric: tabular-nums;
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+}
+.fc-xl .fc-value { font-size: clamp(3rem, 8vw, 5rem); }
+.fc-big .fc-value { font-size: clamp(2.1rem, 4.4vw, 3rem); }
+.fc-note {
+  font-family: var(--fmono); font-size: 10.5px; letter-spacing: .02em;
+  color: var(--ink-faint); margin-top: .6rem; line-height: 1.45; font-weight: 300;
+}
+
+/* ---------- section spreads ---------- */
+.fs { padding: 4.2rem 0 0; }
+.fs-head { border-top: 2px solid var(--ink); padding-top: 1.1rem; margin-bottom: 1.4rem; }
+.fs-kicker {
+  font-family: var(--fmono); font-size: 11px; letter-spacing: .18em;
+  text-transform: uppercase; color: var(--accent); font-weight: 400;
+}
+.fs-title {
+  font-family: var(--fdisp); font-weight: 400;
+  font-size: clamp(2rem, 5vw, 3.3rem); letter-spacing: -.01em;
+  line-height: 1.02; color: var(--ink); margin-top: .25rem;
+}
+.fs-sub {
+  font-family: var(--fserif); font-style: italic; font-size: 1.18rem;
+  color: var(--ink-muted); max-width: 58ch; margin-top: .7rem; line-height: 1.45;
+}
+.fs-caption, .fmeth p {
+  font-family: var(--fserif); font-size: 1rem; line-height: 1.6;
+  color: var(--ink-muted); max-width: 70ch; margin-top: 1.6rem;
+}
+.fs-caption em, .fmeth em { font-style: italic; color: var(--ink); }
+
+/* ---------- charts ---------- */
+.fx, .fsplit { margin-top: 2.2rem; }
+.fx-label, .fsplit > .fc-label {
+  font-family: var(--fmono); font-size: 10px; letter-spacing: .14em;
+  text-transform: uppercase; color: var(--ink); font-weight: 400;
+  padding-bottom: .7rem; border-bottom: 1px solid var(--rule); margin-bottom: 1.2rem;
+}
+.fx-foot {
+  font-family: var(--fmono); font-size: 10.5px; letter-spacing: .02em;
+  color: var(--ink-faint); margin-top: .9rem; line-height: 1.5; max-width: 70ch; font-weight: 300;
+}
+.fx-svg { width: 100%; height: auto; overflow: visible; display: block; }
+
+/* svg text + strokes */
+.fx-rank-lbl { font-family: var(--fmono); font-size: 11px; letter-spacing: .03em; fill: var(--ink); font-weight: 300; }
+.fx-rank-val { font-family: var(--fdisp); font-weight: 400; font-size: 18px; fill: var(--ink); }
+.fx-leader { stroke: var(--ink-faint); stroke-width: 1; stroke-dasharray: 1.5 3; }
+.fx-rowrule { stroke: var(--rule); stroke-width: 1; }
+.fx-base { stroke: var(--ink); stroke-width: 1; }
+.fx-grid { stroke: var(--rule); stroke-width: 1; }
+.fx-axis { font-family: var(--fmono); font-size: 10px; letter-spacing: .06em; fill: var(--ink-muted); font-weight: 300; }
+.fx-pt { font-family: var(--fdisp); font-weight: 400; font-size: 15px; fill: var(--ink); }
+.fx-callout { stroke: var(--ink); stroke-width: 1; stroke-dasharray: 1.5 2.5; }
+.fx-note { font-family: var(--fmono); font-size: 9.5px; letter-spacing: .1em; fill: var(--ink); text-transform: uppercase; font-weight: 300; }
+
+/* ---------- methodology ---------- */
+.fmeth { margin-top: 4.5rem; border-top: 2px solid var(--ink); padding-top: 1.2rem; }
+
+@media (max-width: 900px) {
+  .fwrap { padding: 0 22px 4rem; }
+  .fg-hero, .fg-3, .fg-4 { grid-template-columns: repeat(2, 1fr); }
+  .fg-hero .fc:nth-child(3n) { border-right: 1px solid var(--rule); }
+  .fg-hero .fc:nth-child(2n) { border-right: none; }
+  .fg-2 { grid-template-columns: 1fr; gap: 1.6rem; }
+}
+@media (max-width: 540px) {
+  .fg-hero, .fg-3, .fg-4 { grid-template-columns: 1fr; }
+  .fg-hero .fc, .fg-hero .fc:nth-child(n) { border-right: none; }
 }
 </style>
-<div class="m-wrap">
 """
 
 
@@ -684,14 +691,14 @@ CSS = """
 
 def build(posts, ctx, gs):
     d = compute(posts, gs)
-    body = render(d) + "</div>"  # close .m-wrap
+    body = render(d)
     page = gs.page_shell("The Corpus Report", body, "style.css", from_dir="root")
     page += gs.colophon(ctx["posts_count"], ctx["tags_count"],
                         ctx["years_span"], ctx["top_tags"], from_dir="root")
     with open(DOCS_DIR / "metrics.html", "w") as f:
         f.write(page)
-    print(f"  Wrote docs/metrics.html — {_n(d['total_words'])} words, "
-          f"{d['n_terms']} terms, {d['n_links']} links charted")
+    print(f"  Wrote docs/metrics.html — {START_YEAR}+ scope · {_n(d['total_words'])} words, "
+          f"{d['n_posts']} entries, {d['n_terms']} terms")
 
 
 if __name__ == "__main__":

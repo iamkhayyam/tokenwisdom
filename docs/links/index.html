@@ -241,7 +241,7 @@ a{color:inherit;text-decoration:none}
 <header class="mast">
   <div class="mast-inner">
     <a class="mast-mark" href="../index.html" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
-    <nav class="mast-nav"><a class="" href="../archive.html">Archive</a><a class="" href="../tags/index.html">Topics</a><a class="" href="../lexicon/index.html">Lexicon</a><a class="is-active" href="../links/index.html">Links</a><a class="" href="../tags/a-closer-look.html">Essays</a><a class="" href="../tags/worthafortune.html">Newsletters</a><a class="" href="../podcast.html">Podcast</a></nav>
+    <nav class="mast-nav"><a class="" href="../archive.html">Archive</a><a class="" href="../tags/index.html">Topics</a><a class="" href="../lexicon/index.html">Lexicon</a><a class="is-active" href="../links/index.html">Links</a><a class="" href="../tags/a-closer-look.html">Essays</a><a class="" href="../tags/worthafortune.html">Newsletters</a><a class="" href="../podcast.html">Podcast</a><a class="" href="../about/index.html">About</a></nav>
     <a class="mast-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
   </div>
 </header>
@@ -254,8 +254,9 @@ a{color:inherit;text-decoration:none}
 .rr-featured-title{font-family:var(--display);font-weight:400;font-size:1.5rem;color:var(--ink)}
 .rr-week-badge{margin-left:auto;font-family:var(--mono);font-weight:300;font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
 
-.rr-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:1rem}
-.rr-card{display:block;color:var(--ink);border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--surface);transition:border-color .2s,transform .2s}
+.rr-grid{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:.5rem}
+.rr-grid::-webkit-scrollbar{height:4px}.rr-grid::-webkit-scrollbar-track{background:var(--rule)}.rr-grid::-webkit-scrollbar-thumb{background:var(--ink-faint);border-radius:2px}
+.rr-card{display:block;flex:0 0 220px;color:var(--ink);border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--surface);transition:border-color .2s,transform .2s;scroll-snap-align:start}
 .rr-card:hover{border-color:var(--accent);transform:translateY(-2px);color:var(--ink)}
 .rr-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--rule)}
 .rr-card-img-placeholder{width:100%;aspect-ratio:16/9;background:var(--rule);display:flex;align-items:center;justify-content:center}
@@ -293,8 +294,7 @@ a{color:inherit;text-decoration:none}
 .rr-stat-num{font-family:var(--display);font-weight:400;font-size:1.6rem;color:var(--ink);line-height:1}
 .rr-stat-lbl{font-family:var(--mono);font-weight:300;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-top:.3rem}
 
-@media(max-width:860px){.rr-grid{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:580px){.rr-grid{grid-template-columns:1fr 1fr}.rr-stats{gap:1.5rem}}
+@media(max-width:580px){.rr-stats{gap:1.5rem}}
 </style>
 <div class="wrap" style="padding-top:2.5rem;padding-bottom:4rem">
   <div style="border-bottom:2px solid var(--ink);padding-bottom:1.2rem;margin-bottom:1.6rem">
@@ -357,6 +357,46 @@ a{color:inherit;text-decoration:none}
     <div class="rr-card-title">Two young inventors design a brick that can cool cities using electricity, and the idea points to buildings that stop being part of the heat problem</div>
     <div class="rr-card-excerpt">Two inventors designed a 3D-printed brick that cools city streets by 16°F. See how this eco-friendly tech fights urban heat islands.</div>
   </div>
+</a>
+<a class="rr-card" href="https://www.bigtechnology.com/p/the-token-reckoning-is-here-and-its?utm_source=tldrfounders" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://substackcdn.com/image/fetch/$s_!JLPw!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fbigtechnology.substack.com%2Fapi%2Fv1%2Fpost_preview%2F200193799%2Ftwitter.jpg%3Fversion%3D4" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Article</div>
+    <div class="rr-card-title">The Token Reckoning is Here and It’s Not What You Think</div>
+    <div class="rr-card-excerpt">Token waste in service of productive use, not waste for the sake of waste, could be the biggest problem in AI right now.</div>
+  </div>
+</a>
+<a class="rr-card" href="https://defence-blog.com/darpa-wants-to-replace-gps-dependence-with-new-class-of-sensors/" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://defence-blog.com/wp-content/uploads/2026/05/DB_image_955.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Article</div>
+    <div class="rr-card-title">DARPA wants to replace GPS dependence with new class of sensors</div>
+    <div class="rr-card-excerpt">Every GPS signal on the battlefield is a vulnerability waiting to be exploited, and Russia, China, and Iran have all demonstrated the willingness to exploit it. DARPA just announced it is going to solve that problem from the inside out,</div>
+  </div>
+</a>
+<a class="rr-card" href="https://www.livescience.com/technology/electronics/new-device-could-make-processors-run-1-000-times-faster-without-additional-waste-heat-scientists-say-it-could-reduce-data-center-energy-demands" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://cdn.mos.cms.futurecdn.net/ZoCzwhoRvU9HihMJvAQjYN-1920-80.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Article</div>
+    <div class="rr-card-title">New device could make processors run 1,000 times faster without additional waste heat — scientists say it could reduce data center energy demands | Live Science</div>
+    <div class="rr-card-excerpt">A new device could allow computer processors to operate significantly faster, without generating waste heat.</div>
+  </div>
+</a>
+<a class="rr-card" href="https://www.sciencedaily.com/releases/2026/05/260530053412.htm" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://www.sciencedaily.com/images/1920/3d-cpu-processor-chip.webp" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Article</div>
+    <div class="rr-card-title">New 3D silicon chip breakthrough could extend Moore’s Law for years | ScienceDaily</div>
+    <div class="rr-card-excerpt">As traditional chip miniaturization slows, researchers have found a way to pack more computing power into the same space by stacking silicon circuits in multiple layers. The new process uses ultra-thin silicon membranes and low-temperature manufacturing techniques to overcome a major obstacle that has long blocked the production of true 3D chips.</div>
+  </div>
+</a>
+<a class="rr-card" href="https://www.newscientist.com/letter/mg27035973-100-human-consciousness-and-the-wave-function/" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://images.newscientist.com/wp-content/uploads/2024/03/21170206/SEI_196882028.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Article</div>
+    <div class="rr-card-title">Letter: Human consciousness and the wave function | New Scientist</div>
+    
+  </div>
 </a></div>
 
   <div class="rr-featured-head" style="margin-top:2.2rem">
@@ -403,6 +443,46 @@ a{color:inherit;text-decoration:none}
     <div class="rr-card-type">Video</div>
     <div class="rr-card-title">What Makes Software a &quot;Place&quot;?</div>
     <div class="rr-card-excerpt">Join &quot;Interface Studies&quot; to help make more videos. Your support keeps new content coming. https://www.youtube.com/channel/UCqv7gk4p_rB4nRz0j7B5yFA/joinWhen d...</div>
+  </div>
+</a>
+<a class="rr-card" href="https://www.youtube.com/watch?v=e0uEXU9sGZk" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://i.ytimg.com/vi/e0uEXU9sGZk/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Video</div>
+    <div class="rr-card-title">Why Every Apple Ad Shows 9:41</div>
+    <div class="rr-card-excerpt">Look at the time on any iPhone in any Apple advertisement. It's 9:41. Every time, for the last fifteen years. Look at any watch in any advertisement — it's t...</div>
+  </div>
+</a>
+<a class="rr-card" href="https://www.youtube.com/watch?v=e0Dlr07jfjA" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://i.ytimg.com/vi/e0Dlr07jfjA/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Video</div>
+    <div class="rr-card-title">Why Tech Companies Are Quietly Cancelling AI Data Centers</div>
+    <div class="rr-card-excerpt">Why Tech Companies Are Quietly Cancelling AI Data CentersSince the release of ChatGPT in 2022, tech companies have invested hundreds of billions of dollars i...</div>
+  </div>
+</a>
+<a class="rr-card" href="https://www.youtube.com/watch?v=sEteCJUMVn4" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://i.ytimg.com/vi/sEteCJUMVn4/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Video</div>
+    <div class="rr-card-title">Perpetual Motion Machine Raises $12M from Investors</div>
+    <div class="rr-card-excerpt">The company Casimir Inc promises &quot;unlimited power&quot; from the vacuum by using the Casimir effect. Here is why you shouldn't believe what they say. 👉 Transcrip...</div>
+  </div>
+</a>
+<a class="rr-card" href="https://www.youtube.com/watch?v=fPf3kj_dAsc" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://i.ytimg.com/vi/fPf3kj_dAsc/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Video</div>
+    <div class="rr-card-title">We Found the Hidden Radio World Anyone Can Listen To</div>
+    <div class="rr-card-excerpt">Go to today’s sponsor https://www.Strawberry.me/rogue to get your career coach today! In the comments, tell me which kiwiSDR I should point shortwave.themode...</div>
+  </div>
+</a>
+<a class="rr-card" href="https://youtu.be/l7eJfXmaCjc?si=vJP7hTMBnBCVVusM" target="_blank" rel="noopener">
+  <img class="rr-card-img" src="https://i.ytimg.com/vi/l7eJfXmaCjc/maxresdefault.jpg" alt="" loading="lazy">
+  <div class="rr-card-body">
+    <div class="rr-card-type">Video</div>
+    <div class="rr-card-title">The best Cold Call you've ever seen (178k/month ai agency)</div>
+    <div class="rr-card-excerpt">Book a Free Call to Start or Scale Your AI Agency ⬇️ ⬇️ https://bo...</div>
   </div>
 </a></div>
 </section>

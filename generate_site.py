@@ -358,6 +358,12 @@ def tag_href(tag, from_dir="root"):
 # ============================================================
 
 CSS = r"""
+/* FauxCRA — local faces, shared with the homepage masthead (docs/assets/fonts/) */
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA Mono';src:url('assets/fonts/FauxCRA-Monospaced.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+
 :root {
   --ink: #1a1814;
   --ink-muted: #6b6760;
@@ -376,8 +382,8 @@ CSS = r"""
   --serif: 'Source Serif 4', Georgia, serif;
   --display: 'Libre Caslon Display', Georgia, serif;
   --sans: 'Archivo', -apple-system, BlinkMacSystemFont, sans-serif;
-  --mono: 'DM Mono', 'SFMono-Regular', Consolas, monospace;
-  --mono-weight: 300;
+  --mono: 'FauxCRA Mono', 'FauxCRA', 'DM Mono', ui-monospace, 'SFMono-Regular', Consolas, monospace;
+  --mono-weight: 400;
 
   --max-read: 680px;
   --max-wide: 1080px;
@@ -456,50 +462,65 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ---------- SITE CHROME ---------- */
+/* Masthead nav — mirrors the homepage .mast for cross-site consistency */
 .site-top {
-  border-bottom: 0.5px solid var(--paper-rule);
-  background: var(--paper);
   position: sticky; top: 0; z-index: 80;
-  backdrop-filter: blur(6px);
+  background: color-mix(in srgb, var(--paper) 90%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 2px solid var(--ink);
 }
 .site-top-inner {
   max-width: var(--max-wide);
   margin: 0 auto;
-  padding: 12px 24px;
+  padding: 11px 24px;
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
+  gap: 24px;
 }
+.site-top-mark { display: inline-flex; align-items: center; }
+/* legacy wordmark (orb + text) kept for any page still using it */
 .site-top-wordmark {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  font-family: var(--display);
-  font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -0.01em;
-  text-transform: none;
-  color: var(--ink);
-  white-space: nowrap;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--display); font-size: 16px; font-weight: 700;
+  letter-spacing: -0.01em; color: var(--ink); white-space: nowrap;
 }
 .tw-orb {
-  width: 22px;
-  height: 22px;
+  height: 30px;
+  width: auto;
   flex-shrink: 0;
 }
 .site-top-nav {
-  margin-left: auto;
   display: flex;
-  gap: 18px;
+  gap: 22px;
+  margin-left: 6px;
   flex-wrap: wrap;
 }
-.site-top-nav a { color: var(--ink-muted); }
-.site-top-nav a:hover { color: var(--accent); }
+.site-top-nav a {
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.76rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  padding-bottom: 2px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s;
+}
+.site-top-nav a:hover { color: var(--ink); }
+.site-top-nav a.is-active { color: var(--accent); border-color: var(--accent); }
+.site-top-sub {
+  margin-left: auto;
+  font-family: var(--mono);
+  font-weight: 700;
+  font-size: 0.68rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  background: var(--accent);
+  color: var(--paper);
+  padding: 0.6em 1.2em;
+  transition: background 0.15s;
+}
+.site-top-sub:hover { background: var(--accent-deep); }
 .site-top-date { color: var(--ink-faint); }
 
 /* ---------- SHARED TYPOGRAPHY ---------- */
@@ -1687,8 +1708,10 @@ img { max-width: 100%; height: auto; }
 }
 @media (max-width: 600px) {
   body { font-size: 17px; }
-  .site-top-inner { padding: 10px 16px; gap: 12px; font-size: 9px; }
-  .site-top-nav { gap: 12px; }
+  .site-top-inner { padding: 10px 16px; gap: 12px 18px; flex-wrap: wrap; }
+  .site-top-nav { gap: 14px; margin-left: 0; }
+  .site-top-nav a { font-size: 0.7rem; }
+  .site-top-sub { margin-left: 0; }
   .colophon-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .colophon-bottom { flex-direction: column; }
   .colophon-sign-off { text-align: left; }

@@ -352,6 +352,7 @@ _NAV = [
     ("essays", "Essays", "tags/a-closer-look.html"),
     ("newsletters", "Newsletters", "tags/worthafortune.html"),
     ("podcast", "Podcast", "podcast.html"),
+    ("about", "About", "about/index.html"),
 ]
 
 
