@@ -16,7 +16,8 @@
 <header class="site-top">
   <div class="site-top-inner">
     <a href="../index.html" class="site-top-mark" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
-    <nav class="site-top-nav" id="site-nav" hidden>
+    <a class="site-top-back" href="../index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <nav class="site-top-nav" id="site-nav">
       <a href="../archive.html">Archive</a>
       <a href="../tags/index.html">Topics</a>
       <a href="../lexicon/index.html">Lexicon</a>
@@ -55,6 +56,8 @@
 </div>
 <script>(function(){
 var root=document.documentElement,ov=document.getElementById('nav-takeover');
+var back=document.querySelector('[data-back]');
+if(back){back.addEventListener('click',function(e){try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}});}
 if(!ov)return;
 var toggles=document.querySelectorAll('[data-nav-toggle]');
 function set(o){root.classList.toggle('nav-open',o);ov.setAttribute('aria-hidden',o?'false':'true');toggles.forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false');});}
@@ -62,6 +65,7 @@ toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefa
 ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
 })();</script>
+<script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
 <header class="tag-hero" style="--tag-bg: url('https://tokenwisdom.ghost.io/content/images/2024/01/Halpern_final.gif');">
   <div class="tag-hero-inner">

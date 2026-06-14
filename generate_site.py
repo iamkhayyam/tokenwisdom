@@ -490,13 +490,22 @@ img { max-width: 100%; height: auto; }
   flex-shrink: 0;
 }
 .site-top-inner { position: relative; }
-/* Inline nav retired — the full-page takeover is the nav at every width.
-   Left in the DOM with [hidden] so it stays out of the a11y tree (no
-   duplicate nav for screen readers); the colophon covers no-JS users. */
-.site-top-nav { display: none; }
-/* Menu button — opens the full-page takeover at every width */
+/* Back — mandatory return affordance on every subpage */
+.site-top-back {
+  display: inline-flex; align-items: center; gap: 0.4em;
+  font-family: var(--mono); font-weight: 700; font-size: 0.7rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-muted); white-space: nowrap; transition: color 0.15s;
+}
+.site-top-back:hover { color: var(--accent); }
+/* Inline text nav — visible on desktop, swapped for the menu button on mobile */
+.site-top-nav {
+  display: flex; align-items: center; flex: 1;
+  gap: 22px; margin-left: 6px; flex-wrap: wrap;
+}
+/* Menu button — opens the full-page takeover on mobile only */
 .site-top-toggle {
-  display: inline-flex;
+  display: none;
   margin-left: auto;
   align-items: center;
   gap: 0.6em;
@@ -1734,13 +1743,11 @@ img { max-width: 100%; height: auto; }
   .archive-item { grid-template-columns: 90px 1fr; }
   .archive-item .tag { grid-column: 2; justify-self: start; margin-top: 2px; }
 }
-/* ---------- MOBILE — tighten the menu bar ---------- */
+/* ---------- MOBILE — swap inline nav for the menu button ---------- */
 @media (max-width: 860px) {
   .site-top-inner { padding: 10px 16px; gap: 14px; }
-}
-@media (max-width: 380px) {
-  .site-top-toggle .mtxt { display: none; }
-  .site-top-toggle { padding: 0 12px; }
+  .site-top-nav { display: none; }
+  .site-top-toggle { display: inline-flex; }
 }
 @media (max-width: 600px) {
   body { font-size: 17px; }
@@ -2020,7 +2027,8 @@ def site_top(from_dir="root"):
 <header class="site-top">
   <div class="site-top-inner">
     <a href="{prefix}index.html" class="site-top-mark" aria-label="Token Wisdom — home">{orb}</a>
-    <nav class="site-top-nav" id="site-nav" hidden>
+    <a class="site-top-back" href="{prefix}index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <nav class="site-top-nav" id="site-nav">
       {nav_links}
       <a class="site-top-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
     </nav>
@@ -2031,6 +2039,7 @@ def site_top(from_dir="root"):
   </div>
 </header>
 {nav_overlay(prefix)}
+<script>(function(){{var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){{var h=a.getAttribute('href').replace(/^(\\.\\.\\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){{a.classList.add('is-active');}}}});}})();</script>
 """
 
 

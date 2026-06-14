@@ -46,11 +46,18 @@ a{color:inherit;text-decoration:none}
 .site-top{position:sticky;top:0;z-index:80;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
 .site-top-inner{position:relative;max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
 .site-top-mark{display:inline-flex;align-items:center}
-/* Inline nav retired — the full-page takeover is the nav at every width
-   (left in the DOM with [hidden] so it stays out of the a11y tree). */
-.site-top-nav{display:none}
-/* Menu button — opens the full-page takeover at every width */
-.site-top-toggle{display:inline-flex;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
+/* Back — mandatory return affordance on every subpage */
+.site-top-back{display:inline-flex;align-items:center;gap:.4em;font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;transition:color .15s}
+.site-top-back:hover{color:var(--accent)}
+/* Inline text nav — visible on desktop, swapped for the menu button on mobile */
+.site-top-nav{display:flex;align-items:center;flex:1;gap:22px;margin-left:6px;flex-wrap:wrap}
+.site-top-nav a{font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.site-top-nav a:hover{color:var(--ink)}
+.site-top-nav a.is-active{color:var(--accent);border-color:var(--accent)}
+.site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.site-top-sub:hover{background:var(--accent-deep)}
+/* Menu button — opens the full-page takeover on mobile only */
+.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
 .site-top-toggle:hover{border-color:var(--accent);color:var(--accent)}
 .site-top-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .site-top-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
@@ -214,8 +221,7 @@ a{color:inherit;text-decoration:none}
   .lexcard:nth-child(2n){border-right:none}
 }
 /* mobile — tighten the menu bar */
-@media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}}
-@media(max-width:380px){.site-top-toggle .mtxt{display:none}.site-top-toggle{padding:0 12px}}
+@media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}.site-top-nav{display:none}.site-top-toggle{display:inline-flex}}
 @media(max-width:620px){
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
@@ -434,6 +440,8 @@ html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,tra
 
 OVERLAY_JS = r'''(function(){
 var root=document.documentElement,ov=document.getElementById('nav-takeover');
+var back=document.querySelector('[data-back]');
+if(back){back.addEventListener('click',function(e){try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}});}
 if(!ov)return;
 var toggles=document.querySelectorAll('[data-nav-toggle]');
 function set(o){root.classList.toggle('nav-open',o);ov.setAttribute('aria-hidden',o?'false':'true');toggles.forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false');});}
@@ -480,7 +488,8 @@ def masthead(prefix="", active=""):
 <header class="site-top">
   <div class="site-top-inner">
     <a class="site-top-mark" href="{prefix}index.html" aria-label="Token Wisdom — home"><img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb"></a>
-    <nav class="site-top-nav" id="site-nav" hidden>{nav}
+    <a class="site-top-back" href="{prefix}index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <nav class="site-top-nav" id="site-nav">{nav}
       <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
     </nav>
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">

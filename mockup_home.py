@@ -426,7 +426,7 @@ def render_masthead():
 <header class="mast">
   <div class="mast-inner">
     <a class="mast-mark" href="index.html" aria-label="Token Wisdom — home"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"></a>
-    <nav class="mast-nav" id="mast-nav" hidden>
+    <nav class="mast-nav" id="mast-nav">
       {''.join(f'<a href="{href}">{label}</a>' for _, label, href in tw_theme.NAV)}
       <a class="mast-sub" href="{gs.GHOST_URL}/subscribe">Subscribe</a>
     </nav>
@@ -491,11 +491,15 @@ a{color:inherit;text-decoration:none}
 .mast-mark{display:inline-flex;align-items:center}
 .tw-orb{height:30px;width:auto;display:block}
 .foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
-/* Inline nav retired — the full-page takeover is the nav at every width
-   (left in the DOM with [hidden] so it stays out of the a11y tree). */
-.mast-nav{display:none}
-/* Menu button — opens the full-page takeover at every width */
-.mast-toggle{display:inline-flex;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
+/* Inline text nav — visible on desktop, swapped for the menu button on mobile */
+.mast-nav{display:flex;align-items:center;flex:1;gap:22px;margin-left:6px;flex-wrap:wrap}
+.mast-nav a{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.mast-nav a:hover{color:var(--ink)}
+.mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
+.mast-sub{margin-left:auto;font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.mast-sub:hover{background:var(--accent-deep)}
+/* Menu button — opens the full-page takeover on mobile only */
+.mast-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
 .mast-toggle:hover{border-color:var(--accent);color:var(--accent)}
 .mast-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .mast-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
@@ -702,8 +706,7 @@ a{color:inherit;text-decoration:none}
   .lexcard:nth-child(2n){border-right:none}
 }
 /* mobile — tighten the menu bar */
-@media(max-width:860px){.mast-inner{padding:10px 16px;gap:14px}}
-@media(max-width:380px){.mast-toggle .mtxt{display:none}.mast-toggle{padding:0 12px}}
+@media(max-width:860px){.mast-inner{padding:10px 16px;gap:14px}.mast-nav{display:none}.mast-toggle{display:inline-flex}}
 /* mobile — "This Week" card rows become edge-to-edge swipe rails */
 @media(max-width:860px){
   .stack-grid{
