@@ -143,6 +143,7 @@ img { max-width: 100%; height: auto; }
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: var(--ink-muted);
+  padding-top: 4px;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
   transition: color 0.15s;

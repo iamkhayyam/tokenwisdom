@@ -502,6 +502,7 @@ img { max-width: 100%; height: auto; }
   letter-spacing: 0.10em;
   text-transform: uppercase;
   color: var(--ink-muted);
+  padding-top: 4px;
   padding-bottom: 2px;
   border-bottom: 2px solid transparent;
   transition: color 0.15s;
@@ -3653,6 +3654,11 @@ def main():
         src_asset = BACKUP_DIR / "images" / asset
         if src_asset.exists():
             shutil.copy(src_asset, assets_dir / asset)
+    fonts_src = BACKUP_DIR / "fonts"
+    fonts_dst = assets_dir / "fonts"
+    fonts_dst.mkdir(exist_ok=True)
+    for font in fonts_src.glob("*.otf"):
+        shutil.copy(font, fonts_dst / font.name)
     import mockup_home
     mockup_home.build("index.html")
 
