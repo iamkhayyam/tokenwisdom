@@ -1,0 +1,10 @@
+images/
+posts/
+pages/
+tags/
+authors/
+data/
+docs/
+relationships/
+mcp-server/node_modules/
+api/node_modules/

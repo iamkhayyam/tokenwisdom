@@ -492,9 +492,9 @@ a{color:inherit;text-decoration:none}
 .tw-orb{height:30px;width:auto;display:block}
 .foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
 /* Inline text nav — visible on desktop, swapped for the menu button on mobile */
-.mast-nav{display:flex;align-items:center;flex:1;gap:22px;margin-left:6px;flex-wrap:wrap}
-.mast-nav a{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.mast-nav a:hover{color:var(--ink)}
+.mast-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
+.mast-nav a:not(.mast-sub){font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.mast-nav a:not(.mast-sub):hover{color:var(--ink)}
 .mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
 .mast-sub{margin-left:auto;font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .mast-sub:hover{background:var(--accent-deep)}
@@ -706,7 +706,8 @@ a{color:inherit;text-decoration:none}
   .lexcard:nth-child(2n){border-right:none}
 }
 /* mobile — tighten the menu bar */
-@media(max-width:860px){.mast-inner{padding:10px 16px;gap:14px}.mast-nav{display:none}.mast-toggle{display:inline-flex}}
+@media(max-width:1080px){.mast-nav{display:none}.mast-toggle{display:inline-flex}}
+@media(max-width:860px){.mast-inner{padding:10px 16px;gap:14px}}
 /* mobile — "This Week" card rows become edge-to-edge swipe rails */
 @media(max-width:860px){
   .stack-grid{

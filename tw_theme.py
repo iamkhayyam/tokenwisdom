@@ -3,6 +3,11 @@ BASE_CSS + LEX_CSS + prefix-aware masthead/footer/page. Generated from
 mockup_home.py + mockup_lexicon.py; edit those then re-extract if needed."""
 
 BASE_CSS = r'''
+/* FauxCRA — brand faces, matching the other pages (depth-1 pages → ../assets) */
+@font-face{font-family:'FauxCRA';src:url('../assets/fonts/FauxCRA-Light.otf') format('opentype');font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA';src:url('../assets/fonts/FauxCRA-Regular.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA';src:url('../assets/fonts/FauxCRA-Bold.otf') format('opentype');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'FauxCRA Mono';src:url('../assets/fonts/FauxCRA-Monospaced.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
 :root{
   --bg: oklch(0.992 0.004 70);
   --surface: oklch(0.972 0.005 70);
@@ -21,8 +26,8 @@ BASE_CSS = r'''
   --display:'Libre Caslon Display',Georgia,serif;
   --display-weight:400;
   --serif:'Source Serif 4',Georgia,serif;
-  --mono:'DM Mono',ui-monospace,monospace;
-  --w:1220px;
+  --mono:'FauxCRA Mono','FauxCRA','DM Mono',ui-monospace,'SFMono-Regular',Consolas,monospace;
+  --w:1080px;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
@@ -50,9 +55,9 @@ a{color:inherit;text-decoration:none}
 .site-top-back{display:inline-flex;align-items:center;gap:.4em;font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;transition:color .15s}
 .site-top-back:hover{color:var(--accent)}
 /* Inline text nav — visible on desktop, swapped for the menu button on mobile */
-.site-top-nav{display:flex;align-items:center;flex:1;gap:22px;margin-left:6px;flex-wrap:wrap}
-.site-top-nav a{font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.site-top-nav a:hover{color:var(--ink)}
+.site-top-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
+.site-top-nav a:not(.site-top-sub){font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.site-top-nav a:not(.site-top-sub):hover{color:var(--ink)}
 .site-top-nav a.is-active{color:var(--accent);border-color:var(--accent)}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
@@ -221,7 +226,9 @@ a{color:inherit;text-decoration:none}
   .lexcard:nth-child(2n){border-right:none}
 }
 /* mobile — tighten the menu bar */
-@media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}.site-top-nav{display:none}.site-top-toggle{display:inline-flex}}
+/* Below 1080 the 9-item inline nav can't fit alongside Back + Subscribe — use the menu button */
+@media(max-width:1080px){.site-top-nav{display:none}.site-top-toggle{display:inline-flex}}
+@media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}}
 @media(max-width:620px){
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
@@ -268,6 +275,11 @@ LEX_CSS = r'''
 .lex-soon h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:oklch(0.80 0.10 55);margin-bottom:.7rem}
 .lex-soon p{font-family:var(--serif);font-size:1.05rem;color:oklch(0.82 0.008 70);max-width:70ch}
 .lex-soon strong{color:oklch(0.97 0.006 70)}
+.lex-soon a{color:oklch(0.86 0.10 55);border-bottom:1px solid oklch(0.60 0.10 55)}
+.lex-soon a:hover{color:oklch(0.97 0.006 70)}
+/* constellation CTA on the lexicon hero */
+.lex-constellation-cta{display:inline-flex;align-items:center;gap:.5em;margin-top:1.4rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;color:var(--bg);background:var(--ink);border:2px solid var(--ink);padding:.7em 1.1em;transition:background .15s,color .15s}
+.lex-constellation-cta:hover{background:transparent;color:var(--ink)}
 /* see-all + back links */
 .lex-seeall{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
 .lex-seeall:hover{color:var(--accent-deep)}

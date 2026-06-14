@@ -542,7 +542,7 @@ img { max-width: 100%; height: auto; }
   font-family: var(--mono); font-weight: 700; font-size: 0.7rem;
   letter-spacing: 0.14em; text-transform: uppercase;
 }
-.site-top-nav a {
+.site-top-nav a:not(.site-top-sub) {
   font-family: var(--mono);
   font-weight: 700;
   font-size: 0.76rem;
@@ -554,7 +554,7 @@ img { max-width: 100%; height: auto; }
   border-bottom: 2px solid transparent;
   transition: color 0.15s;
 }
-.site-top-nav a:hover { color: var(--ink); }
+.site-top-nav a:not(.site-top-sub):hover { color: var(--ink); }
 .site-top-nav a.is-active { color: var(--accent); border-color: var(--accent); }
 .site-top-sub {
   margin-left: auto;
