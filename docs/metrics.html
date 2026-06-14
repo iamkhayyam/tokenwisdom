@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Corpus Report — Token Wisdom</title>
+<meta name="description" content="The Newsletter of Record for the Future of Now">
+<link rel="icon" type="image/svg+xml" href="assets/crystal-ball.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="site-top">
+  <div class="site-top-inner">
+    <a href="index.html" class="site-top-wordmark"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"> Token Wisdom</a>
+    <nav class="site-top-nav">
+      <a href="archive.html">Archive</a>
+      <a href="tags/index.html">Topics</a>
+      <a href="lexicon/index.html">Lexicon</a>
+      <a href="tags/a-closer-look.html">Essays</a>
+      <a href="tags/worthafortune.html">Newsletters</a>
+      <a href="podcast.html">Podcast</a>
+      <a href="metrics.html">Report</a>
+    </nav>
+  </div>
+</div>
+
+<style>
+.m-wrap { max-width: var(--max-wide); margin: 0 auto; padding: 0 24px 5rem; }
+
+/* masthead */
+.m-masthead { padding: 4rem 0 2.4rem; border-bottom: 2px solid var(--ink); }
+.m-mast-kicker {
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 11px; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 1.1rem;
+}
+.m-mast-title {
+  font-family: var(--display); font-weight: 700; line-height: .95;
+  font-size: clamp(3rem, 9vw, 6.4rem); letter-spacing: -.02em; color: var(--ink);
+}
+.m-mast-sub {
+  font-family: var(--serif); font-size: clamp(1.05rem, 2.2vw, 1.45rem);
+  line-height: 1.5; color: var(--ink-muted); max-width: 40ch; margin-top: 1.2rem;
+}
+.m-mast-sub strong { color: var(--ink); font-weight: 600; }
+.m-mast-meta {
+  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink-faint);
+  margin-top: 1.4rem;
+}
+
+/* hero figures */
+.m-hero-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--paper-rule); margin-top: 2.4rem;
+}
+.m-hero-grid .m-stat {
+  border-bottom: 1px solid var(--paper-rule); border-right: 1px solid var(--paper-rule);
+  padding: 1.6rem 1.4rem;
+}
+.m-hero-grid .m-stat:nth-child(3n) { border-right: none; }
+
+.m-stat-num {
+  font-family: var(--display); font-weight: 700; line-height: 1;
+  font-size: clamp(2.1rem, 4.5vw, 3.2rem); letter-spacing: -.02em; color: var(--ink);
+  font-variant-numeric: tabular-nums;
+}
+.m-stat-lbl {
+  font-family: var(--mono); font-weight: 400; font-size: 11px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink); margin-top: .7rem;
+}
+.m-stat-sub {
+  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
+  letter-spacing: .04em; color: var(--ink-faint); margin-top: .25rem;
+}
+
+/* sections */
+.m-sec { padding: 3.6rem 0 0.5rem; }
+.m-sec-head { display: flex; gap: 1.2rem; align-items: baseline; border-top: 2px solid var(--ink); padding-top: 1rem; }
+.m-sec-no {
+  font-family: var(--mono); font-weight: 500; font-size: 13px;
+  letter-spacing: .1em; color: var(--accent);
+}
+.m-sec-kicker {
+  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
+  letter-spacing: .2em; text-transform: uppercase; color: var(--ink-muted);
+}
+.m-sec-title {
+  font-family: var(--display); font-weight: 700; font-size: clamp(1.8rem, 4vw, 2.9rem);
+  letter-spacing: -.015em; color: var(--ink); line-height: 1.04; margin-top: .15rem;
+}
+.m-sec-note {
+  font-family: var(--serif); font-size: 1.12rem; line-height: 1.65;
+  color: var(--ink-muted); max-width: 62ch; margin: 1.4rem 0 2rem;
+}
+.m-caption {
+  font-family: var(--serif); font-size: .98rem; line-height: 1.6;
+  color: var(--ink-muted); max-width: 64ch; margin: 1.6rem 0 0;
+}
+.m-caption em, .m-sec-note em, .m-method em { font-style: italic; color: var(--ink); }
+
+/* layout helpers */
+.m-split { display: grid; grid-template-columns: 1.6fr 1fr; gap: 2.4rem; align-items: start; margin-top: .5rem; }
+.m-two { display: grid; grid-template-columns: 1fr 1fr; gap: 2.4rem; }
+.m-three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; }
+.m-mini-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid var(--paper-rule); }
+.m-mini-4 { grid-template-columns: repeat(4, 1fr); }
+.m-mini-stats .m-stat { padding: 1.1rem 1.2rem 1.1rem 0; border-bottom: 1px solid var(--paper-rule); }
+.m-mini-stats .m-stat-num { font-size: clamp(1.6rem, 3.2vw, 2.3rem); }
+
+/* charts */
+.m-chart { margin-top: 2.2rem; }
+.m-chart-label {
+  font-family: var(--mono); font-weight: 400; font-size: 11px;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
+  padding-bottom: .7rem; border-bottom: 1px solid var(--paper-rule); margin-bottom: 1.1rem;
+}
+.m-chart-foot, .m-legend {
+  font-family: var(--mono); font-weight: var(--mono-weight); font-size: 11px;
+  letter-spacing: .03em; color: var(--ink-faint); margin-top: .9rem; line-height: 1.5;
+}
+.m-svg { width: 100%; height: auto; overflow: visible; display: block; }
+.m-svg-val { font-family: var(--mono); font-weight: 400; font-size: 11px; fill: var(--ink-muted); }
+.m-svg-lbl { font-family: var(--mono); font-weight: var(--mono-weight); font-size: 10px; fill: var(--ink-faint); letter-spacing: .05em; }
+.m-svg-axis { stroke: var(--ink); stroke-width: 1; }
+.m-rank-lbl { font-family: var(--mono); font-weight: 400; font-size: 12px; fill: var(--ink); }
+.m-rank-val { font-family: var(--mono); font-weight: 500; font-size: 12px; fill: var(--accent); }
+.m-q { fill: var(--ink-faint); }
+
+.m-legend { display: flex; flex-wrap: wrap; gap: 1.4rem; color: var(--ink-muted); }
+.m-legend-wrap span { font-size: 11px; }
+.m-legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: .5rem; vertical-align: middle; }
+.m-split-bar .m-svg { border-radius: 2px; overflow: hidden; }
+.m-mini-stats.m-mini-4 + .m-chart { margin-top: 2.6rem; }
+
+/* methodology */
+.m-method {
+  margin-top: 4rem; padding: 2rem 0 0; border-top: 2px solid var(--ink);
+}
+.m-method p {
+  font-family: var(--serif); font-size: .98rem; line-height: 1.7;
+  color: var(--ink-muted); max-width: 72ch; margin-top: 1rem;
+}
+
+@media (max-width: 860px) {
+  .m-hero-grid { grid-template-columns: repeat(2, 1fr); }
+  .m-hero-grid .m-stat:nth-child(3n) { border-right: 1px solid var(--paper-rule); }
+  .m-hero-grid .m-stat:nth-child(2n) { border-right: none; }
+  .m-split, .m-two, .m-three { grid-template-columns: 1fr; gap: 1.6rem; }
+  .m-mini-4 { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .m-hero-grid { grid-template-columns: 1fr; }
+  .m-hero-grid .m-stat, .m-hero-grid .m-stat:nth-child(n) { border-right: none; }
+  .m-mini-stats, .m-mini-4 { grid-template-columns: 1fr 1fr; }
+}
+</style>
+<div class="m-wrap">
+
+<header class="m-masthead">
+  <div class="m-mast-kicker">Annual Report · The Quantified Corpus</div>
+  <h1 class="m-mast-title">The Corpus Report</h1>
+  <p class="m-mast-sub">A measured portrait of <strong>Token Wisdom</strong> —
+     every word, edition, and idea, counted. 2013–2026.</p>
+  <div class="m-mast-meta">Compiled June 14, 2026 · 267 entries ·
+     13 years on record</div>
+</header>
+
+<div class="m-hero-grid">
+  <div class="m-stat"><div class="m-stat-num">538,947</div><div class="m-stat-lbl">Words written</div><div class="m-stat-sub">across 267 entries</div></div>
+  <div class="m-stat"><div class="m-stat-num">48</div><div class="m-stat-lbl">Hours of reading</div><div class="m-stat-sub">2,869 minutes, cover to cover</div></div>
+  <div class="m-stat"><div class="m-stat-num">1,941</div><div class="m-stat-lbl">Terms defined</div><div class="m-stat-sub">in The Lexicon</div></div>
+  <div class="m-stat"><div class="m-stat-num">22,363</div><div class="m-stat-lbl">Distinct words</div><div class="m-stat-sub">the working vocabulary</div></div>
+  <div class="m-stat"><div class="m-stat-num">1,619</div><div class="m-stat-lbl">Links curated</div><div class="m-stat-sub">over 75 weeks</div></div>
+  <div class="m-stat"><div class="m-stat-num">13</div><div class="m-stat-lbl">Years on record</div><div class="m-stat-sub">2013–2026</div></div>
+</div>
+
+<section class="m-sec">
+  <div class="m-sec-head">
+    <span class="m-sec-no">01</span>
+    <div>
+      <div class="m-sec-kicker">Volume</div>
+      <h2 class="m-sec-title">Word Count</h2>
+    </div>
+  </div>
+  <p class="m-sec-note">538-thousand words is a long shelf. Here is how the corpus splits between the weekly digest and the long-form essays, and how it accumulated year over year.</p>
+
+  <div class="m-split">
+    <div class="m-split-bar">
+      <svg class="m-svg" viewBox="0 0 560 30" role="img" preserveAspectRatio="none" style="height:30px"><rect x="0.0" y="0" width="177.7" height="30" fill="var(--accent)"/><rect x="177.7" y="0" width="382.3" height="30" fill="var(--teal)"/></svg>
+      <div class="m-legend">
+        <span><i style="background:var(--accent)"></i>Newsletters · 171,033 words (32%) · 103 editions</span>
+        <span><i style="background:var(--teal)"></i>Essays · 367,914 words (68%) · 164 pieces</span>
+      </div>
+    </div>
+    <div class="m-mini-stats">
+      <div class="m-stat"><div class="m-stat-num">2,018</div><div class="m-stat-lbl">Average entry</div><div class="m-stat-sub">words</div></div>
+      <div class="m-stat"><div class="m-stat-num">2,091</div><div class="m-stat-lbl">Median entry</div><div class="m-stat-sub">words</div></div>
+      <div class="m-stat"><div class="m-stat-num">7,686</div><div class="m-stat-lbl">Longest entry</div><div class="m-stat-sub">words</div></div>
+    </div>
+  </div>
+  <p class="m-caption">The longest single entry — <em>Not Just Another Essay About DeepSeek—The Ransomware Edition</em> —
+     runs 7,686 words on its own.</p>
+
+  <div class="m-chart">
+    <div class="m-chart-label">Words published per year</div>
+    <svg class="m-svg" viewBox="0 0 560 200" role="img" preserveAspectRatio="xMidYMid meet"><line x1="4" y1="166.0" x2="556" y2="166.0" class="m-svg-axis"/><rect x="17.1" y="159.5" width="42.8" height="6.5" fill="var(--accent)" rx="1"/><text x="38.5" y="154.5" class="m-svg-val" text-anchor="middle">11k</text><text x="38.5" y="192.0" class="m-svg-lbl" text-anchor="middle">13</text><rect x="86.1" y="164.8" width="42.8" height="1.2" fill="var(--paper-rule)" rx="1"/><text x="107.5" y="159.8" class="m-svg-val" text-anchor="middle">2k</text><text x="107.5" y="192.0" class="m-svg-lbl" text-anchor="middle">14</text><rect x="155.1" y="165.5" width="42.8" height="0.5" fill="var(--paper-rule)" rx="1"/><text x="176.5" y="160.5" class="m-svg-val" text-anchor="middle">1k</text><text x="176.5" y="192.0" class="m-svg-lbl" text-anchor="middle">15</text><rect x="224.1" y="164.8" width="42.8" height="1.2" fill="var(--paper-rule)" rx="1"/><text x="245.5" y="159.8" class="m-svg-val" text-anchor="middle">2k</text><text x="245.5" y="192.0" class="m-svg-lbl" text-anchor="middle">22</text><rect x="293.1" y="146.4" width="42.8" height="19.6" fill="var(--accent)" rx="1"/><text x="314.5" y="141.4" class="m-svg-val" text-anchor="middle">32k</text><text x="314.5" y="192.0" class="m-svg-lbl" text-anchor="middle">23</text><rect x="362.1" y="68.8" width="42.8" height="97.2" fill="var(--accent)" rx="1"/><text x="383.5" y="63.8" class="m-svg-val" text-anchor="middle">161k</text><text x="383.5" y="192.0" class="m-svg-lbl" text-anchor="middle">24</text><rect x="431.1" y="16.0" width="42.8" height="150.0" fill="var(--accent)" rx="1"/><text x="452.5" y="11.0" class="m-svg-val" text-anchor="middle">248k</text><text x="452.5" y="192.0" class="m-svg-lbl" text-anchor="middle">25</text><rect x="500.1" y="116.4" width="42.8" height="49.6" fill="var(--accent)" rx="1"/><text x="521.5" y="111.4" class="m-svg-val" text-anchor="middle">82k</text><text x="521.5" y="192.0" class="m-svg-lbl" text-anchor="middle">26</text></svg>
+    <div class="m-chart-foot">Faint columns are years with fewer than five entries.</div>
+  </div>
+</section>
+<section class="m-sec">
+  <div class="m-sec-head">
+    <span class="m-sec-no">02</span>
+    <div>
+      <div class="m-sec-kicker">Attention</div>
+      <h2 class="m-sec-title">Read Time</h2>
+    </div>
+  </div>
+  <p class="m-sec-note">At a steady pace the whole corpus is 48 hours of reading — a full work-week and then some. Most entries, though, ask for far less.</p>
+
+  <div class="m-two">
+    <div class="m-chart">
+      <div class="m-chart-label">Entries by reading time (minutes)</div>
+      <svg class="m-svg" viewBox="0 0 420 200" role="img" preserveAspectRatio="xMidYMid meet"><line x1="4" y1="166.0" x2="416" y2="166.0" class="m-svg-axis"/><rect x="22.2" y="148.4" width="46.0" height="17.6" fill="var(--teal)" rx="1"/><text x="45.2" y="143.4" class="m-svg-val" text-anchor="middle">15</text><text x="45.2" y="192.0" class="m-svg-lbl" text-anchor="middle">≤3</text><rect x="104.6" y="137.9" width="46.0" height="28.1" fill="var(--teal)" rx="1"/><text x="127.6" y="132.9" class="m-svg-val" text-anchor="middle">24</text><text x="127.6" y="192.0" class="m-svg-lbl" text-anchor="middle">4–6</text><rect x="187.0" y="76.9" width="46.0" height="89.1" fill="var(--teal)" rx="1"/><text x="210.0" y="71.9" class="m-svg-val" text-anchor="middle">76</text><text x="210.0" y="192.0" class="m-svg-lbl" text-anchor="middle">7–10</text><rect x="269.4" y="16.0" width="46.0" height="150.0" fill="var(--teal)" rx="1"/><text x="292.4" y="11.0" class="m-svg-val" text-anchor="middle">128</text><text x="292.4" y="192.0" class="m-svg-lbl" text-anchor="middle">11–15</text><rect x="351.8" y="137.9" width="46.0" height="28.1" fill="var(--teal)" rx="1"/><text x="374.8" y="132.9" class="m-svg-val" text-anchor="middle">24</text><text x="374.8" y="192.0" class="m-svg-lbl" text-anchor="middle">16+</text></svg>
+    </div>
+    <div class="m-chart">
+      <div class="m-chart-label">Reading minutes added per year</div>
+      <svg class="m-svg" viewBox="0 0 420 200" role="img" preserveAspectRatio="xMidYMid meet"><line x1="4" y1="166.0" x2="416" y2="166.0" class="m-svg-axis"/><rect x="13.8" y="160.5" width="31.9" height="5.5" fill="var(--teal)" rx="1"/><text x="29.8" y="155.5" class="m-svg-val" text-anchor="middle">45</text><text x="29.8" y="192.0" class="m-svg-lbl" text-anchor="middle">13</text><rect x="65.3" y="164.9" width="31.9" height="1.1" fill="var(--paper-rule)" rx="1"/><text x="81.2" y="159.9" class="m-svg-val" text-anchor="middle">9</text><text x="81.2" y="192.0" class="m-svg-lbl" text-anchor="middle">14</text><rect x="116.8" y="165.6" width="31.9" height="0.4" fill="var(--paper-rule)" rx="1"/><text x="132.8" y="160.6" class="m-svg-val" text-anchor="middle">3</text><text x="132.8" y="192.0" class="m-svg-lbl" text-anchor="middle">15</text><rect x="168.3" y="165.0" width="31.9" height="1.0" fill="var(--paper-rule)" rx="1"/><text x="184.2" y="160.0" class="m-svg-val" text-anchor="middle">8</text><text x="184.2" y="192.0" class="m-svg-lbl" text-anchor="middle">22</text><rect x="219.8" y="148.3" width="31.9" height="17.7" fill="var(--teal)" rx="1"/><text x="235.8" y="143.3" class="m-svg-val" text-anchor="middle">144</text><text x="235.8" y="192.0" class="m-svg-lbl" text-anchor="middle">23</text><rect x="271.3" y="36.0" width="31.9" height="130.0" fill="var(--teal)" rx="1"/><text x="287.2" y="31.0" class="m-svg-val" text-anchor="middle">1,055</text><text x="287.2" y="192.0" class="m-svg-lbl" text-anchor="middle">24</text><rect x="322.8" y="16.0" width="31.9" height="150.0" fill="var(--teal)" rx="1"/><text x="338.8" y="11.0" class="m-svg-val" text-anchor="middle">1,217</text><text x="338.8" y="192.0" class="m-svg-lbl" text-anchor="middle">25</text><rect x="374.3" y="118.2" width="31.9" height="47.8" fill="var(--teal)" rx="1"/><text x="390.2" y="113.2" class="m-svg-val" text-anchor="middle">388</text><text x="390.2" y="192.0" class="m-svg-lbl" text-anchor="middle">26</text></svg>
+    </div>
+  </div>
+  <p class="m-caption">47.8 hours all told · 11 minutes
+     for the average entry · the single longest read runs 46 minutes.</p>
+</section>
+<section class="m-sec">
+  <div class="m-sec-head">
+    <span class="m-sec-no">03</span>
+    <div>
+      <div class="m-sec-kicker">Density</div>
+      <h2 class="m-sec-title">Concentration of Writing</h2>
+    </div>
+  </div>
+  <p class="m-sec-note">The Lexicon is the corpus distilled. Every edition mints new vocabulary; the average edition introduces dozens of defined terms, and the rate of coinage tells you when the field — and the writing — accelerated.</p>
+
+  <div class="m-mini-stats m-mini-4">
+    <div class="m-stat"><div class="m-stat-num">32</div><div class="m-stat-lbl">Terms per edition</div><div class="m-stat-sub">on average</div></div>
+    <div class="m-stat"><div class="m-stat-num">45</div><div class="m-stat-lbl">Densest edition</div><div class="m-stat-sub">defined terms</div></div>
+    <div class="m-stat"><div class="m-stat-num">1,941</div><div class="m-stat-lbl">Terms total</div><div class="m-stat-sub">from 74 editions</div></div>
+    <div class="m-stat"><div class="m-stat-num">26</div><div class="m-stat-lbl">Net new / edition</div><div class="m-stat-sub">across the run</div></div>
+  </div>
+
+  <div class="m-chart">
+    <div class="m-chart-label">The Lexicon by category</div>
+    <svg class="m-svg" viewBox="0 0 560 30" role="img" preserveAspectRatio="none" style="height:30px"><rect x="0.0" y="0" width="168.8" height="30" fill="var(--teal)"/><rect x="168.8" y="0" width="166.5" height="30" fill="var(--accent)"/><rect x="335.2" y="0" width="156.1" height="30" fill="var(--gold)"/><rect x="491.3" y="0" width="66.1" height="30" fill="var(--teal)"/><rect x="557.4" y="0" width="2.6" height="30" fill="var(--accent)"/></svg>
+    <div class="m-legend m-legend-wrap"><span><i style="background:var(--teal)"></i>Technologies · 585</span><span><i style="background:var(--accent)"></i>Concepts · 577</span><span><i style="background:var(--gold)"></i>Technical Terms · 541</span><span><i style="background:var(--teal)"></i>Acronyms · 229</span><span><i style="background:var(--accent)"></i>People & Works · 9</span></div>
+  </div>
+
+  <div class="m-chart">
+    <div class="m-chart-label">New terms first defined, by quarter</div>
+    <svg class="m-svg" viewBox="0 0 620 200" role="img" preserveAspectRatio="xMidYMid meet"><line x1="4" y1="166.0" x2="616" y2="166.0" class="m-svg-axis"/><rect x="19.2" y="132.2" width="46.0" height="33.8" fill="var(--gold)" rx="1"/><text x="42.2" y="127.2" class="m-svg-val" text-anchor="middle">83</text><text x="42.2" y="192.0" class="m-svg-lbl" text-anchor="middle">2024<tspan class="m-q"> Q1</tspan></text><rect x="95.8" y="148.1" width="46.0" height="17.9" fill="var(--gold)" rx="1"/><text x="118.8" y="143.1" class="m-svg-val" text-anchor="middle">44</text><text x="118.8" y="192.0" class="m-svg-lbl" text-anchor="middle">2024<tspan class="m-q"> Q2</tspan></text><rect x="172.2" y="34.3" width="46.0" height="131.7" fill="var(--gold)" rx="1"/><text x="195.2" y="29.3" class="m-svg-val" text-anchor="middle">323</text><text x="195.2" y="192.0" class="m-svg-lbl" text-anchor="middle">2025<tspan class="m-q"> Q1</tspan></text><rect x="248.8" y="16.0" width="46.0" height="150.0" fill="var(--gold)" rx="1"/><text x="271.8" y="11.0" class="m-svg-val" text-anchor="middle">368</text><text x="271.8" y="192.0" class="m-svg-lbl" text-anchor="middle">2025<tspan class="m-q"> Q2</tspan></text><rect x="325.2" y="28.2" width="46.0" height="137.8" fill="var(--gold)" rx="1"/><text x="348.2" y="23.2" class="m-svg-val" text-anchor="middle">338</text><text x="348.2" y="192.0" class="m-svg-lbl" text-anchor="middle">2025<tspan class="m-q"> Q3</tspan></text><rect x="401.8" y="26.6" width="46.0" height="139.4" fill="var(--gold)" rx="1"/><text x="424.8" y="21.6" class="m-svg-val" text-anchor="middle">342</text><text x="424.8" y="192.0" class="m-svg-lbl" text-anchor="middle">2025<tspan class="m-q"> Q4</tspan></text><rect x="478.2" y="17.6" width="46.0" height="148.4" fill="var(--gold)" rx="1"/><text x="501.2" y="12.6" class="m-svg-val" text-anchor="middle">364</text><text x="501.2" y="192.0" class="m-svg-lbl" text-anchor="middle">2026<tspan class="m-q"> Q1</tspan></text><rect x="554.8" y="133.8" width="46.0" height="32.2" fill="var(--gold)" rx="1"/><text x="577.8" y="128.8" class="m-svg-val" text-anchor="middle">79</text><text x="577.8" y="192.0" class="m-svg-lbl" text-anchor="middle">2026<tspan class="m-q"> Q2</tspan></text></svg>
+    <div class="m-chart-foot">Each column counts terms making their first
+       appearance that quarter — the corpus's rate of new ideas.</div>
+  </div>
+</section>
+<section class="m-sec">
+  <div class="m-sec-head">
+    <span class="m-sec-no">04</span>
+    <div>
+      <div class="m-sec-kicker">The Graph</div>
+      <h2 class="m-sec-title">Interconnectedness</h2>
+    </div>
+  </div>
+  <p class="m-sec-note">Ideas don't live in one edition. Terms recur, binding issues together into a web — and a curated trail of outside reading anchors the whole thing to the wider world.</p>
+
+  <div class="m-mini-stats m-mini-4">
+    <div class="m-stat"><div class="m-stat-num">203</div><div class="m-stat-lbl">Recurring terms</div><div class="m-stat-sub">appear in 2+ editions (10%)</div></div>
+    <div class="m-stat"><div class="m-stat-num">62</div><div class="m-stat-lbl">Connective tissue</div><div class="m-stat-sub">terms in 3+ editions</div></div>
+    <div class="m-stat"><div class="m-stat-num">1,619</div><div class="m-stat-lbl">Outbound links</div><div class="m-stat-sub">across 75 weeks</div></div>
+    <div class="m-stat"><div class="m-stat-num">22</div><div class="m-stat-lbl">Links per week</div><div class="m-stat-sub">curated, on average</div></div>
+  </div>
+
+  <div class="m-chart">
+    <div class="m-chart-label">Most-connected terms — appearances across editions</div>
+    <svg class="m-svg" viewBox="0 0 560 364" role="img" preserveAspectRatio="xMidYMid meet"><text x="158" y="13.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">AI</text><rect x="168" y="4.0" width="330.0" height="17.0" fill="var(--accent)" rx="1"/><text x="505.0" y="13.0" class="m-rank-val" dominant-baseline="central">53</text><text x="158" y="39.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">Quantum Computing</text><rect x="168" y="30.0" width="93.4" height="17.0" fill="var(--accent)" rx="1"/><text x="268.4" y="39.0" class="m-rank-val" dominant-baseline="central">15</text><text x="158" y="65.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">CEO</text><rect x="168" y="56.0" width="62.3" height="17.0" fill="var(--accent)" rx="1"/><text x="237.3" y="65.0" class="m-rank-val" dominant-baseline="central">10</text><text x="158" y="91.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">LLM</text><rect x="168" y="82.0" width="62.3" height="17.0" fill="var(--accent)" rx="1"/><text x="237.3" y="91.0" class="m-rank-val" dominant-baseline="central">10</text><text x="158" y="117.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">MIT</text><rect x="168" y="108.0" width="62.3" height="17.0" fill="var(--accent)" rx="1"/><text x="237.3" y="117.0" class="m-rank-val" dominant-baseline="central">10</text><text x="158" y="143.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">3D</text><rect x="168" y="134.0" width="56.0" height="17.0" fill="var(--accent)" rx="1"/><text x="231.0" y="143.0" class="m-rank-val" dominant-baseline="central">9</text><text x="158" y="169.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">DARPA</text><rect x="168" y="160.0" width="56.0" height="17.0" fill="var(--accent)" rx="1"/><text x="231.0" y="169.0" class="m-rank-val" dominant-baseline="central">9</text><text x="158" y="195.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">VC</text><rect x="168" y="186.0" width="49.8" height="17.0" fill="var(--accent)" rx="1"/><text x="224.8" y="195.0" class="m-rank-val" dominant-baseline="central">8</text><text x="158" y="221.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">Cybersecurity</text><rect x="168" y="212.0" width="43.6" height="17.0" fill="var(--accent)" rx="1"/><text x="218.6" y="221.0" class="m-rank-val" dominant-baseline="central">7</text><text x="158" y="247.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">Digital Privacy</text><rect x="168" y="238.0" width="43.6" height="17.0" fill="var(--accent)" rx="1"/><text x="218.6" y="247.0" class="m-rank-val" dominant-baseline="central">7</text><text x="158" y="273.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">VPN</text><rect x="168" y="264.0" width="37.4" height="17.0" fill="var(--accent)" rx="1"/><text x="212.4" y="273.0" class="m-rank-val" dominant-baseline="central">6</text><text x="158" y="299.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">BBC</text><rect x="168" y="290.0" width="31.1" height="17.0" fill="var(--accent)" rx="1"/><text x="206.1" y="299.0" class="m-rank-val" dominant-baseline="central">5</text><text x="158" y="325.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">CIA</text><rect x="168" y="316.0" width="31.1" height="17.0" fill="var(--accent)" rx="1"/><text x="206.1" y="325.0" class="m-rank-val" dominant-baseline="central">5</text><text x="158" y="351.0" class="m-rank-lbl" text-anchor="end" dominant-baseline="central">Consciousness Research</text><rect x="168" y="342.0" width="31.1" height="17.0" fill="var(--accent)" rx="1"/><text x="206.1" y="351.0" class="m-rank-val" dominant-baseline="central">5</text></svg>
+    <div class="m-chart-foot">The terms that thread through the most issues are the
+       corpus's load-bearing concepts.</div>
+  </div>
+</section>
+<section class="m-sec">
+  <div class="m-sec-head">
+    <span class="m-sec-no">05</span>
+    <div>
+      <div class="m-sec-kicker">Evolution</div>
+      <h2 class="m-sec-title">Progress in Writing Style</h2>
+    </div>
+  </div>
+  <p class="m-sec-note">Measured across 5 substantial years, the prose lengthened and thickened: longer sentences, longer words, a denser register. The corpus grew up.</p>
+
+  <div class="m-three">
+    <div class="m-chart">
+      <div class="m-chart-label">Average sentence length (words)</div>
+      <svg class="m-svg" viewBox="0 0 360 160" role="img" preserveAspectRatio="xMidYMid meet"><path d="M6.0 90.7 L55.7 134.0 L105.4 87.2 L155.1 69.9 L204.9 26.3 L254.6 22.0 L304.3 42.8 L354.0 85.5" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.0" cy="90.7" r="3.4" fill="var(--accent)" stroke="var(--accent)" stroke-width="0"/><text x="6.0" y="81.7" class="m-svg-val" text-anchor="middle">14</text><text x="6.0" y="152.0" class="m-svg-lbl" text-anchor="middle">13</text><circle cx="55.7" cy="134.0" r="2.4" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.4"/><text x="55.7" y="125.0" class="m-svg-val" text-anchor="middle">11</text><text x="55.7" y="152.0" class="m-svg-lbl" text-anchor="middle">14</text><circle cx="105.4" cy="87.2" r="2.4" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.4"/><text x="105.4" y="78.2" class="m-svg-val" text-anchor="middle">15</text><text x="105.4" y="152.0" class="m-svg-lbl" text-anchor="middle">15</text><circle cx="155.1" cy="69.9" r="2.4" fill="var(--paper)" stroke="var(--accent)" stroke-width="1.4"/><text x="155.1" y="60.9" class="m-svg-val" text-anchor="middle">16</text><text x="155.1" y="152.0" class="m-svg-lbl" text-anchor="middle">22</text><circle cx="204.9" cy="26.3" r="3.4" fill="var(--accent)" stroke="var(--accent)" stroke-width="0"/><text x="204.9" y="17.3" class="m-svg-val" text-anchor="middle">20</text><text x="204.9" y="152.0" class="m-svg-lbl" text-anchor="middle">23</text><circle cx="254.6" cy="22.0" r="3.4" fill="var(--accent)" stroke="var(--accent)" stroke-width="0"/><text x="254.6" y="13.0" class="m-svg-val" text-anchor="middle">20</text><text x="254.6" y="152.0" class="m-svg-lbl" text-anchor="middle">24</text><circle cx="304.3" cy="42.8" r="3.4" fill="var(--accent)" stroke="var(--accent)" stroke-width="0"/><text x="304.3" y="33.8" class="m-svg-val" text-anchor="middle">18</text><text x="304.3" y="152.0" class="m-svg-lbl" text-anchor="middle">25</text><circle cx="354.0" cy="85.5" r="3.4" fill="var(--accent)" stroke="var(--accent)" stroke-width="0"/><text x="354.0" y="76.5" class="m-svg-val" text-anchor="middle">15</text><text x="354.0" y="152.0" class="m-svg-lbl" text-anchor="middle">26</text></svg>
+    </div>
+    <div class="m-chart">
+      <div class="m-chart-label">Average word length (letters)</div>
+      <svg class="m-svg" viewBox="0 0 360 160" role="img" preserveAspectRatio="xMidYMid meet"><path d="M6.0 117.0 L55.7 119.7 L105.4 134.0 L155.1 36.1 L204.9 48.7 L254.6 37.0 L304.3 22.0 L354.0 42.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.0" cy="117.0" r="3.4" fill="var(--teal)" stroke="var(--teal)" stroke-width="0"/><text x="6.0" y="108.0" class="m-svg-val" text-anchor="middle">4.3</text><text x="6.0" y="152.0" class="m-svg-lbl" text-anchor="middle">13</text><circle cx="55.7" cy="119.7" r="2.4" fill="var(--paper)" stroke="var(--teal)" stroke-width="1.4"/><text x="55.7" y="110.7" class="m-svg-val" text-anchor="middle">4.3</text><text x="55.7" y="152.0" class="m-svg-lbl" text-anchor="middle">14</text><circle cx="105.4" cy="134.0" r="2.4" fill="var(--paper)" stroke="var(--teal)" stroke-width="1.4"/><text x="105.4" y="125.0" class="m-svg-val" text-anchor="middle">4.0</text><text x="105.4" y="152.0" class="m-svg-lbl" text-anchor="middle">15</text><circle cx="155.1" cy="36.1" r="2.4" fill="var(--paper)" stroke="var(--teal)" stroke-width="1.4"/><text x="155.1" y="27.1" class="m-svg-val" text-anchor="middle">5.6</text><text x="155.1" y="152.0" class="m-svg-lbl" text-anchor="middle">22</text><circle cx="204.9" cy="48.7" r="3.4" fill="var(--teal)" stroke="var(--teal)" stroke-width="0"/><text x="204.9" y="39.7" class="m-svg-val" text-anchor="middle">5.4</text><text x="204.9" y="152.0" class="m-svg-lbl" text-anchor="middle">23</text><circle cx="254.6" cy="37.0" r="3.4" fill="var(--teal)" stroke="var(--teal)" stroke-width="0"/><text x="254.6" y="28.0" class="m-svg-val" text-anchor="middle">5.6</text><text x="254.6" y="152.0" class="m-svg-lbl" text-anchor="middle">24</text><circle cx="304.3" cy="22.0" r="3.4" fill="var(--teal)" stroke="var(--teal)" stroke-width="0"/><text x="304.3" y="13.0" class="m-svg-val" text-anchor="middle">5.9</text><text x="304.3" y="152.0" class="m-svg-lbl" text-anchor="middle">25</text><circle cx="354.0" cy="42.0" r="3.4" fill="var(--teal)" stroke="var(--teal)" stroke-width="0"/><text x="354.0" y="33.0" class="m-svg-val" text-anchor="middle">5.5</text><text x="354.0" y="152.0" class="m-svg-lbl" text-anchor="middle">26</text></svg>
+    </div>
+    <div class="m-chart">
+      <div class="m-chart-label">Vocabulary richness (TTR %)</div>
+      <svg class="m-svg" viewBox="0 0 360 160" role="img" preserveAspectRatio="xMidYMid meet"><path d="M6.0 64.3 L55.7 67.9 L105.4 78.2 L155.1 134.0 L204.9 55.5 L254.6 35.4 L304.3 22.0 L354.0 24.8" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round"/><circle cx="6.0" cy="64.3" r="3.4" fill="var(--gold)" stroke="var(--gold)" stroke-width="0"/><text x="6.0" y="55.3" class="m-svg-val" text-anchor="middle">45</text><text x="6.0" y="152.0" class="m-svg-lbl" text-anchor="middle">13</text><circle cx="55.7" cy="67.9" r="2.4" fill="var(--paper)" stroke="var(--gold)" stroke-width="1.4"/><text x="55.7" y="58.9" class="m-svg-val" text-anchor="middle">44</text><text x="55.7" y="152.0" class="m-svg-lbl" text-anchor="middle">14</text><circle cx="105.4" cy="78.2" r="2.4" fill="var(--paper)" stroke="var(--gold)" stroke-width="1.4"/><text x="105.4" y="69.2" class="m-svg-val" text-anchor="middle">42</text><text x="105.4" y="152.0" class="m-svg-lbl" text-anchor="middle">15</text><circle cx="155.1" cy="134.0" r="2.4" fill="var(--paper)" stroke="var(--gold)" stroke-width="1.4"/><text x="155.1" y="125.0" class="m-svg-val" text-anchor="middle">33</text><text x="155.1" y="152.0" class="m-svg-lbl" text-anchor="middle">22</text><circle cx="204.9" cy="55.5" r="3.4" fill="var(--gold)" stroke="var(--gold)" stroke-width="0"/><text x="204.9" y="46.5" class="m-svg-val" text-anchor="middle">46</text><text x="204.9" y="152.0" class="m-svg-lbl" text-anchor="middle">23</text><circle cx="254.6" cy="35.4" r="3.4" fill="var(--gold)" stroke="var(--gold)" stroke-width="0"/><text x="254.6" y="26.4" class="m-svg-val" text-anchor="middle">50</text><text x="254.6" y="152.0" class="m-svg-lbl" text-anchor="middle">24</text><circle cx="304.3" cy="22.0" r="3.4" fill="var(--gold)" stroke="var(--gold)" stroke-width="0"/><text x="304.3" y="13.0" class="m-svg-val" text-anchor="middle">52</text><text x="304.3" y="152.0" class="m-svg-lbl" text-anchor="middle">25</text><circle cx="354.0" cy="24.8" r="3.4" fill="var(--gold)" stroke="var(--gold)" stroke-width="0"/><text x="354.0" y="15.8" class="m-svg-val" text-anchor="middle">51</text><text x="354.0" y="152.0" class="m-svg-lbl" text-anchor="middle">26</text></svg>
+    </div>
+  </div>
+  <p class="m-caption">From 2013's 14-word sentences the prose
+     stretched to a peak of 20 words in 2024, before
+     settling back; average word length thickened from 4.3 letters to a high
+     of 5.9 in 2025. Vocabulary richness is measured on
+     length-normalised 1,000-word windows, so it compares fairly across years of very
+     different size.</p>
+</section>
+<section class="m-method">
+  <div class="m-sec-kicker">Methodology</div>
+  <p>Figures are computed directly from 267 published entries
+     (2013–2026). Word counts tokenise the plain-text body of each post;
+     reading time is Ghost's own estimate. Lexicon figures come from
+     1941 terms harvested from every edition's <em>“The Less You Know”</em>
+     section across 74 editions. The link graph counts
+     1,619 curated outbound references logged over 75
+     weeks. Vocabulary richness uses the mean type–token ratio over consecutive
+     1,000-word windows to stay comparable across years. Compiled June 14, 2026.</p>
+</section>
+</div>
+<footer class="colophon">
+  <div class="colophon-inner">
+    <div>
+      <div class="wordmark">Token Wisdom</div>
+      <p>The Newsletter of Record for the Future of Now</p>
+      <p class="tagline">Knowware is measured in lifetimes</p>
+      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
+    </div>
+    <div>
+      <h4>Sections</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="archive.html">Archive</a></li>
+        <li><a href="tags/index.html">All Topics</a></li>
+        <li><a href="lexicon/index.html">The Lexicon</a></li>
+        <li><a href="tags/a-closer-look.html">Essays</a></li>
+        <li><a href="tags/worthafortune.html">Newsletters</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Popular Tags</h4>
+      <ul>
+      <li><a href="tags/a-closer-look.html">👁️ A Closer Look</a></li>
+      <li><a href="tags/technology.html">Technology</a></li>
+      <li><a href="tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
+      <li><a href="tags/ai.html">A.I. (and Subsets)</a></li>
+      <li><a href="tags/future-trends.html">Future Trends</a></li>
+      <li><a href="tags/ethical.html">Ethics \ Principles</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
+        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="colophon-bottom">
+    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
+    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+  </div>
+</footer>
+</body>
+</html>

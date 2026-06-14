@@ -49,6 +49,8 @@ LINKS_CSS = """
 .rr-week-toggle[aria-expanded=true] .rr-week-caret{transform:rotate(180deg)}
 .rr-week-body{display:none;padding:.6rem 0 1rem}
 .rr-week-toggle[aria-expanded=true]+.rr-week-body{display:block}
+.rr-week-cols{display:grid;grid-template-columns:1fr 1fr;gap:0 2.5rem}
+@media(max-width:640px){.rr-week-cols{grid-template-columns:1fr}}
 .rr-section-label{font-family:var(--mono);font-weight:300;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:.9rem 0 .5rem;padding-bottom:.35rem;border-bottom:.5px solid var(--rule)}
 .rr-list{list-style:none}
 .rr-item{display:grid;grid-template-columns:52px 1fr;gap:.75rem;padding:.5rem 0;border-bottom:.5px solid var(--rule);align-items:start}
@@ -172,10 +174,16 @@ def render_archive(db):
     <span class="rr-week-caret">▾</span>
   </button>
   <div class="rr-week-body" id="{wid}">
-    <div class="rr-section-label">The Newest Latest</div>
-    <ul class="rr-list">{tnl_items}</ul>
-    <div class="rr-section-label" style="margin-top:1.2rem">Time Well Spent</div>
-    <ul class="rr-list">{tws_items}</ul>
+    <div class="rr-week-cols">
+      <div>
+        <div class="rr-section-label">The Newest Latest</div>
+        <ul class="rr-list">{tnl_items}</ul>
+      </div>
+      <div>
+        <div class="rr-section-label">Time Well Spent</div>
+        <ul class="rr-list">{tws_items}</ul>
+      </div>
+    </div>
   </div>
 </div>"""
 

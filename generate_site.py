@@ -1967,6 +1967,7 @@ def site_top(from_dir="root"):
       <a href="{prefix}tags/a-closer-look.html">Essays</a>
       <a href="{prefix}tags/worthafortune.html">Newsletters</a>
       <a href="{prefix}podcast.html">Podcast</a>
+      <a href="{prefix}metrics.html">Report</a>
     </nav>
   </div>
 </div>
@@ -2416,6 +2417,7 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
 # ============================================================
 
 def render_archive(posts, posts_count, tags_count, years_span, top_tags):
+    import json as _json
     sorted_posts = sorted(
         [p for p in posts if p.get("published_at")],
         key=lambda p: p["published_at"], reverse=True,
@@ -2423,6 +2425,27 @@ def render_archive(posts, posts_count, tags_count, years_span, top_tags):
     by_year = defaultdict(list)
     for p in sorted_posts:
         by_year[p["published_at"][:4]].append(p)
+
+    # Compact post records for JS-driven visual views: slug, title, date, tag-slugs
+    posts_data = []
+    tag_names = {}
+    for p in sorted_posts:
+        tag_slugs = []
+        for t in p.get("tags", []):
+            ts = t.get("slug", "")
+            tn = (t.get("name", "") or "")
+            if ts.startswith("hash-") or tn.startswith("#"):
+                continue  # skip internal/hidden tags
+            tag_slugs.append(ts)
+            tag_names[ts] = tn
+        posts_data.append({
+            "s": p["slug"],
+            "t": p.get("title", "") or "",
+            "d": (p.get("published_at") or "")[:10],
+            "g": tag_slugs,
+        })
+    posts_json = _json.dumps(posts_data, separators=(",", ":"), ensure_ascii=False)
+    tagnames_json = _json.dumps(tag_names, separators=(",", ":"), ensure_ascii=False)
 
     sections = ""
     for year in sorted(by_year.keys(), reverse=True):
@@ -2445,6 +2468,689 @@ def render_archive(posts, posts_count, tags_count, years_span, top_tags):
 {items}
 """
 
+    archive_css = """
+<style>
+/* ── Archive Calendar & Clusters ── */
+.archive-year-section { position: relative; padding-top: 1.4rem; }
+.archive-year-section:first-child { padding-top: 0; }
+.archive-cal-wrap {
+  background: var(--paper);
+  margin: 0 0 .6rem;
+  padding: .5rem 0 .6rem;
+  border-top: 2px solid var(--ink);
+  border-bottom: 1px solid var(--paper-rule);
+}
+/* Year heading folds into the sticky bar (compact, no standalone border) */
+.archive-cal-wrap .archive-year {
+  border-top: none;
+  font-size: 1.5rem;
+  margin: 0 0 .5rem;
+  padding: 0;
+}
+.archive-cal {
+  display: flex;
+  gap: 3px;
+  flex-wrap: wrap;
+  margin-bottom: .55rem;
+}
+.cal-month {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  border-radius: 3px;
+  cursor: default;
+  border: 1px solid var(--paper-rule);
+  color: var(--ink-faint);
+  background: transparent;
+  transition: background .12s, color .12s, border-color .12s;
+  line-height: 1.6;
+}
+.cal-month.has-posts {
+  color: var(--ink);
+  border-color: color-mix(in srgb, var(--ink) 30%, transparent);
+  cursor: pointer;
+}
+.cal-month.has-posts:hover,
+.cal-month.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+.archive-clusters {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.clusters-label {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-right: 2px;
+}
+.cluster-tag {
+  font-family: var(--mono);
+  font-size: 8px;
+  font-weight: 500;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  padding: 2px 9px;
+  border-radius: 20px;
+  background: transparent;
+  border: 1px solid var(--paper-rule);
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: all .12s;
+  line-height: 1.7;
+}
+.cluster-tag:hover { border-color: var(--ink); color: var(--ink); }
+.cluster-tag.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+#archive-filter-bar {
+  position: sticky;
+  top: 0;
+  z-index: 200;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 9px 24px;
+  display: none;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0,0,0,.18);
+}
+#archive-filter-bar.visible { display: flex; }
+#archive-filter-bar .fbar-label { opacity: .55; }
+#archive-filter-bar .fbar-tag { font-weight: 600; }
+#archive-filter-bar .fbar-count { opacity: .45; }
+#archive-filter-bar .fbar-clear {
+  margin-left: auto;
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .12s;
+  text-decoration: underline;
+}
+#archive-filter-bar .fbar-clear:hover { opacity: 1; }
+.archive-item.arc-dimmed { opacity: .1; transition: opacity .2s; pointer-events: none; }
+.archive-year-section.arc-dimmed { opacity: .15; transition: opacity .2s; pointer-events: none; }
+
+/* ── View toggle ── */
+:root {
+  --cl-essay: #b5402f;
+  --cl-newsletter: #c0892d;
+  --cl-dear: #3f7d86;
+  --cl-featured: #6b6760;
+}
+.archive-viewbar {
+  display: flex;
+  gap: 0;
+  margin: 0 0 1.6rem;
+  border: 1px solid var(--ink);
+  border-radius: 4px;
+  overflow: hidden;
+  width: fit-content;
+}
+.archive-viewbar button {
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  padding: 8px 16px;
+  background: transparent;
+  color: var(--ink-muted);
+  border: none;
+  border-right: 1px solid var(--paper-rule);
+  cursor: pointer;
+  transition: background .12s, color .12s;
+}
+.archive-viewbar button:last-child { border-right: none; }
+.archive-viewbar button:hover { color: var(--ink); }
+.archive-viewbar button.active { background: var(--ink); color: var(--paper); }
+.archive-view { display: none; }
+.archive-view.active { display: block; }
+
+/* shared legend */
+.arc-legend {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin: .2rem 0 1.4rem;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.arc-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.arc-legend i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+
+/* shared tooltip */
+#arc-tip {
+  position: fixed;
+  z-index: 500;
+  pointer-events: none;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 10px;
+  line-height: 1.4;
+  letter-spacing: .04em;
+  padding: 6px 10px;
+  border-radius: 4px;
+  max-width: 240px;
+  opacity: 0;
+  transition: opacity .1s;
+  box-shadow: 0 3px 12px rgba(0,0,0,.25);
+}
+#arc-tip.show { opacity: 1; }
+#arc-tip .tip-t { font-weight: 600; text-transform: none; letter-spacing: 0; }
+#arc-tip .tip-m { opacity: .6; margin-top: 2px; }
+
+/* ── Heatmap ── */
+.heatmap-row {
+  display: grid;
+  grid-template-columns: 56px repeat(12, 1fr);
+  gap: 4px;
+  align-items: center;
+  margin-bottom: 4px;
+}
+.heatmap-yearlabel {
+  font-family: var(--display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--ink);
+}
+.heatmap-monthhdr {
+  font-family: var(--mono);
+  font-size: 8px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-align: center;
+}
+.heatmap-cell {
+  aspect-ratio: 1 / 1;
+  border-radius: 3px;
+  background: var(--paper-rule);
+  cursor: default;
+  transition: transform .1s, outline .1s;
+  outline: 0 solid transparent;
+}
+.heatmap-cell.has {
+  cursor: pointer;
+}
+.heatmap-cell.has:hover {
+  transform: scale(1.12);
+  outline: 2px solid var(--ink);
+}
+.heatmap-grid-header {
+  display: grid;
+  grid-template-columns: 56px repeat(12, 1fr);
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+/* ── Timeline ── */
+.timeline-scroll { overflow-x: auto; padding-bottom: 12px; }
+.timeline-svg { display: block; }
+.timeline-dot { cursor: pointer; transition: r .1s; }
+.timeline-dot:hover { stroke: var(--ink); stroke-width: 1.5; }
+.timeline-axis-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  fill: var(--ink-muted);
+  letter-spacing: .08em;
+}
+.timeline-axis-line { stroke: var(--paper-rule); stroke-width: 1; }
+
+/* ── Bubbles ── */
+.bubbles-svg { display: block; width: 100%; height: auto; }
+.bubble { cursor: pointer; transition: opacity .12s; }
+.bubble:hover { opacity: .82; }
+.bubble-label {
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+  fill: var(--paper);
+  pointer-events: none;
+  text-anchor: middle;
+  dominant-baseline: central;
+}
+.bubbles-hint {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 700px) {
+  .heatmap-row, .heatmap-grid-header { grid-template-columns: 40px repeat(12, 1fr); gap: 2px; }
+  .heatmap-monthhdr { font-size: 6px; }
+}
+</style>"""
+
+    archive_js_template = r'''
+<script>
+(function () {
+  const POSTS = __POSTS__;
+  const TAGNAMES = __TAGNAMES__;
+  const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+  const SLUG_TAGS = {};
+  POSTS.forEach(p => { SLUG_TAGS[p.s] = p.g; });
+
+  const CLUSTERS = [
+    { label: 'A Closer Look',    key: 'essay',      match: g => g.includes('a-closer-look') },
+    { label: 'Pearls of Wisdom', key: 'newsletter', match: g => g.includes('worthafortune') },
+    { label: 'Dear ____',        key: 'dear',       match: g => g.includes('dear-______-letters') },
+    { label: 'Featured',         key: 'featured',   match: g => {
+      if (!g.length) return false;
+      if (g.includes('a-closer-look') || g.includes('worthafortune') || g.includes('dear-______-letters')) return false;
+      return true;
+    } },
+  ];
+  const CLUSTER_COLOR = {
+    essay: 'var(--cl-essay)', newsletter: 'var(--cl-newsletter)',
+    dear: 'var(--cl-dear)',   featured: 'var(--cl-featured)',
+  };
+  const CLUSTER_LABEL = { essay: 'A Closer Look', newsletter: 'Pearls of Wisdom', dear: 'Dear ____', featured: 'Featured' };
+
+  function primaryCluster(g) {
+    if (g.includes('a-closer-look')) return 'essay';
+    if (g.includes('worthafortune')) return 'newsletter';
+    if (g.includes('dear-______-letters')) return 'dear';
+    return 'featured';
+  }
+  function esc(s) { return (s || '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+  function parseWhen(str) {
+    const parts = (str || '').trim().replace(',','').split(/\s+/);
+    return { month: MONTHS.indexOf(parts[0]), day: parseInt(parts[1]) };
+  }
+  function slugFromHref(href) { return (href || '').replace(/.*posts\//, '').replace(/\.html$/, ''); }
+  function fmtMonthYear(d) { const [y,m] = d.split('-'); return MONTHS[parseInt(m)-1] + ' ' + y; }
+  function fmtFull(d) { const [y,m,day] = d.split('-'); return MONTHS[parseInt(m)-1] + ' ' + parseInt(day) + ', ' + y; }
+
+  // ── Tooltip ───────────────────────────────────────────────────────────────
+  const tip = document.createElement('div');
+  tip.id = 'arc-tip';
+  document.body.appendChild(tip);
+  function showTip(e, title, meta) {
+    tip.innerHTML = '<div class="tip-t">' + esc(title) + '</div>' + (meta ? '<div class="tip-m">' + esc(meta) + '</div>' : '');
+    tip.classList.add('show'); moveTip(e);
+  }
+  function moveTip(e) {
+    let x = e.clientX + 14, y = e.clientY + 14;
+    const w = tip.offsetWidth, h = tip.offsetHeight;
+    if (x + w > window.innerWidth - 8) x = e.clientX - w - 14;
+    if (y + h > window.innerHeight - 8) y = e.clientY - h - 14;
+    tip.style.left = x + 'px'; tip.style.top = y + 'px';
+  }
+  function hideTip() { tip.classList.remove('show'); }
+
+  const archiveWrap = document.querySelector('.archive-wrap');
+
+  // ── Filter bar ────────────────────────────────────────────────────────────
+  const filterBar = document.createElement('div');
+  filterBar.id = 'archive-filter-bar';
+  filterBar.innerHTML =
+    '<span class="fbar-label">Showing</span>' +
+    '<span class="fbar-tag" id="fbar-tag-name"></span>' +
+    '<span class="fbar-count" id="fbar-tag-count"></span>' +
+    '<span class="fbar-clear" id="fbar-clear">× clear</span>';
+  if (archiveWrap) archiveWrap.prepend(filterBar);
+  const fbarTagName = document.getElementById('fbar-tag-name');
+  const fbarCount   = document.getElementById('fbar-tag-count');
+  const fbarClear   = document.getElementById('fbar-clear');
+  let activeKey = null;
+
+  function itemTags(item) {
+    const href = item.querySelector('h3 a')?.getAttribute('href') || '';
+    return SLUG_TAGS[slugFromHref(href)] || [];
+  }
+  function applyFilter(key, matchFn, label) {
+    activeKey = key;
+    document.querySelectorAll('.cluster-tag').forEach(c => c.classList.remove('active'));
+    const allItems    = document.querySelectorAll('.archive-item');
+    const allSections = document.querySelectorAll('.archive-year-section');
+    if (!key) {
+      allItems.forEach(el => el.classList.remove('arc-dimmed'));
+      allSections.forEach(el => el.classList.remove('arc-dimmed'));
+      filterBar.classList.remove('visible');
+      return;
+    }
+    let matchCount = 0;
+    allItems.forEach(el => {
+      if (matchFn(itemTags(el))) { el.classList.remove('arc-dimmed'); matchCount++; }
+      else { el.classList.add('arc-dimmed'); }
+    });
+    allSections.forEach(section => {
+      const hasMatch = [...section.querySelectorAll('.archive-item')].some(el => !el.classList.contains('arc-dimmed'));
+      section.classList.toggle('arc-dimmed', !hasMatch);
+    });
+    fbarTagName.textContent = label;
+    fbarCount.textContent   = '· ' + matchCount + ' post' + (matchCount !== 1 ? 's' : '');
+    filterBar.classList.add('visible');
+  }
+  fbarClear.addEventListener('click', () => applyFilter(null));
+
+  // ── View toggle ───────────────────────────────────────────────────────────
+  const VIEWS = [
+    { key: 'list',     label: 'List' },
+    { key: 'heatmap',  label: 'Heatmap' },
+    { key: 'timeline', label: 'Timeline' },
+    { key: 'clusters', label: 'Clusters' },
+  ];
+  const viewbar = document.createElement('div');
+  viewbar.className = 'archive-viewbar';
+  VIEWS.forEach(v => {
+    const b = document.createElement('button');
+    b.textContent = v.label;
+    b.dataset.view = v.key;
+    if (v.key === 'list') b.classList.add('active');
+    b.addEventListener('click', () => setView(v.key));
+    viewbar.appendChild(b);
+  });
+  if (archiveWrap) archiveWrap.prepend(viewbar);
+
+  const rendered = {};
+  function setView(name) {
+    document.querySelectorAll('.archive-viewbar button').forEach(b => b.classList.toggle('active', b.dataset.view === name));
+    document.querySelectorAll('.archive-view').forEach(p => p.classList.toggle('active', p.id === 'view-' + name));
+    if (name !== 'list') applyFilter(null);
+    filterBar.style.display = name === 'list' ? '' : 'none';
+    if (!rendered[name]) { renderView(name); rendered[name] = true; }
+  }
+  function renderView(name) {
+    if (name === 'heatmap')  renderHeatmap();
+    if (name === 'timeline') renderTimeline();
+    if (name === 'clusters') renderClusters();
+  }
+
+  // ── LIST VIEW: per-year sticky calendars ─────────────────────────────────
+  const siteTopH = (document.querySelector('.site-top')?.offsetHeight || 48) + 4;
+  [...document.querySelectorAll('h2.archive-year')].forEach(h2 => {
+    const year = h2.textContent.trim();
+    const itemNodes = [];
+    let sib = h2.nextElementSibling;
+    while (sib && !sib.matches('h2.archive-year')) {
+      if (sib.matches('.archive-item')) itemNodes.push(sib);
+      sib = sib.nextElementSibling;
+    }
+    const byMonth = {};
+    const monthFirstItem = new Map();
+    itemNodes.forEach(item => {
+      const d = parseWhen(item.querySelector('.when')?.textContent);
+      if (d.month < 0) return;
+      if (!byMonth[d.month]) { byMonth[d.month] = []; monthFirstItem.set(d.month, item); }
+      byMonth[d.month].push(item);
+    });
+    const clusterCounts = {};
+    CLUSTERS.forEach(c => { clusterCounts[c.key] = 0; });
+    itemNodes.forEach(item => { const tags = itemTags(item); CLUSTERS.forEach(c => { if (c.match(tags)) clusterCounts[c.key]++; }); });
+
+    // Remember where the year section belongs, then fold the heading into the sticky bar
+    const sectionAnchor = document.createComment('year-' + year);
+    h2.parentNode.insertBefore(sectionAnchor, h2);
+
+    const calWrap = document.createElement('div');
+    calWrap.className = 'archive-cal-wrap';
+    calWrap.style.cssText = 'position:sticky;top:' + siteTopH + 'px;z-index:50;';
+    calWrap.appendChild(h2);  // year heading rides inside the sticky header
+    const cal = document.createElement('div');
+    cal.className = 'archive-cal';
+    MONTHS.forEach((name, i) => {
+      const btn = document.createElement('button');
+      const hasPosts = !!byMonth[i];
+      btn.className = 'cal-month' + (hasPosts ? ' has-posts' : '');
+      btn.textContent = name;
+      if (hasPosts) {
+        const n = byMonth[i].length;
+        btn.title = n + ' post' + (n > 1 ? 's' : '') + ' · ' + name + ' ' + year;
+        btn.addEventListener('click', () => {
+          document.getElementById('y' + year + '-m' + i)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          cal.querySelectorAll('.cal-month').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          setTimeout(() => btn.classList.remove('active'), 2000);
+        });
+      }
+      cal.appendChild(btn);
+    });
+    calWrap.appendChild(cal);
+
+    const clusters = document.createElement('div');
+    clusters.className = 'archive-clusters';
+    const lbl = document.createElement('span');
+    lbl.className = 'clusters-label';
+    lbl.textContent = 'filter:';
+    clusters.appendChild(lbl);
+    CLUSTERS.forEach(c => {
+      const count = clusterCounts[c.key];
+      if (!count) return;
+      const chip = document.createElement('button');
+      chip.className = 'cluster-tag';
+      chip.dataset.key = c.key;
+      chip.textContent = c.label + ' · ' + count;
+      chip.addEventListener('click', () => {
+        const isActive = activeKey === c.key;
+        applyFilter(isActive ? null : c.key, c.match, c.label);
+        if (!isActive) document.querySelectorAll('.cluster-tag[data-key="' + c.key + '"]').forEach(el => el.classList.add('active'));
+      });
+      clusters.appendChild(chip);
+    });
+    calWrap.appendChild(clusters);
+
+    const section = document.createElement('div');
+    section.className = 'archive-year-section';
+    sectionAnchor.parentNode.insertBefore(section, sectionAnchor);
+    sectionAnchor.remove();
+    section.appendChild(calWrap);
+    const headH = calWrap.offsetHeight || (siteTopH + 60);
+    itemNodes.forEach(item => {
+      const d = parseWhen(item.querySelector('.when')?.textContent);
+      if (d.month >= 0 && monthFirstItem.get(d.month) === item) {
+        const anchor = document.createElement('div');
+        anchor.id = 'y' + year + '-m' + d.month;
+        anchor.style.cssText = 'scroll-margin-top:' + (siteTopH + headH + 8) + 'px;height:0;';
+        section.appendChild(anchor);
+      }
+      section.appendChild(item);
+    });
+  });
+
+  function legendHTML() {
+    return '<div class="arc-legend">' + CLUSTERS.map(c =>
+      '<span><i style="background:' + CLUSTER_COLOR[c.key] + '"></i>' + c.label + '</span>'
+    ).join('') + '</div>';
+  }
+
+  // ── HEATMAP VIEW ──────────────────────────────────────────────────────────
+  function renderHeatmap() {
+    const host = document.getElementById('view-heatmap');
+    // year → month → {count, clusters:{}}
+    const grid = {};
+    let maxCount = 0;
+    POSTS.forEach(p => {
+      const [y, m] = p.d.split('-');
+      const mi = parseInt(m) - 1;
+      grid[y] = grid[y] || {};
+      grid[y][mi] = grid[y][mi] || { count: 0, cl: {} };
+      grid[y][mi].count++;
+      const k = primaryCluster(p.g);
+      grid[y][mi].cl[k] = (grid[y][mi].cl[k] || 0) + 1;
+      if (grid[y][mi].count > maxCount) maxCount = grid[y][mi].count;
+    });
+    const years = Object.keys(grid).sort((a, b) => b - a);
+
+    let html = legendHTML();
+    html += '<div class="heatmap-grid-header"><div></div>' +
+      MONTHS.map(m => '<div class="heatmap-monthhdr">' + m[0] + '</div>').join('') + '</div>';
+    years.forEach(y => {
+      html += '<div class="heatmap-row"><div class="heatmap-yearlabel">' + y + '</div>';
+      for (let mi = 0; mi < 12; mi++) {
+        const cell = grid[y][mi];
+        if (!cell) { html += '<div class="heatmap-cell"></div>'; continue; }
+        const dom = Object.entries(cell.cl).sort((a, b) => b[1] - a[1])[0][0];
+        const ratio = cell.count / maxCount;
+        const pct = Math.round((0.25 + 0.75 * ratio) * 100);
+        const bg = 'color-mix(in srgb, ' + CLUSTER_COLOR[dom] + ' ' + pct + '%, transparent)';
+        html += '<div class="heatmap-cell has" style="background:' + bg + '" ' +
+          'data-y="' + y + '" data-m="' + mi + '" data-n="' + cell.count + '" data-dom="' + dom + '"></div>';
+      }
+      html += '</div>';
+    });
+    host.innerHTML = html;
+
+    host.querySelectorAll('.heatmap-cell.has').forEach(cell => {
+      const y = cell.dataset.y, mi = +cell.dataset.m, n = +cell.dataset.n, dom = cell.dataset.dom;
+      cell.addEventListener('mouseenter', e => showTip(e, MONTHS[mi] + ' ' + y, n + ' post' + (n !== 1 ? 's' : '') + ' · mostly ' + CLUSTER_LABEL[dom]));
+      cell.addEventListener('mousemove', moveTip);
+      cell.addEventListener('mouseleave', hideTip);
+      cell.addEventListener('click', () => {
+        hideTip();
+        setView('list');
+        requestAnimationFrame(() => document.getElementById('y' + y + '-m' + mi)?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+      });
+    });
+  }
+
+  // ── TIMELINE VIEW ─────────────────────────────────────────────────────────
+  function renderTimeline() {
+    const host = document.getElementById('view-timeline');
+    const dated = POSTS.filter(p => /^\d{4}-\d{2}/.test(p.d));
+    const ym = d => { const [y, m] = d.split('-'); return [parseInt(y), parseInt(m)]; };
+    let minY = 9999, minM = 12, maxIdx = 0;
+    dated.forEach(p => { const [y, m] = ym(p.d); if (y < minY || (y === minY && m < minM)) { minY = y; minM = m; } });
+    const idxOf = p => { const [y, m] = ym(p.d); return (y - minY) * 12 + (m - minM); };
+    const bins = {};
+    dated.forEach(p => { const i = idxOf(p); (bins[i] = bins[i] || []).push(p); if (i > maxIdx) maxIdx = i; });
+
+    const colW = 13, padL = 44, padR = 20, padT = 24;
+    const maxStack = Math.max(...Object.values(bins).map(a => a.length), 1);
+    const rowH = 13, baseY = padT + maxStack * rowH;
+    const axisY = baseY + 8;
+    const width = padL + (maxIdx + 1) * colW + padR;
+    const height = axisY + 26;
+
+    let dots = '', axis = '';
+    // year gridlines + labels at each January
+    for (let i = 0; i <= maxIdx; i++) {
+      const y = minY + Math.floor((minM - 1 + i) / 12);
+      const m = ((minM - 1 + i) % 12) + 1;
+      if (m === 1 || i === 0) {
+        const x = padL + i * colW + colW / 2;
+        axis += '<line class="timeline-axis-line" x1="' + x + '" y1="' + padT + '" x2="' + x + '" y2="' + axisY + '"></line>';
+        axis += '<text class="timeline-axis-label" x="' + x + '" y="' + (axisY + 16) + '" text-anchor="middle">' + y + '</text>';
+      }
+    }
+    Object.entries(bins).forEach(([i, arr]) => {
+      const x = padL + (+i) * colW + colW / 2;
+      arr.sort((a, b) => a.d < b.d ? -1 : 1);
+      arr.forEach((p, j) => {
+        const cy = baseY - j * rowH;
+        const k = primaryCluster(p.g);
+        dots += '<circle class="timeline-dot" cx="' + x + '" cy="' + cy + '" r="4" fill="' + CLUSTER_COLOR[k] + '" ' +
+          'data-s="' + p.s + '" data-t="' + esc(p.t).replace(/"/g, '&quot;') + '" data-d="' + p.d + '" data-k="' + k + '"></circle>';
+      });
+    });
+
+    host.innerHTML = legendHTML() +
+      '<div class="timeline-scroll"><svg class="timeline-svg" width="' + width + '" height="' + height + '" viewBox="0 0 ' + width + ' ' + height + '">' +
+      axis + dots + '</svg></div>';
+
+    host.querySelectorAll('.timeline-dot').forEach(dot => {
+      dot.addEventListener('mouseenter', e => { dot.setAttribute('r', '6'); showTip(e, dot.dataset.t, fmtFull(dot.dataset.d) + ' · ' + CLUSTER_LABEL[dot.dataset.k]); });
+      dot.addEventListener('mousemove', moveTip);
+      dot.addEventListener('mouseleave', () => { dot.setAttribute('r', '4'); hideTip(); });
+      dot.addEventListener('click', () => { window.location.href = 'posts/' + dot.dataset.s + '.html'; });
+    });
+  }
+
+  // ── CLUSTERS (BUBBLES) VIEW ───────────────────────────────────────────────
+  function renderClusters() {
+    const host = document.getElementById('view-clusters');
+    const counts = {}, clTally = {};
+    POSTS.forEach(p => {
+      const k = primaryCluster(p.g);
+      p.g.forEach(slug => {
+        counts[slug] = (counts[slug] || 0) + 1;
+        (clTally[slug] = clTally[slug] || {})[k] = (clTally[slug]?.[k] || 0) + 1;
+      });
+    });
+    let entries = Object.entries(counts).filter(([s, c]) => c >= 2 && TAGNAMES[s]);
+    entries.sort((a, b) => b[1] - a[1]);
+    entries = entries.slice(0, 55);
+    if (!entries.length) { host.innerHTML = '<p>No tags.</p>'; return; }
+
+    const maxC = entries[0][1], minC = entries[entries.length - 1][1];
+    const rMin = 16, rMax = 66;
+    const radius = c => rMin + (rMax - rMin) * Math.sqrt((c - minC) / Math.max(1, maxC - minC));
+
+    // spiral packing (largest first, from center)
+    const placed = [];
+    const gap = 3;
+    entries.forEach(([slug, c]) => {
+      const r = radius(c);
+      let a = 0, rad = 0, x = 0, y = 0, ok = false;
+      while (!ok) {
+        x = rad * Math.cos(a); y = rad * Math.sin(a);
+        ok = placed.every(q => Math.hypot(x - q.x, y - q.y) >= r + q.r + gap);
+        if (!ok) { a += 0.4; rad += 0.7; }
+        if (rad > 6000) break;
+      }
+      const dom = Object.entries(clTally[slug]).sort((p, q) => q[1] - p[1])[0][0];
+      placed.push({ slug, c, r, x, y, dom, name: TAGNAMES[slug] });
+    });
+
+    let minX = Infinity, minY = Infinity, maxX = -Infinity, maxY = -Infinity;
+    placed.forEach(p => { minX = Math.min(minX, p.x - p.r); minY = Math.min(minY, p.y - p.r); maxX = Math.max(maxX, p.x + p.r); maxY = Math.max(maxY, p.y + p.r); });
+    const pad = 8;
+    const vbW = (maxX - minX) + pad * 2, vbH = (maxY - minY) + pad * 2;
+
+    let svg = '';
+    placed.forEach(p => {
+      const cx = p.x - minX + pad, cy = p.y - minY + pad;
+      svg += '<g class="bubble" data-slug="' + p.slug + '" data-name="' + esc(p.name).replace(/"/g, '&quot;') + '" data-c="' + p.c + '">';
+      svg += '<circle cx="' + cx + '" cy="' + cy + '" r="' + p.r + '" fill="' + CLUSTER_COLOR[p.dom] + '"></circle>';
+      if (p.r >= 20) {
+        const fs = Math.max(7, Math.min(p.r * 0.34, 13));
+        const maxChars = Math.max(3, Math.floor(p.r / 4));
+        let label = p.name.toUpperCase();
+        if (label.length > maxChars) label = label.slice(0, maxChars - 1) + '…';
+        svg += '<text class="bubble-label" x="' + cx + '" y="' + cy + '" style="font-size:' + fs + 'px">' + esc(label) + '</text>';
+      }
+      svg += '</g>';
+    });
+
+    host.innerHTML = '<div class="bubbles-hint">Each bubble is a topic · size = number of posts · click to filter the list</div>' +
+      legendHTML() +
+      '<svg class="bubbles-svg" viewBox="0 0 ' + vbW + ' ' + vbH + '" preserveAspectRatio="xMidYMid meet" style="max-height:72vh">' + svg + '</svg>';
+
+    host.querySelectorAll('.bubble').forEach(b => {
+      const name = b.dataset.name, c = +b.dataset.c, slug = b.dataset.slug;
+      b.addEventListener('mouseenter', e => showTip(e, name, c + ' post' + (c !== 1 ? 's' : '')));
+      b.addEventListener('mousemove', moveTip);
+      b.addEventListener('mouseleave', hideTip);
+      b.addEventListener('click', () => {
+        hideTip();
+        setView('list');
+        applyFilter('tag:' + slug, g => g.includes(slug), name);
+      });
+    });
+  }
+})();
+</script>'''
+    archive_js = archive_js_template.replace("__POSTS__", posts_json).replace("__TAGNAMES__", tagnames_json)
+
     body = f"""
 <header class="tag-header">
   <div class="eyebrow">§ Complete Archive</div>
@@ -2452,9 +3158,16 @@ def render_archive(posts, posts_count, tags_count, years_span, top_tags):
   <p class="desc">Every post published, grouped by year. {len(sorted_posts)} posts across {len(by_year)} years.</p>
   <div class="meta">{years_span}</div>
 </header>
+{archive_css}
 <div class="archive-wrap">
+  <div id="view-list" class="archive-view active">
   {sections}
+  </div>
+  <div id="view-heatmap" class="archive-view"></div>
+  <div id="view-timeline" class="archive-view"></div>
+  <div id="view-clusters" class="archive-view"></div>
 </div>
+{archive_js}
 """
     page = page_shell("Archive", body, "style.css", from_dir="root")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="root")
@@ -2897,6 +3610,14 @@ def main():
         "now": datetime.now().strftime("%Y-%m-%d"),
     }
     lexicon.build(posts, lex_ctx, __import__("sys").modules[__name__])
+
+    # The Corpus Report — Feltron-style quantified portrait of the corpus
+    print("Corpus Report…")
+    import metrics
+    metrics.build(posts, {
+        "posts_count": posts_count, "tags_count": tags_count,
+        "years_span": years_span, "top_tags": top_tags,
+    }, __import__("sys").modules[__name__])
 
     # Homepage (redesigned) — overrides the index.html written above.
     # Self-contained doc (own fonts/CSS) so it doesn't clash with the legacy
