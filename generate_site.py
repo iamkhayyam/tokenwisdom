@@ -2443,7 +2443,7 @@ def render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, t
     for i, t in enumerate(visible):
         count = len(tag_to_posts.get(t["slug"], []))
         desc = (TAG_DESCRIPTIONS.get(t.get("slug", "")) or t.get("description") or "").strip()
-        desc_html = f'<div class="desc">{esc(desc[:140])}{"…" if len(desc) > 140 else ""}</div>' if desc else '<div class="desc"></div>'
+        desc_html = f'<div class="desc">{esc(desc[:300])}</div>' if desc else '<div class="desc"></div>'
         feature_img = t.get("feature_image") or ""
         img_html = ""
         if feature_img:
