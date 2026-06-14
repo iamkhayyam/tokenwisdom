@@ -489,11 +489,38 @@ img { max-width: 100%; height: auto; }
   width: auto;
   flex-shrink: 0;
 }
-.site-top-nav {
-  display: flex;
-  gap: 22px;
-  margin-left: 6px;
-  flex-wrap: wrap;
+.site-top-inner { position: relative; }
+/* Inline nav retired — the full-page takeover is the nav at every width.
+   Left in the DOM with [hidden] so it stays out of the a11y tree (no
+   duplicate nav for screen readers); the colophon covers no-JS users. */
+.site-top-nav { display: none; }
+/* Menu button — opens the full-page takeover at every width */
+.site-top-toggle {
+  display: inline-flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 0.6em;
+  height: 42px;
+  padding: 0 16px;
+  background: transparent;
+  border: 2px solid var(--ink);
+  cursor: pointer;
+  color: var(--ink);
+  -webkit-tap-highlight-color: transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.site-top-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.site-top-toggle .ham {
+  display: inline-flex; flex-direction: column; justify-content: center;
+  gap: 4px; width: 18px; height: 14px;
+}
+.site-top-toggle .ham span {
+  display: block; height: 2px; width: 100%;
+  background: currentColor;
+}
+.site-top-toggle .mtxt {
+  font-family: var(--mono); font-weight: 700; font-size: 0.7rem;
+  letter-spacing: 0.14em; text-transform: uppercase;
 }
 .site-top-nav a {
   font-family: var(--mono);
@@ -1707,12 +1734,16 @@ img { max-width: 100%; height: auto; }
   .archive-item { grid-template-columns: 90px 1fr; }
   .archive-item .tag { grid-column: 2; justify-self: start; margin-top: 2px; }
 }
+/* ---------- MOBILE — tighten the menu bar ---------- */
+@media (max-width: 860px) {
+  .site-top-inner { padding: 10px 16px; gap: 14px; }
+}
+@media (max-width: 380px) {
+  .site-top-toggle .mtxt { display: none; }
+  .site-top-toggle { padding: 0 12px; }
+}
 @media (max-width: 600px) {
   body { font-size: 17px; }
-  .site-top-inner { padding: 10px 16px; gap: 12px 18px; flex-wrap: wrap; }
-  .site-top-nav { gap: 14px; margin-left: 0; }
-  .site-top-nav a { font-size: 0.7rem; }
-  .site-top-sub { margin-left: 0; }
   .colophon-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .colophon-bottom { flex-direction: column; }
   .colophon-sign-off { text-align: left; }
@@ -1978,7 +2009,7 @@ def head_tag(title, favicon_path="assets/crystal-ball.svg"):
 
 
 def site_top(from_dir="root"):
-    from tw_theme import NAV
+    from tw_theme import NAV, nav_overlay
     prefix = "" if from_dir == "root" else "../"
     orb = f'<img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb">'
     nav_links = "\n      ".join(
@@ -1989,13 +2020,17 @@ def site_top(from_dir="root"):
 <header class="site-top">
   <div class="site-top-inner">
     <a href="{prefix}index.html" class="site-top-mark" aria-label="Token Wisdom — home">{orb}</a>
-    <nav class="site-top-nav">
+    <nav class="site-top-nav" id="site-nav" hidden>
       {nav_links}
+      <a class="site-top-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
     </nav>
-    <a class="site-top-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
+    <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
+      <span class="ham"><span></span><span></span><span></span></span>
+      <span class="mtxt">Menu</span>
+    </button>
   </div>
 </header>
-<script>(function(){{var path=location.pathname;document.querySelectorAll('.site-top-nav a').forEach(function(a){{var h=a.getAttribute('href').replace(/^(\\.\\.\\/)+/,'');if(h&&(path===('/'+h)||path.endsWith('/'+h))){{a.classList.add('is-active');}}}});}})();</script>
+{nav_overlay(prefix)}
 """
 
 
@@ -3568,8 +3603,9 @@ def main():
 
     # Write CSS
     print("Writing stylesheet…")
+    import tw_theme
     with open(DOCS_DIR / "style.css", "w") as f:
-        f.write(CSS)
+        f.write(CSS + tw_theme.OVERLAY_CSS)
 
     posts_count = len(posts)
     tags_count = len(public_tags)

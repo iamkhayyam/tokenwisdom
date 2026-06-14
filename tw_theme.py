@@ -40,24 +40,21 @@ a{color:inherit;text-decoration:none}
 .kicker-on-dark{color:oklch(0.78 0.10 55)}
 .meta{font-family:var(--mono);font-weight:300;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
 
-/* nameplate — the signature front-page moment */
-.nameplate{border-bottom:1px solid var(--ink);background:var(--bg)}
-.np-inner{max-width:var(--w);margin:0 auto;padding:20px 28px 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
-.np-left{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
-.np-right{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
-.np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
-/* masthead nav */
-.mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
-.mast-inner{max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
-.mast-mark{display:inline-flex;align-items:center}
+/* masthead nav — shared site-top header (matches posts/archive/tags) */
 .tw-orb{height:30px;width:auto;display:block}
 .foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
-.mast-nav{display:flex;gap:22px;margin-left:6px;flex-wrap:wrap}
-.mast-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.mast-nav a:hover{color:var(--ink)}
-.mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
-.mast-sub{margin-left:auto;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
-.mast-sub:hover{background:var(--accent-deep)}
+.site-top{position:sticky;top:0;z-index:80;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+.site-top-inner{position:relative;max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
+.site-top-mark{display:inline-flex;align-items:center}
+/* Inline nav retired — the full-page takeover is the nav at every width
+   (left in the DOM with [hidden] so it stays out of the a11y tree). */
+.site-top-nav{display:none}
+/* Menu button — opens the full-page takeover at every width */
+.site-top-toggle{display:inline-flex;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
+.site-top-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.site-top-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
+.site-top-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
+.site-top-toggle .mtxt{font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 
 /* lead */
 .lead{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;padding:56px 0 12px;align-items:start}
@@ -209,18 +206,17 @@ a{color:inherit;text-decoration:none}
 .player-rail .ptime{font-size:.6rem;color:var(--ink-faint)}
 
 @media(max-width:980px){
-  .np-inner{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px}
   .thisweek-head{flex-wrap:wrap;gap:.6rem}
-  .np-left,.np-right{justify-self:center;text-align:center}
   .lead{grid-template-columns:1fr;gap:32px}
   .recent{grid-template-columns:1fr;gap:32px}
   .lexcards{grid-template-columns:1fr 1fr}
   .lexcard:nth-child(4n){border-right:1px solid var(--rule)}
   .lexcard:nth-child(2n){border-right:none}
 }
+/* mobile — tighten the menu bar */
+@media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}}
+@media(max-width:380px){.site-top-toggle .mtxt{display:none}.site-top-toggle{padding:0 12px}}
 @media(max-width:620px){
-  .mast-inner{flex-wrap:wrap;gap:12px 18px}
-  .mast-sub{margin-left:0}
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
   .lexcard{border-right:1px solid var(--rule)!important}
@@ -356,26 +352,141 @@ NAV = [
     ("about",       "About",       "about/index.html"),
 ]
 
+# Short descriptor revealed on hover in the full-page takeover
+NAV_DESC = {
+    "archive":     "Every edition, dated",
+    "topics":      "Browse by idea",
+    "lexicon":     "The working vocabulary",
+    "links":       "The reading room",
+    "essays":      "A closer look",
+    "newsletters": "Worth a fortune",
+    "podcast":     "Listen in",
+    "report":      "The corpus, quantified",
+    "about":       "Who & why",
+}
+
+# ============================================================
+# FULL-PAGE NAV TAKEOVER — shared across all three header systems
+# (generate_site.site_top, tw_theme.masthead, mockup_home.render_masthead).
+# Portable: only borrows --accent / --accent-deep / font vars; its dark
+# palette is self-contained so it inverts every (cream) page identically.
+# ============================================================
+OVERLAY_CSS = r'''
+/* ===== FULL-PAGE NAV TAKEOVER ===== */
+html.nav-open{overflow:hidden}
+.nav-takeover{
+  position:fixed;inset:0;z-index:200;
+  --nto-bg:#15110b;--nto-text:#f4eee1;--nto-muted:#9b9082;--nto-rule:rgba(244,238,225,.13);
+  background:var(--nto-bg);color:var(--nto-text);
+  display:flex;flex-direction:column;
+  padding:clamp(1.1rem,3.5vw,2.4rem) clamp(1.2rem,5vw,3.6rem) clamp(1.3rem,3.5vw,2.6rem);
+  opacity:0;visibility:hidden;pointer-events:none;
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path .55s cubic-bezier(.7,0,.18,1),opacity .01s linear .55s,visibility 0s linear .55s;
+  overflow-y:auto;overscroll-behavior:contain;
+}
+html.nav-open .nav-takeover{
+  opacity:1;visibility:visible;pointer-events:auto;clip-path:inset(0 0 0 0);
+  transition:clip-path .62s cubic-bezier(.16,1,.3,1),opacity .01s;
+}
+.nto-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(115% 75% at 88% -12%,color-mix(in srgb,var(--accent) 40%,transparent),transparent 58%)}
+.nto-monogram{position:absolute;right:clamp(-1rem,1vw,1.5rem);bottom:clamp(-4rem,-5vw,-1.5rem);font-family:var(--display);font-weight:400;font-size:min(48vh,40vw);line-height:.7;color:var(--nto-text);opacity:.045;pointer-events:none;user-select:none}
+.nto-bar,.nto-nav,.nto-foot{position:relative;width:100%;max-width:1180px;margin-inline:auto}
+.nto-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nto-eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--nto-muted)}
+.nto-eyebrow b{color:var(--accent);font-weight:400}
+.nto-close{display:inline-flex;align-items:center;gap:.65em;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--nto-text);background:transparent;border:1px solid var(--nto-rule);padding:.7em 1em;cursor:pointer;transition:border-color .2s,color .2s}
+.nto-close:hover{color:var(--accent);border-color:var(--accent)}
+.nto-close .x{font-size:1.05em;line-height:1}
+.nto-nav{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(1rem,3vh,2.4rem) 0}
+.nto-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:clamp(.8rem,2vw,1.6rem);padding:clamp(.5rem,1.5vh,1.05rem) 0;border-top:1px solid var(--nto-rule);color:var(--nto-text);text-decoration:none;opacity:0;transform:translateY(30px)}
+.nto-row:last-of-type{border-bottom:1px solid var(--nto-rule)}
+html.nav-open .nto-row{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:calc(.14s + var(--i,0)*.05s)}
+.nto-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--accent);min-width:2.2em}
+.nto-label{font-family:var(--display);font-weight:400;font-size:clamp(2.05rem,8vw,4.7rem);line-height:.96;letter-spacing:-.02em;transition:transform .4s cubic-bezier(.16,1,.3,1),color .25s ease}
+.nto-desc{justify-self:end;text-align:right;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--nto-muted);max-width:16ch;opacity:0;transform:translateX(-10px);transition:opacity .3s ease,transform .3s ease}
+.nto-arrow{display:none}
+@media(hover:hover){
+  .nto-row:hover .nto-label{color:var(--accent);transform:translateX(clamp(8px,1.6vw,22px))}
+  .nto-row:hover .nto-desc{opacity:1;transform:none}
+}
+.nto-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem;padding-top:clamp(1rem,2.5vh,1.8rem);border-top:1px solid var(--nto-rule);opacity:0;transform:translateY(20px)}
+html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:.62s}
+.nto-sub{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.95em 1.6em;transition:background .2s}
+.nto-sub:hover{background:var(--accent-deep)}
+.nto-foot-meta{display:flex;flex-direction:column;gap:.4rem;text-align:right;margin-left:auto}
+.nto-tag{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--nto-text)}
+.nto-elsewhere{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--nto-muted)}
+.nto-elsewhere a{color:var(--nto-muted);border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.nto-elsewhere a:hover{color:var(--accent);border-color:var(--accent)}
+@media(max-width:620px){
+  .nto-desc{display:none}
+  .nto-foot{flex-direction:column;align-items:flex-start}
+  .nto-foot-meta{text-align:left;margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav-takeover{clip-path:none!important;transition:opacity .2s ease,visibility 0s}
+  html.nav-open .nav-takeover{transition:opacity .2s ease}
+  .nto-row,html.nav-open .nto-row,.nto-foot,html.nav-open .nto-foot{transform:none;transition:opacity .2s ease;transition-delay:0s}
+}
+'''
+
+OVERLAY_JS = r'''(function(){
+var root=document.documentElement,ov=document.getElementById('nav-takeover');
+if(!ov)return;
+var toggles=document.querySelectorAll('[data-nav-toggle]');
+function set(o){root.classList.toggle('nav-open',o);ov.setAttribute('aria-hidden',o?'false':'true');toggles.forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false');});}
+toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();set(!root.classList.contains('nav-open'));});});
+ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
+})();'''
+
+
+def nav_overlay(prefix=""):
+    rows = "".join(
+        f'''<a class="nto-row" style="--i:{i}" href="{prefix}{href}">'''
+        f'''<span class="nto-num">{i+1:02d}</span>'''
+        f'''<span class="nto-label">{label}</span>'''
+        f'''<span class="nto-desc">{NAV_DESC.get(k,"")}</span></a>'''
+        for i, (k, label, href) in enumerate(NAV))
+    return f'''
+<div class="nav-takeover" id="nav-takeover" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true">
+  <div class="nto-glow" aria-hidden="true"></div>
+  <div class="nto-monogram" aria-hidden="true">&amp;</div>
+  <div class="nto-bar">
+    <span class="nto-eyebrow">The Index <b>·</b> Token Wisdom</span>
+    <button class="nto-close" data-nav-close aria-label="Close menu">Close <span class="x">✕</span></button>
+  </div>
+  <nav class="nto-nav">{rows}</nav>
+  <div class="nto-foot">
+    <a class="nto-sub" href="{GHOST_URL}/subscribe">Subscribe →</a>
+    <div class="nto-foot-meta">
+      <span class="nto-tag">Knowware is measured in lifetimes</span>
+      <span class="nto-elsewhere"><a href="{GHOST_URL}" target="_blank" rel="noopener">Ghost</a> · <a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+</div>
+<script>{OVERLAY_JS}</script>'''
+
 
 def masthead(prefix="", active=""):
     nav = "".join(
         f'<a class="{("is-active" if active==k else "")}" href="{prefix}{href}">{label}</a>'
         for k, label, href in NAV)
     return f"""
-<div class="nameplate">
-  <div class="np-inner">
-    <div class="np-left">The Newsletter of Record<br>for the Future of Now</div>
-    <a class="np-mark" href="{prefix}index.html">Token&nbsp;Wisdom</a>
-    <div class="np-right">No. 153<br>SAT · JUN 13, 2026</div>
+<header class="site-top">
+  <div class="site-top-inner">
+    <a class="site-top-mark" href="{prefix}index.html" aria-label="Token Wisdom — home"><img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb"></a>
+    <nav class="site-top-nav" id="site-nav" hidden>{nav}
+      <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
+    </nav>
+    <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
+      <span class="ham"><span></span><span></span><span></span></span>
+      <span class="mtxt">Menu</span>
+    </button>
   </div>
-</div>
-<header class="mast">
-  <div class="mast-inner">
-    <a class="mast-mark" href="{prefix}index.html" aria-label="Token Wisdom — home"><img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb"></a>
-    <nav class="mast-nav">{nav}</nav>
-    <a class="mast-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
-  </div>
-</header>"""
+</header>
+{nav_overlay(prefix)}"""
 
 
 def footer(prefix=""):
@@ -390,7 +501,7 @@ def footer(prefix=""):
 
 def page(title, body, prefix="", lex=False, active="", extra_js=""):
     import html as _h
-    css = BASE_CSS + (LEX_CSS + TERM_CSS if lex else "")
+    css = BASE_CSS + OVERLAY_CSS + (LEX_CSS + TERM_CSS if lex else "")
     fonts = ("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900"
              "&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400"
              "&family=DM+Mono:wght@300;400;500&display=swap")

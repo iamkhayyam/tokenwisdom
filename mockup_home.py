@@ -426,12 +426,17 @@ def render_masthead():
 <header class="mast">
   <div class="mast-inner">
     <a class="mast-mark" href="index.html" aria-label="Token Wisdom — home"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"></a>
-    <nav class="mast-nav">
+    <nav class="mast-nav" id="mast-nav" hidden>
       {''.join(f'<a href="{href}">{label}</a>' for _, label, href in tw_theme.NAV)}
+      <a class="mast-sub" href="{gs.GHOST_URL}/subscribe">Subscribe</a>
     </nav>
-    <a class="mast-sub" href="{gs.GHOST_URL}/subscribe">Subscribe</a>
+    <button class="mast-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
+      <span class="ham"><span></span><span></span><span></span></span>
+      <span class="mtxt">Menu</span>
+    </button>
   </div>
-</header>"""
+</header>
+{tw_theme.nav_overlay("")}"""
 
 
 CSS = r"""
@@ -482,16 +487,19 @@ a{color:inherit;text-decoration:none}
 .np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
 /* masthead nav */
 .mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
-.mast-inner{max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
+.mast-inner{position:relative;max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
 .mast-mark{display:inline-flex;align-items:center}
 .tw-orb{height:30px;width:auto;display:block}
 .foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
-.mast-nav{display:flex;gap:22px;margin-left:6px;flex-wrap:wrap}
-.mast-nav a{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.mast-nav a:hover{color:var(--ink)}
-.mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
-.mast-sub{margin-left:auto;font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
-.mast-sub:hover{background:var(--accent-deep)}
+/* Inline nav retired — the full-page takeover is the nav at every width
+   (left in the DOM with [hidden] so it stays out of the a11y tree). */
+.mast-nav{display:none}
+/* Menu button — opens the full-page takeover at every width */
+.mast-toggle{display:inline-flex;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
+.mast-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.mast-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
+.mast-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
+.mast-toggle .mtxt{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 
 /* lead */
 .lead{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;padding:56px 0 12px;align-items:start}
@@ -693,9 +701,10 @@ a{color:inherit;text-decoration:none}
   .lexcard:nth-child(4n){border-right:1px solid var(--rule)}
   .lexcard:nth-child(2n){border-right:none}
 }
+/* mobile — tighten the menu bar */
+@media(max-width:860px){.mast-inner{padding:10px 16px;gap:14px}}
+@media(max-width:380px){.mast-toggle .mtxt{display:none}.mast-toggle{padding:0 12px}}
 @media(max-width:620px){
-  .mast-inner{flex-wrap:wrap;gap:12px 18px}
-  .mast-sub{margin-left:0}
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
   .lexcard{border-right:1px solid var(--rule)!important}
@@ -757,7 +766,7 @@ def build(out_name="home-v2.html"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
-<style>{CSS}</style>
+<style>{CSS}{tw_theme.OVERLAY_CSS}</style>
 </head><body>
 {render_masthead()}
 <main class="wrap">
