@@ -249,6 +249,11 @@ def render_listen():
 def render_recent():
     cards = ""
     for p in secondary:
+        ep = paired_audio(p)
+        ed_post = paired_edition(p)
+        audio = (render_player(ep, "Paired edition",
+                               href(ed_post) if ed_post else "podcast.html", rail=True)
+                 if ep else pair_link(p))
         cards += f"""
     <div class="story-wrap">
     <a class="story" href="{href(p)}">
@@ -258,7 +263,7 @@ def render_recent():
       <p class="story-dek">{gs.excerpt(p, 150)}</p>
       <div class="meta">{e(meta(p))}</div>
     </a>
-    {pair_link(p)}
+    {audio}
     </div>"""
     rows = ""
     for p in more:
@@ -446,6 +451,7 @@ a{color:inherit;text-decoration:none}
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
 .recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
+.story-wrap .player-rail{margin-top:.9rem;margin-bottom:0}
 .pairlink{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);align-self:flex-start;margin-top:.7rem;border-bottom:1px solid transparent;transition:border-color .15s}
 .pairlink:hover{border-color:var(--accent)}
 .story-figure{aspect-ratio:16/10;overflow:hidden;background:var(--surface);margin-bottom:14px}
