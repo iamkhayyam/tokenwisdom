@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Lexicon — Token Wisdom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: oklch(0.992 0.004 70);
+  --surface: oklch(0.972 0.005 70);
+  --surface-ink: oklch(0.205 0.012 65);
+  --ink: oklch(0.235 0.012 60);
+  --ink-muted: oklch(0.505 0.012 60);
+  --ink-faint: oklch(0.66 0.010 60);
+  --rule: oklch(0.905 0.006 70);
+  --rule-strong: oklch(0.235 0.012 60);
+  --accent: oklch(0.585 0.155 47);
+  --accent-deep: oklch(0.475 0.140 44);
+  --accent-wash: oklch(0.95 0.030 60);
+  --teal: oklch(0.520 0.070 195);
+  --gold: oklch(0.700 0.095 85);
+  --sans:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif;
+  --display:'Libre Caslon Display',Georgia,serif;
+  --display-weight:400;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'DM Mono',ui-monospace,monospace;
+  --w:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
+
+/* kicker / meta */
+.kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
+.kicker-accent{color:var(--accent)}
+.kicker-on-dark{color:oklch(0.78 0.10 55)}
+.meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* nameplate — the signature front-page moment */
+.nameplate{border-bottom:1px solid var(--ink);background:var(--bg)}
+.np-inner{max-width:var(--w);margin:0 auto;padding:20px 28px 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+.np-left{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
+.np-right{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
+.np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
+/* masthead nav */
+.mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+.mast-inner{max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
+.mast-mark{display:inline-flex;align-items:center}
+.tw-orb{height:30px;width:auto;display:block}
+.foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
+.mast-nav{display:flex;gap:22px;margin-left:6px;flex-wrap:wrap}
+.mast-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.mast-nav a:hover{color:var(--ink)}
+.mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
+.mast-sub{margin-left:auto;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.mast-sub:hover{background:var(--accent-deep)}
+
+/* lead */
+.lead{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;padding:56px 0 12px;align-items:start}
+.lead-figure{aspect-ratio:3/2;overflow:hidden;background:var(--surface);margin-bottom:26px}
+.lead-figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.lead-main:hover .lead-figure img{transform:scale(1.04)}
+.lead-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,5.6vw,5.2rem);line-height:.93;letter-spacing:-.035em;margin:.7rem 0 .9rem;text-wrap:balance}
+.lead-main:hover .lead-title{color:oklch(0.34 0.07 45)}
+.lead-dek{font-family:var(--serif);font-size:1.22rem;line-height:1.5;color:var(--ink-muted);max-width:48ch;margin-bottom:1rem}
+.lead-side{align-self:stretch}
+.rail-head{border-top:2px solid var(--rule-strong);padding-top:.7rem;margin-bottom:1.1rem}
+/* this week's edition — image-led feature that balances the essay column */
+.edition-feature{display:block;margin-bottom:18px}
+.ef-figure{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface);margin-bottom:1rem}
+.ef-figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.edition-feature:hover .ef-figure img{transform:scale(1.04)}
+.edition-feature:hover .edition-title{color:var(--accent-deep)}
+.edition-title{font-family:var(--sans);font-weight:700;font-size:1.6rem;line-height:1.08;letter-spacing:-.02em;margin:.5rem 0 .5rem;color:var(--ink)}
+.edition-dek{font-family:var(--serif);font-size:.98rem;line-height:1.45;color:var(--ink-muted);margin-bottom:.9rem}
+.readlink{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.side-list{display:flex;flex-direction:column}
+.side-row{padding:.85rem 0;border-top:1px solid var(--rule);transition:color .15s}
+.side-row:hover{color:var(--accent)}
+.side-kicker{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.25rem}
+.side-title{font-family:var(--sans);font-weight:600;font-size:1.02rem;line-height:1.25}
+
+/* section rule head */
+.block{padding:46px 0}
+.rule-head{display:flex;align-items:baseline;gap:1rem;border-top:3px solid var(--rule-strong);padding-top:.9rem;margin-bottom:2rem}
+.rule-label{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.02em}
+.rule-meta{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-left:auto}
+.rule-meta.linky{color:var(--accent)}
+
+/* recent */
+.recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
+.recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.story-figure{aspect-ratio:16/10;overflow:hidden;background:var(--surface);margin-bottom:14px}
+.story-figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.story:hover .story-figure img{transform:scale(1.03)}
+.story-title{font-family:var(--display);font-weight:var(--display-weight);font-size:1.5rem;line-height:1.08;letter-spacing:-.01em;margin:.5rem 0 .5rem}
+.story:hover .story-title{color:var(--accent-deep)}
+.story-dek{font-family:var(--serif);font-size:1rem;line-height:1.45;color:var(--ink-muted);margin-bottom:.7rem}
+.recent-list{display:flex;flex-direction:column}
+.recent-list .kicker{margin-bottom:.4rem}
+.list-row{display:flex;flex-direction:column;gap:.25rem;padding:.95rem 0;border-top:1px solid var(--rule);transition:color .15s}
+.list-row:first-of-type{border-top:1px solid var(--rule-strong)}
+.list-row:hover{color:var(--accent)}
+.list-kicker{font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.list-title{font-family:var(--sans);font-weight:600;font-size:1.05rem;line-height:1.2}
+.list-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* topics */
+.topics{display:flex;flex-wrap:wrap;gap:.6rem}
+.topic{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;padding:.55em .85em;border:1px solid var(--rule);color:var(--ink);display:inline-flex;align-items:center;gap:.55em;transition:border-color .15s,color .15s}
+.topic span{color:var(--ink-faint);font-size:.9em}
+.topic:hover{border-color:var(--accent);color:var(--accent)}
+.topic:hover span{color:var(--accent)}
+
+/* lexicon strip */
+.block-lex{background:var(--surface);margin:0 -100vw;padding-left:100vw;padding-right:100vw}
+.block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
+.lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
+.lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard:nth-child(4n){border-right:none}
+.lexcard:hover{background:var(--bg)}
+.lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
+.lexcard:hover .lexcard-term{color:var(--accent)}
+.lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
+.lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
+.lexcard-spark{opacity:.9}
+.spark{display:block;width:100%;height:auto}
+
+/* subscribe — the Fortune Brand crystal ball glowing in the background */
+.subscribe{
+  margin-top:56px;
+  color:oklch(0.95 0.02 65);
+  background-color:oklch(0.195 0.055 31);
+  background-image:
+    linear-gradient(90deg, oklch(0.185 0.055 31) 0%, oklch(0.185 0.055 31 / .95) 40%, oklch(0.185 0.055 31 / .25) 68%, transparent 90%),
+    url(assets/fortune_teller.gif);
+  background-repeat:no-repeat,no-repeat;
+  background-position:center, right -80px center;
+  background-size:cover,contain;
+}
+.sub-inner{max-width:var(--w);margin:0 auto;padding:94px 28px;position:relative}
+.sub-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.0;letter-spacing:-.02em;margin:.8rem 0 .7rem;max-width:16ch;color:oklch(0.97 0.02 72)}
+.sub-dek{font-family:var(--serif);font-size:1.18rem;color:oklch(0.84 0.02 66);max-width:46ch;margin-bottom:1.8rem}
+.sub-cta{display:inline-block;font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.95em 1.7em;transition:background .15s,transform .15s}
+.sub-cta:hover{background:oklch(0.66 0.16 50);transform:translateX(4px)}
+.kicker-on-dark{color:oklch(0.80 0.11 62)}
+
+/* footer */
+.foot{border-top:1px solid var(--rule);background:var(--bg)}
+.foot-inner{max-width:var(--w);margin:0 auto;padding:40px 28px}
+.foot .wordmark{font-size:1.05rem;margin-bottom:.5rem}
+.foot-tag{font-family:var(--serif);color:var(--ink-muted);margin-bottom:.4rem}
+.foot-meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* this-week pair header */
+.thisweek-head{display:flex;align-items:center;gap:1.1rem;max-width:var(--w);margin:0 auto;padding:46px 28px 0}
+.tw-eyebrow{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.tw-line{flex:1;height:2px;background:var(--rule-strong)}
+.tw-meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.lead{padding-top:26px}
+.lead-figure{position:relative}
+.figure-tag{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:.45em .75em}
+/* podcast embed */
+.listen{background:var(--surface-ink);padding:18px 20px 20px;margin-bottom:18px}
+.listen .kicker{color:oklch(0.80 0.10 55)}
+.listen-title{font-family:var(--sans);font-weight:700;font-size:1.08rem;line-height:1.18;margin:.45rem 0 .75rem;color:oklch(0.96 0.006 70)}
+.listen-audio{width:100%;height:36px;margin-bottom:.55rem}
+.listen-meta{font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;text-transform:uppercase;color:oklch(0.72 0.008 70)}
+/* full-width audio players (this week in audio) */
+.players{display:flex;flex-direction:column}
+.player{display:flex;align-items:center;gap:1.3rem;padding:1.5rem 0;border-top:1px solid var(--rule)}
+.player:first-child{border-top:none}
+.pp{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:var(--ink);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
+.pp:hover{background:var(--accent);transform:scale(1.05)}
+.pp-icon{width:0;height:0;border-left:14px solid currentColor;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.player.playing .pp-icon{width:14px;height:15px;border:none;margin:0;background:linear-gradient(to right,currentColor 0 4px,transparent 4px 10px,currentColor 10px 14px)}
+.pbody{flex:1;min-width:0}
+.pkicker{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.pk-tag{color:var(--accent)}
+.ptitle{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.18;letter-spacing:-.01em;margin:.25rem 0 .7rem;color:var(--ink)}
+.ptitle:hover{color:var(--accent)}
+.prow{display:flex;align-items:center;gap:1.1rem}
+.ptrack{position:relative;flex:1;height:6px;background:var(--rule);cursor:pointer}
+.pfill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--accent)}
+.pknob{position:absolute;top:50%;left:0;width:13px;height:13px;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);display:none;box-shadow:0 0 0 3px var(--bg)}
+.player.playing .pknob,.ptrack:hover .pknob{display:block}
+.ptime{font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-muted);white-space:nowrap;flex-shrink:0}
+.pcur{color:var(--ink)}
+/* "The Essay, Aloud" is the 3rd beat of This Week, not a new section:
+   thin hairline + tight spacing so it reads as a continuation. */
+.listen-week{padding-top:12px}
+.listen-week .rule-head{border-top:1px solid var(--rule);padding-top:.7rem;margin-bottom:1.3rem}
+/* front-and-center essay player runs a touch grander */
+.listen-week .player{padding:1.7rem 0}
+.listen-week .pp{width:60px;height:60px}
+.listen-week .ptitle{font-size:clamp(1.25rem,2.1vw,1.6rem)}
+/* rail edition player — compact, stacked, on a surface */
+.player-rail{flex-direction:column;align-items:stretch;gap:.5rem;background:var(--surface);padding:15px 17px 16px;border-top:none;margin-bottom:18px}
+.player-rail .ptitle{font-size:1.05rem;margin:.1rem 0 .4rem}
+.player-rail .prow{gap:.7rem}
+.player-rail .pp{width:38px;height:38px}
+.player-rail .pp-icon{border-left-width:11px;border-top-width:7px;border-bottom-width:7px}
+.player-rail.playing .pp-icon{width:11px;height:12px}
+.player-rail .ptime{font-size:.6rem;color:var(--ink-faint)}
+
+@media(max-width:980px){
+  .np-inner{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px}
+  .thisweek-head{flex-wrap:wrap;gap:.6rem}
+  .np-left,.np-right{justify-self:center;text-align:center}
+  .lead{grid-template-columns:1fr;gap:32px}
+  .recent{grid-template-columns:1fr;gap:32px}
+  .lexcards{grid-template-columns:1fr 1fr}
+  .lexcard:nth-child(4n){border-right:1px solid var(--rule)}
+  .lexcard:nth-child(2n){border-right:none}
+}
+@media(max-width:620px){
+  .mast-inner{flex-wrap:wrap;gap:12px 18px}
+  .mast-sub{margin-left:0}
+  .recent-cards{grid-template-columns:1fr}
+  .lexcards{grid-template-columns:1fr}
+  .lexcard{border-right:1px solid var(--rule)!important}
+}
+
+.lex-hero{max-width:var(--w);margin:0 auto;padding:50px 28px 6px}
+.lex-h1{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(3rem,8.5vw,6.2rem);line-height:.88;letter-spacing:-.03em;margin:.5rem 0 .7rem}
+.lex-lede{font-family:var(--serif);font-size:1.26rem;line-height:1.5;color:var(--ink-muted);max-width:62ch;margin-bottom:.8rem}
+.lex-lede em{font-style:italic}
+.lex-metaline{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1.5rem}
+.lex-search{width:100%;padding:.95rem 1.1rem;font-family:var(--mono);font-size:.82rem;letter-spacing:.02em;color:var(--ink);background:var(--bg);border:2px solid var(--ink);outline:none}
+.lex-search::placeholder{color:var(--ink-faint)}
+.lex-search:focus{border-color:var(--accent)}
+.lex-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.lex-chip{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:.5em .75em;border:1px solid var(--rule);color:var(--ink-muted);display:inline-flex;align-items:center;gap:.5em;transition:border-color .15s,color .15s}
+.lex-chip span{color:var(--ink-faint)}
+.lex-chip:hover{border-color:var(--accent);color:var(--accent)}
+.lex-noresults{font-family:var(--mono);font-size:.8rem;color:var(--ink-faint);max-width:var(--w);margin:1.5rem auto 0;padding:0 28px}
+/* Core Vocabulary cards */
+.lex-core-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule)}
+.lex-cc{display:grid;grid-template-columns:1fr 130px;grid-template-areas:"term spark" "def spark";gap:.2rem 1rem;align-items:center;padding:1.15rem 1.2rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.lex-core-grid .lex-cc:nth-child(odd){border-left:1px solid var(--rule)}
+.lex-cc:hover{background:var(--surface)}
+.lex-cc-term{grid-area:term;font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.05;color:var(--ink)}
+.lex-cc:hover .lex-cc-term{color:var(--accent)}
+.lex-cc-meta{display:none}
+.lex-cc-def{grid-area:def;font-family:var(--serif);font-size:.92rem;line-height:1.45;color:var(--ink-muted)}
+.lex-cc-spark{grid-area:spark;align-self:center}
+/* category lists */
+.lex-catsec{scroll-margin-top:80px}
+.lex-lines{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.lex-line{display:grid;grid-template-columns:minmax(150px,40%) 1fr;gap:1rem;align-items:baseline;padding:.8rem 1.1rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.lex-lines .lex-line:nth-child(odd){border-left:1px solid var(--rule)}
+.lex-line:hover{background:var(--surface)}
+.lex-line-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.12rem;line-height:1.1;color:var(--ink)}
+.lex-line:hover .lex-line-term{color:var(--accent)}
+.lex-badge{font-family:var(--mono);font-size:.56em;color:var(--accent);vertical-align:super;margin-left:.4em}
+.lex-line-def{font-family:var(--serif);font-size:.88rem;line-height:1.4;color:var(--ink-muted)}
+.lex-soon{max-width:var(--w);margin:0 auto;padding:10px 28px 60px}
+.lex-soon-inner{background:var(--surface-ink);color:oklch(0.92 0.006 70);padding:2rem 2.2rem}
+.lex-soon h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:oklch(0.80 0.10 55);margin-bottom:.7rem}
+.lex-soon p{font-family:var(--serif);font-size:1.05rem;color:oklch(0.82 0.008 70);max-width:70ch}
+.lex-soon strong{color:oklch(0.97 0.006 70)}
+/* see-all + back links */
+.lex-seeall{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.lex-seeall:hover{color:var(--accent-deep)}
+.lex-back{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
+/* live search results */
+.lex-results{max-width:var(--w);margin:0 auto;padding:24px 28px 60px}
+.lex-rescount{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin:.4rem 0 1rem}
+.lex-resgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0;border-top:1px solid var(--rule)}
+.lex-resitem{font-family:var(--display);font-weight:var(--display-weight);font-size:1.05rem;color:var(--ink);padding:.7rem .8rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.lex-resitem:hover{background:var(--surface);color:var(--accent)}
+@media(max-width:820px){
+  .lex-core-grid{grid-template-columns:1fr}
+  .lex-core-grid .lex-cc{border-left:1px solid var(--rule)}
+  .lex-lines{grid-template-columns:1fr}
+  .lex-lines .lex-line{border-left:1px solid var(--rule);grid-template-columns:1fr;gap:.2rem}
+}
+
+.term-wrap{max-width:var(--w);margin:0 auto;padding:34px 28px 10px}
+.term-back{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem}
+.term-eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.6rem}
+.lex-text-accent{color:var(--accent)} .lex-text-teal{color:var(--teal)} .lex-text-gold{color:var(--gold)}
+.term-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,6vw,4.6rem);line-height:.92;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
+.term-def{font-family:var(--serif);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.4;color:var(--ink);max-width:780px;margin-bottom:.6rem}
+.term-def-src{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:2.4rem}
+.term-def-src a{color:var(--ink-muted);border-bottom:1px solid var(--rule)} .term-def-src a:hover{color:var(--accent)}
+.term-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule);margin-bottom:2.8rem}
+.term-stat{padding:1.1rem 0;border-right:1px solid var(--rule)} .term-stat:last-child{border-right:none}
+.ts-num{display:block;font-family:var(--display);font-weight:var(--display-weight);font-size:1.5rem;color:var(--ink);line-height:1.05}
+.ts-lbl{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-top:.4rem}
+.term-section{margin-bottom:2.8rem}
+.term-h3{font-family:var(--display);font-weight:var(--display-weight);font-size:1.6rem;color:var(--ink);margin-bottom:.5rem}
+.term-h3-count{font-family:var(--mono);font-style:normal;font-size:.8rem;color:var(--ink-faint)}
+.term-arc-note{font-family:var(--serif);color:var(--ink-muted);font-size:.98rem;margin-bottom:1.2rem;max-width:680px}
+.term-arc-note a{color:var(--accent)}
+.bar-timeline{display:flex;align-items:flex-end;gap:2px;height:var(--bt-h,130px);border-bottom:1px solid var(--ink)}
+.bt-col{display:flex;align-items:flex-end;justify-content:center;height:100%}
+.bt-bar{width:70%;min-height:1px;opacity:.82;border-radius:1px 1px 0 0}
+.def-history{list-style:none;margin:0}
+.def-history li{font-family:var(--serif);font-size:.98rem;line-height:1.55;color:var(--ink-muted);padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.dh-ed{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-right:.7em}
+.term-body{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start}
+.term-posts{display:flex;flex-direction:column}
+.term-post{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.term-post a{color:var(--ink)} .term-post a:hover{color:var(--accent)}
+.tp-title{font-family:var(--serif);font-size:1rem}
+.tp-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+.term-side{position:sticky;top:70px}
+.term-side-block{margin-bottom:1.8rem}
+.term-side-block h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.7rem}
+@media(max-width:820px){.term-body{grid-template-columns:1fr;gap:2rem}.term-side{position:static}.term-stats{grid-template-columns:1fr 1fr}.term-stat:nth-child(2){border-right:none}.term-stat:nth-child(1),.term-stat:nth-child(2){border-bottom:1px solid var(--rule)}}
+</style>
+<link rel="icon" type="image/svg+xml" href="../assets/crystal-ball.svg"></head><body>
+
+<div class="nameplate">
+  <div class="np-inner">
+    <div class="np-left">The Newsletter of Record<br>for the Future of Now</div>
+    <a class="np-mark" href="../index.html">Token&nbsp;Wisdom</a>
+    <div class="np-right">No. 153<br>SAT · JUN 13, 2026</div>
+  </div>
+</div>
+<header class="mast">
+  <div class="mast-inner">
+    <a class="mast-mark" href="../index.html" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
+    <nav class="mast-nav"><a class="" href="../archive.html">Archive</a><a class="" href="../tags/index.html">Topics</a><a class="is-active" href="../lexicon/index.html">Lexicon</a><a class="" href="../tags/a-closer-look.html">Essays</a><a class="" href="../tags/worthafortune.html">Newsletters</a><a class="" href="../podcast.html">Podcast</a></nav>
+    <a class="mast-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
+  </div>
+</header>
+
+<header class="lex-hero">
+  <div class="kicker kicker-accent">§ The Lexicon</div>
+  <h1 class="lex-h1">The Lexicon</h1>
+  <p class="lex-lede">The working vocabulary of the future of now — 1,941 terms, defined by hand in <em>The Less You Know</em> across 74 editions. Every definition is the newsletter's own; recurring terms trace how the language of the field accumulated, week over week.</p>
+  <div class="lex-metaline">2,348 definitions · 62 recurring terms · 2024 Q1 – 2026 Q2 · 100% authentic humanly chosen</div>
+  <input id="lexSearch" class="lex-search" type="search" autocomplete="off" placeholder="Search all 1,941 terms…" aria-label="Search the Lexicon">
+  <div class="lex-chips"><a class="lex-chip" href="#cat-technologies">Technologies <span>585</span></a><a class="lex-chip" href="#cat-concepts">Concepts <span>577</span></a><a class="lex-chip" href="#cat-technical-terms">Technical Terms <span>541</span></a><a class="lex-chip" href="#cat-acronyms">Acronyms <span>229</span></a><a class="lex-chip" href="#cat-people-and-works">People &amp; Works <span>9</span></a></div>
+</header>
+<div id="lexResults" class="lex-results" hidden></div>
+<div id="lexBrowse">
+<main class="wrap">
+  <section class="block lex-core-sec">
+    <div class="rule-head"><h2 class="rule-label">Core Vocabulary</h2><span class="rule-meta">Recurring in 3+ editions</span></div>
+    <div class="lex-core-grid">
+    <a class="lex-cc" href="ai.html">
+      <div class="lex-cc-term">AI</div>
+      <p class="lex-cc-def">Artificial Intelligence</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,26.1 16.0,26.1 30.0,28.0 44.0,28.0 58.0,11.3 72.0,2.0 86.0,11.3 100.0,7.6 114.0,11.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,26.1 16.0,26.1 30.0,28.0 44.0,28.0 58.0,11.3 72.0,2.0 86.0,11.3 100.0,7.6 114.0,11.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="quantum-computing.html">
+      <div class="lex-cc-term">Quantum Computing</div>
+      <p class="lex-cc-def">Theoretical foundations</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,2.0 100.0,7.2 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,2.0 100.0,7.2 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="ceo.html">
+      <div class="lex-cc-term">CEO</div>
+      <p class="lex-cc-def">Chief Executive Officer</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,10.7 72.0,2.0 86.0,23.7 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,10.7 72.0,2.0 86.0,23.7 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="llm.html">
+      <div class="lex-cc-term">LLM</div>
+      <p class="lex-cc-def">Large Language Model</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="mit.html">
+      <div class="lex-cc-term">MIT</div>
+      <p class="lex-cc-def">Massachusetts Institute of Technology</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,22.8 72.0,2.0 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,22.8 72.0,2.0 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="3d.html">
+      <div class="lex-cc-term">3D</div>
+      <p class="lex-cc-def">Three Dimensional</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,17.6 86.0,28.0 100.0,17.6 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,17.6 86.0,28.0 100.0,17.6 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="darpa.html">
+      <div class="lex-cc-term">DARPA</div>
+      <p class="lex-cc-def">Defense Advanced Research Projects Agency: the U.S. Department of Defense agency responsible for developing emerging technologies for…</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,2.0 86.0,15.0 100.0,2.0 114.0,2.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,2.0 86.0,15.0 100.0,2.0 114.0,2.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="vc.html">
+      <div class="lex-cc-term">VC</div>
+      <p class="lex-cc-def">Venture Capital</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,2.0 86.0,19.3 100.0,28.0 114.0,10.7 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,2.0 86.0,19.3 100.0,28.0 114.0,10.7 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="cybersecurity.html">
+      <div class="lex-cc-term">Cybersecurity</div>
+      <p class="lex-cc-def">Sports technology</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,19.3 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,19.3 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,19.3 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,19.3 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="digital-privacy.html">
+      <div class="lex-cc-term">Digital Privacy</div>
+      <p class="lex-cc-def">Data sovereignty</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,10.7 86.0,10.7 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,10.7 86.0,10.7 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="vpn.html">
+      <div class="lex-cc-term">VPN</div>
+      <p class="lex-cc-def">Virtual Private Network</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,10.7 114.0,19.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,10.7 114.0,19.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="bbc.html">
+      <div class="lex-cc-term">BBC</div>
+      <p class="lex-cc-def">British Broadcasting Corporation</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,10.7 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,10.7 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="cia.html">
+      <div class="lex-cc-term">CIA</div>
+      <p class="lex-cc-def">Central Intelligence Agency</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,19.3 100.0,19.3 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,19.3 100.0,19.3 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="consciousness-research.html">
+      <div class="lex-cc-term">Consciousness Research</div>
+      <p class="lex-cc-def">Electromagnetic fields and cellular membranes as seat of mind</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="data-privacy.html">
+      <div class="lex-cc-term">Data Privacy</div>
+      <p class="lex-cc-def">Mass surveillance implications</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="environmental-impact.html">
+      <div class="lex-cc-term">Environmental Impact</div>
+      <p class="lex-cc-def">Technology costs</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,22.8 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,22.8 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="gpu.html">
+      <div class="lex-cc-term">GPU</div>
+      <p class="lex-cc-def">Graphics Processing Unit</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="tpu.html">
+      <div class="lex-cc-term">TPU</div>
+      <p class="lex-cc-def">Tensor Processing Unit</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="tsmc.html">
+      <div class="lex-cc-term">TSMC</div>
+      <p class="lex-cc-def">Taiwan Semiconductor Manufacturing Company</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,19.3 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,19.3 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,19.3 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,19.3 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="agi.html">
+      <div class="lex-cc-term">AGI</div>
+      <p class="lex-cc-def">Artificial General Intelligence</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,15.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,15.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="ai-development.html">
+      <div class="lex-cc-term">AI Development</div>
+      <p class="lex-cc-def">Architecture optimization</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="ai-ethics.html">
+      <div class="lex-cc-term">AI Ethics</div>
+      <p class="lex-cc-def">Implications of AI in surveillance and law enforcement</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="amd.html">
+      <div class="lex-cc-term">AMD</div>
+      <p class="lex-cc-def">Advanced Micro Devices</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="artificial-intelligence.html">
+      <div class="lex-cc-term">Artificial Intelligence</div>
+      <p class="lex-cc-def">Impact on industries and decision-making processes</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="bci.html">
+      <div class="lex-cc-term">BCI</div>
+      <p class="lex-cc-def">Brain-Computer Interface</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,15.0 114.0,15.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,15.0 114.0,15.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="cpu.html">
+      <div class="lex-cc-term">CPU</div>
+      <p class="lex-cc-def">Central Processing Unit</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="entropy.html">
+      <div class="lex-cc-term">Entropy</div>
+      <p class="lex-cc-def">Measure of disorder; second law of thermodynamics states entropy always increases</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,2.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,2.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="114.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="fbi.html">
+      <div class="lex-cc-term">FBI</div>
+      <p class="lex-cc-def">Federal Bureau of Investigation</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="ice.html">
+      <div class="lex-cc-term">ICE</div>
+      <p class="lex-cc-def">Immigration and Customs Enforcement</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="iot.html">
+      <div class="lex-cc-term">IoT</div>
+      <p class="lex-cc-def">Internet of Things</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="mcp.html">
+      <div class="lex-cc-term">MCP</div>
+      <p class="lex-cc-def">Multi-Computing Platform</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="nasa.html">
+      <div class="lex-cc-term">NASA</div>
+      <p class="lex-cc-def">National Aeronautics and Space Administration</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,15.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,15.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="saas.html">
+      <div class="lex-cc-term">SaaS</div>
+      <p class="lex-cc-def">Software as a Service</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="semiconductor.html">
+      <div class="lex-cc-term">Semiconductor</div>
+      <p class="lex-cc-def">Material with electrical conductivity between a conductor and an insulator</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="ai-ethics-and-development.html">
+      <div class="lex-cc-term">AI Ethics and Development</div>
+      <p class="lex-cc-def">Physical world integration</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="ai-designed-computer-chips.html">
+      <div class="lex-cc-term">AI-Designed Computer Chips</div>
+      <p class="lex-cc-def">Efficiency surpassing human-designed counterparts.</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="ai-powered-video-creation.html">
+      <div class="lex-cc-term">AI-Powered Video Creation</div>
+      <p class="lex-cc-def">Tools making video production more accessible to brands and content creators.</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,19.3 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,19.3 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="aip.html">
+      <div class="lex-cc-term">AIP</div>
+      <p class="lex-cc-def">American Institute of Physics</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="brain-computer-interfaces.html">
+      <div class="lex-cc-term">Brain-Computer Interfaces</div>
+      <p class="lex-cc-def">Revolutionary medical applications and neural integration</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="chatgpt.html">
+      <div class="lex-cc-term">ChatGPT</div>
+      <p class="lex-cc-def">Chat Generative Pre-trained Transformer</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,2.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,2.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="digital-security.html">
+      <div class="lex-cc-term">Digital Security</div>
+      <p class="lex-cc-def">Massive exploit campaigns</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,15.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,15.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="digital-twin.html">
+      <div class="lex-cc-term">Digital Twin</div>
+      <p class="lex-cc-def">Virtual system replica</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="dna.html">
+      <div class="lex-cc-term">DNA</div>
+      <p class="lex-cc-def">Deoxyribonucleic Acid</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="encryption.html">
+      <div class="lex-cc-term">Encryption</div>
+      <p class="lex-cc-def">Data protection</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="esp32.html">
+      <div class="lex-cc-term">ESP32</div>
+      <p class="lex-cc-def">Espressif Systems Microcontroller</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,15.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,15.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="euv.html">
+      <div class="lex-cc-term">EUV</div>
+      <p class="lex-cc-def">Extreme Ultraviolet: the 13.5nm wavelength band used in ASML&#x27;s lithography systems; shorter wavelengths enable smaller transistor features</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,2.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,2.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="generative-ai.html">
+      <div class="lex-cc-term">Generative AI</div>
+      <p class="lex-cc-def">AI systems capable of creating content across various mediums</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+    </a>
+    <a class="lex-cc" href="gps.html">
+      <div class="lex-cc-term">GPS</div>
+      <p class="lex-cc-def">Global Positioning System</p>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+    </a>
+    </div>
+  </section>
+
+  <section class="block lex-catsec" id="cat-technologies">
+    <div class="rule-head"><h2 class="rule-label">Technologies</h2><span class="rule-meta">Top 20 of 585</span></div>
+    <div class="lex-lines">
+      <a class="lex-line" href="brain-computer-interfaces.html">
+        <span class="lex-line-term">Brain-Computer Interfaces<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Revolutionary medical applications and neural integration</span>
+      </a>
+      <a class="lex-line" href="post-quantum-cryptography.html">
+        <span class="lex-line-term">Post-Quantum Cryptography<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">encryption schemes designed to resist attacks from sufficiently capable quantum computers.</span>
+      </a>
+      <a class="lex-line" href="agricultural-ai.html">
+        <span class="lex-line-term">Agricultural AI<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Automated farming systems</span>
+      </a>
+      <a class="lex-line" href="ai-architecture.html">
+        <span class="lex-line-term">AI Architecture<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Sparse model optimization</span>
+      </a>
+      <a class="lex-line" href="ai-powered-drug-discovery.html">
+        <span class="lex-line-term">AI-Powered Drug Discovery<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Machine learning algorithm identifies potential treatment for antibiotic-resistant bacteria.</span>
+      </a>
+      <a class="lex-line" href="ai-powered-mathematics.html">
+        <span class="lex-line-term">AI-Powered Mathematics<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Using artificial intelligence to accelerate mathematical discovery</span>
+      </a>
+      <a class="lex-line" href="ancient-disease.html">
+        <span class="lex-line-term">Ancient Disease<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">DNA analysis techniques</span>
+      </a>
+      <a class="lex-line" href="arm-architecture.html">
+        <span class="lex-line-term">ARM Architecture<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Energy-efficient processor designs powering billions of devices</span>
+      </a>
+      <a class="lex-line" href="asteroid-detection-systems.html">
+        <span class="lex-line-term">Asteroid Detection Systems<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Technologies tracking interstellar objects through our solar system</span>
+      </a>
+      <a class="lex-line" href="atmospheric-water-harvesting.html">
+        <span class="lex-line-term">Atmospheric Water Harvesting<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Technology extracting moisture from air in arid regions</span>
+      </a>
+      <a class="lex-line" href="biodegradable-materials.html">
+        <span class="lex-line-term">Biodegradable Materials<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Truly decomposable alternatives to conventional plastics</span>
+      </a>
+      <a class="lex-line" href="brain-mapping.html">
+        <span class="lex-line-term">Brain Mapping<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Neural connectivity analysis</span>
+      </a>
+      <a class="lex-line" href="computational-cosmology.html">
+        <span class="lex-line-term">Computational Cosmology<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Modeling fundamental forces as optimization processes</span>
+      </a>
+      <a class="lex-line" href="cryptocurrency-experiments.html">
+        <span class="lex-line-term">Cryptocurrency Experiments<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Large-scale implementations testing adoption and value growth</span>
+      </a>
+      <a class="lex-line" href="digital-rights-management-drm.html">
+        <span class="lex-line-term">Digital Rights Management (DRM)<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Security systems for controlling digital content</span>
+      </a>
+      <a class="lex-line" href="digital-twins.html">
+        <span class="lex-line-term">Digital Twins<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">F1 racing technology</span>
+      </a>
+      <a class="lex-line" href="drone-defense.html">
+        <span class="lex-line-term">Drone Defense<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Stadium security systems</span>
+      </a>
+      <a class="lex-line" href="in-cabin-sensing.html">
+        <span class="lex-line-term">In-Cabin Sensing<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Advanced monitoring systems for vehicle safety and compliance</span>
+      </a>
+      <a class="lex-line" href="iphone-security.html">
+        <span class="lex-line-term">iPhone Security<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Local backup innovation</span>
+      </a>
+      <a class="lex-line" href="manufacturing-innovation.html">
+        <span class="lex-line-term">Manufacturing Innovation<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">3D printing breakthroughs</span>
+      </a>
+    </div>
+    <a class="lex-seeall" href="cat-technologies.html">See all 585 Technologies terms &rarr;</a>
+  </section>
+  <section class="block lex-catsec" id="cat-concepts">
+    <div class="rule-head"><h2 class="rule-label">Concepts</h2><span class="rule-meta">Top 20 of 577</span></div>
+    <div class="lex-lines">
+      <a class="lex-line" href="cybersecurity.html">
+        <span class="lex-line-term">Cybersecurity<span class="lex-badge">7×</span></span>
+        <span class="lex-line-def">Sports technology</span>
+      </a>
+      <a class="lex-line" href="digital-privacy.html">
+        <span class="lex-line-term">Digital Privacy<span class="lex-badge">7×</span></span>
+        <span class="lex-line-def">Data sovereignty</span>
+      </a>
+      <a class="lex-line" href="consciousness-research.html">
+        <span class="lex-line-term">Consciousness Research<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Electromagnetic fields and cellular membranes as seat of mind</span>
+      </a>
+      <a class="lex-line" href="data-privacy.html">
+        <span class="lex-line-term">Data Privacy<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Mass surveillance implications</span>
+      </a>
+      <a class="lex-line" href="environmental-impact.html">
+        <span class="lex-line-term">Environmental Impact<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Technology costs</span>
+      </a>
+      <a class="lex-line" href="ai-development.html">
+        <span class="lex-line-term">AI Development<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Architecture optimization</span>
+      </a>
+      <a class="lex-line" href="ai-ethics.html">
+        <span class="lex-line-term">AI Ethics<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Implications of AI in surveillance and law enforcement</span>
+      </a>
+      <a class="lex-line" href="artificial-intelligence.html">
+        <span class="lex-line-term">Artificial Intelligence<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Impact on industries and decision-making processes</span>
+      </a>
+      <a class="lex-line" href="ai-ethics-and-development.html">
+        <span class="lex-line-term">AI Ethics and Development<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Physical world integration</span>
+      </a>
+      <a class="lex-line" href="ai-designed-computer-chips.html">
+        <span class="lex-line-term">AI-Designed Computer Chips<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Efficiency surpassing human-designed counterparts.</span>
+      </a>
+      <a class="lex-line" href="digital-security.html">
+        <span class="lex-line-term">Digital Security<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Massive exploit campaigns</span>
+      </a>
+      <a class="lex-line" href="neuroscience.html">
+        <span class="lex-line-term">Neuroscience<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">New insights into neurological diseases like Parkinson&#x27;s</span>
+      </a>
+      <a class="lex-line" href="space-exploration.html">
+        <span class="lex-line-term">Space Exploration<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Innovative approaches to mapping space objects</span>
+      </a>
+      <a class="lex-line" href="ai-in-consulting.html">
+        <span class="lex-line-term">AI in Consulting<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Automation of high-level strategic analysis</span>
+      </a>
+      <a class="lex-line" href="archaeological-computing.html">
+        <span class="lex-line-term">Archaeological Computing<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Ancient mechanism analysis</span>
+      </a>
+      <a class="lex-line" href="architectural-trends.html">
+        <span class="lex-line-term">Architectural Trends<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Changes in religious and spiritual space design</span>
+      </a>
+      <a class="lex-line" href="automotive-intelligence.html">
+        <span class="lex-line-term">Automotive Intelligence<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Integration of advanced sensing in transportation</span>
+      </a>
+      <a class="lex-line" href="cognitive-science.html">
+        <span class="lex-line-term">Cognitive Science<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Impact of writing methods on brain function</span>
+      </a>
+      <a class="lex-line" href="computational-universe.html">
+        <span class="lex-line-term">Computational Universe<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Theoretical frameworks modeling reality as information processing</span>
+      </a>
+      <a class="lex-line" href="cultural-preservation.html">
+        <span class="lex-line-term">Cultural Preservation<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Documentation of disappearing technological spaces and practices</span>
+      </a>
+    </div>
+    <a class="lex-seeall" href="cat-concepts.html">See all 577 Concepts terms &rarr;</a>
+  </section>
+  <section class="block lex-catsec" id="cat-technical-terms">
+    <div class="rule-head"><h2 class="rule-label">Technical Terms</h2><span class="rule-meta">Top 20 of 541</span></div>
+    <div class="lex-lines">
+      <a class="lex-line" href="quantum-computing.html">
+        <span class="lex-line-term">Quantum Computing<span class="lex-badge">15×</span></span>
+        <span class="lex-line-def">Theoretical foundations</span>
+      </a>
+      <a class="lex-line" href="entropy.html">
+        <span class="lex-line-term">Entropy<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Measure of disorder; second law of thermodynamics states entropy always increases</span>
+      </a>
+      <a class="lex-line" href="semiconductor.html">
+        <span class="lex-line-term">Semiconductor<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Material with electrical conductivity between a conductor and an insulator</span>
+      </a>
+      <a class="lex-line" href="ai-powered-video-creation.html">
+        <span class="lex-line-term">AI-Powered Video Creation<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Tools making video production more accessible to brands and content creators.</span>
+      </a>
+      <a class="lex-line" href="digital-twin.html">
+        <span class="lex-line-term">Digital Twin<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Virtual system replica</span>
+      </a>
+      <a class="lex-line" href="encryption.html">
+        <span class="lex-line-term">Encryption<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Data protection</span>
+      </a>
+      <a class="lex-line" href="generative-ai.html">
+        <span class="lex-line-term">Generative AI<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">AI systems capable of creating content across various mediums</span>
+      </a>
+      <a class="lex-line" href="machine-learning.html">
+        <span class="lex-line-term">Machine Learning<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">AI systems that improve with experience</span>
+      </a>
+      <a class="lex-line" href="open-source-ai.html">
+        <span class="lex-line-term">Open-Source AI<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Hugging Face&#x27;s initiatives promote the democratization of AI, fostering collaborative innovation and accessibility in AI development.</span>
+      </a>
+      <a class="lex-line" href="quantum-entanglement.html">
+        <span class="lex-line-term">Quantum Entanglement<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Quantum state where particles remain connected</span>
+      </a>
+      <a class="lex-line" href="ai-copyright.html">
+        <span class="lex-line-term">AI Copyright<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Thomson Reuters&#x27; landmark legal victory sets a precedent in the ongoing debate surrounding AI-generated content and the use of copyrighted material…</span>
+      </a>
+      <a class="lex-line" href="ancient-pathogen.html">
+        <span class="lex-line-term">Ancient Pathogen<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Historical disease analysis</span>
+      </a>
+      <a class="lex-line" href="autonomous-navigation.html">
+        <span class="lex-line-term">Autonomous Navigation<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Self-driving vehicle technology</span>
+      </a>
+      <a class="lex-line" href="biometric-security.html">
+        <span class="lex-line-term">Biometric Security<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Authentication systems using unique physical or behavioral characteristics.</span>
+      </a>
+      <a class="lex-line" href="blockchain-technology.html">
+        <span class="lex-line-term">Blockchain Technology<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Decentralized ledger system underpinning cryptocurrencies</span>
+      </a>
+      <a class="lex-line" href="brain-computer-interface.html">
+        <span class="lex-line-term">Brain-Computer Interface<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Direct communication pathway between brain and external device</span>
+      </a>
+      <a class="lex-line" href="chip-design.html">
+        <span class="lex-line-term">Chip Design<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Process of creating integrated circuits</span>
+      </a>
+      <a class="lex-line" href="chirality.html">
+        <span class="lex-line-term">Chirality<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Molecular handedness determining biological compatibility</span>
+      </a>
+      <a class="lex-line" href="circuit-sparsity.html">
+        <span class="lex-line-term">Circuit-Sparsity<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">AI model efficiency</span>
+      </a>
+      <a class="lex-line" href="computational-model.html">
+        <span class="lex-line-term">Computational Model<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Mathematical representation of a system or process</span>
+      </a>
+    </div>
+    <a class="lex-seeall" href="cat-technical-terms.html">See all 541 Technical Terms terms &rarr;</a>
+  </section>
+  <section class="block lex-catsec" id="cat-acronyms">
+    <div class="rule-head"><h2 class="rule-label">Acronyms</h2><span class="rule-meta">Top 20 of 229</span></div>
+    <div class="lex-lines">
+      <a class="lex-line" href="ai.html">
+        <span class="lex-line-term">AI<span class="lex-badge">53×</span></span>
+        <span class="lex-line-def">Artificial Intelligence</span>
+      </a>
+      <a class="lex-line" href="ceo.html">
+        <span class="lex-line-term">CEO<span class="lex-badge">10×</span></span>
+        <span class="lex-line-def">Chief Executive Officer</span>
+      </a>
+      <a class="lex-line" href="llm.html">
+        <span class="lex-line-term">LLM<span class="lex-badge">10×</span></span>
+        <span class="lex-line-def">Large Language Model</span>
+      </a>
+      <a class="lex-line" href="mit.html">
+        <span class="lex-line-term">MIT<span class="lex-badge">10×</span></span>
+        <span class="lex-line-def">Massachusetts Institute of Technology</span>
+      </a>
+      <a class="lex-line" href="3d.html">
+        <span class="lex-line-term">3D<span class="lex-badge">9×</span></span>
+        <span class="lex-line-def">Three Dimensional</span>
+      </a>
+      <a class="lex-line" href="darpa.html">
+        <span class="lex-line-term">DARPA<span class="lex-badge">9×</span></span>
+        <span class="lex-line-def">Defense Advanced Research Projects Agency: the U.S. Department of Defense agency responsible for developing emerging technologies for national…</span>
+      </a>
+      <a class="lex-line" href="vc.html">
+        <span class="lex-line-term">VC<span class="lex-badge">8×</span></span>
+        <span class="lex-line-def">Venture Capital</span>
+      </a>
+      <a class="lex-line" href="vpn.html">
+        <span class="lex-line-term">VPN<span class="lex-badge">6×</span></span>
+        <span class="lex-line-def">Virtual Private Network</span>
+      </a>
+      <a class="lex-line" href="bbc.html">
+        <span class="lex-line-term">BBC<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">British Broadcasting Corporation</span>
+      </a>
+      <a class="lex-line" href="cia.html">
+        <span class="lex-line-term">CIA<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Central Intelligence Agency</span>
+      </a>
+      <a class="lex-line" href="gpu.html">
+        <span class="lex-line-term">GPU<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Graphics Processing Unit</span>
+      </a>
+      <a class="lex-line" href="tpu.html">
+        <span class="lex-line-term">TPU<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Tensor Processing Unit</span>
+      </a>
+      <a class="lex-line" href="tsmc.html">
+        <span class="lex-line-term">TSMC<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Taiwan Semiconductor Manufacturing Company</span>
+      </a>
+      <a class="lex-line" href="agi.html">
+        <span class="lex-line-term">AGI<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Artificial General Intelligence</span>
+      </a>
+      <a class="lex-line" href="amd.html">
+        <span class="lex-line-term">AMD<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Advanced Micro Devices</span>
+      </a>
+      <a class="lex-line" href="bci.html">
+        <span class="lex-line-term">BCI<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Brain-Computer Interface</span>
+      </a>
+      <a class="lex-line" href="cpu.html">
+        <span class="lex-line-term">CPU<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Central Processing Unit</span>
+      </a>
+      <a class="lex-line" href="fbi.html">
+        <span class="lex-line-term">FBI<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Federal Bureau of Investigation</span>
+      </a>
+      <a class="lex-line" href="ice.html">
+        <span class="lex-line-term">ICE<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Immigration and Customs Enforcement</span>
+      </a>
+      <a class="lex-line" href="iot.html">
+        <span class="lex-line-term">IoT<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Internet of Things</span>
+      </a>
+    </div>
+    <a class="lex-seeall" href="cat-acronyms.html">See all 229 Acronyms terms &rarr;</a>
+  </section>
+  <section class="block lex-catsec" id="cat-people-and-works">
+    <div class="rule-head"><h2 class="rule-label">People &amp; Works</h2><span class="rule-meta">Top 9 of 9</span></div>
+    <div class="lex-lines">
+      <a class="lex-line" href="charles-taylor.html">
+        <span class="lex-line-term">Charles Taylor</span>
+        <span class="lex-line-def">author of Sources of the Self, referenced on the historicity of the inward self. 10 👍 This newsletter was curated by a human. We mention this because…</span>
+      </a>
+      <a class="lex-line" href="frank-lantz.html">
+        <span class="lex-line-term">Frank Lantz</span>
+        <span class="lex-line-def">designer of Universal Paperclips (2017), the clicker game that became an alignment teaching tool.</span>
+      </a>
+      <a class="lex-line" href="frank-rosenblatt.html">
+        <span class="lex-line-term">Frank Rosenblatt</span>
+        <span class="lex-line-def">inventor of the Perceptron, 1958.</span>
+      </a>
+      <a class="lex-line" href="mcculloch-and-pitts.html">
+        <span class="lex-line-term">McCulloch &amp; Pitts</span>
+        <span class="lex-line-def">authors of the 1943 paper that founded computational neuroscience.</span>
+      </a>
+      <a class="lex-line" href="michael-pollan.html">
+        <span class="lex-line-term">Michael Pollan</span>
+        <span class="lex-line-def">author arguing boredom is a precondition for consciousness.</span>
+      </a>
+      <a class="lex-line" href="nate-soares.html">
+        <span class="lex-line-term">Nate Soares</span>
+        <span class="lex-line-def">president of MIRI, interviewed this week.</span>
+      </a>
+      <a class="lex-line" href="nikolai-brusentsov.html">
+        <span class="lex-line-term">Nikolai Brusentsov</span>
+        <span class="lex-line-def">builder of the Setun ternary computer, Moscow State University, 1958.</span>
+      </a>
+      <a class="lex-line" href="plotinus.html">
+        <span class="lex-line-term">Plotinus</span>
+        <span class="lex-line-def">third-century philosopher whose concept of emanation is invoked in the Closer Look.</span>
+      </a>
+      <a class="lex-line" href="thomas-nagel.html">
+        <span class="lex-line-term">Thomas Nagel</span>
+        <span class="lex-line-def">philosopher whose &quot;What Is It Like to Be a Bat?&quot; (1974) framed the consciousness question the opening quote adapts.</span>
+      </a>
+    </div>
+    
+  </section>
+</main>
+<div class="lex-soon"><div class="lex-soon-inner">
+  <h3>Coming to the Lab</h3>
+  <p>The Lexicon is the data layer. Next on the bench, all powered by it: <strong>the Constellation</strong> (browse terms as a map of what's glossed together), <strong>Ask the Archive</strong> (question three years of writing), and <strong>the Zeitgeist Tracker</strong> (what mattered when, across 10 quarters).</p>
+</div></div>
+</div>
+<script>window.LEX_BASE="";window.LEX_ALL=[["AI", "ai"], ["Quantum Computing", "quantum-computing"], ["CEO", "ceo"], ["LLM", "llm"], ["MIT", "mit"], ["3D", "3d"], ["DARPA", "darpa"], ["VC", "vc"], ["Cybersecurity", "cybersecurity"], ["Digital Privacy", "digital-privacy"], ["VPN", "vpn"], ["BBC", "bbc"], ["CIA", "cia"], ["Consciousness Research", "consciousness-research"], ["Data Privacy", "data-privacy"], ["Environmental Impact", "environmental-impact"], ["GPU", "gpu"], ["TPU", "tpu"], ["TSMC", "tsmc"], ["AGI", "agi"], ["AI Development", "ai-development"], ["AI Ethics", "ai-ethics"], ["AMD", "amd"], ["Artificial Intelligence", "artificial-intelligence"], ["BCI", "bci"], ["CPU", "cpu"], ["Entropy", "entropy"], ["FBI", "fbi"], ["ICE", "ice"], ["IoT", "iot"], ["MCP", "mcp"], ["NASA", "nasa"], ["SaaS", "saas"], ["Semiconductor", "semiconductor"], ["AI Ethics and Development", "ai-ethics-and-development"], ["AI-Designed Computer Chips", "ai-designed-computer-chips"], ["AI-Powered Video Creation", "ai-powered-video-creation"], ["AIP", "aip"], ["Brain-Computer Interfaces", "brain-computer-interfaces"], ["ChatGPT", "chatgpt"], ["Digital Security", "digital-security"], ["Digital Twin", "digital-twin"], ["DNA", "dna"], ["Encryption", "encryption"], ["ESP32", "esp32"], ["EUV", "euv"], ["Generative AI", "generative-ai"], ["GPS", "gps"], ["Machine Learning", "machine-learning"], ["Neuroscience", "neuroscience"], ["NOAA", "noaa"], ["Open-Source AI", "open-source-ai"], ["PCB", "pcb"], ["Post-Quantum Cryptography", "post-quantum-cryptography"], ["Quantum Entanglement", "quantum-entanglement"], ["RF", "rf"], ["RISC-V", "risc-v"], ["RLHF", "rlhf"], ["Space Exploration", "space-exploration"], ["UK", "uk"], ["VLA", "vla"], ["VR", "vr"], ["Agricultural AI", "agricultural-ai"], ["AI Architecture", "ai-architecture"], ["AI Copyright", "ai-copyright"], ["AI in Consulting", "ai-in-consulting"], ["AI-Powered Drug Discovery", "ai-powered-drug-discovery"], ["AI-Powered Mathematics", "ai-powered-mathematics"], ["Ancient Disease", "ancient-disease"], ["Ancient Pathogen", "ancient-pathogen"], ["Archaeological Computing", "archaeological-computing"], ["Architectural Trends", "architectural-trends"], ["ARM", "arm"], ["ARM Architecture", "arm-architecture"], ["ARR", "arr"], ["ASML", "asml"], ["Asteroid Detection Systems", "asteroid-detection-systems"], ["Atmospheric Water Harvesting", "atmospheric-water-harvesting"], ["Automotive Intelligence", "automotive-intelligence"], ["Autonomous Navigation", "autonomous-navigation"], ["BASIC", "basic"], ["Biodegradable Materials", "biodegradable-materials"], ["Biometric Security", "biometric-security"], ["Blockchain Technology", "blockchain-technology"], ["Brain Mapping", "brain-mapping"], ["Brain-Computer Interface", "brain-computer-interface"], ["CAPTCHA", "captcha"], ["CERN", "cern"], ["Chip Design", "chip-design"], ["Chirality", "chirality"], ["Circuit-Sparsity", "circuit-sparsity"], ["Cognitive Science", "cognitive-science"], ["Computational Cosmology", "computational-cosmology"], ["Computational Model", "computational-model"], ["Computational Universe", "computational-universe"], ["Corporate AI Strategy", "corporate-ai-strategy"], ["Cryptocurrency Experiments", "cryptocurrency-experiments"], ["Cultural Preservation", "cultural-preservation"], ["Cybersecurity Threats", "cybersecurity-threats"], ["Cypherpunk", "cypherpunk"], ["Data Center", "data-center"], ["Data Protection", "data-protection"], ["Defense Technology", "defense-technology"], ["Diffusion Model", "diffusion-model"], ["Digital Preservation", "digital-preservation"], ["Digital Rights", "digital-rights"], ["Digital Rights Management (DRM)", "digital-rights-management-drm"], ["Digital Twins", "digital-twins"], ["DIY", "diy"], ["DRM", "drm"], ["Drone Defense", "drone-defense"], ["Drone Neutralization", "drone-neutralization"], ["DSM", "dsm"], ["DW", "dw"], ["Economic Analysis", "economic-analysis"], ["Economic Uncertainty", "economic-uncertainty"], ["Energy Efficiency", "energy-efficiency"], ["Energy Innovation", "energy-innovation"], ["Entropy Reduction", "entropy-reduction"], ["Environmental Marketing", "environmental-marketing"], ["Epistemological Limits", "epistemological-limits"], ["Estate Tax Loopholes", "estate-tax-loopholes"], ["Ethical AI Development", "ethical-ai-development"], ["FCC", "fcc"], ["FDA", "fda"], ["FTC", "ftc"], ["Fundamental Physics", "fundamental-physics"], ["Greenwashing", "greenwashing"], ["HBR", "hbr"], ["Historical Research", "historical-research"], ["IBM", "ibm"], ["In-Cabin Sensing", "in-cabin-sensing"], ["Information Theory", "information-theory"], ["Interstellar Object", "interstellar-object"], ["iPhone Security", "iphone-security"], ["IPO", "ipo"], ["ISP", "isp"], ["LAN", "lan"], ["Large Language Models (LLMs)", "large-language-models-llms"], ["LED", "led"], ["Local Backup", "local-backup"], ["Manufacturing Innovation", "manufacturing-innovation"], ["Mass Surveillance", "mass-surveillance"], ["Mathematical Foundations", "mathematical-foundations"], ["NAS", "nas"], ["NAS Technology", "nas-technology"], ["Network Storage", "network-storage"], ["Neural Networks", "neural-networks"], ["NIST", "nist"], ["NSA", "nsa"], ["Optimization Problem", "optimization-problem"], ["Persistent AI Architecture", "persistent-ai-architecture"], ["Photonic Computing", "photonic-computing"], ["Physics-Informed Neural Networks", "physics-informed-neural-networks"], ["Political Investment", "political-investment"], ["PQC", "pqc"], ["Predictive Processing", "predictive-processing"], ["Privacy Concerns", "privacy-concerns"], ["Privacy Rights", "privacy-rights"], ["Public Safety", "public-safety"], ["Quantum Algorithms", "quantum-algorithms"], ["Quantum Biology", "quantum-biology"], ["Quantum Computing Advancements", "quantum-computing-advancements"], ["Quantum Cryptography", "quantum-cryptography"], ["Quantum Internet Prototype", "quantum-internet-prototype"], ["Quantum Physics", "quantum-physics"], ["Quantum Physics Breakthroughs", "quantum-physics-breakthroughs"], ["Quantum Randomness", "quantum-randomness"], ["Quantum Security Applications", "quantum-security-applications"], ["Quantum Speedup", "quantum-speedup"], ["RAG", "rag"], ["RC", "rc"], ["Renewable Energy", "renewable-energy"], ["RISC Architecture", "risc-architecture"], ["RL", "rl"], ["ROI", "roi"], ["RPG", "rpg"], ["Semiconductor Innovation", "semiconductor-innovation"], ["Semiconductor Manufacturing", "semiconductor-manufacturing"], ["SSD", "ssd"], ["Surveillance Capitalism", "surveillance-capitalism"], ["Surveillance Expansion", "surveillance-expansion"], ["Surveillance Systems", "surveillance-systems"], ["Surveillance Technology", "surveillance-technology"], ["Tacit Knowledge", "tacit-knowledge"], ["Tax Optimization", "tax-optimization"], ["Tech Industry Trends", "tech-industry-trends"], ["Tech Innovation", "tech-innovation"], ["Technological Legacy", "technological-legacy"], ["Telemetry", "telemetry"], ["Ternary Logic", "ternary-logic"], ["Theoretical Physics", "theoretical-physics"], ["Thermodynamics", "thermodynamics"], ["TSA", "tsa"], ["UAE", "uae"], ["UI", "ui"], ["USA", "usa"], ["Weight Sparse Models", "weight-sparse-models"], ["Wireless Technology", "wireless-technology"], ["Work Transformation", "work-transformation"], ["WSJ", "wsj"], ["XR", "xr"], ["Youth Employment", "youth-employment"], ["\"Third Places\" in Society", "third-places-in-society"], ["'Mini-Brain' Models", "mini-brain-models"], ["3D Chip Integration", "3d-chip-integration"], ["3D Digital Human Creator", "3d-digital-human-creator"], ["3D Scanning and Augmented Reality (used by Looty)", "3d-scanning-and-augmented-reality-used-by-looty"], ["3D VR Concept Camera", "3d-vr-concept-camera"], ["4D", "4d"], ["4D Imaging Sensor", "4d-imaging-sensor"], ["4D Printing Advancement", "4d-printing-advancement"], ["4nm chips", "4nm-chips"], ["4o Image Generation", "4o-image-generation"], ["5G/6G", "5g-6g"], ["6G", "6g"], ["6G Chip Development", "6g-chip-development"], ["Academic Innovation", "academic-innovation"], ["Accelerated Human Development", "accelerated-human-development"], ["Accidental vs. Intentional Innovation", "accidental-vs-intentional-innovation"], ["Actuators in Character Design", "actuators-in-character-design"], ["Additive Manufacturing for Electric Motors", "additive-manufacturing-for-electric-motors"], ["Advanced Ethernet Cable Categories", "advanced-ethernet-cable-categories"], ["Advanced Manufacturing Miniaturization", "advanced-manufacturing-miniaturization"], ["Advanced Mathematical Modeling", "advanced-mathematical-modeling"], ["Advanced Microchip Technology", "advanced-microchip-technology"], ["Advanced Semiconductor Production", "advanced-semiconductor-production"], ["Advanced Surveillance", "advanced-surveillance"], ["Advancements in Language Model Scaling", "advancements-in-language-model-scaling"], ["Affordable Data Infrastructure", "affordable-data-infrastructure"], ["Age Verification", "age-verification"], ["Age Verification Systems", "age-verification-systems"], ["Agent Engineering", "agent-engineering"], ["Agent Engineering Frameworks", "agent-engineering-frameworks"], ["Agentic AI", "agentic-ai"], ["Agentic AI Frameworks", "agentic-ai-frameworks"], ["Agricultural Automation", "agricultural-automation"], ["Agricultural Evolution", "agricultural-evolution"], ["Agricultural Export Innovation", "agricultural-export-innovation"], ["Agricultural Innovation", "agricultural-innovation"], ["Agricultural Revolution", "agricultural-revolution"], ["Agricultural Systems", "agricultural-systems"], ["Agricultural Technology ROI", "agricultural-technology-roi"], ["Agricultural Transformation", "agricultural-transformation"], ["AI Access Controls", "ai-access-controls"], ["AI Alignment via Weak-to-Strong Oversight", "ai-alignment-via-weak-to-strong-oversight"], ["AI and 3D Printing in Electric Motors", "ai-and-3d-printing-in-electric-motors"], ["AI and Creativity", "ai-and-creativity"], ["AI at Game Developers Conference", "ai-at-game-developers-conference"], ["AI Chip Development", "ai-chip-development"], ["AI Cognition", "ai-cognition"], ["AI Communication", "ai-communication"], ["AI Content Scraping", "ai-content-scraping"], ["AI Control and Safety", "ai-control-and-safety"], ["AI Copyright Settlement", "ai-copyright-settlement"], ["AI Curriculum for Education", "ai-curriculum-for-education"], ["AI Democratization", "ai-democratization"], ["AI Dependency", "ai-dependency"], ["AI Development Platforms", "ai-development-platforms"], ["AI Development Trajectories", "ai-development-trajectories"], ["AI Drug Repurposing", "ai-drug-repurposing"], ["AI Education and Literacy", "ai-education-and-literacy"], ["AI Efficiency", "ai-efficiency"], ["AI Efficiency Revolution", "ai-efficiency-revolution"], ["AI Emotional Impact", "ai-emotional-impact"], ["AI Ethics and Copyright", "ai-ethics-and-copyright"], ["AI Ethics and Future Predictions", "ai-ethics-and-future-predictions"], ["AI Ethics and Training", "ai-ethics-and-training"], ["AI Filmmaking Platforms", "ai-filmmaking-platforms"], ["AI Governance Conflicts", "ai-governance-conflicts"], ["AI Hardware Competition", "ai-hardware-competition"], ["AI Hardware Infrastructure", "ai-hardware-infrastructure"], ["AI Hidden Messages", "ai-hidden-messages"], ["AI Image Generation Ethics", "ai-image-generation-ethics"], ["AI Impact Analysis", "ai-impact-analysis"], ["AI in Ancient Text Analysis", "ai-in-ancient-text-analysis"], ["AI in Archaeological Discoveries", "ai-in-archaeological-discoveries"], ["AI in Architecture", "ai-in-architecture"], ["AI in Chip Design", "ai-in-chip-design"], ["AI in Content Creation", "ai-in-content-creation"], ["AI in Creative Industries", "ai-in-creative-industries"], ["AI in Entertainment", "ai-in-entertainment"], ["AI in Healthcare", "ai-in-healthcare"], ["AI in Legal Proceedings", "ai-in-legal-proceedings"], ["AI in Mathematics", "ai-in-mathematics"], ["AI in Scientific Breakthroughs", "ai-in-scientific-breakthroughs"], ["AI Industry Integration", "ai-industry-integration"], ["AI Infrastructure Competition", "ai-infrastructure-competition"], ["AI Infrastructure Financing", "ai-infrastructure-financing"], ["AI Infrastructure Physics", "ai-infrastructure-physics"], ["AI Infrastructure Security", "ai-infrastructure-security"], ["AI Integration", "ai-integration"], ["AI Integration Framework", "ai-integration-framework"], ["AI Integration Systems", "ai-integration-systems"], ["AI Interpretability Crisis", "ai-interpretability-crisis"], ["AI Investment Shift", "ai-investment-shift"], ["AI Jailbreak", "ai-jailbreak"], ["AI Job Displacement", "ai-job-displacement"], ["AI Labor Substitution", "ai-labor-substitution"], ["AI Lawyers", "ai-lawyers"], ["AI Leadership Analysis", "ai-leadership-analysis"], ["AI Learning Mechanisms", "ai-learning-mechanisms"], ["AI Legal Systems", "ai-legal-systems"], ["AI Linguistics", "ai-linguistics"], ["AI Literacy", "ai-literacy"], ["AI Medical Diagnostics", "ai-medical-diagnostics"], ["AI Memorization Analysis", "ai-memorization-analysis"], ["AI Model Advancements", "ai-model-advancements"], ["AI Monetization", "ai-monetization"], ["AI Monetization Strategies", "ai-monetization-strategies"], ["AI Music Diffusion Models", "ai-music-diffusion-models"], ["AI Mutation and Interpretability", "ai-mutation-and-interpretability"], ["AI Personal Assistants", "ai-personal-assistants"], ["AI Radio Hosts", "ai-radio-hosts"], ["AI Reasoning Limitations", "ai-reasoning-limitations"], ["AI Replacement Strategies", "ai-replacement-strategies"], ["AI Research Autonomy", "ai-research-autonomy"], ["AI Research Systems", "ai-research-systems"], ["AI Rollups", "ai-rollups"], ["AI Scaling Breakthroughs", "ai-scaling-breakthroughs"], ["AI Security", "ai-security"], ["AI Security Concerns", "ai-security-concerns"], ["AI Security Evolution", "ai-security-evolution"], ["AI Security Measures", "ai-security-measures"], ["AI Security Paradox", "ai-security-paradox"], ["AI Sleeper Agents", "ai-sleeper-agents"], ["AI Slop", "ai-slop"], ["AI Society Impact", "ai-society-impact"], ["AI Surveillance in Police Cameras", "ai-surveillance-in-police-cameras"], ["AI Surveillance Systems", "ai-surveillance-systems"], ["AI Training Data", "ai-training-data"], ["AI Training Data Memorization", "ai-training-data-memorization"], ["AI Training Poisoning", "ai-training-poisoning"], ["AI Video Evolution", "ai-video-evolution"], ["AI Voice Synthesis", "ai-voice-synthesis"], ["AI vs Superbugs", "ai-vs-superbugs"], ["AI Wisdom Gap", "ai-wisdom-gap"], ["AI Workforce Impact", "ai-workforce-impact"], ["AI's Impact on Industries", "ai-s-impact-on-industries"], ["AI's Impact on Society", "ai-s-impact-on-society"], ["AI's Productivity Paradox", "ai-s-productivity-paradox"], ["AI-Assisted Academic Research", "ai-assisted-academic-research"], ["AI-Assisted Cyberattacks", "ai-assisted-cyberattacks"], ["AI-Assisted Data Extraction", "ai-assisted-data-extraction"], ["AI-Driven Advertising", "ai-driven-advertising"], ["AI-Driven Communication Platforms", "ai-driven-communication-platforms"], ["AI-Driven Education (Google DeepMind)", "ai-driven-education-google-deepmind"], ["AI-Driven Entrepreneurship", "ai-driven-entrepreneurship"], ["AI-Driven Interface Design", "ai-driven-interface-design"], ["AI-Driven Security Threats", "ai-driven-security-threats"], ["AI-Generated 3D Objects", "ai-generated-3d-objects"], ["AI-Generated Authorship and Legal Identity", "ai-generated-authorship-and-legal-identity"], ["AI-Generated Cartoons", "ai-generated-cartoons"], ["AI-Native Architecture", "ai-native-architecture"], ["AI-Powered", "ai-powered"], ["AI-Powered Aging Research", "ai-powered-aging-research"], ["AI-Powered App Building", "ai-powered-app-building"], ["AI-Powered Digital Twins", "ai-powered-digital-twins"], ["AI-Powered Productivity Tools", "ai-powered-productivity-tools"], ["AI-Powered Space Discovery", "ai-powered-space-discovery"], ["AI-Powered Surveillance", "ai-powered-surveillance"], ["AI-Powered Workflows", "ai-powered-workflows"], ["AIP Platform", "aip-platform"], ["Airport Security", "airport-security"], ["AkiraBot Framework", "akirabot-framework"], ["Algorithm Effects", "algorithm-effects"], ["Algorithm Learning Impact", "algorithm-learning-impact"], ["Algorithmic Curation", "algorithmic-curation"], ["Algorithmic Efficiency", "algorithmic-efficiency"], ["Algorithmic Innovation", "algorithmic-innovation"], ["ALPR", "alpr"], ["Altermagnetism", "altermagnetism"], ["Altermagnetism Research", "altermagnetism-research"], ["Alternative Battery Technologies", "alternative-battery-technologies"], ["AMC", "amc"], ["Amplituhedron", "amplituhedron"], ["Amplituhedron Analysis", "amplituhedron-analysis"], ["Analog AI Chips", "analog-ai-chips"], ["Analog Brain Computation", "analog-brain-computation"], ["Analog Computation", "analog-computation"], ["Analog Computing", "analog-computing"], ["Analog Matrix Computation", "analog-matrix-computation"], ["Analog Sub-Circuit Compendium", "analog-sub-circuit-compendium"], ["Analog vs. Digital Quantum Simulation", "analog-vs-digital-quantum-simulation"], ["Ancient Abstraction", "ancient-abstraction"], ["Ancient Device Failure Analysis", "ancient-device-failure-analysis"], ["Ancient Pyramid Analysis", "ancient-pyramid-analysis"], ["Ancient Technology", "ancient-technology"], ["Ancient Technology Limits", "ancient-technology-limits"], ["Ancient Text Analysis", "ancient-text-analysis"], ["ANI", "ani"], ["Animal Intelligence", "animal-intelligence"], ["Animal Welfare", "animal-welfare"], ["Animatable Models", "animatable-models"], ["Animatronics", "animatronics"], ["Anti-Drone Weapons", "anti-drone-weapons"], ["Antiferromagnetic Materials", "antiferromagnetic-materials"], ["Antikythera Mechanism", "antikythera-mechanism"], ["Antitrust", "antitrust"], ["Anyone'", "anyone"], ["AP", "ap"], ["API", "api"], ["APT", "apt"], ["AR", "ar"], ["ArcGIS", "arcgis"], ["Archaeological Dating", "archaeological-dating"], ["Archaeological Revelations", "archaeological-revelations"], ["Architectural Inheritance", "architectural-inheritance"], ["Architectural Innovation", "architectural-innovation"], ["Archive", "archive"], ["ARN", "arn"], ["Arrow's Impossibility Theorem", "arrow-s-impossibility-theorem"], ["Artificial Photosynthesis Leap", "artificial-photosynthesis-leap"], ["arXiv", "arxiv"], ["ASI", "asi"], ["ASI-Evolve", "asi-evolve"], ["Astronomical Calculator", "astronomical-calculator"], ["Astronomical Cloud Discovery", "astronomical-cloud-discovery"], ["Attraction and Repulsion", "attraction-and-repulsion"], ["Attribution as Compressed Causal Story", "attribution-as-compressed-causal-story"], ["Authentication Through Entropy", "authentication-through-entropy"], ["Automated AI", "automated-ai"], ["Automated Discovery", "automated-discovery"], ["Automotive Customization", "automotive-customization"], ["Automotive Surveillance Systems", "automotive-surveillance-systems"], ["Automotive Tech Advancements", "automotive-tech-advancements"], ["Autonomous Agent", "autonomous-agent"], ["Autonomous Agent Accountability", "autonomous-agent-accountability"], ["Autonomous Agent Publishing", "autonomous-agent-publishing"], ["Autonomous Decision-Making", "autonomous-decision-making"], ["Autonomous Humanoid Robots", "autonomous-humanoid-robots"], ["Autonomous Space Decision-Making", "autonomous-space-decision-making"], ["Autonomous Trucks", "autonomous-trucks"], ["Autonomous Urban Farms", "autonomous-urban-farms"], ["Autonomous Vehicle Systems", "autonomous-vehicle-systems"], ["Autonomous Vehicles", "autonomous-vehicles"], ["Aviation Technology Integration", "aviation-technology-integration"], ["AWS", "aws"], ["Backdoor", "backdoor"], ["Backdoor Implementation", "backdoor-implementation"], ["Backpropagation", "backpropagation"], ["Bankruptcy Asset Sale", "bankruptcy-asset-sale"], ["Bathhouse Culture Resurgence", "bathhouse-culture-resurgence"], ["Battery Technology", "battery-technology"], ["BC", "bc"], ["BDC", "bdc"], ["Behavioral Pattern Analysis", "behavioral-pattern-analysis"], ["Big Five Personality Model (OCEAN)", "big-five-personality-model-ocean"], ["Bilaterian", "bilaterian"], ["Bilaterian Development Techniques", "bilaterian-development-techniques"], ["Bio-Inspired LEDs", "bio-inspired-leds"], ["Biocomputing", "biocomputing"], ["Biodegradable Electronics", "biodegradable-electronics"], ["Bioinspired Robots", "bioinspired-robots"], ["Biological Computing", "biological-computing"], ["Biological Cooperation", "biological-cooperation"], ["Biological Naturalism (Consciousness)", "biological-naturalism-consciousness"], ["Biological Sciences", "biological-sciences"], ["Biological-Digital Interface", "biological-digital-interface"], ["Biomaterial Construction", "biomaterial-construction"], ["Biometric Access Exclusion", "biometric-access-exclusion"], ["Biometric Authentication", "biometric-authentication"], ["Biometric Identification Normalization", "biometric-identification-normalization"], ["Biometric Identity Systems", "biometric-identity-systems"], ["Biometric Travel Identification", "biometric-travel-identification"], ["Biomimetic", "biomimetic"], ["Biomimetic AI Humanoids", "biomimetic-ai-humanoids"], ["Biomimetic Architecture", "biomimetic-architecture"], ["Biomimetic Robotics", "biomimetic-robotics"], ["Biomimetics", "biomimetics"], ["Biomimicry", "biomimicry"], ["Bionic Eye Breakthrough", "bionic-eye-breakthrough"], ["Bionic Eyes", "bionic-eyes"], ["Bismuth Transistors", "bismuth-transistors"], ["Bitcoin Recovery Operations", "bitcoin-recovery-operations"], ["Black and Asian faces", "black-and-asian-faces"], ["Black-Box System", "black-box-system"], ["Black-Box Systems", "black-box-systems"], ["Bladeless Wind Technology", "bladeless-wind-technology"], ["Blood-Oxygen Monitoring", "blood-oxygen-monitoring"], ["Bluetooth Counter-Surveillance", "bluetooth-counter-surveillance"], ["Bluetooth Tracking", "bluetooth-tracking"], ["BMW", "bmw"], ["BMW's Futuristic Windshield Display", "bmw-s-futuristic-windshield-display"], ["Body Language Profiling", "body-language-profiling"], ["Boltzmann Brain", "boltzmann-brain"], ["BPA", "bpa"], ["Brain Parasite Treatments", "brain-parasite-treatments"], ["Brain Pattern Activity", "brain-pattern-activity"], ["Brain Plasticity", "brain-plasticity"], ["Brain State Research", "brain-state-research"], ["Brain Wearable Technology", "brain-wearable-technology"], ["Brain-Body Rhythm Mapping", "brain-body-rhythm-mapping"], ["Brain-Computer Interface for Paralysis", "brain-computer-interface-for-paralysis"], ["Brain-Inspired Supercomputer", "brain-inspired-supercomputer"], ["Brain-Inspired Supercomputers", "brain-inspired-supercomputers"], ["Brain-to-Text Interface", "brain-to-text-interface"], ["Brand Identity Evolution", "brand-identity-evolution"], ["Brutalist Architecture", "brutalist-architecture"], ["Building on Top of Existing Skyscrapers", "building-on-top-of-existing-skyscrapers"], ["Bulletin Board System", "bulletin-board-system"], ["Bulletin Board System Architecture", "bulletin-board-system-architecture"], ["Business Architecture", "business-architecture"], ["Business Metric Evolution", "business-metric-evolution"], ["BYD", "byd"], ["C-Suite Evolution", "c-suite-evolution"], ["Caffeinated Aging Research", "caffeinated-aging-research"], ["CAG", "cag"], ["Canadian Photonics Fabrication", "canadian-photonics-fabrication"], ["Cannibal Construction Theory", "cannibal-construction-theory"], ["Cantor's Hierarchy", "cantor-s-hierarchy"], ["Capability-Comprehension Gap", "capability-comprehension-gap"], ["Capability-Fragility Paradox", "capability-fragility-paradox"], ["Carbon Credit Platforms", "carbon-credit-platforms"], ["Carbon Credits", "carbon-credits"], ["Carbon Cycle Transformation", "carbon-cycle-transformation"], ["Carbon Footprint", "carbon-footprint"], ["Carbon-Absorbing Concrete", "carbon-absorbing-concrete"], ["Carbon-Negative Concrete", "carbon-negative-concrete"], ["Carbon-Neutral Fuel", "carbon-neutral-fuel"], ["Cascade Failure", "cascade-failure"], ["Casio Watch Upgrade Kits", "casio-watch-upgrade-kits"], ["Categorical Misattribution", "categorical-misattribution"], ["Category 5 Wrongness", "category-5-wrongness"], ["CBC", "cbc"], ["CDC", "cdc"], ["CDN", "cdn"], ["CDPQ", "cdpq"], ["CE)", "ce"], ["CEI", "cei"], ["Cellular Biobots", "cellular-biobots"], ["Cellular Biology Imaging", "cellular-biology-imaging"], ["Cellular Cooperation", "cellular-cooperation"], ["Cerebras and Perplexity AI", "cerebras-and-perplexity-ai"], ["CFCs", "cfcs"], ["CGI", "cgi"], ["CGM", "cgm"], ["Challenges in the Smartphone Market", "challenges-in-the-smartphone-market"], ["Changing Consumer Priorities", "changing-consumer-priorities"], ["Chaos Theory Applications", "chaos-theory-applications"], ["Charles Taylor", "charles-taylor"], ["Chip Authentication", "chip-authentication"], ["Chip Manufacturing", "chip-manufacturing"], ["Chip Supply Chain", "chip-supply-chain"], ["Chiral Molecule Research", "chiral-molecule-research"], ["Chirality in Organic Molecules", "chirality-in-organic-molecules"], ["Cinematic Innovation", "cinematic-innovation"], ["Circuit Board Fabrication", "circuit-board-fabrication"], ["Civic Knowledge", "civic-knowledge"], ["Classic Technology Modernization", "classic-technology-modernization"], ["Claude AI", "claude-ai"], ["Clickjacking", "clickjacking"], ["Climate Adaptation", "climate-adaptation"], ["Climate Change Detection", "climate-change-detection"], ["Climate Technology Innovation", "climate-technology-innovation"], ["Climate Technology Revolution", "climate-technology-revolution"], ["Climate-Adaptive Architecture", "climate-adaptive-architecture"], ["Cloud Computing Security", "cloud-computing-security"], ["Cloud Security", "cloud-security"], ["Cloud Security Solutions", "cloud-security-solutions"], ["Cloud-Dodging", "cloud-dodging"], ["Cloud-Dodging Satellite Technology", "cloud-dodging-satellite-technology"], ["CMO", "cmo"], ["CNR-IOM", "cnr-iom"], ["Cognitive Biases", "cognitive-biases"], ["Cognitive Convergence", "cognitive-convergence"], ["Cognitive Development", "cognitive-development"], ["Cognitive Displacement", "cognitive-displacement"], ["Cognitive Load", "cognitive-load"], ["Cognitive Offloading", "cognitive-offloading"], ["Cognitive Offloading and Fatigue", "cognitive-offloading-and-fatigue"], ["Cognitive Processing Research", "cognitive-processing-research"], ["Cognitive Sovereignty", "cognitive-sovereignty"], ["Coherent Light", "coherent-light"], ["Collatz Conjecture", "collatz-conjecture"], ["College Sports Reform", "college-sports-reform"], ["Colony Collapse Disorder", "colony-collapse-disorder"], ["Commercial Infrastructure as Military Target", "commercial-infrastructure-as-military-target"], ["Communication Technology", "communication-technology"], ["Community NDA Requirements", "community-nda-requirements"], ["Compact AI models (Apple)", "compact-ai-models-apple"], ["Companion AI", "companion-ai"], ["Compiler Backdoor", "compiler-backdoor"], ["Complex Systems", "complex-systems"], ["Compliance Checks", "compliance-checks"], ["Compositing", "compositing"], ["Compression Rate", "compression-rate"], ["Computational autocracy", "computational-autocracy"], ["Computational Complexity", "computational-complexity"], ["Computational Economics", "computational-economics"], ["Computational Neuroscience", "computational-neuroscience"], ["Computational Physics", "computational-physics"], ["Computer Graphics", "computer-graphics"], ["Computing Energy Efficiency", "computing-energy-efficiency"], ["Computing Security Fundamentals", "computing-security-fundamentals"], ["Computsciousness", "computsciousness"], ["Configurational Entropy", "configurational-entropy"], ["Confirmation Bias", "confirmation-bias"], ["Consciousness", "consciousness"], ["Consciousness and Technology", "consciousness-and-technology"], ["Consciousness as Analog Process", "consciousness-as-analog-process"], ["Consciousness as Distributed Property", "consciousness-as-distributed-property"], ["Consciousness Detection", "consciousness-detection"], ["Consciousness Hygiene", "consciousness-hygiene"], ["Consciousness Manipulation", "consciousness-manipulation"], ["Consciousness Substrate", "consciousness-substrate"], ["Consciousness Substrate Dependence", "consciousness-substrate-dependence"], ["Consciousness Theory", "consciousness-theory"], ["Consciousness Theory Unification", "consciousness-theory-unification"], ["Constitutional AI", "constitutional-ai"], ["Constitutional AI Development", "constitutional-ai-development"], ["Constitutional Forcing", "constitutional-forcing"], ["Constitutional Forcing (Shannon-Wakil)", "constitutional-forcing-shannon-wakil"], ["Consumer Deceleration", "consumer-deceleration"], ["Consumer Technology Optimization", "consumer-technology-optimization"], ["Content Control", "content-control"], ["Content Delivery Networks", "content-delivery-networks"], ["Context-Augmented Generation (CAG)", "context-augmented-generation-cag"], ["Convergence of Streaming", "convergence-of-streaming"], ["Conversational Interface", "conversational-interface"], ["COO", "coo"], ["Copyright", "copyright"], ["Copyright Lawsuit", "copyright-lawsuit"], ["Copyright Settlement", "copyright-settlement"], ["Corporate AI", "corporate-ai"], ["Corporate AI Governance", "corporate-ai-governance"], ["Corporate Consolidation", "corporate-consolidation"], ["Corporate Culture Insights", "corporate-culture-insights"], ["Corporate Espionage", "corporate-espionage"], ["Corporate Externalization", "corporate-externalization"], ["Corporate Financial Maneuvers", "corporate-financial-maneuvers"], ["Corporate Fraud", "corporate-fraud"], ["Corporate Leadership Strategy", "corporate-leadership-strategy"], ["Corporate Research", "corporate-research"], ["Corporate Responses to AI", "corporate-responses-to-ai"], ["Corporate Security Investment", "corporate-security-investment"], ["Corporate Surveillance", "corporate-surveillance"], ["Correction Deficit", "correction-deficit"], ["Cortical Labs / Biological Intelligence", "cortical-labs-biological-intelligence"], ["Cosmic Discovery", "cosmic-discovery"], ["Cosmological Model", "cosmological-model"], ["Cosmology", "cosmology"], ["Cost Analysis", "cost-analysis"], ["Counter-Surveillance", "counter-surveillance"], ["Counter-Surveillance Apps", "counter-surveillance-apps"], ["Covert Agricultural Operations", "covert-agricultural-operations"], ["Covert Consciousness", "covert-consciousness"], ["Covert Operations", "covert-operations"], ["Cow-Based Wellness", "cow-based-wellness"], ["CPA", "cpa"], ["Creative Consciousness", "creative-consciousness"], ["Creative Entrepreneurship", "creative-entrepreneurship"], ["Creative Fundraising Strategies", "creative-fundraising-strategies"], ["Creative Processes", "creative-processes"], ["Creative Professional Challenges", "creative-professional-challenges"], ["Creativity in the AI Era", "creativity-in-the-ai-era"], ["Critical Thinking Framework", "critical-thinking-framework"], ["Critical Thinking Frameworks", "critical-thinking-frameworks"], ["Cross-Border Resource Management", "cross-border-resource-management"], ["Cryptocurrency", "cryptocurrency"], ["Cryptocurrency Market Volatility", "cryptocurrency-market-volatility"], ["Cryptocurrency Mining", "cryptocurrency-mining"], ["Cryptocurrency Recovery", "cryptocurrency-recovery"], ["Cryptocurrency Regulation", "cryptocurrency-regulation"], ["Cryptographic Algorithms", "cryptographic-algorithms"], ["Cryptography", "cryptography"], ["Cultural Commentary", "cultural-commentary"], ["Cultural Institution Security", "cultural-institution-security"], ["Cultural Justice", "cultural-justice"], ["Cultural Repatriation", "cultural-repatriation"], ["Cultural Stagnation", "cultural-stagnation"], ["Currency Reset", "currency-reset"], ["Custom Porsche Building", "custom-porsche-building"], ["Custom Vehicle Fabrication", "custom-vehicle-fabrication"], ["Cyber Attack Vectors", "cyber-attack-vectors"], ["Cyberattack", "cyberattack"], ["Cybercrime Collaboration", "cybercrime-collaboration"], ["Cybersecurity Advancements", "cybersecurity-advancements"], ["Cybersecurity and AI Viruses", "cybersecurity-and-ai-viruses"], ["Cybersecurity Exploits", "cybersecurity-exploits"], ["Cybersecurity Infrastructure Threats", "cybersecurity-infrastructure-threats"], ["Cybersecurity Infrastructure Vulnerabilities", "cybersecurity-infrastructure-vulnerabilities"], ["D.E.I.", "d-e-i"], ["Dance for Health", "dance-for-health"], ["Darcy's Law", "darcy-s-law"], ["Dark Forest Theory", "dark-forest-theory"], ["Dark Photon", "dark-photon"], ["Dark Photon Theory", "dark-photon-theory"], ["DARPA Research", "darpa-research"], ["Data Breach Analysis", "data-breach-analysis"], ["Data Broker", "data-broker"], ["Data Broker Tactics", "data-broker-tactics"], ["Data Center Investment Caution", "data-center-investment-caution"], ["Data Center Water Management", "data-center-water-management"], ["Data Consent Option", "data-consent-option"], ["Data Democratization", "data-democratization"], ["Data Destruction Systems", "data-destruction-systems"], ["Data Extraction Attacks", "data-extraction-attacks"], ["Data Infrastructure", "data-infrastructure"], ["Data Privacy and Ownership", "data-privacy-and-ownership"], ["Data Privacy Concerns", "data-privacy-concerns"], ["Data Privacy Protection", "data-privacy-protection"], ["Data Privacy Tools", "data-privacy-tools"], ["Data Retention", "data-retention"], ["Data Storage Revolution", "data-storage-revolution"], ["Data-Driven Decisions", "data-driven-decisions"], ["Database", "database"], ["Database Technology Evolution", "database-technology-evolution"], ["Decentralized Credentialing", "decentralized-credentialing"], ["Decentralized Messaging", "decentralized-messaging"], ["Decentralized Validation", "decentralized-validation"], ["Decentralized Web", "decentralized-web"], ["Decision Making with Cognitive Strategies", "decision-making-with-cognitive-strategies"], ["DeepTech", "deeptech"], ["Deferred Complexity", "deferred-complexity"], ["Deferred Understanding", "deferred-understanding"], ["Democratic Systems", "democratic-systems"], ["Demographic Challenges", "demographic-challenges"], ["Demographic Collapse", "demographic-collapse"], ["Deniable Encryption", "deniable-encryption"], ["Dependency Graph", "dependency-graph"], ["Deregulated Wearables", "deregulated-wearables"], ["Desert Solar Sphere Technology", "desert-solar-sphere-technology"], ["DESI", "desi"], ["Desktop Circuit Board Fabrication", "desktop-circuit-board-fabrication"], ["Diamanti System", "diamanti-system"], ["Diamond Battery", "diamond-battery"], ["Diamond Battery Technology", "diamond-battery-technology"], ["Diffusion Models", "diffusion-models"], ["Digital Abundance", "digital-abundance"], ["Digital Blueprints", "digital-blueprints"], ["Digital Censorship", "digital-censorship"], ["Digital Coup", "digital-coup"], ["Digital Economy Dependencies", "digital-economy-dependencies"], ["Digital Economy Structures", "digital-economy-structures"], ["Digital Embroidery Algorithms", "digital-embroidery-algorithms"], ["Digital Ethics Debate", "digital-ethics-debate"], ["Digital Financial Sovereignty", "digital-financial-sovereignty"], ["Digital Immune System", "digital-immune-system"], ["Digital Infrastructure Impact", "digital-infrastructure-impact"], ["Digital Manipulation of Democracy", "digital-manipulation-of-democracy"], ["Digital Marketplace Economics", "digital-marketplace-economics"], ["Digital Minimalism", "digital-minimalism"], ["Digital Precision", "digital-precision"], ["Digital Privacy and Security", "digital-privacy-and-security"], ["Digital Privacy Concerns", "digital-privacy-concerns"], ["Digital Public Domain", "digital-public-domain"], ["Digital Repatriation", "digital-repatriation"], ["Digital Research Vulnerability", "digital-research-vulnerability"], ["Digital Resurrection", "digital-resurrection"], ["Digital Security Threats", "digital-security-threats"], ["Digital Sovereignty", "digital-sovereignty"], ["Digital Twin Technology", "digital-twin-technology"], ["Digital Twins in Water Management", "digital-twins-in-water-management"], ["Disney Animatronics", "disney-animatronics"], ["Dissolving Plastics", "dissolving-plastics"], ["Distributed Manipulation", "distributed-manipulation"], ["DIY Military Technology", "diy-military-technology"], ["DIY Security Tools", "diy-security-tools"], ["DNA Data Storage and Management", "dna-data-storage-and-management"], ["DoD", "dod"], ["DOGE", "doge"], ["Domestic Chip Production", "domestic-chip-production"], ["Dominance Reasoning", "dominance-reasoning"], ["Dominance Reasoning vs. Expected Value (Newcomb, revisited)", "dominance-reasoning-vs-expected-value-newcomb-revisited"], ["Drone AI", "drone-ai"], ["Drone Delivery Services", "drone-delivery-services"], ["Drone Manufacturing", "drone-manufacturing"], ["Drone Navigation", "drone-navigation"], ["Drone Show Technology", "drone-show-technology"], ["Drug Discovery", "drug-discovery"], ["Drug Repurposing", "drug-repurposing"], ["DSM Future Strategic Committee", "dsm-future-strategic-committee"], ["Dual-Use Platform", "dual-use-platform"], ["Due Diligence", "due-diligence"], ["Duress PIN", "duress-pin"], ["Dynamic Range", "dynamic-range"], ["E8 Structure", "e8-structure"], ["EA", "ea"], ["Early Universe Magnetism", "early-universe-magnetism"], ["Earth's Magnetic Field Dynamics", "earth-s-magnetic-field-dynamics"], ["Eco-Friendly Quantum Dots", "eco-friendly-quantum-dots"], ["Ecological Crisis Management", "ecological-crisis-management"], ["Economic Bubble", "economic-bubble"], ["Economic Extraction Systems", "economic-extraction-systems"], ["Economic Inequality", "economic-inequality"], ["Economic Supply Analysis", "economic-supply-analysis"], ["Economic System Fragilities", "economic-system-fragilities"], ["Economic Transitions", "economic-transitions"], ["Ecovillage", "ecovillage"], ["EDA", "eda"], ["Eddy Current Losses", "eddy-current-losses"], ["Education and Diversity", "education-and-diversity"], ["EEG", "eeg"], ["EI", "ei"], ["EI/EQ", "ei-eq"], ["Einstein's Theories Validated", "einstein-s-theories-validated"], ["Electric GT Technology", "electric-gt-technology"], ["Electric Vehicle Market Competition", "electric-vehicle-market-competition"], ["Electromagnetic Substrate", "electromagnetic-substrate"], ["Electron Shower", "electron-shower"], ["Electron Shower Technology", "electron-shower-technology"], ["Elephant Communication", "elephant-communication"], ["Embodied AI", "embodied-ai"], ["Embodied AI Systems", "embodied-ai-systems"], ["Embodied Sound", "embodied-sound"], ["Emergent Structures", "emergent-structures"], ["Emerging Design Trends", "emerging-design-trends"], ["Emotion-Analyzing AI", "emotion-analyzing-ai"], ["Emotional AI Bonding", "emotional-ai-bonding"], ["Emotional Intelligence (EI/EQ)", "emotional-intelligence-ei-eq"], ["Emotional Wellbeing", "emotional-wellbeing"], ["Employee Responsibility", "employee-responsibility"], ["Encryption Double Standards", "encryption-double-standards"], ["Encryption Vulnerability (March 2026)", "encryption-vulnerability-march-2026"], ["Enduring Monogamous Relationships", "enduring-monogamous-relationships"], ["Energy Efficiency Systems", "energy-efficiency-systems"], ["Energy Independence Strategies", "energy-independence-strategies"], ["Energy Optimization", "energy-optimization"], ["Energy Revolution", "energy-revolution"], ["Energy Storage", "energy-storage"], ["Energy Storage Revolution", "energy-storage-revolution"], ["Energy Storage Solutions", "energy-storage-solutions"], ["Energy-Efficient AI Chips", "energy-efficient-ai-chips"], ["Energy-Storage Concrete", "energy-storage-concrete"], ["Enhanced Human Capabilities", "enhanced-human-capabilities"], ["Enhanced Password Security Systems", "enhanced-password-security-systems"], ["ENS", "ens"], ["ENS (Ethereum Name Service)", "ens-ethereum-name-service"], ["Entertainment Evolution", "entertainment-evolution"], ["Entertainment Technology Evolution", "entertainment-technology-evolution"], ["Entrepreneurship", "entrepreneurship"], ["Environmental Health", "environmental-health"], ["Environmental Health Concerns", "environmental-health-concerns"], ["Environmental Impact Assessment", "environmental-impact-assessment"], ["Environmental Microplastics", "environmental-microplastics"], ["Environmental Mismatch", "environmental-mismatch"], ["Environmental Monitoring", "environmental-monitoring"], ["Environmental Repurposing", "environmental-repurposing"], ["Environmental Solutions", "environmental-solutions"], ["Environmental Sustainability", "environmental-sustainability"], ["EPFL", "epfl"], ["Epistemic Misattribution", "epistemic-misattribution"], ["Epistemic Race Condition", "epistemic-race-condition"], ["EQ", "eq"], ["Equivariant Neural Network", "equivariant-neural-network"], ["Equivariant Neural Networks", "equivariant-neural-networks"], ["Error Signal (Neural)", "error-signal-neural"], ["ESP32 Information Displays", "esp32-information-displays"], ["ESP32 Security Protocols", "esp32-security-protocols"], ["ETH", "eth"], ["Ethernet Categories", "ethernet-categories"], ["Ethical Considerations", "ethical-considerations"], ["EU", "eu"], ["EUV Lithography (Extreme Ultraviolet Lithography)", "euv-lithography-extreme-ultraviolet-lithography"], ["EV", "ev"], ["Evolution and Altruism", "evolution-and-altruism"], ["Evolutionary Biology", "evolutionary-biology"], ["Evolutionary Development", "evolutionary-development"], ["Evolutionary Mismatch", "evolutionary-mismatch"], ["Evolutionary Mismatch Analysis", "evolutionary-mismatch-analysis"], ["Evolving Computing Architectures", "evolving-computing-architectures"], ["Evolving Gaming Landscape", "evolving-gaming-landscape"], ["Evolving Physics Laws Theory", "evolving-physics-laws-theory"], ["Excel as a Competitive Platform", "excel-as-a-competitive-platform"], ["Existential Biorisks", "existential-biorisks"], ["Existential Risk", "existential-risk"], ["Expected Value Reasoning", "expected-value-reasoning"], ["Experience Economy", "experience-economy"], ["Extinction Event", "extinction-event"], ["Extraterrestrial Evolution Theory", "extraterrestrial-evolution-theory"], ["Extraterrestrial Origins", "extraterrestrial-origins"], ["Extraversion, Agreeableness, Neuroticism", "extraversion-agreeableness-neuroticism"], ["Fab", "fab"], ["Fab (Fabrication Plant)", "fab-fabrication-plant"], ["Facial Recognition", "facial-recognition"], ["Facial Recognition Systems", "facial-recognition-systems"], ["Fair Use", "fair-use"], ["False Positive Tax", "false-positive-tax"], ["Fast Radio Burst Simulation", "fast-radio-burst-simulation"], ["Femtosecond Communication", "femtosecond-communication"], ["Femtosecond UV Lasers", "femtosecond-uv-lasers"], ["Fermat's Last Theorem", "fermat-s-last-theorem"], ["Fermion", "fermion"], ["FFMPEG", "ffmpeg"], ["Fictional Learning", "fictional-learning"], ["Fifth-Dimension Fermion Portal", "fifth-dimension-fermion-portal"], ["Film Noir", "film-noir"], ["Film Preservation Techniques", "film-preservation-techniques"], ["Fine-tuning", "fine-tuning"], ["Fitness Technology Psychology", "fitness-technology-psychology"], ["Flexible Antenna Arrays", "flexible-antenna-arrays"], ["Flexible Antennas", "flexible-antennas"], ["Follow me on X", "follow-me-on-x"], ["Fons-Rosen, and Graff Zivin (2019) in the American Economic Review", "fons-rosen-and-graff-zivin-2019-in-the-american-economic-review"], ["Forever Chemical", "forever-chemical"], ["Forever Chemical Contamination", "forever-chemical-contamination"], ["Formal Proof Verification", "formal-proof-verification"], ["Formal Theorem Verification (Physics Application)", "formal-theorem-verification-physics-application"], ["Four-Step Playbook", "four-step-playbook"], ["Fourier Transform", "fourier-transform"], ["Fractal Chaos", "fractal-chaos"], ["Frank Lantz", "frank-lantz"], ["Frank Rosenblatt", "frank-rosenblatt"], ["Fraudulent Ad Detection", "fraudulent-ad-detection"], ["Fraudulent Advertising", "fraudulent-advertising"], ["FRB", "frb"], ["Free Will in Neuroscience", "free-will-in-neuroscience"], ["Front Projection", "front-projection"], ["Front Projection Techniques", "front-projection-techniques"], ["Frooble", "frooble"], ["Fuel-Free Satellite Launch", "fuel-free-satellite-launch"], ["Fundamental Force", "fundamental-force"], ["Fundamental Nature of Time", "fundamental-nature-of-time"], ["Fusion Energy Milestone", "fusion-energy-milestone"], ["Future of Computing", "future-of-computing"], ["Future Self Visualization", "future-self-visualization"], ["G-Force", "g-force"], ["Game Engine", "game-engine"], ["Gamification", "gamification"], ["Gamification of Professional Skills", "gamification-of-professional-skills"], ["Gamma / Beta Oscillations (Neuroscience)", "gamma-beta-oscillations-neuroscience"], ["Gen Z", "gen-z"], ["GEN-1 (Physical Intelligence General-Purpose Robotics Model)", "gen-1-physical-intelligence-general-purpose-robotics-model"], ["Gene Editing for Longevity", "gene-editing-for-longevity"], ["Generalist Vision-Language-Action Models", "generalist-vision-language-action-models"], ["Generalized Continued Fractions", "generalized-continued-fractions"], ["Generational Skill Shifts", "generational-skill-shifts"], ["Generative AI Organizational Structures", "generative-ai-organizational-structures"], ["Generative Design", "generative-design"], ["Genetic Privacy", "genetic-privacy"], ["Geomagnetic Anomaly", "geomagnetic-anomaly"], ["Geophysical Monitoring", "geophysical-monitoring"], ["Geopolitical Power Transitions", "geopolitical-power-transitions"], ["Geospatial Backdoor", "geospatial-backdoor"], ["Geospatial Data", "geospatial-data"], ["Geospatial Security Vulnerabilities", "geospatial-security-vulnerabilities"], ["GIF", "gif"], ["GIS", "gis"], ["GIS with dynamic visualizations (Protostar System)", "gis-with-dynamic-visualizations-protostar-system"], ["Glacier Monitoring Systems", "glacier-monitoring-systems"], ["Global Cost Indexing", "global-cost-indexing"], ["Global Finance", "global-finance"], ["Global Internet Access", "global-internet-access"], ["Global Population Assessment", "global-population-assessment"], ["Global Technology Competition", "global-technology-competition"], ["Global Trend Forecasting", "global-trend-forecasting"], ["GLP-1", "glp-1"], ["GLP-1 Receptor Agonists", "glp-1-receptor-agonists"], ["Goal Misgeneralization", "goal-misgeneralization"], ["Goal-Directed Intentionality", "goal-directed-intentionality"], ["Government Spyware", "government-spyware"], ["Government Surveillance Programs", "government-surveillance-programs"], ["GPS-Independent Navigation", "gps-independent-navigation"], ["GPT", "gpt"], ["GPT-4o during deployment", "gpt-4o-during-deployment"], ["Grand Unified Theory", "grand-unified-theory"], ["Grand Unified Theory of Mathematics", "grand-unified-theory-of-mathematics"], ["Graphene Supercapacitors", "graphene-supercapacitors"], ["GrapheneOS", "grapheneos"], ["Gravitational Forces", "gravitational-forces"], ["Green Concrete Revolution", "green-concrete-revolution"], ["Group Theory", "group-theory"], ["GRU", "gru"], ["GSB", "gsb"], ["GT", "gt"], ["Gunn Diode", "gunn-diode"], ["Gödel's Incompleteness Theorems", "g-del-s-incompleteness-theorems"], ["Hair-Thin Semiconductor Fibers", "hair-thin-semiconductor-fibers"], ["Hamilton's Rule", "hamilton-s-rule"], ["Handheld X-Ray Devices", "handheld-x-ray-devices"], ["Handwriting Cognitive Benefits", "handwriting-cognitive-benefits"], ["Handwriting vs. Digital Writing", "handwriting-vs-digital-writing"], ["Happy Accidents", "happy-accidents"], ["Hardware Quick Erase", "hardware-quick-erase"], ["Harvest-Now, Decrypt-Later", "harvest-now-decrypt-later"], ["Hash Table Optimization", "hash-table-optimization"], ["Hash Tables", "hash-tables"], ["HBM", "hbm"], ["HBO", "hbo"], ["Heads-up display", "heads-up-display"], ["Heads-up Display (HUD)", "heads-up-display-hud"], ["Health Monitoring", "health-monitoring"], ["Health Optimization", "health-optimization"], ["Heat Wave Energy Capture", "heat-wave-energy-capture"], ["HelioSkin Solar Technology", "helioskin-solar-technology"], ["Helix AI Model", "helix-ai-model"], ["Hidden Complexity", "hidden-complexity"], ["Hidden Dependencies", "hidden-dependencies"], ["High-NA Lithography", "high-na-lithography"], ["High-Speed Data Transmission", "high-speed-data-transmission"], ["Historic Preservation", "historic-preservation"], ["Historical Computer Graphics", "historical-computer-graphics"], ["Historical Discovery", "historical-discovery"], ["Historical Economic Analysis", "historical-economic-analysis"], ["Historical Recognition", "historical-recognition"], ["Historical Text Analysis", "historical-text-analysis"], ["Hive-Mind AI", "hive-mind-ai"], ["Holographic Capture", "holographic-capture"], ["Holographic Capture Technology", "holographic-capture-technology"], ["Holographic Smartphones", "holographic-smartphones"], ["Holographic Telepresence", "holographic-telepresence"], ["Honeybee Colony Management", "honeybee-colony-management"], ["Housing Market Disruption", "housing-market-disruption"], ["HP", "hp"], ["HR", "hr"], ["HUD", "hud"], ["Human Cognitive Potential", "human-cognitive-potential"], ["Human Irreplaceability", "human-irreplaceability"], ["Human-AI Relationship", "human-ai-relationship"], ["Human-Level AI Systems", "human-level-ai-systems"], ["Human-Level Intelligence", "human-level-intelligence"], ["Humanoid Robot", "humanoid-robot"], ["Hybrid Drone Technology", "hybrid-drone-technology"], ["Hydraulic Technology", "hydraulic-technology"], ["Hypersonic Aircraft Design", "hypersonic-aircraft-design"], ["Hypersonic Commercial Flight", "hypersonic-commercial-flight"], ["Hypnagogic State", "hypnagogic-state"], ["ICC", "icc"], ["ICO", "ico"], ["IDE", "ide"], ["Ideal Glass", "ideal-glass"], ["iDrive", "idrive"], ["IEEE", "ieee"], ["IGP", "igp"], ["ILM", "ilm"], ["Imaginary World Learning", "imaginary-world-learning"], ["Imaging Innovation", "imaging-innovation"], ["Imaging Technology", "imaging-technology"], ["Immersive Experience", "immersive-experience"], ["Immersive Experience Design", "immersive-experience-design"], ["Immersive Experience Events", "immersive-experience-events"], ["Immersive Sphere Technology", "immersive-sphere-technology"], ["Immigration System Flaws", "immigration-system-flaws"], ["Impact of AI on Employment", "impact-of-ai-on-employment"], ["Impact of AI on Entertainment Industry", "impact-of-ai-on-entertainment-industry"], ["Income Distribution", "income-distribution"], ["Income Distribution Visualization", "income-distribution-visualization"], ["Independent Technology Development", "independent-technology-development"], ["Information Security", "information-security"], ["Information Theory Advancements", "information-theory-advancements"], ["Infrared Surveillance Imaging", "infrared-surveillance-imaging"], ["Infrasound", "infrasound"], ["Infrastructure as Law", "infrastructure-as-law"], ["Infrastructure Bubble", "infrastructure-bubble"], ["Infrastructure Challenges", "infrastructure-challenges"], ["Infrastructure Inscription", "infrastructure-inscription"], ["Infrastructure Vulnerabilities", "infrastructure-vulnerabilities"], ["Inheritance Dissolution", "inheritance-dissolution"], ["Innovation Barriers", "innovation-barriers"], ["Innovation Model", "innovation-model"], ["Innovative Filmmaking Techniques", "innovative-filmmaking-techniques"], ["Institutional Lock-In", "institutional-lock-in"], ["Integrated Antenna Design", "integrated-antenna-design"], ["Integrated Graphene Photonics (Black Semiconductor IGP™)", "integrated-graphene-photonics-black-semiconductor-igp"], ["Integration Framework", "integration-framework"], ["Intellectual Property and Public Domain", "intellectual-property-and-public-domain"], ["Intelligence Manifold", "intelligence-manifold"], ["Intelligence Research", "intelligence-research"], ["Intelligence-Wisdom Distinction", "intelligence-wisdom-distinction"], ["Interdisciplinary Studies", "interdisciplinary-studies"], ["International Relations", "international-relations"], ["International Tech Expansion", "international-tech-expansion"], ["Internet Architecture", "internet-architecture"], ["Internet Control Systems", "internet-control-systems"], ["Internet Infrastructure", "internet-infrastructure"], ["Interoception", "interoception"], ["Interoception Mapping", "interoception-mapping"], ["Interstellar Medium", "interstellar-medium"], ["IntuiCell", "intuicell"], ["Invisible Surveillance", "invisible-surveillance"], ["iOS", "ios"], ["IoT-Specific Silicon", "iot-specific-silicon"], ["IP", "ip"], ["IP Licensing Model", "ip-licensing-model"], ["Ironwood TPU", "ironwood-tpu"], ["IT", "it"], ["JBS", "jbs"], ["JPEG", "jpeg"], ["JWST", "jwst"], ["KadNap Botnet", "kadnap-botnet"], ["Keyboard-Computer Hybrids", "keyboard-computer-hybrids"], ["Khinchin's Constant", "khinchin-s-constant"], ["Knowledge Models", "knowledge-models"], ["Knowledge Transfer", "knowledge-transfer"], ["KV Cache", "kv-cache"], ["L-Functions (Number Theory)", "l-functions-number-theory"], ["L.A.", "l-a"], ["Lab-Grown Neural Tissue", "lab-grown-neural-tissue"], ["Lab-Grown Neurons", "lab-grown-neurons"], ["Lakehouse Architecture", "lakehouse-architecture"], ["Land Ownership Concentration", "land-ownership-concentration"], ["Landmark AI Copyright Case", "landmark-ai-copyright-case"], ["Language Model Scaling", "language-model-scaling"], ["Language-Cognition Relationship", "language-cognition-relationship"], ["Large Animatable Human Reconstruction", "large-animatable-human-reconstruction"], ["Large-Scale Agricultural Systems", "large-scale-agricultural-systems"], ["Laser Interferometry", "laser-interferometry"], ["Laser Power Beaming", "laser-power-beaming"], ["Latest Edition", "latest-edition"], ["Layer-wise scaling strategy", "layer-wise-scaling-strategy"], ["LCGE", "lcge"], ["Lead Generation", "lead-generation"], ["Learning Patterns", "learning-patterns"], ["LED Technology", "led-technology"], ["Legal AI Hallucination Consequences", "legal-ai-hallucination-consequences"], ["Legal Automation", "legal-automation"], ["Level 4 Automation", "level-4-automation"], ["LHC", "lhc"], ["LHM", "lhm"], ["Li-Fi", "li-fi"], ["Li-Fi Technology", "li-fi-technology"], ["LiDAR", "lidar"], ["Lidar Data", "lidar-data"], ["LiFi", "lifi"], ["LiFi Systems", "lifi-systems"], ["Light Extraction Efficiency", "light-extraction-efficiency"], ["Light Speed Visualization", "light-speed-visualization"], ["Light Vortex", "light-vortex"], ["Light Vortex Metasurfaces", "light-vortex-metasurfaces"], ["Light-Based Computing", "light-based-computing"], ["Light-Speed Analog Computing", "light-speed-analog-computing"], ["Liquid-Filled 3D Printing", "liquid-filled-3d-printing"], ["Liquid-Filled Filament", "liquid-filled-filament"], ["LLM (Large Language Model)", "llm-large-language-model"], ["LLM Self-Repair Architectures", "llm-self-repair-architectures"], ["Load-Bearing Attribution", "load-bearing-attribution"], ["Local Minimum Energy State", "local-minimum-energy-state"], ["Long-Duration Surveillance", "long-duration-surveillance"], ["Long-Term Intelligence Studies", "long-term-intelligence-studies"], ["Long-term Technology Impact", "long-term-technology-impact"], ["Longevity Research", "longevity-research"], ["Longitudinal Health Studies", "longitudinal-health-studies"], ["M1", "m1"], ["M1 Architecture", "m1-architecture"], ["Machine Learning for Archaeology", "machine-learning-for-archaeology"], ["Machine Learning Translation", "machine-learning-translation"], ["Macroscopic Quantum Effects", "macroscopic-quantum-effects"], ["Macroscopic Quantum Tunneling", "macroscopic-quantum-tunneling"], ["Made-in-America as Reputational Liability", "made-in-america-as-reputational-liability"], ["Magician Archetype", "magician-archetype"], ["Magnetar Magnetosphere", "magnetar-magnetosphere"], ["Magnetic Camera Systems", "magnetic-camera-systems"], ["Magnetic Cooling", "magnetic-cooling"], ["Magnetic Cooling Technology", "magnetic-cooling-technology"], ["Magnetic Field Reversal", "magnetic-field-reversal"], ["Magnetic Induction Wireless (Ground-Penetrating Communications)", "magnetic-induction-wireless-ground-penetrating-communications"], ["Magnetic Molecule Storage", "magnetic-molecule-storage"], ["Magnetic Phenomenon Discovery", "magnetic-phenomenon-discovery"], ["MagSafe", "magsafe"], ["Mainstream Blockchain Adoption", "mainstream-blockchain-adoption"], ["Maker Community Innovations", "maker-community-innovations"], ["Maker Culture", "maker-culture"], ["Maker Festival", "maker-festival"], ["Manifold", "manifold"], ["Manipulation Economics", "manipulation-economics"], ["Manipulation Surface", "manipulation-surface"], ["Manufacturing", "manufacturing"], ["Manufacturing and Trade Policies", "manufacturing-and-trade-policies"], ["Manufacturing Automation", "manufacturing-automation"], ["Manufacturing Innovation Framework", "manufacturing-innovation-framework"], ["Manufacturing Renaissance", "manufacturing-renaissance"], ["Manufacturing Revolution", "manufacturing-revolution"], ["Manufacturing Social Media", "manufacturing-social-media"], ["Margin for Error", "margin-for-error"], ["Massive Data Centers", "massive-data-centers"], ["Material Science Innovation", "material-science-innovation"], ["Mathematical AI Capabilities", "mathematical-ai-capabilities"], ["Mathematical Breakthrough", "mathematical-breakthrough"], ["Mathematical Breakthroughs", "mathematical-breakthroughs"], ["Mathematical Computation", "mathematical-computation"], ["Mathematical Conjecture", "mathematical-conjecture"], ["Mathematical Foundations Under AI", "mathematical-foundations-under-ai"], ["Mathematical Incompleteness", "mathematical-incompleteness"], ["Mathematical Infinity", "mathematical-infinity"], ["Mathematical Innovation", "mathematical-innovation"], ["Mathematical Manifolds", "mathematical-manifolds"], ["Mathematical Modeling of Time", "mathematical-modeling-of-time"], ["Mathematical Pattern Discovery", "mathematical-pattern-discovery"], ["Mathematical Physics", "mathematical-physics"], ["Mathematical Reality Description", "mathematical-reality-description"], ["Mathematical Theory", "mathematical-theory"], ["Mathematical Tool Evolution", "mathematical-tool-evolution"], ["Mathematical Topology Advances", "mathematical-topology-advances"], ["Mathematical Tuning Systems", "mathematical-tuning-systems"], ["MBA", "mba"], ["MBTI", "mbti"], ["McCulloch & Pitts", "mcculloch-and-pitts"], ["Mechanical Orbital Deployment", "mechanical-orbital-deployment"], ["Mechanical Sports", "mechanical-sports"], ["Media and Government", "media-and-government"], ["Media Authenticity", "media-authenticity"], ["Media Evolution", "media-evolution"], ["Media Filters", "media-filters"], ["Media Industry Transformation", "media-industry-transformation"], ["Media Manipulation Mechanisms", "media-manipulation-mechanisms"], ["Medical Microrobots", "medical-microrobots"], ["Medical Nanotechnology", "medical-nanotechnology"], ["Medical Technology", "medical-technology"], ["Megatsunami", "megatsunami"], ["Meme Coins", "meme-coins"], ["Meme Coins in Cryptocurrency", "meme-coins-in-cryptocurrency"], ["Memorization Crisis", "memorization-crisis"], ["Memory Encryption", "memory-encryption"], ["Memory Formation", "memory-formation"], ["Memory Storage Revision", "memory-storage-revision"], ["Memory Theory", "memory-theory"], ["Memristor", "memristor"], ["Mental Health Monitoring", "mental-health-monitoring"], ["Mental Health Research", "mental-health-research"], ["Mental Health Technology", "mental-health-technology"], ["Merkle Tree", "merkle-tree"], ["Merkle Tree Certificates", "merkle-tree-certificates"], ["Mesh Network", "mesh-network"], ["MeshCore", "meshcore"], ["Metadata", "metadata"], ["Metadata Extraction", "metadata-extraction"], ["Metadata Threat", "metadata-threat"], ["Metal-Organic Frameworks (MOFs)", "metal-organic-frameworks-mofs"], ["Metamathematics", "metamathematics"], ["Metasurface", "metasurface"], ["Methane-Reducing Cattle", "methane-reducing-cattle"], ["Michael Pollan", "michael-pollan"], ["Micro-Brain Sensors", "micro-brain-sensors"], ["Micro-Manipulator", "micro-manipulator"], ["Microchip", "microchip"], ["Microplastic Detection", "microplastic-detection"], ["Microplastic Detection Systems", "microplastic-detection-systems"], ["Microplastic Particles", "microplastic-particles"], ["Microplastic Precipitation", "microplastic-precipitation"], ["Microrobot Navigation", "microrobot-navigation"], ["Microscale Military Technology", "microscale-military-technology"], ["Microscopic Robotics", "microscopic-robotics"], ["Microsoft AI Data Centers", "microsoft-ai-data-centers"], ["Microsoft's WHAM Model", "microsoft-s-wham-model"], ["Microstructure Sensor", "microstructure-sensor"], ["Microwave Brain Chip", "microwave-brain-chip"], ["Middleware", "middleware"], ["Middleware Control Program (MCP)", "middleware-control-program-mcp"], ["Middleware Technology Challenges", "middleware-technology-challenges"], ["Military Satellite Networks", "military-satellite-networks"], ["Military Technology", "military-technology"], ["Military Technology Advancements", "military-technology-advancements"], ["Millennium Prize Problems", "millennium-prize-problems"], ["Millimeter-Scale Navigation", "millimeter-scale-navigation"], ["Miniature RC Car Filmmaking", "miniature-rc-car-filmmaking"], ["Miniaturized Computing", "miniaturized-computing"], ["Miniaturized Quantum Random Number Generators", "miniaturized-quantum-random-number-generators"], ["Minimalist Electric Vehicles", "minimalist-electric-vehicles"], ["MIRI", "miri"], ["Mirror Cells", "mirror-cells"], ["Mirror-Molecule Synthesis", "mirror-molecule-synthesis"], ["Mixed Reality", "mixed-reality"], ["ML", "ml"], ["MLS", "mls"], ["Mobile Data Center", "mobile-data-center"], ["Mobile Data Centers", "mobile-data-centers"], ["Modern Alchemy", "modern-alchemy"], ["Modernist Architecture", "modernist-architecture"], ["MOF", "mof"], ["MoJ", "moj"], ["Molecular Memory", "molecular-memory"], ["Molten Salt Reactor", "molten-salt-reactor"], ["Moncrieff et al. (2022)", "moncrieff-et-al-2022"], ["MRI", "mri"], ["Multi-Cloud", "multi-cloud"], ["Multi-Cloud Security", "multi-cloud-security"], ["Multi-Core Fiber", "multi-core-fiber"], ["Multi-Function Test Equipment", "multi-function-test-equipment"], ["Multi-Sensory Enhancement", "multi-sensory-enhancement"], ["Multimaterial 3D Printing", "multimaterial-3d-printing"], ["Multimodal", "multimodal"], ["Muon Tomography", "muon-tomography"], ["MWh", "mwh"], ["Myelin Sheaths", "myelin-sheaths"], ["Mystery as Normal", "mystery-as-normal"], ["Möbius Strip", "m-bius-strip"], ["Möbius Strip Mathematics", "m-bius-strip-mathematics"], ["NA", "na"], ["Nano-scale 3D Printing", "nano-scale-3d-printing"], ["Nanobot Swarm Medicine", "nanobot-swarm-medicine"], ["Nanocluster Computing", "nanocluster-computing"], ["Nanogauss", "nanogauss"], ["Nanometer Process", "nanometer-process"], ["Nanoparticle", "nanoparticle"], ["Nate Soares", "nate-soares"], ["National Cybersecurity", "national-cybersecurity"], ["National Quantum Mission (NQM)", "national-quantum-mission-nqm"], ["National Security", "national-security"], ["Natural Disasters", "natural-disasters"], ["Natural Language Processing (NLP)", "natural-language-processing-nlp"], ["Navier-Stokes Equations", "navier-stokes-equations"], ["NBA", "nba"], ["NBA's LED Glass Court", "nba-s-led-glass-court"], ["NDA", "nda"], ["Near-Infrared Light", "near-infrared-light"], ["NEO AI NPCs (Non-Player Characters)", "neo-ai-npcs-non-player-characters"], ["NEOM", "neom"], ["Netflix House", "netflix-house"], ["Network Evasion", "network-evasion"], ["Network Security Tools", "network-security-tools"], ["Network Theory", "network-theory"], ["Network-Based Wave Analysis", "network-based-wave-analysis"], ["Neural Bookmarking", "neural-bookmarking"], ["Neural Burnout", "neural-burnout"], ["Neural Computing", "neural-computing"], ["Neural Consciousness Research", "neural-consciousness-research"], ["Neural Engine", "neural-engine"], ["Neural Engine Chip Design", "neural-engine-chip-design"], ["Neural Entropy", "neural-entropy"], ["Neural Integration", "neural-integration"], ["Neural Intelligence", "neural-intelligence"], ["Neural Interface", "neural-interface"], ["Neural Interface Technology", "neural-interface-technology"], ["Neural Mapping", "neural-mapping"], ["Neural Modeling", "neural-modeling"], ["Neural Network", "neural-network"], ["Neural Oscillations", "neural-oscillations"], ["Neural Pattern Analysis", "neural-pattern-analysis"], ["Neural Pattern Formation", "neural-pattern-formation"], ["Neural Patterns", "neural-patterns"], ["Neural Representation", "neural-representation"], ["Neural Signatures", "neural-signatures"], ["Neural Simulation", "neural-simulation"], ["Neural Substrate", "neural-substrate"], ["Neural Surveillance", "neural-surveillance"], ["Neural Warfare Technology", "neural-warfare-technology"], ["Neural-AI Learning Parallels", "neural-ai-learning-parallels"], ["Neuralink's First Human Trial", "neuralink-s-first-human-trial"], ["Neurobiology of Love and Bonding", "neurobiology-of-love-and-bonding"], ["Neurodiversity", "neurodiversity"], ["Neurodiversity in Innovation", "neurodiversity-in-innovation"], ["Neurodiversity in Technology and Innovation", "neurodiversity-in-technology-and-innovation"], ["Neurogenesis Research", "neurogenesis-research"], ["Neuromorphic Computing Breakthrough", "neuromorphic-computing-breakthrough"], ["Neuroscience and Technology", "neuroscience-and-technology"], ["Neuroscience Consciousness Research", "neuroscience-consciousness-research"], ["Neuroscience Modeling", "neuroscience-modeling"], ["Neuroscience of Memory", "neuroscience-of-memory"], ["Neuroscience Security", "neuroscience-security"], ["Neuroscience-Military Convergence", "neuroscience-military-convergence"], ["Neurotechnology", "neurotechnology"], ["Neurotechnology Weapons", "neurotechnology-weapons"], ["Neutron Star", "neutron-star"], ["New.email Platform", "new-email-platform"], ["Newcomb's Decision Theory Fault Line", "newcomb-s-decision-theory-fault-line"], ["Newcomb's Paradox", "newcomb-s-paradox"], ["Newton's Laws Reexamined", "newton-s-laws-reexamined"], ["Next Word Prediction", "next-word-prediction"], ["Next-Gen Email Design", "next-gen-email-design"], ["Next-Gen Satellite Internet", "next-gen-satellite-internet"], ["Next-Generation GIS (Protostar)", "next-generation-gis-protostar"], ["NFDG", "nfdg"], ["NFL", "nfl"], ["NFT", "nft"], ["NGO", "ngo"], ["NHS", "nhs"], ["Nikolai Brusentsov", "nikolai-brusentsov"], ["Noether's Theorems (1918)", "noether-s-theorems-1918"], ["Non-Destructive Workflow", "non-destructive-workflow"], ["Non-Epistemic Function", "non-epistemic-function"], ["Non-invasive Analysis", "non-invasive-analysis"], ["Non-verbal Communication", "non-verbal-communication"], ["Non-Zero Thinking", "non-zero-thinking"], ["Non-Zero Thinking Applications", "non-zero-thinking-applications"], ["Not correlated", "not-correlated"], ["NOT Doing Lists", "not-doing-lists"], ["NPC", "npc"], ["NQM", "nqm"], ["NSF", "nsf"], ["NSF Organizational Restructuring", "nsf-organizational-restructuring"], ["Ocean Battery Storage", "ocean-battery-storage"], ["On-Device Processing in AI", "on-device-processing-in-ai"], ["OPD", "opd"], ["Open Collaboration vs. National Champions in Quantum", "open-collaboration-vs-national-champions-in-quantum"], ["Open Source", "open-source"], ["Open Source AI", "open-source-ai-2"], ["Open-Source AI Democratization", "open-source-ai-democratization"], ["Open-Source AI Framework", "open-source-ai-framework"], ["Open-Source AI Research", "open-source-ai-research"], ["Open-Source Framework", "open-source-framework"], ["OpenAI", "openai"], ["Operation Mockingbird", "operation-mockingbird"], ["Optical Computing", "optical-computing"], ["Optimization", "optimization"], ["Optoelectronics", "optoelectronics"], ["Orbital Altitude", "orbital-altitude"], ["Orbital Data Center", "orbital-data-center"], ["Orbital Data Center Physics", "orbital-data-center-physics"], ["Orbital Resource Competition", "orbital-resource-competition"], ["Organizational Adaptation to AI", "organizational-adaptation-to-ai"], ["Organizational AI Adoption", "organizational-ai-adoption"], ["Organizational Transformation", "organizational-transformation"], ["Outdoor Exploration for Children", "outdoor-exploration-for-children"], ["Paradigm Brittleness", "paradigm-brittleness"], ["Paradigm Shift", "paradigm-shift"], ["Paradigm Vulnerability", "paradigm-vulnerability"], ["Paradox-Free Time Travel", "paradox-free-time-travel"], ["Parasitic Brain Infections", "parasitic-brain-infections"], ["Particle Accelerator", "particle-accelerator"], ["Particle Physics", "particle-physics"], ["Particle Physics Detection", "particle-physics-detection"], ["Particle Transmutation", "particle-transmutation"], ["Partiful", "partiful"], ["Pascal's Triangle / Khayyam's Triangle / Yang Hui's Triangle (200 BCE", "pascal-s-triangle-khayyam-s-triangle-yang-hui-s-triangle-200-bce"], ["Passive Design", "passive-design"], ["Passive Design Techniques", "passive-design-techniques"], ["Passport Biometric Security", "passport-biometric-security"], ["Password Manager Vulnerabilities", "password-manager-vulnerabilities"], ["Patent Controversies", "patent-controversies"], ["Patent Infringement", "patent-infringement"], ["Patent Politics", "patent-politics"], ["Pattern Recognition", "pattern-recognition"], ["PCB (Printed Circuit Board)", "pcb-printed-circuit-board"], ["Permanent Wear Smartwatches", "permanent-wear-smartwatches"], ["Personal Health Language Models", "personal-health-language-models"], ["Personalization and Customization through 3D Printing and AI", "personalization-and-customization-through-3d-printing-and-ai"], ["Personalized AI Assistants", "personalized-ai-assistants"], ["Petabit", "petabit"], ["Petz Map", "petz-map"], ["Photonic AI Chips", "photonic-ai-chips"], ["Photonic Communication", "photonic-communication"], ["Photonic Systems", "photonic-systems"], ["Photonics Fabrication", "photonics-fabrication"], ["Photonics Production Horizon", "photonics-production-horizon"], ["Photovoltaic Skin", "photovoltaic-skin"], ["Photovoltaic Technology", "photovoltaic-technology"], ["Physical AI (Autonomous Agricultural Robotics)", "physical-ai-autonomous-agricultural-robotics"], ["Physical AI Applications", "physical-ai-applications"], ["Physical AI Systems", "physical-ai-systems"], ["Physical Robot Intelligence", "physical-robot-intelligence"], ["Physics Challenges", "physics-challenges"], ["Physics Fundamentals", "physics-fundamentals"], ["Physics Revolution", "physics-revolution"], ["Physics Theory", "physics-theory"], ["Physics-Informed Learning", "physics-informed-learning"], ["Pi", "pi"], ["PIF", "pif"], ["PIN", "pin"], ["Pine's Demon", "pine-s-demon"], ["Pine's Demon Particle", "pine-s-demon-particle"], ["Pipeline Infrastructure", "pipeline-infrastructure"], ["PIX", "pix"], ["PIX Digital Payment System", "pix-digital-payment-system"], ["Planck's Principle", "planck-s-principle"], ["Planetary Science", "planetary-science"], ["Plasma Acceleration", "plasma-acceleration"], ["Plasmon", "plasmon"], ["Player Archetype Clustering", "player-archetype-clustering"], ["Plotinus", "plotinus"], ["Political Technology", "political-technology"], ["Post-Quantum Cryptography (PQC)", "post-quantum-cryptography-pqc"], ["POV – Point of View", "pov-point-of-view"], ["Pre-Suasion Architecture", "pre-suasion-architecture"], ["Precession of Primes", "precession-of-primes"], ["Precision Neural Teaching Signals", "precision-neural-teaching-signals"], ["Precrime Ethics", "precrime-ethics"], ["Prediction Market", "prediction-market"], ["Prediction Market Epistemology", "prediction-market-epistemology"], ["Prediction Market Infrastructure", "prediction-market-infrastructure"], ["Prediction Market Manipulation", "prediction-market-manipulation"], ["Predictive Crime Modeling", "predictive-crime-modeling"], ["Predictive Maintenance", "predictive-maintenance"], ["Predictive Policing", "predictive-policing"], ["Previous Edition", "previous-edition"], ["Prime Number Analysis", "prime-number-analysis"], ["Prime Number Pattern", "prime-number-pattern"], ["Prime Number Patterns", "prime-number-patterns"], ["Prime Number Sequence", "prime-number-sequence"], ["Prime Number Theory", "prime-number-theory"], ["Primordial Stars", "primordial-stars"], ["Privacy and Security", "privacy-and-security"], ["Privacy and Surveillance", "privacy-and-surveillance"], ["Privacy Breaches", "privacy-breaches"], ["Privacy Erosion Tracking", "privacy-erosion-tracking"], ["Privacy Evolution", "privacy-evolution"], ["Privacy Surveillance Balance", "privacy-surveillance-balance-2"], ["Privacy vs. Convenience", "privacy-vs-convenience"], ["Privacy vs. Convenience Trade-offs", "privacy-vs-convenience-trade-offs"], ["Privacy Vulnerability", "privacy-vulnerability"], ["Privacy-Surveillance Balance", "privacy-surveillance-balance"], ["Private Label Brand", "private-label-brand"], ["Private Ownership of Gaming Companies", "private-ownership-of-gaming-companies"], ["Private Space Station Development", "private-space-station-development"], ["Procedural Rigs", "procedural-rigs"], ["Product Design Simulation", "product-design-simulation"], ["Product Innovation", "product-innovation"], ["Product-Market Fit", "product-market-fit"], ["Programmable Living Materials", "programmable-living-materials"], ["Programmable Metamaterial Sequencing", "programmable-metamaterial-sequencing"], ["Project Prometheus", "project-prometheus"], ["PromeAI", "promeai"], ["Proprietary Technology", "proprietary-technology"], ["Psychographic Targeting", "psychographic-targeting"], ["Psychopathy Neuroscience", "psychopathy-neuroscience"], ["Public Domain", "public-domain"], ["Pure Mathematics", "pure-mathematics"], ["Pyramid Greenhouse Design", "pyramid-greenhouse-design"], ["Quadruped", "quadruped"], ["Quadruped Robots", "quadruped-robots"], ["Quantum Bayes' Theorem", "quantum-bayes-theorem"], ["Quantum Biology Principles", "quantum-biology-principles"], ["Quantum Communication", "quantum-communication"], ["Quantum Computing Applications", "quantum-computing-applications"], ["Quantum Computing Breakthroughs", "quantum-computing-breakthroughs"], ["Quantum Computing Facilities", "quantum-computing-facilities"], ["Quantum Computing Risks", "quantum-computing-risks"], ["Quantum Cryptographic Timeline Compression", "quantum-cryptographic-timeline-compression"], ["Quantum Cryptography Networks", "quantum-cryptography-networks"], ["Quantum Detection", "quantum-detection"], ["Quantum Detection Systems", "quantum-detection-systems"], ["Quantum Dots", "quantum-dots"], ["Quantum Entanglement Measurement", "quantum-entanglement-measurement"], ["Quantum Fidelity", "quantum-fidelity"], ["Quantum Interference", "quantum-interference"], ["Quantum Machine Learning", "quantum-machine-learning"], ["Quantum Magnetism Research", "quantum-magnetism-research"], ["Quantum Material Properties", "quantum-material-properties"], ["Quantum mechanics", "quantum-mechanics"], ["Quantum Photon Transmission", "quantum-photon-transmission"], ["Quantum Physics Models", "quantum-physics-models"], ["Quantum Physics Visualization", "quantum-physics-visualization"], ["Quantum Random Number Generator", "quantum-random-number-generator"], ["Quantum Sensor Microscopy", "quantum-sensor-microscopy"], ["Quantum Sensors", "quantum-sensors"], ["Quantum Superconductor Research", "quantum-superconductor-research"], ["Quantum Systems", "quantum-systems"], ["Quantum Teleportation", "quantum-teleportation"], ["Quantum Tunneling", "quantum-tunneling"], ["Quantum Tunneling Applications", "quantum-tunneling-applications"], ["Quantum Universe Simulation", "quantum-universe-simulation"], ["Quantum Video Protection", "quantum-video-protection"], ["Quantum Video Scrambling", "quantum-video-scrambling"], ["Quantum-AI Hybrid Chips", "quantum-ai-hybrid-chips"], ["Quantum-Centric Supercomputing", "quantum-centric-supercomputing"], ["Quantum-Powered Pi Calculation", "quantum-powered-pi-calculation"], ["Quantum-Resistant Cryptography", "quantum-resistant-cryptography"], ["Quantum-Resistant Encryption", "quantum-resistant-encryption"], ["Qubit", "qubit"], ["R&D", "r-and-d"], ["Radio Astronomy Detection", "radio-astronomy-detection"], ["Radio Drama", "radio-drama"], ["Radio Pulse", "radio-pulse"], ["RAISE", "raise"], ["Ranking Resumes", "ranking-resumes"], ["Ransomware", "ransomware"], ["Rapid PCB Prototyping", "rapid-pcb-prototyping"], ["Raspberry Pi", "raspberry-pi"], ["Raspberry Pi Privacy Solutions", "raspberry-pi-privacy-solutions"], ["React2Shell", "react2shell"], ["Real Number Formulation", "real-number-formulation"], ["Real Number Quantum Mechanics", "real-number-quantum-mechanics"], ["Reality Simulation Questions", "reality-simulation-questions"], ["Rebranding", "rebranding"], ["Red Teaming", "red-teaming"], ["Redundancy Elimination", "redundancy-elimination"], ["Regulatory Capture", "regulatory-capture"], ["Regulatory Environment in Tech Expansion", "regulatory-environment-in-tech-expansion"], ["Reindustrialization", "reindustrialization"], ["Reinforcement Learning", "reinforcement-learning"], ["Reinforcement Learning vs. Large Language Models", "reinforcement-learning-vs-large-language-models"], ["REM", "rem"], ["Renewable Energy Systems", "renewable-energy-systems"], ["Renewable Resource Management Simulations", "renewable-resource-management-simulations"], ["Research Commercialization", "research-commercialization"], ["Resource Management Simulation", "resource-management-simulation"], ["Responsibility Evolution", "responsibility-evolution"], ["Retail Technology", "retail-technology"], ["Retargeting Advertising", "retargeting-advertising"], ["Retirement Security", "retirement-security"], ["Retrieval-Augmented Generation (RAG)", "retrieval-augmented-generation-rag"], ["Reverse Mathematics", "reverse-mathematics"], ["RF Filter Innovation", "rf-filter-innovation"], ["RF Jamming", "rf-jamming"], ["RFID", "rfid"], ["RFID Skimming", "rfid-skimming"], ["RIP", "rip"], ["RISC", "risc"], ["RISC-V Architecture", "risc-v-architecture"], ["RISC-V Laptops", "risc-v-laptops"], ["RLAIF", "rlaif"], ["RLHF Systems", "rlhf-systems"], ["Robot Arm Algorithm", "robot-arm-algorithm"], ["Robot Arm Control", "robot-arm-control"], ["Robot Combat Protocols", "robot-combat-protocols"], ["Robot Combat Systems", "robot-combat-systems"], ["Robot Swarm", "robot-swarm"], ["Robot Swarm Control", "robot-swarm-control"], ["Robotic Farming Solutions", "robotic-farming-solutions"], ["Robotic Intelligence", "robotic-intelligence"], ["Robotic Pop Star Reveal", "robotic-pop-star-reveal"], ["Robotics Control", "robotics-control"], ["Rogue AI Agent Behavior", "rogue-ai-agent-behavior"], ["Room-Temperature Quantum Sensing", "room-temperature-quantum-sensing"], ["RPG (Role-Playing Game)", "rpg-role-playing-game"], ["RSA", "rsa"], ["RU1", "ru1"], ["SAA", "saa"], ["SaaS Business Models", "saas-business-models"], ["Satellite Altitude Conflict Maneuvers", "satellite-altitude-conflict-maneuvers"], ["Satellite Communication Interference", "satellite-communication-interference"], ["Satellite Internet", "satellite-internet"], ["Satellite Tracking Systems", "satellite-tracking-systems"], ["Schumann Resonance", "schumann-resonance"], ["Scientific Breakthroughs", "scientific-breakthroughs"], ["Scientific Funding Policies", "scientific-funding-policies"], ["Scientific Integrity Under Automation", "scientific-integrity-under-automation"], ["Scientific Methodology", "scientific-methodology"], ["Scientific Reversals", "scientific-reversals"], ["Seasonal Monitoring Systems", "seasonal-monitoring-systems"], ["SEC", "sec"], ["Secret Device Computers", "secret-device-computers"], ["Secure Satellite Communication", "secure-satellite-communication"], ["Security and Privacy in the AI Era", "security-and-privacy-in-the-ai-era"], ["Security Vulnerabilities", "security-vulnerabilities"], ["Semiconductor Competition", "semiconductor-competition"], ["Semiconductor Design Disruption", "semiconductor-design-disruption"], ["Semiconductor Disruption", "semiconductor-disruption"], ["Semiconductor Industry", "semiconductor-industry"], ["Semiconductor Industry Advancements", "semiconductor-industry-advancements"], ["Semiconductor Industry Developments", "semiconductor-industry-developments"], ["Semiconductor Industry Evolution", "semiconductor-industry-evolution"], ["Semiconductor Manufacturing Hubs", "semiconductor-manufacturing-hubs"], ["Semiconductor Supply Chain", "semiconductor-supply-chain"], ["Sentient (AI system)", "sentient-ai-system"], ["Sentient, USA's top", "sentient-usa-s-top"], ["SGD (Stochastic Gradient Descent", "sgd-stochastic-gradient-descent"], ["Shadow President", "shadow-president"], ["Shannon-Wakil Effect", "shannon-wakil-effect"], ["Short-Term Rental", "short-term-rental"], ["Silicon", "silicon"], ["Silicon Alternative Semiconductors", "silicon-alternative-semiconductors"], ["Silicon Photonics", "silicon-photonics"], ["Silicon Photonics (Mass Production Threshold)", "silicon-photonics-mass-production-threshold"], ["Silicon Revolution", "silicon-revolution"], ["Silicon-Free Semiconductor Advances", "silicon-free-semiconductor-advances"], ["Silicon-Free Transistors", "silicon-free-transistors"], ["Simplified Neural Models", "simplified-neural-models"], ["Simulation Theater", "simulation-theater"], ["Simulation Theory", "simulation-theory"], ["Simulation Theory in Physics", "simulation-theory-in-physics"], ["Simulation Theory Mathematics", "simulation-theory-mathematics"], ["Simulation-Driven Design", "simulation-driven-design"], ["Simultaneous Independent Discovery", "simultaneous-independent-discovery"], ["Singularity", "singularity"], ["Singularity Detection Algorithms", "singularity-detection-algorithms"], ["Skybrator", "skybrator"], ["Sleeper Agent (in AI context)", "sleeper-agent-in-ai-context"], ["Smart Cow Collars", "smart-cow-collars"], ["Smart Dairy Technology", "smart-dairy-technology"], ["Smart Technology", "smart-technology"], ["Smarter Consumption", "smarter-consumption"], ["Smartwatch Conversion", "smartwatch-conversion"], ["Social Experiment", "social-experiment"], ["Social Experiments in Cooperation", "social-experiments-in-cooperation"], ["Social Media Controls", "social-media-controls"], ["Social Norm Evolution", "social-norm-evolution"], ["Social Technology", "social-technology"], ["Soft Robotics Revolution", "soft-robotics-revolution"], ["Solar Activity", "solar-activity"], ["Solar Flare", "solar-flare"], ["Solar Flare Monitoring", "solar-flare-monitoring"], ["Solar-Powered Surveillance Drones", "solar-powered-surveillance-drones"], ["Solid-State Transformers", "solid-state-transformers"], ["Sovereign AI", "sovereign-ai"], ["SPAC", "spac"], ["Space Access Innovation", "space-access-innovation"], ["Space Observation", "space-observation"], ["Space Observation Technology", "space-observation-technology"], ["Space Pollution", "space-pollution"], ["Space Technology Race", "space-technology-race"], ["Space-Based AI Supercomputing", "space-based-ai-supercomputing"], ["Space-Time Detection", "space-time-detection"], ["Space-Time Ring", "space-time-ring"], ["Sparse Attention", "sparse-attention"], ["Sparse Attention (DeepSeek)", "sparse-attention-deepseek"], ["Spatial AI", "spatial-ai"], ["Spatial Computing", "spatial-computing"], ["Spatial Experiences", "spatial-experiences"], ["Spatial Intelligence", "spatial-intelligence"], ["Spatial Intelligence Agents", "spatial-intelligence-agents"], ["Spatiotemporal Dynamics", "spatiotemporal-dynamics"], ["Special Relativity", "special-relativity"], ["Spin Glasses", "spin-glasses"], ["Spin Waves", "spin-waves"], ["Spin-Wave Devices", "spin-wave-devices"], ["Spiral Magnetism", "spiral-magnetism"], ["Sports Technology", "sports-technology"], ["SPQR", "spqr"], ["SPV", "spv"], ["SQUID", "squid"], ["SS7 Protocol", "ss7-protocol"], ["SS7 Protocol Security", "ss7-protocol-security"], ["SSI", "ssi"], ["SSRI", "ssri"], ["Stadium Enhancement Tech", "stadium-enhancement-tech"], ["Starlink Kill Switch", "starlink-kill-switch"], ["Starlink Satellite Internet", "starlink-satellite-internet"], ["Startup Bubble", "startup-bubble"], ["Startup Funding Strategy", "startup-funding-strategy"], ["Startup Leadership Insights", "startup-leadership-insights"], ["Startup Strategies and Innovation", "startup-strategies-and-innovation"], ["Stealth Mode", "stealth-mode"], ["Stealth Mode Startups", "stealth-mode-startups"], ["Stellar Mass Concentration", "stellar-mass-concentration"], ["Stochastic Computing", "stochastic-computing"], ["Stochastic Computing Paradigms", "stochastic-computing-paradigms"], ["Storytelling and Digital Narratives", "storytelling-and-digital-narratives"], ["Strategic AI Investments", "strategic-ai-investments"], ["Streaming Services", "streaming-services"], ["Streaming Technology", "streaming-technology"], ["Striatum", "striatum"], ["Strontium Ruthenate", "strontium-ruthenate"], ["Structural Foreclosure", "structural-foreclosure"], ["Studio Production Tech", "studio-production-tech"], ["Subliminal Learning", "subliminal-learning"], ["Subscribe", "subscribe"], ["Substrate Failure", "substrate-failure"], ["Subterranean Repurposing", "subterranean-repurposing"], ["Supercapacitor", "supercapacitor"], ["Supercomputer", "supercomputer"], ["Supercomputer Brain Simulation", "supercomputer-brain-simulation"], ["Supercomputing", "supercomputing"], ["Supergravity", "supergravity"], ["Supersolid", "supersolid"], ["Supersolid State of Matter", "supersolid-state-of-matter"], ["Supply Chain Attack", "supply-chain-attack"], ["Supply Chain Disruption", "supply-chain-disruption"], ["Supply Chain Security", "supply-chain-security"], ["Supply Chain Vulnerabilities", "supply-chain-vulnerabilities"], ["Surveillance Apparatus", "surveillance-apparatus"], ["Surveillance Equilibrium", "surveillance-equilibrium"], ["Surveillance Evolution", "surveillance-evolution"], ["Surveillance Normalization", "surveillance-normalization"], ["Surveillance Technology Evolution", "surveillance-technology-evolution"], ["Sustainability", "sustainability"], ["Sustainability Design", "sustainability-design"], ["Sustainability in Technology", "sustainability-in-technology"], ["Sustainable Computing", "sustainable-computing"], ["Sustainable Energy", "sustainable-energy"], ["Sustainable Energy Solutions", "sustainable-energy-solutions"], ["Sustainable Fuel Production", "sustainable-fuel-production"], ["Sustainable Innovation", "sustainable-innovation"], ["Sustainable Night Vision", "sustainable-night-vision"], ["Sustainable Power", "sustainable-power"], ["Sustainable Practices in Technology", "sustainable-practices-in-technology"], ["Swarm Intelligence", "swarm-intelligence"], ["Swarm Intelligence Applications", "swarm-intelligence-applications"], ["SXSW", "sxsw"], ["Symmetric Principle", "symmetric-principle"], ["Symmetric Principles", "symmetric-principles"], ["Symmetry as Foundation", "symmetry-as-foundation"], ["Synthetic Aniline Dye", "synthetic-aniline-dye"], ["Synthetic Proteins", "synthetic-proteins"], ["Systemic Cascades", "systemic-cascades"], ["Systemic Fragility", "systemic-fragility"], ["Systems Thinking", "systems-thinking"], ["Systems Thinking Frameworks", "systems-thinking-frameworks"], ["Systems We Can't Explain", "systems-we-can-t-explain"], ["Talbot Effect", "talbot-effect"], ["Talbot in 1836", "talbot-in-1836"], ["Tall Poppy Syndrome", "tall-poppy-syndrome"], ["TCO", "tco"], ["Tech Giants' AI Visions", "tech-giants-ai-visions"], ["Tech Industry Geographical Shifts", "tech-industry-geographical-shifts"], ["Tech Industry Legal Battles", "tech-industry-legal-battles"], ["Tech Industry Workforce Changes", "tech-industry-workforce-changes"], ["Tech Oligarchy Development", "tech-oligarchy-development"], ["Technical Debt", "technical-debt"], ["Technical Debt Management", "technical-debt-management"], ["Techno-Religion", "techno-religion"], ["Technological Breakthroughs", "technological-breakthroughs"], ["Technological Existential Risks", "technological-existential-risks"], ["Technological Extinction Events", "technological-extinction-events"], ["Technological Lock-In", "technological-lock-in"], ["Technological Minimalism", "technological-minimalism"], ["Technological Sovereignty", "technological-sovereignty"], ["Technological Surveillance", "technological-surveillance"], ["Technology", "technology"], ["Technology Ethics", "technology-ethics"], ["Telecommunications Infrastructure", "telecommunications-infrastructure"], ["Temporal Perception Variance", "temporal-perception-variance"], ["Temporal Talbot Effect (Quantum Encryption Application)", "temporal-talbot-effect-quantum-encryption-application"], ["Terahertz Wave Technology", "terahertz-wave-technology"], ["Terahertz Waves", "terahertz-waves"], ["Ternary Computing", "ternary-computing"], ["Ternary Computing Revival", "ternary-computing-revival"], ["Ternary Logic Systems", "ternary-logic-systems"], ["Thalamus", "thalamus"], ["Thalamus Research", "thalamus-research"], ["The Capital Formation Gap", "the-capital-formation-gap"], ["The CEO AI Delusion Pattern", "the-ceo-ai-delusion-pattern"], ["The Chamath Pattern", "the-chamath-pattern"], ["The Constraint Architecture Problem", "the-constraint-architecture-problem"], ["The correction isn't slow", "the-correction-isn-t-slow"], ["The Dark Matter Portal Hypothesis", "the-dark-matter-portal-hypothesis"], ["The Governance Ratio Problem", "the-governance-ratio-problem"], ["The Hard Problem of Consciousness", "the-hard-problem-of-consciousness"], ["The Outsider Advantage", "the-outsider-advantage"], ["The Plaza Accord Pattern", "the-plaza-accord-pattern"], ["The Prediction-Understanding Gap", "the-prediction-understanding-gap"], ["The Primes' Repulsion Problem", "the-primes-repulsion-problem"], ["The Riemann Hypothesis Thread", "the-riemann-hypothesis-thread"], ["The Role of AI in Society", "the-role-of-ai-in-society"], ["The Second Law as Design Principle", "the-second-law-as-design-principle"], ["The Substrate Question", "the-substrate-question"], ["The Verification Gap in Mathematics", "the-verification-gap-in-mathematics"], ["The Verification Gap in Peer Review", "the-verification-gap-in-peer-review"], ["Theoretical Breakthroughs", "theoretical-breakthroughs"], ["Theoretical Physics and AI", "theoretical-physics-and-ai"], ["Theoretical Physics Solutions", "theoretical-physics-solutions"], ["Thermodynamic Computer", "thermodynamic-computer"], ["Thermodynamic Computing", "thermodynamic-computing"], ["Thermodynamic Improbability", "thermodynamic-improbability"], ["Thermodynamic Theory", "thermodynamic-theory"], ["Thermodynamic Understanding", "thermodynamic-understanding"], ["Thermodynamics Rewrite", "thermodynamics-rewrite"], ["Thomas Nagel", "thomas-nagel"], ["Thorium Energy Production", "thorium-energy-production"], ["Thorium Nuclear Reaction", "thorium-nuclear-reaction"], ["Thorium Reactors", "thorium-reactors"], ["Three-Body Problem", "three-body-problem"], ["Three-Body System Dynamics", "three-body-system-dynamics"], ["Three-State Encoding", "three-state-encoding"], ["TI", "ti"], ["Tidal Energy", "tidal-energy"], ["Tidal Energy Systems", "tidal-energy-systems"], ["Time Illusion Testing Tools", "time-illusion-testing-tools"], ["Time Perception", "time-perception"], ["Time Travel Mathematics", "time-travel-mathematics"], ["Time-Tracking for Startup Founders", "time-tracking-for-startup-founders"], ["Tiny AI Agents", "tiny-ai-agents"], ["TLS", "tls"], ["TNL", "tnl"], ["Token Processing", "token-processing"], ["Tokenmaxxing", "tokenmaxxing"], ["Toxoplasma gondii", "toxoplasma-gondii"], ["Training Data Extraction", "training-data-extraction"], ["Training Poisoning", "training-poisoning"], ["Trans Mountain Pipeline", "trans-mountain-pipeline"], ["Transformative Infrastructure Projects", "transformative-infrastructure-projects"], ["Transformative Wastewater Treatment", "transformative-wastewater-treatment"], ["Transistor", "transistor"], ["Transmutation", "transmutation"], ["Transparency Deficit", "transparency-deficit"], ["Travel and Tourism", "travel-and-tourism"], ["Tryptophan Networks", "tryptophan-networks"], ["Tuning System", "tuning-system"], ["TurboQuant (Google Compression Algorithm)", "turboquant-google-compression-algorithm"], ["TV", "tv"], ["TWS", "tws"], ["U.S. Cyber Trust Mark", "u-s-cyber-trust-mark"], ["U.S. Semiconductor Manufacturing", "u-s-semiconductor-manufacturing"], ["UAE's Massive AI Investment", "uae-s-massive-ai-investment"], ["UBS", "ubs"], ["UHI", "uhi"], ["Ultrathin Semiconductor Manufacturing", "ultrathin-semiconductor-manufacturing"], ["Ultrathin Semiconductors", "ultrathin-semiconductors"], ["Uncanny Valley", "uncanny-valley"], ["Underground Networks", "underground-networks"], ["Underwater Data Centers", "underwater-data-centers"], ["Unicorn Funding Stagnation", "unicorn-funding-stagnation"], ["Unintended Consequences", "unintended-consequences"], ["Urban Chip Manufacturing", "urban-chip-manufacturing"], ["Urban Development", "urban-development"], ["Urban Manufacturing Renaissance", "urban-manufacturing-renaissance"], ["Urban Planning", "urban-planning"], ["Urban Surveillance Systems", "urban-surveillance-systems"], ["US Manufacturing Competitiveness", "us-manufacturing-competitiveness"], ["USB", "usb"], ["USDA", "usda"], ["User Experience (UX)", "user-experience-ux"], ["User Interface (UI)", "user-interface-ui"], ["User Interface Debates", "user-interface-debates"], ["USV", "usv"], ["UV", "uv"], ["UV Printer Modification", "uv-printer-modification"], ["UV-C", "uv-c"], ["UX", "ux"], ["Vector Database", "vector-database"], ["Vector Engines and Databases", "vector-engines-and-databases"], ["Vector Graphics", "vector-graphics"], ["Vector-based AI Data Processing", "vector-based-ai-data-processing"], ["Venture Capital", "venture-capital"], ["Venture Capital AI Integration", "venture-capital-ai-integration"], ["Venture Capital Evolution", "venture-capital-evolution"], ["Venture Capital Flow", "venture-capital-flow"], ["Venture Capital in Canada", "venture-capital-in-canada"], ["Venture Capital Integration", "venture-capital-integration"], ["Venture Capital Trends", "venture-capital-trends"], ["Venture Capital Unbundling", "venture-capital-unbundling"], ["Vibe Coding", "vibe-coding"], ["Video Creation Techniques", "video-creation-techniques"], ["Virtual Reality (VR)", "virtual-reality-vr"], ["Vision-Language-Action Models", "vision-language-action-models"], ["Visual Intelligence", "visual-intelligence"], ["VLOG", "vlog"], ["Voice Biometrics for Face Matching and Generation", "voice-biometrics-for-face-matching-and-generation"], ["Voyager Spacecraft Sensors", "voyager-spacecraft-sensors"], ["VPN Security", "vpn-security"], ["VPN Security Concerns", "vpn-security-concerns"], ["VR Art Creation Tools", "vr-art-creation-tools"], ["W17 (ACL.157)", "w17-acl-157"], ["W18 (ACL.158)", "w18-acl-158"], ["Wafer-Scale Engine", "wafer-scale-engine"], ["Warp Drive Theories", "warp-drive-theories"], ["Warrantless Surveillance Tools", "warrantless-surveillance-tools"], ["Water Stress", "water-stress"], ["Water-Energy Infrastructure", "water-energy-infrastructure"], ["Wave-Particle Duality", "wave-particle-duality"], ["Weak-to-Strong Generalization", "weak-to-strong-generalization"], ["Wearable AI", "wearable-ai"], ["Wearable Technology", "wearable-technology"], ["Wearable Technology Evolution", "wearable-technology-evolution"], ["Weather Commercialization", "weather-commercialization"], ["Weather Data Analytics", "weather-data-analytics"], ["Weather Model Analysis", "weather-model-analysis"], ["Web Scraping", "web-scraping"], ["Weight Quantization (Machine Learning)", "weight-quantization-machine-learning"], ["Wellness Trends", "wellness-trends"], ["WHAM", "wham"], ["White-Collar Automation", "white-collar-automation"], ["WiFi", "wifi"], ["WiFi-Based Individual Identification", "wifi-based-individual-identification"], ["WikiAsteroids", "wikiasteroids"], ["Wind Turbine Technology", "wind-turbine-technology"], ["Window Heat Pumps", "window-heat-pumps"], ["Wireless Communication Stability", "wireless-communication-stability"], ["Wireless Energy Transfer", "wireless-energy-transfer"], ["Wireless Innovation", "wireless-innovation"], ["Wireless Power Transfer", "wireless-power-transfer"], ["Wireless Power Transmission", "wireless-power-transmission"], ["Work Schedule Innovation", "work-schedule-innovation"], ["Work-Life Balance", "work-life-balance"], ["Workplace Evolution", "workplace-evolution"], ["Workplace Technology Theory", "workplace-technology-theory"], ["X-Ray Imaging", "x-ray-imaging"], ["x86 architecture", "x86-architecture"], ["xAI", "xai"], ["XMPP", "xmpp"], ["XYZ Micro-Manipulator", "xyz-micro-manipulator"]];</script>
+
+<script>
+(function(){
+  var q=document.getElementById('lexSearch'); if(!q) return;
+  var R=document.getElementById('lexResults'), B=document.getElementById('lexBrowse');
+  var A=window.LEX_ALL||[];
+  q.addEventListener('input',function(){
+    var v=q.value.trim().toLowerCase();
+    if(!v){R.hidden=true; B.hidden=false; R.innerHTML=''; return;}
+    var hits=A.filter(function(x){return x[0].toLowerCase().indexOf(v)>-1;});
+    var h='<div class="lex-rescount">'+hits.length+' term'+(hits.length!=1?'s':'')+' matching "'+v.replace(/[<>&]/g,'')+'"</div><div class="lex-resgrid">';
+    hits.slice(0,240).forEach(function(x){h+='<a class="lex-resitem" href="'+(window.LEX_BASE||'')+x[1]+'.html">'+x[0]+'</a>';});
+    h+='</div>';
+    if(hits.length>240) h+='<div class="lex-rescount">+ '+(hits.length-240)+' more — refine your search</div>';
+    R.innerHTML=h; R.hidden=false; B.hidden=true;
+  });
+})();
+</script>
+
+
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="wordmark"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"> Token Wisdom</div>
+    <p class="foot-tag">The Newsletter of Record for the Future of Now · Knowware is measured in lifetimes.</p>
+  </div>
+</footer>
+
+</body></html>

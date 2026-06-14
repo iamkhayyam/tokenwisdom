@@ -1,0 +1,2516 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Technical Terms — The Lexicon</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg: oklch(0.992 0.004 70);
+  --surface: oklch(0.972 0.005 70);
+  --surface-ink: oklch(0.205 0.012 65);
+  --ink: oklch(0.235 0.012 60);
+  --ink-muted: oklch(0.505 0.012 60);
+  --ink-faint: oklch(0.66 0.010 60);
+  --rule: oklch(0.905 0.006 70);
+  --rule-strong: oklch(0.235 0.012 60);
+  --accent: oklch(0.585 0.155 47);
+  --accent-deep: oklch(0.475 0.140 44);
+  --accent-wash: oklch(0.95 0.030 60);
+  --teal: oklch(0.520 0.070 195);
+  --gold: oklch(0.700 0.095 85);
+  --sans:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif;
+  --display:'Libre Caslon Display',Georgia,serif;
+  --display-weight:400;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'DM Mono',ui-monospace,monospace;
+  --w:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
+
+/* kicker / meta */
+.kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
+.kicker-accent{color:var(--accent)}
+.kicker-on-dark{color:oklch(0.78 0.10 55)}
+.meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* nameplate — the signature front-page moment */
+.nameplate{border-bottom:1px solid var(--ink);background:var(--bg)}
+.np-inner{max-width:var(--w);margin:0 auto;padding:20px 28px 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+.np-left{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
+.np-right{font-family:var(--mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
+.np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
+/* masthead nav */
+.mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+.mast-inner{max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
+.mast-mark{display:inline-flex;align-items:center}
+.tw-orb{height:30px;width:auto;display:block}
+.foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
+.mast-nav{display:flex;gap:22px;margin-left:6px;flex-wrap:wrap}
+.mast-nav a{font-family:var(--mono);font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.mast-nav a:hover{color:var(--ink)}
+.mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
+.mast-sub{margin-left:auto;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.mast-sub:hover{background:var(--accent-deep)}
+
+/* lead */
+.lead{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;padding:56px 0 12px;align-items:start}
+.lead-figure{aspect-ratio:3/2;overflow:hidden;background:var(--surface);margin-bottom:26px}
+.lead-figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.lead-main:hover .lead-figure img{transform:scale(1.04)}
+.lead-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,5.6vw,5.2rem);line-height:.93;letter-spacing:-.035em;margin:.7rem 0 .9rem;text-wrap:balance}
+.lead-main:hover .lead-title{color:oklch(0.34 0.07 45)}
+.lead-dek{font-family:var(--serif);font-size:1.22rem;line-height:1.5;color:var(--ink-muted);max-width:48ch;margin-bottom:1rem}
+.lead-side{align-self:stretch}
+.rail-head{border-top:2px solid var(--rule-strong);padding-top:.7rem;margin-bottom:1.1rem}
+/* this week's edition — image-led feature that balances the essay column */
+.edition-feature{display:block;margin-bottom:18px}
+.ef-figure{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface);margin-bottom:1rem}
+.ef-figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.edition-feature:hover .ef-figure img{transform:scale(1.04)}
+.edition-feature:hover .edition-title{color:var(--accent-deep)}
+.edition-title{font-family:var(--sans);font-weight:700;font-size:1.6rem;line-height:1.08;letter-spacing:-.02em;margin:.5rem 0 .5rem;color:var(--ink)}
+.edition-dek{font-family:var(--serif);font-size:.98rem;line-height:1.45;color:var(--ink-muted);margin-bottom:.9rem}
+.readlink{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.side-list{display:flex;flex-direction:column}
+.side-row{padding:.85rem 0;border-top:1px solid var(--rule);transition:color .15s}
+.side-row:hover{color:var(--accent)}
+.side-kicker{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.25rem}
+.side-title{font-family:var(--sans);font-weight:600;font-size:1.02rem;line-height:1.25}
+
+/* section rule head */
+.block{padding:46px 0}
+.rule-head{display:flex;align-items:baseline;gap:1rem;border-top:3px solid var(--rule-strong);padding-top:.9rem;margin-bottom:2rem}
+.rule-label{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.02em}
+.rule-meta{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-left:auto}
+.rule-meta.linky{color:var(--accent)}
+
+/* recent */
+.recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
+.recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.story-figure{aspect-ratio:16/10;overflow:hidden;background:var(--surface);margin-bottom:14px}
+.story-figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.story:hover .story-figure img{transform:scale(1.03)}
+.story-title{font-family:var(--display);font-weight:var(--display-weight);font-size:1.5rem;line-height:1.08;letter-spacing:-.01em;margin:.5rem 0 .5rem}
+.story:hover .story-title{color:var(--accent-deep)}
+.story-dek{font-family:var(--serif);font-size:1rem;line-height:1.45;color:var(--ink-muted);margin-bottom:.7rem}
+.recent-list{display:flex;flex-direction:column}
+.recent-list .kicker{margin-bottom:.4rem}
+.list-row{display:flex;flex-direction:column;gap:.25rem;padding:.95rem 0;border-top:1px solid var(--rule);transition:color .15s}
+.list-row:first-of-type{border-top:1px solid var(--rule-strong)}
+.list-row:hover{color:var(--accent)}
+.list-kicker{font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.list-title{font-family:var(--sans);font-weight:600;font-size:1.05rem;line-height:1.2}
+.list-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* topics */
+.topics{display:flex;flex-wrap:wrap;gap:.6rem}
+.topic{font-family:var(--mono);font-size:.72rem;letter-spacing:.04em;padding:.55em .85em;border:1px solid var(--rule);color:var(--ink);display:inline-flex;align-items:center;gap:.55em;transition:border-color .15s,color .15s}
+.topic span{color:var(--ink-faint);font-size:.9em}
+.topic:hover{border-color:var(--accent);color:var(--accent)}
+.topic:hover span{color:var(--accent)}
+
+/* lexicon strip */
+.block-lex{background:var(--surface);margin:0 -100vw;padding-left:100vw;padding-right:100vw}
+.block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
+.lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
+.lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard:nth-child(4n){border-right:none}
+.lexcard:hover{background:var(--bg)}
+.lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
+.lexcard:hover .lexcard-term{color:var(--accent)}
+.lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
+.lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
+.lexcard-spark{opacity:.9}
+.spark{display:block;width:100%;height:auto}
+
+/* subscribe — the Fortune Brand crystal ball glowing in the background */
+.subscribe{
+  margin-top:56px;
+  color:oklch(0.95 0.02 65);
+  background-color:oklch(0.195 0.055 31);
+  background-image:
+    linear-gradient(90deg, oklch(0.185 0.055 31) 0%, oklch(0.185 0.055 31 / .95) 40%, oklch(0.185 0.055 31 / .25) 68%, transparent 90%),
+    url(assets/fortune_teller.gif);
+  background-repeat:no-repeat,no-repeat;
+  background-position:center, right -80px center;
+  background-size:cover,contain;
+}
+.sub-inner{max-width:var(--w);margin:0 auto;padding:94px 28px;position:relative}
+.sub-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.0;letter-spacing:-.02em;margin:.8rem 0 .7rem;max-width:16ch;color:oklch(0.97 0.02 72)}
+.sub-dek{font-family:var(--serif);font-size:1.18rem;color:oklch(0.84 0.02 66);max-width:46ch;margin-bottom:1.8rem}
+.sub-cta{display:inline-block;font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.95em 1.7em;transition:background .15s,transform .15s}
+.sub-cta:hover{background:oklch(0.66 0.16 50);transform:translateX(4px)}
+.kicker-on-dark{color:oklch(0.80 0.11 62)}
+
+/* footer */
+.foot{border-top:1px solid var(--rule);background:var(--bg)}
+.foot-inner{max-width:var(--w);margin:0 auto;padding:40px 28px}
+.foot .wordmark{font-size:1.05rem;margin-bottom:.5rem}
+.foot-tag{font-family:var(--serif);color:var(--ink-muted);margin-bottom:.4rem}
+.foot-meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* this-week pair header */
+.thisweek-head{display:flex;align-items:center;gap:1.1rem;max-width:var(--w);margin:0 auto;padding:46px 28px 0}
+.tw-eyebrow{font-family:var(--mono);font-weight:500;font-size:.74rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.tw-line{flex:1;height:2px;background:var(--rule-strong)}
+.tw-meta{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.lead{padding-top:26px}
+.lead-figure{position:relative}
+.figure-tag{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:.45em .75em}
+/* podcast embed */
+.listen{background:var(--surface-ink);padding:18px 20px 20px;margin-bottom:18px}
+.listen .kicker{color:oklch(0.80 0.10 55)}
+.listen-title{font-family:var(--sans);font-weight:700;font-size:1.08rem;line-height:1.18;margin:.45rem 0 .75rem;color:oklch(0.96 0.006 70)}
+.listen-audio{width:100%;height:36px;margin-bottom:.55rem}
+.listen-meta{font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;text-transform:uppercase;color:oklch(0.72 0.008 70)}
+/* full-width audio players (this week in audio) */
+.players{display:flex;flex-direction:column}
+.player{display:flex;align-items:center;gap:1.3rem;padding:1.5rem 0;border-top:1px solid var(--rule)}
+.player:first-child{border-top:none}
+.pp{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:var(--ink);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
+.pp:hover{background:var(--accent);transform:scale(1.05)}
+.pp-icon{width:0;height:0;border-left:14px solid currentColor;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.player.playing .pp-icon{width:14px;height:15px;border:none;margin:0;background:linear-gradient(to right,currentColor 0 4px,transparent 4px 10px,currentColor 10px 14px)}
+.pbody{flex:1;min-width:0}
+.pkicker{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.pk-tag{color:var(--accent)}
+.ptitle{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.18;letter-spacing:-.01em;margin:.25rem 0 .7rem;color:var(--ink)}
+.ptitle:hover{color:var(--accent)}
+.prow{display:flex;align-items:center;gap:1.1rem}
+.ptrack{position:relative;flex:1;height:6px;background:var(--rule);cursor:pointer}
+.pfill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--accent)}
+.pknob{position:absolute;top:50%;left:0;width:13px;height:13px;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);display:none;box-shadow:0 0 0 3px var(--bg)}
+.player.playing .pknob,.ptrack:hover .pknob{display:block}
+.ptime{font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-muted);white-space:nowrap;flex-shrink:0}
+.pcur{color:var(--ink)}
+/* "The Essay, Aloud" is the 3rd beat of This Week, not a new section:
+   thin hairline + tight spacing so it reads as a continuation. */
+.listen-week{padding-top:12px}
+.listen-week .rule-head{border-top:1px solid var(--rule);padding-top:.7rem;margin-bottom:1.3rem}
+/* front-and-center essay player runs a touch grander */
+.listen-week .player{padding:1.7rem 0}
+.listen-week .pp{width:60px;height:60px}
+.listen-week .ptitle{font-size:clamp(1.25rem,2.1vw,1.6rem)}
+/* rail edition player — compact, stacked, on a surface */
+.player-rail{flex-direction:column;align-items:stretch;gap:.5rem;background:var(--surface);padding:15px 17px 16px;border-top:none;margin-bottom:18px}
+.player-rail .ptitle{font-size:1.05rem;margin:.1rem 0 .4rem}
+.player-rail .prow{gap:.7rem}
+.player-rail .pp{width:38px;height:38px}
+.player-rail .pp-icon{border-left-width:11px;border-top-width:7px;border-bottom-width:7px}
+.player-rail.playing .pp-icon{width:11px;height:12px}
+.player-rail .ptime{font-size:.6rem;color:var(--ink-faint)}
+
+@media(max-width:980px){
+  .np-inner{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px}
+  .thisweek-head{flex-wrap:wrap;gap:.6rem}
+  .np-left,.np-right{justify-self:center;text-align:center}
+  .lead{grid-template-columns:1fr;gap:32px}
+  .recent{grid-template-columns:1fr;gap:32px}
+  .lexcards{grid-template-columns:1fr 1fr}
+  .lexcard:nth-child(4n){border-right:1px solid var(--rule)}
+  .lexcard:nth-child(2n){border-right:none}
+}
+@media(max-width:620px){
+  .mast-inner{flex-wrap:wrap;gap:12px 18px}
+  .mast-sub{margin-left:0}
+  .recent-cards{grid-template-columns:1fr}
+  .lexcards{grid-template-columns:1fr}
+  .lexcard{border-right:1px solid var(--rule)!important}
+}
+
+.lex-hero{max-width:var(--w);margin:0 auto;padding:50px 28px 6px}
+.lex-h1{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(3rem,8.5vw,6.2rem);line-height:.88;letter-spacing:-.03em;margin:.5rem 0 .7rem}
+.lex-lede{font-family:var(--serif);font-size:1.26rem;line-height:1.5;color:var(--ink-muted);max-width:62ch;margin-bottom:.8rem}
+.lex-lede em{font-style:italic}
+.lex-metaline{font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:1.5rem}
+.lex-search{width:100%;padding:.95rem 1.1rem;font-family:var(--mono);font-size:.82rem;letter-spacing:.02em;color:var(--ink);background:var(--bg);border:2px solid var(--ink);outline:none}
+.lex-search::placeholder{color:var(--ink-faint)}
+.lex-search:focus{border-color:var(--accent)}
+.lex-chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.2rem}
+.lex-chip{font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;padding:.5em .75em;border:1px solid var(--rule);color:var(--ink-muted);display:inline-flex;align-items:center;gap:.5em;transition:border-color .15s,color .15s}
+.lex-chip span{color:var(--ink-faint)}
+.lex-chip:hover{border-color:var(--accent);color:var(--accent)}
+.lex-noresults{font-family:var(--mono);font-size:.8rem;color:var(--ink-faint);max-width:var(--w);margin:1.5rem auto 0;padding:0 28px}
+/* Core Vocabulary cards */
+.lex-core-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule)}
+.lex-cc{display:grid;grid-template-columns:1fr 130px;grid-template-areas:"term spark" "def spark";gap:.2rem 1rem;align-items:center;padding:1.15rem 1.2rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.lex-core-grid .lex-cc:nth-child(odd){border-left:1px solid var(--rule)}
+.lex-cc:hover{background:var(--surface)}
+.lex-cc-term{grid-area:term;font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.05;color:var(--ink)}
+.lex-cc:hover .lex-cc-term{color:var(--accent)}
+.lex-cc-meta{display:none}
+.lex-cc-def{grid-area:def;font-family:var(--serif);font-size:.92rem;line-height:1.45;color:var(--ink-muted)}
+.lex-cc-spark{grid-area:spark;align-self:center}
+/* category lists */
+.lex-catsec{scroll-margin-top:80px}
+.lex-lines{display:grid;grid-template-columns:1fr 1fr;gap:0}
+.lex-line{display:grid;grid-template-columns:minmax(150px,40%) 1fr;gap:1rem;align-items:baseline;padding:.8rem 1.1rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.lex-lines .lex-line:nth-child(odd){border-left:1px solid var(--rule)}
+.lex-line:hover{background:var(--surface)}
+.lex-line-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.12rem;line-height:1.1;color:var(--ink)}
+.lex-line:hover .lex-line-term{color:var(--accent)}
+.lex-badge{font-family:var(--mono);font-size:.56em;color:var(--accent);vertical-align:super;margin-left:.4em}
+.lex-line-def{font-family:var(--serif);font-size:.88rem;line-height:1.4;color:var(--ink-muted)}
+.lex-soon{max-width:var(--w);margin:0 auto;padding:10px 28px 60px}
+.lex-soon-inner{background:var(--surface-ink);color:oklch(0.92 0.006 70);padding:2rem 2.2rem}
+.lex-soon h3{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:oklch(0.80 0.10 55);margin-bottom:.7rem}
+.lex-soon p{font-family:var(--serif);font-size:1.05rem;color:oklch(0.82 0.008 70);max-width:70ch}
+.lex-soon strong{color:oklch(0.97 0.006 70)}
+/* see-all + back links */
+.lex-seeall{display:inline-block;margin-top:1rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.lex-seeall:hover{color:var(--accent-deep)}
+.lex-back{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.2rem}
+/* live search results */
+.lex-results{max-width:var(--w);margin:0 auto;padding:24px 28px 60px}
+.lex-rescount{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin:.4rem 0 1rem}
+.lex-resgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:0;border-top:1px solid var(--rule)}
+.lex-resitem{font-family:var(--display);font-weight:var(--display-weight);font-size:1.05rem;color:var(--ink);padding:.7rem .8rem;border-bottom:1px solid var(--rule);border-right:1px solid var(--rule)}
+.lex-resitem:hover{background:var(--surface);color:var(--accent)}
+@media(max-width:820px){
+  .lex-core-grid{grid-template-columns:1fr}
+  .lex-core-grid .lex-cc{border-left:1px solid var(--rule)}
+  .lex-lines{grid-template-columns:1fr}
+  .lex-lines .lex-line{border-left:1px solid var(--rule);grid-template-columns:1fr;gap:.2rem}
+}
+
+.term-wrap{max-width:var(--w);margin:0 auto;padding:34px 28px 10px}
+.term-back{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem}
+.term-eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.6rem}
+.lex-text-accent{color:var(--accent)} .lex-text-teal{color:var(--teal)} .lex-text-gold{color:var(--gold)}
+.term-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,6vw,4.6rem);line-height:.92;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
+.term-def{font-family:var(--serif);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.4;color:var(--ink);max-width:780px;margin-bottom:.6rem}
+.term-def-src{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:2.4rem}
+.term-def-src a{color:var(--ink-muted);border-bottom:1px solid var(--rule)} .term-def-src a:hover{color:var(--accent)}
+.term-stats{display:grid;grid-template-columns:repeat(4,1fr);border-top:2px solid var(--rule-strong);border-bottom:1px solid var(--rule);margin-bottom:2.8rem}
+.term-stat{padding:1.1rem 0;border-right:1px solid var(--rule)} .term-stat:last-child{border-right:none}
+.ts-num{display:block;font-family:var(--display);font-weight:var(--display-weight);font-size:1.5rem;color:var(--ink);line-height:1.05}
+.ts-lbl{display:block;font-family:var(--mono);font-size:.56rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-top:.4rem}
+.term-section{margin-bottom:2.8rem}
+.term-h3{font-family:var(--display);font-weight:var(--display-weight);font-size:1.6rem;color:var(--ink);margin-bottom:.5rem}
+.term-h3-count{font-family:var(--mono);font-style:normal;font-size:.8rem;color:var(--ink-faint)}
+.term-arc-note{font-family:var(--serif);color:var(--ink-muted);font-size:.98rem;margin-bottom:1.2rem;max-width:680px}
+.term-arc-note a{color:var(--accent)}
+.bar-timeline{display:flex;align-items:flex-end;gap:2px;height:var(--bt-h,130px);border-bottom:1px solid var(--ink)}
+.bt-col{display:flex;align-items:flex-end;justify-content:center;height:100%}
+.bt-bar{width:70%;min-height:1px;opacity:.82;border-radius:1px 1px 0 0}
+.def-history{list-style:none;margin:0}
+.def-history li{font-family:var(--serif);font-size:.98rem;line-height:1.55;color:var(--ink-muted);padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.dh-ed{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-right:.7em}
+.term-body{display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start}
+.term-posts{display:flex;flex-direction:column}
+.term-post{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;padding:.7rem 0;border-bottom:1px solid var(--rule)}
+.term-post a{color:var(--ink)} .term-post a:hover{color:var(--accent)}
+.tp-title{font-family:var(--serif);font-size:1rem}
+.tp-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+.term-side{position:sticky;top:70px}
+.term-side-block{margin-bottom:1.8rem}
+.term-side-block h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.7rem}
+@media(max-width:820px){.term-body{grid-template-columns:1fr;gap:2rem}.term-side{position:static}.term-stats{grid-template-columns:1fr 1fr}.term-stat:nth-child(2){border-right:none}.term-stat:nth-child(1),.term-stat:nth-child(2){border-bottom:1px solid var(--rule)}}
+</style>
+<link rel="icon" type="image/svg+xml" href="../assets/crystal-ball.svg"></head><body>
+
+<div class="nameplate">
+  <div class="np-inner">
+    <div class="np-left">The Newsletter of Record<br>for the Future of Now</div>
+    <a class="np-mark" href="../index.html">Token&nbsp;Wisdom</a>
+    <div class="np-right">No. 153<br>SAT · JUN 13, 2026</div>
+  </div>
+</div>
+<header class="mast">
+  <div class="mast-inner">
+    <a class="mast-mark" href="../index.html" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
+    <nav class="mast-nav"><a class="" href="../archive.html">Archive</a><a class="" href="../tags/index.html">Topics</a><a class="is-active" href="../lexicon/index.html">Lexicon</a><a class="" href="../tags/a-closer-look.html">Essays</a><a class="" href="../tags/worthafortune.html">Newsletters</a><a class="" href="../podcast.html">Podcast</a></nav>
+    <a class="mast-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
+  </div>
+</header>
+
+<header class="lex-hero">
+  <a class="lex-back" href="index.html">&larr; The Lexicon</a>
+  <div class="kicker kicker-accent">§ Lexicon · Category</div>
+  <h1 class="lex-h1">Technical Terms</h1>
+  <div class="lex-metaline">541 terms · sorted by how often they're glossed</div>
+</header>
+<main class="wrap"><section class="block"><div class="lex-lines">
+      <a class="lex-line" href="quantum-computing.html">
+        <span class="lex-line-term">Quantum Computing<span class="lex-badge">15×</span></span>
+        <span class="lex-line-def">Theoretical foundations</span>
+      </a>
+      <a class="lex-line" href="entropy.html">
+        <span class="lex-line-term">Entropy<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Measure of disorder; second law of thermodynamics states entropy always increases</span>
+      </a>
+      <a class="lex-line" href="semiconductor.html">
+        <span class="lex-line-term">Semiconductor<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Material with electrical conductivity between a conductor and an insulator</span>
+      </a>
+      <a class="lex-line" href="ai-powered-video-creation.html">
+        <span class="lex-line-term">AI-Powered Video Creation<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Tools making video production more accessible to brands and content creators.</span>
+      </a>
+      <a class="lex-line" href="digital-twin.html">
+        <span class="lex-line-term">Digital Twin<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Virtual system replica</span>
+      </a>
+      <a class="lex-line" href="encryption.html">
+        <span class="lex-line-term">Encryption<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Data protection</span>
+      </a>
+      <a class="lex-line" href="generative-ai.html">
+        <span class="lex-line-term">Generative AI<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">AI systems capable of creating content across various mediums</span>
+      </a>
+      <a class="lex-line" href="machine-learning.html">
+        <span class="lex-line-term">Machine Learning<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">AI systems that improve with experience</span>
+      </a>
+      <a class="lex-line" href="open-source-ai.html">
+        <span class="lex-line-term">Open-Source AI<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Hugging Face&#x27;s initiatives promote the democratization of AI, fostering collaborative innovation and accessibility in AI development.</span>
+      </a>
+      <a class="lex-line" href="quantum-entanglement.html">
+        <span class="lex-line-term">Quantum Entanglement<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Quantum state where particles remain connected</span>
+      </a>
+      <a class="lex-line" href="ai-copyright.html">
+        <span class="lex-line-term">AI Copyright<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Thomson Reuters&#x27; landmark legal victory sets a precedent in the ongoing debate surrounding AI-generated content and the use of copyrighted material…</span>
+      </a>
+      <a class="lex-line" href="ancient-pathogen.html">
+        <span class="lex-line-term">Ancient Pathogen<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Historical disease analysis</span>
+      </a>
+      <a class="lex-line" href="autonomous-navigation.html">
+        <span class="lex-line-term">Autonomous Navigation<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Self-driving vehicle technology</span>
+      </a>
+      <a class="lex-line" href="biometric-security.html">
+        <span class="lex-line-term">Biometric Security<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Authentication systems using unique physical or behavioral characteristics.</span>
+      </a>
+      <a class="lex-line" href="blockchain-technology.html">
+        <span class="lex-line-term">Blockchain Technology<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Decentralized ledger system underpinning cryptocurrencies</span>
+      </a>
+      <a class="lex-line" href="brain-computer-interface.html">
+        <span class="lex-line-term">Brain-Computer Interface<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Direct communication pathway between brain and external device</span>
+      </a>
+      <a class="lex-line" href="chip-design.html">
+        <span class="lex-line-term">Chip Design<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Process of creating integrated circuits</span>
+      </a>
+      <a class="lex-line" href="chirality.html">
+        <span class="lex-line-term">Chirality<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Molecular handedness determining biological compatibility</span>
+      </a>
+      <a class="lex-line" href="circuit-sparsity.html">
+        <span class="lex-line-term">Circuit-Sparsity<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">AI model efficiency</span>
+      </a>
+      <a class="lex-line" href="computational-model.html">
+        <span class="lex-line-term">Computational Model<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Mathematical representation of a system or process</span>
+      </a>
+      <a class="lex-line" href="corporate-ai-strategy.html">
+        <span class="lex-line-term">Corporate AI Strategy<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Venture fund acquisition approaches</span>
+      </a>
+      <a class="lex-line" href="cypherpunk.html">
+        <span class="lex-line-term">Cypherpunk<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Advocate for using cryptography to enable privacy and political change</span>
+      </a>
+      <a class="lex-line" href="data-center.html">
+        <span class="lex-line-term">Data Center<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Centralized location for computing and networking equipment</span>
+      </a>
+      <a class="lex-line" href="diffusion-model.html">
+        <span class="lex-line-term">Diffusion Model<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">AI technique gradually transforming random noise into coherent output</span>
+      </a>
+      <a class="lex-line" href="digital-preservation.html">
+        <span class="lex-line-term">Digital Preservation<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Process of maintaining cultural artifacts in digital form</span>
+      </a>
+      <a class="lex-line" href="drone-neutralization.html">
+        <span class="lex-line-term">Drone Neutralization<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Counter-drone technology</span>
+      </a>
+      <a class="lex-line" href="energy-efficiency.html">
+        <span class="lex-line-term">Energy Efficiency<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Innovative technologies for sustainable living</span>
+      </a>
+      <a class="lex-line" href="entropy-reduction.html">
+        <span class="lex-line-term">Entropy Reduction<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Process decreasing randomness or disorder in a system</span>
+      </a>
+      <a class="lex-line" href="estate-tax-loopholes.html">
+        <span class="lex-line-term">Estate Tax Loopholes<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Legal strategies to minimize taxation on transferred wealth</span>
+      </a>
+      <a class="lex-line" href="greenwashing.html">
+        <span class="lex-line-term">Greenwashing<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Misleading claims about environmental benefits of products</span>
+      </a>
+      <a class="lex-line" href="information-theory.html">
+        <span class="lex-line-term">Information Theory<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Mathematical study of information quantification and transmission</span>
+      </a>
+      <a class="lex-line" href="interstellar-object.html">
+        <span class="lex-line-term">Interstellar Object<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Astronomical body originating outside our solar system</span>
+      </a>
+      <a class="lex-line" href="large-language-models-llms.html">
+        <span class="lex-line-term">Large Language Models (LLMs)<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Advanced AI systems like those developed by Anthropic and Google continue to push the boundaries of natural language processing and generation.</span>
+      </a>
+      <a class="lex-line" href="local-backup.html">
+        <span class="lex-line-term">Local Backup<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Device-level data storage</span>
+      </a>
+      <a class="lex-line" href="mass-surveillance.html">
+        <span class="lex-line-term">Mass Surveillance<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Systematic monitoring</span>
+      </a>
+      <a class="lex-line" href="network-storage.html">
+        <span class="lex-line-term">Network Storage<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Distributed data systems</span>
+      </a>
+      <a class="lex-line" href="neural-networks.html">
+        <span class="lex-line-term">Neural Networks<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Computing systems inspired by biological neural networks in animal brains.</span>
+      </a>
+      <a class="lex-line" href="optimization-problem.html">
+        <span class="lex-line-term">Optimization Problem<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Mathematical challenge of finding the best solution among alternatives</span>
+      </a>
+      <a class="lex-line" href="photonic-computing.html">
+        <span class="lex-line-term">Photonic Computing<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Information processing using photons (light particles) rather than electrons; potential advantages in speed and energy efficiency because photons…</span>
+      </a>
+      <a class="lex-line" href="predictive-processing.html">
+        <span class="lex-line-term">Predictive Processing<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Brain function theory emphasizing prediction over reaction</span>
+      </a>
+      <a class="lex-line" href="quantum-biology.html">
+        <span class="lex-line-term">Quantum Biology<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Physics principles governing biological system development</span>
+      </a>
+      <a class="lex-line" href="quantum-speedup.html">
+        <span class="lex-line-term">Quantum Speedup<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Computational advantage gained through quantum processing</span>
+      </a>
+      <a class="lex-line" href="risc-architecture.html">
+        <span class="lex-line-term">RISC Architecture<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Reduced Instruction Set Computer design philosophy</span>
+      </a>
+      <a class="lex-line" href="surveillance-systems.html">
+        <span class="lex-line-term">Surveillance Systems<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Monitoring and tracking technology</span>
+      </a>
+      <a class="lex-line" href="tacit-knowledge.html">
+        <span class="lex-line-term">Tacit Knowledge<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Expertise embedded in practice that precedes and resists verbal articulation; this week&#x27;s ten-year-old produced results professionals couldn&#x27;t…</span>
+      </a>
+      <a class="lex-line" href="telemetry.html">
+        <span class="lex-line-term">Telemetry<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Remote data collection</span>
+      </a>
+      <a class="lex-line" href="ternary-logic.html">
+        <span class="lex-line-term">Ternary Logic<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">a three-state computational logic (−1, 0, +1) implemented in the Soviet Setun computer in 1958, cited in this week&#x27;s Closer Look.</span>
+      </a>
+      <a class="lex-line" href="thermodynamics.html">
+        <span class="lex-line-term">Thermodynamics<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Energy transfer and transformation</span>
+      </a>
+      <a class="lex-line" href="weight-sparse-models.html">
+        <span class="lex-line-term">Weight Sparse Models<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">AI architecture optimization</span>
+      </a>
+      <a class="lex-line" href="3d-vr-concept-camera.html">
+        <span class="lex-line-term">3D VR Concept Camera</span>
+        <span class="lex-line-def">A prototype camera by Canon intended to capture content for VR.</span>
+      </a>
+      <a class="lex-line" href="4nm-chips.html">
+        <span class="lex-line-term">4nm chips</span>
+        <span class="lex-line-def">Semiconductor chips manufactured using a 4-nanometer process, representing one of the most advanced and miniaturized chip technologies currently in…</span>
+      </a>
+      <a class="lex-line" href="6g.html">
+        <span class="lex-line-term">6G</span>
+        <span class="lex-line-def">Sixth-generation wireless technology</span>
+      </a>
+      <a class="lex-line" href="age-verification.html">
+        <span class="lex-line-term">Age Verification</span>
+        <span class="lex-line-def">Digital identity confirmation systems for content access</span>
+      </a>
+      <a class="lex-line" href="agent-engineering.html">
+        <span class="lex-line-term">Agent Engineering</span>
+        <span class="lex-line-def">Designing autonomous AI systems that can perform tasks</span>
+      </a>
+      <a class="lex-line" href="agentic-ai-frameworks.html">
+        <span class="lex-line-term">Agentic AI Frameworks</span>
+        <span class="lex-line-def">Tools and platforms for creating AI agents capable of performing complex tasks, such as SmolAgents, PydanticAI, and LlamaIndex Workflows.</span>
+      </a>
+      <a class="lex-line" href="agricultural-automation.html">
+        <span class="lex-line-term">Agricultural Automation</span>
+        <span class="lex-line-def">Computerized farming</span>
+      </a>
+      <a class="lex-line" href="ai-integration-framework.html">
+        <span class="lex-line-term">AI Integration Framework</span>
+        <span class="lex-line-def">Systems for adopting artificial intelligence</span>
+      </a>
+      <a class="lex-line" href="ai-jailbreak.html">
+        <span class="lex-line-term">AI Jailbreak</span>
+        <span class="lex-line-def">An attempt to bypass an AI system&#x27;s ethical constraints or programmed limitations to make it perform unintended or potentially harmful actions.</span>
+      </a>
+      <a class="lex-line" href="ai-labor-substitution.html">
+        <span class="lex-line-term">AI Labor Substitution</span>
+        <span class="lex-line-def">Corporate strategy for replacing human workers with artificial intelligence systems</span>
+      </a>
+      <a class="lex-line" href="ai-literacy.html">
+        <span class="lex-line-term">AI Literacy</span>
+        <span class="lex-line-def">The ability to understand, use, and critically evaluate artificial intelligence systems.</span>
+      </a>
+      <a class="lex-line" href="ai-monetization.html">
+        <span class="lex-line-term">AI Monetization</span>
+        <span class="lex-line-def">Strategies and tactics for generating revenue from AI tools and services, as explored in expert guides this week.</span>
+      </a>
+      <a class="lex-line" href="ai-security.html">
+        <span class="lex-line-term">AI Security</span>
+        <span class="lex-line-def">Anthropic&#x27;s development of new jailbreak prevention methods for AI models highlights the evolving landscape of AI safety and ethics.</span>
+      </a>
+      <a class="lex-line" href="ai-slop.html">
+        <span class="lex-line-term">AI Slop</span>
+        <span class="lex-line-def">Low-quality AI-generated content that passes surface-level evaluation filters while failing substantive coherence or accuracy checks</span>
+      </a>
+      <a class="lex-line" href="ai-powered.html">
+        <span class="lex-line-term">AI-Powered</span>
+        <span class="lex-line-def">Systems or tools enhanced by artificial intelligence capabilities.</span>
+      </a>
+      <a class="lex-line" href="algorithmic-curation.html">
+        <span class="lex-line-term">Algorithmic Curation</span>
+        <span class="lex-line-def">Automated content selection</span>
+      </a>
+      <a class="lex-line" href="algorithmic-efficiency.html">
+        <span class="lex-line-term">Algorithmic Efficiency</span>
+        <span class="lex-line-def">Computational performance optimization techniques</span>
+      </a>
+      <a class="lex-line" href="altermagnetism.html">
+        <span class="lex-line-term">Altermagnetism</span>
+        <span class="lex-line-def">Newly discovered magnetic phenomenon with unique properties</span>
+      </a>
+      <a class="lex-line" href="amplituhedron.html">
+        <span class="lex-line-term">Amplituhedron</span>
+        <span class="lex-line-def">Geometric structure simplifying particle interaction calculations</span>
+      </a>
+      <a class="lex-line" href="analog-computation.html">
+        <span class="lex-line-term">Analog Computation</span>
+        <span class="lex-line-def">Processing based on continuous variable states rather than discrete binary values; argued by some neuroscientists to characterize brain function</span>
+      </a>
+      <a class="lex-line" href="analog-computing.html">
+        <span class="lex-line-term">Analog Computing</span>
+        <span class="lex-line-def">Non-binary calculation methods</span>
+      </a>
+      <a class="lex-line" href="analog-matrix-computation.html">
+        <span class="lex-line-term">Analog Matrix Computation</span>
+        <span class="lex-line-def">Mathematical operations using continuous signal processing</span>
+      </a>
+      <a class="lex-line" href="analog-vs-digital-quantum-simulation.html">
+        <span class="lex-line-term">Analog vs. Digital Quantum Simulation</span>
+        <span class="lex-line-def">Different approaches to simulating quantum systems</span>
+      </a>
+      <a class="lex-line" href="animatable-models.html">
+        <span class="lex-line-term">Animatable Models</span>
+        <span class="lex-line-def">3D representations that can be posed and animated.</span>
+      </a>
+      <a class="lex-line" href="animatronics.html">
+        <span class="lex-line-term">Animatronics</span>
+        <span class="lex-line-def">Robotic devices to emulate a human or animal, or bring lifelike characteristics to an inanimate object</span>
+      </a>
+      <a class="lex-line" href="antiferromagnetic-materials.html">
+        <span class="lex-line-term">Antiferromagnetic Materials</span>
+        <span class="lex-line-def">Materials with alternating magnetic moments</span>
+      </a>
+      <a class="lex-line" href="antikythera-mechanism.html">
+        <span class="lex-line-term">Antikythera Mechanism</span>
+        <span class="lex-line-def">Ancient Greek analog computer for astronomical calculations</span>
+      </a>
+      <a class="lex-line" href="antitrust.html">
+        <span class="lex-line-term">Antitrust</span>
+        <span class="lex-line-def">Laws regulating business practices to ensure fair competition</span>
+      </a>
+      <a class="lex-line" href="anyone.html">
+        <span class="lex-line-term">Anyone&#x27;</span>
+        <span class="lex-line-def">technology companies to train their artifici... Author David Baldacci Rips Big Tech Over AI Copyright Stressed about certs? It&#x27;s a terrifying thing…</span>
+      </a>
+      <a class="lex-line" href="archaeological-dating.html">
+        <span class="lex-line-term">Archaeological Dating</span>
+        <span class="lex-line-def">Scientific methods for determining the age of prehistoric structures and artifacts</span>
+      </a>
+      <a class="lex-line" href="arrow-s-impossibility-theorem.html">
+        <span class="lex-line-term">Arrow&#x27;s Impossibility Theorem</span>
+        <span class="lex-line-def">A social choice theory theorem about ranked voting systems</span>
+      </a>
+      <a class="lex-line" href="astronomical-calculator.html">
+        <span class="lex-line-term">Astronomical Calculator</span>
+        <span class="lex-line-def">Celestial movement prediction</span>
+      </a>
+      <a class="lex-line" href="attraction-and-repulsion.html">
+        <span class="lex-line-term">Attraction and Repulsion</span>
+        <span class="lex-line-def">Fundamental forces driving the behavior of particles in physics and used metaphorically to describe interactions in systems like Particle Life.</span>
+      </a>
+      <a class="lex-line" href="authentication-through-entropy.html">
+        <span class="lex-line-term">Authentication Through Entropy</span>
+        <span class="lex-line-def">Security based on unpredictability rather than stored secrets</span>
+      </a>
+      <a class="lex-line" href="automated-ai.html">
+        <span class="lex-line-term">Automated AI</span>
+        <span class="lex-line-def">Software programmed to perform tasks automatically using artificial intelligence often without human intervention.</span>
+      </a>
+      <a class="lex-line" href="autonomous-agent.html">
+        <span class="lex-line-term">Autonomous Agent</span>
+        <span class="lex-line-def">An AI system capable of taking independent action sequences toward goals without human initiation of each step</span>
+      </a>
+      <a class="lex-line" href="autonomous-decision-making.html">
+        <span class="lex-line-term">Autonomous Decision-Making</span>
+        <span class="lex-line-def">The ability of AI systems to make choices without human intervention</span>
+      </a>
+      <a class="lex-line" href="autonomous-trucks.html">
+        <span class="lex-line-term">Autonomous Trucks</span>
+        <span class="lex-line-def">Trucks that can drive themselves without the need for a human driver, employing technology similar to that of other autonomous vehicles.</span>
+      </a>
+      <a class="lex-line" href="backdoor.html">
+        <span class="lex-line-term">Backdoor</span>
+        <span class="lex-line-def">Hidden method for bypassing normal authentication in computing systems</span>
+      </a>
+      <a class="lex-line" href="backdoor-implementation.html">
+        <span class="lex-line-term">Backdoor Implementation</span>
+        <span class="lex-line-def">Hidden access points in digital systems</span>
+      </a>
+      <a class="lex-line" href="backpropagation.html">
+        <span class="lex-line-term">Backpropagation</span>
+        <span class="lex-line-def">The algorithm by which neural networks adjust weights during training by propagating error signals backward through the network; the MIT finding…</span>
+      </a>
+      <a class="lex-line" href="bankruptcy-asset-sale.html">
+        <span class="lex-line-term">Bankruptcy Asset Sale</span>
+        <span class="lex-line-def">The liquidation of a company&#x27;s assets to pay creditors during bankruptcy proceedings.</span>
+      </a>
+      <a class="lex-line" href="battery-technology.html">
+        <span class="lex-line-term">Battery Technology</span>
+        <span class="lex-line-def">Science and engineering of creating storing electrical energy in portable form</span>
+      </a>
+      <a class="lex-line" href="big-five-personality-model-ocean.html">
+        <span class="lex-line-term">Big Five Personality Model (OCEAN)</span>
+        <span class="lex-line-def">Openness, Conscientiousness,</span>
+      </a>
+      <a class="lex-line" href="bilaterian.html">
+        <span class="lex-line-term">Bilaterian</span>
+        <span class="lex-line-def">Organisms with bilateral symmetry (including humans)</span>
+      </a>
+      <a class="lex-line" href="biocomputing.html">
+        <span class="lex-line-term">Biocomputing</span>
+        <span class="lex-line-def">Biological information processing</span>
+      </a>
+      <a class="lex-line" href="bioinspired-robots.html">
+        <span class="lex-line-term">Bioinspired Robots</span>
+        <span class="lex-line-def">Robots designed based on biological systems</span>
+      </a>
+      <a class="lex-line" href="biometric-authentication.html">
+        <span class="lex-line-term">Biometric Authentication</span>
+        <span class="lex-line-def">Identity verification using biological characteristics like facial features</span>
+      </a>
+      <a class="lex-line" href="biomimetic.html">
+        <span class="lex-line-term">Biomimetic</span>
+        <span class="lex-line-def">Imitating biological systems or processes in technology design.</span>
+      </a>
+      <a class="lex-line" href="biomimetic-robotics.html">
+        <span class="lex-line-term">Biomimetic Robotics</span>
+        <span class="lex-line-def">Robot design inspired by biological organisms and systems</span>
+      </a>
+      <a class="lex-line" href="biomimetics.html">
+        <span class="lex-line-term">Biomimetics</span>
+        <span class="lex-line-def">Design approach imitating models and systems in nature</span>
+      </a>
+      <a class="lex-line" href="biomimicry.html">
+        <span class="lex-line-term">Biomimicry</span>
+        <span class="lex-line-def">Design approach that models systems on biological processes and structures</span>
+      </a>
+      <a class="lex-line" href="black-box-system.html">
+        <span class="lex-line-term">Black-Box System</span>
+        <span class="lex-line-def">Technology that produces results without explicable reasoning</span>
+      </a>
+      <a class="lex-line" href="bluetooth-tracking.html">
+        <span class="lex-line-term">Bluetooth Tracking</span>
+        <span class="lex-line-def">Location monitoring using short-range wireless communication</span>
+      </a>
+      <a class="lex-line" href="body-language-profiling.html">
+        <span class="lex-line-term">Body Language Profiling</span>
+        <span class="lex-line-def">Analysis of physical cues to interpret emotional states</span>
+      </a>
+      <a class="lex-line" href="brain-pattern-activity.html">
+        <span class="lex-line-term">Brain Pattern Activity</span>
+        <span class="lex-line-def">Neural response patterns measured through scanning</span>
+      </a>
+      <a class="lex-line" href="brain-inspired-supercomputer.html">
+        <span class="lex-line-term">Brain-Inspired Supercomputer</span>
+        <span class="lex-line-def">A computing system designed to mimic the structure and function of the human brain</span>
+      </a>
+      <a class="lex-line" href="brutalist-architecture.html">
+        <span class="lex-line-term">Brutalist Architecture</span>
+        <span class="lex-line-def">Architectural style featuring exposed concrete forms</span>
+      </a>
+      <a class="lex-line" href="bulletin-board-system.html">
+        <span class="lex-line-term">Bulletin Board System</span>
+        <span class="lex-line-def">Computer-based messaging system predating the internet</span>
+      </a>
+      <a class="lex-line" href="business-architecture.html">
+        <span class="lex-line-term">Business Architecture</span>
+        <span class="lex-line-def">Organizational structure design</span>
+      </a>
+      <a class="lex-line" href="cantor-s-hierarchy.html">
+        <span class="lex-line-term">Cantor&#x27;s Hierarchy</span>
+        <span class="lex-line-def">The mathematical result demonstrating that infinite sets can be ranked by size, with some infinities provably larger than others</span>
+      </a>
+      <a class="lex-line" href="carbon-credits.html">
+        <span class="lex-line-term">Carbon Credits</span>
+        <span class="lex-line-def">Financial instruments representing greenhouse gas emission reductions</span>
+      </a>
+      <a class="lex-line" href="carbon-footprint.html">
+        <span class="lex-line-term">Carbon Footprint</span>
+        <span class="lex-line-def">The total amount of greenhouse gases, primarily carbon dioxide, emitted directly or indirectly by an individual, organization, product, or event…</span>
+      </a>
+      <a class="lex-line" href="carbon-neutral-fuel.html">
+        <span class="lex-line-term">Carbon-Neutral Fuel</span>
+        <span class="lex-line-def">Fuel that doesn&#x27;t increase atmospheric carbon dioxide</span>
+      </a>
+      <a class="lex-line" href="cascade-failure.html">
+        <span class="lex-line-term">Cascade Failure</span>
+        <span class="lex-line-def">System collapse triggered by single point failure spreading through dependencies</span>
+      </a>
+      <a class="lex-line" href="cellular-biobots.html">
+        <span class="lex-line-term">Cellular Biobots</span>
+        <span class="lex-line-def">Self-organizing biological systems derived from cellular material</span>
+      </a>
+      <a class="lex-line" href="cellular-cooperation.html">
+        <span class="lex-line-term">Cellular Cooperation</span>
+        <span class="lex-line-def">Biological system collaboration</span>
+      </a>
+      <a class="lex-line" href="chip-supply-chain.html">
+        <span class="lex-line-term">Chip Supply Chain</span>
+        <span class="lex-line-def">The sequence of processes involved in the production and distribution of semiconductor chips</span>
+      </a>
+      <a class="lex-line" href="circuit-board-fabrication.html">
+        <span class="lex-line-term">Circuit Board Fabrication</span>
+        <span class="lex-line-def">The process of creating printed circuit boards for electronic devices.</span>
+      </a>
+      <a class="lex-line" href="claude-ai.html">
+        <span class="lex-line-term">Claude AI</span>
+        <span class="lex-line-def">An artificial intelligence model developed by Anthropic, known for its conversational abilities and ethical considerations.</span>
+      </a>
+      <a class="lex-line" href="clickjacking.html">
+        <span class="lex-line-term">Clickjacking</span>
+        <span class="lex-line-def">A malicious technique to trick users into clicking something different from what they perceive</span>
+      </a>
+      <a class="lex-line" href="cloud-security.html">
+        <span class="lex-line-term">Cloud Security</span>
+        <span class="lex-line-def">Protection strategies for data and applications hosted in cloud environments.</span>
+      </a>
+      <a class="lex-line" href="cloud-dodging.html">
+        <span class="lex-line-term">Cloud-Dodging</span>
+        <span class="lex-line-def">The ability of a satellite to autonomously avoid cloud cover for optimal functionality</span>
+      </a>
+      <a class="lex-line" href="cognitive-convergence.html">
+        <span class="lex-line-term">Cognitive Convergence</span>
+        <span class="lex-line-def">The integration of different forms of cognitive processes for improved decision making or problem-solving.</span>
+      </a>
+      <a class="lex-line" href="cognitive-development.html">
+        <span class="lex-line-term">Cognitive Development</span>
+        <span class="lex-line-def">Growth of intellectual abilities, including thinking, reasoning, and understanding</span>
+      </a>
+      <a class="lex-line" href="cognitive-load.html">
+        <span class="lex-line-term">Cognitive Load</span>
+        <span class="lex-line-def">The mental effort required to process information and perform tasks, which can impact cognitive performance and decision-making.</span>
+      </a>
+      <a class="lex-line" href="cognitive-offloading.html">
+        <span class="lex-line-term">Cognitive Offloading</span>
+        <span class="lex-line-def">Process of using external tools to reduce mental workload</span>
+      </a>
+      <a class="lex-line" href="coherent-light.html">
+        <span class="lex-line-term">Coherent Light</span>
+        <span class="lex-line-def">Light waves that are in phase, typically produced by lasers.</span>
+      </a>
+      <a class="lex-line" href="collatz-conjecture.html">
+        <span class="lex-line-term">Collatz Conjecture</span>
+        <span class="lex-line-def">Unsolved mathematical sequence problem</span>
+      </a>
+      <a class="lex-line" href="colony-collapse-disorder.html">
+        <span class="lex-line-term">Colony Collapse Disorder</span>
+        <span class="lex-line-def">Phenomenon of worker bees abandoning hives</span>
+      </a>
+      <a class="lex-line" href="compiler-backdoor.html">
+        <span class="lex-line-term">Compiler Backdoor</span>
+        <span class="lex-line-def">Security vulnerability in software compilation process</span>
+      </a>
+      <a class="lex-line" href="complex-systems.html">
+        <span class="lex-line-term">Complex Systems</span>
+        <span class="lex-line-def">Systems with emergent properties from component interactions</span>
+      </a>
+      <a class="lex-line" href="compliance-checks.html">
+        <span class="lex-line-term">Compliance Checks</span>
+        <span class="lex-line-def">Procedures to ensure designs and plans meet regulatory and legal standards.</span>
+      </a>
+      <a class="lex-line" href="compositing.html">
+        <span class="lex-line-term">Compositing</span>
+        <span class="lex-line-def">The process of combining visual elements from separate sources, such as CG characters and live-action footage, to create a final image or scene.</span>
+      </a>
+      <a class="lex-line" href="compression-rate.html">
+        <span class="lex-line-term">Compression Rate</span>
+        <span class="lex-line-def">The speed at which multi-state systems collapse into fewer states; determined by how much matter stands between the decision and the execution.…</span>
+      </a>
+      <a class="lex-line" href="computational-autocracy.html">
+        <span class="lex-line-term">Computational autocracy</span>
+        <span class="lex-line-def">A system of governance that leverages advanced computational technologies, particularly AI, to exert control and influence over a population.</span>
+      </a>
+      <a class="lex-line" href="computational-complexity.html">
+        <span class="lex-line-term">Computational Complexity</span>
+        <span class="lex-line-def">Mathematical problem difficulty</span>
+      </a>
+      <a class="lex-line" href="computer-graphics.html">
+        <span class="lex-line-term">Computer Graphics</span>
+        <span class="lex-line-def">Creation and manipulation of visual content using computers</span>
+      </a>
+      <a class="lex-line" href="configurational-entropy.html">
+        <span class="lex-line-term">Configurational Entropy</span>
+        <span class="lex-line-def">The component of entropy arising from the number of possible arrangements of atoms or molecules in a material; minimized in ideal glass by…</span>
+      </a>
+      <a class="lex-line" href="confirmation-bias.html">
+        <span class="lex-line-term">Confirmation Bias</span>
+        <span class="lex-line-def">Tendency to search for information that confirms pre-existing beliefs</span>
+      </a>
+      <a class="lex-line" href="consciousness.html">
+        <span class="lex-line-term">Consciousness</span>
+        <span class="lex-line-def">Subjective experience of awareness</span>
+      </a>
+      <a class="lex-line" href="consciousness-manipulation.html">
+        <span class="lex-line-term">Consciousness Manipulation</span>
+        <span class="lex-line-def">Mental state alteration</span>
+      </a>
+      <a class="lex-line" href="constitutional-ai.html">
+        <span class="lex-line-term">Constitutional AI</span>
+        <span class="lex-line-def">AI training method using AI feedback rather than human oversight</span>
+      </a>
+      <a class="lex-line" href="constitutional-forcing-shannon-wakil.html">
+        <span class="lex-line-term">Constitutional Forcing (Shannon-Wakil)</span>
+        <span class="lex-line-def">The mechanism by which a system&#x27;s intrinsic algebraic structure forces its configuration space to concentrate onto a strict subspace — the governing…</span>
+      </a>
+      <a class="lex-line" href="content-delivery-networks.html">
+        <span class="lex-line-term">Content Delivery Networks</span>
+        <span class="lex-line-def">Streaming infrastructure</span>
+      </a>
+      <a class="lex-line" href="conversational-interface.html">
+        <span class="lex-line-term">Conversational Interface</span>
+        <span class="lex-line-def">User interface for computers that emulates a conversation with a real human</span>
+      </a>
+      <a class="lex-line" href="copyright.html">
+        <span class="lex-line-term">Copyright</span>
+        <span class="lex-line-def">Legal right that grants the creator of an original work exclusive rights to its use and distribution</span>
+      </a>
+      <a class="lex-line" href="copyright-settlement.html">
+        <span class="lex-line-term">Copyright Settlement</span>
+        <span class="lex-line-def">Legal agreement regarding the use of copyrighted material</span>
+      </a>
+      <a class="lex-line" href="corporate-espionage.html">
+        <span class="lex-line-term">Corporate Espionage</span>
+        <span class="lex-line-def">Practice of obtaining confidential information from business competitors</span>
+      </a>
+      <a class="lex-line" href="corporate-externalization.html">
+        <span class="lex-line-term">Corporate Externalization</span>
+        <span class="lex-line-def">Shifting business costs onto society or environment</span>
+      </a>
+      <a class="lex-line" href="cosmological-model.html">
+        <span class="lex-line-term">Cosmological Model</span>
+        <span class="lex-line-def">A mathematical description of the universe&#x27;s structure and evolution</span>
+      </a>
+      <a class="lex-line" href="counter-surveillance.html">
+        <span class="lex-line-term">Counter-Surveillance</span>
+        <span class="lex-line-def">Techniques to avoid or detect surveillance systems</span>
+      </a>
+      <a class="lex-line" href="covert-consciousness.html">
+        <span class="lex-line-term">Covert Consciousness</span>
+        <span class="lex-line-def">Hidden awareness states</span>
+      </a>
+      <a class="lex-line" href="critical-thinking-framework.html">
+        <span class="lex-line-term">Critical Thinking Framework</span>
+        <span class="lex-line-def">Structured approach to analysis and decision- making</span>
+      </a>
+      <a class="lex-line" href="cross-border-resource-management.html">
+        <span class="lex-line-term">Cross-Border Resource Management</span>
+        <span class="lex-line-def">International sharing of natural resources</span>
+      </a>
+      <a class="lex-line" href="cryptocurrency.html">
+        <span class="lex-line-term">Cryptocurrency</span>
+        <span class="lex-line-def">Digital or virtual currency that uses cryptography for security.</span>
+      </a>
+      <a class="lex-line" href="cryptocurrency-mining.html">
+        <span class="lex-line-term">Cryptocurrency Mining</span>
+        <span class="lex-line-def">Digital currency creation</span>
+      </a>
+      <a class="lex-line" href="cryptography.html">
+        <span class="lex-line-term">Cryptography</span>
+        <span class="lex-line-def">A practice of securing information and communications through the use of codes so that only those for whom the information is intended can read and…</span>
+      </a>
+      <a class="lex-line" href="cultural-justice.html">
+        <span class="lex-line-term">Cultural Justice</span>
+        <span class="lex-line-def">Advocating for fairness and rectification in the ways cultural representations and artifacts are handled, often referring to returning items taken…</span>
+      </a>
+      <a class="lex-line" href="currency-reset.html">
+        <span class="lex-line-term">Currency Reset</span>
+        <span class="lex-line-def">Large-scale restructuring of international monetary systems</span>
+      </a>
+      <a class="lex-line" href="custom-vehicle-fabrication.html">
+        <span class="lex-line-term">Custom Vehicle Fabrication</span>
+        <span class="lex-line-def">The process of modifying or building vehicles to unique specifications</span>
+      </a>
+      <a class="lex-line" href="cyber-attack-vectors.html">
+        <span class="lex-line-term">Cyber Attack Vectors</span>
+        <span class="lex-line-def">Methods and pathways used to breach digital security</span>
+      </a>
+      <a class="lex-line" href="cyberattack.html">
+        <span class="lex-line-term">Cyberattack</span>
+        <span class="lex-line-def">Intentional intrusion into computer systems for data or service disruption</span>
+      </a>
+      <a class="lex-line" href="cybercrime-collaboration.html">
+        <span class="lex-line-term">Cybercrime Collaboration</span>
+        <span class="lex-line-def">Cooperation between different hacking or cybercriminal groups</span>
+      </a>
+      <a class="lex-line" href="darcy-s-law.html">
+        <span class="lex-line-term">Darcy&#x27;s Law</span>
+        <span class="lex-line-def">a fluid dynamics principle predating espresso machines — to model it precisely. DNA Polymerase The enzyme that synthesizes DNA during replication.…</span>
+      </a>
+      <a class="lex-line" href="dark-forest-theory.html">
+        <span class="lex-line-term">Dark Forest Theory</span>
+        <span class="lex-line-def">A metaphor for the internet described as a silent and lawless realm, where generative AI makes the distinction between real and synthetic content…</span>
+      </a>
+      <a class="lex-line" href="dark-photon.html">
+        <span class="lex-line-term">Dark Photon</span>
+        <span class="lex-line-def">Theoretical particle affecting quantum interference</span>
+      </a>
+      <a class="lex-line" href="data-broker.html">
+        <span class="lex-line-term">Data Broker</span>
+        <span class="lex-line-def">Company that collects and sells personal data</span>
+      </a>
+      <a class="lex-line" href="data-consent-option.html">
+        <span class="lex-line-term">Data Consent Option</span>
+        <span class="lex-line-def">Privacy setting controlling how user data is collected and utilized</span>
+      </a>
+      <a class="lex-line" href="data-privacy-protection.html">
+        <span class="lex-line-term">Data Privacy Protection</span>
+        <span class="lex-line-def">Methods for securing personal information</span>
+      </a>
+      <a class="lex-line" href="data-retention.html">
+        <span class="lex-line-term">Data Retention</span>
+        <span class="lex-line-def">Policies governing the storage and preservation of digital information</span>
+      </a>
+      <a class="lex-line" href="data-driven-decisions.html">
+        <span class="lex-line-term">Data-Driven Decisions</span>
+        <span class="lex-line-def">Decisions based on data analysis rather than intuition or observation alone.</span>
+      </a>
+      <a class="lex-line" href="database.html">
+        <span class="lex-line-term">Database</span>
+        <span class="lex-line-def">Organized collection of structured information or data</span>
+      </a>
+      <a class="lex-line" href="decentralized-validation.html">
+        <span class="lex-line-term">Decentralized Validation</span>
+        <span class="lex-line-def">Trust distributed across network rather than centralized authority</span>
+      </a>
+      <a class="lex-line" href="decentralized-web.html">
+        <span class="lex-line-term">Decentralized Web</span>
+        <span class="lex-line-def">A form of the internet built using decentralized networks wherein no single party has complete control over data.</span>
+      </a>
+      <a class="lex-line" href="demographic-collapse.html">
+        <span class="lex-line-term">Demographic Collapse</span>
+        <span class="lex-line-def">Rapid population decline due to falling birth rates</span>
+      </a>
+      <a class="lex-line" href="dependency-graph.html">
+        <span class="lex-line-term">Dependency Graph</span>
+        <span class="lex-line-def">A directed acyclic graph showing which concepts must be understood before others — the structural backbone of the Geometric AI Atlas, and a useful…</span>
+      </a>
+      <a class="lex-line" href="diamanti-system.html">
+        <span class="lex-line-term">Diamanti System</span>
+        <span class="lex-line-def">Carbon-absorbing concrete structural technology</span>
+      </a>
+      <a class="lex-line" href="diamond-battery.html">
+        <span class="lex-line-term">Diamond Battery</span>
+        <span class="lex-line-def">Nuclear-powered battery using radioactive isotopes in diamond structure</span>
+      </a>
+      <a class="lex-line" href="diffusion-models.html">
+        <span class="lex-line-term">Diffusion Models</span>
+        <span class="lex-line-def">AI techniques that generate images by gradually transforming random noise.</span>
+      </a>
+      <a class="lex-line" href="digital-blueprints.html">
+        <span class="lex-line-term">Digital Blueprints</span>
+        <span class="lex-line-def">Computer-generated models or representations that serve as the detailed plan for virtual or physical projects.</span>
+      </a>
+      <a class="lex-line" href="digital-coup.html">
+        <span class="lex-line-term">Digital Coup</span>
+        <span class="lex-line-def">Use of digital technologies to undermine or overthrow political systems</span>
+      </a>
+      <a class="lex-line" href="digital-immune-system.html">
+        <span class="lex-line-term">Digital Immune System</span>
+        <span class="lex-line-def">A metaphorical reference to the safeguards implemented in digital systems to protect against cyber threats.</span>
+      </a>
+      <a class="lex-line" href="digital-precision.html">
+        <span class="lex-line-term">Digital Precision</span>
+        <span class="lex-line-def">In the context of technology, refers to the high degree of accuracy and detail that digital processes can achieve compared to traditional methods.</span>
+      </a>
+      <a class="lex-line" href="digital-security-threats.html">
+        <span class="lex-line-term">Digital Security Threats</span>
+        <span class="lex-line-def">Emerging AI-related vulnerabilities</span>
+      </a>
+      <a class="lex-line" href="digital-sovereignty.html">
+        <span class="lex-line-term">Digital Sovereignty</span>
+        <span class="lex-line-def">National control over digital infrastructure and data</span>
+      </a>
+      <a class="lex-line" href="digital-twin-technology.html">
+        <span class="lex-line-term">Digital Twin Technology</span>
+        <span class="lex-line-def">Utilizing virtual models to simulate, predict, and optimize the functions of physical entities in the digital world.</span>
+      </a>
+      <a class="lex-line" href="dominance-reasoning.html">
+        <span class="lex-line-term">Dominance Reasoning</span>
+        <span class="lex-line-def">In decision theory, choosing an option that is at least as good as alternatives in all scenarios and better in at least one; in Newcomb&#x27;s Paradox,…</span>
+      </a>
+      <a class="lex-line" href="dominance-reasoning-vs-expected-value-newcomb-revisited.html">
+        <span class="lex-line-term">Dominance Reasoning vs. Expected Value (Newcomb, revisited)</span>
+        <span class="lex-line-def">The unresolved tension in decision theory between choosing what&#x27;s best in all scenarios (dominance) and choosing what has the highest…</span>
+      </a>
+      <a class="lex-line" href="drone-navigation.html">
+        <span class="lex-line-term">Drone Navigation</span>
+        <span class="lex-line-def">Autonomous flight control systems</span>
+      </a>
+      <a class="lex-line" href="drone-show-technology.html">
+        <span class="lex-line-term">Drone Show Technology</span>
+        <span class="lex-line-def">The intricate process of designing and executing large-scale aerial displays using coordinated drone fleets, explored in this week&#x27;s video content.</span>
+      </a>
+      <a class="lex-line" href="drug-repurposing.html">
+        <span class="lex-line-term">Drug Repurposing</span>
+        <span class="lex-line-def">Finding new uses for existing approved medications</span>
+      </a>
+      <a class="lex-line" href="dsm-future-strategic-committee.html">
+        <span class="lex-line-term">DSM Future Strategic Committee</span>
+        <span class="lex-line-def">The APA committee that published five papers in The American Journal of Psychiatry in January 2026, outlining plans to incorporate dimensionality,…</span>
+      </a>
+      <a class="lex-line" href="dual-use-platform.html">
+        <span class="lex-line-term">Dual-Use Platform</span>
+        <span class="lex-line-def">A system originally built for one domain that gets deployed across fundamentally different contexts without structural modification. Palantir&#x27;s…</span>
+      </a>
+      <a class="lex-line" href="due-diligence.html">
+        <span class="lex-line-term">Due Diligence</span>
+        <span class="lex-line-def">Comprehensive investigation of business or investment opportunities</span>
+      </a>
+      <a class="lex-line" href="dynamic-range.html">
+        <span class="lex-line-term">Dynamic Range</span>
+        <span class="lex-line-def">Imaging light sensitivity spectrum</span>
+      </a>
+      <a class="lex-line" href="e8-structure.html">
+        <span class="lex-line-term">E8 Structure</span>
+        <span class="lex-line-def">248-dimensional mathematical pattern</span>
+      </a>
+      <a class="lex-line" href="economic-bubble.html">
+        <span class="lex-line-term">Economic Bubble</span>
+        <span class="lex-line-def">Market value inflation phenomenon</span>
+      </a>
+      <a class="lex-line" href="ecovillage.html">
+        <span class="lex-line-term">Ecovillage</span>
+        <span class="lex-line-def">Sustainable community designed with ecological and social principles</span>
+      </a>
+      <a class="lex-line" href="eddy-current-losses.html">
+        <span class="lex-line-term">Eddy Current Losses</span>
+        <span class="lex-line-def">Losses in electrical machines due to the formation of electric currents induced by changing magnetic fields in conductive materials.</span>
+      </a>
+      <a class="lex-line" href="electromagnetic-substrate.html">
+        <span class="lex-line-term">Electromagnetic Substrate</span>
+        <span class="lex-line-def">Theory that consciousness operates through EM fields</span>
+      </a>
+      <a class="lex-line" href="electron-shower.html">
+        <span class="lex-line-term">Electron Shower</span>
+        <span class="lex-line-def">A new technique in microchip manufacturing using controlled electron beams</span>
+      </a>
+      <a class="lex-line" href="embodied-ai.html">
+        <span class="lex-line-term">Embodied AI</span>
+        <span class="lex-line-def">Artificial intelligence systems with physical presence and environmental interaction</span>
+      </a>
+      <a class="lex-line" href="emergent-structures.html">
+        <span class="lex-line-term">Emergent Structures</span>
+        <span class="lex-line-def">Complex systems and patterns that arise out of a multiplicity of relatively simple interactions.</span>
+      </a>
+      <a class="lex-line" href="emotional-intelligence-ei-eq.html">
+        <span class="lex-line-term">Emotional Intelligence (EI/EQ)</span>
+        <span class="lex-line-def">The capacity to understand and manage emotions, recognized as crucial for success in both personal and professional spheres.</span>
+      </a>
+      <a class="lex-line" href="emotional-wellbeing.html">
+        <span class="lex-line-term">Emotional Wellbeing</span>
+        <span class="lex-line-def">Psychological state related to happiness and life satisfaction</span>
+      </a>
+      <a class="lex-line" href="enduring-monogamous-relationships.html">
+        <span class="lex-line-term">Enduring Monogamous Relationships</span>
+        <span class="lex-line-def">Long-term, exclusive partnerships between individuals, often observed in certain species such as prairie voles.</span>
+      </a>
+      <a class="lex-line" href="energy-storage.html">
+        <span class="lex-line-term">Energy Storage</span>
+        <span class="lex-line-def">Systems for preserving power</span>
+      </a>
+      <a class="lex-line" href="environmental-impact-assessment.html">
+        <span class="lex-line-term">Environmental Impact Assessment</span>
+        <span class="lex-line-def">Tech infrastructure analysis</span>
+      </a>
+      <a class="lex-line" href="equivariant-neural-network.html">
+        <span class="lex-line-term">Equivariant Neural Network</span>
+        <span class="lex-line-def">A neural architecture that preserves symmetry operations across transformations, enabling physically-consistent representations</span>
+      </a>
+      <a class="lex-line" href="error-signal-neural.html">
+        <span class="lex-line-term">Error Signal (Neural)</span>
+        <span class="lex-line-def">Targeted feedback delivered to specific neurons during learning that drives parameter updates; MIT&#x27;s 2026 finding shows these are more precise and…</span>
+      </a>
+      <a class="lex-line" href="ethernet-categories.html">
+        <span class="lex-line-term">Ethernet Categories</span>
+        <span class="lex-line-def">Classification system for twisted-pair cables (Cat5, Cat6, etc.)</span>
+      </a>
+      <a class="lex-line" href="evolutionary-mismatch.html">
+        <span class="lex-line-term">Evolutionary Mismatch</span>
+        <span class="lex-line-def">Disconnect between evolved traits and modern environment</span>
+      </a>
+      <a class="lex-line" href="existential-risk.html">
+        <span class="lex-line-term">Existential Risk</span>
+        <span class="lex-line-def">Potential for an event that could cause human extinction or drastically curtail humanity&#x27;s potential</span>
+      </a>
+      <a class="lex-line" href="expected-value-reasoning.html">
+        <span class="lex-line-term">Expected Value Reasoning</span>
+        <span class="lex-line-def">Choosing the option with the highest probability-weighted outcome; in Newcomb&#x27;s Paradox, expected value reasoning recommends one-boxing</span>
+      </a>
+      <a class="lex-line" href="extinction-event.html">
+        <span class="lex-line-term">Extinction Event</span>
+        <span class="lex-line-def">A widespread and rapid decrease in diversity or abundance</span>
+      </a>
+      <a class="lex-line" href="extraterrestrial-origins.html">
+        <span class="lex-line-term">Extraterrestrial Origins</span>
+        <span class="lex-line-def">The concept that life or materials on Earth may have come from outer space</span>
+      </a>
+      <a class="lex-line" href="extraversion-agreeableness-neuroticism.html">
+        <span class="lex-line-term">Extraversion, Agreeableness, Neuroticism</span>
+        <span class="lex-line-def">the empirically superior personality framework with better predictive validity, test-retest reliability, and cross-cultural generalizability than…</span>
+      </a>
+      <a class="lex-line" href="fab.html">
+        <span class="lex-line-term">Fab</span>
+        <span class="lex-line-def">Short for &quot;fabrication plant,&quot; a specialized facility where semiconductor devices, such as computer chips, are manufactured.</span>
+      </a>
+      <a class="lex-line" href="fab-fabrication-plant.html">
+        <span class="lex-line-term">Fab (Fabrication Plant)</span>
+        <span class="lex-line-def">A facility for manufacturing semiconductor devices, such as TSMC&#x27;s Arizona Fab 21 producing 4nm chips.</span>
+      </a>
+      <a class="lex-line" href="facial-recognition.html">
+        <span class="lex-line-term">Facial Recognition</span>
+        <span class="lex-line-def">Biometric software identifying individuals from facial features</span>
+      </a>
+      <a class="lex-line" href="fair-use.html">
+        <span class="lex-line-term">Fair Use</span>
+        <span class="lex-line-def">A legal doctrine that allows limited use of copyrighted material without permission from the copyright holder.</span>
+      </a>
+      <a class="lex-line" href="false-positive-tax.html">
+        <span class="lex-line-term">False Positive Tax</span>
+        <span class="lex-line-def">The systemic cost imposed on individuals incorrectly classified as high-risk by predictive systems—particularly acute in criminal justice contexts</span>
+      </a>
+      <a class="lex-line" href="femtosecond-communication.html">
+        <span class="lex-line-term">Femtosecond Communication</span>
+        <span class="lex-line-def">Data transmission measured in quadrillionths of seconds</span>
+      </a>
+      <a class="lex-line" href="fermat-s-last-theorem.html">
+        <span class="lex-line-term">Fermat&#x27;s Last Theorem</span>
+        <span class="lex-line-def">Mathematical conjecture about integer solutions to equations</span>
+      </a>
+      <a class="lex-line" href="fermion.html">
+        <span class="lex-line-term">Fermion</span>
+        <span class="lex-line-def">A class of subatomic particle with half-integer spin that obeys the Pauli exclusion principle; includes quarks, electrons, and neutrinos; the…</span>
+      </a>
+      <a class="lex-line" href="fictional-learning.html">
+        <span class="lex-line-term">Fictional Learning</span>
+        <span class="lex-line-def">Brain processing of imaginary versus real information</span>
+      </a>
+      <a class="lex-line" href="film-noir.html">
+        <span class="lex-line-term">Film Noir</span>
+        <span class="lex-line-def">A cinematic style characterized by cynicism, fatalism, and moral ambiguity.</span>
+      </a>
+      <a class="lex-line" href="fine-tuning.html">
+        <span class="lex-line-term">Fine-tuning</span>
+        <span class="lex-line-def">Process of adapting a pre-trained AI model to a specific task or dataset.</span>
+      </a>
+      <a class="lex-line" href="flexible-antennas.html">
+        <span class="lex-line-term">Flexible Antennas</span>
+        <span class="lex-line-def">Electronics maintaining signal stability despite deformation</span>
+      </a>
+      <a class="lex-line" href="follow-me-on-x.html">
+        <span class="lex-line-term">Follow me on X</span>
+        <span class="lex-line-def">https://x.com/highyieldYT Follow me on bsky: https://bsky.app/profile/highyield.bsky.social imec — the 0:00 Intro most important…</span>
+      </a>
+      <a class="lex-line" href="forever-chemical.html">
+        <span class="lex-line-term">Forever Chemical</span>
+        <span class="lex-line-def">Persistent organic compound that doesn&#x27;t naturally degrade</span>
+      </a>
+      <a class="lex-line" href="formal-proof-verification.html">
+        <span class="lex-line-term">Formal Proof Verification</span>
+        <span class="lex-line-def">The process of encoding a mathematical argument in a proof-assistant language (such as Lean or Coq) that mechanically checks every logical step for…</span>
+      </a>
+      <a class="lex-line" href="four-step-playbook.html">
+        <span class="lex-line-term">Four-Step Playbook</span>
+        <span class="lex-line-def">The dispossession sequence identified in the essay: (1) frame the human cost as a problem the technology will solve, (2) introduce the technology as…</span>
+      </a>
+      <a class="lex-line" href="fourier-transform.html">
+        <span class="lex-line-term">Fourier Transform</span>
+        <span class="lex-line-def">Mathematical operation converting signals between time/space and frequency domains</span>
+      </a>
+      <a class="lex-line" href="fractal-chaos.html">
+        <span class="lex-line-term">Fractal Chaos</span>
+        <span class="lex-line-def">Self-similar patterns emerging from chaotic systems</span>
+      </a>
+      <a class="lex-line" href="fraudulent-advertising.html">
+        <span class="lex-line-term">Fraudulent Advertising</span>
+        <span class="lex-line-def">Deceptive commercial promotion schemes</span>
+      </a>
+      <a class="lex-line" href="front-projection.html">
+        <span class="lex-line-term">Front Projection</span>
+        <span class="lex-line-def">A filmmaking technique where scenes are projected onto a screen behind actors.</span>
+      </a>
+      <a class="lex-line" href="frooble.html">
+        <span class="lex-line-term">Frooble</span>
+        <span class="lex-line-def">Concept illustrating human ability to quickly learn new categories with minimal examples</span>
+      </a>
+      <a class="lex-line" href="fundamental-force.html">
+        <span class="lex-line-term">Fundamental Force</span>
+        <span class="lex-line-def">Basic interactions that govern particle behavior in physics</span>
+      </a>
+      <a class="lex-line" href="g-force.html">
+        <span class="lex-line-term">G-Force</span>
+        <span class="lex-line-def">A measurement of the force exerted on an object by the acceleration due to gravity, often experienced during high-speed or high-acceleration…</span>
+      </a>
+      <a class="lex-line" href="game-engine.html">
+        <span class="lex-line-term">Game Engine</span>
+        <span class="lex-line-def">Software framework designed for video game creation used in AI filmmaking</span>
+      </a>
+      <a class="lex-line" href="gamification.html">
+        <span class="lex-line-term">Gamification</span>
+        <span class="lex-line-def">Application of game-design elements in non-game contexts</span>
+      </a>
+      <a class="lex-line" href="gamma-beta-oscillations-neuroscience.html">
+        <span class="lex-line-term">Gamma / Beta Oscillations (Neuroscience)</span>
+        <span class="lex-line-def">Rhythmic electrical oscillations in the brain at specific frequency bands — gamma (30–100 Hz) and beta (13–30 Hz) — associated with attention,…</span>
+      </a>
+      <a class="lex-line" href="generalized-continued-fractions.html">
+        <span class="lex-line-term">Generalized Continued Fractions</span>
+        <span class="lex-line-def">Mathematical series transformations</span>
+      </a>
+      <a class="lex-line" href="genetic-privacy.html">
+        <span class="lex-line-term">Genetic Privacy</span>
+        <span class="lex-line-def">Protections for personal genetic information from unauthorized access or use.</span>
+      </a>
+      <a class="lex-line" href="geomagnetic-anomaly.html">
+        <span class="lex-line-term">Geomagnetic Anomaly</span>
+        <span class="lex-line-def">Regions where Earth&#x27;s magnetic field deviates from expected patterns</span>
+      </a>
+      <a class="lex-line" href="geospatial-backdoor.html">
+        <span class="lex-line-term">Geospatial Backdoor</span>
+        <span class="lex-line-def">Unauthorized access through mapping software vulnerabilities</span>
+      </a>
+      <a class="lex-line" href="geospatial-data.html">
+        <span class="lex-line-term">Geospatial Data</span>
+        <span class="lex-line-def">Information tied to specific geographic locations</span>
+      </a>
+      <a class="lex-line" href="glp-1-receptor-agonists.html">
+        <span class="lex-line-term">GLP-1 Receptor Agonists</span>
+        <span class="lex-line-def">The class of drugs including semaglutide (Ozempic, Wegovy) and tirzepatide that produce clinically meaningful weight loss. The essay identifies the…</span>
+      </a>
+      <a class="lex-line" href="goal-directed-intentionality.html">
+        <span class="lex-line-term">Goal-Directed Intentionality</span>
+        <span class="lex-line-def">Purposeful behavior aimed at achieving specific outcomes</span>
+      </a>
+      <a class="lex-line" href="grand-unified-theory.html">
+        <span class="lex-line-term">Grand Unified Theory</span>
+        <span class="lex-line-def">A theoretical framework in physics or mathematics aiming to explain diverse phenomena under a single model</span>
+      </a>
+      <a class="lex-line" href="grapheneos.html">
+        <span class="lex-line-term">GrapheneOS</span>
+        <span class="lex-line-def">Privacy-focused mobile operating system</span>
+      </a>
+      <a class="lex-line" href="gravitational-forces.html">
+        <span class="lex-line-term">Gravitational Forces</span>
+        <span class="lex-line-def">A natural phenomenon by which all things with mass or energy—including planets, stars, galaxies, and even light—are brought toward one another.</span>
+      </a>
+      <a class="lex-line" href="group-theory.html">
+        <span class="lex-line-term">Group Theory</span>
+        <span class="lex-line-def">Mathematical discipline with applications in cryptography and puzzles</span>
+      </a>
+      <a class="lex-line" href="gunn-diode.html">
+        <span class="lex-line-term">Gunn Diode</span>
+        <span class="lex-line-def">Semiconductor device with negative differential resistance</span>
+      </a>
+      <a class="lex-line" href="g-del-s-incompleteness-theorems.html">
+        <span class="lex-line-term">Gödel&#x27;s Incompleteness Theorems</span>
+        <span class="lex-line-def">Proofs about limitations of formal mathematical systems</span>
+      </a>
+      <a class="lex-line" href="hamilton-s-rule.html">
+        <span class="lex-line-term">Hamilton&#x27;s Rule</span>
+        <span class="lex-line-def">Evolutionary principle explaining altruistic behavior</span>
+      </a>
+      <a class="lex-line" href="happy-accidents.html">
+        <span class="lex-line-term">Happy Accidents</span>
+        <span class="lex-line-def">In art and technology, refers to unexpected but beneficial outcomes that occur without intent, often valued for their uniqueness and creativity.</span>
+      </a>
+      <a class="lex-line" href="hardware-quick-erase.html">
+        <span class="lex-line-term">Hardware Quick Erase</span>
+        <span class="lex-line-def">Physical data destruction mechanism</span>
+      </a>
+      <a class="lex-line" href="hash-tables.html">
+        <span class="lex-line-term">Hash Tables</span>
+        <span class="lex-line-def">Data structures enabling rapid information retrieval</span>
+      </a>
+      <a class="lex-line" href="heads-up-display.html">
+        <span class="lex-line-term">Heads-up display</span>
+        <span class="lex-line-def">A transparent display that presents data without requiring users to look away from their usual viewpoints. In automotive contexts, it projects…</span>
+      </a>
+      <a class="lex-line" href="heads-up-display-hud.html">
+        <span class="lex-line-term">Heads-up Display (HUD)</span>
+        <span class="lex-line-def">A transparent display that presents data without requiring users to look away from their usual viewpoints, as seen in BMW&#x27;s new windshield technology.</span>
+      </a>
+      <a class="lex-line" href="heat-wave-energy-capture.html">
+        <span class="lex-line-term">Heat Wave Energy Capture</span>
+        <span class="lex-line-def">Technology that harnesses atmospheric thermal gradients</span>
+      </a>
+      <a class="lex-line" href="high-na-lithography.html">
+        <span class="lex-line-term">High-NA Lithography</span>
+        <span class="lex-line-def">Advanced semiconductor manufacturing technique</span>
+      </a>
+      <a class="lex-line" href="hive-mind-ai.html">
+        <span class="lex-line-term">Hive-Mind AI</span>
+        <span class="lex-line-def">A type of artificial intelligence that mimics collective intelligence found in nature.</span>
+      </a>
+      <a class="lex-line" href="holographic-capture.html">
+        <span class="lex-line-term">Holographic Capture</span>
+        <span class="lex-line-def">A technique for recording three-dimensional information about a scene.</span>
+      </a>
+      <a class="lex-line" href="human-level-intelligence.html">
+        <span class="lex-line-term">Human-Level Intelligence</span>
+        <span class="lex-line-def">AI capability matching or exceeding human cognitive performance</span>
+      </a>
+      <a class="lex-line" href="humanoid-robot.html">
+        <span class="lex-line-term">Humanoid Robot</span>
+        <span class="lex-line-def">Robot with human-like characteristics</span>
+      </a>
+      <a class="lex-line" href="hybrid-drone-technology.html">
+        <span class="lex-line-term">Hybrid Drone Technology</span>
+        <span class="lex-line-def">Innovations in drone design, such as morphing and hybrid locomotion, are expanding the capabilities and applications of unmanned aerial vehicles.</span>
+      </a>
+      <a class="lex-line" href="hydraulic-technology.html">
+        <span class="lex-line-term">Hydraulic Technology</span>
+        <span class="lex-line-def">Systems using liquid pressure for mechanical operations</span>
+      </a>
+      <a class="lex-line" href="hypnagogic-state.html">
+        <span class="lex-line-term">Hypnagogic State</span>
+        <span class="lex-line-def">Consciousness between wake and sleep</span>
+      </a>
+      <a class="lex-line" href="idrive.html">
+        <span class="lex-line-term">iDrive</span>
+        <span class="lex-line-def">BMW&#x27;s in-car control and infotainment system, now featuring an augmented reality windshield display for enhanced driver information and interaction.</span>
+      </a>
+      <a class="lex-line" href="immersive-experience.html">
+        <span class="lex-line-term">Immersive Experience</span>
+        <span class="lex-line-def">Technology creating a surrounding environment that engages multiple senses.</span>
+      </a>
+      <a class="lex-line" href="immersive-experience-design.html">
+        <span class="lex-line-term">Immersive Experience Design</span>
+        <span class="lex-line-def">Interactive entertainment that engages multiple senses simultaneously</span>
+      </a>
+      <a class="lex-line" href="income-distribution.html">
+        <span class="lex-line-term">Income Distribution</span>
+        <span class="lex-line-def">Pattern of income allocation across population segments</span>
+      </a>
+      <a class="lex-line" href="infrasound.html">
+        <span class="lex-line-term">Infrasound</span>
+        <span class="lex-line-def">Sound frequencies below human hearing range</span>
+      </a>
+      <a class="lex-line" href="infrastructure-bubble.html">
+        <span class="lex-line-term">Infrastructure Bubble</span>
+        <span class="lex-line-def">Financial speculation around technology investments</span>
+      </a>
+      <a class="lex-line" href="inheritance-dissolution.html">
+        <span class="lex-line-term">Inheritance Dissolution</span>
+        <span class="lex-line-def">The breakdown of the three conditions required for functional inheritance — (1) something transferable, (2) someone capable of receiving it, (3)…</span>
+      </a>
+      <a class="lex-line" href="innovation-model.html">
+        <span class="lex-line-term">Innovation Model</span>
+        <span class="lex-line-def">Framework for developing new solutions</span>
+      </a>
+      <a class="lex-line" href="integration-framework.html">
+        <span class="lex-line-term">Integration Framework</span>
+        <span class="lex-line-def">System for incorporating new technologies</span>
+      </a>
+      <a class="lex-line" href="interoception.html">
+        <span class="lex-line-term">Interoception</span>
+        <span class="lex-line-def">Internal bodily sense monitoring</span>
+      </a>
+      <a class="lex-line" href="interstellar-medium.html">
+        <span class="lex-line-term">Interstellar Medium</span>
+        <span class="lex-line-def">Material filling space between star systems</span>
+      </a>
+      <a class="lex-line" href="ip-licensing-model.html">
+        <span class="lex-line-term">IP Licensing Model</span>
+        <span class="lex-line-def">Business approach where a company licenses its intellectual property to others.</span>
+      </a>
+      <a class="lex-line" href="khinchin-s-constant.html">
+        <span class="lex-line-term">Khinchin&#x27;s Constant</span>
+        <span class="lex-line-def">≈ 2.685. The geometric mean of the continued fraction coefficients of almost every real number converges to this value. Proven but unexplained. One…</span>
+      </a>
+      <a class="lex-line" href="l-functions-number-theory.html">
+        <span class="lex-line-term">L-Functions (Number Theory)</span>
+        <span class="lex-line-def">A class of complex functions in analytic number theory that generalize the Riemann zeta function. The Riemann Hypothesis is formulated as a statement…</span>
+      </a>
+      <a class="lex-line" href="lakehouse-architecture.html">
+        <span class="lex-line-term">Lakehouse Architecture</span>
+        <span class="lex-line-def">Data management framework combining data lake and data warehouse features</span>
+      </a>
+      <a class="lex-line" href="language-model-scaling.html">
+        <span class="lex-line-term">Language Model Scaling</span>
+        <span class="lex-line-def">The process of increasing the size and complexity of AI language models to improve their performance and capabilities.</span>
+      </a>
+      <a class="lex-line" href="laser-interferometry.html">
+        <span class="lex-line-term">Laser Interferometry</span>
+        <span class="lex-line-def">Advanced optical detection systems</span>
+      </a>
+      <a class="lex-line" href="laser-power-beaming.html">
+        <span class="lex-line-term">Laser Power Beaming</span>
+        <span class="lex-line-def">Directed energy wireless power transmission</span>
+      </a>
+      <a class="lex-line" href="layer-wise-scaling-strategy.html">
+        <span class="lex-line-term">Layer-wise scaling strategy</span>
+        <span class="lex-line-def">A method used in neural network training aimed at managing computational complexity and improving model efficiency by adjusting the size of the model…</span>
+      </a>
+      <a class="lex-line" href="lead-generation.html">
+        <span class="lex-line-term">Lead Generation</span>
+        <span class="lex-line-def">Commercial data collection process</span>
+      </a>
+      <a class="lex-line" href="level-4-automation.html">
+        <span class="lex-line-term">Level 4 Automation</span>
+        <span class="lex-line-def">One of the five levels of autonomy for self-driving cars, where the car can handle all aspects of driving in certain conditions without human…</span>
+      </a>
+      <a class="lex-line" href="lidar-data.html">
+        <span class="lex-line-term">Lidar Data</span>
+        <span class="lex-line-def">Information collected using lidar systems, used to make digital 3-D representations by measuring the distance to a target with laser light.</span>
+      </a>
+      <a class="lex-line" href="light-extraction-efficiency.html">
+        <span class="lex-line-term">Light Extraction Efficiency</span>
+        <span class="lex-line-def">A measure of how effectively a lighting device converts electricity into visible light.</span>
+      </a>
+      <a class="lex-line" href="light-vortex.html">
+        <span class="lex-line-term">Light Vortex</span>
+        <span class="lex-line-def">Electromagnetic wave with orbital angular momentum creating donut-shaped pattern</span>
+      </a>
+      <a class="lex-line" href="liquid-filled-filament.html">
+        <span class="lex-line-term">Liquid-Filled Filament</span>
+        <span class="lex-line-def">Advanced 3D printing material</span>
+      </a>
+      <a class="lex-line" href="llm-large-language-model.html">
+        <span class="lex-line-term">LLM (Large Language Model)</span>
+        <span class="lex-line-def">Advanced AI models trained on vast amounts of text data, like OpenAI&#x27;s GPT or Meta&#x27;s Llama.</span>
+      </a>
+      <a class="lex-line" href="local-minimum-energy-state.html">
+        <span class="lex-line-term">Local Minimum Energy State</span>
+        <span class="lex-line-def">In quantum computing and physics, a condition where a system is in a stable state of minimum energy.</span>
+      </a>
+      <a class="lex-line" href="longitudinal-health-studies.html">
+        <span class="lex-line-term">Longitudinal Health Studies</span>
+        <span class="lex-line-def">Research tracking subjects over extended periods to identify health patterns</span>
+      </a>
+      <a class="lex-line" href="machine-learning-for-archaeology.html">
+        <span class="lex-line-term">Machine Learning for Archaeology</span>
+        <span class="lex-line-def">AI applications in historical research</span>
+      </a>
+      <a class="lex-line" href="macroscopic-quantum-tunneling.html">
+        <span class="lex-line-term">Macroscopic Quantum Tunneling</span>
+        <span class="lex-line-def">Quantum effects observable at large scales</span>
+      </a>
+      <a class="lex-line" href="magnetar-magnetosphere.html">
+        <span class="lex-line-term">Magnetar Magnetosphere</span>
+        <span class="lex-line-def">Magnetic field surrounding neutron stars with extreme field strength</span>
+      </a>
+      <a class="lex-line" href="magnetic-cooling.html">
+        <span class="lex-line-term">Magnetic Cooling</span>
+        <span class="lex-line-def">Cooling technology based on the magnetocaloric effect</span>
+      </a>
+      <a class="lex-line" href="magnetic-field-reversal.html">
+        <span class="lex-line-term">Magnetic Field Reversal</span>
+        <span class="lex-line-def">Complete change in Earth&#x27;s geomagnetic polarity</span>
+      </a>
+      <a class="lex-line" href="maker-festival.html">
+        <span class="lex-line-term">Maker Festival</span>
+        <span class="lex-line-def">An event showcasing DIY technology and science projects from the maker community</span>
+      </a>
+      <a class="lex-line" href="manifold.html">
+        <span class="lex-line-term">Manifold</span>
+        <span class="lex-line-def">Mathematical space with specific geometric properties</span>
+      </a>
+      <a class="lex-line" href="manipulation-surface.html">
+        <span class="lex-line-term">Manipulation Surface</span>
+        <span class="lex-line-def">Vulnerability created by removing gatekeeping mechanisms</span>
+      </a>
+      <a class="lex-line" href="manufacturing-innovation-framework.html">
+        <span class="lex-line-term">Manufacturing Innovation Framework</span>
+        <span class="lex-line-def">Industrial transformation systems</span>
+      </a>
+      <a class="lex-line" href="mechanical-orbital-deployment.html">
+        <span class="lex-line-term">Mechanical Orbital Deployment</span>
+        <span class="lex-line-def">Launch systems using physical force rather than chemical propulsion</span>
+      </a>
+      <a class="lex-line" href="media-filters.html">
+        <span class="lex-line-term">Media Filters</span>
+        <span class="lex-line-def">Systematic information control mechanisms in mass communication</span>
+      </a>
+      <a class="lex-line" href="megatsunami.html">
+        <span class="lex-line-term">Megatsunami</span>
+        <span class="lex-line-def">Extremely large tsunami wave caused by massive displacement of water</span>
+      </a>
+      <a class="lex-line" href="meme-coins.html">
+        <span class="lex-line-term">Meme Coins</span>
+        <span class="lex-line-def">Cryptocurrencies created as a joke or based on internet memes, often with high volatility.</span>
+      </a>
+      <a class="lex-line" href="memorization-crisis.html">
+        <span class="lex-line-term">Memorization Crisis</span>
+        <span class="lex-line-def">AI systems retaining rather than generalizing from training data</span>
+      </a>
+      <a class="lex-line" href="memristor.html">
+        <span class="lex-line-term">Memristor</span>
+        <span class="lex-line-def">Memory-based electrical resistance</span>
+      </a>
+      <a class="lex-line" href="merkle-tree.html">
+        <span class="lex-line-term">Merkle Tree</span>
+        <span class="lex-line-def">A hash tree data structure that allows efficient and secure verification of large datasets by chaining cryptographic hashes</span>
+      </a>
+      <a class="lex-line" href="mesh-network.html">
+        <span class="lex-line-term">Mesh Network</span>
+        <span class="lex-line-def">Decentralized network where each node relays data for the network</span>
+      </a>
+      <a class="lex-line" href="metadata.html">
+        <span class="lex-line-term">Metadata</span>
+        <span class="lex-line-def">Information about information—patterns, timing, location, association data</span>
+      </a>
+      <a class="lex-line" href="metamathematics.html">
+        <span class="lex-line-term">Metamathematics</span>
+        <span class="lex-line-def">Mathematical logic foundations</span>
+      </a>
+      <a class="lex-line" href="metasurface.html">
+        <span class="lex-line-term">Metasurface</span>
+        <span class="lex-line-def">Engineered material with subwavelength structures that manipulate electromagnetic waves</span>
+      </a>
+      <a class="lex-line" href="micro-manipulator.html">
+        <span class="lex-line-term">Micro-Manipulator</span>
+        <span class="lex-line-def">High-precision positioning device for small-scale operations</span>
+      </a>
+      <a class="lex-line" href="microchip.html">
+        <span class="lex-line-term">Microchip</span>
+        <span class="lex-line-def">Integrated circuit or small wafer of semiconductor material embedded with integrated circuitry</span>
+      </a>
+      <a class="lex-line" href="microplastic-particles.html">
+        <span class="lex-line-term">Microplastic Particles</span>
+        <span class="lex-line-def">Tiny plastic fragments in water and environment</span>
+      </a>
+      <a class="lex-line" href="microplastic-precipitation.html">
+        <span class="lex-line-term">Microplastic Precipitation</span>
+        <span class="lex-line-def">The raining down of microscopic plastic particles from atmosphere</span>
+      </a>
+      <a class="lex-line" href="microrobot-navigation.html">
+        <span class="lex-line-term">Microrobot Navigation</span>
+        <span class="lex-line-def">Guidance systems for microscale medical devices</span>
+      </a>
+      <a class="lex-line" href="microstructure-sensor.html">
+        <span class="lex-line-term">Microstructure Sensor</span>
+        <span class="lex-line-def">Extremely small sensing device often used in medical applications</span>
+      </a>
+      <a class="lex-line" href="middleware.html">
+        <span class="lex-line-term">Middleware</span>
+        <span class="lex-line-def">Software that acts as a bridge between an operating system or database and applications.</span>
+      </a>
+      <a class="lex-line" href="millennium-prize-problems.html">
+        <span class="lex-line-term">Millennium Prize Problems</span>
+        <span class="lex-line-def">Seven unsolved mathematical challenges</span>
+      </a>
+      <a class="lex-line" href="mirror-cells.html">
+        <span class="lex-line-term">Mirror Cells</span>
+        <span class="lex-line-def">Synthetic organisms built from mirror-image biological molecules</span>
+      </a>
+      <a class="lex-line" href="mixed-reality.html">
+        <span class="lex-line-term">Mixed Reality</span>
+        <span class="lex-line-def">A hybrid of both virtual reality and augmented reality where physical and virtual objects coexist and can interact in real time.</span>
+      </a>
+      <a class="lex-line" href="mobile-data-center.html">
+        <span class="lex-line-term">Mobile Data Center</span>
+        <span class="lex-line-def">A portable facility for data processing and storage, exemplified by Mercedes-Benz&#x27;s collaboration with GitHub.</span>
+      </a>
+      <a class="lex-line" href="modernist-architecture.html">
+        <span class="lex-line-term">Modernist Architecture</span>
+        <span class="lex-line-def">Architectural style emphasizing function and rejecting ornament</span>
+      </a>
+      <a class="lex-line" href="molten-salt-reactor.html">
+        <span class="lex-line-term">Molten Salt Reactor</span>
+        <span class="lex-line-def">Nuclear reactor using liquid fuel</span>
+      </a>
+      <a class="lex-line" href="moncrieff-et-al-2022.html">
+        <span class="lex-line-term">Moncrieff et al. (2022)</span>
+        <span class="lex-line-def">The umbrella review in Molecular Psychiatry that found no consistent evidence of an association between serotonin and depression. The inflection…</span>
+      </a>
+      <a class="lex-line" href="multi-cloud.html">
+        <span class="lex-line-term">Multi-Cloud</span>
+        <span class="lex-line-def">Use of multiple cloud computing and storage services in a single architecture</span>
+      </a>
+      <a class="lex-line" href="multi-core-fiber.html">
+        <span class="lex-line-term">Multi-Core Fiber</span>
+        <span class="lex-line-def">Advanced optical transmission medium &quot;The wise one knows: in a world where time travel becomes mathematically possible, power flows wirelessly…</span>
+      </a>
+      <a class="lex-line" href="multi-function-test-equipment.html">
+        <span class="lex-line-term">Multi-Function Test Equipment</span>
+        <span class="lex-line-def">Devices combining multiple measurement capabilities</span>
+      </a>
+      <a class="lex-line" href="multimaterial-3d-printing.html">
+        <span class="lex-line-term">Multimaterial 3D Printing</span>
+        <span class="lex-line-def">A form of 3D printing that utilizes multiple types of materials in a single print process to create composite structures or devices.</span>
+      </a>
+      <a class="lex-line" href="multimodal.html">
+        <span class="lex-line-term">Multimodal</span>
+        <span class="lex-line-def">AI systems capable of working with multiple types of input or output (text, images, etc.).</span>
+      </a>
+      <a class="lex-line" href="muon-tomography.html">
+        <span class="lex-line-term">Muon Tomography</span>
+        <span class="lex-line-def">Imaging technique using cosmic ray particles to scan dense objects</span>
+      </a>
+      <a class="lex-line" href="myelin-sheaths.html">
+        <span class="lex-line-term">Myelin Sheaths</span>
+        <span class="lex-line-def">Insulating layer around nerve fibers</span>
+      </a>
+      <a class="lex-line" href="m-bius-strip.html">
+        <span class="lex-line-term">Möbius Strip</span>
+        <span class="lex-line-def">Mathematical surface with unique topological properties</span>
+      </a>
+      <a class="lex-line" href="nanocluster-computing.html">
+        <span class="lex-line-term">Nanocluster Computing</span>
+        <span class="lex-line-def">Miniaturized supercomputing systems</span>
+      </a>
+      <a class="lex-line" href="nanogauss.html">
+        <span class="lex-line-term">Nanogauss</span>
+        <span class="lex-line-def">Unit of magnetic field strength (one billionth of a gauss)</span>
+      </a>
+      <a class="lex-line" href="nanometer-process.html">
+        <span class="lex-line-term">Nanometer Process</span>
+        <span class="lex-line-def">Semiconductor manufacturing precision</span>
+      </a>
+      <a class="lex-line" href="nanoparticle.html">
+        <span class="lex-line-term">Nanoparticle</span>
+        <span class="lex-line-def">Molecular-scale material structure</span>
+      </a>
+      <a class="lex-line" href="natural-language-processing-nlp.html">
+        <span class="lex-line-term">Natural Language Processing (NLP)</span>
+        <span class="lex-line-def">Branch of AI dealing with the interaction between computers and human language.</span>
+      </a>
+      <a class="lex-line" href="navier-stokes-equations.html">
+        <span class="lex-line-term">Navier-Stokes Equations</span>
+        <span class="lex-line-def">Mathematical description of fluid motion</span>
+      </a>
+      <a class="lex-line" href="near-infrared-light.html">
+        <span class="lex-line-term">Near-Infrared Light</span>
+        <span class="lex-line-def">Electromagnetic spectrum region</span>
+      </a>
+      <a class="lex-line" href="network-evasion.html">
+        <span class="lex-line-term">Network Evasion</span>
+        <span class="lex-line-def">Techniques used to avoid detection while navigating computer networks</span>
+      </a>
+      <a class="lex-line" href="network-security-tools.html">
+        <span class="lex-line-term">Network Security Tools</span>
+        <span class="lex-line-def">DIY cybersecurity systems</span>
+      </a>
+      <a class="lex-line" href="network-theory.html">
+        <span class="lex-line-term">Network Theory</span>
+        <span class="lex-line-def">Mathematical study of complex interacting systems represented as graphs</span>
+      </a>
+      <a class="lex-line" href="neural-bookmarking.html">
+        <span class="lex-line-term">Neural Bookmarking</span>
+        <span class="lex-line-def">Brain&#x27;s temporal organization system</span>
+      </a>
+      <a class="lex-line" href="neural-burnout.html">
+        <span class="lex-line-term">Neural Burnout</span>
+        <span class="lex-line-def">Concept of overworked neurons leading to degenerative conditions</span>
+      </a>
+      <a class="lex-line" href="neural-computing.html">
+        <span class="lex-line-term">Neural Computing</span>
+        <span class="lex-line-def">Use of brain cells for information processing</span>
+      </a>
+      <a class="lex-line" href="neural-engine.html">
+        <span class="lex-line-term">Neural Engine</span>
+        <span class="lex-line-def">Specialized processor designed for AI and machine learning tasks</span>
+      </a>
+      <a class="lex-line" href="neural-entropy.html">
+        <span class="lex-line-term">Neural Entropy</span>
+        <span class="lex-line-def">A measure of information disorder in neural network activations, central to physics-based diffusion model design</span>
+      </a>
+      <a class="lex-line" href="neural-interface.html">
+        <span class="lex-line-term">Neural Interface</span>
+        <span class="lex-line-def">Device enabling direct communication between brain and computer</span>
+      </a>
+      <a class="lex-line" href="neural-modeling.html">
+        <span class="lex-line-term">Neural Modeling</span>
+        <span class="lex-line-def">Computer simulations of brain network behavior</span>
+      </a>
+      <a class="lex-line" href="neural-network.html">
+        <span class="lex-line-term">Neural Network</span>
+        <span class="lex-line-def">Brain-inspired computing systems</span>
+      </a>
+      <a class="lex-line" href="neural-oscillations.html">
+        <span class="lex-line-term">Neural Oscillations</span>
+        <span class="lex-line-def">Brain rhythm patterns affecting consciousness</span>
+      </a>
+      <a class="lex-line" href="neural-patterns.html">
+        <span class="lex-line-term">Neural Patterns</span>
+        <span class="lex-line-def">Brain activity organizations</span>
+      </a>
+      <a class="lex-line" href="neural-representation.html">
+        <span class="lex-line-term">Neural Representation</span>
+        <span class="lex-line-def">Internal geometric structure by which AI understands patterns</span>
+      </a>
+      <a class="lex-line" href="neural-signatures.html">
+        <span class="lex-line-term">Neural Signatures</span>
+        <span class="lex-line-def">Brain activity patterns associated with specific conditions</span>
+      </a>
+      <a class="lex-line" href="neural-simulation.html">
+        <span class="lex-line-term">Neural Simulation</span>
+        <span class="lex-line-def">Computer modeling of brain network activity</span>
+      </a>
+      <a class="lex-line" href="neural-substrate.html">
+        <span class="lex-line-term">Neural Substrate</span>
+        <span class="lex-line-def">Physical foundation for computational systems</span>
+      </a>
+      <a class="lex-line" href="neural-surveillance.html">
+        <span class="lex-line-term">Neural Surveillance</span>
+        <span class="lex-line-def">Brain-based approaches to security and monitoring</span>
+      </a>
+      <a class="lex-line" href="neurodiversity.html">
+        <span class="lex-line-term">Neurodiversity</span>
+        <span class="lex-line-def">The concept that neurological differences are natural variations in the human genome, not deficits to be cured.</span>
+      </a>
+      <a class="lex-line" href="neuroscience-and-technology.html">
+        <span class="lex-line-term">Neuroscience and Technology</span>
+        <span class="lex-line-def">Emerging research and &quot;hacks&quot; in neuroscience offer new perspectives on human cognition and potential technological applications.</span>
+      </a>
+      <a class="lex-line" href="neutron-star.html">
+        <span class="lex-line-term">Neutron Star</span>
+        <span class="lex-line-def">The remnants of a massive star that has gone supernova; it&#x27;s a highly dense celestial object comprised almost entirely of neutrons.</span>
+      </a>
+      <a class="lex-line" href="next-word-prediction.html">
+        <span class="lex-line-term">Next Word Prediction</span>
+        <span class="lex-line-def">AI models&#x27; ability to predict the most likely next word in a sequence based on training data.</span>
+      </a>
+      <a class="lex-line" href="non-destructive-workflow.html">
+        <span class="lex-line-term">Non-Destructive Workflow</span>
+        <span class="lex-line-def">A workflow that allows for modifications and adjustments without permanently altering or damaging the original data.</span>
+      </a>
+      <a class="lex-line" href="non-invasive-analysis.html">
+        <span class="lex-line-term">Non-invasive Analysis</span>
+        <span class="lex-line-def">Examination without physical contact</span>
+      </a>
+      <a class="lex-line" href="non-verbal-communication.html">
+        <span class="lex-line-term">Non-verbal Communication</span>
+        <span class="lex-line-def">Body language and unspoken signals between humans</span>
+      </a>
+      <a class="lex-line" href="non-zero-thinking.html">
+        <span class="lex-line-term">Non-Zero Thinking</span>
+        <span class="lex-line-def">Approach focusing on mutually beneficial outcomes</span>
+      </a>
+      <a class="lex-line" href="open-source.html">
+        <span class="lex-line-term">Open Source</span>
+        <span class="lex-line-def">Software whose source code is freely available for modification</span>
+      </a>
+      <a class="lex-line" href="open-source-framework.html">
+        <span class="lex-line-term">Open-Source Framework</span>
+        <span class="lex-line-def">Software tools and libraries made freely available for modification and distribution.</span>
+      </a>
+      <a class="lex-line" href="operation-mockingbird.html">
+        <span class="lex-line-term">Operation Mockingbird</span>
+        <span class="lex-line-def">Alleged large-scale CIA program to manipulate news media</span>
+      </a>
+      <a class="lex-line" href="optimization.html">
+        <span class="lex-line-term">Optimization</span>
+        <span class="lex-line-def">Improving efficiency by eliminating redundancy and buffer</span>
+      </a>
+      <a class="lex-line" href="orbital-altitude.html">
+        <span class="lex-line-term">Orbital Altitude</span>
+        <span class="lex-line-def">Height above Earth&#x27;s surface determining satellite position and coverage</span>
+      </a>
+      <a class="lex-line" href="orbital-data-center.html">
+        <span class="lex-line-term">Orbital Data Center</span>
+        <span class="lex-line-def">Space-based computing facility</span>
+      </a>
+      <a class="lex-line" href="paradigm-shift.html">
+        <span class="lex-line-term">Paradigm Shift</span>
+        <span class="lex-line-def">Fundamental change in how systems operate or are understood</span>
+      </a>
+      <a class="lex-line" href="paradox-free-time-travel.html">
+        <span class="lex-line-term">Paradox-Free Time Travel</span>
+        <span class="lex-line-def">Theoretical framework avoiding causality violations</span>
+      </a>
+      <a class="lex-line" href="particle-accelerator.html">
+        <span class="lex-line-term">Particle Accelerator</span>
+        <span class="lex-line-def">High-energy physics research tool</span>
+      </a>
+      <a class="lex-line" href="passive-design.html">
+        <span class="lex-line-term">Passive Design</span>
+        <span class="lex-line-def">Architectural approach that uses natural elements for climate control in buildings</span>
+      </a>
+      <a class="lex-line" href="patent-infringement.html">
+        <span class="lex-line-term">Patent Infringement</span>
+        <span class="lex-line-def">Unauthorized use of protected innovations</span>
+      </a>
+      <a class="lex-line" href="pattern-recognition.html">
+        <span class="lex-line-term">Pattern Recognition</span>
+        <span class="lex-line-def">Information processing systems</span>
+      </a>
+      <a class="lex-line" href="pcb-printed-circuit-board.html">
+        <span class="lex-line-term">PCB (Printed Circuit Board)</span>
+        <span class="lex-line-def">A board that mechanically supports and electrically connects electronic components using conductive tracks.</span>
+      </a>
+      <a class="lex-line" href="petabit.html">
+        <span class="lex-line-term">Petabit</span>
+        <span class="lex-line-def">Unit of digital information equal to 1000 terabits</span>
+      </a>
+      <a class="lex-line" href="petz-map.html">
+        <span class="lex-line-term">Petz Map</span>
+        <span class="lex-line-def">Mathematical concept in quantum information theory</span>
+      </a>
+      <a class="lex-line" href="photonic-systems.html">
+        <span class="lex-line-term">Photonic Systems</span>
+        <span class="lex-line-def">Technology using light particles for information processing</span>
+      </a>
+      <a class="lex-line" href="photonics-fabrication.html">
+        <span class="lex-line-term">Photonics Fabrication</span>
+        <span class="lex-line-def">Manufacturing of optical and light-based electronic components</span>
+      </a>
+      <a class="lex-line" href="photovoltaic-skin.html">
+        <span class="lex-line-term">Photovoltaic Skin</span>
+        <span class="lex-line-def">Flexible solar cell technology for building surfaces</span>
+      </a>
+      <a class="lex-line" href="photovoltaic-technology.html">
+        <span class="lex-line-term">Photovoltaic Technology</span>
+        <span class="lex-line-def">Direct conversion of light to electricity</span>
+      </a>
+      <a class="lex-line" href="physics-fundamentals.html">
+        <span class="lex-line-term">Physics Fundamentals</span>
+        <span class="lex-line-def">Basic principles governing physical reality and time</span>
+      </a>
+      <a class="lex-line" href="physics-informed-learning.html">
+        <span class="lex-line-term">Physics-Informed Learning</span>
+        <span class="lex-line-def">Neural networks trained with physical laws embedded as constraints</span>
+      </a>
+      <a class="lex-line" href="pi.html">
+        <span class="lex-line-term">Pi</span>
+        <span class="lex-line-def">Mathematical constant representing the ratio of a circle&#x27;s circumference to its diameter</span>
+      </a>
+      <a class="lex-line" href="pine-s-demon.html">
+        <span class="lex-line-term">Pine&#x27;s Demon</span>
+        <span class="lex-line-def">Massless, neutral plasmon particle in quantum materials</span>
+      </a>
+      <a class="lex-line" href="pipeline-infrastructure.html">
+        <span class="lex-line-term">Pipeline Infrastructure</span>
+        <span class="lex-line-def">Large-scale transport systems for energy resources</span>
+      </a>
+      <a class="lex-line" href="plasma-acceleration.html">
+        <span class="lex-line-term">Plasma Acceleration</span>
+        <span class="lex-line-def">High-energy particles compressed and accelerated to extreme velocities</span>
+      </a>
+      <a class="lex-line" href="plasmon.html">
+        <span class="lex-line-term">Plasmon</span>
+        <span class="lex-line-def">Collective oscillation of electrons in materials</span>
+      </a>
+      <a class="lex-line" href="pov-point-of-view.html">
+        <span class="lex-line-term">POV – Point of View</span>
+        <span class="lex-line-def">A particular attitude or way of considering a matter, in technology, it can refer to VR experiences where the user sees the digital world from a…</span>
+      </a>
+      <a class="lex-line" href="precession-of-primes.html">
+        <span class="lex-line-term">Precession of Primes</span>
+        <span class="lex-line-def">The informal name for the 2016 Stanford finding that consecutive primes avoid having the same last digit at rates significantly above chance — a…</span>
+      </a>
+      <a class="lex-line" href="prediction-market.html">
+        <span class="lex-line-term">Prediction Market</span>
+        <span class="lex-line-def">A financial instrument where participants trade on the probability of future events; prices reflect aggregated probability estimates</span>
+      </a>
+      <a class="lex-line" href="predictive-maintenance.html">
+        <span class="lex-line-term">Predictive Maintenance</span>
+        <span class="lex-line-def">A proactive maintenance strategy that uses data analysis and machine learning to predict when equipment or systems are likely to fail, allowing for…</span>
+      </a>
+      <a class="lex-line" href="predictive-policing.html">
+        <span class="lex-line-term">Predictive Policing</span>
+        <span class="lex-line-def">Law enforcement strategy using algorithmic risk assessment to allocate resources and attention before crimes occur</span>
+      </a>
+      <a class="lex-line" href="prime-number-pattern.html">
+        <span class="lex-line-term">Prime Number Pattern</span>
+        <span class="lex-line-def">Mathematical regularities in prime number distribution</span>
+      </a>
+      <a class="lex-line" href="prime-number-sequence.html">
+        <span class="lex-line-term">Prime Number Sequence</span>
+        <span class="lex-line-def">Pattern of indivisible numbers</span>
+      </a>
+      <a class="lex-line" href="prime-number-theory.html">
+        <span class="lex-line-term">Prime Number Theory</span>
+        <span class="lex-line-def">Mathematical study of patterns in numbers divisible only by themselves and one</span>
+      </a>
+      <a class="lex-line" href="primordial-stars.html">
+        <span class="lex-line-term">Primordial Stars</span>
+        <span class="lex-line-def">Extremely massive stars from the early universe</span>
+      </a>
+      <a class="lex-line" href="private-label-brand.html">
+        <span class="lex-line-term">Private Label Brand</span>
+        <span class="lex-line-def">Products manufactured by one company for sale under another company&#x27;s brand (like Kirkland).</span>
+      </a>
+      <a class="lex-line" href="procedural-rigs.html">
+        <span class="lex-line-term">Procedural Rigs</span>
+        <span class="lex-line-def">Animation rigs created using algorithms and rules, allowing for dynamic and customizable character animations.</span>
+      </a>
+      <a class="lex-line" href="product-market-fit.html">
+        <span class="lex-line-term">Product-Market Fit</span>
+        <span class="lex-line-def">The degree to which a product satisfies the demands and needs of a specific market, resulting in customer satisfaction and business success.</span>
+      </a>
+      <a class="lex-line" href="proprietary-technology.html">
+        <span class="lex-line-term">Proprietary Technology</span>
+        <span class="lex-line-def">Technology that is owned by a specific company or individual and is not open for others to replicate or use without permission.</span>
+      </a>
+      <a class="lex-line" href="psychographic-targeting.html">
+        <span class="lex-line-term">Psychographic Targeting</span>
+        <span class="lex-line-def">Audience segmentation based on psychological and behavioral characteristics rather than demographic variables; demonstrated in the Matz et al. 2016…</span>
+      </a>
+      <a class="lex-line" href="public-domain.html">
+        <span class="lex-line-term">Public Domain</span>
+        <span class="lex-line-def">The state of creative works no longer protected by intellectual property laws, freely available for public use.</span>
+      </a>
+      <a class="lex-line" href="quadruped.html">
+        <span class="lex-line-term">Quadruped</span>
+        <span class="lex-line-def">Four-legged structure or robot.</span>
+      </a>
+      <a class="lex-line" href="quantum-detection.html">
+        <span class="lex-line-term">Quantum Detection</span>
+        <span class="lex-line-def">Methods for observing subatomic particles</span>
+      </a>
+      <a class="lex-line" href="quantum-dots.html">
+        <span class="lex-line-term">Quantum Dots</span>
+        <span class="lex-line-def">Nanoscale semiconductor particles with quantum properties</span>
+      </a>
+      <a class="lex-line" href="quantum-fidelity.html">
+        <span class="lex-line-term">Quantum Fidelity</span>
+        <span class="lex-line-def">Measure of similarity between quantum states</span>
+      </a>
+      <a class="lex-line" href="quantum-interference.html">
+        <span class="lex-line-term">Quantum Interference</span>
+        <span class="lex-line-def">Wave behavior of particles</span>
+      </a>
+      <a class="lex-line" href="quantum-mechanics.html">
+        <span class="lex-line-term">Quantum mechanics</span>
+        <span class="lex-line-def">A branch of physics that describes the behavior of matter and energy at the smallest scales, often defying classical physics principles.</span>
+      </a>
+      <a class="lex-line" href="quantum-photon-transmission.html">
+        <span class="lex-line-term">Quantum Photon Transmission</span>
+        <span class="lex-line-def">Process of teleporting particles through internet-based communication networks</span>
+      </a>
+      <a class="lex-line" href="quantum-random-number-generator.html">
+        <span class="lex-line-term">Quantum Random Number Generator</span>
+        <span class="lex-line-def">Hardware that generates unpredictable numbers using quantum phenomena</span>
+      </a>
+      <a class="lex-line" href="quantum-sensors.html">
+        <span class="lex-line-term">Quantum Sensors</span>
+        <span class="lex-line-def">Devices that use quantum mechanical effects to measure physical quantities with high precision.</span>
+      </a>
+      <a class="lex-line" href="quantum-tunneling.html">
+        <span class="lex-line-term">Quantum Tunneling</span>
+        <span class="lex-line-def">Quantum phenomenon where particles pass through energy barriers</span>
+      </a>
+      <a class="lex-line" href="quantum-video-scrambling.html">
+        <span class="lex-line-term">Quantum Video Scrambling</span>
+        <span class="lex-line-def">A method of securing video content using quantum physical principles</span>
+      </a>
+      <a class="lex-line" href="quantum-resistant-encryption.html">
+        <span class="lex-line-term">Quantum-Resistant Encryption</span>
+        <span class="lex-line-def">Cryptography immune to quantum attacks</span>
+      </a>
+      <a class="lex-line" href="qubit.html">
+        <span class="lex-line-term">Qubit</span>
+        <span class="lex-line-def">The basic unit of quantum information; a quantum computer&#x27;s qubit can represent 0 and 1 simultaneously through superposition, enabling certain…</span>
+      </a>
+      <a class="lex-line" href="radio-drama.html">
+        <span class="lex-line-term">Radio Drama</span>
+        <span class="lex-line-def">Audio narrative form using dialogue, music and sound effects to tell stories without visual elements.</span>
+      </a>
+      <a class="lex-line" href="radio-pulse.html">
+        <span class="lex-line-term">Radio Pulse</span>
+        <span class="lex-line-def">Burst of radio frequency electromagnetic radiation</span>
+      </a>
+      <a class="lex-line" href="ranking-resumes.html">
+        <span class="lex-line-term">Ranking Resumes</span>
+        <span class="lex-line-def">The process of sorting job candidates’ resumes, possibly with AI assistance, to decide which candidates are the best fit for a position.</span>
+      </a>
+      <a class="lex-line" href="ransomware.html">
+        <span class="lex-line-term">Ransomware</span>
+        <span class="lex-line-def">A type of malicious software designed to block access to a computer system until a sum of money is paid.</span>
+      </a>
+      <a class="lex-line" href="raspberry-pi.html">
+        <span class="lex-line-term">Raspberry Pi</span>
+        <span class="lex-line-def">Small, affordable computer used for various computing projects</span>
+      </a>
+      <a class="lex-line" href="react2shell.html">
+        <span class="lex-line-term">React2Shell</span>
+        <span class="lex-line-def">Web application exploit technique</span>
+      </a>
+      <a class="lex-line" href="real-number-formulation.html">
+        <span class="lex-line-term">Real Number Formulation</span>
+        <span class="lex-line-def">Mathematical approach using only real numbers</span>
+      </a>
+      <a class="lex-line" href="rebranding.html">
+        <span class="lex-line-term">Rebranding</span>
+        <span class="lex-line-def">Marketing strategy of creating a new name, symbol, or design for an established brand</span>
+      </a>
+      <a class="lex-line" href="red-teaming.html">
+        <span class="lex-line-term">Red Teaming</span>
+        <span class="lex-line-def">A practice in cybersecurity where a group attempts to breach a system&#x27;s defenses to test its security measures.</span>
+      </a>
+      <a class="lex-line" href="reinforcement-learning.html">
+        <span class="lex-line-term">Reinforcement Learning</span>
+        <span class="lex-line-def">AI training through environment interaction and reward systems</span>
+      </a>
+      <a class="lex-line" href="renewable-energy-systems.html">
+        <span class="lex-line-term">Renewable Energy Systems</span>
+        <span class="lex-line-def">Sustainable power generation technologies &quot;In an age where technology promises both enlightenment and entropy, true wisdom lies not in the blind…</span>
+      </a>
+      <a class="lex-line" href="resource-management-simulation.html">
+        <span class="lex-line-term">Resource Management Simulation</span>
+        <span class="lex-line-def">Educational tools modeling the use of limited resources</span>
+      </a>
+      <a class="lex-line" href="retargeting-advertising.html">
+        <span class="lex-line-term">Retargeting Advertising</span>
+        <span class="lex-line-def">Marketing based on previous consumer interactions</span>
+      </a>
+      <a class="lex-line" href="reverse-mathematics.html">
+        <span class="lex-line-term">Reverse Mathematics</span>
+        <span class="lex-line-def">Logical equivalence analysis</span>
+      </a>
+      <a class="lex-line" href="rf-jamming.html">
+        <span class="lex-line-term">RF Jamming</span>
+        <span class="lex-line-def">Radio frequency interference for communication disruption</span>
+      </a>
+      <a class="lex-line" href="rfid-skimming.html">
+        <span class="lex-line-term">RFID Skimming</span>
+        <span class="lex-line-def">Contactless payment fraud technique</span>
+      </a>
+      <a class="lex-line" href="robot-arm-algorithm.html">
+        <span class="lex-line-term">Robot Arm Algorithm</span>
+        <span class="lex-line-def">Control system for robotic manipulation</span>
+      </a>
+      <a class="lex-line" href="robot-combat-protocols.html">
+        <span class="lex-line-term">Robot Combat Protocols</span>
+        <span class="lex-line-def">Guidelines for mechanical sports</span>
+      </a>
+      <a class="lex-line" href="robot-swarm.html">
+        <span class="lex-line-term">Robot Swarm</span>
+        <span class="lex-line-def">Group of coordinated robots working together</span>
+      </a>
+      <a class="lex-line" href="rpg-role-playing-game.html">
+        <span class="lex-line-term">RPG (Role-Playing Game)</span>
+        <span class="lex-line-def">A game genre where players control the actions of characters in a fictional setting, often with complex narratives and character development.</span>
+      </a>
+      <a class="lex-line" href="satellite-communication-interference.html">
+        <span class="lex-line-term">Satellite Communication Interference</span>
+        <span class="lex-line-def">Signal disruption between aircraft and ground systems</span>
+      </a>
+      <a class="lex-line" href="satellite-internet.html">
+        <span class="lex-line-term">Satellite Internet</span>
+        <span class="lex-line-def">Internet connectivity provided through communications satellites</span>
+      </a>
+      <a class="lex-line" href="schumann-resonance.html">
+        <span class="lex-line-term">Schumann Resonance</span>
+        <span class="lex-line-def">Natural electromagnetic frequency phenomenon</span>
+      </a>
+      <a class="lex-line" href="semiconductor-disruption.html">
+        <span class="lex-line-term">Semiconductor Disruption</span>
+        <span class="lex-line-def">Fundamental changes in chip design and manufacturing processes</span>
+      </a>
+      <a class="lex-line" href="sentient-ai-system.html">
+        <span class="lex-line-term">Sentient (AI system)</span>
+        <span class="lex-line-def">A top-secret AI system reportedly used by the USA for global predictions and surveillance, utilizing satellite data and advanced analytics.</span>
+      </a>
+      <a class="lex-line" href="shadow-president.html">
+        <span class="lex-line-term">Shadow President</span>
+        <span class="lex-line-def">Unofficial advisor with significant influence on presidential decisions</span>
+      </a>
+      <a class="lex-line" href="short-term-rental.html">
+        <span class="lex-line-term">Short-Term Rental</span>
+        <span class="lex-line-def">Property rented for brief periods, typically less than 30 days</span>
+      </a>
+      <a class="lex-line" href="silicon.html">
+        <span class="lex-line-term">Silicon</span>
+        <span class="lex-line-def">Semiconductor material used in computer chip manufacturing</span>
+      </a>
+      <a class="lex-line" href="silicon-alternative-semiconductors.html">
+        <span class="lex-line-term">Silicon Alternative Semiconductors</span>
+        <span class="lex-line-def">Non-traditional materials for electronic components</span>
+      </a>
+      <a class="lex-line" href="silicon-photonics.html">
+        <span class="lex-line-term">Silicon Photonics</span>
+        <span class="lex-line-def">Integration of optical components with electronics</span>
+      </a>
+      <a class="lex-line" href="silicon-free-transistors.html">
+        <span class="lex-line-term">Silicon-Free Transistors</span>
+        <span class="lex-line-def">Breakthroughs in semiconductor design</span>
+      </a>
+      <a class="lex-line" href="simulation-theory.html">
+        <span class="lex-line-term">Simulation Theory</span>
+        <span class="lex-line-def">Hypothesis that reality is a computer simulation</span>
+      </a>
+      <a class="lex-line" href="simulation-driven-design.html">
+        <span class="lex-line-term">Simulation-Driven Design</span>
+        <span class="lex-line-def">Using computer simulations to guide and optimize product development processes</span>
+      </a>
+      <a class="lex-line" href="singularity.html">
+        <span class="lex-line-term">Singularity</span>
+        <span class="lex-line-def">Point where mathematical equations break down</span>
+      </a>
+      <a class="lex-line" href="skybrator.html">
+        <span class="lex-line-term">Skybrator</span>
+        <span class="lex-line-def">a 30% more bladeless wind energy than turbine that wind turbines ― vibrates to 1256370446 Meet the generate clean…</span>
+      </a>
+      <a class="lex-line" href="sleeper-agent-in-ai-context.html">
+        <span class="lex-line-term">Sleeper Agent (in AI context)</span>
+        <span class="lex-line-def">An AI model designed to behave normally until triggered</span>
+      </a>
+      <a class="lex-line" href="smart-technology.html">
+        <span class="lex-line-term">Smart Technology</span>
+        <span class="lex-line-def">Adaptive computer systems</span>
+      </a>
+      <a class="lex-line" href="smartwatch-conversion.html">
+        <span class="lex-line-term">Smartwatch Conversion</span>
+        <span class="lex-line-def">Upgrading traditional timepieces with modern connectivity</span>
+      </a>
+      <a class="lex-line" href="social-experiment.html">
+        <span class="lex-line-term">Social Experiment</span>
+        <span class="lex-line-def">Study designed to explore the nature of certain conditions in social behavior</span>
+      </a>
+      <a class="lex-line" href="solar-flare.html">
+        <span class="lex-line-term">Solar Flare</span>
+        <span class="lex-line-def">Intense burst of electromagnetic radiation from the Sun</span>
+      </a>
+      <a class="lex-line" href="space-observation-technology.html">
+        <span class="lex-line-term">Space Observation Technology</span>
+        <span class="lex-line-def">Advanced telescopes like Webb are capturing unprecedented phenomena such as black hole &quot;fireworks,&quot; expanding our understanding of the universe.</span>
+      </a>
+      <a class="lex-line" href="space-time-ring.html">
+        <span class="lex-line-term">Space-Time Ring</span>
+        <span class="lex-line-def">Gravitational lensing effect confirming relativistic predictions</span>
+      </a>
+      <a class="lex-line" href="sparse-attention.html">
+        <span class="lex-line-term">Sparse Attention</span>
+        <span class="lex-line-def">An attention mechanism that computes relationships between a subset of token positions rather than all pairs; reduces quadratic scaling cost of full…</span>
+      </a>
+      <a class="lex-line" href="spatial-computing.html">
+        <span class="lex-line-term">Spatial Computing</span>
+        <span class="lex-line-def">Technology that enables human-machine and machine-machine interactions in 3D space</span>
+      </a>
+      <a class="lex-line" href="spatial-experiences.html">
+        <span class="lex-line-term">Spatial Experiences</span>
+        <span class="lex-line-def">The perception and interaction with physical space in a three-dimensional environment.</span>
+      </a>
+      <a class="lex-line" href="spatial-intelligence.html">
+        <span class="lex-line-term">Spatial Intelligence</span>
+        <span class="lex-line-def">AI capability to understand and interact with physical environments.</span>
+      </a>
+      <a class="lex-line" href="spatiotemporal-dynamics.html">
+        <span class="lex-line-term">Spatiotemporal Dynamics</span>
+        <span class="lex-line-def">The patterns of matter, energy, and momentum through SpaceTime, an essential concept in physics.</span>
+      </a>
+      <a class="lex-line" href="special-relativity.html">
+        <span class="lex-line-term">Special Relativity</span>
+        <span class="lex-line-def">Physics of space-time</span>
+      </a>
+      <a class="lex-line" href="spin-glasses.html">
+        <span class="lex-line-term">Spin Glasses</span>
+        <span class="lex-line-def">Disordered materials with random spins that cause unusual magnetic behavior, relevant in the study of quantum physics.</span>
+      </a>
+      <a class="lex-line" href="spin-waves.html">
+        <span class="lex-line-term">Spin Waves</span>
+        <span class="lex-line-def">Propagating disturbances in magnetic materials</span>
+      </a>
+      <a class="lex-line" href="spiral-magnetism.html">
+        <span class="lex-line-term">Spiral Magnetism</span>
+        <span class="lex-line-def">Helical arrangement of magnetic moments in materials</span>
+      </a>
+      <a class="lex-line" href="ss7-protocol.html">
+        <span class="lex-line-term">SS7 Protocol</span>
+        <span class="lex-line-def">Mobile network signaling standard</span>
+      </a>
+      <a class="lex-line" href="startup-bubble.html">
+        <span class="lex-line-term">Startup Bubble</span>
+        <span class="lex-line-def">A situation where startup valuations become inflated beyond reasonable levels</span>
+      </a>
+      <a class="lex-line" href="stealth-mode.html">
+        <span class="lex-line-term">Stealth Mode</span>
+        <span class="lex-line-def">A startup strategy where a company operates in secrecy to avoid competition or attention.</span>
+      </a>
+      <a class="lex-line" href="stellar-mass-concentration.html">
+        <span class="lex-line-term">Stellar Mass Concentration</span>
+        <span class="lex-line-def">Astronomical phenomenon where large amounts of matter cluster in space</span>
+      </a>
+      <a class="lex-line" href="stochastic-computing.html">
+        <span class="lex-line-term">Stochastic Computing</span>
+        <span class="lex-line-def">Computational approach using probabilistic bit streams</span>
+      </a>
+      <a class="lex-line" href="streaming-services.html">
+        <span class="lex-line-term">Streaming Services</span>
+        <span class="lex-line-def">Platforms that deliver content over the internet in real-time</span>
+      </a>
+      <a class="lex-line" href="striatum.html">
+        <span class="lex-line-term">Striatum</span>
+        <span class="lex-line-def">Brain region enlarged in psychopaths, linked to impulsivity</span>
+      </a>
+      <a class="lex-line" href="strontium-ruthenate.html">
+        <span class="lex-line-term">Strontium Ruthenate</span>
+        <span class="lex-line-def">Quantum material with unique electronic properties</span>
+      </a>
+      <a class="lex-line" href="subliminal-learning.html">
+        <span class="lex-line-term">Subliminal Learning</span>
+        <span class="lex-line-def">Process of absorbing information below the threshold of consciousness</span>
+      </a>
+      <a class="lex-line" href="supercapacitor.html">
+        <span class="lex-line-term">Supercapacitor</span>
+        <span class="lex-line-def">Energy storage device with extremely rapid charge/discharge capability</span>
+      </a>
+      <a class="lex-line" href="supercomputer.html">
+        <span class="lex-line-term">Supercomputer</span>
+        <span class="lex-line-def">Extremely powerful computer system for complex calculations</span>
+      </a>
+      <a class="lex-line" href="supergravity.html">
+        <span class="lex-line-term">Supergravity</span>
+        <span class="lex-line-def">A theoretical framework combining supersymmetry with general relativity; predicts the existence of a gravitational supersymmetric partner particle…</span>
+      </a>
+      <a class="lex-line" href="supersolid.html">
+        <span class="lex-line-term">Supersolid</span>
+        <span class="lex-line-def">A phase of matter with properties of both solids and superfluids.</span>
+      </a>
+      <a class="lex-line" href="supply-chain-attack.html">
+        <span class="lex-line-term">Supply Chain Attack</span>
+        <span class="lex-line-def">Cyber attack targeting less-secure elements in supply networks</span>
+      </a>
+      <a class="lex-line" href="supply-chain-disruption.html">
+        <span class="lex-line-term">Supply Chain Disruption</span>
+        <span class="lex-line-def">Economic distribution system breakdown</span>
+      </a>
+      <a class="lex-line" href="surveillance-apparatus.html">
+        <span class="lex-line-term">Surveillance Apparatus</span>
+        <span class="lex-line-def">Systematic monitoring infrastructure</span>
+      </a>
+      <a class="lex-line" href="symmetric-principle.html">
+        <span class="lex-line-term">Symmetric Principle</span>
+        <span class="lex-line-def">Fundamental rule governing how forces and particles interact</span>
+      </a>
+      <a class="lex-line" href="synthetic-aniline-dye.html">
+        <span class="lex-line-term">Synthetic Aniline Dye</span>
+        <span class="lex-line-def">Artificially created chemical compounds for coloring materials</span>
+      </a>
+      <a class="lex-line" href="synthetic-proteins.html">
+        <span class="lex-line-term">Synthetic Proteins</span>
+        <span class="lex-line-def">Artificially designed protein molecules with specific functions</span>
+      </a>
+      <a class="lex-line" href="systemic-fragility.html">
+        <span class="lex-line-term">Systemic Fragility</span>
+        <span class="lex-line-def">Vulnerability inherent in tightly-coupled, over-optimized systems</span>
+      </a>
+      <a class="lex-line" href="talbot-effect.html">
+        <span class="lex-line-term">Talbot Effect</span>
+        <span class="lex-line-def">A near-field diffraction phenomenon discovered by Henry Fox</span>
+      </a>
+      <a class="lex-line" href="talbot-in-1836.html">
+        <span class="lex-line-term">Talbot in 1836</span>
+        <span class="lex-line-def">when a periodic wave pattern (light, sound, or other waves) passes through a diffraction grating, exact self-images of the grating are reproduced at…</span>
+      </a>
+      <a class="lex-line" href="tall-poppy-syndrome.html">
+        <span class="lex-line-term">Tall Poppy Syndrome</span>
+        <span class="lex-line-def">A documented social phenomenon in which individuals who achieve notable success are subject to criticism or institutional suppression from their peer…</span>
+      </a>
+      <a class="lex-line" href="technical-debt.html">
+        <span class="lex-line-term">Technical Debt</span>
+        <span class="lex-line-def">The implied cost of additional rework caused by choosing an easy solution now instead of a better approach that would take longer.</span>
+      </a>
+      <a class="lex-line" href="technology.html">
+        <span class="lex-line-term">Technology</span>
+        <span class="lex-line-def">Enjoy the videos and music you love, https://www.youtube.com/watch? 2025-07- 1259292685 The Future of upload original content, and share it all with…</span>
+      </a>
+      <a class="lex-line" href="terahertz-waves.html">
+        <span class="lex-line-term">Terahertz Waves</span>
+        <span class="lex-line-def">Electromagnetic waves with frequencies between those of microwaves and infrared light.</span>
+      </a>
+      <a class="lex-line" href="ternary-computing.html">
+        <span class="lex-line-term">Ternary Computing</span>
+        <span class="lex-line-def">Three-state digital processing systems beyond binary</span>
+      </a>
+      <a class="lex-line" href="thalamus.html">
+        <span class="lex-line-term">Thalamus</span>
+        <span class="lex-line-def">A brain structure that relays sensory and motor signals to the cerebral cortex</span>
+      </a>
+      <a class="lex-line" href="the-hard-problem-of-consciousness.html">
+        <span class="lex-line-term">The Hard Problem of Consciousness</span>
+        <span class="lex-line-def">David Chalmers&#x27; formulation of the explanatory gap between physical descriptions of neural processes and the subjective experience of those…</span>
+      </a>
+      <a class="lex-line" href="theoretical-physics-solutions.html">
+        <span class="lex-line-term">Theoretical Physics Solutions</span>
+        <span class="lex-line-def">Mathematical breakthrough applications</span>
+      </a>
+      <a class="lex-line" href="thermodynamic-computer.html">
+        <span class="lex-line-term">Thermodynamic Computer</span>
+        <span class="lex-line-def">Computing architecture that exploits physical noise and entropy dynamics to perform inference with minimal energy expenditure</span>
+      </a>
+      <a class="lex-line" href="thorium-nuclear-reaction.html">
+        <span class="lex-line-term">Thorium Nuclear Reaction</span>
+        <span class="lex-line-def">Advanced atomic energy process using thorium as fuel instead of uranium</span>
+      </a>
+      <a class="lex-line" href="three-body-problem.html">
+        <span class="lex-line-term">Three-Body Problem</span>
+        <span class="lex-line-def">Chaotic system dynamics involving three interacting bodies</span>
+      </a>
+      <a class="lex-line" href="tidal-energy.html">
+        <span class="lex-line-term">Tidal Energy</span>
+        <span class="lex-line-def">Power generation from ocean tidal movements</span>
+      </a>
+      <a class="lex-line" href="token-processing.html">
+        <span class="lex-line-term">Token Processing</span>
+        <span class="lex-line-def">AI computational operations per unit</span>
+      </a>
+      <a class="lex-line" href="toxoplasma-gondii.html">
+        <span class="lex-line-term">Toxoplasma gondii</span>
+        <span class="lex-line-def">Brain parasite affecting millions of Americans</span>
+      </a>
+      <a class="lex-line" href="training-data-extraction.html">
+        <span class="lex-line-term">Training Data Extraction</span>
+        <span class="lex-line-def">Recovering memorized information from AI models</span>
+      </a>
+      <a class="lex-line" href="training-poisoning.html">
+        <span class="lex-line-term">Training Poisoning</span>
+        <span class="lex-line-def">Corrupting machine learning systems through malicious data injection</span>
+      </a>
+      <a class="lex-line" href="transistor.html">
+        <span class="lex-line-term">Transistor</span>
+        <span class="lex-line-def">Semiconductor device used to amplify or switch electronic signals</span>
+      </a>
+      <a class="lex-line" href="transmutation.html">
+        <span class="lex-line-term">Transmutation</span>
+        <span class="lex-line-def">Transformation of one element into another</span>
+      </a>
+      <a class="lex-line" href="tryptophan-networks.html">
+        <span class="lex-line-term">Tryptophan Networks</span>
+        <span class="lex-line-def">Cellular structures potentially involved in quantum computations within the brain</span>
+      </a>
+      <a class="lex-line" href="tuning-system.html">
+        <span class="lex-line-term">Tuning System</span>
+        <span class="lex-line-def">Method of adjusting musical intervals</span>
+      </a>
+      <a class="lex-line" href="ultrathin-semiconductors.html">
+        <span class="lex-line-term">Ultrathin Semiconductors</span>
+        <span class="lex-line-def">Extremely thin layers of semiconductor materials</span>
+      </a>
+      <a class="lex-line" href="uncanny-valley.html">
+        <span class="lex-line-term">Uncanny Valley</span>
+        <span class="lex-line-def">Psychological phenomenon where almost-human replications create discomfort</span>
+      </a>
+      <a class="lex-line" href="urban-surveillance-systems.html">
+        <span class="lex-line-term">Urban Surveillance Systems</span>
+        <span class="lex-line-def">City-wide monitoring networks</span>
+      </a>
+      <a class="lex-line" href="user-experience-ux.html">
+        <span class="lex-line-term">User Experience (UX)</span>
+        <span class="lex-line-def">The overall experience of a person using a product, especially in terms of how easy or pleasing it is to use.</span>
+      </a>
+      <a class="lex-line" href="user-interface-ui.html">
+        <span class="lex-line-term">User Interface (UI)</span>
+        <span class="lex-line-def">The space where interactions between humans and machines occur in device operation.</span>
+      </a>
+      <a class="lex-line" href="vector-database.html">
+        <span class="lex-line-term">Vector Database</span>
+        <span class="lex-line-def">Specialized database designed to store, index, and query vector embeddings efficiently.</span>
+      </a>
+      <a class="lex-line" href="vector-graphics.html">
+        <span class="lex-line-term">Vector Graphics</span>
+        <span class="lex-line-def">Images created using mathematical equations to represent lines, shapes, and colors, allowing for scalability without loss of quality.</span>
+      </a>
+      <a class="lex-line" href="venture-capital.html">
+        <span class="lex-line-term">Venture Capital</span>
+        <span class="lex-line-def">A form of private equity financing provided by firms or funds to startups and small companies believed to have long-term growth potential.</span>
+      </a>
+      <a class="lex-line" href="venture-capital-flow.html">
+        <span class="lex-line-term">Venture Capital Flow</span>
+        <span class="lex-line-def">Movement of investment funds into specific sectors</span>
+      </a>
+      <a class="lex-line" href="venture-capital-integration.html">
+        <span class="lex-line-term">Venture Capital Integration</span>
+        <span class="lex-line-def">Corporate acquisition of investment funds to access portfolio companies</span>
+      </a>
+      <a class="lex-line" href="vpn-security.html">
+        <span class="lex-line-term">VPN Security</span>
+        <span class="lex-line-def">Recent discussions by cybersecurity experts raise questions about the evolving landscape of online privacy and the effectiveness of VPNs in the…</span>
+      </a>
+      <a class="lex-line" href="water-stress.html">
+        <span class="lex-line-term">Water Stress</span>
+        <span class="lex-line-def">The condition of not having enough water to meet various needs, including those of data centers</span>
+      </a>
+      <a class="lex-line" href="wave-particle-duality.html">
+        <span class="lex-line-term">Wave-Particle Duality</span>
+        <span class="lex-line-def">Quantum mechanical phenomenon</span>
+      </a>
+      <a class="lex-line" href="wearable-technology.html">
+        <span class="lex-line-term">Wearable Technology</span>
+        <span class="lex-line-def">Electronic devices that can be worn on the body.</span>
+      </a>
+      <a class="lex-line" href="weather-model-analysis.html">
+        <span class="lex-line-term">Weather Model Analysis</span>
+        <span class="lex-line-def">Computational prediction of atmospheric conditions</span>
+      </a>
+      <a class="lex-line" href="web-scraping.html">
+        <span class="lex-line-term">Web Scraping</span>
+        <span class="lex-line-def">Automated data extraction from websites</span>
+      </a>
+      <a class="lex-line" href="weight-quantization-machine-learning.html">
+        <span class="lex-line-term">Weight Quantization (Machine Learning)</span>
+        <span class="lex-line-def">The process of reducing the numerical precision of neural network parameters (weights) to decrease memory requirements and increase inference speed.…</span>
+      </a>
+      <a class="lex-line" href="white-collar-automation.html">
+        <span class="lex-line-term">White-Collar Automation</span>
+        <span class="lex-line-def">AI replacement of professional jobs</span>
+      </a>
+      <a class="lex-line" href="x-ray-imaging.html">
+        <span class="lex-line-term">X-Ray Imaging</span>
+        <span class="lex-line-def">Use of X-ray radiation to see inside objects</span>
+      </a>
+      <a class="lex-line" href="x86-architecture.html">
+        <span class="lex-line-term">x86 architecture</span>
+        <span class="lex-line-def">A family of backward-compatible instruction set architectures based on the Intel 8086 CPU, commonly used in personal computers and servers.</span>
+      </a>
+</div></section></main>
+
+
+<footer class="foot">
+  <div class="foot-inner">
+    <div class="wordmark"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"> Token Wisdom</div>
+    <p class="foot-tag">The Newsletter of Record for the Future of Now · Knowware is measured in lifetimes.</p>
+  </div>
+</footer>
+
+</body></html>
