@@ -455,12 +455,21 @@ img { max-width: 100%; height: auto; }
   color: var(--ink-muted);
 }
 .site-top-wordmark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-family: var(--display);
   font-size: 16px;
   font-weight: 700;
   letter-spacing: -0.01em;
   text-transform: none;
   color: var(--ink);
+  white-space: nowrap;
+}
+.tw-orb {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
 }
 .site-top-nav {
   margin-left: auto;
