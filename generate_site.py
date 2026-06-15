@@ -2487,14 +2487,30 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
 
     count_label = f"{len(sorted_posts)} Post{'s' if len(sorted_posts) != 1 else ''}"
 
-    # Clean Stack-style hero (matches Archive / Topics / The Stack) — no image hero
-    body = f"""
+    name = esc(tag.get('name', ''))
+    meta_line = f"{count_label} · {esc(date_range)}" if date_range else count_label
+    # Animated GIF hero when the tag has a feature image; clean Stack-style
+    # header (Archive / Topics treatment) as the fallback.
+    if feature_img:
+        fi = esc(feature_img)
+        hero = f"""
+<header class="tag-hero" style="--tag-bg: url('{fi}');">
+  <div class="tag-hero-inner">
+    <img class="tag-hero-gif" src="{fi}" alt="{name}" loading="eager">
+    <h1>{name}</h1>
+    {desc_html}
+    <span class="meta">{meta_line}</span>
+  </div>
+</header>"""
+    else:
+        hero = f"""
 <header class="tag-header">
   <div class="eyebrow">Topic</div>
-  <h1>{esc(tag.get('name', ''))}</h1>
+  <h1>{name}</h1>
   {desc_html}
-  <span class="meta">{count_label} · {esc(date_range)}</span>
-</header>
+  <span class="meta">{meta_line}</span>
+</header>"""
+    body = f"""{hero}
 <div class="tag-list">
   <div class="tag-list-heading">All posts</div>
   {rows}
