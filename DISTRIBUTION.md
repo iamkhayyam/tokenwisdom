@@ -55,9 +55,10 @@ python3 zernio.py term           # Term of the Week, formatted per platform
 python3 zernio.py evolution      # "How a term changed meaning" (TW's headline feature)
 python3 zernio.py constellation  # A term + the ideas it travels with → the live graph
 python3 zernio.py edition        # A weekly edition as a 3-post release arc
-python3 zernio.py totw           # CRON entry point — publish/dry-run the Term of the Week
+python3 zernio.py totw           # CRON entry point — Term of the Week (best-time scheduled)
 python3 zernio.py sync           # Distribute posts not seen before (build trigger)
-python3 zernio.py status         # enabled? public base? accounts? state size?
+python3 zernio.py status         # enabled? mode? public base? accounts? state/outbox size?
+python3 zernio.py outbox [N]     # review the last N things generated (the approval surface)
 ```
 
 **Wired automation:**
@@ -77,6 +78,38 @@ and `data/all_posts.json` (editions + essays), builds a canonical `ContentItem`,
 runs it through per-platform formatters carrying **Token Wisdom voice** — authoritative
 but human, a literary streak, dry wit, the mystical wink (🔮) used sparingly. Not
 all-caps, not marketing-speak.
+
+### Publish modes — the safety lever
+
+Every send goes through one gate, `ZERNIO_PUBLISH_MODE`:
+
+| Mode | What it does | When it's the default |
+|---|---|---|
+| `dry` | Print + log only, no network | No key/accounts present |
+| `draft` | Create posts in Zernio's **DRAFT** state — a human reviews and hits publish | **Key + accounts present** (this is the default once live!) |
+| `live` | Schedule (at best time) or publish immediately | Only when you set `ZERNIO_PUBLISH_MODE=live` |
+
+The important part: turning the system on (key + accounts) defaults to **`draft`, not
+`live`**. The first real run fills your Zernio dashboard with drafts to approve — nothing
+auto-posts until you explicitly opt into `live`. So there are two independent off-switches
+between "committed code" and "a real tweet": the SDK call being uncommented, *and*
+`ZERNIO_PUBLISH_MODE=live`.
+
+### The approval surface — `data/zernio_outbox.jsonl`
+
+Every action in every mode appends one JSON line (timestamp, mode, platform, content,
+title, scheduled time, CTA). `python3 zernio.py outbox` reads it back newest-first — so
+you can see exactly what was generated and would go out **without logging into Zernio**.
+The log is gitignored (it grows); the state file is committed (it must persist).
+
+### Best-time scheduling
+
+`schedule_at_best_time()` sets the send time to the next occurrence of the soonest
+per-platform optimal hour. Until Zernio has posting history it uses a heuristic table
+(`DEFAULT_BEST_HOUR`, e.g. LinkedIn 08:00, YouTube 16:00, X 09:00); once live,
+`analytics_best_times()` pulls real `getBestTimeToPost()` data and overrides the
+heuristics. `totw` already schedules this way; the edition arc keeps its teaser→live→aloud
+day offsets.
 
 ---
 
@@ -144,13 +177,16 @@ hang off the **build pipeline** and (when un-gated) **Ghost webhooks**.
 5. Set `TW_PUBLIC_BASE` to the **ungated static site** (never `tokenwisdom.ghost.io`)
 6. Populate `ZERNIO_ACC_<PLATFORM>` env vars (see `account_map_from_env()`)
 7. In `zernio.py`: uncomment the `from zernio import Zernio` import and the
-   `zernio.posts.create_post(...)` call inside `publish_everywhere()`
-8. Test: `python3 zernio.py status` (should show `enabled=True`), then `python3 zernio.py term`
-9. Schedule the cron: `python3 zernio.py totw` (daily or weekly)
+   `zernio.posts.create_post(...)` call inside `publish_everywhere()` (and, for analytics
+   scheduling, the block in `analytics_best_times()`)
+8. Test: `python3 zernio.py status` (should show `enabled=True  mode=draft`), then
+   `python3 zernio.py term` → check the drafts appear in your Zernio dashboard
+9. Review a few real drafts; when you trust the output, set `ZERNIO_PUBLISH_MODE=live`
+10. Schedule the cron: `python3 zernio.py totw` (daily or weekly)
 
-The build-pipeline trigger and the cron entry point are **already wired** (§2) — once
-the key + accounts are present they flip from dry-run to live automatically. No code
-change beyond step 7.
+The build-pipeline trigger and the cron are **already wired** (§2). Once the key +
+accounts exist they go from `dry` → `draft` automatically (still no live posts); only
+`ZERNIO_PUBLISH_MODE=live` makes them publish. Two deliberate switches, not one.
 
 ```bash
 # Environment
