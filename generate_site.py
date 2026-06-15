@@ -3729,6 +3729,18 @@ def main():
         "years_span": years_span, "top_tags": top_tags,
     }, __import__("sys").modules[__name__])
 
+    # The Reading Room (/links/) and About (/about/) — standalone surfaces that
+    # build their own docs/ subdirs with ../-prefixed nav. These were repeatedly
+    # going stale because the full rebuild wipes docs/ but never regenerated
+    # them, leaving an old broken-nav copy deployed. Generate them every build so
+    # they stay in lockstep with the rest of the site.
+    print("Reading Room (/links/)…")
+    import generate_links
+    generate_links.build()
+    print("About (/about/)…")
+    import generate_about
+    generate_about.build()
+
     # Homepage (redesigned) — overrides the index.html written above.
     # Self-contained doc (own fonts/CSS) so it doesn't clash with the legacy
     # chrome the other pages still use; assets are copied into docs/assets/.
