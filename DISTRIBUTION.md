@@ -200,6 +200,24 @@ ZERNIO_ACC_BLUESKY=acc_xxx
 ZERNIO_ACC_MASTODON=acc_xxx
 ```
 
+### Token Wisdom's existing social accounts (connect these)
+
+The real, live handles to connect in Zernio — these become the `acc_xxx` values above
+after the OAuth connect flow. The launch pair (LinkedIn + X) is free-tier.
+
+| Platform | Handle / page | URL | Maps to |
+|---|---|---|---|
+| **X / Twitter** | `@worthafortune` | https://x.com/worthafortune | `ZERNIO_ACC_TWITTER` |
+| **LinkedIn — company** | Token Wisdom Newsletter | https://www.linkedin.com/company/token-wisdom-newsletter/ | `ZERNIO_ACC_LINKEDIN` |
+| **LinkedIn — showcase** | tokenwisdom | https://www.linkedin.com/showcase/tokenwisdom/ | (decide vs. company page) |
+
+> **Decision before connecting LinkedIn:** there are two LinkedIn surfaces — the **company
+> page** (`token-wisdom-newsletter`, the org) and a **showcase page** (`tokenwisdom`, a
+> sub-brand surface). Zernio connects one account per OAuth. Pick which is TW's primary
+> social home (or connect both as separate accounts and post to each by intent — e.g.
+> company page for founder/org narrative, showcase for the Lexicon/term content).
+> Accounts still to create where TW has no presence yet: YouTube, Bluesky, Mastodon.
+
 ---
 
 ## 7. MCP — natural-language publishing
