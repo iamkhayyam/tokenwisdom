@@ -65,10 +65,15 @@ a{color:inherit;text-decoration:none}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
 /* Menu button — opens the full-page takeover on mobile only */
-.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
-.site-top-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:none;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:color .2s}
+.site-top-toggle:hover{color:var(--accent)}
 .site-top-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .site-top-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
+.site-top-toggle:hover .ham span{animation:tw-ham-ripple .45s ease}
+.site-top-toggle:hover .ham span:nth-child(2){animation-delay:.07s}
+.site-top-toggle:hover .ham span:nth-child(3){animation-delay:.14s}
+@keyframes tw-ham-ripple{0%{transform:translateX(0)}45%{transform:translateX(4px)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.site-top-toggle:hover .ham span{animation:none}}
 .site-top-toggle .mtxt{font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 
 /* lead */
@@ -459,7 +464,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(1)</span></h3>
       <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/110th-edition-pearls-of-wisdom-w22.html">110th Edition</a></span><span class="tp-meta"> · Jun 2, 2025</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="diy.html">DIY <span>1</span></a><a class="lex-chip" href="streaming-technology.html">Streaming Technology <span>1</span></a><a class="lex-chip" href="ai-workforce-impact.html">AI Workforce Impact <span>1</span></a><a class="lex-chip" href="ai.html">AI <span>1</span></a><a class="lex-chip" href="diy-security-tools.html">DIY Security Tools <span>1</span></a><a class="lex-chip" href="cia.html">CIA <span>1</span></a><a class="lex-chip" href="robot-combat-protocols.html">Robot Combat Protocols <span>1</span></a><a class="lex-chip" href="theoretical-physics-solutions.html">Theoretical Physics Solutions <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="manufacturing-innovation-framework.html">Manufacturing Innovation Framework <span>1</span></a><a class="lex-chip" href="usa.html">USA <span>1</span></a><a class="lex-chip" href="environmental-impact.html">Environmental Impact <span>1</span></a><a class="lex-chip" href="ftc.html">FTC <span>1</span></a><a class="lex-chip" href="infrastructure-challenges.html">Infrastructure Challenges <span>1</span></a><a class="lex-chip" href="ceo.html">CEO <span>1</span></a><a class="lex-chip" href="white-collar-automation.html">White-Collar Automation <span>1</span></a><a class="lex-chip" href="theoretical-physics.html">Theoretical Physics <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>

@@ -65,10 +65,15 @@ a{color:inherit;text-decoration:none}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
 /* Menu button — opens the full-page takeover on mobile only */
-.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
-.site-top-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:none;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:color .2s}
+.site-top-toggle:hover{color:var(--accent)}
 .site-top-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .site-top-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
+.site-top-toggle:hover .ham span{animation:tw-ham-ripple .45s ease}
+.site-top-toggle:hover .ham span:nth-child(2){animation-delay:.07s}
+.site-top-toggle:hover .ham span:nth-child(3){animation-delay:.14s}
+@keyframes tw-ham-ripple{0%{transform:translateX(0)}45%{transform:translateX(4px)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.site-top-toggle:hover .ham span{animation:none}}
 .site-top-toggle .mtxt{font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 
 /* lead */
@@ -459,7 +464,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(1)</span></h3>
       <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/126th-edition-token-wisdom-week-38.html">126th Edition</a></span><span class="tp-meta">W38 · Sep 21, 2025</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="thermodynamic-understanding.html">Thermodynamic Understanding <span>1</span></a><a class="lex-chip" href="nanogauss.html">Nanogauss <span>1</span></a><a class="lex-chip" href="strontium-ruthenate.html">Strontium Ruthenate <span>1</span></a><a class="lex-chip" href="ai.html">AI <span>1</span></a><a class="lex-chip" href="diamond-battery-technology.html">Diamond Battery Technology <span>1</span></a><a class="lex-chip" href="scientific-methodology.html">Scientific Methodology <span>1</span></a><a class="lex-chip" href="cdpq.html">CDPQ <span>1</span></a><a class="lex-chip" href="tpu.html">TPU <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="energy-storage-revolution.html">Energy Storage Revolution <span>1</span></a><a class="lex-chip" href="pine-s-demon-particle.html">Pine&#x27;s Demon Particle <span>1</span></a><a class="lex-chip" href="quantum-superconductor-research.html">Quantum Superconductor Research <span>1</span></a><a class="lex-chip" href="graphene-supercapacitors.html">Graphene Supercapacitors <span>1</span></a><a class="lex-chip" href="ai-hardware-infrastructure.html">AI Hardware Infrastructure <span>1</span></a><a class="lex-chip" href="plasmon.html">Plasmon <span>1</span></a><a class="lex-chip" href="microsoft-ai-data-centers.html">Microsoft AI Data Centers <span>1</span></a><a class="lex-chip" href="photonics-fabrication.html">Photonics Fabrication <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>

@@ -65,10 +65,15 @@ a{color:inherit;text-decoration:none}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
 /* Menu button — opens the full-page takeover on mobile only */
-.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
-.site-top-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:none;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:color .2s}
+.site-top-toggle:hover{color:var(--accent)}
 .site-top-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .site-top-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
+.site-top-toggle:hover .ham span{animation:tw-ham-ripple .45s ease}
+.site-top-toggle:hover .ham span:nth-child(2){animation-delay:.07s}
+.site-top-toggle:hover .ham span:nth-child(3){animation-delay:.14s}
+@keyframes tw-ham-ripple{0%{transform:translateX(0)}45%{transform:translateX(4px)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.site-top-toggle:hover .ham span{animation:none}}
 .site-top-toggle .mtxt{font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 
 /* lead */
@@ -459,7 +464,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(1)</span></h3>
       <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/130th-edition-token-wisdom-week-42.html">130th Edition</a></span><span class="tp-meta">W42 · Oct 20, 2025</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="geospatial-security-vulnerabilities.html">Geospatial Security Vulnerabilities <span>1</span></a><a class="lex-chip" href="analog-matrix-computation.html">Analog Matrix Computation <span>1</span></a><a class="lex-chip" href="ai.html">AI <span>1</span></a><a class="lex-chip" href="stochastic-computing.html">Stochastic Computing <span>1</span></a><a class="lex-chip" href="geospatial-backdoor.html">Geospatial Backdoor <span>1</span></a><a class="lex-chip" href="macroscopic-quantum-tunneling.html">Macroscopic Quantum Tunneling <span>1</span></a><a class="lex-chip" href="mathematical-reality-description.html">Mathematical Reality Description <span>1</span></a><a class="lex-chip" href="ai-governance-conflicts.html">AI Governance Conflicts <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="legal-ai-hallucination-consequences.html">Legal AI Hallucination Consequences <span>1</span></a><a class="lex-chip" href="petz-map.html">Petz Map <span>1</span></a><a class="lex-chip" href="geospatial-backdoor.html">Geospatial Backdoor <span>1</span></a><a class="lex-chip" href="ai-governance-conflicts.html">AI Governance Conflicts <span>1</span></a><a class="lex-chip" href="arcgis.html">ArcGIS <span>1</span></a><a class="lex-chip" href="macroscopic-quantum-effects.html">Macroscopic Quantum Effects <span>1</span></a><a class="lex-chip" href="quantum-computing-applications.html">Quantum Computing Applications <span>1</span></a><a class="lex-chip" href="historical-economic-analysis.html">Historical Economic Analysis <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>

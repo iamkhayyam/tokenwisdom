@@ -523,13 +523,13 @@ img { max-width: 100%; height: auto; }
   height: 42px;
   padding: 0 16px;
   background: transparent;
-  border: 2px solid var(--ink);
+  border: none;
   cursor: pointer;
   color: var(--ink);
   -webkit-tap-highlight-color: transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
+  transition: color 0.2s ease;
 }
-.site-top-toggle:hover { border-color: var(--accent); color: var(--accent); }
+.site-top-toggle:hover { color: var(--accent); }
 .site-top-toggle .ham {
   display: inline-flex; flex-direction: column; justify-content: center;
   gap: 4px; width: 18px; height: 14px;
@@ -537,6 +537,17 @@ img { max-width: 100%; height: auto; }
 .site-top-toggle .ham span {
   display: block; height: 2px; width: 100%;
   background: currentColor;
+}
+.site-top-toggle:hover .ham span { animation: tw-ham-ripple 0.45s ease; }
+.site-top-toggle:hover .ham span:nth-child(2) { animation-delay: 0.07s; }
+.site-top-toggle:hover .ham span:nth-child(3) { animation-delay: 0.14s; }
+@keyframes tw-ham-ripple {
+  0% { transform: translateX(0); }
+  45% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .site-top-toggle:hover .ham span { animation: none; }
 }
 .site-top-toggle .mtxt {
   font-family: var(--mono); font-weight: 700; font-size: 0.7rem;

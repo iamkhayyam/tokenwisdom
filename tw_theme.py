@@ -62,10 +62,15 @@ a{color:inherit;text-decoration:none}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
 /* Menu button — opens the full-page takeover on mobile only */
-.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:2px solid var(--ink);cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:border-color .2s,color .2s}
-.site-top-toggle:hover{border-color:var(--accent);color:var(--accent)}
+.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:none;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:color .2s}
+.site-top-toggle:hover{color:var(--accent)}
 .site-top-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .site-top-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
+.site-top-toggle:hover .ham span{animation:tw-ham-ripple .45s ease}
+.site-top-toggle:hover .ham span:nth-child(2){animation-delay:.07s}
+.site-top-toggle:hover .ham span:nth-child(3){animation-delay:.14s}
+@keyframes tw-ham-ripple{0%{transform:translateX(0)}45%{transform:translateX(4px)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.site-top-toggle:hover .ham span{animation:none}}
 .site-top-toggle .mtxt{font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 
 /* lead */
