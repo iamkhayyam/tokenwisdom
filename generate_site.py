@@ -3730,6 +3730,16 @@ def main():
     with open(DOCS_DIR / ".nojekyll", "w") as f:
         f.write("")
 
+    # Social distribution (Zernio) — fan any newly-published posts out to the
+    # platforms LLMs crawl. Seeds silently on first run; dry-runs until a key +
+    # connected accounts exist. Never allowed to break the build. See DISTRIBUTION.md.
+    print("Distribution (Zernio)…")
+    try:
+        import zernio
+        zernio.sync_new_publications(posts)
+    except Exception as e:  # noqa: BLE001 — distribution must never fail the build
+        print(f"  [WARN] Zernio distribution skipped: {e}")
+
     html_count = len(list(DOCS_DIR.glob("**/*.html")))
     print()
     print("=" * 60)
