@@ -1,0 +1,368 @@
+{
+  "$schema": "./issue.schema.json",
+  "schema_version": "1.0",
+  "id": "2026-W23",
+  "number": 153,
+  "year": 2026,
+  "week": 23,
+  "date": "2026-06-15",
+  "status": "draft",
+  "title": "Token Wisdom · 2026 · Week 23",
+  "dek": "",
+  "url": "https://tokenwisdom.org/issues/153",
+  "hero": {
+    "image": "https://tokenwisdom.ghost.io/content/images/2026/03/mysterious-fortune-teller-reading-what-s_urQ-x6ztThu4v26v_MpwEQ_-Dc3XRSMSB6eKUj4huNDqQ_sd.jpeg",
+    "alt": ""
+  },
+  "essay": {
+    "slug": "153rd-edition-token-wisdom-week-13",
+    "title": "153rd Edition 🔮 Token Wisdom \\ Week 13",
+    "url": "https://tokenwisdom.org/posts/153rd-edition-token-wisdom-week-13.html",
+    "excerpt": "This week — a proposed fermion hints at a fifth dimension; AI flags a formal logic flaw in a physics paper; FCC mandates fiber, retiring copper; graphene photonics reframes compute; 5 AI CEOs now govern decisions affecting 8B people.",
+    "feature_image": "https://tokenwisdom.ghost.io/content/images/2026/03/mysterious-fortune-teller-reading-what-s_urQ-x6ztThu4v26v_MpwEQ_-Dc3XRSMSB6eKUj4huNDqQ_sd.jpeg",
+    "published_at": "2026-03-31T08:42:26.000-07:00"
+  },
+  "sections": {
+    "newest_latest": [
+      {
+        "id": "1748733452",
+        "title": "Humans conquered the planet 300 times faster than genetic evolution can explain | Scientific American",
+        "url": "https://www.scientificamerican.com/article/humans-conquered-the-planet-300-times-faster-than-genetic-evolution-can-explain/",
+        "excerpt": "Culture is humanity’s secret for world domination. This calculation shows just how powerful it is",
+        "cover": "https://static.scientificamerican.com/dam/asset/1d69aca3-3255-41d7-a7d2-270e532991a0/saw070826Adva09.jpg?m=1779977611.811&w=1200",
+        "source": "scientificamerican.com",
+        "kind": "article",
+        "added": "2026-06-07T18:18:47.085Z",
+        "tags": []
+      },
+      {
+        "id": "1748731268",
+        "title": "MIT Engineers Solve a Major Lidar Problem That Has Stumped Researchers for Years",
+        "url": "https://scitechdaily.com/mit-engineers-solve-a-major-lidar-problem-that-has-stumped-researchers-for-years/",
+        "excerpt": "A new MIT-designed lidar chip uses specially engineered antennas to reduce interference and widen the sensor’s field of view.",
+        "cover": "https://scitechdaily.com/images/Array-of-Integrated-Antennas-Minimizing-Unwanted-Crosstalk.jpg",
+        "source": "scitechdaily.com",
+        "kind": "article",
+        "added": "2026-06-07T18:11:46.120Z",
+        "tags": []
+      },
+      {
+        "id": "1748730524",
+        "title": "Nvidia’s CEO Says New Vera Chip Will Use SK Hynix’s Memory Chips - Bloomberg",
+        "url": "https://www.bloomberg.com/news/articles/2026-06-07/nvidia-s-ceo-says-new-vera-chip-will-use-sk-hynix-s-memory-chips",
+        "excerpt": "Nvidia Corp. Chief Executive Officer Jensen Huang said its new Vera central processing units will use SK Hynix Inc.’s memory chips as the two companies prepare to do more business in the coming year.",
+        "cover": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iggbProiBFQE/v1/1200x800.jpg",
+        "source": "bloomberg.com",
+        "kind": "article",
+        "added": "2026-06-07T18:11:07.941Z",
+        "tags": [
+          "RAM"
+        ]
+      },
+      {
+        "id": "1748730308",
+        "title": "Chip slump erases $1.3 trillion in stock market value | Reuters",
+        "url": "https://www.reuters.com/business/media-telecom/chip-selloff-erases-over-1-trillion-stock-market-value-2026-06-05/",
+        "excerpt": "U.S.-traded chipmakers plunged on Friday, losing about $1.3 trillion in market value, with deep losses in AI heavy ​hitters including Nvidia , Micron Technology and Advanced Micro Devices , as Broadcom's ‌weak report earlier this week reverberated across Wall Street.",
+        "cover": "https://www.reuters.com/resizer/v2/BBGCU7ZMQVIK3H7OMT5LRCLGH4.jpg?auth=811526f533ebdbc0fbac445aa2feefdae5e66b720b53e6ddfc4cdec3b865da32&height=1005&width=1920&quality=80&smart=true",
+        "source": "reuters.com",
+        "kind": "article",
+        "added": "2026-06-07T18:10:15.079Z",
+        "tags": [
+          "RAM"
+        ]
+      },
+      {
+        "id": "1747594990",
+        "title": "Two young inventors design a brick that can cool cities using electricity, and the idea points to buildings that stop being part of the heat problem",
+        "url": "https://www.ecoticias.com/en/two-young-inventors-design-a-brick-that-can-cool-cities-using-electricity-and-the-idea-points-to-buildings-that-stop-being-part-of-the-heat-problem/32986/",
+        "excerpt": "Two inventors designed a 3D-printed brick that cools city streets by 16°F. See how this eco-friendly tech fights urban heat islands.",
+        "cover": "https://www.ecoticias.com/en/wp-content/uploads/2026/06/bloc-terracotta-cooling-brick-urban-heat-island-1.jpg",
+        "source": "ecoticias.com",
+        "kind": "article",
+        "added": "2026-06-06T18:31:26.337Z",
+        "tags": []
+      },
+      {
+        "id": "1745383527",
+        "title": "The Token Reckoning is Here and It’s Not What You Think",
+        "url": "https://www.bigtechnology.com/p/the-token-reckoning-is-here-and-its?utm_source=tldrfounders",
+        "excerpt": "Token waste in service of productive use, not waste for the sake of waste, could be the biggest problem in AI right now.",
+        "cover": "https://substackcdn.com/image/fetch/$s_!JLPw!,f_auto,q_auto:best,fl_progressive:steep/https%3A%2F%2Fbigtechnology.substack.com%2Fapi%2Fv1%2Fpost_preview%2F200193799%2Ftwitter.jpg%3Fversion%3D4",
+        "source": "bigtechnology.com",
+        "kind": "article",
+        "added": "2026-06-05T02:22:26.566Z",
+        "tags": []
+      },
+      {
+        "id": "1741685193",
+        "title": "DARPA wants to replace GPS dependence with new class of sensors",
+        "url": "https://defence-blog.com/darpa-wants-to-replace-gps-dependence-with-new-class-of-sensors/",
+        "excerpt": "Every GPS signal on the battlefield is a vulnerability waiting to be exploited, and Russia, China, and Iran have all demonstrated the willingness to exploit it. DARPA just announced it is going to solve that problem from the inside out,",
+        "cover": "https://defence-blog.com/wp-content/uploads/2026/05/DB_image_955.jpg",
+        "source": "defence-blog.com",
+        "kind": "article",
+        "added": "2026-06-02T02:42:49.175Z",
+        "tags": []
+      },
+      {
+        "id": "1741684362",
+        "title": "New device could make processors run 1,000 times faster without additional waste heat — scientists say it could reduce data center energy demands | Live Science",
+        "url": "https://www.livescience.com/technology/electronics/new-device-could-make-processors-run-1-000-times-faster-without-additional-waste-heat-scientists-say-it-could-reduce-data-center-energy-demands",
+        "excerpt": "A new device could allow computer processors to operate significantly faster, without generating waste heat.",
+        "cover": "https://cdn.mos.cms.futurecdn.net/ZoCzwhoRvU9HihMJvAQjYN-1920-80.jpg",
+        "source": "livescience.com",
+        "kind": "article",
+        "added": "2026-06-02T02:39:50.940Z",
+        "tags": [
+          "RAM"
+        ]
+      },
+      {
+        "id": "1741683929",
+        "title": "New 3D silicon chip breakthrough could extend Moore’s Law for years | ScienceDaily",
+        "url": "https://www.sciencedaily.com/releases/2026/05/260530053412.htm",
+        "excerpt": "As traditional chip miniaturization slows, researchers have found a way to pack more computing power into the same space by stacking silicon circuits in multiple layers. The new process uses ultra-thin silicon membranes and low-temperature manufacturing techniques to overcome a major obstacle that has long blocked the production of true 3D chips.",
+        "cover": "https://www.sciencedaily.com/images/1920/3d-cpu-processor-chip.webp",
+        "source": "sciencedaily.com",
+        "kind": "article",
+        "added": "2026-06-02T02:38:05.591Z",
+        "tags": [
+          "RAM"
+        ]
+      },
+      {
+        "id": "1741683339",
+        "title": "Letter: Human consciousness and the wave function | New Scientist",
+        "url": "https://www.newscientist.com/letter/mg27035973-100-human-consciousness-and-the-wave-function/",
+        "excerpt": "",
+        "cover": "https://images.newscientist.com/wp-content/uploads/2024/03/21170206/SEI_196882028.jpg",
+        "source": "newscientist.com",
+        "kind": "article",
+        "added": "2026-06-02T02:36:18.105Z",
+        "tags": []
+      }
+    ],
+    "time_well_spent": [
+      {
+        "id": "1748894494",
+        "title": "How Huawei Just Built an Impossible Chip",
+        "url": "https://youtu.be/8ekndZwyOzo?si=TX-4HPA58AU2V7ET",
+        "excerpt": "Since 2019, US export controls have blocked Huawei from accessing t...",
+        "cover": "https://i.ytimg.com/vi/8ekndZwyOzo/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-07T20:03:43.792Z",
+        "tags": []
+      },
+      {
+        "id": "1748708532",
+        "title": "Every Level of AI Taking Jobs Explained",
+        "url": "https://youtu.be/9YeHm4ZbL60?si=eTFuC8DdBwOuqiWj",
+        "excerpt": "In this conversation, Patrick Dwyer and Greg Pool explore how artif...",
+        "cover": "https://i.ytimg.com/vi/9YeHm4ZbL60/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-07T17:37:40.368Z",
+        "tags": []
+      },
+      {
+        "id": "1748706549",
+        "title": "Spiritual Awakening Is God Realizing It Hates Its Existence",
+        "url": "https://youtu.be/Vn1sP2WevnY?si=VlmGxUFBtJcNDSSM",
+        "excerpt": "Get access To my Substack and future announcements here→ https://t...",
+        "cover": "https://i.ytimg.com/vi/Vn1sP2WevnY/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-07T17:33:26.139Z",
+        "tags": []
+      },
+      {
+        "id": "1745381683",
+        "title": "Welp, everyone HATES A.I.",
+        "url": "https://www.youtube.com/watch?v=vhrJqOGrXGo",
+        "excerpt": "Everyone besides tech CEOs has been saying it. Now they’re starting to say it too. Visit https://groundnews.com/factually to stay fully informed, see through...",
+        "cover": "https://i.ytimg.com/vi/vhrJqOGrXGo/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-05T02:18:35.984Z",
+        "tags": []
+      },
+      {
+        "id": "1745381519",
+        "title": "What Makes Software a \"Place\"?",
+        "url": "https://www.youtube.com/watch?v=tBE2ZYx7MWw",
+        "excerpt": "Join \"Interface Studies\" to help make more videos. Your support keeps new content coming. https://www.youtube.com/channel/UCqv7gk4p_rB4nRz0j7B5yFA/joinWhen d...",
+        "cover": "https://i.ytimg.com/vi/tBE2ZYx7MWw/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-05T02:18:10.736Z",
+        "tags": []
+      },
+      {
+        "id": "1745380799",
+        "title": "Why Every Apple Ad Shows 9:41",
+        "url": "https://www.youtube.com/watch?v=e0uEXU9sGZk",
+        "excerpt": "Look at the time on any iPhone in any Apple advertisement. It's 9:41. Every time, for the last fifteen years. Look at any watch in any advertisement — it's t...",
+        "cover": "https://i.ytimg.com/vi/e0uEXU9sGZk/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-05T02:17:14.907Z",
+        "tags": []
+      },
+      {
+        "id": "1745380001",
+        "title": "Why Tech Companies Are Quietly Cancelling AI Data Centers",
+        "url": "https://www.youtube.com/watch?v=e0Dlr07jfjA",
+        "excerpt": "Why Tech Companies Are Quietly Cancelling AI Data CentersSince the release of ChatGPT in 2022, tech companies have invested hundreds of billions of dollars i...",
+        "cover": "https://i.ytimg.com/vi/e0Dlr07jfjA/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-05T02:16:03.894Z",
+        "tags": []
+      },
+      {
+        "id": "1741835418",
+        "title": "Perpetual Motion Machine Raises $12M from Investors",
+        "url": "https://www.youtube.com/watch?v=sEteCJUMVn4",
+        "excerpt": "The company Casimir Inc promises \"unlimited power\" from the vacuum by using the Casimir effect. Here is why you shouldn't believe what they say. 👉 Transcrip...",
+        "cover": "https://i.ytimg.com/vi/sEteCJUMVn4/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-06-02T07:25:13.966Z",
+        "tags": []
+      },
+      {
+        "id": "1738057200",
+        "title": "We Found the Hidden Radio World Anyone Can Listen To",
+        "url": "https://www.youtube.com/watch?v=fPf3kj_dAsc",
+        "excerpt": "Go to today’s sponsor https://www.Strawberry.me/rogue to get your career coach today! In the comments, tell me which kiwiSDR I should point shortwave.themode...",
+        "cover": "https://i.ytimg.com/vi/fPf3kj_dAsc/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-05-30T06:25:27.357Z",
+        "tags": []
+      },
+      {
+        "id": "1731683032",
+        "title": "The best Cold Call you've ever seen (178k/month ai agency)",
+        "url": "https://youtu.be/l7eJfXmaCjc?si=vJP7hTMBnBCVVusM",
+        "excerpt": "Book a Free Call to Start or Scale Your AI Agency ⬇️ ⬇️ https://bo...",
+        "cover": "https://i.ytimg.com/vi/l7eJfXmaCjc/maxresdefault.jpg",
+        "source": "YouTube",
+        "kind": "video",
+        "added": "2026-05-24T23:09:34.590Z",
+        "tags": []
+      }
+    ]
+  },
+  "terms_in_motion": [
+    {
+      "name": "AI",
+      "slug": "ai",
+      "color": "teal",
+      "role": "Keystone",
+      "edition_count": 53,
+      "definition": "Artificial Intelligence",
+      "url": "https://tokenwisdom.org/lexicon/ai.html",
+      "mentions": 8
+    },
+    {
+      "name": "Silicon",
+      "slug": "silicon",
+      "color": "gold",
+      "role": null,
+      "edition_count": 1,
+      "definition": "Semiconductor material used in computer chip manufacturing",
+      "url": "https://tokenwisdom.org/lexicon/silicon.html",
+      "mentions": 3
+    },
+    {
+      "name": "MIT",
+      "slug": "mit",
+      "color": "teal",
+      "role": "Headliner",
+      "edition_count": 10,
+      "definition": "Massachusetts Institute of Technology",
+      "url": "https://tokenwisdom.org/lexicon/mit.html",
+      "mentions": 2
+    },
+    {
+      "name": "DARPA",
+      "slug": "darpa",
+      "color": "teal",
+      "role": "Headliner",
+      "edition_count": 9,
+      "definition": "Defense Advanced Research Projects Agency: the U.S. Department of Defense agency responsible for developing emerging technologies for national security use",
+      "url": "https://tokenwisdom.org/lexicon/darpa.html",
+      "mentions": 2
+    },
+    {
+      "name": "GPS",
+      "slug": "gps",
+      "color": "teal",
+      "role": "Headliner",
+      "edition_count": 3,
+      "definition": "Global Positioning System",
+      "url": "https://tokenwisdom.org/lexicon/gps.html",
+      "mentions": 2
+    },
+    {
+      "name": "LiDAR",
+      "slug": "lidar",
+      "color": "teal",
+      "role": null,
+      "edition_count": 1,
+      "definition": "Light Detection and Ranging: a sensing technology using pulsed laser light to measure distances and map environments in three dimensions",
+      "url": "https://tokenwisdom.org/lexicon/lidar.html",
+      "mentions": 2
+    }
+  ],
+  "reader_marks": {
+    "most_highlighted": null,
+    "responses": []
+  },
+  "from_the_record": {
+    "edition": 48,
+    "slug": "48th-edition-token-wisdom",
+    "title": "48th Edition 🔮 Pearls of Wisdom ⑊ W11",
+    "url": "https://tokenwisdom.org/posts/48th-edition-token-wisdom.html",
+    "date": "2024-03-25",
+    "reason": "First appearance of “AI” in the record."
+  },
+  "report": [
+    {
+      "label": "Items this week",
+      "value": 20,
+      "delta": null
+    },
+    {
+      "label": "Terms in the corpus",
+      "value": 1941,
+      "delta": null
+    },
+    {
+      "label": "Newest / Latest",
+      "value": 10,
+      "delta": null
+    },
+    {
+      "label": "Time Well Spent",
+      "value": 10,
+      "delta": null
+    }
+  ],
+  "meta": {
+    "generated_at": "2026-06-15T23:39:51.468039+00:00",
+    "builder_version": "0.1.0",
+    "source_csvs": [
+      "26.W.23.TNL.csv",
+      "26.W.23.TWS.csv"
+    ],
+    "counts": {
+      "newest_latest": 10,
+      "time_well_spent": 10,
+      "terms_in_motion": 6
+    }
+  }
+}

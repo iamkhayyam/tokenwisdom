@@ -1,0 +1,177 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://tokenwisdom.org/schema/issue.schema.json",
+  "title": "Token Wisdom Issue",
+  "description": "The canonical record for one weekly issue. Built once from Raindrop + the week's essay; rendered to web, email, social, and feed. The web page at /issues/{number} is the of-record artifact; every other surface is a render of this object.",
+  "type": "object",
+  "required": ["id", "year", "week", "date", "status", "sections"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": { "type": "string" },
+    "schema_version": { "type": "string", "default": "1.0" },
+
+    "id": {
+      "type": "string",
+      "pattern": "^[0-9]{4}-W[0-9]{2}$",
+      "description": "Stable key, e.g. '2026-W23'. Derived from year+week; never reused."
+    },
+    "number": {
+      "type": ["integer", "null"],
+      "description": "Human edition number (the 'NO. 153' on the masthead). Operator-assigned; null until set."
+    },
+    "year": { "type": "integer", "minimum": 2013 },
+    "week": { "type": "integer", "minimum": 1, "maximum": 53 },
+    "date": { "type": "string", "format": "date", "description": "Publish/send date." },
+    "status": { "enum": ["draft", "scheduled", "published"] },
+
+    "title": { "type": "string" },
+    "dek": { "type": "string", "description": "Standfirst / one-line summary for the issue." },
+    "url": { "type": "string", "format": "uri", "description": "Canonical permanent URL, e.g. https://tokenwisdom.org/issues/153." },
+    "hero": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "image": { "type": "string", "format": "uri" },
+        "alt": { "type": "string" }
+      }
+    },
+
+    "essay": {
+      "type": ["object", "null"],
+      "description": "The week's closer-look essay. REFERENCED, not re-authored — it is already a published post on the site.",
+      "additionalProperties": false,
+      "properties": {
+        "slug": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "excerpt": { "type": "string" },
+        "feature_image": { "type": "string" },
+        "published_at": { "type": "string" }
+      }
+    },
+
+    "sections": {
+      "type": "object",
+      "description": "The two link rails, sourced from the week's Raindrop export (TNL = The Newest Latest / articles, TWS = Time Well Spent / videos).",
+      "required": ["newest_latest", "time_well_spent"],
+      "additionalProperties": false,
+      "properties": {
+        "newest_latest": { "type": "array", "items": { "$ref": "#/$defs/linkItem" } },
+        "time_well_spent": { "type": "array", "items": { "$ref": "#/$defs/linkItem" } }
+      }
+    },
+
+    "terms_in_motion": {
+      "type": "array",
+      "description": "Lexicon terms that surfaced in this week's links/essay. The corpus hook only Token Wisdom can do. Built by scoring lexicon.json against the week's text.",
+      "items": {
+        "type": "object",
+        "required": ["name", "slug", "mentions"],
+        "additionalProperties": false,
+        "properties": {
+          "name": { "type": "string" },
+          "slug": { "type": "string" },
+          "color": { "type": "string" },
+          "role": { "type": "string", "description": "Keystone | Headliner | ... from the lexicon." },
+          "edition_count": { "type": "integer" },
+          "definition": { "type": "string" },
+          "url": { "type": "string", "format": "uri" },
+          "mentions": { "type": "integer", "description": "Times the term surfaced in this week's text." }
+        }
+      }
+    },
+
+    "reader_marks": {
+      "type": ["object", "null"],
+      "description": "Community-layer signal. Highlights/notes are PRIVATE — only aggregate counts and PUBLIC responses may appear here.",
+      "additionalProperties": false,
+      "properties": {
+        "most_highlighted": {
+          "type": ["object", "null"],
+          "additionalProperties": false,
+          "properties": {
+            "quote": { "type": "string" },
+            "post_slug": { "type": "string" },
+            "post_title": { "type": "string" },
+            "count": { "type": "integer" }
+          }
+        },
+        "responses": {
+          "type": "array",
+          "description": "Public responses only (annotations.kind in response|article_response).",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "quote": { "type": "string" },
+              "author": { "type": "string" },
+              "post_slug": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "from_the_record": {
+      "type": ["object", "null"],
+      "description": "One evergreen pull from the archive, chosen by term overlap with this week. Makes 'of record' felt.",
+      "additionalProperties": false,
+      "properties": {
+        "edition": { "type": ["integer", "null"] },
+        "slug": { "type": "string" },
+        "title": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "date": { "type": "string" },
+        "reason": { "type": "string", "description": "Why it was surfaced (e.g. 'first appearance of GPU')." }
+      }
+    },
+
+    "report": {
+      "type": "array",
+      "description": "A few Felton-style metric lines (from metrics.py), e.g. corpus size, edition count, items this week.",
+      "items": {
+        "type": "object",
+        "required": ["label", "value"],
+        "additionalProperties": false,
+        "properties": {
+          "label": { "type": "string" },
+          "value": { "type": ["string", "number"] },
+          "delta": { "type": ["string", "number", "null"] }
+        }
+      }
+    },
+
+    "meta": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "generated_at": { "type": "string" },
+        "builder_version": { "type": "string" },
+        "source_csvs": { "type": "array", "items": { "type": "string" } },
+        "counts": {
+          "type": "object",
+          "additionalProperties": { "type": "integer" }
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "linkItem": {
+      "type": "object",
+      "required": ["title", "url"],
+      "additionalProperties": false,
+      "properties": {
+        "id": { "type": ["string", "integer"], "description": "Raindrop id — used to dedupe across weeks." },
+        "title": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "excerpt": { "type": "string" },
+        "cover": { "type": "string" },
+        "source": { "type": "string", "description": "Display domain, e.g. 'reuters.com' or 'YouTube'." },
+        "kind": { "enum": ["article", "video"] },
+        "added": { "type": "string", "description": "When it was saved to Raindrop." },
+        "tags": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}
