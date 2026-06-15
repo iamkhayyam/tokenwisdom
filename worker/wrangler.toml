@@ -4,7 +4,7 @@ compatibility_date = "2024-11-01"
 
 # Origin Express API (Railway). Override per-environment as needed.
 [vars]
-ORIGIN = "https://token-wisdom-api.up.railway.app"
+ORIGIN = "https://token-wisdom-api-production.up.railway.app"
 ALLOWED_ORIGIN = "https://tokenwisdom.pages.dev"
 
 # Rate-limit counters. Create with:
