@@ -59,8 +59,8 @@ a{color:inherit;text-decoration:none}
 .site-top-back:hover{color:var(--accent)}
 /* Inline text nav — visible on desktop, swapped for the menu button on mobile */
 .site-top-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
-.site-top-nav a{font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.site-top-nav a:hover{color:var(--ink)}
+.site-top-nav a:not(.site-top-sub){font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.site-top-nav a:not(.site-top-sub):hover{color:var(--ink)}
 .site-top-nav a.is-active{color:var(--accent);border-color:var(--accent)}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
@@ -454,7 +454,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(1)</span></h3>
       <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/152nd-edition-token-wisdom-week-12.html">152th Edition</a></span><span class="tp-meta">W12 · Mar 24, 2026</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="cortical-labs-biological-intelligence.html">Cortical Labs / Biological Intelligence <span>1</span></a><a class="lex-chip" href="the-outsider-advantage.html">The Outsider Advantage <span>1</span></a><a class="lex-chip" href="ideal-glass.html">Ideal Glass <span>1</span></a><a class="lex-chip" href="4d-imaging-sensor.html">4D Imaging Sensor <span>1</span></a><a class="lex-chip" href="shannon-wakil-effect.html">Shannon-Wakil Effect <span>1</span></a><a class="lex-chip" href="dominance-reasoning-vs-expected-value-newcomb-revisited.html">Dominance Reasoning vs. Expected Value (Newcomb, revisited) <span>1</span></a><a class="lex-chip" href="the-ceo-ai-delusion-pattern.html">The CEO AI Delusion Pattern <span>1</span></a><a class="lex-chip" href="the-hard-problem-of-consciousness.html">The Hard Problem of Consciousness <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="encryption-vulnerability-march-2026.html">Encryption Vulnerability (March 2026) <span>1</span></a><a class="lex-chip" href="sparse-attention-deepseek.html">Sparse Attention (DeepSeek) <span>1</span></a><a class="lex-chip" href="cortical-labs-biological-intelligence.html">Cortical Labs / Biological Intelligence <span>1</span></a><a class="lex-chip" href="configurational-entropy.html">Configurational Entropy <span>1</span></a><a class="lex-chip" href="sparse-attention.html">Sparse Attention <span>1</span></a><a class="lex-chip" href="4d-imaging-sensor.html">4D Imaging Sensor <span>1</span></a><a class="lex-chip" href="shannon-wakil-effect.html">Shannon-Wakil Effect <span>1</span></a><a class="lex-chip" href="dominance-reasoning-vs-expected-value-newcomb-revisited.html">Dominance Reasoning vs. Expected Value (Newcomb, revisited) <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>

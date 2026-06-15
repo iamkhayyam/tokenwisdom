@@ -59,8 +59,8 @@ a{color:inherit;text-decoration:none}
 .site-top-back:hover{color:var(--accent)}
 /* Inline text nav — visible on desktop, swapped for the menu button on mobile */
 .site-top-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
-.site-top-nav a{font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.site-top-nav a:hover{color:var(--ink)}
+.site-top-nav a:not(.site-top-sub){font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.site-top-nav a:not(.site-top-sub):hover{color:var(--ink)}
 .site-top-nav a.is-active{color:var(--accent);border-color:var(--accent)}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
@@ -454,7 +454,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(1)</span></h3>
       <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/130th-edition-token-wisdom-week-42.html">130th Edition</a></span><span class="tp-meta">W42 · Oct 20, 2025</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="quantum-computing-applications.html">Quantum Computing Applications <span>1</span></a><a class="lex-chip" href="analog-matrix-computation.html">Analog Matrix Computation <span>1</span></a><a class="lex-chip" href="large-scale-agricultural-systems.html">Large-Scale Agricultural Systems <span>1</span></a><a class="lex-chip" href="three-body-problem.html">Three-Body Problem <span>1</span></a><a class="lex-chip" href="ai.html">AI <span>1</span></a><a class="lex-chip" href="ternary-logic.html">Ternary Logic <span>1</span></a><a class="lex-chip" href="ternary-logic-systems.html">Ternary Logic Systems <span>1</span></a><a class="lex-chip" href="infrasound.html">Infrasound <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="quantum-computing-applications.html">Quantum Computing Applications <span>1</span></a><a class="lex-chip" href="macroscopic-quantum-tunneling.html">Macroscopic Quantum Tunneling <span>1</span></a><a class="lex-chip" href="quantum-bayes-theorem.html">Quantum Bayes&#x27; Theorem <span>1</span></a><a class="lex-chip" href="stochastic-computing-paradigms.html">Stochastic Computing Paradigms <span>1</span></a><a class="lex-chip" href="rf.html">RF <span>1</span></a><a class="lex-chip" href="arcgis.html">ArcGIS <span>1</span></a><a class="lex-chip" href="historical-economic-analysis.html">Historical Economic Analysis <span>1</span></a><a class="lex-chip" href="ternary-logic-systems.html">Ternary Logic Systems <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>

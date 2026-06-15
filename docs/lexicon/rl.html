@@ -59,8 +59,8 @@ a{color:inherit;text-decoration:none}
 .site-top-back:hover{color:var(--accent)}
 /* Inline text nav — visible on desktop, swapped for the menu button on mobile */
 .site-top-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
-.site-top-nav a{font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.site-top-nav a:hover{color:var(--ink)}
+.site-top-nav a:not(.site-top-sub){font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.site-top-nav a:not(.site-top-sub):hover{color:var(--ink)}
 .site-top-nav a.is-active{color:var(--accent);border-color:var(--accent)}
 .site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
@@ -442,22 +442,19 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-eyebrow lex-text-teal">Acronyms</div>
   <h1 class="term-title">RL</h1>
   <p class="term-def">Reinforcement Learning</p>
-  <div class="term-def-src">— defined in <span>156th Edition</span>, Apr 13, 2026</div>
+  <div class="term-def-src">— defined in <a href="../posts/128th-edition-token-wisdom-week-40.html">128th Edition</a>, Oct 5, 2025</div>
   <div class="term-stats">
-    <div class="term-stat"><span class="ts-num">2</span><span class="ts-lbl">editions defined</span></div>
+    <div class="term-stat"><span class="ts-num">1</span><span class="ts-lbl">editions defined</span></div>
     <div class="term-stat"><span class="ts-num">Oct 2025</span><span class="ts-lbl">first defined</span></div>
-    <div class="term-stat"><span class="ts-num">Apr 2026</span><span class="ts-lbl">most recent</span></div>
+    <div class="term-stat"><span class="ts-num">Oct 2025</span><span class="ts-lbl">most recent</span></div>
     <div class="term-stat"><span class="ts-num">Acronyms</span><span class="ts-lbl">category</span></div>
   </div>
 
-  <section class="term-section"><h3 class="term-h3">The arc</h3>
-    <p class="term-arc-note">Glossed in 2 editions — when this term was part of the working vocabulary. First defined in <a href="../posts/128th-edition-token-wisdom-week-40.html">128th Edition</a>.</p>
-    <div class="bar-timeline" style="--bt-h:130px"><div class="bt-col" style="width:10.000%" title="2024·Q1: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2024·Q2: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2024·Q3: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2024·Q4: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2025·Q1: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2025·Q2: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2025·Q3: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2025·Q4: 1"><div class="bt-bar" style="height:100.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2026·Q1: 0"><div class="bt-bar" style="height:0.0%;background:var(--teal)"></div></div><div class="bt-col" style="width:10.000%" title="2026·Q2: 1"><div class="bt-bar" style="height:100.0%;background:var(--teal)"></div></div></div></section>
 
   <div class="term-body">
-    <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(2)</span></h3>
-      <div class="term-posts"><div class="term-post"><span class="tp-title"><span>156th Edition</span></span><span class="tp-meta">W16 · Apr 13, 2026</span></div><div class="term-post"><span class="tp-title"><a href="../posts/128th-edition-token-wisdom-week-40.html">128th Edition</a></span><span class="tp-meta">W40 · Oct 5, 2025</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="llm.html">LLM <span>1</span></a><a class="lex-chip" href="mwh.html">MWh <span>1</span></a><a class="lex-chip" href="casio-watch-upgrade-kits.html">Casio Watch Upgrade Kits <span>1</span></a><a class="lex-chip" href="land-ownership-concentration.html">Land Ownership Concentration <span>1</span></a><a class="lex-chip" href="ea.html">EA <span>1</span></a><a class="lex-chip" href="earth-s-magnetic-field-dynamics.html">Earth&#x27;s Magnetic Field Dynamics <span>1</span></a><a class="lex-chip" href="medical-microrobots.html">Medical Microrobots <span>1</span></a><a class="lex-chip" href="biometric-travel-identification.html">Biometric Travel Identification <span>1</span></a></div></div><div class="term-side-block"><a class="lex-seeall" href="constellation.html#rl">✦ See it in the Constellation &rarr;</a></div>
+    <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">(1)</span></h3>
+      <div class="term-posts"><div class="term-post"><span class="tp-title"><a href="../posts/128th-edition-token-wisdom-week-40.html">128th Edition</a></span><span class="tp-meta">W40 · Oct 5, 2025</span></div></div></section>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="casio-watch-upgrade-kits.html">Casio Watch Upgrade Kits <span>1</span></a><a class="lex-chip" href="miniaturized-quantum-random-number-generators.html">Miniaturized Quantum Random Number Generators <span>1</span></a><a class="lex-chip" href="magnetic-field-reversal.html">Magnetic Field Reversal <span>1</span></a><a class="lex-chip" href="esp32.html">ESP32 <span>1</span></a><a class="lex-chip" href="enhanced-password-security-systems.html">Enhanced Password Security Systems <span>1</span></a><a class="lex-chip" href="reinforcement-learning-vs-large-language-models.html">Reinforcement Learning vs. Large Language Models <span>1</span></a><a class="lex-chip" href="digital-financial-sovereignty.html">Digital Financial Sovereignty <span>1</span></a><a class="lex-chip" href="medical-microrobots.html">Medical Microrobots <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>
