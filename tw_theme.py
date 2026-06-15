@@ -578,5 +578,10 @@ TERM_CSS = r'''
 .term-side{position:sticky;top:70px}
 .term-side-block{margin-bottom:1.8rem}
 .term-side-block h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.7rem}
+.term-role{display:inline-block;font-family:var(--mono);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;padding:.45em .85em;border-radius:2px;margin-bottom:.7rem}
+.role-keystone{background:var(--teal);color:#fff}
+.role-connector{background:var(--gold);color:#3a2600}
+.role-headliner{background:var(--accent);color:#fff}
+.term-role-note{font-family:var(--serif);font-size:.84rem;line-height:1.5;color:var(--ink-muted);max-width:260px}
 @media(max-width:820px){.term-body{grid-template-columns:1fr;gap:2rem}.term-side{position:static}.term-stats{grid-template-columns:1fr 1fr}.term-stat:nth-child(2){border-right:none}.term-stat:nth-child(1),.term-stat:nth-child(2){border-bottom:1px solid var(--rule)}}
 '''

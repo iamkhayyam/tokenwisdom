@@ -200,6 +200,20 @@ def aggregate(editions):
              "color": by_key[r["key"]]["color"], "shared": r["shared"]}
             for r in t["related"] if r["key"] in by_key
         ]
+
+    # Centrality = in-degree: how many other terms cite this one as "travels with".
+    # edition_count is the Lexicon (recurrence) axis; centrality is the Constellation
+    # (structure) axis. keystone blends the two so both pillars share one metric.
+    indeg = Counter()
+    for t in out:
+        for r in t["related"]:
+            indeg[r["slug"]] += 1
+    for t in out:
+        c = indeg.get(t["slug"], 0)
+        t["centrality"] = c
+        t["keystone"] = round(t["edition_count"] + KEYSTONE_W * c, 1)
+        t["role"] = _role(t["edition_count"], c)
+
     out.sort(key=lambda t: (-t["edition_count"], t["name"].lower()))
     return out, qkeys
 
@@ -268,17 +282,36 @@ def cat_file(c):
 
 CORE_MIN = 3
 TOP_N = 20
-CONSTELLATION_MIN = 2  # terms glossed in 2+ editions form the live network map
+CONSTELLATION_MIN = 2     # terms glossed in 2+ editions form the live network map
+CENTRALITY_INCLUDE = 40   # …unless a term is this central, then chart it anyway
+KEYSTONE_W = 0.4          # blend: keystone = edition_count + KEYSTONE_W * centrality
+ROLE_ED, ROLE_CENT = 3, 40  # recurrence × centrality thresholds for the role grid
+
+
+def _role(ed, cent):
+    """Place a term on the recurrence × centrality grid. The Lexicon owns the
+    recurrence axis, the Constellation owns the centrality axis; together they
+    sort terms into roles. '' = ordinary long-tail term (no badge)."""
+    h_ed, h_c = ed >= ROLE_ED, cent >= ROLE_CENT
+    if h_ed and h_c: return "Keystone"
+    if h_c:          return "Connector"
+    if h_ed:         return "Headliner"
+    return ""
 
 
 def _constellation_data(terms, min_ed=CONSTELLATION_MIN):
-    """Nodes = recurring terms; edges = the 'travels with' co-occurrence links,
-    kept undirected (max shared weight) and restricted to the node set."""
-    nodes = [t for t in terms if t["edition_count"] >= min_ed]
+    """Nodes = recurring OR highly-central terms; edges = the 'travels with'
+    co-occurrence links, kept undirected (max shared weight) and restricted to
+    the node set. Node size is driven by the blended keystone weight (row[6]),
+    so connectors that are rarely re-defined still read as prominent."""
+    nodes = [t for t in terms
+             if t["edition_count"] >= min_ed
+             or t.get("centrality", 0) >= CENTRALITY_INCLUDE]
     idx = {t["slug"]: i for i, t in enumerate(nodes)}
     node_rows = [
         [t["slug"], t["name"], t.get("color", "accent"),
-         t["category"], t["edition_count"], _clamp(t["definition"], 90)]
+         t["category"], t["edition_count"], _clamp(t["definition"], 90),
+         t.get("keystone", t["edition_count"]), t.get("centrality", 0)]
         for t in nodes
     ]
     seen = {}
@@ -437,7 +470,7 @@ CONSTELLATION_JS = r'''
   for(i=0;i<L.length;i++){deg[L[i][0]]++;deg[L[i][1]]++;}
   // seed on a spiral so the layout opens predictably (no Math.random — deterministic build)
   for(i=0;i<n;i++){var a=i*2.399963, r=8+Math.sqrt(i)*16; px[i]=Math.cos(a)*r; py[i]=Math.sin(a)*r;}
-  function radius(k){return 4 + Math.sqrt(N[k][4])*2.1;}        // by editions glossed
+  function radius(k){return 4 + Math.sqrt(N[k][6])*2.1;}        // by keystone weight (recurrence + centrality)
   var catSet = {};                                              // active category filter
   D.cats.forEach(function(c){catSet[c[0]]=true;});
 
@@ -529,7 +562,7 @@ CONSTELLATION_JS = r'''
       ctx.fill();
       if(i===hi){ctx.lineWidth=2;ctx.strokeStyle=INK;ctx.stroke();}
       // labels for big / hovered / searched nodes
-      if((!faded) && (N[i][4]>=6 || i===hi || (q && on) || scale>1.25)){
+      if((!faded) && (N[i][6]>=12 || i===hi || (q && on) || scale>1.25)){
         ctx.font='600 '+(11)+'px Archivo, system-ui, sans-serif';
         ctx.fillStyle = faded?FAINT:INK; ctx.textAlign='left'; ctx.textBaseline='middle';
         ctx.fillText(N[i][1], s[0]+r+4, s[1]);
@@ -579,7 +612,7 @@ CONSTELLATION_JS = r'''
 
   function updateTip(k,sx,sy){
     if(k<0){tip.classList.remove('show');return;}
-    tip.innerHTML='<span class="cat">'+esc(N[k][3])+' · '+N[k][4]+'×</span><b>'+esc(N[k][1])+'</b><span class="def">'+esc(N[k][5])+'</span>';
+    tip.innerHTML='<span class="cat">'+esc(N[k][3])+' · '+N[k][4]+'× · cited by '+N[k][7]+'</span><b>'+esc(N[k][1])+'</b><span class="def">'+esc(N[k][5])+'</span>';
     var tw=tip.offsetWidth, th=tip.offsetHeight;
     tip.style.left=Math.min(sx+14, W-tw-8)+'px'; tip.style.top=Math.max(8, sy-th-12)+'px';
     tip.classList.add('show');
@@ -647,7 +680,7 @@ def render_constellation(terms, gs, ctx):
   <a class="cst-back" href="index.html">&larr; The Lexicon</a>
   <div class="kicker kicker-accent">The Lexicon · The Constellation</div>
   <h1 class="lex-h1">The Constellation</h1>
-  <p class="cst-lede">The Lexicon as a map of what's glossed together. Each of these {len(nodes)} recurring terms is a star; a line ties two terms that were defined in the same editions — the more often they travel together, the brighter the link. Drag a star, search to find one, click through to its full entry.</p>
+  <p class="cst-lede">The Lexicon as a map of what's glossed together. Each of these {len(nodes)} pivotal terms is a star — sized by how much the rest of the vocabulary leans on it, not just how often it recurs; a line ties two terms defined in the same editions, brighter the more often they travel together. Drag a star, search to find one, click through to its full entry.</p>
 </header>
 <div class="cst-stage">
   <div id="cstWrap" class="cst-canvas-wrap">
@@ -735,8 +768,23 @@ def render_term(t, gs, ctx):
             for r in t["related"])
         related = f'<div class="term-side-block"><h4>Travels with</h4><div class="lex-chips">{chips}</div></div>'
 
+    role = t.get("role", "")
+    role_block = ""
+    if role:
+        notes = {
+            "Keystone":  "Central to the network and frequently re-defined — part of the corpus's backbone.",
+            "Connector": "Wires many terms together, though it's rarely re-defined on its own.",
+            "Headliner": "Re-defined often across editions, but lightly linked to the rest.",
+        }
+        role_block = (
+            f'<div class="term-side-block term-role-block">'
+            f'<h4>Role in the corpus</h4>'
+            f'<span class="term-role role-{role.lower()}">{role}</span>'
+            f'<p class="term-role-note">{notes[role]} Cited by {t.get("centrality", 0)} other terms.</p>'
+            f'</div>')
+
     constellation = ""
-    if t["edition_count"] >= CONSTELLATION_MIN:
+    if t["edition_count"] >= CONSTELLATION_MIN or t.get("centrality", 0) >= CENTRALITY_INCLUDE:
         constellation = (f'<div class="term-side-block"><a class="lex-seeall" '
                          f'href="constellation.html#{t["slug"]}">✦ See it in the Constellation &rarr;</a></div>')
 
@@ -758,7 +806,7 @@ def render_term(t, gs, ctx):
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">({t['edition_count']})</span></h3>
       <div class="term-posts">{ed_rows}</div></section>
-    <aside class="term-side">{related}{constellation}
+    <aside class="term-side">{role_block}{related}{constellation}
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>
