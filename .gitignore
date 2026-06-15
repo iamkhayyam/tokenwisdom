@@ -7,3 +7,4 @@ worker/node_modules/
 .env
 *.env
 .dev.vars
+data/.zernio_state.json
