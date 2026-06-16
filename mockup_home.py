@@ -39,6 +39,23 @@ more = essays[3:9]
 latest_ed = editions[0]
 
 
+def _is_featured(p):
+    # Ghost's featured flag, a 'featured' tag, or 'featured' in the description.
+    # #unlisted is intentionally NOT excluded — featured posts surface here
+    # regardless of listing (the unlisted flag gated other feeds, not this rail).
+    if p.get("featured"):
+        return True
+    if any(t.get("slug", "") == "featured" or (t.get("name", "") or "").strip().lower() == "featured"
+           for t in (p.get("tags") or [])):
+        return True
+    blurb = ((p.get("custom_excerpt") or "") + " " + (p.get("excerpt") or "")).lower()
+    return "featured" in blurb
+
+
+# Curated highlights for the homepage Featured rail (chronological).
+featured_posts = [p for p in chrono if _is_featured(p)][:6]
+
+
 _WK_RX = _re.compile(r"\bW\s*0?(\d{1,2})\b")  # essays write "W13"; editions write "Week 13"
 
 
@@ -315,6 +332,29 @@ def render_recent():
     <div class="recent-list">
       <div class="kicker">More to read</div>{rows}
     </div>
+  </div>
+</section>"""
+
+
+def render_featured():
+    if not featured_posts:
+        return ""
+    cards = ""
+    for p in featured_posts:
+        cards += f"""
+    <a class="feat-card" href="{href(p)}">
+      <div class="feat-fig"><img src="{e(img(p.get('feature_image')))}" alt="{e(p.get('title'))}" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">{e(kicker(p))}</div>
+        <h3 class="feat-title">{e(p.get('title'))}</h3>
+        <p class="feat-dek">{gs.excerpt(p, 130)}</p>
+        <div class="feat-meta">{e(meta(p))}</div>
+      </div>
+    </a>"""
+    return f"""
+<section class="block">
+  <div class="rule-head"><h2 class="rule-label">Featured</h2><span class="rule-meta">Editor&rsquo;s picks</span></div>
+  <div class="feat-grid">{cards}
   </div>
 </section>"""
 
@@ -623,6 +663,23 @@ a{color:inherit;text-decoration:none}
 .lexcard-spark{opacity:.9}
 .spark{display:block;width:100%;height:auto}
 
+/* featured — curated picks, 3-up framed cards before Browse by Idea */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.feat-card{display:flex;flex-direction:column;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--surface);color:var(--ink);transition:border-color .2s ease,transform .2s ease}
+.feat-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.feat-fig{aspect-ratio:16/9;overflow:hidden;background:var(--surface)}
+.feat-fig img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.feat-card:hover .feat-fig img{transform:scale(1.04)}
+.feat-body{display:flex;flex-direction:column;gap:.45rem;padding:1rem 1.15rem 1.2rem}
+.feat-kicker{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.feat-title{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em;color:var(--ink);transition:color .15s ease}
+.feat-card:hover .feat-title{color:var(--accent)}
+.feat-dek{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.feat-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-top:auto;padding-top:.3rem}
+@media(max-width:820px){.feat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.feat-card,.feat-fig img{transition:none}.feat-card:hover{transform:none}.feat-card:hover .feat-fig img{transform:none}}
+
 /* subscribe — the Fortune Brand crystal ball glowing in the background */
 .subscribe{
   margin-top:56px;
@@ -835,6 +892,7 @@ def build(out_name="home-v2.html"):
 {render_subscribe()}
 <div class="wrap">
 {render_recent()}
+{render_featured()}
 {render_topics()}
 {render_lexicon()}
 </div>
