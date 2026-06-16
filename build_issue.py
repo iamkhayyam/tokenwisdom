@@ -90,20 +90,32 @@ def load_links(year, week, section, kind):
     return items, path.name
 
 
+def is_edition(d):
+    """The numbered weekly roundups ('153rd Edition ... Week 13') are NOT essays —
+    the closer-look essay is a standalone titled piece published that week."""
+    slug = (d.get("slug") or "").lower()
+    title = (d.get("title") or "").lower()
+    return "edition" in slug or "edition" in title
+
+
 def pick_essay(slug_override):
-    """Reference the week's closer-look essay. Default: most recently published."""
+    """Reference the week's closer-look essay. Default: most recent standalone
+    essay (skipping the numbered editions / roundups)."""
     best = None
     for pj in POSTS.glob("*/post.json"):
         try:
             d = json.load(open(pj))
         except Exception:
             continue
-        if slug_override and d.get("slug") == slug_override:
-            best = d
-            break
-        if not slug_override:
-            if best is None or (d.get("published_at", "") > best.get("published_at", "")):
+        if slug_override:
+            if d.get("slug") == slug_override:
                 best = d
+                break
+            continue
+        if is_edition(d):
+            continue
+        if best is None or (d.get("published_at", "") > best.get("published_at", "")):
+            best = d
     if not best:
         return None
     return {

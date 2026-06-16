@@ -5,22 +5,22 @@
   "number": 153,
   "year": 2026,
   "week": 23,
-  "date": "2026-06-15",
+  "date": "2026-06-16",
   "status": "draft",
   "title": "Token Wisdom · 2026 · Week 23",
   "dek": "",
   "url": "https://tokenwisdom.org/issues/153",
   "hero": {
-    "image": "https://tokenwisdom.ghost.io/content/images/2026/03/mysterious-fortune-teller-reading-what-s_urQ-x6ztThu4v26v_MpwEQ_-Dc3XRSMSB6eKUj4huNDqQ_sd.jpeg",
+    "image": "https://tokenwisdom.ghost.io/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg",
     "alt": ""
   },
   "essay": {
-    "slug": "153rd-edition-token-wisdom-week-13",
-    "title": "153rd Edition 🔮 Token Wisdom \\ Week 13",
-    "url": "https://tokenwisdom.org/posts/153rd-edition-token-wisdom-week-13.html",
-    "excerpt": "This week — a proposed fermion hints at a fifth dimension; AI flags a formal logic flaw in a physics paper; FCC mandates fiber, retiring copper; graphene photonics reframes compute; 5 AI CEOs now govern decisions affecting 8B people.",
-    "feature_image": "https://tokenwisdom.ghost.io/content/images/2026/03/mysterious-fortune-teller-reading-what-s_urQ-x6ztThu4v26v_MpwEQ_-Dc3XRSMSB6eKUj4huNDqQ_sd.jpeg",
-    "published_at": "2026-03-31T08:42:26.000-07:00"
+    "slug": "the-sky-has-been-warning-us-since-1859",
+    "title": "The Sky Has Been Warning Us Since 1859",
+    "url": "https://tokenwisdom.org/posts/the-sky-has-been-warning-us-since-1859.html",
+    "excerpt": "W13 - The sun fired a warning shot in 1859. We had 165 years. We wrote reports, introduced legislation, held hearings — and kept building a bigger antenna. The solution to the oldest infrastructure problem in the modern world exists. It just isn't where anyone thought to look.\n",
+    "feature_image": "https://tokenwisdom.ghost.io/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg",
+    "published_at": "2026-03-26T17:49:00.000-07:00"
   },
   "sections": {
     "newest_latest": [
@@ -265,7 +265,7 @@
       "edition_count": 53,
       "definition": "Artificial Intelligence",
       "url": "https://tokenwisdom.org/lexicon/ai.html",
-      "mentions": 8
+      "mentions": 6
     },
     {
       "name": "Silicon",
@@ -353,7 +353,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-06-15T23:39:51.468039+00:00",
+    "generated_at": "2026-06-16T00:29:18.721998+00:00",
     "builder_version": "0.1.0",
     "source_csvs": [
       "26.W.23.TNL.csv",
