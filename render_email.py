@@ -2,17 +2,19 @@
 """
 render_email.py — render an Issue object into a sendable HTML email.
 
-The email render of the Issue object (data/issues/*.json). Same source as the
-web page (render_issue.py); different surface. Email-safe: table layout, inline
-styles, web-safe font fallbacks, hosted images, vertical lists (no horizontal
-scroll), bulletproof button, hidden preheader, CAN-SPAM footer.
+Implements the Claude Design "Token Wisdom - Email Issue 153" handoff: a fully
+editorial, inbox-safe layout (600px tables, Georgia/Helvetica/Courier, single
+column) driven by the real Issue object (data/issues/*.json, see issue.schema).
 
-Hand to Resend as the `html` of a broadcast/email. Unsubscribe uses Resend's
-merge tag {{{unsubscribe_url}}} (managed list) — leave as-is when sending.
+Sections: masthead · epigraph · editor's note · Newest/Latest (numbered) ·
+A Closer Look (dark essay card) · Time Well Spent (numbered) · Knowledge,
+Transmuted · The Less You Know (category-tiered Lexicon) · colophon.
+
+Hand to Resend as the `html` of a broadcast. Unsubscribe uses Resend's merge
+tag {{{unsubscribe_url}}} — leave as-is when sending.
 
 Usage:
   python3 render_email.py data/issues/2026-W23.json
-  python3 render_email.py data/issues/2026-W23.json --per-rail 6
 """
 
 import argparse
@@ -26,38 +28,41 @@ ROOT = Path(__file__).parent
 DOCS = ROOT / "docs"
 SITE = "https://tokenwisdom.org"
 
-# Brand palette, converted from tw_theme's OKLCH tokens to email-safe hex.
-C = {
-    "bg": "#FEFCFA", "surface": "#F8F5F2", "ink": "#221D18",
-    "ink_muted": "#6A635E", "ink_faint": "#97918C", "rule": "#E2DFDB",
-    "accent": "#C35812", "accent_deep": "#993A00",
-    "teal": "#2F7675", "gold": "#BA9A56",
-}
-SERIF = "Georgia, 'Times New Roman', serif"          # display + body serif
-SANS = "Arial, Helvetica, sans-serif"
-MONO = "'Courier New', Courier, monospace"
+# Palette from the design (warm paper editorial).
+BG = "#cfccc4"          # outer
+PAPER = "#f7f4ee"       # email body
+RULE = "#ddd7cc"        # hairline
+INK = "#1e1a15"         # darkest / headings
+INK2 = "#2a251e"        # body ink
+MUTED = "#5d564b"       # notes / defs
+FAINT = "#8e857a"       # labels
+FAINT2 = "#a89f90"      # colophon faint
+NUM = "#c4bdb0"         # big numerals
+ACCENT = "#8f3d14"      # rust
+# dark "Closer Look" card
+DARK = "#1e1a15"
+DARK_ACCENT = "#d98a4e"
+DARK_TITLE = "#f1ece2"
+DARK_PULL = "#cbb9a6"
+DARK_DEK = "#b8ab9c"
+
+SERIF = "Georgia,'Times New Roman',serif"
+SANS = "Helvetica,Arial,sans-serif"
+MONO = "'Courier New',Courier,monospace"
 
 MONTHS = ["", "January", "February", "March", "April", "May", "June",
           "July", "August", "September", "October", "November", "December"]
+CAT_ORDER = ["Technologies", "Concepts", "Technical Terms", "Acronyms", "People & Works"]
 
-HEAD_STYLE = """
+HEAD = """
 <style>
-  body,table,td{margin:0;padding:0;}
-  img{border:0;line-height:100%;outline:none;text-decoration:none;-ms-interpolation-mode:bicubic;}
-  a{text-decoration:none;}
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  img{border:0;outline:none;display:block}
+  a{text-decoration:none}
   @media only screen and (max-width:600px){
-    .container{width:100%!important;}
-    .px{padding-left:20px!important;padding-right:20px!important;}
-    .stack{display:block!important;width:100%!important;}
-    .thumb{width:100%!important;height:auto!important;}
-    .hero{height:auto!important;}
-  }
-  @media (prefers-color-scheme:dark){
-    .bg{background:#1B1611!important;}
-    .card{background:#221D18!important;}
-    .ink{color:#F3EFEA!important;}
-    .muted{color:#B6AFA8!important;}
-    .rule{border-color:#3A332D!important;}
+    .container{width:100%!important}
+    .px{padding-left:24px!important;padding-right:24px!important}
   }
 </style>
 """
@@ -71,237 +76,223 @@ def fmt_date(iso):
         return iso or ""
 
 
-def button(text, url):
+def rule_table(inner):
+    return (f'<table role="presentation" cellpadding="0" cellspacing="0" '
+            f'border="0" width="100%">{inner}</table>')
+
+
+def section_title(label, badge=None):
+    badge_cell = (f'<td align="right" style="font-family:{MONO};font-size:10px;'
+                  f'letter-spacing:1.5px;text-transform:uppercase;color:{ACCENT};'
+                  f'text-align:right;vertical-align:bottom">{esc(badge)}</td>' if badge else "")
     return f"""
-<table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-  <td bgcolor="{C['accent']}" style="border-radius:4px;">
-    <a href="{esc(url)}" style="display:inline-block;padding:12px 22px;font-family:{MONO};
-       font-size:12px;letter-spacing:1.5px;text-transform:uppercase;color:#ffffff;">{text}</a>
-  </td>
-</tr></table>"""
-
-
-def kicker(text, color=None):
-    return (f'<div style="font-family:{MONO};font-size:11px;letter-spacing:2px;'
-            f'text-transform:uppercase;color:{color or C["accent"]};">{esc(text)}</div>')
-
-
-def section_head(label, badge):
-    return f"""
-<tr><td class="px" style="padding:28px 40px 8px;border-top:2px solid {C['ink']};">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-    <td style="font-family:{SERIF};font-size:22px;color:{C['ink']};" class="ink">{esc(label)}</td>
-    <td align="right" style="font-family:{MONO};font-size:11px;letter-spacing:1.5px;
-        text-transform:uppercase;color:{C['accent']};">{esc(badge)}</td>
+<tr><td style="padding:34px 0 4px;border-top:3px solid {INK}">
+  <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%"><tr>
+    <td style="font-family:{SERIF};font-size:30px;letter-spacing:-1px;color:{INK}">{esc(label)}</td>
+    {badge_cell}
   </tr></table>
 </td></tr>"""
 
 
-def link_row(item):
-    cover = item.get("cover")
-    thumb = (f'<img class="thumb" src="{esc(cover)}" width="120" alt="" '
-             f'style="display:block;width:120px;border-radius:3px;">'
-             if cover else
-             f'<div class="thumb" style="width:120px;height:72px;background:{C["rule"]};border-radius:3px;"></div>')
+def numbered_item(i, item, verb):
+    num = f"{i + 1:02d}"
+    note = esc(item.get("excerpt") or "")
+    note_html = (f'<div style="font-family:{SERIF};font-size:15px;line-height:1.5;'
+                 f'color:{MUTED};margin-bottom:11px">{note}</div>' if note else "")
+    play = "▶ " if verb == "Watch" else ""
     src = esc(item.get("source", ""))
-    kind = "Video" if item.get("kind") == "video" else "Article"
-    excerpt = esc((item.get("excerpt") or "")[:140])
-    excerpt_html = (f'<div class="muted" style="font-family:{SERIF};font-size:13px;line-height:1.45;'
-                    f'color:{C["ink_muted"]};margin-top:4px;">{excerpt}</div>' if excerpt else "")
     return f"""
-<tr><td class="px" style="padding:14px 40px;border-bottom:1px solid {C['rule']};" class="rule">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"><tr>
-    <td class="stack" width="120" valign="top" style="padding-right:14px;">
-      <a href="{esc(item['url'])}">{thumb}</a>
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top:1px solid {RULE}">
+  <tr>
+    <td width="50" style="width:50px;vertical-align:top;padding:20px 16px 20px 0;font-family:{SERIF};font-size:30px;line-height:1;color:{NUM}">{num}</td>
+    <td style="vertical-align:top;padding:20px 0">
+      <a href="{esc(item['url'])}" style="font-family:{SANS};font-weight:bold;font-size:19px;line-height:1.22;color:{INK};display:block;margin-bottom:7px">{esc(item['title'])}</a>
+      {note_html}
+      <div style="font-family:{MONO};font-size:10.5px;letter-spacing:1.5px;text-transform:uppercase;color:{ACCENT}">{play}{src} &nbsp;—&nbsp; <a href="{esc(item['url'])}" style="color:{ACCENT}">{verb} →</a></div>
     </td>
-    <td class="stack" valign="top">
-      <div style="font-family:{MONO};font-size:10px;letter-spacing:1.5px;text-transform:uppercase;
-          color:{C['ink_faint']};margin-bottom:3px;">{kind} &middot; {src}</div>
-      <a href="{esc(item['url'])}" class="ink" style="font-family:{SANS};font-size:15px;font-weight:bold;
-         line-height:1.3;color:{C['ink']};">{esc(item['title'])}</a>
-      {excerpt_html}
-    </td>
-  </tr></table>
-</td></tr>"""
+  </tr>
+</table>"""
 
 
-def rail(label, badge, items, per_rail, reading_room=True):
+def render_rail(label, items, verb, badge):
     if not items:
         return ""
-    shown = items[:per_rail]
-    rows = "".join(link_row(i) for i in shown)
-    more = ""
-    if reading_room and len(items) > per_rail:
-        more = f"""
-<tr><td class="px" style="padding:12px 40px 0;">
-  <a href="{SITE}/links/" style="font-family:{MONO};font-size:11px;letter-spacing:1px;
-     text-transform:uppercase;color:{C['accent']};">+ {len(items)-per_rail} more in the Reading Room &rarr;</a>
-</td></tr>"""
-    return section_head(label, badge) + rows + more
+    rows = "".join(numbered_item(i, it, verb) for i, it in enumerate(items))
+    return rule_table(section_title(label, badge)) + rows
 
 
-def term_row(t):
-    color = {"teal": C["teal"], "gold": C["gold"], "accent": C["accent"]}.get(t.get("color"), C["accent"])
-    meta = f"{t.get('role') or 'Term'} &middot; {t.get('edition_count', 0)} editions &middot; {t.get('mentions', 0)}&times; this week"
-    defn = esc((t.get("definition") or "")[:120])
-    return f"""
-<tr><td class="px" style="padding:0 40px 10px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0"
-         class="card" style="background:{C['surface']};border-radius:4px;"><tr>
-    <td width="4" style="background:{color};border-radius:4px 0 0 4px;">&nbsp;</td>
-    <td style="padding:12px 16px;">
-      <a href="{esc(t['url'])}" class="ink" style="font-family:{SERIF};font-size:18px;color:{C['ink']};">{esc(t['name'])}</a>
-      <div style="font-family:{MONO};font-size:10px;letter-spacing:1px;text-transform:uppercase;color:{color};margin:4px 0 5px;">{meta}</div>
-      <div class="muted" style="font-family:{SERIF};font-size:13px;line-height:1.4;color:{C['ink_muted']};">{defn}</div>
-    </td>
-  </tr></table>
-</td></tr>"""
-
-
-def render_terms(terms):
-    if not terms:
+def render_epigraph(ep):
+    if not ep or not ep.get("text"):
         return ""
-    return section_head("Terms in motion", "From the Lexicon") + \
-        '<tr><td style="height:14px;line-height:14px;">&nbsp;</td></tr>' + \
-        "".join(term_row(t) for t in terms)
-
-
-def render_record(rec):
-    if not rec:
-        return ""
-    ed = rec.get("edition")
-    ed_cell = (f'<td width="64" valign="top" style="font-family:{SERIF};font-size:34px;'
-               f'color:{C["accent"]};line-height:1;">{ed}</td>' if ed else "")
-    title = esc(rec.get("title", ""))
-    if rec.get("url"):
-        title = f'<a href="{esc(rec["url"])}" class="ink" style="color:{C["ink"]};">{title}</a>'
+    who = (f'<div style="font-family:{MONO};font-size:10px;letter-spacing:2px;'
+           f'text-transform:uppercase;color:{ACCENT};padding-top:14px">{esc(ep.get("attribution",""))}</div>'
+           if ep.get("attribution") else "")
     return f"""
-<tr><td class="px" style="padding:24px 40px;">
-  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="card"
-         style="background:{C['surface']};border-radius:4px;"><tr>
-    <td style="padding:18px 20px;">
-      <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>
-        {ed_cell}
-        <td valign="top">
-          <div style="font-family:{MONO};font-size:11px;letter-spacing:1px;text-transform:uppercase;
-              color:{C['ink_muted']};margin-bottom:4px;">{esc(rec.get('reason','From the record'))}</div>
-          <div style="font-family:{SERIF};font-size:16px;line-height:1.35;color:{C['ink']};" class="ink">{title}</div>
-        </td>
-      </tr></table>
-    </td>
-  </tr></table>
-</td></tr>"""
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr><td align="center" style="padding:32px 10px 30px;border-bottom:1px solid {RULE};text-align:center">
+    <div style="font-family:{SERIF};font-style:italic;font-size:21px;line-height:1.4;color:{INK2}">&ldquo;{esc(ep['text'])}&rdquo;</div>
+    {who}
+  </td></tr>
+</table>"""
 
 
-def render_essay(essay):
+def render_editor_note(note, issue_url):
+    if not note:
+        return ""
+    return f"""
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr><td style="padding:30px 0 28px;border-bottom:1px solid {RULE}">
+    <div style="font-family:{MONO};font-size:10px;letter-spacing:2px;text-transform:uppercase;color:{FAINT};padding-bottom:10px">Editor's Note</div>
+    <div style="font-family:{SERIF};font-size:17px;line-height:1.6;color:{INK2}">{esc(note)}</div>
+    <div style="padding-top:14px"><a href="{esc(issue_url)}" style="font-family:{MONO};font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:{ACCENT}">▶ Listen — NotebookLM reads this edition</a></div>
+  </td></tr>
+</table>"""
+
+
+def render_closer_look(essay):
     if not essay:
         return ""
-    hero = (f'<a href="{esc(essay["url"])}"><img class="hero" src="{esc(essay["feature_image"])}" '
-            f'width="520" alt="{esc(essay.get("title",""))}" '
-            f'style="display:block;width:100%;max-width:520px;border-radius:5px;"></a>'
-            if essay.get("feature_image") else "")
-    excerpt = esc((essay.get("excerpt") or "")[:240])
-    excerpt_html = (f'<p class="muted" style="font-family:{SERIF};font-size:15px;line-height:1.55;'
-                    f'color:{C["ink_muted"]};margin:10px 0 16px;">{excerpt}</p>' if excerpt else "")
+    topic = esc(essay.get("topic") or "Essay")
+    pull = esc(essay.get("pull") or "")
+    pull_html = (f'<div style="font-family:{SERIF};font-style:italic;font-size:18px;line-height:1.42;'
+                 f'color:{DARK_PULL};border-left:2px solid {DARK_ACCENT};padding-left:14px;margin-bottom:16px">&ldquo;{pull}&rdquo;</div>'
+                 if pull else "")
+    dek = esc(essay.get("excerpt") or "")
+    dek_html = (f'<div style="font-family:{SERIF};font-size:15px;line-height:1.55;'
+                f'color:{DARK_DEK};margin-bottom:20px">{dek}</div>' if dek else "")
     return f"""
-<tr><td class="px" style="padding:26px 40px 6px;">{hero}</td></tr>
-<tr><td class="px" style="padding:16px 40px 26px;border-bottom:1px solid {C['rule']};" class="rule">
-  {kicker('The closer look')}
-  <h2 class="ink" style="font-family:{SERIF};font-size:26px;line-height:1.1;color:{C['ink']};margin:8px 0 0;font-weight:normal;">
-    <a href="{esc(essay['url'])}" class="ink" style="color:{C['ink']};">{esc(essay['title'])}</a></h2>
-  {excerpt_html}
-  {button('Read the essay &rarr;', essay['url'])}
-</td></tr>"""
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr><td style="padding:34px 0 18px;border-top:3px solid {INK}">
+    <div style="font-family:{SERIF};font-size:30px;letter-spacing:-1px;color:{INK}">A Closer Look</div>
+  </td></tr>
+  <tr><td style="background:{DARK};padding:34px 32px">
+    <div style="font-family:{MONO};font-size:10px;letter-spacing:2px;text-transform:uppercase;color:{DARK_ACCENT};padding-bottom:14px">Essay · {topic}</div>
+    <a href="{esc(essay['url'])}" style="font-family:{SERIF};font-size:33px;line-height:1.04;letter-spacing:-1px;color:{DARK_TITLE};display:block;margin-bottom:16px">{esc(essay['title'])}</a>
+    {pull_html}
+    {dek_html}
+    <a href="{esc(essay['url'])}" style="font-family:{MONO};font-size:11px;letter-spacing:2px;text-transform:uppercase;color:{DARK_TITLE};border-bottom:1px solid {DARK_ACCENT};padding-bottom:4px">Read the Essay →</a>
+  </td></tr>
+</table>"""
 
 
-def render_report(issue):
-    cells = ""
-    for r in issue.get("report", [])[:4]:
-        cells += f"""
-<td class="stack" valign="top" style="padding-right:24px;">
-  <div style="font-family:{SERIF};font-size:24px;color:{C['ink']};" class="ink">{esc(str(r['value']))}</div>
-  <div style="font-family:{MONO};font-size:10px;letter-spacing:1px;text-transform:uppercase;color:{C['ink_faint']};margin-top:3px;">{esc(r['label'])}</div>
-</td>"""
-    if not cells:
+def render_recap(recap):
+    if not recap:
         return ""
     return f"""
-<tr><td class="px" style="padding:18px 40px;border-bottom:1px solid {C['rule']};" class="rule">
-  <table role="presentation" cellpadding="0" cellspacing="0" border="0"><tr>{cells}</tr></table>
-</td></tr>"""
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr><td style="padding:34px 0 30px;border-top:3px solid {INK};border-bottom:1px solid {RULE}">
+    <div style="font-family:{SERIF};font-size:26px;letter-spacing:-.5px;color:{INK};padding-bottom:12px">✶ Knowledge, Transmuted</div>
+    <div style="font-family:{SERIF};font-size:17px;line-height:1.62;color:{INK2}">{esc(recap)}</div>
+  </td></tr>
+</table>"""
 
 
-def build(issue_path, per_rail=6):
+def render_lexicon(terms):
+    if not terms:
+        return ""
+    groups = {}
+    for t in terms:
+        groups.setdefault(t.get("category") or "Concepts", []).append(t)
+    cats = [c for c in CAT_ORDER if c in groups] + [c for c in groups if c not in CAT_ORDER]
+
+    head = f"""
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr><td style="padding:32px 0 6px">
+    <div style="font-family:{SERIF};font-size:30px;letter-spacing:-1px;color:{INK}">The Less You Know</div>
+    <div style="font-family:{MONO};font-size:10px;letter-spacing:2px;text-transform:uppercase;color:{FAINT};padding-top:5px">The More You Learn</div>
+  </td></tr>
+</table>"""
+
+    body = ""
+    for cat in cats:
+        body += f"""
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+  <tr><td style="padding:18px 0 2px;border-top:2px solid {INK}">
+    <div style="font-family:{MONO};font-size:11px;letter-spacing:2px;text-transform:uppercase;color:{ACCENT}">{esc(cat)}</div>
+  </td></tr>
+</table>"""
+        for t in groups[cat]:
+            body += f"""
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%" style="border-top:1px solid {RULE}">
+  <tr>
+    <td width="170" style="width:170px;vertical-align:top;padding:12px 16px 12px 0;font-family:{SANS};font-weight:bold;font-size:14px;line-height:1.3;color:{INK}"><a href="{esc(t['url'])}" style="color:{INK}">{esc(t['name'])}</a></td>
+    <td style="vertical-align:top;padding:12px 0;font-family:{SERIF};font-size:14.5px;line-height:1.5;color:{MUTED}">{esc(t.get('definition',''))}</td>
+  </tr>
+</table>"""
+    return head + body
+
+
+def build(issue_path):
     issue = json.loads(Path(issue_path).read_text())
     number = issue.get("number")
     slug = str(number) if number else issue["id"]
-    badge = f"{issue['year']} · W{issue['week']:02d}"
     essay = issue.get("essay") or {}
     issue_url = issue.get("url") or f"{SITE}/issues/{slug}"
+    headline = "Token Wisdom"
+    no = f"No. {number}" if number else issue["id"]
+    week_line = f"{no} &nbsp;·&nbsp; Week {issue['week']} of 52 &nbsp;·&nbsp; {fmt_date(issue.get('date',''))}"
     preheader = issue.get("dek") or essay.get("excerpt") or "The Newsletter of Record for the Future of Now."
-    headline = "No. " + str(number) if number else f"Token Wisdom · {badge}"
 
-    body = f"""<!DOCTYPE html>
+    tnl = issue["sections"].get("newest_latest", [])
+    tws = issue["sections"].get("time_well_spent", [])
+
+    html = f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="color-scheme" content="light dark">
-<meta name="supported-color-schemes" content="light dark">
-<title>{esc(headline)} — Token Wisdom</title>
-{HEAD_STYLE}
+<meta name="color-scheme" content="light">
+<meta name="supported-color-schemes" content="light">
+<title>{esc(no)} — Token Wisdom</title>
+{HEAD}
 </head>
-<body class="bg" style="margin:0;padding:0;background:{C['bg']};">
-<span style="display:none!important;visibility:hidden;opacity:0;color:transparent;height:0;width:0;overflow:hidden;mso-hide:all;">{esc(preheader)}</span>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" class="bg" style="background:{C['bg']};"><tr>
-<td align="center" style="padding:24px 0;">
+<body style="margin:0;padding:0;background:{BG}">
+<span style="display:none!important;visibility:hidden;opacity:0;color:{BG};font-size:1px;line-height:1px;max-height:0;overflow:hidden">{esc(preheader)}</span>
+<div style="background:{BG};padding:40px 16px 70px;font-family:{SANS}">
+<table role="presentation" cellpadding="0" cellspacing="0" border="0" width="600" align="center" class="container" style="width:600px;max-width:600px;margin:0 auto;background:{PAPER};border:1px solid {RULE};box-shadow:0 24px 60px -30px rgba(40,30,20,.5)">
+  <tr><td class="px" style="padding:0 40px">
 
-<table role="presentation" width="600" cellpadding="0" cellspacing="0" border="0" class="container card"
-       style="width:600px;max-width:600px;background:{C['bg']};">
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr><td align="center" style="padding:40px 0 22px;border-bottom:1px solid {RULE};text-align:center">
+        <div style="font-family:{SERIF};font-size:48px;letter-spacing:-1px;line-height:.9;color:{INK};font-weight:normal">Token Wisdom</div>
+        <div style="font-family:{MONO};font-size:10px;letter-spacing:3px;text-transform:uppercase;color:{ACCENT};padding-top:16px">The Newsletter of Record for the Future of Now</div>
+        <div style="font-family:{MONO};font-size:10px;letter-spacing:1px;text-transform:uppercase;color:{FAINT};padding-top:11px">{week_line}</div>
+      </td></tr>
+    </table>
 
-  <tr><td class="px" align="center" style="padding:8px 40px 0;">
-    <a href="{issue_url}" style="font-family:{MONO};font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:{C['ink_faint']};">View in browser</a>
+    {render_epigraph(issue.get('epigraph'))}
+    {render_editor_note(issue.get('editor_note'), issue_url)}
+    {render_rail('Newest / Latest', tnl, 'Read', f'{len(tnl)} Dispatches')}
+    {render_closer_look(essay)}
+    {render_rail('Time Well Spent', tws, 'Watch', f'{len(tws)} to Watch')}
+    {render_recap(issue.get('recap'))}
+    {render_lexicon(issue.get('terms_in_motion', []))}
+
+    <table role="presentation" cellpadding="0" cellspacing="0" border="0" width="100%">
+      <tr><td align="center" style="padding:34px 0 40px;border-top:3px solid {INK};text-align:center">
+        <div style="font-family:{SERIF};font-size:22px;letter-spacing:-.5px;color:{INK};padding-bottom:8px">Token Wisdom</div>
+        <div style="font-family:{SERIF};font-style:italic;font-size:14px;color:{MUTED};padding-bottom:16px">Knowware is measured in lifetimes.</div>
+        <div style="font-family:{MONO};font-size:10px;letter-spacing:1px;text-transform:uppercase;color:{FAINT};line-height:1.9">By @iamkhayyam · ARC Institute of Knowware<br>This edition was curated by a human.</div>
+        <div style="font-family:{MONO};font-size:10px;letter-spacing:1px;text-transform:uppercase;color:{FAINT2};padding-top:16px"><a href="{issue_url}" style="color:{ACCENT}">Read online</a> &nbsp;·&nbsp; <a href="{GHOST_URL}/subscribe" style="color:{ACCENT}">Subscribe</a> &nbsp;·&nbsp; <a href="{{{{{{unsubscribe_url}}}}}}" style="color:{FAINT2}">Unsubscribe</a></div>
+      </td></tr>
+    </table>
+
   </td></tr>
-
-  <tr><td class="px" style="padding:14px 40px 18px;border-bottom:2px solid {C['ink']};">
-    {kicker('The Record · Token Wisdom')}
-    <div class="ink" style="font-family:{SERIF};font-size:46px;letter-spacing:-1px;color:{C['ink']};margin-top:8px;">{esc(headline)}</div>
-    <div style="font-family:{MONO};font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:{C['ink_faint']};margin-top:8px;">{badge} &middot; {fmt_date(issue.get('date',''))}</div>
-  </td></tr>
-
-  {render_report(issue)}
-  {render_essay(essay)}
-  {rail('The Newest Latest', badge, issue['sections'].get('newest_latest', []), per_rail)}
-  {rail('Time Well Spent', badge, issue['sections'].get('time_well_spent', []), per_rail)}
-  {render_terms(issue.get('terms_in_motion', []))}
-  {render_record(issue.get('from_the_record'))}
-
-  <tr><td class="px" align="center" style="padding:30px 40px;border-top:2px solid {C['ink']};">
-    <div class="ink" style="font-family:{SERIF};font-size:20px;color:{C['ink']};">Token Wisdom</div>
-    <div class="muted" style="font-family:{SERIF};font-size:13px;color:{C['ink_muted']};margin-top:6px;">The Newsletter of Record for the Future of Now</div>
-    <div style="margin-top:14px;">{button('Subscribe', GHOST_URL + '/subscribe')}</div>
-    <div style="font-family:{MONO};font-size:10px;letter-spacing:.5px;color:{C['ink_faint']};margin-top:20px;line-height:1.6;">
-      Token Wisdom · [mailing address] · You received this because you subscribed.<br>
-      <a href="{{{{{{unsubscribe_url}}}}}}" style="color:{C['ink_faint']};text-decoration:underline;">Unsubscribe</a>
-    </div>
-  </td></tr>
-
 </table>
-</td></tr></table>
+</div>
 </body></html>"""
 
     out_dir = DOCS / "issues" / slug
     out_dir.mkdir(parents=True, exist_ok=True)
     out = out_dir / "email.html"
-    out.write_text(body)
+    out.write_text(html)
     return out
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("issue")
-    ap.add_argument("--per-rail", type=int, default=6)
     a = ap.parse_args()
-    out = build(a.issue, a.per_rail)
-    print(f"Wrote {out}")
+    print(f"Wrote {build(a.issue)}")
 
 
 if __name__ == "__main__":

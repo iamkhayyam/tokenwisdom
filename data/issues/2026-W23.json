@@ -8,7 +8,13 @@
   "date": "2026-06-16",
   "status": "draft",
   "title": "Token Wisdom · 2026 · Week 23",
-  "dek": "",
+  "dek": "Verification week: a $1.3T chip selloff, even the CEOs admitting the buildout got ahead of itself — and, quietly, the lab kept working.",
+  "epigraph": {
+    "text": "There's no sense in being precise when you don't even know what you're talking about.",
+    "attribution": "John von Neumann"
+  },
+  "editor_note": "This week the semiconductor story split in two. On one side, a $1.3 trillion selloff and a chorus — even the CEOs — conceding the AI buildout has gotten ahead of itself. On the other, the breakthroughs that don't trend: a 3D-stacked chip extending Moore's Law, a processor that runs a thousand times faster without the waste heat, Huawei building what the export-control map said was impossible. The market priced the mood. The lab kept working.",
+  "recap": "The reckoning isn't that AI is overhyped — it's that we keep measuring the wrong thing. Market value moves on sentiment; the substrate moves on physics. When the noise clears, what remains is what always did: who can move electrons, or light, faster and cooler and at scale. This week the answer started to include people the map said it wouldn't.",
   "url": "https://tokenwisdom.org/issues/153",
   "hero": {
     "image": "https://tokenwisdom.ghost.io/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg",
@@ -20,7 +26,9 @@
     "url": "https://tokenwisdom.org/posts/the-sky-has-been-warning-us-since-1859.html",
     "excerpt": "W13 - The sun fired a warning shot in 1859. We had 165 years. We wrote reports, introduced legislation, held hearings — and kept building a bigger antenna. The solution to the oldest infrastructure problem in the modern world exists. It just isn't where anyone thought to look.\n",
     "feature_image": "https://tokenwisdom.ghost.io/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg",
-    "published_at": "2026-03-26T17:49:00.000-07:00"
+    "published_at": "2026-03-26T17:49:00.000-07:00",
+    "pull": "We didn't build a civilization since 1859. We built an antenna.",
+    "topic": "Infrastructure"
   },
   "sections": {
     "newest_latest": [
@@ -261,6 +269,7 @@
       "name": "AI",
       "slug": "ai",
       "color": "teal",
+      "category": "Acronyms",
       "role": "Keystone",
       "edition_count": 53,
       "definition": "Artificial Intelligence",
@@ -271,6 +280,7 @@
       "name": "Silicon",
       "slug": "silicon",
       "color": "gold",
+      "category": "Technical Terms",
       "role": null,
       "edition_count": 1,
       "definition": "Semiconductor material used in computer chip manufacturing",
@@ -281,6 +291,7 @@
       "name": "MIT",
       "slug": "mit",
       "color": "teal",
+      "category": "Acronyms",
       "role": "Headliner",
       "edition_count": 10,
       "definition": "Massachusetts Institute of Technology",
@@ -291,6 +302,7 @@
       "name": "DARPA",
       "slug": "darpa",
       "color": "teal",
+      "category": "Acronyms",
       "role": "Headliner",
       "edition_count": 9,
       "definition": "Defense Advanced Research Projects Agency: the U.S. Department of Defense agency responsible for developing emerging technologies for national security use",
@@ -301,6 +313,7 @@
       "name": "GPS",
       "slug": "gps",
       "color": "teal",
+      "category": "Acronyms",
       "role": "Headliner",
       "edition_count": 3,
       "definition": "Global Positioning System",
@@ -311,11 +324,67 @@
       "name": "LiDAR",
       "slug": "lidar",
       "color": "teal",
+      "category": "Acronyms",
       "role": null,
       "edition_count": 1,
       "definition": "Light Detection and Ranging: a sensing technology using pulsed laser light to measure distances and map environments in three dimensions",
       "url": "https://tokenwisdom.org/lexicon/lidar.html",
       "mentions": 2
+    },
+    {
+      "name": "CEO",
+      "slug": "ceo",
+      "color": "teal",
+      "category": "Acronyms",
+      "role": "Headliner",
+      "edition_count": 10,
+      "definition": "Chief Executive Officer",
+      "url": "https://tokenwisdom.org/lexicon/ceo.html",
+      "mentions": 1
+    },
+    {
+      "name": "ChatGPT",
+      "slug": "chatgpt",
+      "color": "teal",
+      "category": "Acronyms",
+      "role": "Headliner",
+      "edition_count": 3,
+      "definition": "Chat Generative Pre-trained Transformer",
+      "url": "https://tokenwisdom.org/lexicon/chatgpt.html",
+      "mentions": 1
+    },
+    {
+      "name": "Data Center",
+      "slug": "data-center",
+      "color": "gold",
+      "category": "Technical Terms",
+      "role": null,
+      "edition_count": 2,
+      "definition": "Centralized location for computing and networking equipment",
+      "url": "https://tokenwisdom.org/lexicon/data-center.html",
+      "mentions": 1
+    },
+    {
+      "name": "Consciousness",
+      "slug": "consciousness",
+      "color": "gold",
+      "category": "Technical Terms",
+      "role": null,
+      "edition_count": 1,
+      "definition": "Subjective experience of awareness",
+      "url": "https://tokenwisdom.org/lexicon/consciousness.html",
+      "mentions": 1
+    },
+    {
+      "name": "Manufacturing",
+      "slug": "manufacturing",
+      "color": "accent",
+      "category": "Concepts",
+      "role": null,
+      "edition_count": 1,
+      "definition": "Efforts to revitalize industrial production",
+      "url": "https://tokenwisdom.org/lexicon/manufacturing.html",
+      "mentions": 1
     }
   ],
   "reader_marks": {
@@ -353,7 +422,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-06-16T00:29:18.721998+00:00",
+    "generated_at": "2026-06-16T01:00:14.135801+00:00",
     "builder_version": "0.1.0",
     "source_csvs": [
       "26.W.23.TNL.csv",
@@ -362,7 +431,7 @@
     "counts": {
       "newest_latest": 10,
       "time_well_spent": 10,
-      "terms_in_motion": 6
+      "terms_in_motion": 11
     }
   }
 }

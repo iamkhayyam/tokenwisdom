@@ -136,7 +136,7 @@ def _count(name, text, text_lower):
     return len(re.findall(r"\b" + re.escape(name.lower()) + r"\b", text_lower))
 
 
-def terms_in_motion(week_text, top_n=6):
+def terms_in_motion(week_text, top_n=12):
     """v0 of the corpus hook: score lexicon terms by appearance in the week's text."""
     data = json.load(open(LEXICON))
     terms = data["terms"] if isinstance(data, dict) else data
@@ -154,14 +154,24 @@ def terms_in_motion(week_text, top_n=6):
     # rank by mentions, then corpus weight (keystones win ties)
     scored.sort(key=lambda x: (x[0], x[1]), reverse=True)
     out = []
-    for hits, _, t in scored[:top_n]:
+    for hits, _, t in scored:
+        if len(out) >= top_n:
+            break
+        defn = " ".join((t.get("definition") or "").split())  # collapse whitespace
+        low = defn.lower()
+        # Skip terms whose source definition is polluted (scraped boilerplate/URLs).
+        if "http" in low or "youtube.com" in low or len(defn) > 300:
+            continue
+        if len(defn) > 220:
+            defn = defn[:217].rstrip() + "…"
         out.append({
             "name": t.get("name"),
             "slug": t.get("slug"),
             "color": t.get("color"),
+            "category": t.get("category"),
             "role": t.get("role") or None,
             "edition_count": t.get("edition_count", 0),
-            "definition": t.get("definition", ""),
+            "definition": defn,
             "url": f"{SITE}/lexicon/{t.get('slug','')}.html",
             "mentions": hits,
         })
@@ -221,6 +231,11 @@ def build(year, week, essay_slug, number):
         "status": "draft",
         "title": f"Token Wisdom · {year} · Week {week}",
         "dek": "",
+        # Human-authored editorial fields — populated from the editorial sidecar
+        # (data/issues/{id}.editorial.json) if present. The builder can't write prose.
+        "epigraph": None,
+        "editor_note": None,
+        "recap": None,
         "url": f"{SITE}/issues/{number}" if number else "",
         "hero": {"image": essay.get("feature_image", "") if essay else "", "alt": ""},
         "essay": essay,
@@ -239,6 +254,19 @@ def build(year, week, essay_slug, number):
                        "terms_in_motion": len(tim)},
         },
     }
+
+    # Merge the editorial sidecar (human-authored prose) if present.
+    sidecar = ISSUES_DIR / f"{issue['id']}.editorial.json"
+    if sidecar.exists():
+        ed = json.loads(sidecar.read_text())
+        for k in ("epigraph", "editor_note", "recap", "dek"):
+            if ed.get(k) is not None:
+                issue[k] = ed[k]
+        if essay:
+            if ed.get("essay_pull"):
+                essay["pull"] = ed["essay_pull"]
+            if ed.get("essay_topic"):
+                essay["topic"] = ed["essay_topic"]
 
     ISSUES_DIR.mkdir(parents=True, exist_ok=True)
     out = ISSUES_DIR / f"{year}-W{week:02d}.json"

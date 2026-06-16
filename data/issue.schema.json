@@ -26,6 +26,18 @@
 
     "title": { "type": "string" },
     "dek": { "type": "string", "description": "Standfirst / one-line summary for the issue." },
+
+    "epigraph": {
+      "type": ["object", "null"],
+      "description": "Weekly opening quote (human-authored, via editorial sidecar).",
+      "additionalProperties": false,
+      "properties": {
+        "text": { "type": "string" },
+        "attribution": { "type": "string" }
+      }
+    },
+    "editor_note": { "type": ["string", "null"], "description": "The editor's note (human-authored)." },
+    "recap": { "type": ["string", "null"], "description": "'Knowledge, Transmuted' closing synthesis (human-authored)." },
     "url": { "type": "string", "format": "uri", "description": "Canonical permanent URL, e.g. https://tokenwisdom.org/issues/153." },
     "hero": {
       "type": "object",
@@ -46,7 +58,9 @@
         "url": { "type": "string", "format": "uri" },
         "excerpt": { "type": "string" },
         "feature_image": { "type": "string" },
-        "published_at": { "type": "string" }
+        "published_at": { "type": "string" },
+        "pull": { "type": "string", "description": "Pull-quote for the Closer Look card (human-authored)." },
+        "topic": { "type": "string", "description": "Topic tag, e.g. 'Infrastructure'." }
       }
     },
 
@@ -72,6 +86,7 @@
           "name": { "type": "string" },
           "slug": { "type": "string" },
           "color": { "type": "string" },
+          "category": { "type": ["string", "null"], "description": "Lexicon category: Technologies | Concepts | Technical Terms | Acronyms | People & Works." },
           "role": { "type": "string", "description": "Keystone | Headliner | ... from the lexicon." },
           "edition_count": { "type": "integer" },
           "definition": { "type": "string" },
