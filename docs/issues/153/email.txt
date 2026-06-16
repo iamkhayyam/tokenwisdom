@@ -1,0 +1,231 @@
+TOKEN WISDOM
+The Newsletter of Record for the Future of Now
+No. 153 · Week 23 of 52 · June 16, 2026
+
+────────────────────────────────────────────────────────────
+
+"There's no sense in being precise when you don't even know what you're
+talking about."
+— John von Neumann
+
+────────────────────────────────────────────────────────────
+
+EDITOR'S NOTE
+
+This week the semiconductor story split in two. On one side, a $1.3
+trillion selloff and a chorus — even the CEOs — conceding the AI
+buildout has gotten ahead of itself. On the other, the breakthroughs
+that don't trend: a 3D-stacked chip extending Moore's Law, a processor
+that runs a thousand times faster without the waste heat, Huawei
+building what the export-control map said was impossible. The market
+priced the mood. The lab kept working.
+
+Listen — NotebookLM reads this edition:
+https://tokenwisdom.org/issues/153
+
+════════════════════════════════════════════════════════════
+NEWEST / LATEST — 10 Dispatches
+════════════════════════════════════════════════════════════
+
+01. Humans conquered the planet 300 times faster than genetic evolution can explain | Scientific American
+    Culture is humanity’s secret for world domination. This calculation
+    shows just how powerful it is
+    scientificamerican.com → https://www.scientificamerican.com/article/humans-conquered-the-planet-300-times-faster-than-genetic-evolution-can-explain/
+
+02. MIT Engineers Solve a Major Lidar Problem That Has Stumped Researchers for Years
+    A new MIT-designed lidar chip uses specially engineered antennas to
+    reduce interference and widen the sensor’s field of view.
+    scitechdaily.com → https://scitechdaily.com/mit-engineers-solve-a-major-lidar-problem-that-has-stumped-researchers-for-years/
+
+03. Nvidia’s CEO Says New Vera Chip Will Use SK Hynix’s Memory Chips - Bloomberg
+    Nvidia Corp. Chief Executive Officer Jensen Huang said its new Vera
+    central processing units will use SK Hynix Inc.’s memory chips as
+    the two companies prepare to do more business in the coming year.
+    bloomberg.com → https://www.bloomberg.com/news/articles/2026-06-07/nvidia-s-ceo-says-new-vera-chip-will-use-sk-hynix-s-memory-chips
+
+04. Chip slump erases $1.3 trillion in stock market value | Reuters
+    U.S.-traded chipmakers plunged on Friday, losing about $1.3 trillion
+    in market value, with deep losses in AI heavy ​hitters including
+    Nvidia , Micron Technology and Advanced Micro Devices , as
+    Broadcom's ‌weak report earlier this week reverberated across Wall
+    Street.
+    reuters.com → https://www.reuters.com/business/media-telecom/chip-selloff-erases-over-1-trillion-stock-market-value-2026-06-05/
+
+05. Two young inventors design a brick that can cool cities using electricity, and the idea points to buildings that stop being part of the heat problem
+    Two inventors designed a 3D-printed brick that cools city streets by
+    16°F. See how this eco-friendly tech fights urban heat islands.
+    ecoticias.com → https://www.ecoticias.com/en/two-young-inventors-design-a-brick-that-can-cool-cities-using-electricity-and-the-idea-points-to-buildings-that-stop-being-part-of-the-heat-problem/32986/
+
+06. The Token Reckoning is Here and It’s Not What You Think
+    Token waste in service of productive use, not waste for the sake of
+    waste, could be the biggest problem in AI right now.
+    bigtechnology.com → https://www.bigtechnology.com/p/the-token-reckoning-is-here-and-its?utm_source=tldrfounders
+
+07. DARPA wants to replace GPS dependence with new class of sensors
+    Every GPS signal on the battlefield is a vulnerability waiting to be
+    exploited, and Russia, China, and Iran have all demonstrated the
+    willingness to exploit it. DARPA just announced it is going to solve
+    that problem from the inside out,
+    defence-blog.com → https://defence-blog.com/darpa-wants-to-replace-gps-dependence-with-new-class-of-sensors/
+
+08. New device could make processors run 1,000 times faster without additional waste heat — scientists say it could reduce data center energy demands | Live Science
+    A new device could allow computer processors to operate
+    significantly faster, without generating waste heat.
+    livescience.com → https://www.livescience.com/technology/electronics/new-device-could-make-processors-run-1-000-times-faster-without-additional-waste-heat-scientists-say-it-could-reduce-data-center-energy-demands
+
+09. New 3D silicon chip breakthrough could extend Moore’s Law for years | ScienceDaily
+    As traditional chip miniaturization slows, researchers have found a
+    way to pack more computing power into the same space by stacking
+    silicon circuits in multiple layers. The new process uses ultra-thin
+    silicon membranes and low-temperature manufacturing techniques to
+    overcome a major obstacle that has long blocked the production of
+    true 3D chips.
+    sciencedaily.com → https://www.sciencedaily.com/releases/2026/05/260530053412.htm
+
+10. Letter: Human consciousness and the wave function | New Scientist
+    newscientist.com → https://www.newscientist.com/letter/mg27035973-100-human-consciousness-and-the-wave-function/
+
+════════════════════════════════════════════════════════════
+A CLOSER LOOK
+════════════════════════════════════════════════════════════
+
+ESSAY · INFRASTRUCTURE
+
+The Sky Has Been Warning Us Since 1859
+
+"We didn't build a civilization since 1859. We built an antenna."
+
+W13 - The sun fired a warning shot in 1859. We had 165 years. We wrote
+reports, introduced legislation, held hearings — and kept building a
+bigger antenna. The solution to the oldest infrastructure problem in the
+modern world exists. It just isn't where anyone thought to look.
+
+Read the essay → https://tokenwisdom.org/posts/the-sky-has-been-warning-us-since-1859.html
+
+════════════════════════════════════════════════════════════
+TIME WELL SPENT — 10 to Watch
+════════════════════════════════════════════════════════════
+
+01. How Huawei Just Built an Impossible Chip
+    Since 2019, US export controls have blocked Huawei from accessing
+    t...
+    YouTube → https://youtu.be/8ekndZwyOzo?si=TX-4HPA58AU2V7ET
+
+02. Every Level of AI Taking Jobs Explained
+    In this conversation, Patrick Dwyer and Greg Pool explore how
+    artif...
+    YouTube → https://youtu.be/9YeHm4ZbL60?si=eTFuC8DdBwOuqiWj
+
+03. Spiritual Awakening Is God Realizing It Hates Its Existence
+    Get access To my Substack and future announcements here→
+    https://t...
+    YouTube → https://youtu.be/Vn1sP2WevnY?si=VlmGxUFBtJcNDSSM
+
+04. Welp, everyone HATES A.I.
+    Everyone besides tech CEOs has been saying it. Now they’re starting
+    to say it too. Visit https://groundnews.com/factually to stay fully
+    informed, see through...
+    YouTube → https://www.youtube.com/watch?v=vhrJqOGrXGo
+
+05. What Makes Software a "Place"?
+    Join "Interface Studies" to help make more videos. Your support
+    keeps new content coming.
+    https://www.youtube.com/channel/UCqv7gk4p_rB4nRz0j7B5yFA/joinWhen
+    d...
+    YouTube → https://www.youtube.com/watch?v=tBE2ZYx7MWw
+
+06. Why Every Apple Ad Shows 9:41
+    Look at the time on any iPhone in any Apple advertisement. It's
+    9:41. Every time, for the last fifteen years. Look at any watch in
+    any advertisement — it's t...
+    YouTube → https://www.youtube.com/watch?v=e0uEXU9sGZk
+
+07. Why Tech Companies Are Quietly Cancelling AI Data Centers
+    Why Tech Companies Are Quietly Cancelling AI Data CentersSince the
+    release of ChatGPT in 2022, tech companies have invested hundreds of
+    billions of dollars i...
+    YouTube → https://www.youtube.com/watch?v=e0Dlr07jfjA
+
+08. Perpetual Motion Machine Raises $12M from Investors
+    The company Casimir Inc promises "unlimited power" from the vacuum
+    by using the Casimir effect. Here is why you shouldn't believe what
+    they say. 👉 Transcrip...
+    YouTube → https://www.youtube.com/watch?v=sEteCJUMVn4
+
+09. We Found the Hidden Radio World Anyone Can Listen To
+    Go to today’s sponsor https://www.Strawberry.me/rogue to get your
+    career coach today! In the comments, tell me which kiwiSDR I should
+    point shortwave.themode...
+    YouTube → https://www.youtube.com/watch?v=fPf3kj_dAsc
+
+10. The best Cold Call you've ever seen (178k/month ai agency)
+    Book a Free Call to Start or Scale Your AI Agency ⬇️ ⬇️
+    https://bo...
+    YouTube → https://youtu.be/l7eJfXmaCjc?si=vJP7hTMBnBCVVusM
+
+════════════════════════════════════════════════════════════
+* KNOWLEDGE, TRANSMUTED
+════════════════════════════════════════════════════════════
+
+The reckoning isn't that AI is overhyped — it's that we keep measuring
+the wrong thing. Market value moves on sentiment; the substrate moves on
+physics. When the noise clears, what remains is what always did: who can
+move electrons, or light, faster and cooler and at scale. This week the
+answer started to include people the map said it wouldn't.
+
+════════════════════════════════════════════════════════════
+THE LESS YOU KNOW — The More You Learn
+════════════════════════════════════════════════════════════
+
+CONCEPTS
+
+  Manufacturing
+    Efforts to revitalize industrial production
+
+TECHNICAL TERMS
+
+  Silicon
+    Semiconductor material used in computer chip manufacturing
+
+  Data Center
+    Centralized location for computing and networking equipment
+
+  Consciousness
+    Subjective experience of awareness
+
+ACRONYMS
+
+  AI
+    Artificial Intelligence
+
+  MIT
+    Massachusetts Institute of Technology
+
+  DARPA
+    Defense Advanced Research Projects Agency: the U.S. Department of
+    Defense agency responsible for developing emerging technologies for
+    national security use
+
+  GPS
+    Global Positioning System
+
+  LiDAR
+    Light Detection and Ranging: a sensing technology using pulsed laser
+    light to measure distances and map environments in three dimensions
+
+  CEO
+    Chief Executive Officer
+
+  ChatGPT
+    Chat Generative Pre-trained Transformer
+
+────────────────────────────────────────────────────────────
+
+TOKEN WISDOM
+Knowware is measured in lifetimes.
+By @iamkhayyam · ARC Institute of Knowware
+This edition was curated by a human.
+
+Read online: https://tokenwisdom.org/issues/153
+Subscribe:   https://tokenwisdom.ghost.io/subscribe
+Unsubscribe: {{{unsubscribe_url}}}

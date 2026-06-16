@@ -19,6 +19,7 @@ Usage:
 
 import argparse
 import json
+import textwrap
 from pathlib import Path
 
 from generate_links import esc
@@ -222,6 +223,89 @@ def render_lexicon(terms):
     return head + body
 
 
+# ── plain-text render (deliverability + required `text` part for Resend) ─────────
+HR = "─" * 60
+HR2 = "═" * 60
+
+
+def _w(text, indent=""):
+    text = " ".join((text or "").split())
+    if not text:
+        return ""
+    return textwrap.fill(text, width=72, initial_indent=indent, subsequent_indent=indent)
+
+
+def render_text(issue):
+    number = issue.get("number")
+    no = f"No. {number}" if number else issue["id"]
+    essay = issue.get("essay") or {}
+    issue_url = issue.get("url") or f"{SITE}/issues/{number or issue['id']}"
+    L = [
+        "TOKEN WISDOM",
+        "The Newsletter of Record for the Future of Now",
+        f"{no} · Week {issue['week']} of 52 · {fmt_date(issue.get('date',''))}",
+        "",
+    ]
+
+    ep = issue.get("epigraph")
+    if ep and ep.get("text"):
+        L += [HR, "", _w(f'"{ep["text"]}"')]
+        if ep.get("attribution"):
+            L.append(f"— {ep['attribution']}")
+        L.append("")
+
+    if issue.get("editor_note"):
+        L += [HR, "", "EDITOR'S NOTE", "", _w(issue["editor_note"]), "",
+              "Listen — NotebookLM reads this edition:", issue_url, ""]
+
+    def rail(title, items, noun):
+        if not items:
+            return
+        L.extend([HR2, f"{title.upper()} — {len(items)} {noun}", HR2, ""])
+        for i, it in enumerate(items):
+            L.append(f"{i + 1:02d}. {it['title']}")
+            if it.get("excerpt"):
+                L.append(_w(it["excerpt"], indent="    "))
+            L.extend([f"    {it.get('source','')} → {it['url']}", ""])
+
+    rail("Newest / Latest", issue["sections"].get("newest_latest", []), "Dispatches")
+
+    if essay:
+        L += [HR2, "A CLOSER LOOK", HR2, "",
+              f"ESSAY · {(essay.get('topic') or 'Essay').upper()}", "",
+              _w(essay.get("title", "")), ""]
+        if essay.get("pull"):
+            L += [_w(f'"{essay["pull"]}"'), ""]
+        if essay.get("excerpt"):
+            L += [_w(essay["excerpt"]), ""]
+        L += [f"Read the essay → {essay.get('url','')}", ""]
+
+    rail("Time Well Spent", issue["sections"].get("time_well_spent", []), "to Watch")
+
+    if issue.get("recap"):
+        L += [HR2, "* KNOWLEDGE, TRANSMUTED", HR2, "", _w(issue["recap"]), ""]
+
+    terms = issue.get("terms_in_motion", [])
+    if terms:
+        L += [HR2, "THE LESS YOU KNOW — The More You Learn", HR2, ""]
+        groups = {}
+        for t in terms:
+            groups.setdefault(t.get("category") or "Concepts", []).append(t)
+        cats = [c for c in CAT_ORDER if c in groups] + [c for c in groups if c not in CAT_ORDER]
+        for cat in cats:
+            L += [cat.upper(), ""]
+            for t in groups[cat]:
+                L += [f"  {t['name']}", _w(t.get("definition", ""), indent="    "), ""]
+
+    L += [HR, "", "TOKEN WISDOM", "Knowware is measured in lifetimes.",
+          "By @iamkhayyam · ARC Institute of Knowware",
+          "This edition was curated by a human.", "",
+          f"Read online: {issue_url}",
+          f"Subscribe:   {GHOST_URL}/subscribe",
+          "Unsubscribe: {{{unsubscribe_url}}}", ""]
+    return "\n".join(L)
+
+
 def build(issue_path):
     issue = json.loads(Path(issue_path).read_text())
     number = issue.get("number")
@@ -283,16 +367,17 @@ def build(issue_path):
 
     out_dir = DOCS / "issues" / slug
     out_dir.mkdir(parents=True, exist_ok=True)
-    out = out_dir / "email.html"
-    out.write_text(html)
-    return out
+    (out_dir / "email.html").write_text(html)
+    (out_dir / "email.txt").write_text(render_text(issue))
+    return out_dir / "email.html", out_dir / "email.txt"
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("issue")
     a = ap.parse_args()
-    print(f"Wrote {build(a.issue)}")
+    for p in build(a.issue):
+        print(f"Wrote {p}")
 
 
 if __name__ == "__main__":
