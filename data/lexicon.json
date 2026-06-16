@@ -575,8 +575,8 @@
           "shared": 6
         }
       ],
-      "centrality": 756,
-      "keystone": 355.4,
+      "centrality": 754,
+      "keystone": 354.6,
       "role": "Keystone"
     },
     {
@@ -2602,8 +2602,8 @@
           "shared": 2
         }
       ],
-      "centrality": 50,
-      "keystone": 27.0,
+      "centrality": 46,
+      "keystone": 25.4,
       "role": "Keystone"
     },
     {
@@ -8706,8 +8706,8 @@
           "shared": 1
         }
       ],
-      "centrality": 73,
-      "keystone": 32.2,
+      "centrality": 71,
+      "keystone": 31.4,
       "role": "Keystone"
     },
     {
@@ -13382,8 +13382,8 @@
           "shared": 1
         }
       ],
-      "centrality": 30,
-      "keystone": 14.0,
+      "centrality": 29,
+      "keystone": 13.6,
       "role": ""
     },
     {
@@ -17828,8 +17828,8 @@
           "shared": 1
         }
       ],
-      "centrality": 24,
-      "keystone": 11.6,
+      "centrality": 22,
+      "keystone": 10.8,
       "role": ""
     },
     {
@@ -18849,8 +18849,8 @@
           "shared": 1
         }
       ],
-      "centrality": 15,
-      "keystone": 8.0,
+      "centrality": 14,
+      "keystone": 7.6,
       "role": ""
     },
     {
@@ -26950,12 +26950,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -26976,12 +26970,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         }
@@ -34176,12 +34164,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -34202,12 +34184,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -37875,12 +37851,6 @@
       ],
       "related": [
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -37905,12 +37875,6 @@
           "shared": 1
         },
         {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Research Commercialization",
           "slug": "research-commercialization",
           "color": "teal",
@@ -37923,8 +37887,8 @@
           "shared": 1
         }
       ],
-      "centrality": 20,
-      "keystone": 9.0,
+      "centrality": 16,
+      "keystone": 7.4,
       "role": ""
     },
     {
@@ -49669,12 +49633,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -49693,12 +49651,6 @@
           "shared": 1
         },
         {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Research Commercialization",
           "slug": "research-commercialization",
           "color": "teal",
@@ -49711,8 +49663,8 @@
           "shared": 1
         }
       ],
-      "centrality": 20,
-      "keystone": 9.0,
+      "centrality": 16,
+      "keystone": 7.4,
       "role": ""
     },
     {
@@ -59032,143 +58984,6 @@
       "role": ""
     },
     {
-      "name": "Anyone'",
-      "slug": "anyone",
-      "category": "Technical Terms",
-      "color": "gold",
-      "definition": "technology companies to train their artifici... Author David Baldacci Rips Big Tech Over AI Copyright Stressed about certs? It's a terrifying thing Getting to dive into: crazy expenses, huge https://www.youtube.com/watch? 2025-07- 1249062675 Certified: Start chambers, and complicated regulations. v=NCjFhsOvi2I 15T05:37:03.3 to Finish This is an account of our most recent... WiFi, Reinvented.Huge thanks to Jam.dev You’ve Never for sponsoring this video—seriously the https://www.youtube.com/watch? 2025-07- 1215421655 Seen Wi-Fi Go youtube fastest way to report bugs and collaborate v=3-KmnacJj88&t=284s 04T00:46:24.3 This Far with your dev team. Try it out her...",
-      "definition_history": [
-        {
-          "text": "technology companies to train their artifici... Author David Baldacci Rips Big Tech Over AI Copyright Stressed about certs? It's a terrifying thing Getting to dive into: crazy expenses, huge https://www.youtube.com/watch? 2025-07- 1249062675 Certified: Start chambers, and complicated regulations. v=NCjFhsOvi2I 15T05:37:03.3 to Finish This is an account of our most recent... WiFi, Reinvented.Huge thanks to Jam.dev You’ve Never for sponsoring this video—seriously the https://www.youtube.com/watch? 2025-07- 1215421655 Seen Wi-Fi Go youtube fastest way to report bugs and collaborate v=3-KmnacJj88&t=284s 04T00:46:24.3 This Far with your dev team. Try it out her...",
-          "edition": 117,
-          "date": "2025-07-13",
-          "slug": "117th-edition--token-wisdom--week-29"
-        }
-      ],
-      "edition_count": 1,
-      "first": {
-        "edition": 117,
-        "week": 29,
-        "date": "2025-07-13",
-        "slug": "117th-edition--token-wisdom--week-29",
-        "title": "117th Edition 🔮 Token Wisdom \\ Week 29",
-        "source": "pdf"
-      },
-      "latest": {
-        "edition": 117,
-        "week": 29,
-        "date": "2025-07-13",
-        "slug": "117th-edition--token-wisdom--week-29",
-        "title": "117th Edition 🔮 Token Wisdom \\ Week 29",
-        "source": "pdf"
-      },
-      "editions": [
-        {
-          "edition": 117,
-          "week": 29,
-          "date": "2025-07-13",
-          "slug": "117th-edition--token-wisdom--week-29",
-          "title": "117th Edition 🔮 Token Wisdom \\ Week 29",
-          "source": "pdf"
-        }
-      ],
-      "timeline": [
-        {
-          "period": "2024-Q1",
-          "count": 0
-        },
-        {
-          "period": "2024-Q2",
-          "count": 0
-        },
-        {
-          "period": "2024-Q3",
-          "count": 0
-        },
-        {
-          "period": "2024-Q4",
-          "count": 0
-        },
-        {
-          "period": "2025-Q1",
-          "count": 0
-        },
-        {
-          "period": "2025-Q2",
-          "count": 0
-        },
-        {
-          "period": "2025-Q3",
-          "count": 1
-        },
-        {
-          "period": "2025-Q4",
-          "count": 0
-        },
-        {
-          "period": "2026-Q1",
-          "count": 0
-        },
-        {
-          "period": "2026-Q2",
-          "count": 0
-        }
-      ],
-      "related": [
-        {
-          "name": "Mental Health Technology",
-          "slug": "mental-health-technology",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Urban Planning",
-          "slug": "urban-planning",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "EUV",
-          "slug": "euv",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Innovation Barriers",
-          "slug": "innovation-barriers",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "NA",
-          "slug": "na",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Neural Bookmarking",
-          "slug": "neural-bookmarking",
-          "color": "gold",
-          "shared": 1
-        },
-        {
-          "name": "AI",
-          "slug": "ai",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Digital Rights",
-          "slug": "digital-rights",
-          "color": "accent",
-          "shared": 1
-        }
-      ],
-      "centrality": 0,
-      "keystone": 1.0,
-      "role": ""
-    },
-    {
       "name": "AP",
       "slug": "ap",
       "category": "Acronyms",
@@ -60399,143 +60214,6 @@
       ],
       "centrality": 0,
       "keystone": 1.0,
-      "role": ""
-    },
-    {
-      "name": "Archive",
-      "slug": "archive",
-      "category": "Acronyms",
-      "color": "teal",
-      "definition": "[https://tokenwisdom.ghost.io/archive] 5",
-      "definition_history": [
-        {
-          "text": "[https://tokenwisdom.ghost.io/archive] 5",
-          "edition": 115,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27"
-        }
-      ],
-      "edition_count": 1,
-      "first": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "latest": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "editions": [
-        {
-          "edition": 115,
-          "week": 27,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27",
-          "title": "115th Edition",
-          "source": "pdf"
-        }
-      ],
-      "timeline": [
-        {
-          "period": "2024-Q1",
-          "count": 0
-        },
-        {
-          "period": "2024-Q2",
-          "count": 0
-        },
-        {
-          "period": "2024-Q3",
-          "count": 0
-        },
-        {
-          "period": "2024-Q4",
-          "count": 0
-        },
-        {
-          "period": "2025-Q1",
-          "count": 0
-        },
-        {
-          "period": "2025-Q2",
-          "count": 0
-        },
-        {
-          "period": "2025-Q3",
-          "count": 1
-        },
-        {
-          "period": "2025-Q4",
-          "count": 0
-        },
-        {
-          "period": "2026-Q1",
-          "count": 0
-        },
-        {
-          "period": "2026-Q2",
-          "count": 0
-        }
-      ],
-      "related": [
-        {
-          "name": "AI Access Controls",
-          "slug": "ai-access-controls",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Deniable Encryption",
-          "slug": "deniable-encryption",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Digital Privacy",
-          "slug": "digital-privacy",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Military Satellite Networks",
-          "slug": "military-satellite-networks",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "AI Training Data",
-          "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Research Commercialization",
-          "slug": "research-commercialization",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Content Control",
-          "slug": "content-control",
-          "color": "accent",
-          "shared": 1
-        }
-      ],
-      "centrality": 20,
-      "keystone": 9.0,
       "role": ""
     },
     {
@@ -61883,12 +61561,6 @@
           "name": "Structural Foreclosure",
           "slug": "structural-foreclosure",
           "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
           "shared": 1
         },
         {
@@ -69570,12 +69242,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -69594,8 +69260,8 @@
           "shared": 1
         }
       ],
-      "centrality": 12,
-      "keystone": 5.8,
+      "centrality": 11,
+      "keystone": 5.4,
       "role": ""
     },
     {
@@ -71476,12 +71142,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -71502,12 +71162,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -76033,12 +75687,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -76738,143 +76386,6 @@
       ],
       "centrality": 0,
       "keystone": 1.0,
-      "role": ""
-    },
-    {
-      "name": "CE)",
-      "slug": "ce",
-      "category": "Acronyms",
-      "color": "teal",
-      "definition": "The triangle of binomial coefficients was used by Pingala (~200 BCE), al- Karaji (~1000 CE), Omar Khayyam (~1070 CE), Jia Xian (11th century), Yang Hui (1261), and Pascal (1665, published posthumously). At least four independent mathematical traditions discovered the same structure over 1,800 years. The name \"Pascal's Triangle\" forecloses the most interesting question in the philosophy of mathematics: why does this structure keep being discovered?",
-      "definition_history": [
-        {
-          "text": "The triangle of binomial coefficients was used by Pingala (~200 BCE), al- Karaji (~1000 CE), Omar Khayyam (~1070 CE), Jia Xian (11th century), Yang Hui (1261), and Pascal (1665, published posthumously). At least four independent mathematical traditions discovered the same structure over 1,800 years. The name \"Pascal's Triangle\" forecloses the most interesting question in the philosophy of mathematics: why does this structure keep being discovered?",
-          "edition": 159,
-          "date": "2026-05-04",
-          "slug": "159th-edition--token-wisdom-week--week-19"
-        }
-      ],
-      "edition_count": 1,
-      "first": {
-        "edition": 159,
-        "week": 19,
-        "date": "2026-05-04",
-        "slug": "159th-edition--token-wisdom-week--week-19",
-        "title": "159th Edition",
-        "source": "pdf"
-      },
-      "latest": {
-        "edition": 159,
-        "week": 19,
-        "date": "2026-05-04",
-        "slug": "159th-edition--token-wisdom-week--week-19",
-        "title": "159th Edition",
-        "source": "pdf"
-      },
-      "editions": [
-        {
-          "edition": 159,
-          "week": 19,
-          "date": "2026-05-04",
-          "slug": "159th-edition--token-wisdom-week--week-19",
-          "title": "159th Edition",
-          "source": "pdf"
-        }
-      ],
-      "timeline": [
-        {
-          "period": "2024-Q1",
-          "count": 0
-        },
-        {
-          "period": "2024-Q2",
-          "count": 0
-        },
-        {
-          "period": "2024-Q3",
-          "count": 0
-        },
-        {
-          "period": "2024-Q4",
-          "count": 0
-        },
-        {
-          "period": "2025-Q1",
-          "count": 0
-        },
-        {
-          "period": "2025-Q2",
-          "count": 0
-        },
-        {
-          "period": "2025-Q3",
-          "count": 0
-        },
-        {
-          "period": "2025-Q4",
-          "count": 0
-        },
-        {
-          "period": "2026-Q1",
-          "count": 0
-        },
-        {
-          "period": "2026-Q2",
-          "count": 1
-        }
-      ],
-      "related": [
-        {
-          "name": "W18 (ACL.158)",
-          "slug": "w18-acl-158",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "ASML",
-          "slug": "asml",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "The correction isn't slow",
-          "slug": "the-correction-isn-t-slow",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Black and Asian faces",
-          "slug": "black-and-asian-faces",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Structural Foreclosure",
-          "slug": "structural-foreclosure",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Load-Bearing Attribution",
-          "slug": "load-bearing-attribution",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "W17 (ACL.157)",
-          "slug": "w17-acl-157",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "DSM",
-          "slug": "dsm",
-          "color": "teal",
-          "shared": 1
-        }
-      ],
-      "centrality": 12,
-      "keystone": 5.8,
       "role": ""
     },
     {
@@ -78389,10 +77900,10 @@
       "slug": "charles-taylor",
       "category": "People & Works",
       "color": "accent",
-      "definition": "author of Sources of the Self, referenced on the historicity of the inward self. 10 👍 This newsletter was curated by a human. We mention this because it's becoming a meaningful distinction. \"The machines just arrived to tell us we never had to be machines. Whether we listen is still our question to answer.\" — Token Wisdom on the door that opened this week",
+      "definition": "Philosopher, author of Sources of the Self; cited on the historicity of the inward self.",
       "definition_history": [
         {
-          "text": "author of Sources of the Self, referenced on the historicity of the inward self. 10 👍 This newsletter was curated by a human. We mention this because it's becoming a meaningful distinction. \"The machines just arrived to tell us we never had to be machines. Whether we listen is still our question to answer.\" — Token Wisdom on the door that opened this week",
+          "text": "Philosopher, author of Sources of the Self; cited on the historicity of the inward self.",
           "edition": 156,
           "date": "2026-04-13",
           "slug": "156th-edition--token-wisdom--week-16"
@@ -88768,12 +88279,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -88798,20 +88303,14 @@
           "shared": 1
         },
         {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Research Commercialization",
           "slug": "research-commercialization",
           "color": "teal",
           "shared": 1
         }
       ],
-      "centrality": 7,
-      "keystone": 3.8,
+      "centrality": 5,
+      "keystone": 3.0,
       "role": ""
     },
     {
@@ -98141,10 +97640,10 @@
       "slug": "darcy-s-law",
       "category": "Technical Terms",
       "color": "gold",
-      "definition": "a fluid dynamics principle predating espresso machines — to model it precisely. DNA Polymerase The enzyme that synthesizes DNA during replication. Standard biochemistry assumed it requires a template. The April 2026 finding shows it can generate patterned sequences without one. Just because Jon Snow knows nothing, doesn't mean you have to. Embrace the pursuit of knowledge to shape a better tomorrow. Sign up for more Token Wisdom and carry the torch of foresight into the fathomless domains of innovation and beyond. The corpus was always the crime scene. We were always the criminal. And somewhere, in the distributed quiet of ten thousand devices you stopped thinking about, something is doing exactly what we taught it. Waiting.",
+      "definition": "A 19th-century law of fluid dynamics describing the rate at which a fluid flows through a porous medium.",
       "definition_history": [
         {
-          "text": "a fluid dynamics principle predating espresso machines — to model it precisely. DNA Polymerase The enzyme that synthesizes DNA during replication. Standard biochemistry assumed it requires a template. The April 2026 finding shows it can generate patterned sequences without one. Just because Jon Snow knows nothing, doesn't mean you have to. Embrace the pursuit of knowledge to shape a better tomorrow. Sign up for more Token Wisdom and carry the torch of foresight into the fathomless domains of innovation and beyond. The corpus was always the crime scene. We were always the criminal. And somewhere, in the distributed quiet of ten thousand devices you stopped thinking about, something is doing exactly what we taught it. Waiting.",
+          "text": "A 19th-century law of fluid dynamics describing the rate at which a fluid flows through a porous medium.",
           "edition": 155,
           "date": "2026-04-06",
           "slug": "155th-edition--token-wisdom--week-15"
@@ -100961,12 +100460,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -100987,12 +100480,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -103016,12 +102503,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Digital Privacy",
           "slug": "digital-privacy",
           "color": "accent",
@@ -103040,12 +102521,6 @@
           "shared": 1
         },
         {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Research Commercialization",
           "slug": "research-commercialization",
           "color": "teal",
@@ -103058,8 +102533,8 @@
           "shared": 1
         }
       ],
-      "centrality": 20,
-      "keystone": 9.0,
+      "centrality": 16,
+      "keystone": 7.4,
       "role": ""
     },
     {
@@ -119903,12 +119378,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -126782,143 +126251,6 @@
       "role": ""
     },
     {
-      "name": "Follow me on X",
-      "slug": "follow-me-on-x",
-      "category": "Technical Terms",
-      "color": "gold",
-      "definition": "https://x.com/highyieldYT Follow me on bsky: https://bsky.app/profile/highyield.bsky.social imec — the 0:00 Intro most important https://www.youtube.com/watch? 2025-07- 1258120256 company 0:37 imec v=hDo5P578wJI&t=671s 19T02:18:02.3 you've never heard of 1:47 FABs & clean rooms 3:06 imec history 5:14 Leuven HQ & ITF 2025 7:15 imec partner companies 8:32 High-NA EUV lithography 10:17 High-NA / Anamorphic Lens 13:51 High-NA / Depth of Focus 15:34 Final Thoughts 1257461905 'No More During a Senate Judiciary Hearing on https://www.youtube.com/watch? 2025-07- Copyright Wednesday, Author David Baldacci, whose v=0fPUWSv2JCI 18T16:47:47.8 6 Protection For books were pirated and then used by",
-      "definition_history": [
-        {
-          "text": "https://x.com/highyieldYT Follow me on bsky: https://bsky.app/profile/highyield.bsky.social imec — the 0:00 Intro most important https://www.youtube.com/watch? 2025-07- 1258120256 company 0:37 imec v=hDo5P578wJI&t=671s 19T02:18:02.3 you've never heard of 1:47 FABs & clean rooms 3:06 imec history 5:14 Leuven HQ & ITF 2025 7:15 imec partner companies 8:32 High-NA EUV lithography 10:17 High-NA / Anamorphic Lens 13:51 High-NA / Depth of Focus 15:34 Final Thoughts 1257461905 'No More During a Senate Judiciary Hearing on https://www.youtube.com/watch? 2025-07- Copyright Wednesday, Author David Baldacci, whose v=0fPUWSv2JCI 18T16:47:47.8 6 Protection For books were pirated and then used by",
-          "edition": 117,
-          "date": "2025-07-13",
-          "slug": "117th-edition--token-wisdom--week-29"
-        }
-      ],
-      "edition_count": 1,
-      "first": {
-        "edition": 117,
-        "week": 29,
-        "date": "2025-07-13",
-        "slug": "117th-edition--token-wisdom--week-29",
-        "title": "117th Edition 🔮 Token Wisdom \\ Week 29",
-        "source": "pdf"
-      },
-      "latest": {
-        "edition": 117,
-        "week": 29,
-        "date": "2025-07-13",
-        "slug": "117th-edition--token-wisdom--week-29",
-        "title": "117th Edition 🔮 Token Wisdom \\ Week 29",
-        "source": "pdf"
-      },
-      "editions": [
-        {
-          "edition": 117,
-          "week": 29,
-          "date": "2025-07-13",
-          "slug": "117th-edition--token-wisdom--week-29",
-          "title": "117th Edition 🔮 Token Wisdom \\ Week 29",
-          "source": "pdf"
-        }
-      ],
-      "timeline": [
-        {
-          "period": "2024-Q1",
-          "count": 0
-        },
-        {
-          "period": "2024-Q2",
-          "count": 0
-        },
-        {
-          "period": "2024-Q3",
-          "count": 0
-        },
-        {
-          "period": "2024-Q4",
-          "count": 0
-        },
-        {
-          "period": "2025-Q1",
-          "count": 0
-        },
-        {
-          "period": "2025-Q2",
-          "count": 0
-        },
-        {
-          "period": "2025-Q3",
-          "count": 1
-        },
-        {
-          "period": "2025-Q4",
-          "count": 0
-        },
-        {
-          "period": "2026-Q1",
-          "count": 0
-        },
-        {
-          "period": "2026-Q2",
-          "count": 0
-        }
-      ],
-      "related": [
-        {
-          "name": "Mental Health Technology",
-          "slug": "mental-health-technology",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Urban Planning",
-          "slug": "urban-planning",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "EUV",
-          "slug": "euv",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Innovation Barriers",
-          "slug": "innovation-barriers",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "NA",
-          "slug": "na",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Neural Bookmarking",
-          "slug": "neural-bookmarking",
-          "color": "gold",
-          "shared": 1
-        },
-        {
-          "name": "AI",
-          "slug": "ai",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Digital Rights",
-          "slug": "digital-rights",
-          "color": "accent",
-          "shared": 1
-        }
-      ],
-      "centrality": 0,
-      "keystone": 1.0,
-      "role": ""
-    },
-    {
       "name": "Fons-Rosen, and Graff Zivin (2019) in the American Economic Review",
       "slug": "fons-rosen-and-graff-zivin-2019-in-the-american-economic-review",
       "category": "Concepts",
@@ -127608,10 +126940,10 @@
       "slug": "four-step-playbook",
       "category": "Technical Terms",
       "color": "gold",
-      "definition": "The dispossession sequence identified in the essay: (1) frame the human cost as a problem the technology will solve, (2) introduce the technology as augmentation, (3) capture the value upstream while the practitioner appears in the marketing, (4) extract the practitioner from the equation \"Berger said nobody was recording what was being lost. He was wrong about that — he was recording it himself, and that is why we still have his sentence forty-seven years later.\" #AsymmetricInnovation #TransformationOrchestration #ConstitutionalForcing #SubstrateFailure \"We are not writing to wake anyone. We are writing for the record.\" 🔮 Token Wisdom · 157th Edition · Week 17 of 52 · April 20–26, 2026 · 100% Authentic Humanly Chosen 👍",
+      "definition": "The dispossession sequence identified in the essay: (1) frame the human cost as a problem the technology will solve, (2) introduce the technology as augmentation, (3) capture the value upstream while the practitioner appears in the marketing, (4) extract the practitioner from the equation.",
       "definition_history": [
         {
-          "text": "The dispossession sequence identified in the essay: (1) frame the human cost as a problem the technology will solve, (2) introduce the technology as augmentation, (3) capture the value upstream while the practitioner appears in the marketing, (4) extract the practitioner from the equation \"Berger said nobody was recording what was being lost. He was wrong about that — he was recording it himself, and that is why we still have his sentence forty-seven years later.\" #AsymmetricInnovation #TransformationOrchestration #ConstitutionalForcing #SubstrateFailure \"We are not writing to wake anyone. We are writing for the record.\" 🔮 Token Wisdom · 157th Edition · Week 17 of 52 · April 20–26, 2026 · 100% Authentic Humanly Chosen 👍",
+          "text": "The dispossession sequence identified in the essay: (1) frame the human cost as a problem the technology will solve, (2) introduce the technology as augmentation, (3) capture the value upstream while the practitioner appears in the marketing, (4) extract the practitioner from the equation.",
           "edition": 157,
           "date": "2026-04-20",
           "slug": "157th-edition--token-wisdom-week--week-17"
@@ -130622,10 +129954,10 @@
       "slug": "gamma-beta-oscillations-neuroscience",
       "category": "Technical Terms",
       "color": "gold",
-      "definition": "Rhythmic electrical oscillations in the brain at specific frequency bands — gamma (30–100 Hz) and beta (13–30 Hz) — associated with attention, awareness, and consciousness-related states across species. Peter Godfrey-Smith's argument centers on these oscillations as a 9 substrate-dependent feature of biological nervous systems rather than a substrate- independent computational property. Just because Jon Snow knows nothing, doesn't mean you have to. Embrace the pursuit of knowledge to shape a better tomorrow. Sign up for more Token Wisdom and carry the torch of foresight into the fathomless domains of innovation and beyond. \"The constraint was never the obstacle. It was always the answer — once you named what you were actually solving for. The winter was the proof.\"",
+      "definition": "Rhythmic electrical oscillations in the brain — gamma (30–100 Hz) and beta (13–30 Hz) — associated with attention, awareness, and consciousness-related states across species.",
       "definition_history": [
         {
-          "text": "Rhythmic electrical oscillations in the brain at specific frequency bands — gamma (30–100 Hz) and beta (13–30 Hz) — associated with attention, awareness, and consciousness-related states across species. Peter Godfrey-Smith's argument centers on these oscillations as a 9 substrate-dependent feature of biological nervous systems rather than a substrate- independent computational property. Just because Jon Snow knows nothing, doesn't mean you have to. Embrace the pursuit of knowledge to shape a better tomorrow. Sign up for more Token Wisdom and carry the torch of foresight into the fathomless domains of innovation and beyond. \"The constraint was never the obstacle. It was always the answer — once you named what you were actually solving for. The winter was the proof.\"",
+          "text": "Rhythmic electrical oscillations in the brain — gamma (30–100 Hz) and beta (13–30 Hz) — associated with attention, awareness, and consciousness-related states across species.",
           "edition": 154,
           "date": "2026-03-29",
           "slug": "154th-edition--token-wisdom--week-14"
@@ -148280,8 +147612,8 @@
           "shared": 1
         }
       ],
-      "centrality": 29,
-      "keystone": 12.6,
+      "centrality": 27,
+      "keystone": 11.8,
       "role": ""
     },
     {
@@ -149477,12 +148809,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -149503,12 +148829,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -150162,12 +149482,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -150188,12 +149502,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -155004,143 +154312,6 @@
       "role": ""
     },
     {
-      "name": "Latest Edition",
-      "slug": "latest-edition",
-      "category": "Acronyms",
-      "color": "teal",
-      "definition": "[115th Edition 27] 🔮 Token Wisdom \\ Week",
-      "definition_history": [
-        {
-          "text": "[115th Edition 27] 🔮 Token Wisdom \\ Week",
-          "edition": 115,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27"
-        }
-      ],
-      "edition_count": 1,
-      "first": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "latest": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "editions": [
-        {
-          "edition": 115,
-          "week": 27,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27",
-          "title": "115th Edition",
-          "source": "pdf"
-        }
-      ],
-      "timeline": [
-        {
-          "period": "2024-Q1",
-          "count": 0
-        },
-        {
-          "period": "2024-Q2",
-          "count": 0
-        },
-        {
-          "period": "2024-Q3",
-          "count": 0
-        },
-        {
-          "period": "2024-Q4",
-          "count": 0
-        },
-        {
-          "period": "2025-Q1",
-          "count": 0
-        },
-        {
-          "period": "2025-Q2",
-          "count": 0
-        },
-        {
-          "period": "2025-Q3",
-          "count": 1
-        },
-        {
-          "period": "2025-Q4",
-          "count": 0
-        },
-        {
-          "period": "2026-Q1",
-          "count": 0
-        },
-        {
-          "period": "2026-Q2",
-          "count": 0
-        }
-      ],
-      "related": [
-        {
-          "name": "AI Access Controls",
-          "slug": "ai-access-controls",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Deniable Encryption",
-          "slug": "deniable-encryption",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Digital Privacy",
-          "slug": "digital-privacy",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Military Satellite Networks",
-          "slug": "military-satellite-networks",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "AI Training Data",
-          "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Research Commercialization",
-          "slug": "research-commercialization",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Content Control",
-          "slug": "content-control",
-          "color": "accent",
-          "shared": 1
-        }
-      ],
-      "centrality": 20,
-      "keystone": 9.0,
-      "role": ""
-    },
-    {
       "name": "Layer-wise scaling strategy",
       "slug": "layer-wise-scaling-strategy",
       "category": "Technical Terms",
@@ -157069,16 +156240,10 @@
       "slug": "lifi",
       "category": "Acronyms",
       "color": "teal",
-      "definition": "Wireless communication technology using visible light \"The wise one knows: in a world where wind turbines dance without blades and smartphones read our minds, innovation flows not from what we add, but from what we dare to reimagine. For in the space between the quantum and the conscious, between the technical and the intuitive, lies the future we're all trying to build.\" — Token Wisdom ✨ TNL id title note excerpt url Meet the",
+      "definition": "Wireless communication technology that transmits data using visible light (Light Fidelity).",
       "definition_history": [
         {
-          "text": "Light Fidelity",
-          "edition": 117,
-          "date": "2025-07-13",
-          "slug": "117th-edition--token-wisdom--week-29"
-        },
-        {
-          "text": "Wireless communication technology using visible light \"The wise one knows: in a world where wind turbines dance without blades and smartphones read our minds, innovation flows not from what we add, but from what we dare to reimagine. For in the space between the quantum and the conscious, between the technical and the intuitive, lies the future we're all trying to build.\" — Token Wisdom ✨ TNL id title note excerpt url Meet the",
+          "text": "Wireless communication technology that transmits data using visible light (Light Fidelity).",
           "edition": 117,
           "date": "2025-07-13",
           "slug": "117th-edition--token-wisdom--week-29"
@@ -158835,12 +158000,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "W17 (ACL.157)",
           "slug": "w17-acl-157",
           "color": "teal",
@@ -158853,8 +158012,8 @@
           "shared": 1
         }
       ],
-      "centrality": 12,
-      "keystone": 5.8,
+      "centrality": 11,
+      "keystone": 5.4,
       "role": ""
     },
     {
@@ -161688,12 +160847,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -161714,12 +160867,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -170379,8 +169526,8 @@
           "shared": 1
         }
       ],
-      "centrality": 29,
-      "keystone": 12.6,
+      "centrality": 27,
+      "keystone": 11.8,
       "role": ""
     },
     {
@@ -174459,12 +173606,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -174483,12 +173624,6 @@
           "shared": 1
         },
         {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Research Commercialization",
           "slug": "research-commercialization",
           "color": "teal",
@@ -174501,8 +173636,8 @@
           "shared": 1
         }
       ],
-      "centrality": 20,
-      "keystone": 9.0,
+      "centrality": 16,
+      "keystone": 7.4,
       "role": ""
     },
     {
@@ -177530,10 +176665,10 @@
       "slug": "moncrieff-et-al-2022",
       "category": "Technical Terms",
       "color": "gold",
-      "definition": "The umbrella review in Molecular Psychiatry that found no consistent evidence of an association between serotonin and depression. The inflection point for the serotonin hypothesis collapse. The psychiatric establishment's response — \"we always knew the simple theory was wrong, but it doesn't matter\" — is the textbook non-epistemic defense of a wrong belief \"Berger said nobody was recording what was being lost. He was wrong about that — he was recording it himself, and that is why we still have his sentence forty-seven years later.\" \"We built the tools to find the truth faster. Then we pointed them at the truth and asked them to generate more of whatever looked like it.\" #epistemology #scientificmethod #knowledge #correction #MBTI #pseudoscience #institutional #inertia #criticalthinking #historyofscience #AI #replicationcrisis #DSMOverhaul #GLP1 #serotoninhypothesis #tokenmaxxing #consciousness #correctiondeficit \"We are not writing to convince anyone. We are writing for the record. The record is the only thing that survives.\" 🔮 Token Wisdom · 158th Edition · Week 18 of 52 · April 27 – May 3, 2026 · 100% Authentic Humanly Chosen 👍",
+      "definition": "The umbrella review in Molecular Psychiatry that found no consistent evidence of an association between serotonin and depression — the inflection point for the collapse of the serotonin hypothesis.",
       "definition_history": [
         {
-          "text": "The umbrella review in Molecular Psychiatry that found no consistent evidence of an association between serotonin and depression. The inflection point for the serotonin hypothesis collapse. The psychiatric establishment's response — \"we always knew the simple theory was wrong, but it doesn't matter\" — is the textbook non-epistemic defense of a wrong belief \"Berger said nobody was recording what was being lost. He was wrong about that — he was recording it himself, and that is why we still have his sentence forty-seven years later.\" \"We built the tools to find the truth faster. Then we pointed them at the truth and asked them to generate more of whatever looked like it.\" #epistemology #scientificmethod #knowledge #correction #MBTI #pseudoscience #institutional #inertia #criticalthinking #historyofscience #AI #replicationcrisis #DSMOverhaul #GLP1 #serotoninhypothesis #tokenmaxxing #consciousness #correctiondeficit \"We are not writing to convince anyone. We are writing for the record. The record is the only thing that survives.\" 🔮 Token Wisdom · 158th Edition · Week 18 of 52 · April 27 – May 3, 2026 · 100% Authentic Humanly Chosen 👍",
+          "text": "The umbrella review in Molecular Psychiatry that found no consistent evidence of an association between serotonin and depression — the inflection point for the collapse of the serotonin hypothesis.",
           "edition": 158,
           "date": "2026-04-27",
           "slug": "158th-edition--token-wisdom-week--week-18"
@@ -178078,10 +177213,10 @@
       "slug": "multi-core-fiber",
       "category": "Technical Terms",
       "color": "gold",
-      "definition": "Advanced optical transmission medium \"The wise one knows: in a world where time travel becomes mathematically possible, power flows wirelessly through the air, and data can self-destruct at the push of a button, our greatest innovations often arise from bridging the gap between theoretical possibility and practical reality. For it is not just what we can imagine, but what we can implement responsibly, that shapes the future of human advancement.\" — Token Wisdom ✨ Logout",
+      "definition": "Optical fiber carrying several independent light paths (cores) in a single strand to multiply transmission capacity.",
       "definition_history": [
         {
-          "text": "Advanced optical transmission medium \"The wise one knows: in a world where time travel becomes mathematically possible, power flows wirelessly through the air, and data can self-destruct at the push of a button, our greatest innovations often arise from bridging the gap between theoretical possibility and practical reality. For it is not just what we can imagine, but what we can implement responsibly, that shapes the future of human advancement.\" — Token Wisdom ✨ Logout",
+          "text": "Optical fiber carrying several independent light paths (cores) in a single strand to multiply transmission capacity.",
           "edition": 116,
           "date": "2025-07-15",
           "slug": "116th-edition--token-wisdom--week-28"
@@ -179713,8 +178848,8 @@
           "shared": 1
         }
       ],
-      "centrality": 29,
-      "keystone": 12.6,
+      "centrality": 27,
+      "keystone": 11.8,
       "role": ""
     },
     {
@@ -183132,8 +182267,8 @@
           "shared": 1
         }
       ],
-      "centrality": 26,
-      "keystone": 11.4,
+      "centrality": 24,
+      "keystone": 10.6,
       "role": ""
     },
     {
@@ -187200,12 +186335,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -187226,12 +186355,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -190646,12 +189769,6 @@
           "name": "Structural Foreclosure",
           "slug": "structural-foreclosure",
           "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
           "shared": 1
         },
         {
@@ -196939,12 +196056,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -200477,12 +199588,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -200503,12 +199608,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -205037,143 +204136,6 @@
           "name": "Prediction Market",
           "slug": "prediction-market",
           "color": "gold",
-          "shared": 1
-        }
-      ],
-      "centrality": 0,
-      "keystone": 1.0,
-      "role": ""
-    },
-    {
-      "name": "Previous Edition",
-      "slug": "previous-edition",
-      "category": "Acronyms",
-      "color": "teal",
-      "definition": "[114th Edition 🔮 Token Wisdom \\ Week 26]",
-      "definition_history": [
-        {
-          "text": "[114th Edition 🔮 Token Wisdom \\ Week 26]",
-          "edition": 115,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27"
-        }
-      ],
-      "edition_count": 1,
-      "first": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "latest": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "editions": [
-        {
-          "edition": 115,
-          "week": 27,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27",
-          "title": "115th Edition",
-          "source": "pdf"
-        }
-      ],
-      "timeline": [
-        {
-          "period": "2024-Q1",
-          "count": 0
-        },
-        {
-          "period": "2024-Q2",
-          "count": 0
-        },
-        {
-          "period": "2024-Q3",
-          "count": 0
-        },
-        {
-          "period": "2024-Q4",
-          "count": 0
-        },
-        {
-          "period": "2025-Q1",
-          "count": 0
-        },
-        {
-          "period": "2025-Q2",
-          "count": 0
-        },
-        {
-          "period": "2025-Q3",
-          "count": 1
-        },
-        {
-          "period": "2025-Q4",
-          "count": 0
-        },
-        {
-          "period": "2026-Q1",
-          "count": 0
-        },
-        {
-          "period": "2026-Q2",
-          "count": 0
-        }
-      ],
-      "related": [
-        {
-          "name": "AI Access Controls",
-          "slug": "ai-access-controls",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Deniable Encryption",
-          "slug": "deniable-encryption",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Digital Privacy",
-          "slug": "digital-privacy",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Military Satellite Networks",
-          "slug": "military-satellite-networks",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "AI Training Data",
-          "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Research Commercialization",
-          "slug": "research-commercialization",
-          "color": "teal",
           "shared": 1
         }
       ],
@@ -218859,12 +217821,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -218889,20 +217845,14 @@
           "shared": 1
         },
         {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Content Control",
           "slug": "content-control",
           "color": "accent",
           "shared": 1
         }
       ],
-      "centrality": 19,
-      "keystone": 8.6,
+      "centrality": 15,
+      "keystone": 7.0,
       "role": ""
     },
     {
@@ -222290,12 +221240,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -222316,12 +221260,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -229718,12 +228656,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -230019,16 +228951,10 @@
       "slug": "skybrator",
       "category": "Technical Terms",
       "color": "gold",
-      "definition": "a 30% more bladeless wind energy than turbine that wind turbines ― vibrates to 1256370446 Meet the generate clean https://www.ecoticias.com/en/skybrator-more-energy-than-wind-turbine/17577/ 'Skybrator' and energy that wait for the promises 30% result more efficiency, lower cost, and less impact. Smartphones can help people stay healthy by Smartphone monitoring their sensors reveal sleep, steps and mental health heart rate, but 1256370128 https://medicalxpress.com/news/2025-07-smartphone-sensors-reveal-mental-hea patterns through they also can daily behavior help reveal tracking issues tied to mental health, new research shows. By facing three common challenges to Three Invisible innovation, 1256322581 Hurdles to leaders can https://sloanreview.mit.edu/article/three-invisible-hurdles-to-innovation/ Innovation overcome the obstacles they’ve constructed against it. Why Your Body Is Smarter Than https://www.psychologytoday.com/us/blog/long-fuse-big-bang/202507/why-your-b Where intuition 1256320365 Your Brain | brain#amp_tf=From%20%251%24s&aoh=17527756041028&csi=0&referrer=https comes from Psychology fuse-big-bang%2F202507%2Fwhy-your-body-is-smarter-than-your-brain Today 1248980658 Physicists take For decades, https://phys.org/news/2025-07-physicists-holy-grail- step toward a ferromagnetic electron.html#amp_tf=From%20%251%24s&aoh=17525474472840&csi=0&referr holy grail for materials have holy-grail-electron.html electron spins driven technologies like magnetic hard drives, magnetic random access 4 memories and oscillators. But antiferromagnetic materials, if only they could be harnessed, hold out even greater promise: ultra- fast information transfer and communications at much higher frequencies—a \"holy grail\" for physicists. ETH Zurich and EPFL will release a large language model (LLM) developed on public infrastructure. Trained on the “Alps” A language supercomputer 1248673235 model built for https://ethz.ch/en/news-and-events/eth-news/news/2025/07/a-language-model-bu at the Swiss the public good National Supercomputing Centre (CSCS), the new LLM marks a milestone in open-source AI and multilingual excellence. The techie who Altman and Ive allegedly claim they chose showed Sam the name \"io\" Altman and years ago, even Jony Ive a though they saw 1246193447 https://fortune.com/2025/07/10/sam-altman-jony-ive-lawsuit-iyo-prototype-rugolo-s drawing of an AI prototypes made device just got by a company sued by his named iyO, former employer which is suing | Fortune them and others. The brain doesn't merely register time—it A signal that structures it, never repeats— according to new how the brain 1246143840 research from https://medicalxpress.com/news/2025-07-brain-bookmarks.html creates the Kavli Institute bookmarks to for Systems map time Neuroscience published in Science. Scientists suggest quantum entanglement in Does Quantum myelin sheaths Entanglement in generates 1246143654 Your Brain consciousness, https://www.popularmechanics.com/science/a65368553/quantum-entanglement-in Generate offering a Consciousness? groundbreaking new perspective on brain function and cognition. Unexpected chip deal may A semiconductor reshape the giant announces 1246141798 https://www.thestreet.com/technology/unexpected-chip-deal-may-reshape-the-sem semiconductor a surprising market - acquisition. TheStreet 5 TWS id title note excerpt url tags created In 2007, physicist Garrett Lisi proposed a He Decoded bold theory of everything based on an https://www.youtube.com/watch? 2025-07- 1259292862 Reality… Then intricate 248-dimensional structure called v=SqYTXGvOrhA 20T06:27:15.5 'Disappeared' E8. Unlike anything seen before,... How Hong Kong built the Enjoy the videos and music you love, world's most https://www.youtube.com/watch? 2025-07- 1259292839 upload original content, and share it all with valuable v=k_roPoXi8QI&list=PPSV 20T06:27:05.4 friends, family, and the world on YouTube. subway - YouTube Documentary ~ Could artificial intelligence ever gain true Consciousness consciousness? This documentary https://www.youtube.com/watch? 2025-07- 1259292801 Artificial explores what might unfold if super v=pQVYwz6u-zA&list=PPSV 20T06:26:56.7 Intelligence intelligent AI acquired consciousness, how (Conscious i... Super AGI) The Secret Lab Creating Enjoy the videos and music you love, AI Drone https://www.youtube.com/watch? 2025-07- 1259292723 upload original content, and share it all with Technology | v=fUbD9HD4Fro&list=PPSV 20T06:26:47.4 friends, family, and the world on YouTube. Caltech Lab Tour - YouTube LiFi",
+      "definition": "A bladeless wind turbine that generates power by vibrating rather than spinning.",
       "definition_history": [
         {
-          "text": "Bladeless wind turbine using vibration",
-          "edition": 117,
-          "date": "2025-07-13",
-          "slug": "117th-edition--token-wisdom--week-29"
-        },
-        {
-          "text": "a 30% more bladeless wind energy than turbine that wind turbines ― vibrates to 1256370446 Meet the generate clean https://www.ecoticias.com/en/skybrator-more-energy-than-wind-turbine/17577/ 'Skybrator' and energy that wait for the promises 30% result more efficiency, lower cost, and less impact. Smartphones can help people stay healthy by Smartphone monitoring their sensors reveal sleep, steps and mental health heart rate, but 1256370128 https://medicalxpress.com/news/2025-07-smartphone-sensors-reveal-mental-hea patterns through they also can daily behavior help reveal tracking issues tied to mental health, new research shows. By facing three common challenges to Three Invisible innovation, 1256322581 Hurdles to leaders can https://sloanreview.mit.edu/article/three-invisible-hurdles-to-innovation/ Innovation overcome the obstacles they’ve constructed against it. Why Your Body Is Smarter Than https://www.psychologytoday.com/us/blog/long-fuse-big-bang/202507/why-your-b Where intuition 1256320365 Your Brain | brain#amp_tf=From%20%251%24s&aoh=17527756041028&csi=0&referrer=https comes from Psychology fuse-big-bang%2F202507%2Fwhy-your-body-is-smarter-than-your-brain Today 1248980658 Physicists take For decades, https://phys.org/news/2025-07-physicists-holy-grail- step toward a ferromagnetic electron.html#amp_tf=From%20%251%24s&aoh=17525474472840&csi=0&referr holy grail for materials have holy-grail-electron.html electron spins driven technologies like magnetic hard drives, magnetic random access 4 memories and oscillators. But antiferromagnetic materials, if only they could be harnessed, hold out even greater promise: ultra- fast information transfer and communications at much higher frequencies—a \"holy grail\" for physicists. ETH Zurich and EPFL will release a large language model (LLM) developed on public infrastructure. Trained on the “Alps” A language supercomputer 1248673235 model built for https://ethz.ch/en/news-and-events/eth-news/news/2025/07/a-language-model-bu at the Swiss the public good National Supercomputing Centre (CSCS), the new LLM marks a milestone in open-source AI and multilingual excellence. The techie who Altman and Ive allegedly claim they chose showed Sam the name \"io\" Altman and years ago, even Jony Ive a though they saw 1246193447 https://fortune.com/2025/07/10/sam-altman-jony-ive-lawsuit-iyo-prototype-rugolo-s drawing of an AI prototypes made device just got by a company sued by his named iyO, former employer which is suing | Fortune them and others. The brain doesn't merely register time—it A signal that structures it, never repeats— according to new how the brain 1246143840 research from https://medicalxpress.com/news/2025-07-brain-bookmarks.html creates the Kavli Institute bookmarks to for Systems map time Neuroscience published in Science. Scientists suggest quantum entanglement in Does Quantum myelin sheaths Entanglement in generates 1246143654 Your Brain consciousness, https://www.popularmechanics.com/science/a65368553/quantum-entanglement-in Generate offering a Consciousness? groundbreaking new perspective on brain function and cognition. Unexpected chip deal may A semiconductor reshape the giant announces 1246141798 https://www.thestreet.com/technology/unexpected-chip-deal-may-reshape-the-sem semiconductor a surprising market - acquisition. TheStreet 5 TWS id title note excerpt url tags created In 2007, physicist Garrett Lisi proposed a He Decoded bold theory of everything based on an https://www.youtube.com/watch? 2025-07- 1259292862 Reality… Then intricate 248-dimensional structure called v=SqYTXGvOrhA 20T06:27:15.5 'Disappeared' E8. Unlike anything seen before,... How Hong Kong built the Enjoy the videos and music you love, world's most https://www.youtube.com/watch? 2025-07- 1259292839 upload original content, and share it all with valuable v=k_roPoXi8QI&list=PPSV 20T06:27:05.4 friends, family, and the world on YouTube. subway - YouTube Documentary ~ Could artificial intelligence ever gain true Consciousness consciousness? This documentary https://www.youtube.com/watch? 2025-07- 1259292801 Artificial explores what might unfold if super v=pQVYwz6u-zA&list=PPSV 20T06:26:56.7 Intelligence intelligent AI acquired consciousness, how (Conscious i... Super AGI) The Secret Lab Creating Enjoy the videos and music you love, AI Drone https://www.youtube.com/watch? 2025-07- 1259292723 upload original content, and share it all with Technology | v=fUbD9HD4Fro&list=PPSV 20T06:26:47.4 friends, family, and the world on YouTube. Caltech Lab Tour - YouTube LiFi",
+          "text": "A bladeless wind turbine that generates power by vibrating rather than spinning.",
           "edition": 117,
           "date": "2025-07-13",
           "slug": "117th-edition--token-wisdom--week-29"
@@ -231344,12 +230270,6 @@
           "shared": 1
         },
         {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Deniable Encryption",
           "slug": "deniable-encryption",
           "color": "teal",
@@ -231370,12 +230290,6 @@
         {
           "name": "AI Training Data",
           "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
           "color": "teal",
           "shared": 1
         },
@@ -239308,12 +238222,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -239332,8 +238240,8 @@
           "shared": 1
         }
       ],
-      "centrality": 12,
-      "keystone": 5.8,
+      "centrality": 11,
+      "keystone": 5.4,
       "role": ""
     },
     {
@@ -239602,143 +238510,6 @@
         {
           "name": "CIA",
           "slug": "cia",
-          "color": "teal",
-          "shared": 1
-        }
-      ],
-      "centrality": 0,
-      "keystone": 1.0,
-      "role": ""
-    },
-    {
-      "name": "Subscribe",
-      "slug": "subscribe",
-      "category": "Acronyms",
-      "color": "teal",
-      "definition": "[https://tokenwisdom.ghost.io/subscribe]",
-      "definition_history": [
-        {
-          "text": "[https://tokenwisdom.ghost.io/subscribe]",
-          "edition": 115,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27"
-        }
-      ],
-      "edition_count": 1,
-      "first": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "latest": {
-        "edition": 115,
-        "week": 27,
-        "date": "2025-07-20",
-        "slug": "115th-edition--token-wisdom--week-27",
-        "title": "115th Edition",
-        "source": "pdf"
-      },
-      "editions": [
-        {
-          "edition": 115,
-          "week": 27,
-          "date": "2025-07-20",
-          "slug": "115th-edition--token-wisdom--week-27",
-          "title": "115th Edition",
-          "source": "pdf"
-        }
-      ],
-      "timeline": [
-        {
-          "period": "2024-Q1",
-          "count": 0
-        },
-        {
-          "period": "2024-Q2",
-          "count": 0
-        },
-        {
-          "period": "2024-Q3",
-          "count": 0
-        },
-        {
-          "period": "2024-Q4",
-          "count": 0
-        },
-        {
-          "period": "2025-Q1",
-          "count": 0
-        },
-        {
-          "period": "2025-Q2",
-          "count": 0
-        },
-        {
-          "period": "2025-Q3",
-          "count": 1
-        },
-        {
-          "period": "2025-Q4",
-          "count": 0
-        },
-        {
-          "period": "2026-Q1",
-          "count": 0
-        },
-        {
-          "period": "2026-Q2",
-          "count": 0
-        }
-      ],
-      "related": [
-        {
-          "name": "AI Access Controls",
-          "slug": "ai-access-controls",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Archive",
-          "slug": "archive",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Deniable Encryption",
-          "slug": "deniable-encryption",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Digital Privacy",
-          "slug": "digital-privacy",
-          "color": "accent",
-          "shared": 1
-        },
-        {
-          "name": "Military Satellite Networks",
-          "slug": "military-satellite-networks",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "AI Training Data",
-          "slug": "ai-training-data",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Latest Edition",
-          "slug": "latest-edition",
-          "color": "teal",
-          "shared": 1
-        },
-        {
-          "name": "Research Commercialization",
-          "slug": "research-commercialization",
           "color": "teal",
           "shared": 1
         }
@@ -248127,10 +246898,10 @@
       "slug": "technology",
       "category": "Technical Terms",
       "color": "gold",
-      "definition": "Enjoy the videos and music you love, https://www.youtube.com/watch? 2025-07- 1259292685 The Future of upload original content, and share it all with v=nacnRwxiAko&list=PPSV 20T06:26:41.4 Wireless - friends, family, and the world on YouTube. YouTube AI is becoming Enjoy the videos and music you love, dangerous. https://www.youtube.com/watch? 2025-07- 1259292598 upload original content, and share it all with Are we ready? v=KY7_ufxh_Rk&list=PPSV 20T06:26:33.8 friends, family, and the world on YouTube. - YouTube How a small Belgian town became the center of semicondcutor innovation. From High-NA EUV to silicon photonics. A closer look at imec. Become a supporter on Patreon: https://www.patreon.com/c/user? u=46978634\\",
+      "definition": "The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.",
       "definition_history": [
         {
-          "text": "Enjoy the videos and music you love, https://www.youtube.com/watch? 2025-07- 1259292685 The Future of upload original content, and share it all with v=nacnRwxiAko&list=PPSV 20T06:26:41.4 Wireless - friends, family, and the world on YouTube. YouTube AI is becoming Enjoy the videos and music you love, dangerous. https://www.youtube.com/watch? 2025-07- 1259292598 upload original content, and share it all with Are we ready? v=KY7_ufxh_Rk&list=PPSV 20T06:26:33.8 friends, family, and the world on YouTube. - YouTube How a small Belgian town became the center of semicondcutor innovation. From High-NA EUV to silicon photonics. A closer look at imec. Become a supporter on Patreon: https://www.patreon.com/c/user? u=46978634\\",
+          "text": "The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.",
           "edition": 117,
           "date": "2025-07-13",
           "slug": "117th-edition--token-wisdom--week-29"
@@ -250423,12 +249194,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -250447,8 +249212,8 @@
           "shared": 1
         }
       ],
-      "centrality": 12,
-      "keystone": 5.8,
+      "centrality": 11,
+      "keystone": 5.4,
       "role": ""
     },
     {
@@ -260317,8 +259082,8 @@
           "shared": 1
         }
       ],
-      "centrality": 29,
-      "keystone": 12.6,
+      "centrality": 27,
+      "keystone": 11.8,
       "role": ""
     },
     {
@@ -265127,10 +263892,10 @@
       "slug": "w17-acl-157",
       "category": "Acronyms",
       "color": "teal",
-      "definition": "No Heir. No Lesson: Mapped the compression of three-state inheritance (past/present/future) into two-state input/output. W19 adds the attribution dimension: when \"Stigler's Law of Eponymy states that no scientific discovery is named after its original discoverer. Stigler attributed this law to Merton, in a deliberate self-referential demonstration.\" 9 #epistemology #attribution #historyOfScience #Misattribution #KnowledgeProduction #InstitutionalBias #CorrectionMechanism #WrongQuestions \"Put the wrong name on the door and you'll never be able to ask the right questions.\" 🔮 Token Wisdom · 159th Edition · Week 19 of 52 · May 4–10, 2026 · 100% Authentic Humanly Chosen 👍",
+      "definition": "No Heir. No Lesson — the A Closer Look essay that mapped the compression of three-state inheritance (past/present/future) into two-state input/output.",
       "definition_history": [
         {
-          "text": "No Heir. No Lesson: Mapped the compression of three-state inheritance (past/present/future) into two-state input/output. W19 adds the attribution dimension: when \"Stigler's Law of Eponymy states that no scientific discovery is named after its original discoverer. Stigler attributed this law to Merton, in a deliberate self-referential demonstration.\" 9 #epistemology #attribution #historyOfScience #Misattribution #KnowledgeProduction #InstitutionalBias #CorrectionMechanism #WrongQuestions \"Put the wrong name on the door and you'll never be able to ask the right questions.\" 🔮 Token Wisdom · 159th Edition · Week 19 of 52 · May 4–10, 2026 · 100% Authentic Humanly Chosen 👍",
+          "text": "No Heir. No Lesson — the A Closer Look essay that mapped the compression of three-state inheritance (past/present/future) into two-state input/output.",
           "edition": 159,
           "date": "2026-05-04",
           "slug": "159th-edition--token-wisdom-week--week-19"
@@ -265237,12 +264002,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -265255,8 +264014,8 @@
           "shared": 1
         }
       ],
-      "centrality": 12,
-      "keystone": 5.8,
+      "centrality": 11,
+      "keystone": 5.4,
       "role": ""
     },
     {
@@ -265368,12 +264127,6 @@
           "shared": 1
         },
         {
-          "name": "CE)",
-          "slug": "ce",
-          "color": "teal",
-          "shared": 1
-        },
-        {
           "name": "Load-Bearing Attribution",
           "slug": "load-bearing-attribution",
           "color": "accent",
@@ -265392,8 +264145,8 @@
           "shared": 1
         }
       ],
-      "centrality": 12,
-      "keystone": 5.8,
+      "centrality": 11,
+      "keystone": 5.4,
       "role": ""
     },
     {
