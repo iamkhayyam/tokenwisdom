@@ -299,6 +299,55 @@ a{color:inherit;text-decoration:none}
   .lexcard{border-right:1px solid var(--rule)!important}
 }
 
+.tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#d98a4e;position:relative;background:var(--cg);color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
+.tw-colophon .col-inner{position:relative;max-width:1240px;margin:0 auto;padding:0 52px}
+.tw-colophon .col-ghost-wrap{position:absolute;left:0;top:0;bottom:0;z-index:0;display:flex;align-items:center;pointer-events:none}
+.tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(200px,32vw,440px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.055)}
+.tw-colophon .col-t1{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;padding:64px 0 52px}
+.tw-colophon .col-pitch{max-width:600px}
+.tw-colophon .col-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.tw-colophon .col-eyebrow img{height:26px;width:auto;opacity:.92}
+.tw-colophon .col-eyebrow span{font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--cacc)}
+.tw-colophon .col-h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,54px);line-height:1.02;letter-spacing:-.022em;color:var(--ci);margin:0;max-width:14ch}
+.tw-colophon .col-sub{width:340px;max-width:100%;flex-shrink:0}
+.tw-colophon .col-sub-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cm);margin-bottom:14px}
+.tw-colophon .col-subform{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--cr);padding-bottom:12px;transition:border-color .2s ease}
+.tw-colophon .col-subform:focus-within{border-color:var(--cacc)}
+.tw-colophon .col-subform input{flex:1;min-width:0;background:transparent;border:none;outline:none;color:var(--ci);font-family:var(--mono);font-size:13px;letter-spacing:.04em;padding:4px 0}
+.tw-colophon .col-subform input::placeholder{color:var(--cf)}
+.tw-colophon .col-subform button{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--cacc);transition:opacity .2s ease}
+.tw-colophon .col-subform button:hover{opacity:.65}
+.tw-colophon .col-t2{position:relative;z-index:1;padding:30px 0}
+.tw-colophon .col-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.tw-colophon .col-links a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--ci2);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;background:var(--cpanel);transition:color .18s ease,border-color .18s ease,background .18s ease}
+.tw-colophon .col-links a:hover{color:var(--ci);border-color:var(--cacc);background:rgba(217,138,78,.06)}
+.tw-colophon .col-meta{display:flex;flex-wrap:wrap;gap:10px}
+.tw-colophon .col-meta a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--cm);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;transition:color .18s ease,border-color .18s ease}
+.tw-colophon .col-meta a:hover{color:var(--ci);border-color:var(--cr)}
+.tw-colophon .col-tags{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:22px}
+.tw-colophon .col-tags-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cf);margin-right:6px}
+.tw-colophon .col-tags a{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;white-space:nowrap;color:var(--cm);border:1px solid var(--cr2);border-radius:999px;padding:5px 13px;transition:color .18s ease,border-color .18s ease}
+.tw-colophon .col-tags a:hover{color:var(--cacc);border-color:var(--cacc)}
+.tw-colophon .col-t3{position:relative;z-index:1;display:flex;flex-direction:column;gap:24px;padding:50px 0 56px}
+.tw-colophon .col-signoff{position:relative;z-index:2;font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.5;color:var(--ci2);margin:0;max-width:30ch}
+.tw-colophon .col-bar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.tw-colophon .col-bar-l{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cf)}
+.tw-colophon .col-bar-l .col-strong{color:var(--ci2)}
+.tw-colophon .col-dot{width:3px;height:3px;border-radius:50%;background:var(--cf)}
+.tw-colophon .col-chosen{display:inline-flex;align-items:center;gap:6px}
+.tw-colophon .col-chosen .col-dia{color:var(--cacc)}
+.tw-colophon .col-bar-r{display:flex;align-items:center;gap:20px;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cm)}
+.tw-colophon .col-bar-r a{color:var(--cm)}
+.tw-colophon .col-bar-r a:hover{color:var(--cacc)}
+.tw-colophon .col-bar-r .col-vr{width:1px;height:12px;background:var(--cr)}
+.tw-colophon .col-bar-r .col-handle{color:var(--ci2)}
+@media(max-width:860px){
+  .tw-colophon .col-t1{flex-direction:column;align-items:flex-start;gap:34px}
+  .tw-colophon .col-bar{flex-direction:column;align-items:flex-start;gap:18px}
+  .tw-colophon .col-ghost{font-size:23vw}
+  .tw-colophon .col-inner{padding:0 24px}
+}
+
 /* ===== FULL-PAGE NAV TAKEOVER ===== */
 html.nav-open{overflow:hidden}
 .nav-takeover{
@@ -814,6 +863,17 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
   </div>
 </section>
+</main>
+
+<section class="subscribe">
+  <div class="sub-inner">
+    <div class="kicker kicker-on-dark">The Newsletter of Record for the Future of Now</div>
+    <h2 class="sub-title">One signal per week, from three years of looking ahead.</h2>
+    <p class="sub-dek">100% authentic, humanly chosen. No feed, no filler, no algorithm. Just the pearls.</p>
+    <a class="sub-cta" href="https://tokenwisdom.ghost.io/subscribe">Subscribe &rarr;</a>
+  </div>
+</section>
+<div class="wrap">
 
 <section class="block">
   <div class="rule-head"><h2 class="rule-label">Browse by Idea</h2>
@@ -848,7 +908,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 
 <section class="block block-lex">
   <div class="rule-head"><h2 class="rule-label">From the Lexicon</h2>
-    <a class="rule-meta linky" href="lexicon/index.html">1,941 terms &rarr;</a></div>
+    <a class="rule-meta linky" href="lexicon/index.html">1,934 terms &rarr;</a></div>
   <p class="lex-intro">The working vocabulary of the future of now, defined by hand across 74 editions, week over week.</p>
   <div class="lexcards">
     <a class="lexcard" href="lexicon/risc-v.html">
@@ -877,21 +937,46 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </a>
   </div>
 </section>
-</main>
+</div>
 
-<section class="subscribe">
-  <div class="sub-inner">
-    <div class="kicker kicker-on-dark">The Newsletter of Record for the Future of Now</div>
-    <h2 class="sub-title">One signal per week, from three years of looking ahead.</h2>
-    <p class="sub-dek">100% authentic, humanly chosen. No feed, no filler, no algorithm. Just the pearls.</p>
-    <a class="sub-cta" href="https://tokenwisdom.ghost.io/subscribe">Subscribe &rarr;</a>
-  </div>
-</section>
-<footer class="foot">
-  <div class="foot-inner">
-    <div class="wordmark"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"> Token Wisdom</div>
-    <p class="foot-tag">The Newsletter of Record for the Future of Now · Knowware is measured in lifetimes.</p>
-    <p class="foot-meta">By @iamkhayyam · ARC Institute of Knowware · 267 pieces · 81 topics · 100% Authentic Humanly Chosen</p>
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="tags/index.html">All Topics</a><a href="lexicon/index.html">The Lexicon</a><a href="tags/a-closer-look.html">Essays</a><a href="tags/worthafortune.html">Newsletters</a><a href="podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="about/index.html">About</a><a href="links/index.html">Links</a><a href="metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="tags/technology.html">Technology</a><a href="tags/ai.html">A.I. (and Subsets)</a><a href="tags/future-trends.html">Future Trends</a><a href="tags/ethical.html">Ethics \ Principles</a><a href="tags/challenges.html">Challenges</a><a href="tags/strategic.html">Strategic Measures</a><a href="tags/opinionated-editorials.html">🚨 OP-ED</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 81 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 

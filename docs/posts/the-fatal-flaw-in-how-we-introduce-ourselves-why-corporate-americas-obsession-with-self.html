@@ -67,28 +67,60 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.073 · W32 · Aug 8, 2024</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Challenges · Educate \ Learn · Culture Club</div>
-  <h1 class="essay-title">Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis</h1>
-  <p class="essay-deck">W31 - The self-improvement industry isn&#x27;t just misguided—it&#x27;s toxic. We&#x27;re breeding professional frauds, experts at performance but inept at genuine connection. It&#x27;s corporate America&#x27;s Instagram filter: flawless facades masking a crisis of authenticity. The cost? Our very humanity.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>August 8, 2024</span>
-    <span class="sep">·</span>
-    <span>10 min read</span>
-  </div>
-  <div class="prose">
-    <blockquote class="kg-blockquote-alt">To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.</blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">According to Ralph Waldo Emerson</span></figcaption></figure>
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/11/W31---The-Paradox-of-Self-Introduction--A-Critical-Analysis-of-Contemporary-Practices-and-Their-Scientific-Basis.jpg" alt="Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 31 · Challenges</div>
+    <h1 class="essay-title">Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis</h1>
+    <p class="essay-deck">The self-improvement industry isn&#x27;t just misguided—it&#x27;s toxic. We&#x27;re breeding professional frauds, experts at performance but inept at genuine connection. It&#x27;s corporate America&#x27;s Instagram filter: flawless facades masking a crisis of authenticity. The cost? Our very humanity.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>10 min read</span>
+      <span class="sep">·</span>
+      <span>August 8, 2024</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <blockquote class="kg-blockquote-alt">To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.</blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">According to Ralph Waldo Emerson</span></figcaption></figure>
 <!--kg-card-begin: html-->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/88bba738-a41a-45ab-ab3f-9ee3ac98642a/"></iframe></div>
+<div class="tw-embed"><iframe frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/88bba738-a41a-45ab-ab3f-9ee3ac98642a/" loading="lazy"></iframe></div>
 <!--kg-card-end: html-->
-<p></p><hr><h3 id="the-multi-billion-dollar-industry-built-around-teaching-people-how-to-present-themselves-isnt-just-wrongits-actively-dangerous-to-societys-future"><em>The multi-billion dollar industry built around teaching people how to present themselves isn't just wrong - it's actively dangerous to society's future</em></h3><p>The young executive stands before the mirror, rehearsing her "elevator pitch" for the fifteenth time. A college student memorizes his "personal brand statement" before a networking event. A sales representative practices her "power pose" before meeting a client. They're all participating in what future historians will likely regard as one of the great mass delusions of the early 21st century: the belief that authentic human connection can be reduced to a set of performative techniques.</p><p>This isn't just wrong. It's catastrophically wrong. And its implications extend far beyond wasted time and ineffective networking.</p><p>The $11.3 billion self-improvement industry has constructed an elaborate mythology around the art of self-introduction, built upon a foundation of pop psychology and oversimplified neuroscience. But what they're actually creating is a generation of professional frauds – individuals so trained in performance that they've lost the ability to engage in genuine human interaction. We're witnessing the corporate equivalent of social media filters: a world where everyone has learned to present a perfect, artificial facade while the capacity for authentic connection withers.</p><p>The consequences are already emerging, and they're far more severe than merely awkward networking events.</p><h2 id="the-death-of-authentic-leadership"><strong>The Death of Authentic Leadership</strong></h2><p>Consider the implications for corporate leadership. The current paradigm of self-presentation creates what I call "performative leaders" – executives who are excellent at presenting themselves but increasingly disconnected from genuine human interaction. These leaders, selected and promoted based on their ability to perform prescribed behaviors, often lack the authentic connection skills necessary for effective leadership.</p><p>This explains a puzzling phenomenon: why do we simultaneously have more leadership training than ever before and a persistent crisis of leadership across industries? The answer is simple but disturbing: we're selecting and training for performance rather than substance. It's the corporate equivalent of teaching people to act confident rather than developing actual competence.</p><h2 id="the-neuroscience-of-artificiality"><strong>The Neuroscience of Artificiality</strong></h2><p>The problem goes deeper than mere inauthenticity. Recent neuroscience research suggests that chronic performance of prescribed social behaviors can actually reshape neural pathways, creating what I term "artificial social processing" (ASP). Individuals with high ASP scores show reduced activity in brain regions associated with genuine empathy and increased activity in regions associated with performance and social calculation.</p><p>In other words, we're literally rewiring human brains to prioritize performance over authentic connection. The implications for society are staggering.</p><h2 id="the-cultural-catastrophe"><strong>The Cultural Catastrophe</strong></h2><p>This performance-based paradigm isn't just failing – it's actively harmful in at least five critical ways:</p><ol><li><strong>The Competence Crisis: </strong>The emphasis on presentation skills over substantive capability creates what I call the "competence façade" – individuals who are excellent at presenting themselves as experts but lack genuine expertise. This isn't just imposter syndrome; it's actual imposture, institutionalized and celebrated.</li><li><strong>The Innovation Impediment:</strong> Genuine innovation requires authentic communication and the ability to engage with uncertainty. The performance paradigm creates what I term "innovation theater" – where people become more focused on presenting themselves as innovative than actually engaging in the messy, often awkward process of real innovation.</li><li><strong>The Diversity Delusion:</strong> Current self-presentation training, while claiming to promote diversity, actually enforces a narrow set of behavioral norms derived primarily from Western, upper-middle-class professional culture. This creates a form of cultural imperialism masquerading as professional development.</li><li><strong>The Trust Deficit: </strong>As more people become adept at performative behavior, the general level of social trust decreases. This creates a vicious cycle where genuine behavior becomes increasingly rare and therefore increasingly disadvantaged.</li><li><strong>The Authenticity Paradox:</strong> The more organizations emphasize "authentic leadership" and "being yourself," while simultaneously promoting standardized behavioral scripts, the more they create cognitive dissonance that leads to psychological stress and decreased performance.</li></ol><div class="kg-card kg-product-card">
+<p></p><hr><h3 id="the-multi-billion-dollar-industry-built-around-teaching-people-how-to-present-themselves-isnt-just-wrongits-actively-dangerous-to-societys-future"><em>The multi-billion dollar industry built around teaching people how to present themselves isn't just wrong - it's actively dangerous to society's future</em></h3><p class="essay-lede">The young executive stands before the mirror, rehearsing her "elevator pitch" for the fifteenth time. A college student memorizes his "personal brand statement" before a networking event. A sales representative practices her "power pose" before meeting a client. They're all participating in what future historians will likely regard as one of the great mass delusions of the early 21st century: the belief that authentic human connection can be reduced to a set of performative techniques.</p><p>This isn't just wrong. It's catastrophically wrong. And its implications extend far beyond wasted time and ineffective networking.</p><p>The $11.3 billion self-improvement industry has constructed an elaborate mythology around the art of self-introduction, built upon a foundation of pop psychology and oversimplified neuroscience. But what they're actually creating is a generation of professional frauds – individuals so trained in performance that they've lost the ability to engage in genuine human interaction. We're witnessing the corporate equivalent of social media filters: a world where everyone has learned to present a perfect, artificial facade while the capacity for authentic connection withers.</p><p>The consequences are already emerging, and they're far more severe than merely awkward networking events.</p><h2 id="the-death-of-authentic-leadership"><strong>The Death of Authentic Leadership</strong></h2><p>Consider the implications for corporate leadership. The current paradigm of self-presentation creates what I call "performative leaders" – executives who are excellent at presenting themselves but increasingly disconnected from genuine human interaction. These leaders, selected and promoted based on their ability to perform prescribed behaviors, often lack the authentic connection skills necessary for effective leadership.</p><p>This explains a puzzling phenomenon: why do we simultaneously have more leadership training than ever before and a persistent crisis of leadership across industries? The answer is simple but disturbing: we're selecting and training for performance rather than substance. It's the corporate equivalent of teaching people to act confident rather than developing actual competence.</p><h2 id="the-neuroscience-of-artificiality"><strong>The Neuroscience of Artificiality</strong></h2><p>The problem goes deeper than mere inauthenticity. Recent neuroscience research suggests that chronic performance of prescribed social behaviors can actually reshape neural pathways, creating what I term "artificial social processing" (ASP). Individuals with high ASP scores show reduced activity in brain regions associated with genuine empathy and increased activity in regions associated with performance and social calculation.</p><p>In other words, we're literally rewiring human brains to prioritize performance over authentic connection. The implications for society are staggering.</p><h2 id="the-cultural-catastrophe"><strong>The Cultural Catastrophe</strong></h2><p>This performance-based paradigm isn't just failing – it's actively harmful in at least five critical ways:</p><ol><li><strong>The Competence Crisis: </strong>The emphasis on presentation skills over substantive capability creates what I call the "competence façade" – individuals who are excellent at presenting themselves as experts but lack genuine expertise. This isn't just imposter syndrome; it's actual imposture, institutionalized and celebrated.</li><li><strong>The Innovation Impediment:</strong> Genuine innovation requires authentic communication and the ability to engage with uncertainty. The performance paradigm creates what I term "innovation theater" – where people become more focused on presenting themselves as innovative than actually engaging in the messy, often awkward process of real innovation.</li><li><strong>The Diversity Delusion:</strong> Current self-presentation training, while claiming to promote diversity, actually enforces a narrow set of behavioral norms derived primarily from Western, upper-middle-class professional culture. This creates a form of cultural imperialism masquerading as professional development.</li><li><strong>The Trust Deficit: </strong>As more people become adept at performative behavior, the general level of social trust decreases. This creates a vicious cycle where genuine behavior becomes increasingly rare and therefore increasingly disadvantaged.</li><li><strong>The Authenticity Paradox:</strong> The more organizations emphasize "authentic leadership" and "being yourself," while simultaneously promoting standardized behavioral scripts, the more they create cognitive dissonance that leads to psychological stress and decreased performance.</li></ol><div class="kg-card kg-product-card">
             <div class="kg-product-card-container">
                 
                 <div class="kg-product-card-title-container">
@@ -159,8 +191,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
                 
             </div>
         </div><h2 id="the-ethical-imperative"><strong>The Ethical Imperative</strong></h2><p>Ultimately, the performance paradigm isn't just ineffective – it's unethical. It asks individuals to constantly engage in a form of deception, presenting a curated version of themselves rather than engaging authentically. This normalizes dishonesty and erodes the trust that's essential for a functioning society.</p><p>Moreover, it's a form of emotional labor that's rarely acknowledged or compensated. The constant effort required to maintain a performative professional self is a hidden tax on workers, one that disproportionately affects those who don't naturally fit into the narrow mold of "professional" behavior.</p><h2 id="the-urgency-of-now"><strong>The Urgency of Now</strong></h2><p>This isn't a problem we can afford to address gradually. Every year, more young professionals enter the workforce trained in performance rather than genuine interaction. Every year, more organizations embed these destructive practices deeper into their culture. Every year, the capacity for authentic professional interaction deteriorates further.</p><p>The young executive staring in the mirror isn't just wasting her time – she's participating in a system that's actively damaging her ability to connect authentically with others. The college student memorizing his personal brand statement isn't just engaged in a pointless exercise – he's being conditioned to prioritize performance over substance. The sales representative practicing power poses isn't just following dubious science – she's participating in a culture that's eroding genuine human connection.</p><h2 id="the-path-forward-embracing-radical-authenticity"><strong>The Path Forward: Embracing Radical Authenticity</strong></h2><p>The solution to this crisis isn't to simply tell people to "be themselves." In a world that has so deeply internalized the performance paradigm, authentic behavior can feel profoundly uncomfortable or even dangerous.</p><p>Instead, we need a movement of radical authenticity – a concerted effort to create spaces where people can engage genuinely, even if that means moments of awkwardness or uncertainty. This requires courage from leaders willing to model authentic behavior, even when it doesn't conform to polished professional norms.</p><p>It also requires a fundamental rethinking of what we value in professional settings. Instead of prioritizing smooth presentations and perfectly crafted elevator pitches, we need to learn to value genuine enthusiasm, honest uncertainty, and the willingness to engage in real, unscripted human interaction.</p><p>The stakes couldn't be higher. If we don't address this crisis, we risk creating a professional world that's a hall of mirrors – all reflection and no substance. But if we can summon the courage to shatter those mirrors and embrace radical authenticity, we have the opportunity to create a working world that's not just more effective, but more human.</p><p>The wolf isn't coming. It's already here, dressed in perfectly practiced professional behavior, spouting perfectly crafted personal brand statements, and destroying our capacity for genuine human connection one elevator pitch at a time.</p><p>The choice is ours. Will we continue down the path of performance, or will we have the courage to embrace authentic human connection? The future of our professional lives – and perhaps of society itself – hangs in the balance. The clock is ticking, and the time for radical authenticity is now.</p>
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/culture.html">Culture Club</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/lessons-learned.html">Lessons Learned</a><a class="post-tag" href="../tags/life-hacks.html">Life Hacks</a><a class="post-tag" href="../tags/neuroscience.html">Neuroscience</a><a class="post-tag" href="../tags/personal-growth.html">Personal Growth</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/culture.html">Culture Club</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/lessons-learned.html">Lessons Learned</a><a class="post-tag" href="../tags/life-hacks.html">Life Hacks</a><a class="post-tag" href="../tags/neuroscience.html">Neuroscience</a><a class="post-tag" href="../tags/personal-growth.html">Personal Growth</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -176,52 +214,115 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

@@ -67,24 +67,56 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.062 · W21 · May 23, 2024</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Future Trends · Technology · User Experience</div>
-  <h1 class="essay-title">Bridging the Digital Divide: Creating Equitable and Inclusive Digital Experiences</h1>
-  <p class="essay-deck">W20 - In Silicon Valley&#x27;s shadow, a janitor squints at their smartphone, baffled. Across town, a 10-year-old codes effortlessly. This stark contrast embodies our digital divide - no longer about access, but literacy and opportunity. Can we bridge this growing chasm?</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>May 23, 2024</span>
-    <span class="sep">·</span>
-    <span>9 min read</span>
-  </div>
-  <div class="prose">
-    <p>In the shadow of Silicon Valley's gleaming towers, Maria Gonzalez squints at her smartphone, bewildered by the array of icons before her. At 62, this janitor who once cleaned those very towers now finds herself locked out of a world increasingly defined by the technology she helped build but never learned to use.</p><p>Across town, 10-year-old Zoe Chen deftly navigates a dozen apps, her fingers flying across the screen as she toggles between homework, social media, and a coding tutorial. For Zoe, technology is not just a tool, but an extension of herself - as natural as breathing.</p><p>This stark contrast embodies the modern digital divide: no longer a simple delineation between the connected and disconnected, but a multifaceted chasm of digital literacy, access, and opportunity. As our society hurtles towards an ever more digitized future, this divide threatens to become a unbridgeable gulf, segregating humanity into digital haves and have-nots.</p><p>The implications of this schism extend far beyond mere inconvenience. In an age where everything from job applications to healthcare management has migrated online, digital proficiency has become a prerequisite for full participation in society. Those left behind face not just isolation, but systemic disadvantage in education, employment, and civic engagement.</p><p>This essay explores the complexities of this growing digital divide and explores innovative approaches to bridge it. We'll examine the concept of Experience Futures - a vision for more equitable and inclusive digital experiences that adapt to users, rather than demanding users adapt to them. At stake is nothing less than the promise of a truly democratic digital age, where technology serves as a great equalizer rather than a new arbiter of inequality.</p><h2 id="the-digital-divide-a-growing-chasm">The Digital Divide: A Growing Chasm</h2><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg" class="kg-image" alt="" loading="lazy" width="1152" height="768" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg 1000w, https://tokenwisdom.ghost.io/content/images/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg 1152w" sizes="(min-width: 720px) 720px"></figure><p>The digital divide is no longer just about access to technology; it's about the ability to use it effectively. Think of it as a vast ocean, with some people effortlessly surfing the waves of technological advancement, while others struggle to stay afloat.</p><p>On one side of this divide, we have digital natives who seamlessly integrate technology into every aspect of their lives. They're like fish in water, instinctively knowing how to navigate the digital currents. On the other side, we have those who feel like they're constantly swimming against the tide, struggling to keep up with the ever-changing digital landscape.</p><p>This divide impacts every aspect of modern life, from education and employment to healthcare and social interaction. As more services move online, those who can't keep up risk being left behind, creating a cycle of digital exclusion that can be difficult to break.</p><h2 id="the-complexity-of-modern-digital-experiences">The Complexity of Modern Digital Experiences</h2><p>Today's digital landscape is like a sprawling metropolis, with each organization building its own skyscraper of digital tools and services. For the average person, navigating this digital cityscape can be overwhelming. Imagine having to learn a new language and set of customs every time you enter a different building – that's what it feels like for many people trying to use various digital platforms.</p><p>The complexity arises from the fact that each organization tends to create tools that serve its specific needs, rather than considering the broader context of a user's life. It's as if each building in our digital city was designed without considering how people would move between them.</p><p>For example, consider a person trying to manage their health. They might need to navigate separate systems for their doctor's office, pharmacy, insurance provider, and fitness tracker. Each of these systems has its own interface, login process, and way of presenting information. For someone who's not tech-savvy, this can be as daunting as trying to navigate a foreign city without a map or translator.</p><div class="kg-card kg-product-card">
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/10/img-hFK4pjp2kjdLWQiwnn5HX.jpeg" alt="Bridging the Digital Divide: Creating Equitable and Inclusive Digital Experiences" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 20 · Future Trends</div>
+    <h1 class="essay-title">Bridging the Digital Divide: Creating Equitable and Inclusive Digital Experiences</h1>
+    <p class="essay-deck">In Silicon Valley&#x27;s shadow, a janitor squints at their smartphone, baffled. Across town, a 10-year-old codes effortlessly. This stark contrast embodies our digital divide - no longer about access, but literacy and opportunity. Can we bridge this growing chasm?</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>9 min read</span>
+      <span class="sep">·</span>
+      <span>May 23, 2024</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <p class="essay-lede">In the shadow of Silicon Valley's gleaming towers, Maria Gonzalez squints at her smartphone, bewildered by the array of icons before her. At 62, this janitor who once cleaned those very towers now finds herself locked out of a world increasingly defined by the technology she helped build but never learned to use.</p><p>Across town, 10-year-old Zoe Chen deftly navigates a dozen apps, her fingers flying across the screen as she toggles between homework, social media, and a coding tutorial. For Zoe, technology is not just a tool, but an extension of herself - as natural as breathing.</p><p>This stark contrast embodies the modern digital divide: no longer a simple delineation between the connected and disconnected, but a multifaceted chasm of digital literacy, access, and opportunity. As our society hurtles towards an ever more digitized future, this divide threatens to become a unbridgeable gulf, segregating humanity into digital haves and have-nots.</p><p>The implications of this schism extend far beyond mere inconvenience. In an age where everything from job applications to healthcare management has migrated online, digital proficiency has become a prerequisite for full participation in society. Those left behind face not just isolation, but systemic disadvantage in education, employment, and civic engagement.</p><p>This essay explores the complexities of this growing digital divide and explores innovative approaches to bridge it. We'll examine the concept of Experience Futures - a vision for more equitable and inclusive digital experiences that adapt to users, rather than demanding users adapt to them. At stake is nothing less than the promise of a truly democratic digital age, where technology serves as a great equalizer rather than a new arbiter of inequality.</p><h2 id="the-digital-divide-a-growing-chasm">The Digital Divide: A Growing Chasm</h2><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg" class="kg-image" alt="" loading="lazy" width="1152" height="768" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg 1000w, https://tokenwisdom.ghost.io/content/images/2024/10/img-HKBbxTrGdTKTGO5ZuuqV6.jpeg 1152w" sizes="(min-width: 720px) 720px"></figure><p>The digital divide is no longer just about access to technology; it's about the ability to use it effectively. Think of it as a vast ocean, with some people effortlessly surfing the waves of technological advancement, while others struggle to stay afloat.</p><p>On one side of this divide, we have digital natives who seamlessly integrate technology into every aspect of their lives. They're like fish in water, instinctively knowing how to navigate the digital currents. On the other side, we have those who feel like they're constantly swimming against the tide, struggling to keep up with the ever-changing digital landscape.</p><p>This divide impacts every aspect of modern life, from education and employment to healthcare and social interaction. As more services move online, those who can't keep up risk being left behind, creating a cycle of digital exclusion that can be difficult to break.</p><h2 id="the-complexity-of-modern-digital-experiences">The Complexity of Modern Digital Experiences</h2><p>Today's digital landscape is like a sprawling metropolis, with each organization building its own skyscraper of digital tools and services. For the average person, navigating this digital cityscape can be overwhelming. Imagine having to learn a new language and set of customs every time you enter a different building – that's what it feels like for many people trying to use various digital platforms.</p><p>The complexity arises from the fact that each organization tends to create tools that serve its specific needs, rather than considering the broader context of a user's life. It's as if each building in our digital city was designed without considering how people would move between them.</p><p>For example, consider a person trying to manage their health. They might need to navigate separate systems for their doctor's office, pharmacy, insurance provider, and fitness tracker. Each of these systems has its own interface, login process, and way of presenting information. For someone who's not tech-savvy, this can be as daunting as trying to navigate a foreign city without a map or translator.</p><div class="kg-card kg-product-card">
             <div class="kg-product-card-container">
                 
                 <div class="kg-product-card-title-container">
@@ -159,8 +191,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 <div style="height: 333px"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-background-color="#1a1a1c" data-text-color="#FFFFFF" data-button-color="#2a1002" data-button-text-color="#FFFFFF" data-title="Token Wisdom ✨ " data-description="Invest in knowledge. It provides great returns." data-icon="https://tokenwisdom.ghost.io/content/images/size/w192h192/size/w256h256/2024/02/rocketMan.gif" data-site="https://tokenwisdom.ghost.io/" async></script></div>
 <!--kg-card-end: html-->
 <p>Don't forget to check out the weekly roundup: <a href="https://tokenwisdom.ghost.io/worthafortune/" rel="noreferrer">It's Worth A Fortune!</a></p>
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/user-experience.html">User Experience</a><a class="post-tag" href="../tags/failing-up.html">Failing Up \ Often</a><a class="post-tag" href="../tags/emerging-technology.html">Emerging Tech</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/automation.html">Automation</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/user-experience.html">User Experience</a><a class="post-tag" href="../tags/failing-up.html">Failing Up \ Often</a><a class="post-tag" href="../tags/emerging-technology.html">Emerging Tech</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/automation.html">Automation</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -176,52 +214,115 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

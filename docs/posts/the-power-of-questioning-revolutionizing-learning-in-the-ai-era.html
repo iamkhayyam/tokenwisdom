@@ -67,28 +67,60 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.080 · W39 · Sep 26, 2024</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">A.I. (and Subsets) · A Story to Tell · Content Creation</div>
-  <h1 class="essay-title">The Power of Questioning: Revolutionizing Learning in the AI Era</h1>
-  <p class="essay-deck">W38 - Socrates meets Siri: Dive into a world where ancient wisdom collides with AI, transforming your daily jog into a quantum physics lesson. Discover how questioning, AI, and audio learning are revolutionizing education—and possibly human potential itself.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>September 26, 2024</span>
-    <span class="sep">·</span>
-    <span>11 min read</span>
-  </div>
-  <div class="prose">
-    <blockquote class="kg-blockquote-alt"><strong>"The art and science of asking questions is the source of all knowledge."</strong></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">According to Thomas Berger</span></figcaption></figure>
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/11/Leonardo_Phoenix_A_surreal_digital_illustration_merging_ancien_1.jpg" alt="The Power of Questioning: Revolutionizing Learning in the AI Era" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 38 · A.I. (and Subsets)</div>
+    <h1 class="essay-title">The Power of Questioning: Revolutionizing Learning in the AI Era</h1>
+    <p class="essay-deck">Socrates meets Siri: Dive into a world where ancient wisdom collides with AI, transforming your daily jog into a quantum physics lesson. Discover how questioning, AI, and audio learning are revolutionizing education—and possibly human potential itself.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>11 min read</span>
+      <span class="sep">·</span>
+      <span>September 26, 2024</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <blockquote class="kg-blockquote-alt"><strong>"The art and science of asking questions is the source of all knowledge."</strong></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">According to Thomas Berger</span></figcaption></figure>
 <!--kg-card-begin: html-->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/11170d88-23d0-4ac5-b484-43a9c55ada6d/"></iframe></div>
+<div class="tw-embed"><iframe frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/11170d88-23d0-4ac5-b484-43a9c55ada6d/" loading="lazy"></iframe></div>
 <!--kg-card-end: html-->
-<hr><p></p><h2 id="where-ancient-wisdom-meets-ai-in-the-quest-for-knowledge"><strong>Where Ancient Wisdom Meets AI in the Quest for Knowledge</strong></h2><p>Imagine a world where the wisdom of Socrates meets the processing power of advanced AI, all delivered through the intimacy of your favorite podcast. This isn't a far-off sci-fi scenario—it's the cutting edge of modern education. In today's rapidly evolving technological landscape, we stand at the precipice of a revolutionary fusion: the marriage of timeless questioning techniques with cutting-edge artificial intelligence and innovative learning methodologies.</p><p>This essay argues that the combination of strategic questioning, AI-powered knowledge synthesis, and audio-based learning tools creates an unparalleled opportunity for deeper, more efficient, and more personalized learning experiences. As we navigate this new frontier, we'll explore how this synergy is not just changing the way we learn, but fundamentally reshaping our relationship with knowledge itself.</p><h2 id="the-fundamental-power-of-questioning"><strong>The Fundamental Power of Questioning</strong></h2><blockquote>"To question is to think. To think is to grow." </blockquote><p>This simple yet profound concept has been the bedrock of human intellectual advancement for millennia. When we pose a question, we're not just seeking information—we're igniting a cognitive spark that illuminates the shadows of our understanding. It's a mental workout that flexes our critical thinking muscles and stretches the boundaries of our knowledge.</p><p>The act of questioning is a multifaceted cognitive process. It requires us to:</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png" class="kg-image" alt="" loading="lazy" width="1228" height="1204" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png 1000w, https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png 1228w" sizes="(min-width: 720px) 720px"></figure><p>This process alone enhances our cognitive abilities, priming our minds to receive, process, and retain new information more effectively. It's a form of mental calisthenics that keeps our intellect agile and our curiosity alive.</p><p>Research has consistently shown that active questioning improves comprehension, retention, and the ability to apply knowledge in diverse contexts. For instance, a meta-analysis conducted by the National Reading Panel found that teaching students to generate questions while reading significantly improves their comprehension skills. Similarly, studies in classroom settings have demonstrated that students who engage in regular questioning achieve higher academic performance across various subjects.</p><p>The power of questioning extends beyond individual learning. In educational settings, it serves as a catalyst for collective knowledge construction. When students engage in peer-to-peer questioning, they're not just seeking answers; they're participating in a collaborative process of knowledge refinement. This social dimension of questioning fosters critical thinking, promotes diverse perspectives, and cultivates a culture of intellectual curiosity.</p><p>Moreover, questioning is not just a tool for students; it's a powerful teaching strategy. When educators ask thoughtful, probing questions, they encourage students to think more deeply about the subject matter, make connections between different concepts, and develop their analytical skills. Higher-order questions, in particular, challenge students to go beyond mere recall and engage in complex cognitive processes such as analysis, synthesis, and evaluation.</p><p>Consider the Socratic method, a time-honored approach that uses probing questions to stimulate critical thinking and illuminate ideas. This method doesn't just impart knowledge; it teaches students how to think, how to analyze, and how to question their own assumptions. In essence, it equips learners with the tools to become lifelong self-educators.</p><h2 id="the-ai-revolution-in-learning"><strong>The AI Revolution in Learning</strong></h2><p>While the benefits of questioning are well-established, we now stand at a unique moment in history where the power of human inquiry can be amplified exponentially by artificial intelligence. Large Language Models (LLMs) like GPT-4 represent a quantum leap in our ability to access, process, and synthesize vast amounts of information.</p><p>Consider this: when you pose a question to an AI-powered system, you're essentially tapping into the collective knowledge of millions of sources, distilled and organized by algorithms trained on an unprecedented scale. It's like having a round-table discussion with history's greatest minds, from Aristotle to Einstein, all speaking in unison to provide a synthesized, coherent response in seconds. This isn't just information retrieval; it's knowledge alchemy, transforming raw data into golden insights tailored to your specific inquiry.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png" class="kg-image" alt="" loading="lazy" width="1466" height="902" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png 1000w, https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png 1466w" sizes="(min-width: 720px) 720px"></figure><p>This capability transforms the landscape of learning in several ways:</p><ol><li><strong>Instant access to expert-level knowledge: </strong>Learners can now receive high-quality, nuanced answers to complex questions almost instantaneously, democratizing access to expertise. This levels the playing field, allowing anyone with an internet connection to tap into a wealth of knowledge previously accessible only to those with extensive education or resources.</li><li><strong>Personalized Learning Paths: </strong>AI can adapt its responses based on the learner's prior knowledge, learning style, and specific interests, creating a tailored educational experience. Imagine an AI tutor that remembers every question you've asked, every concept you've struggled with, and adjusts its teaching style accordingly. It's like having a personal mentor who knows you better than you know yourself.</li><li><strong>Interdisciplinary Connections: </strong>LLMs can draw connections between seemingly unrelated fields, fostering a more holistic understanding of complex topics. This cross-pollination of ideas can lead to innovative insights and creative problem-solving approaches that might not emerge in traditional, siloed learning environments.</li><li><strong>Continuous Learning and Updating:</strong> Unlike static textbooks, AI-powered learning tools can incorporate the latest research and developments in real-time, ensuring that learners always have access to current information. This is particularly crucial in rapidly evolving fields like technology, medicine, and environmental science.</li><li><strong>Scaffolded Inquiry:</strong> AI can guide learners through a series of increasingly complex questions, helping them build a comprehensive understanding of a topic step by step. This progressive approach ensures that learners develop a solid foundation before tackling more advanced concepts, reducing frustration and enhancing overall comprehension.</li><li><strong>Enhanced Metacognition: </strong>By analyzing patterns in a learner's questions and responses, AI can provide insights into their learning process, helping them understand how they learn best. This metacognitive awareness is a powerful tool for lifelong learning and self-improvement.</li></ol><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
+<hr><p></p><h2 id="where-ancient-wisdom-meets-ai-in-the-quest-for-knowledge"><strong>Where Ancient Wisdom Meets AI in the Quest for Knowledge</strong></h2><p class="essay-lede">Imagine a world where the wisdom of Socrates meets the processing power of advanced AI, all delivered through the intimacy of your favorite podcast. This isn't a far-off sci-fi scenario—it's the cutting edge of modern education. In today's rapidly evolving technological landscape, we stand at the precipice of a revolutionary fusion: the marriage of timeless questioning techniques with cutting-edge artificial intelligence and innovative learning methodologies.</p><p>This essay argues that the combination of strategic questioning, AI-powered knowledge synthesis, and audio-based learning tools creates an unparalleled opportunity for deeper, more efficient, and more personalized learning experiences. As we navigate this new frontier, we'll explore how this synergy is not just changing the way we learn, but fundamentally reshaping our relationship with knowledge itself.</p><h2 id="the-fundamental-power-of-questioning"><strong>The Fundamental Power of Questioning</strong></h2><blockquote>"To question is to think. To think is to grow." </blockquote><p>This simple yet profound concept has been the bedrock of human intellectual advancement for millennia. When we pose a question, we're not just seeking information—we're igniting a cognitive spark that illuminates the shadows of our understanding. It's a mental workout that flexes our critical thinking muscles and stretches the boundaries of our knowledge.</p><p>The act of questioning is a multifaceted cognitive process. It requires us to:</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png" class="kg-image" alt="" loading="lazy" width="1228" height="1204" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png 1000w, https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-62f1e97e-9947-43c2-b52b-9a34435bef24.png 1228w" sizes="(min-width: 720px) 720px"></figure><p>This process alone enhances our cognitive abilities, priming our minds to receive, process, and retain new information more effectively. It's a form of mental calisthenics that keeps our intellect agile and our curiosity alive.</p><p>Research has consistently shown that active questioning improves comprehension, retention, and the ability to apply knowledge in diverse contexts. For instance, a meta-analysis conducted by the National Reading Panel found that teaching students to generate questions while reading significantly improves their comprehension skills. Similarly, studies in classroom settings have demonstrated that students who engage in regular questioning achieve higher academic performance across various subjects.</p><p>The power of questioning extends beyond individual learning. In educational settings, it serves as a catalyst for collective knowledge construction. When students engage in peer-to-peer questioning, they're not just seeking answers; they're participating in a collaborative process of knowledge refinement. This social dimension of questioning fosters critical thinking, promotes diverse perspectives, and cultivates a culture of intellectual curiosity.</p><p>Moreover, questioning is not just a tool for students; it's a powerful teaching strategy. When educators ask thoughtful, probing questions, they encourage students to think more deeply about the subject matter, make connections between different concepts, and develop their analytical skills. Higher-order questions, in particular, challenge students to go beyond mere recall and engage in complex cognitive processes such as analysis, synthesis, and evaluation.</p><p>Consider the Socratic method, a time-honored approach that uses probing questions to stimulate critical thinking and illuminate ideas. This method doesn't just impart knowledge; it teaches students how to think, how to analyze, and how to question their own assumptions. In essence, it equips learners with the tools to become lifelong self-educators.</p><h2 id="the-ai-revolution-in-learning"><strong>The AI Revolution in Learning</strong></h2><p>While the benefits of questioning are well-established, we now stand at a unique moment in history where the power of human inquiry can be amplified exponentially by artificial intelligence. Large Language Models (LLMs) like GPT-4 represent a quantum leap in our ability to access, process, and synthesize vast amounts of information.</p><p>Consider this: when you pose a question to an AI-powered system, you're essentially tapping into the collective knowledge of millions of sources, distilled and organized by algorithms trained on an unprecedented scale. It's like having a round-table discussion with history's greatest minds, from Aristotle to Einstein, all speaking in unison to provide a synthesized, coherent response in seconds. This isn't just information retrieval; it's knowledge alchemy, transforming raw data into golden insights tailored to your specific inquiry.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png" class="kg-image" alt="" loading="lazy" width="1466" height="902" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png 1000w, https://tokenwisdom.ghost.io/content/images/2024/11/data-src-image-2a911f6b-1adb-4596-9ee9-e66d0be8eda4.png 1466w" sizes="(min-width: 720px) 720px"></figure><p>This capability transforms the landscape of learning in several ways:</p><ol><li><strong>Instant access to expert-level knowledge: </strong>Learners can now receive high-quality, nuanced answers to complex questions almost instantaneously, democratizing access to expertise. This levels the playing field, allowing anyone with an internet connection to tap into a wealth of knowledge previously accessible only to those with extensive education or resources.</li><li><strong>Personalized Learning Paths: </strong>AI can adapt its responses based on the learner's prior knowledge, learning style, and specific interests, creating a tailored educational experience. Imagine an AI tutor that remembers every question you've asked, every concept you've struggled with, and adjusts its teaching style accordingly. It's like having a personal mentor who knows you better than you know yourself.</li><li><strong>Interdisciplinary Connections: </strong>LLMs can draw connections between seemingly unrelated fields, fostering a more holistic understanding of complex topics. This cross-pollination of ideas can lead to innovative insights and creative problem-solving approaches that might not emerge in traditional, siloed learning environments.</li><li><strong>Continuous Learning and Updating:</strong> Unlike static textbooks, AI-powered learning tools can incorporate the latest research and developments in real-time, ensuring that learners always have access to current information. This is particularly crucial in rapidly evolving fields like technology, medicine, and environmental science.</li><li><strong>Scaffolded Inquiry:</strong> AI can guide learners through a series of increasingly complex questions, helping them build a comprehensive understanding of a topic step by step. This progressive approach ensures that learners develop a solid foundation before tackling more advanced concepts, reducing frustration and enhancing overall comprehension.</li><li><strong>Enhanced Metacognition: </strong>By analyzing patterns in a learner's questions and responses, AI can provide insights into their learning process, helping them understand how they learn best. This metacognitive awareness is a powerful tool for lifelong learning and self-improvement.</li></ol><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
             
         <picture><img class="kg-signup-card-image" src="https://tokenwisdom.ghost.io/content/images/2024/02/a-wider-perspective-2.gif" alt=""></picture>
     
@@ -154,8 +186,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
                 
             </div>
         </div>
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/storytelling.html">A Story to Tell</a><a class="post-tag" href="../tags/content-creation.html">Content Creation</a><a class="post-tag" href="../tags/culture.html">Culture Club</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/life-hacks.html">Life Hacks</a><a class="post-tag" href="../tags/language-models.html">LLMs - Language Models</a><a class="post-tag" href="../tags/nlp.html">NLP \ NLU \ NLG</a><a class="post-tag" href="../tags/productivity.html">Productivity</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/storytelling.html">A Story to Tell</a><a class="post-tag" href="../tags/content-creation.html">Content Creation</a><a class="post-tag" href="../tags/culture.html">Culture Club</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/life-hacks.html">Life Hacks</a><a class="post-tag" href="../tags/language-models.html">LLMs - Language Models</a><a class="post-tag" href="../tags/nlp.html">NLP \ NLU \ NLG</a><a class="post-tag" href="../tags/productivity.html">Productivity</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -171,52 +209,115 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

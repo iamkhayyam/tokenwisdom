@@ -67,24 +67,56 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.044 · W04 · Jan 25, 2024</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">All the Data · A.I. (and Subsets) · Wellness</div>
-  <h1 class="essay-title">The AI Revolution in Healthcare: Reshaping the Future of Medicine</h1>
-  <p class="essay-deck">W03 - In the quiet corridors of a bustling hospital, a silent revolution hums. AI analyzes images at lightning speed, detects threats before they manifest, and crafts treatments with eerie precision. The future of medicine isn&#x27;t coming—it&#x27;s already here, whispering in binary.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>January 25, 2024</span>
-    <span class="sep">·</span>
-    <span>10 min read</span>
-  </div>
-  <div class="prose">
-    <p>In the quiet corridors of a bustling hospital, a silent revolution is underway. It doesn't march with banners or shout slogans; instead, it hums softly in the background, its presence felt in the lightning-fast analysis of medical images, the early detection of life-threatening conditions, and the personalized treatment plans that seem almost clairvoyant in their precision. This is the AI revolution in healthcare, and it's transforming the medical landscape in ways we could only dream of a decade ago.</p><p>Imagine a world where diseases are caught before they manifest, where treatments are crafted with pinpoint accuracy based on your unique genetic makeup, and where the burden of administrative tasks on healthcare professionals vanishes, allowing them to focus entirely on patient care. This isn't science fiction—it's the emerging reality of healthcare, powered by Artificial Intelligence (AI). As we stand on the brink of this revolution, let's explore how AI is reshaping the medical landscape and what it means for our future.</p><h2 id="the-ai-doctor-will-see-you-now-digital-diagnostics-in-the-palm-of-your-hand"><strong>The AI Doctor Will See You Now: Digital Diagnostics in the Palm of Your Hand</strong></h2><p>What if you woke up one morning feeling slightly off. Instead of googling symptoms and falling into a spiral of worry, you speak to an AI health assistant on your smartphone. This intelligent system, accessing your health data from wearable devices and past medical records, asks targeted questions and analyzes your responses in real-time. Within minutes, it suggests you might be developing an early-stage respiratory infection and schedules a virtual appointment with your doctor, complete with a preliminary analysis.</p><p>This scenario is closer than you might think. AI-powered diagnostic tools are already making waves in the medical community. Take the case of IDx-DR, the first FDA-approved AI diagnostic system that can detect diabetic retinopathy without a human interpreter. This groundbreaking technology allows for early detection of a condition that, if left untreated, can lead to blindness. In clinical trials, IDx-DR demonstrated 87.2% sensitivity and 90.7% specificity, rivaling human experts.</p><p>But the potential of AI in diagnostics goes far beyond a single condition. Researchers at Google Health have developed an AI system that can detect breast cancer in mammograms with greater accuracy than human radiologists. In a study published in Nature, the AI system reduced both false positives and false negatives, potentially saving countless lives through earlier detection and fewer unnecessary biopsies.</p><p>AI is proving invaluable in the fight against rare diseases. These conditions, often challenging to diagnose due to their infrequency, can now be identified more quickly and accurately. For instance, a team at FDNA has developed a facial recognition AI that can identify rare genetic disorders from a photo with astounding accuracy. This technology could dramatically reduce the "diagnostic odyssey" many patients with rare diseases endure, sometimes spending years seeking a correct diagnosis.</p><h2 id="personalized-treatment-your-unique-medical-fingerprint"><strong>Personalized Treatment: Your Unique Medical Fingerprint</strong></h2><p>While AI is revolutionizing how we diagnose diseases, its impact doesn't stop there. Imagine treatments as unique as you are, tailored not just to your condition, but to your specific genetic makeup, lifestyle, and even your gut microbiome. This is the promise of AI in personalized medicine.</p><p>Companies like Deep Genomics are using AI to read the human genome like a book, identifying potential therapeutic targets for genetic disorders. Their AI system recently identified a novel treatment for Wilson disease, a rare genetic disorder, in a fraction of the time it would have taken using traditional methods. The AI sifted through over 2,400 compounds and 100 million data points to identify the promising drug candidate.</p><p>But personalized medicine goes beyond genetics. AI systems are now capable of integrating data from various sources – including wearable devices, electronic health records, and even social media – to create a comprehensive health profile for each individual. This holistic approach allows for more precise treatment recommendations and better prediction of potential health risks.</p><p>For instance, researchers at Mount Sinai Hospital have developed an AI system called Deep Patient. By analyzing the electronic health records of about 700,000 patients, Deep Patient can predict the onset of diseases like schizophrenia, diabetes, and various cancers with remarkable accuracy. This kind of predictive power could revolutionize preventive care, allowing interventions before diseases take hold.</p><h2 id="the-invisible-caregiver-ai-in-patient-monitoring"><strong>The Invisible Caregiver: AI in Patient Monitoring</strong></h2><p>Now, envision a hospital where patients are monitored continuously, not by overworked nurses, but by AI systems that never sleep. These systems can detect subtle changes in a patient's condition long before they become critical, alerting healthcare providers and potentially saving lives.</p><p>This isn't a far-off dream—it's happening now. At Johns Hopkins Hospital, an AI system called Sepsis Watch is helping to detect sepsis, a life-threatening condition, hours before overt clinical signs appear. This early warning system has already led to faster interventions and improved patient outcomes. In fact, this system has helped reduce sepsis-related mortality by 18.2% in its first year of implementation.</p><p>But the potential of AI in patient monitoring extends far beyond the hospital walls. With the rise of Internet of Things (IoT) devices and wearable technology, AI can now monitor patients in their homes, providing real-time health data to healthcare providers. This continuous monitoring could be particularly beneficial for managing chronic conditions like heart disease and diabetes.</p><p>For example, AliveCor's KardiaMobile device, coupled with AI analysis, allows patients to take medical-grade ECGs at home. The AI can detect atrial fibrillation, a common heart rhythm disorder, with 98% sensitivity and 97% specificity. This kind of technology could revolutionize how we manage cardiac health, potentially preventing strokes and other serious complications.</p><h2 id="the-drug-discovery-revolution-accelerating-the-path-to-new-treatments"><strong>The Drug Discovery Revolution: Accelerating the Path to New Treatments</strong></h2><p>Perhaps the most exciting frontier is in drug discovery. Traditionally, developing a new drug takes over a decade and billions of dollars. AI is set to disrupt this process dramatically, potentially bringing life-saving treatments to patients faster than ever before.</p><p>Consider Insilico Medicine, a company using AI to design new molecules for drug development. In 2019, they used their AI system to create a new drug candidate for fibrosis in just 46 days—a process that typically takes years. This kind of acceleration could be game-changing in the face of global health crises or emerging diseases.</p><p>Another company, Atomwise, uses AI to predict how different molecules will bind to target proteins, a crucial step in drug discovery. Their AI system can screen 10 million compounds each day, a task that would be impossible for human researchers. In 2020, Atomwise announced a partnership with Eli Lilly to use their AI technology to discover potential treatments for COVID-19.</p><p>But AI's potential in drug discovery goes beyond speed. It can also help identify new uses for existing drugs, a process known as drug repurposing. For instance, BenevolentAI used their AI platform to identify baricitinib, an existing drug for rheumatoid arthritis, as a potential treatment for COVID-19. This discovery led to clinical trials, and baricitinib has since been authorized for emergency use in COVID-19 patients in several countries.</p><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/10/img-8JzCOS34UlPrg9vQ43OQ0.jpeg" alt="The AI Revolution in Healthcare: Reshaping the Future of Medicine" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 03 · All the Data</div>
+    <h1 class="essay-title">The AI Revolution in Healthcare: Reshaping the Future of Medicine</h1>
+    <p class="essay-deck">In the quiet corridors of a bustling hospital, a silent revolution hums. AI analyzes images at lightning speed, detects threats before they manifest, and crafts treatments with eerie precision. The future of medicine isn&#x27;t coming—it&#x27;s already here, whispering in binary.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>10 min read</span>
+      <span class="sep">·</span>
+      <span>January 25, 2024</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <p class="essay-lede">In the quiet corridors of a bustling hospital, a silent revolution is underway. It doesn't march with banners or shout slogans; instead, it hums softly in the background, its presence felt in the lightning-fast analysis of medical images, the early detection of life-threatening conditions, and the personalized treatment plans that seem almost clairvoyant in their precision. This is the AI revolution in healthcare, and it's transforming the medical landscape in ways we could only dream of a decade ago.</p><p>Imagine a world where diseases are caught before they manifest, where treatments are crafted with pinpoint accuracy based on your unique genetic makeup, and where the burden of administrative tasks on healthcare professionals vanishes, allowing them to focus entirely on patient care. This isn't science fiction—it's the emerging reality of healthcare, powered by Artificial Intelligence (AI). As we stand on the brink of this revolution, let's explore how AI is reshaping the medical landscape and what it means for our future.</p><h2 id="the-ai-doctor-will-see-you-now-digital-diagnostics-in-the-palm-of-your-hand"><strong>The AI Doctor Will See You Now: Digital Diagnostics in the Palm of Your Hand</strong></h2><p>What if you woke up one morning feeling slightly off. Instead of googling symptoms and falling into a spiral of worry, you speak to an AI health assistant on your smartphone. This intelligent system, accessing your health data from wearable devices and past medical records, asks targeted questions and analyzes your responses in real-time. Within minutes, it suggests you might be developing an early-stage respiratory infection and schedules a virtual appointment with your doctor, complete with a preliminary analysis.</p><p>This scenario is closer than you might think. AI-powered diagnostic tools are already making waves in the medical community. Take the case of IDx-DR, the first FDA-approved AI diagnostic system that can detect diabetic retinopathy without a human interpreter. This groundbreaking technology allows for early detection of a condition that, if left untreated, can lead to blindness. In clinical trials, IDx-DR demonstrated 87.2% sensitivity and 90.7% specificity, rivaling human experts.</p><p>But the potential of AI in diagnostics goes far beyond a single condition. Researchers at Google Health have developed an AI system that can detect breast cancer in mammograms with greater accuracy than human radiologists. In a study published in Nature, the AI system reduced both false positives and false negatives, potentially saving countless lives through earlier detection and fewer unnecessary biopsies.</p><p>AI is proving invaluable in the fight against rare diseases. These conditions, often challenging to diagnose due to their infrequency, can now be identified more quickly and accurately. For instance, a team at FDNA has developed a facial recognition AI that can identify rare genetic disorders from a photo with astounding accuracy. This technology could dramatically reduce the "diagnostic odyssey" many patients with rare diseases endure, sometimes spending years seeking a correct diagnosis.</p><h2 id="personalized-treatment-your-unique-medical-fingerprint"><strong>Personalized Treatment: Your Unique Medical Fingerprint</strong></h2><p>While AI is revolutionizing how we diagnose diseases, its impact doesn't stop there. Imagine treatments as unique as you are, tailored not just to your condition, but to your specific genetic makeup, lifestyle, and even your gut microbiome. This is the promise of AI in personalized medicine.</p><p>Companies like Deep Genomics are using AI to read the human genome like a book, identifying potential therapeutic targets for genetic disorders. Their AI system recently identified a novel treatment for Wilson disease, a rare genetic disorder, in a fraction of the time it would have taken using traditional methods. The AI sifted through over 2,400 compounds and 100 million data points to identify the promising drug candidate.</p><p>But personalized medicine goes beyond genetics. AI systems are now capable of integrating data from various sources – including wearable devices, electronic health records, and even social media – to create a comprehensive health profile for each individual. This holistic approach allows for more precise treatment recommendations and better prediction of potential health risks.</p><p>For instance, researchers at Mount Sinai Hospital have developed an AI system called Deep Patient. By analyzing the electronic health records of about 700,000 patients, Deep Patient can predict the onset of diseases like schizophrenia, diabetes, and various cancers with remarkable accuracy. This kind of predictive power could revolutionize preventive care, allowing interventions before diseases take hold.</p><h2 id="the-invisible-caregiver-ai-in-patient-monitoring"><strong>The Invisible Caregiver: AI in Patient Monitoring</strong></h2><p>Now, envision a hospital where patients are monitored continuously, not by overworked nurses, but by AI systems that never sleep. These systems can detect subtle changes in a patient's condition long before they become critical, alerting healthcare providers and potentially saving lives.</p><p>This isn't a far-off dream—it's happening now. At Johns Hopkins Hospital, an AI system called Sepsis Watch is helping to detect sepsis, a life-threatening condition, hours before overt clinical signs appear. This early warning system has already led to faster interventions and improved patient outcomes. In fact, this system has helped reduce sepsis-related mortality by 18.2% in its first year of implementation.</p><p>But the potential of AI in patient monitoring extends far beyond the hospital walls. With the rise of Internet of Things (IoT) devices and wearable technology, AI can now monitor patients in their homes, providing real-time health data to healthcare providers. This continuous monitoring could be particularly beneficial for managing chronic conditions like heart disease and diabetes.</p><p>For example, AliveCor's KardiaMobile device, coupled with AI analysis, allows patients to take medical-grade ECGs at home. The AI can detect atrial fibrillation, a common heart rhythm disorder, with 98% sensitivity and 97% specificity. This kind of technology could revolutionize how we manage cardiac health, potentially preventing strokes and other serious complications.</p><h2 id="the-drug-discovery-revolution-accelerating-the-path-to-new-treatments"><strong>The Drug Discovery Revolution: Accelerating the Path to New Treatments</strong></h2><p>Perhaps the most exciting frontier is in drug discovery. Traditionally, developing a new drug takes over a decade and billions of dollars. AI is set to disrupt this process dramatically, potentially bringing life-saving treatments to patients faster than ever before.</p><p>Consider Insilico Medicine, a company using AI to design new molecules for drug development. In 2019, they used their AI system to create a new drug candidate for fibrosis in just 46 days—a process that typically takes years. This kind of acceleration could be game-changing in the face of global health crises or emerging diseases.</p><p>Another company, Atomwise, uses AI to predict how different molecules will bind to target proteins, a crucial step in drug discovery. Their AI system can screen 10 million compounds each day, a task that would be impossible for human researchers. In 2020, Atomwise announced a partnership with Eli Lilly to use their AI technology to discover potential treatments for COVID-19.</p><p>But AI's potential in drug discovery goes beyond speed. It can also help identify new uses for existing drugs, a process known as drug repurposing. For instance, BenevolentAI used their AI platform to identify baricitinib, an existing drug for rheumatoid arthritis, as a potential treatment for COVID-19. This discovery led to clinical trials, and baricitinib has since been authorized for emergency use in COVID-19 patients in several countries.</p><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
             
         <picture><img class="kg-signup-card-image" src="https://tokenwisdom.ghost.io/content/images/2024/02/a-wider-perspective-2.gif" alt=""></picture>
     
@@ -133,8 +165,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 <div style="height: 333px"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-background-color="#1a1a1c" data-text-color="#FFFFFF" data-button-color="#2a1002" data-button-text-color="#FFFFFF" data-title="Token Wisdom ✨ " data-description="Invest in knowledge. It provides great returns." data-icon="https://tokenwisdom.ghost.io/content/images/size/w192h192/size/w256h256/2024/02/rocketMan.gif" data-site="https://tokenwisdom.ghost.io/" async></script></div>
 <!--kg-card-end: html-->
 
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/data.html">All the Data</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/wellness.html">Wellness</a><a class="post-tag" href="../tags/human-body-communication.html">Human Body Communication</a><a class="post-tag" href="../tags/human-computer-interaction.html">Human Computer Interaction</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/deeptech.html">Deep Tech</a><a class="post-tag" href="../tags/brain-health.html">Brain Health</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/data.html">All the Data</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/wellness.html">Wellness</a><a class="post-tag" href="../tags/human-body-communication.html">Human Body Communication</a><a class="post-tag" href="../tags/human-computer-interaction.html">Human Computer Interaction</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/deeptech.html">Deep Tech</a><a class="post-tag" href="../tags/brain-health.html">Brain Health</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -150,52 +188,115 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

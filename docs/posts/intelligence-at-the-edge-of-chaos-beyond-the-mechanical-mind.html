@@ -67,28 +67,60 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.091 · W50 · Dec 15, 2024</span></span>
 </div>
 
-<article class="essay-wrap">
+<article class="essay-frame">
   
-  <h1 class="essay-title">Intelligence at the Edge of Chaos: Beyond the Mechanical Mind</h1>
-  <p class="essay-deck">W49 - Imagine capturing a hurricane in a jar. That&#x27;s our AI folly—reducing cognition to a glorified Erector Set. We&#x27;re building elaborate mousetraps while true intelligence slips through our fingers. It&#x27;s time to smash our epistemological camera and rebuild from scratch.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>December 15, 2024</span>
-    <span class="sep">·</span>
-    <span>12 min read</span>
-  </div>
-  <div class="prose">
-    
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Lightning_XL_Create_an_image_depicting_the_intersecti_0.jpg" alt="Intelligence at the Edge of Chaos: Beyond the Mechanical Mind" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 49</div>
+    <h1 class="essay-title">Intelligence at the Edge of Chaos: Beyond the Mechanical Mind</h1>
+    <p class="essay-deck">Imagine capturing a hurricane in a jar. That&#x27;s our AI folly—reducing cognition to a glorified Erector Set. We&#x27;re building elaborate mousetraps while true intelligence slips through our fingers. It&#x27;s time to smash our epistemological camera and rebuild from scratch.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>12 min read</span>
+      <span class="sep">·</span>
+      <span>December 15, 2024</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      
 <!--kg-card-begin: html-->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/cc2c7771-71f6-4261-b1b8-bef4c1783fc7/"></iframe></div>
+<div class="tw-embed"><iframe frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/cc2c7771-71f6-4261-b1b8-bef4c1783fc7/" loading="lazy"></iframe></div>
 <!--kg-card-end: html-->
-<blockquote class="kg-blockquote-alt"><strong>"The map is not the territory."</strong></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">— according to Alfred Korzybski</span></figcaption></figure><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://tokenwisdom-and-notebooklm.captivate.fm/episode/w49-intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind/?ref=tokenwisdom.ghost.io"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Title: Beyond the Mechanical Mind: Rethinking AI and Intelligence - NotebookLM ➡ Token Wisdom ✨</div><div class="kg-bookmark-description">Discover why our approach to AI may be flawed and explore a new paradigm for understanding intelligence as an emergent phenomenon of interaction.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://tokenwisdom.ghost.io/content/images/icon/small-artwork-60.jpg" alt=""><span class="kg-bookmark-author">NotebookLM ➡ Token Wisdom ✨</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://tokenwisdom.ghost.io/content/images/thumbnail/b2a593d6-0b88-4c1e-a246-7f7d0753959d-60.jpg" alt="" onerror="this.style.display = 'none'"></div></a></figure><hr><h3 id="reframing-intelligence-in-the-age-of-artificial-intelligence"><strong>Reframing Intelligence in the Age of Artificial Intelligence</strong></h3><p>Imagine trying to capture a hurricane in a jar. That's the fundamental absurdity plaguing our pursuit of artificial intelligence. We're guilty of a colossal epistemological blunder, reducing the vast, swirling complexity of cognition to a glorified Erector Set. This mechanistic delusion—that intelligence is just a collection of nuts-and-bolts capabilities we can assemble like some cosmic IKEA furniture—isn't just misguided. It's intellectual myopia of the highest order, blinding us to the true nature of the mind's intricate dance.</p><p>Make no mistake: this isn't merely academic navel-gazing. Our flawed framework is the invisible straightjacket constraining AI development, leading us down rabbit holes of increasing sophistication but diminishing returns. We're building ever-more elaborate mousetraps while the very essence of intelligence slips through our fingers like quicksilver.</p><p>The stakes couldn't be higher. As we chase the chimera of artificial general intelligence with our current toolbox, we risk creating not a mind, but a funhouse mirror reflection of our own limited understanding—a hall of algorithmic echoes impressive in their mimicry but utterly devoid of the spark that defines true cognition.</p><p>This mechanistic approach to AI, while yielding impressive results in narrow domains, ultimately amounts to a Sisyphean endeavor in pursuit of general intelligence. It's akin to attempting to fathom the vastness of the cosmos by meticulously cataloging grains of sand—you might uncover fascinating details about silica composition, but you'll remain blind to the gravitational dance of galaxies, the birth and death of stars, and the very fabric of spacetime that gives the universe its form.</p><p>The story of AI research feels like watching the same movie over and over. Each new wave of researchers bursts onto the scene, brimming with optimism, only to trip over the same stumbling blocks that felled their predecessors. From the rigid rule-based systems of the 1980s to today's massive language models, we've watched this cycle repeat itself. Bright-eyed teams charge forward, convinced they've cracked the code, only to slam into the same walls that have stymied progress for decades. <em>Time and again, we mistake a machine's ability to do one thing well for true intelligence.</em></p><p>We've become so enamored with our silicon savants that we mistake their parlor tricks for genuine comprehension. It's like watching a master illusionist and concluding they actually bent the laws of physics—an impressive act, sure—but hardly an understanding of reality.</p><p>This isn't just a case of rose-tinted spectacles clouding our technological vision; it's a chronic epistemological astigmatism that distorts our very conception of intelligence. Each new computational wunderkind—whether it's IBM's chess virtuoso Deep Blue or DeepMind's Go guru AlphaGo—sparks a veritable Cambrian explosion of anthropomorphic projections and hubristic prophecies. We're like overzealous parents at a school play, convinced that little Timmy's wooden recitation of "To be or not to be" heralds the arrival of the next Laurence Olivier.</p><p>The inevitable "AI winters" that follow aren't mere funding droughts or waning public interest; they're existential hangovers, forcing us to confront the yawning chasm between our Icarian ambitions and the leaden reality of our creations. This whiplash-inducing cycle of hype and disillusionment isn't just a PR hiccup or a quirk of Silicon Valley's hype machine. No, it's the symptomatic fever of a deeper intellectual malaise—a category error so fundamental it threatens to unravel our entire conceptual framework for intelligence and cognition.</p><p>Our dogged determination to dissect intelligence into a neat catalogue of discrete, scalable capabilities isn't just myopic—it's a conceptual straitjacket that threatens to asphyxiate genuine progress. Consider the deceptively simple act of recognizing a friend in a sea of faces. The standard AI playbook would have you believe it's a tidy, algorithmic waltz: first, the sharp-eyed edge detector does its dance, then the pattern matcher takes a twirl, before the memory module makes its grand entrance for the finale. It's a charming performance, to be sure, but one that bears about as much resemblance to actual cognition as a marionette show does to human theater.</p><p>But, aye! Here's the rub: this tidy, mechanistic view might be completely missing the mark. It's seductively simple, sure, but it could be fundamentally misrepresenting how intelligence actually works. We've fallen into a trap of our own making, constructing AI systems that mirror this fragmented understanding—better vision algorithms here, more accurate pattern matchers there, topped off with turbocharged memory models.</p><p>This reductionist view of intelligence has practical consequences. It leads us to create AI systems that excel at specific tasks but fail spectacularly when faced with novel situations or contextual nuances that humans navigate effortlessly. The brittleness of these systems—their tendency to break down in unexpected ways when confronted with scenarios outside their training data—isn't just a technical limitation. It's a clue that our fundamental approach might be flawed.</p><p>Consider the phenomenon of adversarial examples in machine learning. Tiny, imperceptible changes to an image can cause a state-of-the-art image recognition system to confidently misclassify it—seeing a gibbon where humans clearly see a panda, for instance. These vulnerabilities aren't mere glitches; they're windows into the vast gulf between how our AI systems process information and how biological intelligence operates. They suggest that our artificial neural networks, despite their biological inspiration, might be missing crucial aspects of how real brains work.</p><p>To grasp the depth of this potential misconception, we must look beyond our conventional understanding and explore perspectives that challenge our ingrained assumptions about cognition.</p><p>As <a href="https://www.linkedin.com/in/melanie-mitchell-08a04a6/?ref=tokenwisdom.ghost.io">Melanie Mitchell</a>, Professor of Complexity at the Santa Fe Institute, might argue in this context,</p><blockquote>"The biggest obstacle to developing artificial intelligence might be our own preconceptions about what intelligence is."</blockquote><p>This observation cuts to the heart of our challenge—it suggests our entire conceptual framework for creating AI might be fundamentally flawed.</p><p>The evidence for this emerges from unexpected places. When researchers connect different specialized AI systems, they sometimes observe what complexity theorists call "capability gradients"—zones where different optimization patterns interact to create unexpected behaviors. These aren't mere combinations of existing capabilities; they represent the emergence of entirely new properties that cannot be reduced to or predicted from the components' individual characteristics.</p><p>This phenomenon challenges everything we think we know about intelligence development. <a href="https://en.wikipedia.org/wiki/Douglas_Hofstadter?ref=tokenwisdom.ghost.io">Douglas Hofstadter</a> articulates this shift:</p><blockquote>"We're discovering that intelligence isn't something you build piece by piece like a machine. It's more like an ecosystem, where complex behaviors emerge from relatively simple interactions."</blockquote><p>This isn't merely a clever metaphor to spice up academic discourse; it's a seismic shift in our intellectual tectonics, forcing a wholesale reimagining of how intelligence manifests within the Byzantine labyrinths of interconnected systems. We're not just changing the lens through which we view intelligence; we're smashing the entire epistemological camera and building a new one from scratch.</p><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
+<blockquote class="kg-blockquote-alt"><strong>"The map is not the territory."</strong></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">— according to Alfred Korzybski</span></figcaption></figure><figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://tokenwisdom-and-notebooklm.captivate.fm/episode/w49-intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind/?ref=tokenwisdom.ghost.io"><div class="kg-bookmark-content"><div class="kg-bookmark-title">Title: Beyond the Mechanical Mind: Rethinking AI and Intelligence - NotebookLM ➡ Token Wisdom ✨</div><div class="kg-bookmark-description">Discover why our approach to AI may be flawed and explore a new paradigm for understanding intelligence as an emergent phenomenon of interaction.</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://tokenwisdom.ghost.io/content/images/icon/small-artwork-60.jpg" alt=""><span class="kg-bookmark-author">NotebookLM ➡ Token Wisdom ✨</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://tokenwisdom.ghost.io/content/images/thumbnail/b2a593d6-0b88-4c1e-a246-7f7d0753959d-60.jpg" alt="" onerror="this.style.display = 'none'"></div></a></figure><hr><h3 id="reframing-intelligence-in-the-age-of-artificial-intelligence"><strong>Reframing Intelligence in the Age of Artificial Intelligence</strong></h3><p class="essay-lede">Imagine trying to capture a hurricane in a jar. That's the fundamental absurdity plaguing our pursuit of artificial intelligence. We're guilty of a colossal epistemological blunder, reducing the vast, swirling complexity of cognition to a glorified Erector Set. This mechanistic delusion—that intelligence is just a collection of nuts-and-bolts capabilities we can assemble like some cosmic IKEA furniture—isn't just misguided. It's intellectual myopia of the highest order, blinding us to the true nature of the mind's intricate dance.</p><p>Make no mistake: this isn't merely academic navel-gazing. Our flawed framework is the invisible straightjacket constraining AI development, leading us down rabbit holes of increasing sophistication but diminishing returns. We're building ever-more elaborate mousetraps while the very essence of intelligence slips through our fingers like quicksilver.</p><p>The stakes couldn't be higher. As we chase the chimera of artificial general intelligence with our current toolbox, we risk creating not a mind, but a funhouse mirror reflection of our own limited understanding—a hall of algorithmic echoes impressive in their mimicry but utterly devoid of the spark that defines true cognition.</p><p>This mechanistic approach to AI, while yielding impressive results in narrow domains, ultimately amounts to a Sisyphean endeavor in pursuit of general intelligence. It's akin to attempting to fathom the vastness of the cosmos by meticulously cataloging grains of sand—you might uncover fascinating details about silica composition, but you'll remain blind to the gravitational dance of galaxies, the birth and death of stars, and the very fabric of spacetime that gives the universe its form.</p><p>The story of AI research feels like watching the same movie over and over. Each new wave of researchers bursts onto the scene, brimming with optimism, only to trip over the same stumbling blocks that felled their predecessors. From the rigid rule-based systems of the 1980s to today's massive language models, we've watched this cycle repeat itself. Bright-eyed teams charge forward, convinced they've cracked the code, only to slam into the same walls that have stymied progress for decades. <em>Time and again, we mistake a machine's ability to do one thing well for true intelligence.</em></p><p>We've become so enamored with our silicon savants that we mistake their parlor tricks for genuine comprehension. It's like watching a master illusionist and concluding they actually bent the laws of physics—an impressive act, sure—but hardly an understanding of reality.</p><p>This isn't just a case of rose-tinted spectacles clouding our technological vision; it's a chronic epistemological astigmatism that distorts our very conception of intelligence. Each new computational wunderkind—whether it's IBM's chess virtuoso Deep Blue or DeepMind's Go guru AlphaGo—sparks a veritable Cambrian explosion of anthropomorphic projections and hubristic prophecies. We're like overzealous parents at a school play, convinced that little Timmy's wooden recitation of "To be or not to be" heralds the arrival of the next Laurence Olivier.</p><p>The inevitable "AI winters" that follow aren't mere funding droughts or waning public interest; they're existential hangovers, forcing us to confront the yawning chasm between our Icarian ambitions and the leaden reality of our creations. This whiplash-inducing cycle of hype and disillusionment isn't just a PR hiccup or a quirk of Silicon Valley's hype machine. No, it's the symptomatic fever of a deeper intellectual malaise—a category error so fundamental it threatens to unravel our entire conceptual framework for intelligence and cognition.</p><p>Our dogged determination to dissect intelligence into a neat catalogue of discrete, scalable capabilities isn't just myopic—it's a conceptual straitjacket that threatens to asphyxiate genuine progress. Consider the deceptively simple act of recognizing a friend in a sea of faces. The standard AI playbook would have you believe it's a tidy, algorithmic waltz: first, the sharp-eyed edge detector does its dance, then the pattern matcher takes a twirl, before the memory module makes its grand entrance for the finale. It's a charming performance, to be sure, but one that bears about as much resemblance to actual cognition as a marionette show does to human theater.</p><p>But, aye! Here's the rub: this tidy, mechanistic view might be completely missing the mark. It's seductively simple, sure, but it could be fundamentally misrepresenting how intelligence actually works. We've fallen into a trap of our own making, constructing AI systems that mirror this fragmented understanding—better vision algorithms here, more accurate pattern matchers there, topped off with turbocharged memory models.</p><p>This reductionist view of intelligence has practical consequences. It leads us to create AI systems that excel at specific tasks but fail spectacularly when faced with novel situations or contextual nuances that humans navigate effortlessly. The brittleness of these systems—their tendency to break down in unexpected ways when confronted with scenarios outside their training data—isn't just a technical limitation. It's a clue that our fundamental approach might be flawed.</p><p>Consider the phenomenon of adversarial examples in machine learning. Tiny, imperceptible changes to an image can cause a state-of-the-art image recognition system to confidently misclassify it—seeing a gibbon where humans clearly see a panda, for instance. These vulnerabilities aren't mere glitches; they're windows into the vast gulf between how our AI systems process information and how biological intelligence operates. They suggest that our artificial neural networks, despite their biological inspiration, might be missing crucial aspects of how real brains work.</p><p>To grasp the depth of this potential misconception, we must look beyond our conventional understanding and explore perspectives that challenge our ingrained assumptions about cognition.</p><p>As <a href="https://www.linkedin.com/in/melanie-mitchell-08a04a6/?ref=tokenwisdom.ghost.io">Melanie Mitchell</a>, Professor of Complexity at the Santa Fe Institute, might argue in this context,</p><blockquote>"The biggest obstacle to developing artificial intelligence might be our own preconceptions about what intelligence is."</blockquote><p>This observation cuts to the heart of our challenge—it suggests our entire conceptual framework for creating AI might be fundamentally flawed.</p><p>The evidence for this emerges from unexpected places. When researchers connect different specialized AI systems, they sometimes observe what complexity theorists call "capability gradients"—zones where different optimization patterns interact to create unexpected behaviors. These aren't mere combinations of existing capabilities; they represent the emergence of entirely new properties that cannot be reduced to or predicted from the components' individual characteristics.</p><p>This phenomenon challenges everything we think we know about intelligence development. <a href="https://en.wikipedia.org/wiki/Douglas_Hofstadter?ref=tokenwisdom.ghost.io">Douglas Hofstadter</a> articulates this shift:</p><blockquote>"We're discovering that intelligence isn't something you build piece by piece like a machine. It's more like an ecosystem, where complex behaviors emerge from relatively simple interactions."</blockquote><p>This isn't merely a clever metaphor to spice up academic discourse; it's a seismic shift in our intellectual tectonics, forcing a wholesale reimagining of how intelligence manifests within the Byzantine labyrinths of interconnected systems. We're not just changing the lens through which we view intelligence; we're smashing the entire epistemological camera and building a new one from scratch.</p><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
             
         <picture><img class="kg-signup-card-image" src="https://tokenwisdom.ghost.io/content/images/2024/02/a-wider-perspective-2.gif" alt=""></picture>
     
@@ -154,8 +186,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
                 
             </div>
         </div>
+    </div>
   </div>
   
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -171,52 +209,115 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

@@ -67,26 +67,58 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.031 · W27 · Jul 7, 2023</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Cyber \ Security · Emerging Tech · A.I. (and Subsets)</div>
-  <h1 class="essay-title">Unmasking Biases in Pre-Trained Transformers with Laundered Data</h1>
-  <p class="essay-deck">The Dirty Truth: The Biased and Unsettling Low-Functioning Pre-Trained Transformers We’re Building Our Future On 🔮
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/launderedData.gif" alt="Unmasking Biases in Pre-Trained Transformers with Laundered Data" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Cyber \ Security</div>
+    <h1 class="essay-title">Unmasking Biases in Pre-Trained Transformers with Laundered Data</h1>
+    <p class="essay-deck">The Dirty Truth: The Biased and Unsettling Low-Functioning Pre-Trained Transformers We’re Building Our Future On 🔮
 
 Have you ever put a red shirt in the white load? Pink everywhere, right? That’s what we’re dealing with here. I totally understand viewing the world through rose-colored lenses, but this is a stretch when our future depends on it. From virtual assistants to recommendation systems, pre-trained transformers have become a ubiquitous presence in our lives and underneath virtually ever</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>July 7, 2023</span>
-    <span class="sep">·</span>
-    <span>9 min read</span>
-  </div>
-  <div class="prose">
-    <h3 id="the-dirty-truth-the-biased-and-unsettling-low-functioning-pre-trained-transformers-we%E2%80%99re-building-our-future-on-%F0%9F%94%AE">The Dirty Truth: The Biased and Unsettling Low-Functioning Pre-Trained Transformers We’re Building Our Future On 🔮</h3><hr><p>Have you ever put a red shirt in the white load? Pink everywhere, right? That’s what we’re dealing with here. I totally understand viewing the world through rose-colored lenses, but this is a stretch when our future depends on it. From virtual assistants to recommendation systems, pre-trained transformers have become a ubiquitous presence in our lives and underneath virtually every piece of software in just under a year, closer to nine months. Every corner of the Earth is down with GPT, yeah you know me. These powerful language models, capable of generating human-like text, have revolutionized various industries. Their generative powers create fuel for all the other software to ingest, digest, and expel at a rate that continues to climb each day. However, beneath their polished exterior lies a concerning reality: the biased and unsettlingly low-functioning pre-trained transformers we are building our future with. Let me separate the lights from the darks and the cold from the hot, for you. So fresh and so clean, clean ✨</p><h2 id="taken-to-the-cleaners">Taken to the Cleaners</h2><figure class="kg-card kg-image-card"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fa3f86b3-74c3-4f9f-ab52-10800a7d3595/batman_robinLaundromat.gif" class="kg-image" alt="" loading="lazy"></figure><p>We have learned how to launder money and now we’re laundering data; it’s easier to manufacture and worth a great deal more.&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9EYXRhX2xhdW5kZXJpbmc_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj1sYXVuZGVyZWQtZGF0YSIsInBvc3RfaWQiOiJkMzQ1YjEwOS1hOGU1LTQ2YTMtODhiNi03ZTg5MjkzZDE5OGEiLCJwdWJsaWNhdGlvbl9pZCI6ImZlMjgxNjU5LWY5NjMtNGIzZS04MzQ1LTJmYzc2MzgzMTQwNCIsInZpc2l0X3Rva2VuIjoiMjk2ZTk5ZmMtMjg0Ni00NDNmLWJjY2MtYjNkNzFiMTQwMDJkIiwiaWF0IjoxNzA1NjQ3NTg3LCJpc3MiOiJvcmNoaWQifQ.F4Y-QwpHGX9BCebamCoebDaIV3GQtyR3JDSz8M1rNLY?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow">Laundered Data</a>&nbsp;refers to information that has been cleansed, processed, and made suitable for use in machine learning algorithms. While this practice may seem innocuous, it can lead to biased outcomes and perpetuate societal injustices. The increasing reliance on pre-trained transformers, which are trained on vast amounts of data, exacerbates this issue. These transformers, although touted as groundbreaking AI models, are not immune to the biases ingrained in the data they are trained on. The gateway is&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9EYXRhX2xhdW5kZXJpbmc_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj1sYXVuZGVyZWQtZGF0YSIsInBvc3RfaWQiOiJkMzQ1YjEwOS1hOGU1LTQ2YTMtODhiNi03ZTg5MjkzZDE5OGEiLCJwdWJsaWNhdGlvbl9pZCI6ImZlMjgxNjU5LWY5NjMtNGIzZS04MzQ1LTJmYzc2MzgzMTQwNCIsInZpc2l0X3Rva2VuIjoiMjk2ZTk5ZmMtMjg0Ni00NDNmLWJjY2MtYjNkNzFiMTQwMDJkIiwiaWF0IjoxNzA1NjQ3NTg3LCJpc3MiOiJvcmNoaWQifQ.F4Y-QwpHGX9BCebamCoebDaIV3GQtyR3JDSz8M1rNLY?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow">Data Laundering</a>&nbsp;and now as a result of large language models, it has graduated. In today's data-driven world, laundered data has become a pervasive problem.</p><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>9 min read</span>
+      <span class="sep">·</span>
+      <span>July 7, 2023</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <h3 id="the-dirty-truth-the-biased-and-unsettling-low-functioning-pre-trained-transformers-we%E2%80%99re-building-our-future-on-%F0%9F%94%AE">The Dirty Truth: The Biased and Unsettling Low-Functioning Pre-Trained Transformers We’re Building Our Future On 🔮</h3><hr><p class="essay-lede">Have you ever put a red shirt in the white load? Pink everywhere, right? That’s what we’re dealing with here. I totally understand viewing the world through rose-colored lenses, but this is a stretch when our future depends on it. From virtual assistants to recommendation systems, pre-trained transformers have become a ubiquitous presence in our lives and underneath virtually every piece of software in just under a year, closer to nine months. Every corner of the Earth is down with GPT, yeah you know me. These powerful language models, capable of generating human-like text, have revolutionized various industries. Their generative powers create fuel for all the other software to ingest, digest, and expel at a rate that continues to climb each day. However, beneath their polished exterior lies a concerning reality: the biased and unsettlingly low-functioning pre-trained transformers we are building our future with. Let me separate the lights from the darks and the cold from the hot, for you. So fresh and so clean, clean ✨</p><h2 id="taken-to-the-cleaners">Taken to the Cleaners</h2><figure class="kg-card kg-image-card"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/fa3f86b3-74c3-4f9f-ab52-10800a7d3595/batman_robinLaundromat.gif" class="kg-image" alt="" loading="lazy"></figure><p>We have learned how to launder money and now we’re laundering data; it’s easier to manufacture and worth a great deal more.&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9EYXRhX2xhdW5kZXJpbmc_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj1sYXVuZGVyZWQtZGF0YSIsInBvc3RfaWQiOiJkMzQ1YjEwOS1hOGU1LTQ2YTMtODhiNi03ZTg5MjkzZDE5OGEiLCJwdWJsaWNhdGlvbl9pZCI6ImZlMjgxNjU5LWY5NjMtNGIzZS04MzQ1LTJmYzc2MzgzMTQwNCIsInZpc2l0X3Rva2VuIjoiMjk2ZTk5ZmMtMjg0Ni00NDNmLWJjY2MtYjNkNzFiMTQwMDJkIiwiaWF0IjoxNzA1NjQ3NTg3LCJpc3MiOiJvcmNoaWQifQ.F4Y-QwpHGX9BCebamCoebDaIV3GQtyR3JDSz8M1rNLY?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow">Laundered Data</a>&nbsp;refers to information that has been cleansed, processed, and made suitable for use in machine learning algorithms. While this practice may seem innocuous, it can lead to biased outcomes and perpetuate societal injustices. The increasing reliance on pre-trained transformers, which are trained on vast amounts of data, exacerbates this issue. These transformers, although touted as groundbreaking AI models, are not immune to the biases ingrained in the data they are trained on. The gateway is&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2VuLndpa2lwZWRpYS5vcmcvd2lraS9EYXRhX2xhdW5kZXJpbmc_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj1sYXVuZGVyZWQtZGF0YSIsInBvc3RfaWQiOiJkMzQ1YjEwOS1hOGU1LTQ2YTMtODhiNi03ZTg5MjkzZDE5OGEiLCJwdWJsaWNhdGlvbl9pZCI6ImZlMjgxNjU5LWY5NjMtNGIzZS04MzQ1LTJmYzc2MzgzMTQwNCIsInZpc2l0X3Rva2VuIjoiMjk2ZTk5ZmMtMjg0Ni00NDNmLWJjY2MtYjNkNzFiMTQwMDJkIiwiaWF0IjoxNzA1NjQ3NTg3LCJpc3MiOiJvcmNoaWQifQ.F4Y-QwpHGX9BCebamCoebDaIV3GQtyR3JDSz8M1rNLY?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow">Data Laundering</a>&nbsp;and now as a result of large language models, it has graduated. In today's data-driven world, laundered data has become a pervasive problem.</p><div class="kg-card kg-signup-card kg-width-full kg-content-wide " data-lexical-signup-form="" style="; display: none;">
             
         <picture><img class="kg-signup-card-image" src="https://tokenwisdom.ghost.io/content/images/2024/01/1_J4bn3-KuRSG8skZkES2CEQ.gif" alt=""></picture>
     
@@ -143,8 +175,14 @@ Have you ever put a red shirt in the white load? Pink everywhere, right? That’
                 </div>
             </div>
         </div><p>We’re making some Stone Soup here and if you enjoyed this amuse-bouche of news compilation in bite-sized morsels, please share with your friends and help feed a community.&nbsp;<em>Mmmm. #nomnom.</em></p><p><strong>Token Wisdom ::&nbsp;</strong><a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3R3aXR0ZXIuY29tL3dvcnRoYWZvcnR1bmU_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj1sYXVuZGVyZWQtZGF0YSIsInBvc3RfaWQiOiJkMzQ1YjEwOS1hOGU1LTQ2YTMtODhiNi03ZTg5MjkzZDE5OGEiLCJwdWJsaWNhdGlvbl9pZCI6ImZlMjgxNjU5LWY5NjMtNGIzZS04MzQ1LTJmYzc2MzgzMTQwNCIsInZpc2l0X3Rva2VuIjoiMjk2ZTk5ZmMtMjg0Ni00NDNmLWJjY2MtYjNkNzFiMTQwMDJkIiwiaWF0IjoxNzA1NjQ3NTg3LCJpc3MiOiJvcmNoaWQifQ.0qhMJTno0KSGulFy2Al4FGVKShzn2lvwL4RYzKUugVg?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><strong>@worthafortune</strong></a></p>
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/cybersecurity.html">Cyber \ Security</a><a class="post-tag" href="../tags/emerging-technology.html">Emerging Tech</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/data.html">All the Data</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/cybersecurity.html">Cyber \ Security</a><a class="post-tag" href="../tags/emerging-technology.html">Emerging Tech</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/data.html">All the Data</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -160,52 +198,115 @@ Have you ever put a red shirt in the white load? Pink everywhere, right? That’
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

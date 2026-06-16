@@ -67,24 +67,56 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.151 · W03 · Jan 15, 2026</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Ethics \ Principles · Economic  ≠ · Challenges</div>
-  <h1 class="essay-title">AI Didn&#x27;t Break Democracy. We Did. Four Decades Ago.</h1>
-  <p class="essay-deck">W03 - AI didn&#x27;t kill democracy; it exposed a decades-old decay. The real culprit? Years of choices hollowing our institutions. AI isn&#x27;t the assassin, but a mirror reflecting what we&#x27;ve ignored. It didn&#x27;t create the crisis—it just made it impossible to deny any longer.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>January 15, 2026</span>
-    <span class="sep">·</span>
-    <span>15 min read</span>
-  </div>
-  <div class="prose">
-    <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://tokenwisdom-and-notebooklm.captivate.fm/episode/w03-a-ai-didnt-break-democracy-we-did-four-decades-ago-/?ref=tokenwisdom.ghost.io"><div class="kg-bookmark-content"><div class="kg-bookmark-title">W03 •A• AI Didn’t Break Democracy. We Did. Four Decades Ago. ✨ - NotebookLM ➡ Token Wisdom ✨</div><div class="kg-bookmark-description">In this episode of The Deep Dig, we explore Khayyam Wakil’s provocative analysis that challenges the prevailing narrative about artificial intelligence…</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://tokenwisdom.ghost.io/content/images/icon/small-artwork-193.jpg" alt=""><span class="kg-bookmark-author">NotebookLM ➡ Token Wisdom ✨</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://tokenwisdom.ghost.io/content/images/thumbnail/b2a593d6-0b88-4c1e-a246-7f7d0753959d-192.jpg" alt="" onerror="this.style.display = 'none'"></div></a></figure><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2025/03/token-visualizer-1.gif" class="kg-image" alt="" loading="lazy" width="1600" height="900" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2025/03/token-visualizer-1.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2025/03/token-visualizer-1.gif 1000w, https://tokenwisdom.ghost.io/content/images/2025/03/token-visualizer-1.gif 1600w" sizes="(min-width: 720px) 720px"></figure><blockquote class="kg-blockquote-alt"><strong><em>The collapse of institutions comes not with a bang, but with decades of quiet neglect disguised as efficiency.</em></strong></blockquote><p>— According to Noam Chomsky, whose critiques of neoliberalism are now routinely cited in tech company diversity reports while they continue to lobby against labor protections and public oversight</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2025/03/token_sparkles.gif" class="kg-image" alt="" loading="lazy" width="256" height="256"></figure><div class="kg-card kg-product-card">
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2026/01/concept-a-sophisticated-editorial-illust_wDEi0nNESMuw5ejPHxjtJQ_eUXJQJC4S0ycWV6ICL_8cA.jpeg" alt="AI Didn&#x27;t Break Democracy. We Did. Four Decades Ago." loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 03 · Ethics \ Principles</div>
+    <h1 class="essay-title">AI Didn&#x27;t Break Democracy. We Did. Four Decades Ago.</h1>
+    <p class="essay-deck">AI didn&#x27;t kill democracy; it exposed a decades-old decay. The real culprit? Years of choices hollowing our institutions. AI isn&#x27;t the assassin, but a mirror reflecting what we&#x27;ve ignored. It didn&#x27;t create the crisis—it just made it impossible to deny any longer.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>15 min read</span>
+      <span class="sep">·</span>
+      <span>January 15, 2026</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <figure class="kg-card kg-bookmark-card"><a class="kg-bookmark-container" href="https://tokenwisdom-and-notebooklm.captivate.fm/episode/w03-a-ai-didnt-break-democracy-we-did-four-decades-ago-/?ref=tokenwisdom.ghost.io"><div class="kg-bookmark-content"><div class="kg-bookmark-title">W03 •A• AI Didn’t Break Democracy. We Did. Four Decades Ago. ✨ - NotebookLM ➡ Token Wisdom ✨</div><div class="kg-bookmark-description">In this episode of The Deep Dig, we explore Khayyam Wakil’s provocative analysis that challenges the prevailing narrative about artificial intelligence…</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://tokenwisdom.ghost.io/content/images/icon/small-artwork-193.jpg" alt=""><span class="kg-bookmark-author">NotebookLM ➡ Token Wisdom ✨</span></div></div><div class="kg-bookmark-thumbnail"><img src="https://tokenwisdom.ghost.io/content/images/thumbnail/b2a593d6-0b88-4c1e-a246-7f7d0753959d-192.jpg" alt="" onerror="this.style.display = 'none'"></div></a></figure><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2025/03/token-visualizer-1.gif" class="kg-image" alt="" loading="lazy" width="1600" height="900" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2025/03/token-visualizer-1.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2025/03/token-visualizer-1.gif 1000w, https://tokenwisdom.ghost.io/content/images/2025/03/token-visualizer-1.gif 1600w" sizes="(min-width: 720px) 720px"></figure><blockquote class="kg-blockquote-alt"><strong><em>The collapse of institutions comes not with a bang, but with decades of quiet neglect disguised as efficiency.</em></strong></blockquote><p>— According to Noam Chomsky, whose critiques of neoliberalism are now routinely cited in tech company diversity reports while they continue to lobby against labor protections and public oversight</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2025/03/token_sparkles.gif" class="kg-image" alt="" loading="lazy" width="256" height="256"></figure><div class="kg-card kg-product-card">
             <div class="kg-product-card-container">
                 <img src="https://tokenwisdom.ghost.io/content/images/2025/12/cowllequinRomance-1.gif" width="480" height="318" class="kg-product-card-image" loading="lazy">
                 <div class="kg-product-card-title-container">
@@ -99,13 +131,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
             </div>
         </div>
 <!--kg-card-begin: html-->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d34a7ba8-b036-4dab-ada2-0b9ef6c8dc92/"></iframe></div>
+<div class="tw-embed"><iframe frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/d34a7ba8-b036-4dab-ada2-0b9ef6c8dc92/" loading="lazy"></iframe></div>
 <!--kg-card-end: html-->
 <figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/02/diamonds_are_forever-2.gif" class="kg-image" alt="" loading="lazy" width="917" height="150" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/02/diamonds_are_forever-2.gif 600w, https://tokenwisdom.ghost.io/content/images/2024/02/diamonds_are_forever-2.gif 917w" sizes="(min-width: 720px) 720px"></figure><h2 id="the-ai-alibi"><strong>"The AI Alibi"</strong></h2><p>How we blamed robots for the mess we made…</p><p>With regards and in response to the following:</p>
 <!--kg-card-begin: html-->
 <iframe src="https://drive.google.com/file/d/1ctDrxvhjWG7rHPkbrd39LTCX4QltuIRm/preview" width="100%" height="600px" style="border:0;"></iframe>
 <!--kg-card-end: html-->
-<hr><p>The timeline seemed obvious: artificial intelligence arrives, democracy dies. Except the autopsy tells a different story. The patient had been bleeding out for forty years. AI didn't pull the trigger, it just turned on the lights in the morgue.</p><p>But here's the interesting part: this whole story is backwards. AI isn't destroying our institutions. It's just showing us what we'd already broken. We spent forty years gutting these institutions ourselves defunding, deregulating, and turning public goods into profit centers. ChatGPT didn't poison a healthy democracy. ChatGPT didn't poison a healthy democracy. It arrived to find the patient already flatlined.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg" class="kg-image" alt="" loading="lazy" width="1312" height="736" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg 1000w, https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg 1312w" sizes="(min-width: 720px) 720px"></figure><p>The timing was just too perfect, wasn't it? AI goes mainstream right as everything's falling apart. So we choose the comfortable narrative: blame the newcomer instead of confronting our complicity.</p><h2 id="look-the-numbers-dont-lie">Look, The Numbers Don't Lie.</h2><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg" class="kg-image" alt="" loading="lazy" width="1312" height="736" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg 1000w, https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg 1312w" sizes="(min-width: 720px) 720px"></figure><p>Back in 1964, 77% of Americans trusted their government. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> By 2019—three years before ChatGPT was even a thing—that number had cratered to 17%. <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> We're not talking about a gentle slope here. This was a nosedive.</p>
+<hr><p class="essay-lede">The timeline seemed obvious: artificial intelligence arrives, democracy dies. Except the autopsy tells a different story. The patient had been bleeding out for forty years. AI didn't pull the trigger, it just turned on the lights in the morgue.</p><p>But here's the interesting part: this whole story is backwards. AI isn't destroying our institutions. It's just showing us what we'd already broken. We spent forty years gutting these institutions ourselves defunding, deregulating, and turning public goods into profit centers. ChatGPT didn't poison a healthy democracy. ChatGPT didn't poison a healthy democracy. It arrived to find the patient already flatlined.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg" class="kg-image" alt="" loading="lazy" width="1312" height="736" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg 1000w, https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_vV03bg52TSmkdBiVudnXkw_-JP4Q2oiQT2RIr2cEiRdxg.jpeg 1312w" sizes="(min-width: 720px) 720px"></figure><p>The timing was just too perfect, wasn't it? AI goes mainstream right as everything's falling apart. So we choose the comfortable narrative: blame the newcomer instead of confronting our complicity.</p><h2 id="look-the-numbers-dont-lie">Look, The Numbers Don't Lie.</h2><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg" class="kg-image" alt="" loading="lazy" width="1312" height="736" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg 1000w, https://tokenwisdom.ghost.io/content/images/2026/01/an-illustration-in-the-new-yorker-style-_quscrhp4Qf6x0xlUcWS3zQ_1q9OyYiWTqGX5hP-T2707w.jpeg 1312w" sizes="(min-width: 720px) 720px"></figure><p>Back in 1964, 77% of Americans trusted their government. <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> By 2019—three years before ChatGPT was even a thing—that number had cratered to 17%. <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup> We're not talking about a gentle slope here. This was a nosedive.</p>
 <p>Same thing happened to higher education. In 1975, if you were a professor, you probably had tenure, 57% did, anyway. <sup class="footnote-ref"><a href="#fn3" id="fnref3">[3]</a></sup> Fast forward to 2021, and only 24% have that security. Everyone else? Adjuncts. Underpaid, overworked, scrambling between campuses just to make rent.</p>
 <p>Meanwhile, states slashed university funding by 40% per student. <sup class="footnote-ref"><a href="#fn4" id="fnref4">[4]</a></sup> Student debt went from $24 billion to $1.7 trillion. <sup class="footnote-ref"><a href="#fn5" id="fnref5">[5]</a></sup></p>
 <hr class="footnotes-sep">
@@ -171,8 +203,14 @@ Afraid of AI-induced social isolation? Robert Putnam wrote Bowling Alone in 2000
                 
             </div>
         </div><p>#techethics #systemicchange #collectiveaction <em><strong>#futureof:</strong></em> #techindustry #platformcooperativism #labororganizing #techresistance #powerstructures <br><br>#leadership <em>#longread | 🧠⚡ | #tokenwisdom #thelessyouknow 🌈✨</em></p>
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/economic-inequality.html">Economic  ≠</a><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/future-of-work.html">Future of Work</a><a class="post-tag" href="../tags/misinformation.html">Misinformation</a><a class="post-tag" href="../tags/philosophy.html">Philosophical</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/opinionated-editorials.html">🚨 OP-ED</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/economic-inequality.html">Economic  ≠</a><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/future-of-work.html">Future of Work</a><a class="post-tag" href="../tags/misinformation.html">Misinformation</a><a class="post-tag" href="../tags/philosophy.html">Philosophical</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/opinionated-editorials.html">🚨 OP-ED</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -188,52 +226,115 @@ Afraid of AI-induced social isolation? Robert Putnam wrote Bowling Alone in 2000
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

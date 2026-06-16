@@ -67,26 +67,64 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.005 · W19 · May 12, 2013</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Persuasion · Brands \ Agency · Business Models</div>
-  <h1 class="essay-title">The Art of Confidence</h1>
-  <p class="essay-deck">The smoothest con man that ever lived. That’s what they say about Victor Lustig pictured above. His claim to fame is that he sold the Eiffel Tower, twice. Yup, that happened. He became fluent in multiple languages, harnessed his ocean liner and started printing money, literally.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>May 12, 2013</span>
-    <span class="sep">·</span>
-    <span>6 min read</span>
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/Victor.gif" alt="The Art of Confidence" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Persuasion</div>
+    <h1 class="essay-title">The Art of Confidence</h1>
+    <p class="essay-deck">The smoothest con man that ever lived. That’s what they say about Victor Lustig pictured above. His claim to fame is that he sold the Eiffel Tower, twice. Yup, that happened. He became fluent in multiple languages, harnessed his ocean liner and started printing money, literally.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>6 min read</span>
+      <span class="sep">·</span>
+      <span>May 12, 2013</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <h3 id="a-guide-to-learn-your-hustle">A guide to learn your hustle.</h3><hr><blockquote class="kg-blockquote-alt"><strong>Contrary to popular opinion, the hustle is not a new dance step — it is an old business procedure.</strong></blockquote><blockquote class="kg-blockquote-alt">—Fran Lebowitz</blockquote><hr><p class="essay-lede">The smoothest con man that ever lived. That’s what they say about Victor Lustig pictured above. <a href="http://blogs.smithsonianmag.com/history/2012/08/the-smoothest-con-man-that-ever-lived/?ref=tokenwisdom.ghost.io" rel="noopener">His claim to fame is that he sold the Eiffel Tower, twice.</a> Yup, that happened. He became fluent in multiple languages, harnessed his ocean liner and started printing money, literally. Even had the minerals and confidence to hustle Al Capone.</p><p>There are plenty of confidence men in history, well known like Frank Abagnale (Catch Me If You Can) and those that leave a legacy behind them like Charles Ponzi (good articles on the ballsiest hustles, ever <a href="http://www.huffingtonpost.com/amy-reading/con-artists_b_1416179.html?ref=tokenwisdom.ghost.io#s858112&title=Lou_Blonger_" rel="noopener">1</a>,<a href="http://listverse.com/2007/08/28/top-10-famous-con-men/?ref=tokenwisdom.ghost.io" rel="noopener">2</a>,<a href="http://www.cracked.com/article_15892_the-5-ballsiest-con-artists-all-time.html?ref=tokenwisdom.ghost.io" rel="noopener">3</a>). The stories are fantastical and sometimes quite hard to believe. You should definitely save them for later and marvel. The common denominator among all these characters is that they all gave good hustle. Regardless of their intentions, they strategized a plan with contingencies that would allow them to achieve very difficult campaigns goals. This article reflects upon my discovery and how I utilize the long con every single day in today’s busy digital realms.</p><p>I’ve always been fascinated with the <em>Art of Grifting</em> from a very young age. My first exposure was <em>The Sting II</em> with Jackie Gleason which then required me to watch <em>The Sting</em> with Paul Newman and Robert Redford. Was really, really young, probably seven years old, but it stuck with me. Then came <em>Sneakers</em> with Robert Redford again, Sidney Poitier, Dan Akroyd, Ben Kingsley and another stellar cast. Any movie where there were multiple moving layers of strategery going on to bob and weave through, I’d watch. I’d watch and rewatch to find the patterns within all of these strategies. The next phase of awakening to the ballsy approach to taking what you want was with <em>Ocean’s Eleven</em>. <em>Lock, Stock and Two Smoking Barrels</em> entered my realm with multiple plots and multiple crossovers and was then extended into <em>Snatch</em>. I love Snatch. Then found the gold in a movie called <em>Fresh</em>, a little kid who hustles everyone. So good. All of these represent a symphony or chaos in unison. Don’t even get me started on <em>The Wire</em>, that’s going to be it’s own series of posts. That’s some quality right there.</p><p>The <em>Art of Manipulation</em> was something I frowned upon until I understood it a bit better when I absorbed it in trust. In fact, once I learned the fundamentals of NLP and studied Darren Brown with his amazing ability to convince and observe, my frame of mind was completely swayed. It’s not manipulative if you’re using the trust that people have in you to direct them to something that you deeply believe in that you know has positive impact. That’s passion. That’s hustle.</p><p>In the first video below, you’ll see a harmless conversation and a gifting of a present. Then the second video will explain step by step of how it was accomplished. You will have no idea how this is done and then once you do, you’ll realize how little of our capacities we tap into.</p><p>Watch<a href="http://youtu.be/YMropN6ft4Y?ref=tokenwisdom.ghost.io" rel="noopener"> <strong>&lt;THAT&gt;</strong></a> and then<a href="http://youtu.be/FEpdTZGfxCQ?ref=tokenwisdom.ghost.io" rel="noopener"> <strong>&lt;THIS&gt;</strong></a>.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-39uwpoq8vul6qg1x.png" class="kg-image" alt="" loading="lazy" width="705" height="540" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-39uwpoq8vul6qg1x.png 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-39uwpoq8vul6qg1x.png 705w"></figure><p>Then came a show that I will forever be changed from, <em>Hustle</em>. Aired on BBC for 8 seasons and the premise of the show was a crew of grifters band together to hustle only the greedy that are just bad apples. They are the Robin Hood of grifting and live by a code, there’s always a code. The show consumed me. There were contingencies for every traversal of every avenue. Every direction had a backup plan to get the plan back on the track in case something happened. It was the greatest exercise of worst-case scenarios and covering every single one of them. For problem solvers, these shows are great because they involve us and our faculties to try and figure out how to pull off the hustle before it’s revealed. Very similar to being handed a brief and having to come up with a creative campaign or production. The hustle in that case is what is the compelling creative idea that just wows someone to the point where they’ve handed you the keys and are letting you drive. You just earned yourself some confidence and nailed it out of the park. Good hustle.</p><p><a href="http://www.youtube.com/watch?v=pGq3UMWjrok&ref=tokenwisdom.ghost.io#t=13m58s" rel="noopener">One episode it finally clicked. The simple art of suggestion (click here to watch the scene).</a> One of their jobs required a PR agency to go in and play a role in the tale. They had to create the illusion of an agency that did not exist. The elaborate unfolding involved replacing cups at the coffee shop with ones with <strong>New London Media</strong> plastered on it while another one of the crew is talking loudly on a phone about <strong>New London Media</strong>. Another crew member is walking by with a sign for <strong>New London Media, </strong>the horn of a lorry (truck) passes by as it just so happens to have <strong>New London Media</strong>’s logo all over the side; all subtle indicators to remain in the subconscious. Made the agency seem larger than life and left a fresh thought of <strong>New London Media,</strong> waiting. A ruse to position themselves in a place of power and to meet the marks. When they met, multiple subconscious cues triggered the memory and gave legitimacy to the company which ensured enough trust to garner a private conversation. Sold!</p><p>The levels of constant flow of all the microplans being executed simultaneously reminded me of the production flow of building and executing marketing, digital or ad campaigns. The formula is the same; you just need to replace the variables. Below is a drawing of the <em>Grifter’s Process</em> that I managed to conjure up after putting bits and pieces together.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-7lt523nmxrbthuuh-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="800" height="1067" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-7lt523nmxrbthuuh-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-7lt523nmxrbthuuh-jpeg.jpg 800w" sizes="(min-width: 720px) 720px"></figure><p>As you can see above, the roper gets the mark, the inside man tells the tale, the fixer confirms the tale and the convincer seals the deal.</p><p>This is not unlike an agency hierarchy. The sales or the business development finds the mark, or client. The creatives muster up a few scenarios with contingencies to begin to structure the tale, the producers create the world that this endeavor will reside in and then the project manager makes sure that you manage the client’s expectations and keep them on the hook, this is the various iterations and meetings to make sure you’re in alignment with their initiatives and desired results. Now comes the expert, or the convincer, to come in and validate the direction and intended execution. You’ll notice when I drew the <em>Grifter’s Process</em> out that everything is represented with a spiral movement, always in motion and narrowing in on the desired result. The vines wrapping around and holding tight to the flow of the tale to keep everything together as it flows inwards. Together, it makes for a very adaptable and versatile business model, as long as the original intention is not the money, but all for the hustle and flow. The byproduct will result in money, have faith that that will always be there and concentrate on what you can do now to move you one step closer.</p><p>Once I realized the <em>Grifter’s Process </em>was a formula for any campaign or ideation of creative concept, the world became a world where it wasn’t a bad thing to hustle. In fact, hustling has taken on new meaning and has a much less discriminating light shining down upon it. Big thanks to<a href="http://www.youtube.com/watch?v=TUKBoTxeBl8&feature=share&list=PL728E8B448C1D9894&ref=tokenwisdom.ghost.io" rel="noopener"> Gary Vaynerchuk </a>and the like.</p><p>The <em>Art of Confidence</em> is no longer for the morally challenged; it’s for those who exercise choice. A choice to be bitter or to accept all that is as what it is and just keep on doing. I know, I know… that sounds so cliche. It probably is. So is <em>Act As If</em>, but whatever works for you, work it. Just get your hustle on. Moving and shaking and finding your Code or Process is what’s it’s all about. Be careful though, once you teeter with confidence bordering on arrogance, all the magic disappears and you’ll find you’ll be on the shorter end of the stick. Stay humble, but be fucking ballsy. No one ever got anywhere big without risking even more. Walk into your meeting and tell yourself you own that office. Get interviewed for a job and already know your exit strategy. Learn to say no. Most importantly, realize your worth early on in life, and if it’s not where you think it is, hustle more.</p><p>Strip away all the ill intentions you see in the movies and sit back and be amazed by the capacity of thought that is required to organize and execute to obtain the impossible. Sounds like innovation to me, if pointed in the right direction. A good hustle is one where the reality is that everyone gets exactly what they wanted. That’s the business we’re in these days, right? Everyone walks away with a smile, or at least that’s my desired result. What’s yours?</p><hr><blockquote><em>I’m here for you.<br><br>Just dial **HUSTLE from your mobile and you’ll get me.<br>Or if you’re old school, email me at </em><a href="mailto:theusual@gmail.com?subject=Hustle!"><em>theusual@gmail.com</em></a><em>.</em></blockquote><p><em>BBC’s Hustle is available in its entirety on YouTube, </em><a href="http://www.youtube.com/user/HustleBBC/videos?flow=grid&view=1&ref=tokenwisdom.ghost.io" rel="noopener"><em>here</em></a><em>.</em></p><p><em>And this is biggest and best list of movies that involve the hustle:</em><br><a href="http://scams.wikispaces.com/Cinematic+Scams?ref=tokenwisdom.ghost.io" rel="nofollow noopener"><em>http://scams.wikispaces.com/Cinematic+Scams</em></a></p>
+    </div>
   </div>
-  <div class="prose">
-    <h3 id="a-guide-to-learn-your-hustle">A guide to learn your hustle.</h3><hr><blockquote class="kg-blockquote-alt"><strong>Contrary to popular opinion, the hustle is not a new dance step — it is an old business procedure.</strong></blockquote><blockquote class="kg-blockquote-alt">—Fran Lebowitz</blockquote><hr><p>The smoothest con man that ever lived. That’s what they say about Victor Lustig pictured above. <a href="http://blogs.smithsonianmag.com/history/2012/08/the-smoothest-con-man-that-ever-lived/?ref=tokenwisdom.ghost.io" rel="noopener">His claim to fame is that he sold the Eiffel Tower, twice.</a> Yup, that happened. He became fluent in multiple languages, harnessed his ocean liner and started printing money, literally. Even had the minerals and confidence to hustle Al Capone.</p><p>There are plenty of confidence men in history, well known like Frank Abagnale (Catch Me If You Can) and those that leave a legacy behind them like Charles Ponzi (good articles on the ballsiest hustles, ever <a href="http://www.huffingtonpost.com/amy-reading/con-artists_b_1416179.html?ref=tokenwisdom.ghost.io#s858112&title=Lou_Blonger_" rel="noopener">1</a>,<a href="http://listverse.com/2007/08/28/top-10-famous-con-men/?ref=tokenwisdom.ghost.io" rel="noopener">2</a>,<a href="http://www.cracked.com/article_15892_the-5-ballsiest-con-artists-all-time.html?ref=tokenwisdom.ghost.io" rel="noopener">3</a>). The stories are fantastical and sometimes quite hard to believe. You should definitely save them for later and marvel. The common denominator among all these characters is that they all gave good hustle. Regardless of their intentions, they strategized a plan with contingencies that would allow them to achieve very difficult campaigns goals. This article reflects upon my discovery and how I utilize the long con every single day in today’s busy digital realms.</p><p>I’ve always been fascinated with the <em>Art of Grifting</em> from a very young age. My first exposure was <em>The Sting II</em> with Jackie Gleason which then required me to watch <em>The Sting</em> with Paul Newman and Robert Redford. Was really, really young, probably seven years old, but it stuck with me. Then came <em>Sneakers</em> with Robert Redford again, Sidney Poitier, Dan Akroyd, Ben Kingsley and another stellar cast. Any movie where there were multiple moving layers of strategery going on to bob and weave through, I’d watch. I’d watch and rewatch to find the patterns within all of these strategies. The next phase of awakening to the ballsy approach to taking what you want was with <em>Ocean’s Eleven</em>. <em>Lock, Stock and Two Smoking Barrels</em> entered my realm with multiple plots and multiple crossovers and was then extended into <em>Snatch</em>. I love Snatch. Then found the gold in a movie called <em>Fresh</em>, a little kid who hustles everyone. So good. All of these represent a symphony or chaos in unison. Don’t even get me started on <em>The Wire</em>, that’s going to be it’s own series of posts. That’s some quality right there.</p><p>The <em>Art of Manipulation</em> was something I frowned upon until I understood it a bit better when I absorbed it in trust. In fact, once I learned the fundamentals of NLP and studied Darren Brown with his amazing ability to convince and observe, my frame of mind was completely swayed. It’s not manipulative if you’re using the trust that people have in you to direct them to something that you deeply believe in that you know has positive impact. That’s passion. That’s hustle.</p><p>In the first video below, you’ll see a harmless conversation and a gifting of a present. Then the second video will explain step by step of how it was accomplished. You will have no idea how this is done and then once you do, you’ll realize how little of our capacities we tap into.</p><p>Watch<a href="http://youtu.be/YMropN6ft4Y?ref=tokenwisdom.ghost.io" rel="noopener"> <strong>&lt;THAT&gt;</strong></a> and then<a href="http://youtu.be/FEpdTZGfxCQ?ref=tokenwisdom.ghost.io" rel="noopener"> <strong>&lt;THIS&gt;</strong></a>.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-39uwpoq8vul6qg1x.png" class="kg-image" alt="" loading="lazy" width="705" height="540" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-39uwpoq8vul6qg1x.png 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-39uwpoq8vul6qg1x.png 705w"></figure><p>Then came a show that I will forever be changed from, <em>Hustle</em>. Aired on BBC for 8 seasons and the premise of the show was a crew of grifters band together to hustle only the greedy that are just bad apples. They are the Robin Hood of grifting and live by a code, there’s always a code. The show consumed me. There were contingencies for every traversal of every avenue. Every direction had a backup plan to get the plan back on the track in case something happened. It was the greatest exercise of worst-case scenarios and covering every single one of them. For problem solvers, these shows are great because they involve us and our faculties to try and figure out how to pull off the hustle before it’s revealed. Very similar to being handed a brief and having to come up with a creative campaign or production. The hustle in that case is what is the compelling creative idea that just wows someone to the point where they’ve handed you the keys and are letting you drive. You just earned yourself some confidence and nailed it out of the park. Good hustle.</p><p><a href="http://www.youtube.com/watch?v=pGq3UMWjrok&ref=tokenwisdom.ghost.io#t=13m58s" rel="noopener">One episode it finally clicked. The simple art of suggestion (click here to watch the scene).</a> One of their jobs required a PR agency to go in and play a role in the tale. They had to create the illusion of an agency that did not exist. The elaborate unfolding involved replacing cups at the coffee shop with ones with <strong>New London Media</strong> plastered on it while another one of the crew is talking loudly on a phone about <strong>New London Media</strong>. Another crew member is walking by with a sign for <strong>New London Media, </strong>the horn of a lorry (truck) passes by as it just so happens to have <strong>New London Media</strong>’s logo all over the side; all subtle indicators to remain in the subconscious. Made the agency seem larger than life and left a fresh thought of <strong>New London Media,</strong> waiting. A ruse to position themselves in a place of power and to meet the marks. When they met, multiple subconscious cues triggered the memory and gave legitimacy to the company which ensured enough trust to garner a private conversation. Sold!</p><p>The levels of constant flow of all the microplans being executed simultaneously reminded me of the production flow of building and executing marketing, digital or ad campaigns. The formula is the same; you just need to replace the variables. Below is a drawing of the <em>Grifter’s Process</em> that I managed to conjure up after putting bits and pieces together.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-7lt523nmxrbthuuh-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="800" height="1067" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-7lt523nmxrbthuuh-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-7lt523nmxrbthuuh-jpeg.jpg 800w" sizes="(min-width: 720px) 720px"></figure><p>As you can see above, the roper gets the mark, the inside man tells the tale, the fixer confirms the tale and the convincer seals the deal.</p><p>This is not unlike an agency hierarchy. The sales or the business development finds the mark, or client. The creatives muster up a few scenarios with contingencies to begin to structure the tale, the producers create the world that this endeavor will reside in and then the project manager makes sure that you manage the client’s expectations and keep them on the hook, this is the various iterations and meetings to make sure you’re in alignment with their initiatives and desired results. Now comes the expert, or the convincer, to come in and validate the direction and intended execution. You’ll notice when I drew the <em>Grifter’s Process</em> out that everything is represented with a spiral movement, always in motion and narrowing in on the desired result. The vines wrapping around and holding tight to the flow of the tale to keep everything together as it flows inwards. Together, it makes for a very adaptable and versatile business model, as long as the original intention is not the money, but all for the hustle and flow. The byproduct will result in money, have faith that that will always be there and concentrate on what you can do now to move you one step closer.</p><p>Once I realized the <em>Grifter’s Process </em>was a formula for any campaign or ideation of creative concept, the world became a world where it wasn’t a bad thing to hustle. In fact, hustling has taken on new meaning and has a much less discriminating light shining down upon it. Big thanks to<a href="http://www.youtube.com/watch?v=TUKBoTxeBl8&feature=share&list=PL728E8B448C1D9894&ref=tokenwisdom.ghost.io" rel="noopener"> Gary Vaynerchuk </a>and the like.</p><p>The <em>Art of Confidence</em> is no longer for the morally challenged; it’s for those who exercise choice. A choice to be bitter or to accept all that is as what it is and just keep on doing. I know, I know… that sounds so cliche. It probably is. So is <em>Act As If</em>, but whatever works for you, work it. Just get your hustle on. Moving and shaking and finding your Code or Process is what’s it’s all about. Be careful though, once you teeter with confidence bordering on arrogance, all the magic disappears and you’ll find you’ll be on the shorter end of the stick. Stay humble, but be fucking ballsy. No one ever got anywhere big without risking even more. Walk into your meeting and tell yourself you own that office. Get interviewed for a job and already know your exit strategy. Learn to say no. Most importantly, realize your worth early on in life, and if it’s not where you think it is, hustle more.</p><p>Strip away all the ill intentions you see in the movies and sit back and be amazed by the capacity of thought that is required to organize and execute to obtain the impossible. Sounds like innovation to me, if pointed in the right direction. A good hustle is one where the reality is that everyone gets exactly what they wanted. That’s the business we’re in these days, right? Everyone walks away with a smile, or at least that’s my desired result. What’s yours?</p><hr><blockquote><em>I’m here for you.<br><br>Just dial **HUSTLE from your mobile and you’ll get me.<br>Or if you’re old school, email me at </em><a href="mailto:theusual@gmail.com?subject=Hustle!"><em>theusual@gmail.com</em></a><em>.</em></blockquote><p><em>BBC’s Hustle is available in its entirety on YouTube, </em><a href="http://www.youtube.com/user/HustleBBC/videos?flow=grid&view=1&ref=tokenwisdom.ghost.io" rel="noopener"><em>here</em></a><em>.</em></p><p><em>And this is biggest and best list of movies that involve the hustle:</em><br><a href="http://scams.wikispaces.com/Cinematic+Scams?ref=tokenwisdom.ghost.io" rel="nofollow noopener"><em>http://scams.wikispaces.com/Cinematic+Scams</em></a></p>
-  </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/grifters.html">Persuasion</a><a class="post-tag" href="../tags/agency.html">Brands \ Agency</a><a class="post-tag" href="../tags/business-intelligence.html">Business Models</a><a class="post-tag" href="../tags/innovation.html">Innovation</a><a class="post-tag" href="../tags/strategic.html">Strategic Measures</a><a class="post-tag" href="../tags/advertising.html">Advertising</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/grifters.html">Persuasion</a><a class="post-tag" href="../tags/agency.html">Brands \ Agency</a><a class="post-tag" href="../tags/business-intelligence.html">Business Models</a><a class="post-tag" href="../tags/innovation.html">Innovation</a><a class="post-tag" href="../tags/strategic.html">Strategic Measures</a><a class="post-tag" href="../tags/advertising.html">Advertising</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -102,52 +140,115 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

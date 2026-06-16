@@ -67,15 +67,44 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.009 · W21 · May 20, 2013</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Challenges · Viral Content · Risk \ Reward</div>
-  <h1 class="essay-title">Say Viral One More Time! I&#x27;ll Punch You in the Throat =)</h1>
-  <p class="essay-deck">Fear Facing
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-qr0z9gkkcmp6fnvd.gif" alt="Say Viral One More Time! I&#x27;ll Punch You in the Throat =)" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Challenges</div>
+    <h1 class="essay-title">Say Viral One More Time! I&#x27;ll Punch You in the Throat =)</h1>
+    <p class="essay-deck">Fear Facing
 Adventure Experience
 Overcoming Challenges
 Personal Development
@@ -85,17 +114,26 @@ Digging a bit deeper, the underlying topics GavanBot has discovered are:
 Personal Growth through Adventure
 Overcoming Fear and Challenges
 Encouragement to Take Risks</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>May 20, 2013</span>
-    <span class="sep">·</span>
-    <span>4 min read</span>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>4 min read</span>
+      <span class="sep">·</span>
+      <span>May 20, 2013</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <h3 id="we-will-push-to-drive-awareness-virally">"We will push to drive awareness, virally."</h3><p class="essay-lede">Shut up. Shut up again. Don’t even start with offering viral anything as an alternative, solution or service. Dare you to tell me you can make my content go viral, double dare you and then I’ll punch you in the throat. Can’t stand people who <a href="http://www.youtube.com/watch?v=xpj7o_kNJ48&ref=tokenwisdom.ghost.io" rel="noopener">write checks their ass can’t cash</a>.</p><p>There are plenty of dogs dancing, cats playing pianos and some Korean dude who sings about shit I can’t understand, but he is funny looking and I continue to watch. We’re not talking about those ones. We’re talking about the brand new funk.</p><p>There is some very compelling content out there that is disguised by brand driven activations. The videos that do exist cost a truck ton of money to produce and socially engineer. When you have budget and talent, you can sway eyeballs. Agencies are really good at that for the most part, that’s why brands hire them. Even the best simply swing the bat and hope to hear that *crack*.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-qhvz0ezcikd8-jp5.png" class="kg-image" alt="" loading="lazy" width="466" height="347"><figcaption><span style="white-space: pre-wrap;">#brandcuffs Do you live in LA? Does this sound familiar?</span></figcaption></figure><p>So Mr. Viral, what’s your digital mobile social strategy to unleash the <a href="http://www.collegehumor.com/video/6507690/hardly-working-start-up-guys?ref=tokenwisdom.ghost.io" rel="noopener">#brandcuffs</a> and make my content soar across the internets? What do you put in your Awesome Sauce? Let me guess, you’re going to post strategically across all our web properties to push a phase driven campaign that unveils itself over time once the viral part kicks in. You plan to stagger the key activations through owned media on each platform through an orchestrated transmedia experience to lower our acquisition cost of a user, right? Then build up the community with content that you’ve curated from the three months you spent building a baseline to understand and know who your audience is. And since a Facebook user is worth <a href="http://www.syncapse.com/value-of-a-facebook-fan-2013/?ref=tokenwisdom.ghost.io#.UZkA0GTD76w" rel="noopener">$174.11</a>, you figure we owe you $13,582.92 now? &lt;sarcasm&gt;(based off of 78 new likes on the page through the ingenious viral campaign that took all of 18 minutes to schedule and purchase a couple of ads)&lt;/sarcasm&gt;. The only thing you can make go viral is that cold sore on your lip. *eww*</p><p>It’s amazing what happens when you give someone enough rope to do what they will inevitably do. It’s just painful to watch, you know? Kind of want to euthanize them. Shhh… there, there.</p><p>Now that’s over, let’s get to a collection of top notch videos that have great and compelling content through a lovely executed plan, strategy and treatment. They are also done professionally which increases the chance that content is so awesome you have no choice but to share it. That’s how that works. If it’s good, it’s good. You’ll want to share that emotional connection and illicit conversation around the sharing of it.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-wasdq6qvz-frcmn6-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="594" height="431"></figure><blockquote><a href="http://www.youtube.com/watch?v=Q5mHPo2yDG8&ref=tokenwisdom.ghost.io" rel="noopener">Pepsi MAX and Jeff Gordon</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-lbieuwajdpjgbtjn-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="525" height="350"></figure><blockquote><a href="http://youtu.be/FHtvDA0W34I?ref=tokenwisdom.ghost.io" rel="noopener">Red Bull Stratos and Felix Baumgaurtner</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-5cfwmnslf3sclzeq-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="800" height="450" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-5cfwmnslf3sclzeq-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-5cfwmnslf3sclzeq-jpeg.jpg 800w" sizes="(min-width: 720px) 720px"></figure><blockquote><a href="http://www.youtube.com/watch?v=yaBNjTtCxd4&ref=tokenwisdom.ghost.io" rel="noopener">Cartier - Metropolitan Museum of Art</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-s-fl7l6dv8vtve2o-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="620" height="425" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-s-fl7l6dv8vtve2o-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-s-fl7l6dv8vtve2o-jpeg.jpg 620w"></figure><blockquote><a href="http://youtu.be/ZUG9qYTJMsI?ref=tokenwisdom.ghost.io" rel="noopener">Dollar Shave Club For Men - In House</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-ehknwpsybn8mawwn-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="631" height="422" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-ehknwpsybn8mawwn-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-ehknwpsybn8mawwn-jpeg.jpg 631w"></figure><blockquote><a href="http://www.youtube.com/watch?v=Oe3St1GgoHQ&ref=tokenwisdom.ghost.io" rel="noopener">Walk on Water - Hi-Tec</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-dj3zysyg9xltgxbf-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="480" height="269"></figure><blockquote><a href="http://youtu.be/OFzXaFbxDcM?ref=tokenwisdom.ghost.io" rel="noopener">PBS Digital Studios - Mister Rogers Remixed</a></blockquote><hr><p>This is a sliver of the genius that is out there. Here are few links if you would like to consume a few minutes here and there to be thoroughly engaged and entertained.</p><blockquote>Viral Videos Chart - Best Viral Videos From Brands | Advertising Age <a href="http://ki.am/16K9MLZ?ref=tokenwisdom.ghost.io" rel="nofollow noopener">http://ki.am/16K9MLZ</a></blockquote><blockquote>The Top 10 Viral Video Ads Chart | Visible Measures<br><a href="http://ki.am/10fm1Jc?ref=tokenwisdom.ghost.io" rel="nofollow noopener">http://ki.am/10fm1Jc</a></blockquote><blockquote>The Top 10 Branded Viral Videos from 2012 | SocialFresh <a href="http://ki.am/10IhzS1?ref=tokenwisdom.ghost.io" rel="nofollow noopener">http://ki.am/10IhzS1</a></blockquote><p>That should keep you occupied for a bit. If you want more, I’m sure you’ll be able to find more, they are everywhere.</p><p>So remember, don’t write checks your ass can’t cash. That means don’t tell me you’re going to make me go viral, you have very limited control over that. The content has to be compelling and there may still be a chance to get more eyes on it with certain tactics and initiatives, but the bottom line is that if it sucks, you’ll know within the <a href="http://www.theatlantic.com/technology/archive/2012/06/only-301-views-why-that-youtube-video-is-actually-going-viral/258921/?ref=tokenwisdom.ghost.io" rel="noopener">first 301 views or not</a>. Timing and context are two big variables in the viral equation and that is where our culture defines what is good. And rather than having bad content imposed upon them, they’ll just stop watching. The metric you really want to concentrate on is the percentage of viewers who watch all the way to the end, that’s a motivated and engaged user.</p><p>This make you go viral business, it’s a personal pet peeve is all. I know what it takes to push content into the matrix. I’ve been lucky to have been given the clarity and a whole lot of understanding for the pattern recognition it requires to even step to the social beast. In one experiment conducted over a period of 30 months, I managed to get retweeted over a million times which resulted in just over 200 million impressions. I’ve failed time and time again in search of the formula. To create that emotional connection with someone and have content so compelling that the feeling moves them to share it with those that are close to them, that’s the best win you could ever ask for. There is no formula to it, you just have to make more cool shit.</p>
+    </div>
   </div>
-  <div class="prose">
-    <h3 id="we-will-push-to-drive-awareness-virally">"We will push to drive awareness, virally."</h3><p>Shut up. Shut up again. Don’t even start with offering viral anything as an alternative, solution or service. Dare you to tell me you can make my content go viral, double dare you and then I’ll punch you in the throat. Can’t stand people who <a href="http://www.youtube.com/watch?v=xpj7o_kNJ48&ref=tokenwisdom.ghost.io" rel="noopener">write checks their ass can’t cash</a>.</p><p>There are plenty of dogs dancing, cats playing pianos and some Korean dude who sings about shit I can’t understand, but he is funny looking and I continue to watch. We’re not talking about those ones. We’re talking about the brand new funk.</p><p>There is some very compelling content out there that is disguised by brand driven activations. The videos that do exist cost a truck ton of money to produce and socially engineer. When you have budget and talent, you can sway eyeballs. Agencies are really good at that for the most part, that’s why brands hire them. Even the best simply swing the bat and hope to hear that *crack*.</p><figure class="kg-card kg-image-card kg-width-wide kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-qhvz0ezcikd8-jp5.png" class="kg-image" alt="" loading="lazy" width="466" height="347"><figcaption><span style="white-space: pre-wrap;">#brandcuffs Do you live in LA? Does this sound familiar?</span></figcaption></figure><p>So Mr. Viral, what’s your digital mobile social strategy to unleash the <a href="http://www.collegehumor.com/video/6507690/hardly-working-start-up-guys?ref=tokenwisdom.ghost.io" rel="noopener">#brandcuffs</a> and make my content soar across the internets? What do you put in your Awesome Sauce? Let me guess, you’re going to post strategically across all our web properties to push a phase driven campaign that unveils itself over time once the viral part kicks in. You plan to stagger the key activations through owned media on each platform through an orchestrated transmedia experience to lower our acquisition cost of a user, right? Then build up the community with content that you’ve curated from the three months you spent building a baseline to understand and know who your audience is. And since a Facebook user is worth <a href="http://www.syncapse.com/value-of-a-facebook-fan-2013/?ref=tokenwisdom.ghost.io#.UZkA0GTD76w" rel="noopener">$174.11</a>, you figure we owe you $13,582.92 now? &lt;sarcasm&gt;(based off of 78 new likes on the page through the ingenious viral campaign that took all of 18 minutes to schedule and purchase a couple of ads)&lt;/sarcasm&gt;. The only thing you can make go viral is that cold sore on your lip. *eww*</p><p>It’s amazing what happens when you give someone enough rope to do what they will inevitably do. It’s just painful to watch, you know? Kind of want to euthanize them. Shhh… there, there.</p><p>Now that’s over, let’s get to a collection of top notch videos that have great and compelling content through a lovely executed plan, strategy and treatment. They are also done professionally which increases the chance that content is so awesome you have no choice but to share it. That’s how that works. If it’s good, it’s good. You’ll want to share that emotional connection and illicit conversation around the sharing of it.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-wasdq6qvz-frcmn6-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="594" height="431"></figure><blockquote><a href="http://www.youtube.com/watch?v=Q5mHPo2yDG8&ref=tokenwisdom.ghost.io" rel="noopener">Pepsi MAX and Jeff Gordon</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-lbieuwajdpjgbtjn-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="525" height="350"></figure><blockquote><a href="http://youtu.be/FHtvDA0W34I?ref=tokenwisdom.ghost.io" rel="noopener">Red Bull Stratos and Felix Baumgaurtner</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-5cfwmnslf3sclzeq-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="800" height="450" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-5cfwmnslf3sclzeq-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-5cfwmnslf3sclzeq-jpeg.jpg 800w" sizes="(min-width: 720px) 720px"></figure><blockquote><a href="http://www.youtube.com/watch?v=yaBNjTtCxd4&ref=tokenwisdom.ghost.io" rel="noopener">Cartier - Metropolitan Museum of Art</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-s-fl7l6dv8vtve2o-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="620" height="425" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-s-fl7l6dv8vtve2o-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-s-fl7l6dv8vtve2o-jpeg.jpg 620w"></figure><blockquote><a href="http://youtu.be/ZUG9qYTJMsI?ref=tokenwisdom.ghost.io" rel="noopener">Dollar Shave Club For Men - In House</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-ehknwpsybn8mawwn-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="631" height="422" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/01/0-ehknwpsybn8mawwn-jpeg.jpg 600w, https://tokenwisdom.ghost.io/content/images/2024/01/0-ehknwpsybn8mawwn-jpeg.jpg 631w"></figure><blockquote><a href="http://www.youtube.com/watch?v=Oe3St1GgoHQ&ref=tokenwisdom.ghost.io" rel="noopener">Walk on Water - Hi-Tec</a><br><br></blockquote><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-dj3zysyg9xltgxbf-jpeg.jpg" class="kg-image" alt="" loading="lazy" width="480" height="269"></figure><blockquote><a href="http://youtu.be/OFzXaFbxDcM?ref=tokenwisdom.ghost.io" rel="noopener">PBS Digital Studios - Mister Rogers Remixed</a></blockquote><hr><p>This is a sliver of the genius that is out there. Here are few links if you would like to consume a few minutes here and there to be thoroughly engaged and entertained.</p><blockquote>Viral Videos Chart - Best Viral Videos From Brands | Advertising Age <a href="http://ki.am/16K9MLZ?ref=tokenwisdom.ghost.io" rel="nofollow noopener">http://ki.am/16K9MLZ</a></blockquote><blockquote>The Top 10 Viral Video Ads Chart | Visible Measures<br><a href="http://ki.am/10fm1Jc?ref=tokenwisdom.ghost.io" rel="nofollow noopener">http://ki.am/10fm1Jc</a></blockquote><blockquote>The Top 10 Branded Viral Videos from 2012 | SocialFresh <a href="http://ki.am/10IhzS1?ref=tokenwisdom.ghost.io" rel="nofollow noopener">http://ki.am/10IhzS1</a></blockquote><p>That should keep you occupied for a bit. If you want more, I’m sure you’ll be able to find more, they are everywhere.</p><p>So remember, don’t write checks your ass can’t cash. That means don’t tell me you’re going to make me go viral, you have very limited control over that. The content has to be compelling and there may still be a chance to get more eyes on it with certain tactics and initiatives, but the bottom line is that if it sucks, you’ll know within the <a href="http://www.theatlantic.com/technology/archive/2012/06/only-301-views-why-that-youtube-video-is-actually-going-viral/258921/?ref=tokenwisdom.ghost.io" rel="noopener">first 301 views or not</a>. Timing and context are two big variables in the viral equation and that is where our culture defines what is good. And rather than having bad content imposed upon them, they’ll just stop watching. The metric you really want to concentrate on is the percentage of viewers who watch all the way to the end, that’s a motivated and engaged user.</p><p>This make you go viral business, it’s a personal pet peeve is all. I know what it takes to push content into the matrix. I’ve been lucky to have been given the clarity and a whole lot of understanding for the pattern recognition it requires to even step to the social beast. In one experiment conducted over a period of 30 months, I managed to get retweeted over a million times which resulted in just over 200 million impressions. I’ve failed time and time again in search of the formula. To create that emotional connection with someone and have content so compelling that the feeling moves them to share it with those that are close to them, that’s the best win you could ever ask for. There is no formula to it, you just have to make more cool shit.</p>
-  </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/viral-content.html">Viral Content</a><a class="post-tag" href="../tags/risk-reward.html">Risk \ Reward</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a><a class="post-tag" href="../tags/marketing.html">Marketing</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/challenges.html">Challenges</a><a class="post-tag" href="../tags/viral-content.html">Viral Content</a><a class="post-tag" href="../tags/risk-reward.html">Risk \ Reward</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a><a class="post-tag" href="../tags/marketing.html">Marketing</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -111,52 +149,115 @@ Encouragement to Take Risks</p>
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>
