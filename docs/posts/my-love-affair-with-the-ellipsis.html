@@ -67,30 +67,68 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.003 · W19 · May 7, 2013</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Personal Growth · A Story to Tell · Unsolicited Advice</div>
-  <h1 class="essay-title">My Love Affair with Ellipsis…</h1>
-  <p class="essay-deck">...and Conneting Dots 🔮
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/0_S9Dn7Y2uHLdzhO8v.webp" alt="My Love Affair with Ellipsis…" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Personal Growth</div>
+    <h1 class="essay-title">My Love Affair with Ellipsis…</h1>
+    <p class="essay-deck">...and Conneting Dots 🔮
 
 Something mysterious and alluring about the ellipsis. Yeah, that’s what it’s called. You know… that. The three little dots (not to be confused with the geometric figure known as the ellipse). In literary history the ellipse, or ellipses plural, was used to indicate some element of a quote to be missing, an omission if you will. That is what is implied. My version of what is inferred is much different.
 
 The way I look at this is that it’s left up to you to predict or fan</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>May 7, 2013</span>
-    <span class="sep">·</span>
-    <span>3 min read</span>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>3 min read</span>
+      <span class="sep">·</span>
+      <span>May 7, 2013</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <h3 id="and-conneting-dots-%F0%9F%94%AE">...and Conneting Dots 🔮 </h3><p class="essay-lede">Something mysterious and alluring about the ellipsis. Yeah, that’s what it’s called. You know… that. The three little dots <em>(not to be confused with the geometric figure known as the ellipse).</em> In literary history the ellipse, or ellipses plural, was used to indicate some element of a quote to be missing, an omission if you will. That is what is implied. My version of what is inferred is much different.</p><p>The way I look at this is that it’s left up to you to predict or fantasize what comes after and between all those dots. It has become a metaphor integrated into my way of being now. The ellipsis… a way to create some order of the chaos through the possibilities of connection - a thought, a sentence or person.</p><p>If you ascribe to the belief that all the events and people we encounter are on purpose then you’ll love this next part, otherwise skip this paragraph and you’ll still be good, you won’t be lost, promise. Imagine if you will a clear and still pond. Then imagine dropping pebbles all over causing waves to pour over and through one another. That’s what’s happening on a daily basis with all of our interactions. They ripple through the water until they meet another wave and their vector changes once they meet from the two flows. They converge on a new direction based on their consolidated efforts. The dots are always in flux and the adventure is to identify the first and watch for the second to be indicated and complete the pattern. It’s imagining how far the waves spread out from each dot to try and calculate where the next dot is to connect. The third completes the cycle and what ever it was that you needed to accomplish reveals itself and has been made possible.</p><p>Welcome back, we’ll break that last paragraph down in normal speak. Everytime I meet someone, it’s the beginning of a series of dots, or ellipsis, waiting to be connected. There is no clear pattern or direction that they connect, it’s unique every time. You never know when they will be reconnected through another dot along your path, but guaranteed in some way, shape or form they will return. One memory burned into my collections is the day I ended up buying someone a couple of drinks when they forgot their wallet, no big deal right? Apparently it was to him. Two years later our paths crossed again and we shared similar vocations. He made sure to introduce me to all the people that I dreamed of meeting so I could start <em>living the dream</em>. He then patted me on the shoulder, thanked me for the drinks and told me they sure hit the spot. Those two drinks, two years later helped earn me well over two…</p><p>We’re predictive creatures and the ellipsis leaves room for the unknown. How is that we fear the things we’ve never done? We love to fill in the blanks. The ellipsis is not an omission, it is the mystery that is needed so dearly in our culture. Think of it as on opportunity for an objective, the idea of limitless possibilities. The mystery is constantly unravelling, so it’s always piquing curiosity.</p><p>Stay curious.</p><p>The ellipsis reminds me of those Bollywood movies when the boy and the girl chase each other around a tree. Always thought this was so stupid, until I chased a girl around a tree in India and then she chased me back. #mostromanticthingever</p><p>That’s what these dots represent to me, the chase. The thrill of the chase for the unknowns. Those unknowns lead to the most magical connections possible if you choose to. Cherish your connections for they are the beginning of an ellipsis that is the best thing that could be happening to you right now, whether you can weather the storm or you’re ready for the whether or not.</p><p>One day, maybe when you’re older. All in time…</p><p>p.s. It’s going to be awesome.</p>
+    </div>
   </div>
-  <div class="prose">
-    <h3 id="and-conneting-dots-%F0%9F%94%AE">...and Conneting Dots 🔮 </h3><p>Something mysterious and alluring about the ellipsis. Yeah, that’s what it’s called. You know… that. The three little dots <em>(not to be confused with the geometric figure known as the ellipse).</em> In literary history the ellipse, or ellipses plural, was used to indicate some element of a quote to be missing, an omission if you will. That is what is implied. My version of what is inferred is much different.</p><p>The way I look at this is that it’s left up to you to predict or fantasize what comes after and between all those dots. It has become a metaphor integrated into my way of being now. The ellipsis… a way to create some order of the chaos through the possibilities of connection - a thought, a sentence or person.</p><p>If you ascribe to the belief that all the events and people we encounter are on purpose then you’ll love this next part, otherwise skip this paragraph and you’ll still be good, you won’t be lost, promise. Imagine if you will a clear and still pond. Then imagine dropping pebbles all over causing waves to pour over and through one another. That’s what’s happening on a daily basis with all of our interactions. They ripple through the water until they meet another wave and their vector changes once they meet from the two flows. They converge on a new direction based on their consolidated efforts. The dots are always in flux and the adventure is to identify the first and watch for the second to be indicated and complete the pattern. It’s imagining how far the waves spread out from each dot to try and calculate where the next dot is to connect. The third completes the cycle and what ever it was that you needed to accomplish reveals itself and has been made possible.</p><p>Welcome back, we’ll break that last paragraph down in normal speak. Everytime I meet someone, it’s the beginning of a series of dots, or ellipsis, waiting to be connected. There is no clear pattern or direction that they connect, it’s unique every time. You never know when they will be reconnected through another dot along your path, but guaranteed in some way, shape or form they will return. One memory burned into my collections is the day I ended up buying someone a couple of drinks when they forgot their wallet, no big deal right? Apparently it was to him. Two years later our paths crossed again and we shared similar vocations. He made sure to introduce me to all the people that I dreamed of meeting so I could start <em>living the dream</em>. He then patted me on the shoulder, thanked me for the drinks and told me they sure hit the spot. Those two drinks, two years later helped earn me well over two…</p><p>We’re predictive creatures and the ellipsis leaves room for the unknown. How is that we fear the things we’ve never done? We love to fill in the blanks. The ellipsis is not an omission, it is the mystery that is needed so dearly in our culture. Think of it as on opportunity for an objective, the idea of limitless possibilities. The mystery is constantly unravelling, so it’s always piquing curiosity.</p><p>Stay curious.</p><p>The ellipsis reminds me of those Bollywood movies when the boy and the girl chase each other around a tree. Always thought this was so stupid, until I chased a girl around a tree in India and then she chased me back. #mostromanticthingever</p><p>That’s what these dots represent to me, the chase. The thrill of the chase for the unknowns. Those unknowns lead to the most magical connections possible if you choose to. Cherish your connections for they are the beginning of an ellipsis that is the best thing that could be happening to you right now, whether you can weather the storm or you’re ready for the whether or not.</p><p>One day, maybe when you’re older. All in time…</p><p>p.s. It’s going to be awesome.</p>
-  </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/personal-growth.html">Personal Growth</a><a class="post-tag" href="../tags/storytelling.html">A Story to Tell</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a><a class="post-tag" href="../tags/philosophy.html">Philosophical</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/personal-growth.html">Personal Growth</a><a class="post-tag" href="../tags/storytelling.html">A Story to Tell</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a><a class="post-tag" href="../tags/philosophy.html">Philosophical</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -106,52 +144,115 @@ The way I look at this is that it’s left up to you to predict or fan</p>
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

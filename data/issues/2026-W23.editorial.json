@@ -1,0 +1,12 @@
+{
+  "_note": "Human-authored editorial prose for this issue. Merged by build_issue.py. Replace per issue — the builder cannot write these.",
+  "dek": "Verification week: a $1.3T chip selloff, even the CEOs admitting the buildout got ahead of itself — and, quietly, the lab kept working.",
+  "epigraph": {
+    "text": "There's no sense in being precise when you don't even know what you're talking about.",
+    "attribution": "John von Neumann"
+  },
+  "editor_note": "This week the semiconductor story split in two. On one side, a $1.3 trillion selloff and a chorus — even the CEOs — conceding the AI buildout has gotten ahead of itself. On the other, the breakthroughs that don't trend: a 3D-stacked chip extending Moore's Law, a processor that runs a thousand times faster without the waste heat, Huawei building what the export-control map said was impossible. The market priced the mood. The lab kept working.",
+  "recap": "The reckoning isn't that AI is overhyped — it's that we keep measuring the wrong thing. Market value moves on sentiment; the substrate moves on physics. When the noise clears, what remains is what always did: who can move electrons, or light, faster and cooler and at scale. This week the answer started to include people the map said it wouldn't.",
+  "essay_topic": "Infrastructure",
+  "essay_pull": "We didn't build a civilization since 1859. We built an antenna."
+}

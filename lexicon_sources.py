@@ -27,6 +27,8 @@ import subprocess
 from pathlib import Path
 from datetime import datetime
 
+import lexicon_clean as clean
+
 BACKUP_DIR = Path(__file__).parent
 DATA_DIR = BACKUP_DIR / "data"
 
@@ -74,6 +76,12 @@ def _clean_def(d):
     d = re.sub(r"^[:—–-]\s*", "", d)            # leading separator
     d = re.sub(r"^\((.*)\)$", r"\1", d.strip())  # acronym form "(Expansion)" -> "Expansion"
     d = re.sub(r"\s+\d{1,2}$", "", d)            # trailing footnote marker ("… non-compressible 3")
+    d = d.strip()
+    # Drop scraped page furniture / essay-outro / merged-entry bleed. Only run
+    # the (length-trimming) salvage when the text is actually polluted, so short
+    # legitimate definitions ("Light Fidelity") are preserved as-is.
+    if clean.is_polluted(d):
+        d = clean.sanitize(d)
     return d.strip()
 
 
@@ -137,7 +145,7 @@ def _parse_html_entries(section):
                 term, rest = m2.group(1), m2.group(2)
             term = _clean_term(term)
             definition = _clean_def(rest)
-            if term and 1 < len(term) <= 80:
+            if term and 1 < len(term) <= 80 and not clean.is_artifact_name(term):
                 yield term, definition, cur
 
 
@@ -207,13 +215,15 @@ def _parse_pdf_entries(txt):
     if not matches:
         return []
     sec = txt[matches[-1].end():]
-    # Stop at common footer markers.
-    for stop in ["Until next time", "This newsletter was curated", "🔮 Token Wisdom ·",
-                 "Token Wisdom ·"]:
-        i = sec.find(stop)
-        if i > 200:
-            sec = sec[:i]
-            break
+    # Stop at the earliest footer / essay-outro marker (the glossary always
+    # precedes these). Catching them here keeps page furniture out of the last
+    # entry's definition.
+    stops = ["Until next time", "This newsletter was curated", "🔮 Token Wisdom",
+             "Token Wisdom ·", "Just because Jon Snow", "Sign up for more Token Wisdom",
+             "Embrace the pursuit of knowledge", "100% Authentic Humanly Chosen"]
+    cuts = [i for i in (sec.find(s) for s in stops) if i > 200]
+    if cuts:
+        sec = sec[:min(cuts)]
 
     lines = [ln.rstrip() for ln in sec.splitlines()]
     cat_lookup = {k: v for k, v in CANON.items()}
@@ -226,9 +236,9 @@ def _parse_pdf_entries(txt):
         nonlocal cur_term, cur_def
         if cur_term:
             d = _clean_def(" ".join(cur_def))
-            if len(cur_term) <= 80:
-                entries.append({"term": _clean_term(cur_term),
-                                "definition": d, "category": cur_cat})
+            term = _clean_term(cur_term)
+            if len(cur_term) <= 80 and not clean.is_artifact_name(term):
+                entries.append({"term": term, "definition": d, "category": cur_cat})
         cur_term, cur_def = None, []
 
     for raw in lines:

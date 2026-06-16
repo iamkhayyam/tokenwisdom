@@ -19,6 +19,10 @@ from pathlib import Path
 from datetime import datetime
 from collections import defaultdict, Counter
 
+from essay_template import (sanitize_body, mark_lede, demo_margin_notes,
+                            READING_APPARATUS_CSS, INDEX_MARKUP, INDEX_SCRIPT,
+                            COLOPHON_CSS, render_colophon)
+
 BACKUP_DIR = Path(__file__).parent
 DATA_DIR = BACKUP_DIR / "data"
 DOCS_DIR = BACKUP_DIR / "docs"
@@ -400,6 +404,25 @@ CSS = r"""
   --max-wide: 1080px;
 }
 
+/* Dark mode — the Index palette (warm-dark ground, amber accent). Overrides the
+   same custom properties, so any surface built on the tokens themes for free.
+   Opt-in per page via <html data-theme="dark"> + the essay theme toggle. */
+:root[data-theme="dark"] {
+  --ink: #f3ecdd;
+  --ink-muted: #a59c8a;
+  --ink-faint: #8e8470;
+  --paper: #15130e;
+  --paper-warm: #1f1c12;
+  --paper-rule: #2a2718;
+  --accent: #d98a4e;
+  --accent-muted: #4a3a28;
+  --accent-deep: #e3a464;
+  --teal: #4fa39b;
+  --teal-light: #1e2a28;
+  --gold: #c8a85e;
+  --gold-light: #2a2416;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
@@ -425,11 +448,12 @@ html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 }
 
 body {
-  background: var(--paper);
+  background-color: var(--paper);
   color: var(--ink);
   font-family: var(--serif);
   font-size: 18px;
   line-height: 1.75;
+  transition: background-color .25s ease, color .25s ease;
 }
 
 a { color: var(--ink); text-decoration: none; transition: color .2s ease; }
@@ -687,78 +711,203 @@ img { max-width: 100%; height: auto; }
   text-transform: uppercase;
   color: var(--ink-muted);
 }
-.prose .kg-bookmark-card,
-.prose .kg-card {
-  background: var(--paper-warm);
-  border: 0.5px solid var(--paper-rule);
-  padding: 1rem 1.2rem;
-  margin: 1.6rem 0;
-  border-radius: 2px;
+/* Link embeds: bookmark cards + media players. One component family —
+   shared hairline + radius, hardened against overflow, alive on hover. */
+.prose .kg-card { max-width: 100%; }
+.prose .kg-bookmark-card {
+  margin: 1.6rem 0; max-width: 100%; padding: 6px;
+  border: 1px solid var(--ink-faint); border-radius: 5px; background: var(--paper);
+  transition: border-color .2s cubic-bezier(.22,1,.36,1);
 }
+.prose .kg-bookmark-card:has(.kg-bookmark-container:hover) { border-color: var(--accent); }
 .prose .kg-bookmark-container {
-  display: flex; gap: 1rem; text-decoration: none; color: var(--ink);
+  display: flex; min-height: 130px; min-width: 0; width: 100%; max-width: 100%;
+  background: var(--paper-warm); border: 1px solid var(--paper-rule);
+  border-radius: 3px; overflow: hidden; text-decoration: none; color: var(--ink);
+  transition: border-color .2s cubic-bezier(.22,1,.36,1);
 }
-.prose .kg-bookmark-content { flex: 1; }
-.prose .kg-bookmark-title { font-family: var(--display); font-weight: 700; font-size: 1.05rem; margin-bottom: .3rem; }
-.prose .kg-bookmark-description { font-size: .88rem; color: var(--ink-muted); }
+.prose .kg-bookmark-container:hover { border-color: var(--accent); }
+.prose .kg-bookmark-container:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.prose .kg-bookmark-content {
+  flex: 1 1 auto; min-width: 0; padding: 13px 18px; overflow: hidden;
+  display: flex; flex-direction: column; justify-content: center;
+}
+.prose .kg-bookmark-title {
+  font-family: var(--sans); font-weight: 600; font-size: .95rem; line-height: 1.28;
+  letter-spacing: -.01em; margin: 0 0 .2rem; color: var(--ink);
+  overflow-wrap: anywhere; word-break: break-word;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+  transition: color .2s ease;
+}
+.prose .kg-bookmark-container:hover .kg-bookmark-title { color: var(--accent); }
+.prose .kg-bookmark-description {
+  font-size: .84rem; color: var(--ink-muted); overflow-wrap: anywhere; word-break: break-word;
+  display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;
+}
 .prose .kg-bookmark-metadata {
-  font-family: var(--mono); font-size: .65rem; letter-spacing: .1em;
+  font-family: var(--mono); font-size: .62rem; letter-spacing: .1em;
   text-transform: uppercase; color: var(--ink-faint); margin-top: .5rem;
+  display: flex; align-items: center; gap: .5rem; overflow: hidden;
 }
-.prose .kg-bookmark-thumbnail { width: 120px; flex-shrink: 0; }
-.prose .kg-bookmark-thumbnail img { width: 100%; object-fit: cover; }
+.prose .kg-bookmark-metadata img { width: 15px; height: 15px; margin: 0; border-radius: 3px; flex-shrink: 0; }
+.prose .kg-bookmark-author { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.prose .kg-bookmark-thumbnail { flex: 0 0 188px; max-width: 188px; align-self: stretch; position: relative; overflow: hidden; }
+.prose .kg-bookmark-thumbnail img {
+  position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; object-fit: cover;
+  transition: transform .5s cubic-bezier(.22,1,.36,1);
+}
+.prose .kg-bookmark-container:hover .kg-bookmark-thumbnail img { transform: scale(1.06); }
+
+.prose iframe { max-width: 100%; border: 0; }
+.tw-embed { width: 100%; max-width: 100%; margin: 1.6rem 0; padding: 6px; border: 1px solid var(--ink-faint); border-radius: 5px; background: var(--paper); }
+.tw-embed iframe { display: block; width: 100%; height: 220px; margin: 0; border: 1px solid var(--paper-rule); border-radius: 3px; background: var(--paper-warm); }
+@media (max-width: 680px) {
+  .prose .kg-bookmark-container { flex-direction: column-reverse; }
+  .prose .kg-bookmark-thumbnail { flex-basis: auto; max-width: 100%; height: 160px; align-self: auto; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body, .theme-toggle, .prose .kg-bookmark-card, .prose .kg-bookmark-container, .prose .kg-bookmark-title, .prose .kg-bookmark-thumbnail img { transition: none; }
+  .prose .kg-bookmark-container:hover .kg-bookmark-thumbnail img { transform: none; }
+}
 
 /* ---------- ESSAY TEMPLATE ---------- */
-.essay-wrap {
-  max-width: var(--max-read);
+/* ---------- ESSAY READING PAGE (A Closer Look) ----------
+   1080 frame; text column holds at 720 on the left, the right gutter
+   carries margin sidenotes. Cover image and quiet epigraph always lead. */
+.essay-frame {
+  max-width: var(--max-wide);
   margin: 0 auto;
-  padding: 3.5rem 1.5rem 5rem;
+  padding: 0 2.5rem 1rem;
 }
+.essay-col { max-width: 720px; }
+
+/* Theme toggle — fixed pill, top-right */
+.theme-toggle {
+  position: fixed; top: 22px; right: 22px; z-index: 90;
+  display: flex; align-items: center; gap: 9px;
+  background: var(--paper); color: var(--ink);
+  border: 1.5px solid var(--ink); border-radius: 999px;
+  padding: 9px 15px; cursor: pointer;
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+}
+.theme-toggle:hover { background: var(--paper-warm); }
+.theme-toggle .tt-glyph { font-size: 13px; line-height: 1; }
+
+/* Cover */
+.essay-cover { margin: 30px 0 0; }
+.essay-cover img {
+  display: block; width: 100%; height: 440px;
+  object-fit: cover; object-position: 50% 38%;
+  border: 1px solid var(--paper-rule);
+}
+.essay-cover figcaption {
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--ink-muted); margin-top: 10px;
+}
+
+/* Header */
+.essay-head { padding: 48px 0 34px; }
 .essay-eyebrow {
-  font-family: var(--mono);
-  font-size: .62rem;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 1.3rem;
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 11px; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 24px;
 }
 .essay-eyebrow a { color: var(--accent); }
 .essay-title {
-  font-family: var(--display);
-  font-size: clamp(2.2rem, 5vw, 3.2rem);
-  font-weight: 700;
-  line-height: 1.1;
-  letter-spacing: -.02em;
-  color: var(--ink);
-  margin-bottom: .8rem;
+  font-family: var(--display); font-weight: 400;
+  font-size: clamp(40px, 7vw, 64px); line-height: 1.0;
+  letter-spacing: -.03em; color: var(--ink);
+  margin: 0 0 22px; text-wrap: balance;
 }
 .essay-deck {
-  font-family: var(--serif);
-  font-size: 1.08rem;
-  font-weight: 300;
-  color: #4a4038;
-  line-height: 1.65;
-  margin: 0 0 1.6rem;
-  padding-bottom: 1.6rem;
-  border-bottom: 0.5px solid var(--paper-rule);
+  font-family: var(--serif); font-size: clamp(18px, 2.4vw, 21px);
+  font-weight: 400; line-height: 1.5; color: var(--ink-muted);
+  margin: 0 0 26px;
 }
 .essay-byline {
-  font-family: var(--mono);
-  font-size: .62rem;
-  letter-spacing: .15em;
-  text-transform: uppercase;
+  display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase;
   color: var(--ink-muted);
-  margin-bottom: 2.4rem;
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+  border-top: 1px solid var(--paper-rule); padding-top: 18px;
 }
+.essay-byline .by { color: var(--ink); }
 .essay-byline .sep { color: var(--ink-faint); }
-.essay-feature {
-  width: calc(100% + 3rem);
-  margin: 0 -1.5rem 2.4rem;
-  max-height: 460px;
-  object-fit: cover;
+
+/* Epigraph — we always begin with a quote */
+.essay-epigraph {
+  border-left: 3px solid var(--accent);
+  padding: 6px 0 6px 24px; margin: 0 0 44px;
+}
+.essay-epigraph p {
+  font-family: var(--serif); font-style: italic;
+  font-size: clamp(20px, 2.6vw, 25px); line-height: 1.4;
+  color: var(--ink); margin: 0 0 12px;
+}
+.essay-epigraph cite {
+  display: block; font-style: normal;
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase;
+  color: var(--accent);
+}
+
+/* Body — prose held to 720, sidenotes float into the right gutter */
+.essay-body { position: relative; padding: 8px 0 40px; }
+.essay-body .prose { max-width: 720px; }
+.essay-body .prose p.essay-lede::first-letter {
+  float: left; font-family: var(--display);
+  font-size: 78px; line-height: .72;
+  margin: 8px 14px 0 0; color: var(--accent);
+}
+/* Margin sidenote — authored inline, lifts into the gutter on wide screens */
+.tw-note {
+  float: right; clear: right; width: 250px;
+  margin: 4px -280px 18px 0;
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 11.5px; line-height: 1.58; letter-spacing: .01em;
+  color: var(--ink-muted);
+  border-top: 2px solid var(--accent); padding-top: 9px;
+}
+.tw-note em { font-style: italic; }
+
+/* Closing line */
+.essay-closer {
+  font-family: var(--serif); font-size: 21px; line-height: 1.6;
+  font-style: italic; color: var(--ink);
+  margin: 34px 0 0; max-width: 600px;
+  border-top: 2px solid var(--ink); padding-top: 22px;
+}
+
+/* Footer / continue */
+.essay-foot {
+  border-top: 3px solid var(--ink); padding: 30px 0 60px;
+  display: flex; flex-wrap: wrap; gap: 20px;
+  align-items: center; justify-content: space-between;
+}
+.essay-foot .ef-edition {
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-muted);
+}
+.essay-foot .ef-back {
+  font-family: var(--mono); font-weight: var(--mono-weight);
+  font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent-muted); padding-bottom: 3px;
+}
+.essay-foot .ef-back:hover { border-color: var(--accent); color: var(--accent-deep); }
+
+@media (max-width: 1100px) {
+  .tw-note { float: none; width: auto; margin: 14px 0 22px; }
+}
+@media (max-width: 680px) {
+  .essay-frame { padding: 0 1.25rem 1rem; }
+  .essay-cover img { height: 280px; }
+  .essay-head { padding: 32px 0 26px; }
+  .theme-toggle { top: 14px; right: 14px; padding: 7px 12px; }
 }
 
 /* ---------- NEWSLETTER TEMPLATE ---------- */
@@ -1778,7 +1927,7 @@ img { max-width: 100%; height: auto; }
   .colophon-inner { grid-template-columns: 1fr; gap: 1.4rem; }
   .colophon-bottom { flex-direction: column; }
   .colophon-sign-off { text-align: left; }
-  .essay-wrap, .nl-wrap { padding-left: 1rem; padding-right: 1rem; }
+  .nl-wrap { padding-left: 1rem; padding-right: 1rem; }
   .post-nav { grid-template-columns: 1fr; }
   .post-nav .pn-next { text-align: left; }
   .home-masthead-title { letter-spacing: -.03em; }
@@ -2068,55 +2217,42 @@ def site_top(from_dir="root"):
 
 
 def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
+    """The dark site colophon (shared renderer in essay_template), fed real
+    nav, tags, counts, and socials. Closes the document."""
     prefix = "" if from_dir == "root" else "../"
-    tag_links = "\n".join(
-        f'      <li><a href="{prefix}tags/{t["slug"]}.html">{esc(t["name"])}</a></li>'
-        for t in top_tags[:6]
+    primary = [
+        {"label": "Home", "href": f"{prefix}index.html"},
+        {"label": "Archive", "href": f"{prefix}archive.html"},
+        {"label": "All Topics", "href": f"{prefix}tags/index.html"},
+        {"label": "The Lexicon", "href": f"{prefix}lexicon/index.html"},
+        {"label": "Essays", "href": f"{prefix}tags/a-closer-look.html"},
+        {"label": "Newsletters", "href": f"{prefix}tags/worthafortune.html"},
+        {"label": "Podcast", "href": f"{prefix}podcast.html"},
+    ]
+    meta = [
+        {"label": "About", "href": f"{prefix}about/index.html"},
+        {"label": "Links", "href": f"{prefix}links/index.html"},
+        {"label": "Corpus Report", "href": f"{prefix}metrics.html"},
+        {"label": "tokenwisdom.ghost.io", "href": GHOST_URL, "external": True},
+        {"label": "GitHub Archive", "href": "https://github.com/iamkhayyam/tokenwisdom", "external": True},
+    ]
+    tags = [{"name": t["name"], "href": f'{prefix}tags/{t["slug"]}.html'} for t in top_tags[:7]]
+    socials = [
+        {"label": "X", "href": "https://x.com/worthafortune"},
+        {"label": "LinkedIn", "href": "https://www.linkedin.com/company/token-wisdom-newsletter/"},
+        {"label": "RSS", "href": f"{GHOST_URL}/rss/"},
+    ]
+    foot = render_colophon(
+        prefix=prefix,
+        mark_url=f"{prefix}assets/crystal-ball.svg",
+        primary=primary, meta=meta, tags=tags, socials=socials,
+        signoff=" ".join(SITE_SIGN_OFF_LINES),
+        stats=f"{posts_count} Posts · {tags_count} Tags",
+        copyright=f"© {years_span} Token Wisdom" if years_span else "© Token Wisdom",
+        subscribe_url=f"{GHOST_URL}/subscribe",
+        handle="@iamkhayyam",
     )
-    sign_off = "<br>".join(esc(line) for line in SITE_SIGN_OFF_LINES)
-    return f"""
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>{esc(SITE_TAGLINE)}</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="{prefix}index.html">Home</a></li>
-        <li><a href="{prefix}archive.html">Archive</a></li>
-        <li><a href="{prefix}tags/index.html">All Topics</a></li>
-        <li><a href="{prefix}lexicon/index.html">The Lexicon</a></li>
-        <li><a href="{prefix}tags/a-closer-look.html">Essays</a></li>
-        <li><a href="{prefix}tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="{prefix}podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-{tag_links}
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="{GHOST_URL}" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
-    </div>
-  </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · {posts_count} Posts · {tags_count} Tags · {years_span} · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">{sign_off}</span>
-  </div>
-</footer>
-</body>
-</html>
-"""
+    return foot + "\n</body>\n</html>\n"
 
 
 def page_shell(title, body, css_path, from_dir="root"):
@@ -2162,18 +2298,130 @@ def secondary_eyebrow_tags(post):
     return " · ".join(out)
 
 
-def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years_span, top_tags, issue_num):
-    tags = post.get("tags") or []
+# Per-essay editorial overrides for the reading page. Optional, keyed by slug —
+# they let a curated essay (the issue's "closer look") carry a cover caption,
+# a kicker topic, and the opening epigraph. Essays without an entry degrade
+# gracefully: cover caption falls back to a house line, topic to the lead tag,
+# and the epigraph is simply omitted.
+ESSAY_OVERRIDES = {
+    "the-sky-has-been-warning-us-since-1859": {
+        "topic": "Infrastructure",
+        "cover_caption": "Sept. 1, 1859 — the operator stays at his key as the line runs hot. Illustration · Token Wisdom",
+        "epigraph": {
+            "quote": "Whatever can happen will happen if we make trials enough.",
+            "cite": "Augustus De Morgan · A Budget of Paradoxes, 1872",
+        },
+    },
+}
 
-    eyebrow_text = secondary_eyebrow_tags(post)
-    tag_eyebrow = ""
-    if eyebrow_text:
-        tag_eyebrow = f'<div class="essay-eyebrow">{esc(eyebrow_text)}</div>'
+# Inline theme bootstrap + toggle. Applies the saved theme before the body
+# paints (placed first in the body) to avoid a flash, then wires the button.
+ESSAY_THEME_SCRIPT = """
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\\u263c':'\\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\\u263c':'\\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+"""
+
+
+def build_essay_issue_map():
+    """Map essay slug -> {number, week, year} from the issue objects, so an
+    essay's reading page can link back to the edition that featured it."""
+    out = {}
+    issues_dir = BACKUP_DIR / "data" / "issues"
+    if not issues_dir.exists():
+        return out
+    for f in sorted(issues_dir.glob("*.json")):
+        if f.name.endswith(".editorial.json"):
+            continue
+        try:
+            issue = json.loads(f.read_text())
+        except Exception:
+            continue
+        essay = issue.get("essay") or {}
+        slug = essay.get("slug")
+        if slug:
+            out[slug] = {
+                "number": issue.get("number"),
+                "week": issue.get("week"),
+                "year": issue.get("year"),
+            }
+    return out
+
+
+def essay_kicker(post, override):
+    """'A Closer Look · Week 13 · Infrastructure' — section, week, topic."""
+    _, section_label = section_code(post)
+    parts = [section_label]
+    title, slug = post.get("title", "") or "", post.get("slug", "") or ""
+    excerpt_txt = post.get("custom_excerpt") or post.get("excerpt") or ""
+    week_num = None
+    for hay in (title, slug):
+        m = WEEK_RX.search(hay)
+        if m:
+            week_num = int(m.group(1)); break
+    if week_num is None:  # essays carry their week as "W13" in the excerpt
+        m = re.search(r"\bW(\d{1,2})\b", excerpt_txt)
+        if m:
+            week_num = int(m.group(1))
+    if week_num is not None:
+        parts.append(f"Week {week_num:02d}")
+    topic = override.get("topic") or secondary_eyebrow_tags(post).split(" · ")[0]
+    if topic:
+        parts.append(topic)
+    return " · ".join(p for p in parts if p)
+
+
+def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
+                      years_span, top_tags, issue_num, issue_ref=None):
+    tags = post.get("tags") or []
+    override = ESSAY_OVERRIDES.get(post.get("slug", ""), {})
+
+    # Cover — we always lead with one
+    cover = ""
+    feature = post.get("feature_image")
+    if feature:
+        caption = override.get("cover_caption") or "Illustration · Token Wisdom"
+        cover = f"""
+  <figure class="essay-cover">
+    <img src="{esc(feature)}" alt="{esc(post.get('title', ''))}" loading="eager">
+    <figcaption>{esc(caption)}</figcaption>
+  </figure>"""
 
     deck = ""
     custom = post.get("custom_excerpt") or post.get("excerpt") or ""
+    custom = re.sub(r"^\s*W\d{1,2}\s*[-–—]\s*", "", custom)  # drop "W13 -" (now in the kicker)
     if custom:
         deck = f'<p class="essay-deck">{esc(custom.strip())}</p>'
+
+    # Epigraph — we always begin with a quote (when one is on file)
+    epigraph = ""
+    ep = override.get("epigraph")
+    if ep and ep.get("quote"):
+        cite = f'<cite>{esc(ep["cite"])}</cite>' if ep.get("cite") else ""
+        epigraph = f"""
+  <div class="essay-epigraph essay-col">
+    <p>&ldquo;{esc(ep['quote'])}&rdquo;</p>
+    {cite}
+  </div>"""
 
     tag_pills = ""
     if tags:
@@ -2183,51 +2431,70 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count, years
             if not (t.get("name", "") or "").startswith("#")
             and t.get("slug", "") not in SECTION_TAGS
         )
-        tag_pills = f'<div class="post-tags">{pills}</div>' if pills else ""
+        tag_pills = f'<div class="post-tags essay-col">{pills}</div>' if pills else ""
 
     content = post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>"
+    content = sanitize_body(content)              # repair Ghost embeds
+    if post.get("slug") == "the-sky-has-been-warning-us-since-1859":
+        content = demo_margin_notes(content)      # showcase the margin apparatus
+    content = mark_lede(content)                  # drop cap on the opening paragraph
 
-    nav_prev = ""
-    nav_next = ""
-    if prev_post:
-        nav_prev = f"""
+    # Footer — back to the edition that featured this essay
+    if issue_ref and issue_ref.get("number"):
+        num, wk = issue_ref["number"], issue_ref.get("week")
+        ed_bits = [f"No. {num}"] + ([f"Week {wk:02d}"] if wk else [])
+        edition_line = "🔮 Token Wisdom · " + " · ".join(ed_bits)
+        back_href, back_label = f"../issues/{num}/", "Back to this week's edition →"
+    else:
+        edition_line = "🔮 Token Wisdom · " + (edition_meta(post) or "A Closer Look")
+        back_href, back_label = "../index.html", "Back to Token Wisdom →"
+    footer = f"""
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">{esc(edition_line)}</span>
+    <a class="ef-back" href="{back_href}">{back_label}</a>
+  </footer>"""
+
+    nav_prev = (f"""
     <div class="pn-prev">
       <span class="pn-label">← Previous</span>
       <a href="{prev_post['slug']}.html">{esc(prev_post.get('title', ''))}</a>
-    </div>"""
-    else:
-        nav_prev = '<div></div>'
-    if next_post:
-        nav_next = f"""
+    </div>""" if prev_post else '<div></div>')
+    nav_next = (f"""
     <div class="pn-next">
       <span class="pn-label">Next →</span>
       <a href="{next_post['slug']}.html">{esc(next_post.get('title', ''))}</a>
-    </div>"""
-    else:
-        nav_next = '<div></div>'
+    </div>""" if next_post else '<div></div>')
 
-    body = render_post_top_bar(post, issue_num) + f"""
-<article class="essay-wrap">
-  {tag_eyebrow}
-  <h1 class="essay-title">{esc(post.get('title', ''))}</h1>
-  {deck}
-  <div class="essay-byline">
-    <span>By {esc(author_name(post))}</span>
-    <span class="sep">·</span>
-    <span>{fmt_date(post.get('published_at'))}</span>
-    <span class="sep">·</span>
-    <span>{reading_time(post)}</span>
-  </div>
-  <div class="prose">
-    {content}
+    body = ESSAY_THEME_SCRIPT + render_post_top_bar(post, issue_num) + f"""
+<article class="essay-frame">
+  {cover}
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">{esc(essay_kicker(post, override))}</div>
+    <h1 class="essay-title">{esc(post.get('title', ''))}</h1>
+    {deck}
+    <div class="essay-byline">
+      <span class="by">By {esc(author_name(post))}</span>
+      <span class="sep">·</span>
+      <span>{reading_time(post)}</span>
+      <span class="sep">·</span>
+      <span>{fmt_date(post.get('published_at'))}</span>
+    </div>
+  </header>
+  {epigraph}
+  <div class="essay-body">
+    <div class="prose">
+      {content}
+    </div>
   </div>
   {tag_pills}
+  {footer}
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
   {nav_prev}
   {nav_next}
 </nav>
+{INDEX_MARKUP}{INDEX_SCRIPT}
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
@@ -3632,6 +3899,9 @@ def main():
     # Per-section issue numbers (ACL.001, POW.153, etc.)
     issue_nums = issue_number_map(posts)
 
+    # Essay slug -> featuring edition, for the essay-page back link
+    essay_issue_map = build_essay_issue_map()
+
     # Prev/next within same category (essay/newsletter) for more contextual nav
     def siblings(post):
         same = [p for p in chrono if is_newsletter(p) == is_newsletter(post)]
@@ -3654,7 +3924,7 @@ def main():
     print("Writing stylesheet…")
     import tw_theme
     with open(DOCS_DIR / "style.css", "w") as f:
-        f.write(CSS + tw_theme.OVERLAY_CSS)
+        f.write(CSS + READING_APPARATUS_CSS + COLOPHON_CSS + tw_theme.OVERLAY_CSS)
 
     posts_count = len(posts)
     tags_count = len(public_tags)
@@ -3692,13 +3962,17 @@ def main():
             html_out = render_newsletter_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num)
             nl_count += 1
         else:
-            html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num)
+            html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num, issue_ref=essay_issue_map.get(slug))
             essay_count += 1
         with open(DOCS_DIR / "posts" / f"{slug}.html", "w") as f:
             f.write(html_out)
         if (i + 1) % 50 == 0:
             print(f"  {i + 1}/{len(posts)}")
     print(f"  Essays: {essay_count}  ·  Newsletters: {nl_count}")
+
+    # Essay template reference page (the CMS-facing template, worked example)
+    import essay_template
+    essay_template.main()
 
     # Tag pages
     print(f"Tag pages ({len(public_tags)})…")

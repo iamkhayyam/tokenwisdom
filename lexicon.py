@@ -31,6 +31,7 @@ from datetime import datetime
 from pathlib import Path
 
 import lexicon_sources as src
+import lexicon_clean as clean
 import tw_theme as theme
 
 BACKUP_DIR = Path(__file__).parent
@@ -162,7 +163,12 @@ def aggregate(editions):
             norm = re.sub(r"\s+", " ", d["text"].lower()).strip()
             if not history or re.sub(r"\s+", " ", history[-1]["text"].lower()).strip() != norm:
                 history.append(d)
-        canonical = history[-1]["text"] if history else ""
+        # Canonical = the most recent *clean* definition (a polluted latest
+        # entry must not override an earlier good one). A hand-written override
+        # wins for the handful that can't be salvaged by truncation.
+        canonical = clean.pick_clean(
+            history, fallback=(history[-1]["text"] if history else ""))
+        canonical = clean.MANUAL_DEFS.get(slug, canonical)
 
         eds_sorted = sorted(t["editions"], key=lambda d: d["date"])
         # unique editions by date

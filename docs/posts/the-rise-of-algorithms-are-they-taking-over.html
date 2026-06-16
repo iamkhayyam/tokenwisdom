@@ -67,29 +67,61 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.029 · W19 · May 10, 2023</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">A.I. (and Subsets) · All the Data · Technology</div>
-  <h1 class="essay-title">The Rise of Algorithms: Are They Taking Over?</h1>
-  <p class="essay-deck">An Original Recipe for Change 🔮
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/common_pound_cake-algorithm.png" alt="The Rise of Algorithms: Are They Taking Over?" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · A.I. (and Subsets)</div>
+    <h1 class="essay-title">The Rise of Algorithms: Are They Taking Over?</h1>
+    <p class="essay-deck">An Original Recipe for Change 🔮
 
 Algorithms silently guide our daily decisions, influencing and forming the world we live in. From the stock market to medicine, from music to national security, algorithms are becoming more sophisticated and prevalent every day. But what exactly are algorithms, and should we worry about their increasing dominance in our lives? Do we even know where they came from? In order to understand where we’re going, we have to know where we’ve been.
 
 
 Algorithmic Beginning</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>May 10, 2023</span>
-    <span class="sep">·</span>
-    <span>7 min read</span>
-  </div>
-  <div class="prose">
-    <h2 id="an-original-recipe-for-change-%F0%9F%94%AE">An Original Recipe for Change 🔮</h2><hr><p>Algorithms silently guide our daily decisions, influencing and forming the world we live in. From the stock market to medicine, from music to national security, algorithms are becoming more sophisticated and prevalent every day. But what exactly are algorithms, and should we worry about their increasing dominance in our lives? Do we even know where they came from? In order to understand where we’re going, we have to know where we’ve been.</p><figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/kM9ASKAni_s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" title="Computer Science Basics: Algorithms"></iframe></figure><h2 id="algorithmic-beginnings">Algorithmic Beginnings</h2><p>The term "algorithm" comes from the name of the Persian mathematician and scholar, Muhammad ibn Musa al-Khwarizmi. He was a director at the&nbsp;<a href="https://en.wikipedia.org/wiki/House_of_Wisdom?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><strong><em>House of Wisdom</em></strong></a>&nbsp;and had meaningful impact on mathematics, astronomy, geography, and cartography. He introduced Hindu-Arabic numerals to the West and contributed to maths by showing how complex problems could be broken down into simpler parts and solved. This paved the way for the computer age, as the principles of algorithms became the foundation for modern computing.</p><p>Algorithms are sets of instructions computers use to solve problems. They take in data, process it, and produce output. If we were talking analogies, the easiest would be a recipe. Given certain variables, an order in which to attempt each outlined step, and with an intended outcome of baking a Common Pound Cake should be a snap!</p><p>Our basic algorithm for baking a cake would be:</p><pre><code>1. Preheat oven and prepare baking tray.
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>7 min read</span>
+      <span class="sep">·</span>
+      <span>May 10, 2023</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <h2 id="an-original-recipe-for-change-%F0%9F%94%AE">An Original Recipe for Change 🔮</h2><hr><p class="essay-lede">Algorithms silently guide our daily decisions, influencing and forming the world we live in. From the stock market to medicine, from music to national security, algorithms are becoming more sophisticated and prevalent every day. But what exactly are algorithms, and should we worry about their increasing dominance in our lives? Do we even know where they came from? In order to understand where we’re going, we have to know where we’ve been.</p><figure class="kg-card kg-embed-card"><iframe width="200" height="113" src="https://www.youtube.com/embed/kM9ASKAni_s?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" title="Computer Science Basics: Algorithms"></iframe></figure><h2 id="algorithmic-beginnings">Algorithmic Beginnings</h2><p>The term "algorithm" comes from the name of the Persian mathematician and scholar, Muhammad ibn Musa al-Khwarizmi. He was a director at the&nbsp;<a href="https://en.wikipedia.org/wiki/House_of_Wisdom?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><strong><em>House of Wisdom</em></strong></a>&nbsp;and had meaningful impact on mathematics, astronomy, geography, and cartography. He introduced Hindu-Arabic numerals to the West and contributed to maths by showing how complex problems could be broken down into simpler parts and solved. This paved the way for the computer age, as the principles of algorithms became the foundation for modern computing.</p><p>Algorithms are sets of instructions computers use to solve problems. They take in data, process it, and produce output. If we were talking analogies, the easiest would be a recipe. Given certain variables, an order in which to attempt each outlined step, and with an intended outcome of baking a Common Pound Cake should be a snap!</p><p>Our basic algorithm for baking a cake would be:</p><pre><code>1. Preheat oven and prepare baking tray.
 2. Prepare and mix ingredients.
 3. Place tray in oven and bake cake.</code></pre><p>To make our process more detailed, we'll use the recipe approach: outline the basic steps, then add additional information for precision.</p><pre><code>1. Cream the butter.
 2. Add the sugar and beat well. 
@@ -115,8 +147,14 @@ Algorithmic Beginning</p>
 6. Dissolve baking powder in milk and mix that in.
 
 7. Pour into buttered &amp; floured tin, and bake for 1 1/2 to 2 hours.</code></pre><p>Recipes lack precision and reproducibility. An algorithm is designed to be precise with the current hardware, ensuring that its implementations in different languages and the same language yield identical outcomes.</p><p>Take "a cup of flour". The recipe doesn't say how hard you should pack the flour into the cup. It doesn't specify the moisture content. Unsure of the precise amounts of flour, starch, protein, and fibre?<a href="https://craftofcoding.wordpress.com/2021/11/02/algorithms-are-as-easy-as-cake/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>1</sup></a>&nbsp;It may not matter, as the dish often turns out equally delicious. But does it?</p><p>An algorithm is a procedure for solving a problem<a href="https://en.wikipedia.org/wiki/Algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>2</sup></a><sup>,</sup><a href="https://www.techtarget.com/whatis/definition/algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>3</sup></a><sup>,</sup><a href="https://www.merriam-webster.com/dictionary/algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>4</sup></a><sup>,</sup><a href="https://www.geeksforgeeks.org/introduction-to-algorithms/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>5</sup></a><sup>,</sup><a href="https://www.programiz.com/dsa/algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>6</sup></a><sup>,</sup><a href="https://www.khanacademy.org/computing/computer-science/algorithms/intro-to-algorithms/v/what-are-algorithms?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>7</sup></a>. Many fields, like mathematics, computer science, physics, and biology, use it frequently<a href="https://www.programiz.com/dsa/algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>6</sup></a>.</p><p>Algorithms use AI and ML to analyze data and improve results. Robots can make decisions and adjust to changing environments autonomously. A computer can use an algorithm to rapidly arrange a list of numbers in increasing order. It can also find the most efficient route between two locations.</p><p>A simple algorithm is as follows:</p><ul><li>Input and output should be defined precisely.</li><li>The algorithm must include clear, unambiguous steps.</li><li>Algorithms should be the most efficient solution to a problem.</li><li>An algorithm shouldn't include computer code.</li><li>The algorithm should be designed to be compatible with various programming languages.</li></ul><p>There are many types of algorithms, including<a href="https://en.wikipedia.org/wiki/Algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>2</sup></a>&nbsp;:</p><figure class="kg-card kg-image-card kg-width-full"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/b5653020-7e55-4725-896d-bc866aaac4d7/types_of_algorithms-f.png" class="kg-image" alt="" loading="lazy"></figure><p>Computer programming calls an algorithm a set of well-defined instructions to solve a particular problem. An algorithm takes input(s) to create the desired output<a href="https://en.wikipedia.org/wiki/Algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>1</sup></a>&nbsp;. For instance, to add two numbers, two number inputs are inputted, added using the + operator, and the result is displayed.</p><p>Algorithms' complexity depends on the desired results. For example, a recipe can illustrate how algorithms work. To cook an original recipe, one reads the instructions and steps and executes them one by one, in the given sequence. This process results in a perfectly cooked dish.</p><h2 id="algorithms-are-everywhere">Algorithms Are Everywhere</h2><p>Algorithms pervade our daily existence, often invisibly. Examples of everywhere include<a href="https://en.wikipedia.org/wiki/Algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>2</sup></a><sup>,</sup><a href="https://www.programiz.com/dsa/algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><sup>6</sup></a>:</p><ul><li><strong>Social media</strong>: Algorithms control which posts appear on our feeds, which ads we get, and the posts that are suggested to us.</li><li><strong>Online shopping</strong>: Algorithms suggest products based on our browsing and purchase history.</li><li><strong>Navigation</strong>: Algorithms help us find the most efficient route to our destination and estimate arrival times.</li><li><strong>Entertainment</strong>: Algorithms recommend movies, TV shows, and music based on our viewing and listening<a href="http://history.healthcare/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow">&nbsp;</a>history.</li><li><strong>Healthcare</strong>: Algorithms help doctors diagnose diseases and suggest treatments.</li><li><strong>Employment</strong>: Algorithms are used in hiring processes to screen resumes and select candidates.</li><li><strong>Transportation</strong>: Algorithms control traffic signals and optimize public transportation schedules.</li><li><strong>Education</strong>: Online learning platforms employ algorithms to tailor learning experiences to individual student needs.</li></ul><p>Algorithms offer many benefits in terms of efficiency gains, however, they can also prove to be problematic. They can perpetuate bias, create filter bubbles, and take significant decisions out of the hands of human<a href="https://en.wikipedia.org/wiki/Algorithm?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-algorithms-are-they-taking-over" rel="noopener noreferrer nofollow"><strong><sup>1</sup></strong></a>&nbsp;. It is imperative to know how algorithms impact our lives and think critically about their use.</p><h3 id="the-good-how-algorithms-change-the-world">The Good: How Algorithms Change the World</h3><p>Algorithms are neither beneficial nor detrimental in themselves but rather depend on their usage. They can have a positive effect on the world when utilized correctly. For example:</p><ul><li>Algorithms in medicine can improve patient outcomes and reduce costs by allowing for tailored treatment plans based on individual data.</li><li>Transportation algorithms optimize traffic flow and reduce congestion. This can save time and reduce pollution.</li><li>Algorithms are used in education to create adaptive learning systems that customize instruction for each student. This can enhance student achievement and close educational disparities.</li></ul><h3 id="the-bad-how-algorithms-can-go-wrong">The Bad: How Algorithms Can Go Wrong</h3><p>However, algorithms can also go wrong in many ways. For example:</p><ul><li>Finance algorithms have been blamed for the 2010 "flash crash" and other market disruptions. Algorithms can have devastating effects on the stock market, resulting in swift losses of investor capital.</li><li>Algorithms deployed in criminal justice systems have been criticized for propagating racial inequity by influencing decision-making around bail, sentencing, and parole — supposedly by predicting recidivism.</li><li>Social media algorithms personalize news feeds and recommend content to users. However, these algorithms can also create "filter bubbles" where users only see content confirming their beliefs, leading to polarization and division.</li></ul><figure class="kg-card kg-image-card"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/f4ab5593-dc69-417e-bf1a-516266ea9e88/algorithms_illustration.jpeg" class="kg-image" alt="" loading="lazy"></figure><h2 id="the-future-of-beneficial-algorithms">The Future of Beneficial Algorithms</h2><p>Algorithms are not slowing down. As technology progresses, more robust algorithms will become common. We can influence this future to ensure that algorithms are used for humankind's benefit. Below are strategies to accomplish this:</p><ul><li><strong>Transparency and accountability</strong>: Companies and governments must make clear their algorithms and data, and must answer for any algorithmic outcomes that impact individuals' lives.</li><li><strong>Diversity and inclusion</strong>: Diversity and inclusion in tech will lead to more equitable algorithms. Without it, algorithms will reflect their creators' biases - a narrow set of backgrounds.</li><li><strong>Education and awareness:</strong>&nbsp;People should be informed about algorithms' impact on their lives, both positive and negative. Schools and public outreach programs can help spread this knowledge.</li><li><strong>Ethical guidelines</strong>: Companies and organizations must create ethical principles for developing and operating algorithms, assessing potential harm, fairness, and privacy. These principles must be periodically evaluated and amended as required.</li><li><strong>Independent audits and assessments:</strong>&nbsp;Third-party organizations could review algorithms for compliance with ethical guidelines, overall efficiency, and potential biases or discrimination.</li><li><strong>Laws and regulations:</strong>&nbsp;Governments should create and enforce laws that safeguard people from the adverse effects of algorithms, e.g. bias and privacy infringements. These laws should be adjustable to accommodate evolving technology, while powerful enough to enable companies and individuals to be held responsible for their actions.</li><li><strong>Collaboration between stakeholders:</strong>&nbsp;Algorithms impact a wide variety of sectors and people. Tech companies, governments, users, and communities must work together to ensure beneficial outcomes. This entails public consultation, partnership building, interdisciplinary research, and collaboration between different sectors.</li><li><strong>Promoting fairness and equality:</strong>&nbsp;Algorithms should be created to ensure fairness and equality, to avoid unintentionally discriminating against certain demographics. For instance, loan application algorithms should include fairness metrics to prevent bias by race, gender, or socioeconomic status.</li><li><strong>Involving affected communities:</strong>&nbsp;Involve community representatives or members in the design and decision-making of algorithms affecting them. This ensures that their perspectives and concerns are taken into account, helping to create more inclusive and equitable algorithms.</li><li><strong>Encouraging transparency in research:</strong>&nbsp;Encouraging academic researchers and industry professionals to share their findings and methodologies in a transparent manner can promote trust and allow for increased scrutiny and refinement of algorithms. Doing so can also help develop best practices and industry standards.</li></ul><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/eb74ee23-3d61-4f71-89d7-8c7ed74b06a3/750e043f-30de-4736-9083-96e67722211a.jpeg" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">$prompt: token wisdom</span></figcaption></figure><h2 id="token-wisdom">Token Wisdom</h2><p>Algorithms alone cannot solve global problems; they are only part of a larger toolkit. Algorithms utilized in generative processes can be described as "reasoning engines," however, the interpretability and explainability of algorithms still require tremendous study and research. Algorithms are effective, but we must be willing to consider other solutions when they are more suitable. While algorithms are neither good nor bad in and of themselves, it is possible to misuse them or create unforeseen consequences. As long as they are explainable, we have a path forward in understanding the reasoning.</p>
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/data.html">All the Data</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/explainable-ai.html">Explainable AI</a><a class="post-tag" href="../tags/generative.html">Generative AI</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/data.html">All the Data</a><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/explainable-ai.html">Explainable AI</a><a class="post-tag" href="../tags/generative.html">Generative AI</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -132,52 +170,115 @@ Algorithmic Beginning</p>
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

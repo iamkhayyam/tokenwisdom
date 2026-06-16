@@ -67,31 +67,69 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.033 · W39 · Sep 27, 2023</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Technology · A.I. (and Subsets) · All the Data</div>
-  <h1 class="essay-title">The AI Powerhouses: Amazon, Microsoft, and the Battle for AI Supremacy</h1>
-  <p class="essay-deck">The plot of technological progression is being redrawn by Amazon and Microsoft, two tech giants deepening their stakes in Anthropic and OpenAI respectively. Fueled by more than strategic intent, these moves are inaugurating a new era in artificial intelligence (AI) and signaling the start of a struggle for dominance.
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/1_DG-3P6HJ-XBkyDYmpB1RZg.jpg" alt="The AI Powerhouses: Amazon, Microsoft, and the Battle for AI Supremacy" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Technology</div>
+    <h1 class="essay-title">The AI Powerhouses: Amazon, Microsoft, and the Battle for AI Supremacy</h1>
+    <p class="essay-deck">The plot of technological progression is being redrawn by Amazon and Microsoft, two tech giants deepening their stakes in Anthropic and OpenAI respectively. Fueled by more than strategic intent, these moves are inaugurating a new era in artificial intelligence (AI) and signaling the start of a struggle for dominance.
 
 
 Billionaires’ Playground or Significant Transformation?
 
 Emphasizing this question, Amazon’s backing of Anthropic and Microsoft’s alliance with OpenAI imply a deep resonance with</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>September 27, 2023</span>
-    <span class="sep">·</span>
-    <span>3 min read</span>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>3 min read</span>
+      <span class="sep">·</span>
+      <span>September 27, 2023</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <hr><p class="essay-lede">The plot of technological progression is being redrawn by Amazon and Microsoft, two tech giants deepening their stakes in Anthropic and OpenAI respectively. Fueled by more than strategic intent, these moves are inaugurating a new era in artificial intelligence (AI) and signaling the start of a struggle for dominance.</p><h2 id="billionaires%E2%80%99-playground-or-significant-transformation">Billionaires’ Playground or Significant Transformation?</h2><p>Emphasizing this question, Amazon’s backing of Anthropic and Microsoft’s alliance with OpenAI imply a deep resonance with AI research. These moves underline an emerging pattern of deploying AI for commercial development. Based on recent data, Amazon has funded Anthropic with an immediate capital deployment of $1.25 billion with an option for either party to trigger the following $2.75 billion paid out by Amazon to cap the total up to $4 billion. Also of note is that Google invested in Anthropic’s $450 million round in May of this year. The initial traunch is to refine its logistic procedures, improve customer service, and fine-tune its recommendation processes. In concert, Microsoft invested $1 billion into an OpenAI partnership back in 2019 aimed at reshaping its cloud and corporate solutions using OpenAI’s pioneering tools. By 2021, that number increased to $3 billion, and recently added another $10 billion at a $29 billion valuation and 49% equity. As the impact of these major financial shifts becomes visible, we are compelled to consider: might these infusions fundamentally change corporate structures and customer interactions?</p><p>Reflecting that point, their well-calculated investments have stirred industries. Whether it’s AI facilitating faster drug inventions in the healthcare sector with predictive analysis, AI-driven chatbots renovating customer service, or AI algorithms refining financial portfolios, the effects are far-reaching. These developments may incite remarkable changes, shifting our known way of life.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ae04e00e-caff-4ea4-811f-3ec1f6feca1a/1_AIsC7Jfn7qtxPlSA4bCNbw.png" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">This is not a copyrightable image but this prompt is: “the tug of war of technological progress and ethics”</span></figcaption></figure><h2 id="the-privacy-predicament-tech-advancements-vs-personal-space">The Privacy Predicament: Tech Advancements vs Personal Space</h2><p>Although these investments carry massive promise, rising anxieties concerning data privacy and tech monopolies are feasible. Can we overlook the unsavory possibility of the creative stagnation due to lack of rivalry, or tech giants enabling a surveillance-dominated economy? Each user interaction creates a data-based personal profile, gradually letting corporations intrude into our personal areas. The implications are noteworthy — we face a possible breach of privacy.</p><h2 id="facial-recognition-and-privacy-a-delicate-dance">Facial Recognition and Privacy: A Delicate Dance</h2><p>Given this context, the examination of AI-led facial recognition technologies becomes vital. As privacy norms risk obliteration by surveillance networks, the parting question becomes even more critical — how do we balance maintaining individual rights with promoting AI evolution?</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/59ecefcd-e324-401b-a061-3c3a6e4a1c33/1_EZlBKSWY1hGFavvIfJ-56A.png" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">This is not a copyrightable image but this prompt is: “framing the future: utopia or dystopia”</span></figcaption></figure><h2 id="staring-into-the-future-ethics-accountability-and-decentralization">Staring into the Future: Ethics, Accountability, and Decentralization</h2><p>Upon critical evaluation of the tech perspective, the possibility of imbalance calls for consideration of decentralization as a counteraction. Surrounding this are the emerging blockchain technology and decentralized AI models, ready to disrupt the existing ecosystem. By letting individuals exercise more governance over their data and AI models, these innovations aim to democratize AI. It begs the question — could a move toward decentralized governance be our gateway to a more just and accessible AI landscape?</p><p>In summary, the assertive maneuvers by Amazon and Microsoft signal a crucial juncture in the sphere of AI. Major investments made by these tech titans — which are wisely poised at the intersection of market strategies and AI evolution — present the promise of remarkable, transformational applications. At the same time, it heightens focus on key ethical dilemmas of data privacy and exclusivity.</p><p>As we look deeper into this AI-shaped era, keeping tabs on fairness, accountability, and decentralization becomes crucial. Adopting a holistic perspective on the current landscape, Alan Turing’s words hold true relevance:</p><blockquote><em>“We can only see a short distance ahead, but we can see plenty there that needs to be done.”</em></blockquote><p>The battleground is ready and primed, building suspense for the next chapter. Will this clash of tech titans precipitate an AI paradise, or simply pave the way for dystopia?</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/83d23ccc-c55e-47a1-90ef-038ea6288c6c/1_hAYmsH5fopF9FA58AW4WBg.gif" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">En Garde!</span></figcaption></figure><p></p><p></p><p>⚉ Thanks for cruising by the Cult of Innovation ⚉</p><p>We’re making some Stone Soup here and if you enjoyed this amuse-bouche of innovative compilation of breakthroughs in bite-sized morsels, please share with your friends and help feed a community. Mmmm. #nomnom.</p><p>You can find me elsewhere on the innanets:</p><ul><li>I’m repping ✨<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3d3dy5saW5rZWRpbi5jb20vY29tcGFueS90b2tlbi13aXNkb20tbmV3c2xldHRlci8_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtYWktcG93ZXJob3VzZXMtYW1hem9uLW1pY3Jvc29mdC1hbmQtdGhlLWJhdHRsZS1mb3ItYWktc3VwcmVtYWN5IiwicG9zdF9pZCI6ImUxYWU3ZTU1LTNhYTEtNGUxYi1iNWRhLTRhZmFiNjlkZmI5ZiIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiI5Zjk0YmM1Ni0yM2RlLTQ4YTUtYTE0ZC1kNjE4NzkxZTkyNGYiLCJpYXQiOjE3MDU2MjMzMDAsImlzcyI6Im9yY2hpZCJ9.cYNaf5KzC4EpbWSsZKpaGv7ADpq6px1K0xNnuLoHARE?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><em>&nbsp;</em><u>Token Wisdom</u></a>&nbsp;on LinkedIn</li><li>I’m&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3R3aXR0ZXIuY29tL3dvcnRoYWZvcnR1bmU_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtYWktcG93ZXJob3VzZXMtYW1hem9uLW1pY3Jvc29mdC1hbmQtdGhlLWJhdHRsZS1mb3ItYWktc3VwcmVtYWN5IiwicG9zdF9pZCI6ImUxYWU3ZTU1LTNhYTEtNGUxYi1iNWRhLTRhZmFiNjlkZmI5ZiIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiI5Zjk0YmM1Ni0yM2RlLTQ4YTUtYTE0ZC1kNjE4NzkxZTkyNGYiLCJpYXQiOjE3MDU2MjMzMDAsImlzcyI6Im9yY2hpZCJ9.T0uiu9Bndg32iYObH41GGowEW_3EVX8U28Q2DxVyamw?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><u>@worthafortune</u></a>&nbsp;on Twitter 🧐</li><li>And all the rest is on my&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2JlbnRvLm1lL2lhbWtoYXl5YW0_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtYWktcG93ZXJob3VzZXMtYW1hem9uLW1pY3Jvc29mdC1hbmQtdGhlLWJhdHRsZS1mb3ItYWktc3VwcmVtYWN5IiwicG9zdF9pZCI6ImUxYWU3ZTU1LTNhYTEtNGUxYi1iNWRhLTRhZmFiNjlkZmI5ZiIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiI5Zjk0YmM1Ni0yM2RlLTQ4YTUtYTE0ZC1kNjE4NzkxZTkyNGYiLCJpYXQiOjE3MDU2MjMzMDAsImlzcyI6Im9yY2hpZCJ9.nIOp8c1UGVV9h_ZOBOBFiFavl2J0byHZY7KYpo-PuW4?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><u>Bento</u></a></li></ul>
+    </div>
   </div>
-  <div class="prose">
-    <hr><p>The plot of technological progression is being redrawn by Amazon and Microsoft, two tech giants deepening their stakes in Anthropic and OpenAI respectively. Fueled by more than strategic intent, these moves are inaugurating a new era in artificial intelligence (AI) and signaling the start of a struggle for dominance.</p><h2 id="billionaires%E2%80%99-playground-or-significant-transformation">Billionaires’ Playground or Significant Transformation?</h2><p>Emphasizing this question, Amazon’s backing of Anthropic and Microsoft’s alliance with OpenAI imply a deep resonance with AI research. These moves underline an emerging pattern of deploying AI for commercial development. Based on recent data, Amazon has funded Anthropic with an immediate capital deployment of $1.25 billion with an option for either party to trigger the following $2.75 billion paid out by Amazon to cap the total up to $4 billion. Also of note is that Google invested in Anthropic’s $450 million round in May of this year. The initial traunch is to refine its logistic procedures, improve customer service, and fine-tune its recommendation processes. In concert, Microsoft invested $1 billion into an OpenAI partnership back in 2019 aimed at reshaping its cloud and corporate solutions using OpenAI’s pioneering tools. By 2021, that number increased to $3 billion, and recently added another $10 billion at a $29 billion valuation and 49% equity. As the impact of these major financial shifts becomes visible, we are compelled to consider: might these infusions fundamentally change corporate structures and customer interactions?</p><p>Reflecting that point, their well-calculated investments have stirred industries. Whether it’s AI facilitating faster drug inventions in the healthcare sector with predictive analysis, AI-driven chatbots renovating customer service, or AI algorithms refining financial portfolios, the effects are far-reaching. These developments may incite remarkable changes, shifting our known way of life.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/ae04e00e-caff-4ea4-811f-3ec1f6feca1a/1_AIsC7Jfn7qtxPlSA4bCNbw.png" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">This is not a copyrightable image but this prompt is: “the tug of war of technological progress and ethics”</span></figcaption></figure><h2 id="the-privacy-predicament-tech-advancements-vs-personal-space">The Privacy Predicament: Tech Advancements vs Personal Space</h2><p>Although these investments carry massive promise, rising anxieties concerning data privacy and tech monopolies are feasible. Can we overlook the unsavory possibility of the creative stagnation due to lack of rivalry, or tech giants enabling a surveillance-dominated economy? Each user interaction creates a data-based personal profile, gradually letting corporations intrude into our personal areas. The implications are noteworthy — we face a possible breach of privacy.</p><h2 id="facial-recognition-and-privacy-a-delicate-dance">Facial Recognition and Privacy: A Delicate Dance</h2><p>Given this context, the examination of AI-led facial recognition technologies becomes vital. As privacy norms risk obliteration by surveillance networks, the parting question becomes even more critical — how do we balance maintaining individual rights with promoting AI evolution?</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/59ecefcd-e324-401b-a061-3c3a6e4a1c33/1_EZlBKSWY1hGFavvIfJ-56A.png" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">This is not a copyrightable image but this prompt is: “framing the future: utopia or dystopia”</span></figcaption></figure><h2 id="staring-into-the-future-ethics-accountability-and-decentralization">Staring into the Future: Ethics, Accountability, and Decentralization</h2><p>Upon critical evaluation of the tech perspective, the possibility of imbalance calls for consideration of decentralization as a counteraction. Surrounding this are the emerging blockchain technology and decentralized AI models, ready to disrupt the existing ecosystem. By letting individuals exercise more governance over their data and AI models, these innovations aim to democratize AI. It begs the question — could a move toward decentralized governance be our gateway to a more just and accessible AI landscape?</p><p>In summary, the assertive maneuvers by Amazon and Microsoft signal a crucial juncture in the sphere of AI. Major investments made by these tech titans — which are wisely poised at the intersection of market strategies and AI evolution — present the promise of remarkable, transformational applications. At the same time, it heightens focus on key ethical dilemmas of data privacy and exclusivity.</p><p>As we look deeper into this AI-shaped era, keeping tabs on fairness, accountability, and decentralization becomes crucial. Adopting a holistic perspective on the current landscape, Alan Turing’s words hold true relevance:</p><blockquote><em>“We can only see a short distance ahead, but we can see plenty there that needs to be done.”</em></blockquote><p>The battleground is ready and primed, building suspense for the next chapter. Will this clash of tech titans precipitate an AI paradise, or simply pave the way for dystopia?</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/83d23ccc-c55e-47a1-90ef-038ea6288c6c/1_hAYmsH5fopF9FA58AW4WBg.gif" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">En Garde!</span></figcaption></figure><p></p><p></p><p>⚉ Thanks for cruising by the Cult of Innovation ⚉</p><p>We’re making some Stone Soup here and if you enjoyed this amuse-bouche of innovative compilation of breakthroughs in bite-sized morsels, please share with your friends and help feed a community. Mmmm. #nomnom.</p><p>You can find me elsewhere on the innanets:</p><ul><li>I’m repping ✨<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3d3dy5saW5rZWRpbi5jb20vY29tcGFueS90b2tlbi13aXNkb20tbmV3c2xldHRlci8_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtYWktcG93ZXJob3VzZXMtYW1hem9uLW1pY3Jvc29mdC1hbmQtdGhlLWJhdHRsZS1mb3ItYWktc3VwcmVtYWN5IiwicG9zdF9pZCI6ImUxYWU3ZTU1LTNhYTEtNGUxYi1iNWRhLTRhZmFiNjlkZmI5ZiIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiI5Zjk0YmM1Ni0yM2RlLTQ4YTUtYTE0ZC1kNjE4NzkxZTkyNGYiLCJpYXQiOjE3MDU2MjMzMDAsImlzcyI6Im9yY2hpZCJ9.cYNaf5KzC4EpbWSsZKpaGv7ADpq6px1K0xNnuLoHARE?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><em>&nbsp;</em><u>Token Wisdom</u></a>&nbsp;on LinkedIn</li><li>I’m&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3R3aXR0ZXIuY29tL3dvcnRoYWZvcnR1bmU_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtYWktcG93ZXJob3VzZXMtYW1hem9uLW1pY3Jvc29mdC1hbmQtdGhlLWJhdHRsZS1mb3ItYWktc3VwcmVtYWN5IiwicG9zdF9pZCI6ImUxYWU3ZTU1LTNhYTEtNGUxYi1iNWRhLTRhZmFiNjlkZmI5ZiIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiI5Zjk0YmM1Ni0yM2RlLTQ4YTUtYTE0ZC1kNjE4NzkxZTkyNGYiLCJpYXQiOjE3MDU2MjMzMDAsImlzcyI6Im9yY2hpZCJ9.T0uiu9Bndg32iYObH41GGowEW_3EVX8U28Q2DxVyamw?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><u>@worthafortune</u></a>&nbsp;on Twitter 🧐</li><li>And all the rest is on my&nbsp;<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2JlbnRvLm1lL2lhbWtoYXl5YW0_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtYWktcG93ZXJob3VzZXMtYW1hem9uLW1pY3Jvc29mdC1hbmQtdGhlLWJhdHRsZS1mb3ItYWktc3VwcmVtYWN5IiwicG9zdF9pZCI6ImUxYWU3ZTU1LTNhYTEtNGUxYi1iNWRhLTRhZmFiNjlkZmI5ZiIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiI5Zjk0YmM1Ni0yM2RlLTQ4YTUtYTE0ZC1kNjE4NzkxZTkyNGYiLCJpYXQiOjE3MDU2MjMzMDAsImlzcyI6Im9yY2hpZCJ9.nIOp8c1UGVV9h_ZOBOBFiFavl2J0byHZY7KYpo-PuW4?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><u>Bento</u></a></li></ul>
-  </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/data.html">All the Data</a><a class="post-tag" href="../tags/risk-reward.html">Risk \ Reward</a><a class="post-tag" href="../tags/cybersecurity.html">Cyber \ Security</a><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/big-tech.html">Big Tech</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/technology.html">Technology</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/data.html">All the Data</a><a class="post-tag" href="../tags/risk-reward.html">Risk \ Reward</a><a class="post-tag" href="../tags/cybersecurity.html">Cyber \ Security</a><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/big-tech.html">Big Tech</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -107,52 +145,115 @@ Emphasizing this question, Amazon’s backing of Anthropic and Microsoft’s all
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

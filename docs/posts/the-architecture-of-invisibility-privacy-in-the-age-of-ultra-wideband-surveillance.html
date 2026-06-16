@@ -67,28 +67,60 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.072 · W31 · Aug 1, 2024</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">🚨 OP-ED · Big Tech · Cyber \ Security</div>
-  <h1 class="essay-title">The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance</h1>
-  <p class="essay-deck">W30 - In the heart of Silicon Valley, a revolution in surveillance unfolds—not with a bang, but with the silent pulse of invisible waves. The architecture of our digital future is being built, one smartphone at a time, and privacy may be its first casualty.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>August 1, 2024</span>
-    <span class="sep">·</span>
-    <span>7 min read</span>
-  </div>
-  <div class="prose">
-    <blockquote class="kg-blockquote-alt">"The greatest trick the devil ever pulled was convincing the world he didn't exist." </blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">That's what Charles Baudelaire said once upon a time.</span></figcaption></figure>
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/11/W30---The-Architecture-of-Invisibility_-Privacy-in-the-Age-of-Ultra-Wideband-Surveillance-1.jpg" alt="The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 30 · 🚨 OP-ED</div>
+    <h1 class="essay-title">The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance</h1>
+    <p class="essay-deck">In the heart of Silicon Valley, a revolution in surveillance unfolds—not with a bang, but with the silent pulse of invisible waves. The architecture of our digital future is being built, one smartphone at a time, and privacy may be its first casualty.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>7 min read</span>
+      <span class="sep">·</span>
+      <span>August 1, 2024</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <blockquote class="kg-blockquote-alt">"The greatest trick the devil ever pulled was convincing the world he didn't exist." </blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">That's what Charles Baudelaire said once upon a time.</span></figcaption></figure>
 <!--kg-card-begin: html-->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/c244ef05-0dd3-404d-af0c-2e0fb83c173e/"></iframe></div>
+<div class="tw-embed"><iframe frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/c244ef05-0dd3-404d-af0c-2e0fb83c173e/" loading="lazy"></iframe></div>
 <!--kg-card-end: html-->
-<h3 id="from-military-secrecy-to-consumer-ubiquity-the-silent-rise-of-uwb">From Military Secrecy to Consumer Ubiquity: The Silent Rise of UWB</h3><p>In the shadows of the Cold War, a technology was born that would one day reshape the very fabric of our society. Ultra-wideband (UWB) technology, emerging from classified military research in the 1960s, was designed with a singular purpose: to enable covert communications and precision tracking that could evade detection. The U.S. Department of Defense pursued this technology for a compelling reason: unlike conventional narrow-band transmissions, UWB's spread-spectrum signals were virtually impossible to detect or jam. By dispersing information across an unprecedented range of frequencies simultaneously, UWB achieved a feat that bordered on the miraculous – it vanished into the ambient electromagnetic noise of our world, hiding in plain sight.</p><p>Half a century later, in the winter of 2019, this military technology quietly entered millions of homes worldwide. Apple, having strategically acquired Intel's smartphone modem business for $1 billion, unveiled the U1 chip in their iPhone 11 series. This minuscule component, barely larger than a grain of rice, signified more than just the commercialization of military technology; it heralded the deployment of potentially the most sophisticated surveillance infrastructure ever conceived.</p><p>The technical specifications reveal its true capabilities. Operating at frequencies between 3.1 and 10.6 GHz, the U1 emits incredibly brief pulses – lasting less than a nanosecond – across a minimum bandwidth of 500 MHz. These figures are far from arbitrary. This configuration enables time-of-flight calculations with picosecond accuracy, allowing for position tracking precise to within 10 centimeters in three-dimensional space. To put this in perspective, GPS, under optimal conditions, is accurate only to within 5-10 meters. In essence, the U1 chip boasts a precision fifty times greater than the technology we rely on to guide intercontinental missiles.</p><p>Apple's patent portfolio tells an even more striking story. Patent US20190086219A1, blandly titled "Electronic Device With Co-Processor For Indoor Navigation," describes a system capable of not just tracking location, but creating detailed point clouds of environments, tracking multiple objects and people simultaneously, and building persistent spatial awareness models. The patent's clinical language masks its true implications: every UWB-enabled device becomes a node in a vast mesh network, collectively maintaining a real-time digital duplicate of physical reality.</p><div class="kg-card kg-product-card">
+<h3 id="from-military-secrecy-to-consumer-ubiquity-the-silent-rise-of-uwb">From Military Secrecy to Consumer Ubiquity: The Silent Rise of UWB</h3><p class="essay-lede">In the shadows of the Cold War, a technology was born that would one day reshape the very fabric of our society. Ultra-wideband (UWB) technology, emerging from classified military research in the 1960s, was designed with a singular purpose: to enable covert communications and precision tracking that could evade detection. The U.S. Department of Defense pursued this technology for a compelling reason: unlike conventional narrow-band transmissions, UWB's spread-spectrum signals were virtually impossible to detect or jam. By dispersing information across an unprecedented range of frequencies simultaneously, UWB achieved a feat that bordered on the miraculous – it vanished into the ambient electromagnetic noise of our world, hiding in plain sight.</p><p>Half a century later, in the winter of 2019, this military technology quietly entered millions of homes worldwide. Apple, having strategically acquired Intel's smartphone modem business for $1 billion, unveiled the U1 chip in their iPhone 11 series. This minuscule component, barely larger than a grain of rice, signified more than just the commercialization of military technology; it heralded the deployment of potentially the most sophisticated surveillance infrastructure ever conceived.</p><p>The technical specifications reveal its true capabilities. Operating at frequencies between 3.1 and 10.6 GHz, the U1 emits incredibly brief pulses – lasting less than a nanosecond – across a minimum bandwidth of 500 MHz. These figures are far from arbitrary. This configuration enables time-of-flight calculations with picosecond accuracy, allowing for position tracking precise to within 10 centimeters in three-dimensional space. To put this in perspective, GPS, under optimal conditions, is accurate only to within 5-10 meters. In essence, the U1 chip boasts a precision fifty times greater than the technology we rely on to guide intercontinental missiles.</p><p>Apple's patent portfolio tells an even more striking story. Patent US20190086219A1, blandly titled "Electronic Device With Co-Processor For Indoor Navigation," describes a system capable of not just tracking location, but creating detailed point clouds of environments, tracking multiple objects and people simultaneously, and building persistent spatial awareness models. The patent's clinical language masks its true implications: every UWB-enabled device becomes a node in a vast mesh network, collectively maintaining a real-time digital duplicate of physical reality.</p><div class="kg-card kg-product-card">
             <div class="kg-product-card-container">
                 
                 <div class="kg-product-card-title-container">
@@ -159,8 +191,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
                 
             </div>
         </div><p>Technical solutions currently under development offer limited hope. Zero-knowledge proofs could enable location verification without revealing exact positions. Homomorphic encryption might allow spatial data to be processed without being decrypted. But these address only the symptoms of a deeper transformation – the creation of an architecture of perfect surveillance, built not through government decree but through the steady advance of consumer technology.</p><p>Apple's dominance in UWB chip production, confirmed by market analysis from Strategy Analytics, means they've become the de facto architects of this surveillance infrastructure. Their implementation, detailed across dozens of patents, shows a system designed to create persistent spatial awareness at a scale previously unimaginable. Every iPhone becomes both observer and observed, contributing to a constantly updating model of physical reality.</p><p>The mathematics of UWB tracking are unforgiving. Operating at frequencies between 3.1 and 10.6 GHz means these signals pass through most building materials. The short pulse duration – less than a nanosecond – allows for precision that would have seemed impossible just years ago. Each iPhone's U1 chip creates roughly 1 billion pulses per second, generating a continuous stream of spatial data that makes traditional surveillance methods obsolete.</p><p>We stand at a crucial juncture. The infrastructure of perfect surveillance is being completed around us, not through any malicious intent but through the relentless logic of technological convenience and commercial imperative. Each small erosion of privacy is marketed as an enhancement to user experience, each new tracking capability presented as a feature rather than a violation.</p><p>The window for understanding and addressing these implications is closing rapidly. As UWB technology becomes embedded in more devices and infrastructure, the ability to opt out disappears. The perfect surveillance state isn't being built through force – it's being built through convenience, one chip at a time.</p><p>This tiny U1 chip represents more than just another technological advancement. It represents the final piece in a system of unprecedented surveillance capability, deployed globally through devices we voluntarily carry and pay for. The question isn't whether this system exists – it's already here. </p><p>The question is whether we will recognize it for what it is before the architecture of invisibility becomes permanent.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/02/diamonds_are_forever-2.gif" class="kg-image" alt="" loading="lazy" width="917" height="150" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/02/diamonds_are_forever-2.gif 600w, https://tokenwisdom.ghost.io/content/images/2024/02/diamonds_are_forever-2.gif 917w" sizes="(min-width: 720px) 720px"></figure>
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/opinionated-editorials.html">🚨 OP-ED</a><a class="post-tag" href="../tags/big-tech.html">Big Tech</a><a class="post-tag" href="../tags/cybersecurity.html">Cyber \ Security</a><a class="post-tag" href="../tags/deeptech.html">Deep Tech</a><a class="post-tag" href="../tags/emerging-technology.html">Emerging Tech</a><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/human-computer-interaction.html">Human Computer Interaction</a><a class="post-tag" href="../tags/semiconductor.html">Semiconductor</a><a class="post-tag" href="../tags/strategic.html">Strategic Measures</a><a class="post-tag" href="../tags/technology.html">Technology</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/opinionated-editorials.html">🚨 OP-ED</a><a class="post-tag" href="../tags/big-tech.html">Big Tech</a><a class="post-tag" href="../tags/cybersecurity.html">Cyber \ Security</a><a class="post-tag" href="../tags/deeptech.html">Deep Tech</a><a class="post-tag" href="../tags/emerging-technology.html">Emerging Tech</a><a class="post-tag" href="../tags/ethical.html">Ethics \ Principles</a><a class="post-tag" href="../tags/future-trends.html">Future Trends</a><a class="post-tag" href="../tags/human-computer-interaction.html">Human Computer Interaction</a><a class="post-tag" href="../tags/semiconductor.html">Semiconductor</a><a class="post-tag" href="../tags/strategic.html">Strategic Measures</a><a class="post-tag" href="../tags/technology.html">Technology</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -176,52 +214,115 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

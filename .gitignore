@@ -8,3 +8,6 @@ worker/node_modules/
 *.env
 .dev.vars
 data/.zernio_state.json
+
+# Zernio distribution audit log (grows; state file IS committed)
+data/zernio_outbox.jsonl

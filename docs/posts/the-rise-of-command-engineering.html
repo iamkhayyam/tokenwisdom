@@ -67,15 +67,44 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.021 · W14 · Apr 4, 2023</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Prompt \ Engineering · OpenAI + e/acc · NLP \ NLU \ NLG</div>
-  <h1 class="essay-title">Command Engineering: A New Skill Prompting the Future</h1>
-  <p class="essay-deck">Imagine typing your way into a hefty salary 🔮
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/793af79b-5c77-447b-a80c-1c7181e9b49b.jpg" alt="Command Engineering: A New Skill Prompting the Future" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Prompt \ Engineering</div>
+    <h1 class="essay-title">Command Engineering: A New Skill Prompting the Future</h1>
+    <p class="essay-deck">Imagine typing your way into a hefty salary 🔮
 
 The tech world is abuzz with talk of &quot;command engineering&quot; also known as “prompt engineering”, a new skill with a hefty salary tag of $335,000. Today, we’re going to discuss the basics of command engineering, because that’s what it is, and why it&#x27;s essential for the ‘generative’ future to prompt ahead.
 
@@ -83,17 +112,26 @@ The tech world is abuzz with talk of &quot;command engineering&quot; also known 
 What is Command Engineering?
 
 This is the process of refining interactions with AI systems, such as ChatGPT, to produce optimal responses1,2,3. It</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>April 4, 2023</span>
-    <span class="sep">·</span>
-    <span>4 min read</span>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>4 min read</span>
+      <span class="sep">·</span>
+      <span>April 4, 2023</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <h2 id="imagine-typing-your-way-into-a-hefty-salary-%F0%9F%94%AE">Imagine typing your way into a hefty salary 🔮 </h2><hr><p class="essay-lede">The tech world is abuzz with talk of "command engineering" also known as “prompt engineering”, a new skill with a<a href="https://time.com/6272103/ai-prompt-engineer-job/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><em>&nbsp;</em>hefty salary tag of $335,000</a>. Today, we’re going to discuss the basics of command engineering, because that’s what it is, and why it's essential for the ‘generative’ future to prompt ahead.</p><h2 id="what-is-command-engineering">What is Command Engineering?</h2><p>This is the process of refining interactions with AI systems, such as ChatGPT, to produce optimal responses<a href="https://blog.enterprisedna.co/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>1</sup></strong></a><strong><sup>,</sup></strong><a href="https://www.techtarget.com/searchenterpriseai/definition/prompt-engineering?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>2</sup></strong></a><strong><sup>,</sup></strong><a href="https://www.freecodecamp.org/news/how-to-communicate-with-ai-tools-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>3</sup></strong></a>. It is a discipline of iteratively figuring out how to best instruct a model for a desired output<a href="https://blog.deepgram.com/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>4</sup></strong></a>. Prompt engineering involves crafting effective queries or inputs referred to as prompts to guide an AI language model towards generating desired responses<a href="https://blog.enterprisedna.co/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>1</sup></strong></a>. The way you phrase a question or command has a significant impact on the response generated by the AI system<a href="https://blog.enterprisedna.co/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>1</sup></strong></a>. High-quality inputs will result in better output, while poorly defined prompts will lead to inaccurate responses or responses that might negatively impact the user<a href="https://www.freecodecamp.org/news/how-to-communicate-with-ai-tools-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>3</sup></strong></a>. Prompt engineering is essential for creating better AI-powered services and getting better results from existing generative AI tools<a href="https://www.techtarget.com/searchenterpriseai/definition/prompt-engineering?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>2</sup></strong></a>. It is ambitious and accounts for best practices of communication between humans and machines so that machines can interpret human requests with accuracy while offering helpful responses<a href="https://101blockchains.com/importance-of-ai-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>5</sup></strong></a>.</p><h2 id="the-basics-of-ai-and-nlp">The Basics of AI and NLP</h2><p>Command engineering is a new skill that involves working with large language models to create prompts that generate text that is almost indistinguishable from human writing. Command engineering employs Artificial Intelligence (AI), Natural Language Processing (NLP), and (Large Language Models (LLMs) to teach computers to comprehend and respond to human language conversationally. To unlock the realm of command engineering, it's essential to comprehend the fundamentals of AI and NLP. AI is a field which investigates how to build machines with abilities that usually require human intelligence, such as language understanding, object recognition, and decision-making. NLP, a sub-section of AI, is dedicated to coaching computers to understand natural language, which involves teaching them to analyze and interpret spoken and written language and act appropriately.</p><h2 id="the-role-of-large-language-models">The Role of Large Language Models</h2><p>Command engineering relies heavily on large language models, such as GPT-3 (Generative Pre-trained Transformer). These AI models are trained with massive amounts of data, allowing them to generate text similar to human writing. They are proficient in language translation, summarization, and content generation. Such models are used for creating chatbots, virtual assistants, and other AI-powered tools that interact fluently with humans.</p><h2 id="exploring-the-world-of-prompt-engineering">Exploring the World of Prompt Engineering</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0fe2b805-df8f-4331-a46a-4355112fa87d/2abeddcb-74aa-407b-b9e7-c9faf7beaa26.jpeg" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">$prompt: prompt engineer</span></figcaption></figure><p>Prompt engineering is the process of creating targeted prompts for large language models like GPT-3 to generate text. Output can range from articles to blog posts, emails, and social media posts. To make the most of this process, one must understand the various parameters for optimizing the language model output. These include parameters such as tokens, temperature, and top_p, which can be adjusted to control the output of the model and generate text that is more natural and coherent.</p><h3 id="key-factors-in-prompt-engineering-include">Key factors in prompt engineering include:</h3><ol><li><strong>Tokens</strong>: These are the building blocks of text, which can be words, characters, or subword units. Language models use tokens to predict the next most likely token based on the given text input. Adjusting the number of tokens returned by a language model can influence the response length and content.</li><li><strong>Prompts</strong>: Carefully crafting prompts is crucial for eliciting desired responses from language models. Clear and specific instructions can improve response quality.</li><li><strong>Temperature</strong>: The level of randomness in the model's output can be adjusted via temperature settings. A temperature of 1.0 will generate more innovative and randomized results, whereas a temperature of 0.2 will lead to more organized and consistent output.</li><li><strong>Max tokens</strong>: Limits the response length by setting the maximum number of tokens allowed in the output. Truncating the output may sometimes make the response unclear or fragmented.</li><li><strong>Suggested user input</strong>: Providing users with suggested inputs can help them interact more effectively with the language model<ol><li><strong><em>To-Do List</em></strong>&nbsp;* Complete assignments* Grocery shopping* Pay bills</li><li><strong><em>Recommended Activities</em></strong>&nbsp;* Exercise: 30 minutes daily* Reading: 20 pages per day* Meditation: 15 minutes daily</li><li><strong><em>Frequently Asked Questions</em></strong>&nbsp;* How to improve my productivity?* Any tips for starting a new hobby?* What are some easy recipes to try?</li><li><strong><em>Conversation Starters</em></strong>&nbsp;* Tell me a joke.* Can you suggest an interesting place to visit during the holidays?* What are some latest technology updates?</li></ol></li></ol><h2 id="mastering-command-engineering-as-a-new-skill">Mastering Command Engineering as a New Skill</h2><p>To master command engineering, one needs a comprehensive knowledge of AI, NLP, and large language models, including the algorithms used to train them and ways to tweak model output with prompts and parameters. Good programming abilities are also essential, since this field often entails working with complex code in languages like Python.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/04bfec82-dbbd-4e1c-9640-6c68b7d9ee86/851930ee-109b-4943-afda-0dcae4e83c53.jpeg" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">$prompt: token wisdom</span></figcaption></figure><h2 id="token-wisdom">Token Wisdom</h2><p>Command engineering is an emerging, cutting-edge skill with the capacity to revolutionize AI and NLP. These engineers leverage substantial language models to produce authentic natural language text to develop sophisticated chatbots, virtual assistants, and other AI-based tools that can interact organically with humans. AI and automation are advancing quickly, making command engineering an increasingly prominent skill - those adept in it will be well-placed to succeed in the constantly changing tech industry.</p>
+    </div>
   </div>
-  <div class="prose">
-    <h2 id="imagine-typing-your-way-into-a-hefty-salary-%F0%9F%94%AE">Imagine typing your way into a hefty salary 🔮 </h2><hr><p>The tech world is abuzz with talk of "command engineering" also known as “prompt engineering”, a new skill with a<a href="https://time.com/6272103/ai-prompt-engineer-job/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><em>&nbsp;</em>hefty salary tag of $335,000</a>. Today, we’re going to discuss the basics of command engineering, because that’s what it is, and why it's essential for the ‘generative’ future to prompt ahead.</p><h2 id="what-is-command-engineering">What is Command Engineering?</h2><p>This is the process of refining interactions with AI systems, such as ChatGPT, to produce optimal responses<a href="https://blog.enterprisedna.co/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>1</sup></strong></a><strong><sup>,</sup></strong><a href="https://www.techtarget.com/searchenterpriseai/definition/prompt-engineering?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>2</sup></strong></a><strong><sup>,</sup></strong><a href="https://www.freecodecamp.org/news/how-to-communicate-with-ai-tools-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>3</sup></strong></a>. It is a discipline of iteratively figuring out how to best instruct a model for a desired output<a href="https://blog.deepgram.com/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>4</sup></strong></a>. Prompt engineering involves crafting effective queries or inputs referred to as prompts to guide an AI language model towards generating desired responses<a href="https://blog.enterprisedna.co/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>1</sup></strong></a>. The way you phrase a question or command has a significant impact on the response generated by the AI system<a href="https://blog.enterprisedna.co/what-is-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>1</sup></strong></a>. High-quality inputs will result in better output, while poorly defined prompts will lead to inaccurate responses or responses that might negatively impact the user<a href="https://www.freecodecamp.org/news/how-to-communicate-with-ai-tools-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>3</sup></strong></a>. Prompt engineering is essential for creating better AI-powered services and getting better results from existing generative AI tools<a href="https://www.techtarget.com/searchenterpriseai/definition/prompt-engineering?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>2</sup></strong></a>. It is ambitious and accounts for best practices of communication between humans and machines so that machines can interpret human requests with accuracy while offering helpful responses<a href="https://101blockchains.com/importance-of-ai-prompt-engineering/?utm_source=tokenwisdom.beehiiv.com&utm_medium=referral&utm_campaign=the-rise-of-command-engineering" rel="noopener noreferrer nofollow"><strong><sup>5</sup></strong></a>.</p><h2 id="the-basics-of-ai-and-nlp">The Basics of AI and NLP</h2><p>Command engineering is a new skill that involves working with large language models to create prompts that generate text that is almost indistinguishable from human writing. Command engineering employs Artificial Intelligence (AI), Natural Language Processing (NLP), and (Large Language Models (LLMs) to teach computers to comprehend and respond to human language conversationally. To unlock the realm of command engineering, it's essential to comprehend the fundamentals of AI and NLP. AI is a field which investigates how to build machines with abilities that usually require human intelligence, such as language understanding, object recognition, and decision-making. NLP, a sub-section of AI, is dedicated to coaching computers to understand natural language, which involves teaching them to analyze and interpret spoken and written language and act appropriately.</p><h2 id="the-role-of-large-language-models">The Role of Large Language Models</h2><p>Command engineering relies heavily on large language models, such as GPT-3 (Generative Pre-trained Transformer). These AI models are trained with massive amounts of data, allowing them to generate text similar to human writing. They are proficient in language translation, summarization, and content generation. Such models are used for creating chatbots, virtual assistants, and other AI-powered tools that interact fluently with humans.</p><h2 id="exploring-the-world-of-prompt-engineering">Exploring the World of Prompt Engineering</h2><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/0fe2b805-df8f-4331-a46a-4355112fa87d/2abeddcb-74aa-407b-b9e7-c9faf7beaa26.jpeg" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">$prompt: prompt engineer</span></figcaption></figure><p>Prompt engineering is the process of creating targeted prompts for large language models like GPT-3 to generate text. Output can range from articles to blog posts, emails, and social media posts. To make the most of this process, one must understand the various parameters for optimizing the language model output. These include parameters such as tokens, temperature, and top_p, which can be adjusted to control the output of the model and generate text that is more natural and coherent.</p><h3 id="key-factors-in-prompt-engineering-include">Key factors in prompt engineering include:</h3><ol><li><strong>Tokens</strong>: These are the building blocks of text, which can be words, characters, or subword units. Language models use tokens to predict the next most likely token based on the given text input. Adjusting the number of tokens returned by a language model can influence the response length and content.</li><li><strong>Prompts</strong>: Carefully crafting prompts is crucial for eliciting desired responses from language models. Clear and specific instructions can improve response quality.</li><li><strong>Temperature</strong>: The level of randomness in the model's output can be adjusted via temperature settings. A temperature of 1.0 will generate more innovative and randomized results, whereas a temperature of 0.2 will lead to more organized and consistent output.</li><li><strong>Max tokens</strong>: Limits the response length by setting the maximum number of tokens allowed in the output. Truncating the output may sometimes make the response unclear or fragmented.</li><li><strong>Suggested user input</strong>: Providing users with suggested inputs can help them interact more effectively with the language model<ol><li><strong><em>To-Do List</em></strong>&nbsp;* Complete assignments* Grocery shopping* Pay bills</li><li><strong><em>Recommended Activities</em></strong>&nbsp;* Exercise: 30 minutes daily* Reading: 20 pages per day* Meditation: 15 minutes daily</li><li><strong><em>Frequently Asked Questions</em></strong>&nbsp;* How to improve my productivity?* Any tips for starting a new hobby?* What are some easy recipes to try?</li><li><strong><em>Conversation Starters</em></strong>&nbsp;* Tell me a joke.* Can you suggest an interesting place to visit during the holidays?* What are some latest technology updates?</li></ol></li></ol><h2 id="mastering-command-engineering-as-a-new-skill">Mastering Command Engineering as a New Skill</h2><p>To master command engineering, one needs a comprehensive knowledge of AI, NLP, and large language models, including the algorithms used to train them and ways to tweak model output with prompts and parameters. Good programming abilities are also essential, since this field often entails working with complex code in languages like Python.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/04bfec82-dbbd-4e1c-9640-6c68b7d9ee86/851930ee-109b-4943-afda-0dcae4e83c53.jpeg" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">$prompt: token wisdom</span></figcaption></figure><h2 id="token-wisdom">Token Wisdom</h2><p>Command engineering is an emerging, cutting-edge skill with the capacity to revolutionize AI and NLP. These engineers leverage substantial language models to produce authentic natural language text to develop sophisticated chatbots, virtual assistants, and other AI-based tools that can interact organically with humans. AI and automation are advancing quickly, making command engineering an increasingly prominent skill - those adept in it will be well-placed to succeed in the constantly changing tech industry.</p>
-  </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/prompt-engineering.html">Prompt \ Engineering</a><a class="post-tag" href="../tags/gpt.html">OpenAI + e/acc</a><a class="post-tag" href="../tags/nlp.html">NLP \ NLU \ NLG</a><a class="post-tag" href="../tags/language-models.html">LLMs - Language Models</a><a class="post-tag" href="../tags/generative.html">Generative AI</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/prompt-engineering.html">Prompt \ Engineering</a><a class="post-tag" href="../tags/gpt.html">OpenAI + e/acc</a><a class="post-tag" href="../tags/nlp.html">NLP \ NLU \ NLG</a><a class="post-tag" href="../tags/language-models.html">LLMs - Language Models</a><a class="post-tag" href="../tags/generative.html">Generative AI</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -109,52 +147,115 @@ This is the process of refining interactions with AI systems, such as ChatGPT, t
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

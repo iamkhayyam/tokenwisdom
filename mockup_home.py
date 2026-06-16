@@ -782,6 +782,39 @@ def build(out_name="home-v2.html"):
     """Assemble the homepage and write it to docs/<out_name>.
     generate_site.py calls build('index.html') for production; running this
     module directly writes 'home-v2.html' for preview."""
+    _yrs = [p["published_at"][:4] for p in posts if p.get("published_at")]
+    _years = f"{min(_yrs)}–{max(_yrs)}" if _yrs else ""
+    colophon_html = gs.render_colophon(
+        prefix="",
+        mark_url="assets/crystal-ball.svg",
+        primary=[
+            {"label": "Home", "href": "index.html"},
+            {"label": "Archive", "href": "archive.html"},
+            {"label": "All Topics", "href": "tags/index.html"},
+            {"label": "The Lexicon", "href": "lexicon/index.html"},
+            {"label": "Essays", "href": "tags/a-closer-look.html"},
+            {"label": "Newsletters", "href": "tags/worthafortune.html"},
+            {"label": "Podcast", "href": "podcast.html"},
+        ],
+        meta=[
+            {"label": "About", "href": "about/index.html"},
+            {"label": "Links", "href": "links/index.html"},
+            {"label": "Corpus Report", "href": "metrics.html"},
+            {"label": "tokenwisdom.ghost.io", "href": gs.GHOST_URL, "external": True},
+            {"label": "GitHub Archive", "href": "https://github.com/iamkhayyam/tokenwisdom", "external": True},
+        ],
+        tags=[{"name": t["name"], "href": f'tags/{t["slug"]}.html'} for t in top_tags[:7]],
+        socials=[
+            {"label": "X", "href": "https://x.com/worthafortune"},
+            {"label": "LinkedIn", "href": "https://www.linkedin.com/company/token-wisdom-newsletter/"},
+            {"label": "RSS", "href": f"{gs.GHOST_URL}/rss/"},
+        ],
+        signoff=" ".join(gs.SITE_SIGN_OFF_LINES),
+        stats=f"{len(posts)} Posts · {len(public_tags)} Tags",
+        copyright=f"© {_years} Token Wisdom" if _years else "© Token Wisdom",
+        subscribe_url=f"{gs.GHOST_URL}/subscribe",
+        handle="@iamkhayyam",
+    )
     html = f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -789,7 +822,7 @@ def build(out_name="home-v2.html"):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
-<style>{CSS}{tw_theme.OVERLAY_CSS}</style>
+<style>{CSS}{gs.COLOPHON_CSS}{tw_theme.OVERLAY_CSS}</style>
 </head><body>
 {render_masthead()}
 <main class="wrap">
@@ -797,17 +830,13 @@ def build(out_name="home-v2.html"):
 {render_listen()}
 {render_stack()}
 {render_recent()}
-{render_topics()}
-{render_lexicon()}
 </main>
 {render_subscribe()}
-<footer class="foot">
-  <div class="foot-inner">
-    <div class="wordmark"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"> Token Wisdom</div>
-    <p class="foot-tag">The Newsletter of Record for the Future of Now · Knowware is measured in lifetimes.</p>
-    <p class="foot-meta">By @iamkhayyam · ARC Institute of Knowware · {len(posts)} pieces · {len(public_tags)} topics · 100% Authentic Humanly Chosen</p>
-  </div>
-</footer>
+<div class="wrap">
+{render_topics()}
+{render_lexicon()}
+</div>
+{colophon_html}
 {PLAYER_JS}
 </body></html>"""
     out = DOCS / out_name

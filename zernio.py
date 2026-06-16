@@ -62,6 +62,33 @@ TW_PUBLIC_BASE = os.environ.get(
 
 TW_TIMEZONE = os.environ.get("TW_TIMEZONE", "America/Edmonton")
 
+# Publish mode — the safety lever. Three values:
+#   "dry"   — print only, never touch the network (default until a key exists)
+#   "draft" — create posts in Zernio's DRAFT state for a human to eyeball + publish
+#   "live"  — schedule/publish for real
+# When a key + accounts ARE present, the default is "draft", NOT "live": the first
+# real run fills your Zernio dashboard with drafts to approve, not live posts. You
+# opt into auto-publishing explicitly with ZERNIO_PUBLISH_MODE=live.
+def publish_mode() -> str:
+    explicit = os.environ.get("ZERNIO_PUBLISH_MODE", "").strip().lower()
+    if explicit in ("dry", "draft", "live"):
+        return explicit
+    return "draft" if is_enabled() else "dry"
+
+
+# Every distribution action (any mode) is appended here as one JSON line — a durable,
+# greppable record of exactly what was generated, formatted, and sent. This is the
+# "approve" surface even before you log into Zernio: read it, then publish.
+OUTBOX = DATA / "zernio_outbox.jsonl"
+
+# Best-time-to-post fallback heuristics (local time), used until Zernio analytics
+# have enough history. Hour-of-day per platform, tuned for a US/CA pro audience.
+# Replaced at runtime by analytics_best_times() once the key is live.
+DEFAULT_BEST_HOUR: dict[str, int] = {
+    "linkedin": 8, "youtube": 16, "twitter": 9, "bluesky": 10, "mastodon": 10,
+    "reddit": 11, "threads": 12, "instagram": 11, "pinterest": 20,
+}
+
 # Token Wisdom is a thought-leadership publication, not a visual streetwear brand.
 # Platform order is by AI-citation value AND fit. Visual-first networks (Instagram,
 # Pinterest, TikTok) are phase 2 / optional — TW's home is text + audio + long-form.
@@ -391,30 +418,98 @@ def build_edition_sequence(post: dict) -> list[ContentItem]:
 
 # ── Publisher ───────────────────────────────────────────────────────────────
 
-def publish_everywhere(item: ContentItem, account_map: dict[str, str]) -> list[dict]:
-    """Fan one ContentItem out to every connected account. Mocked until wired."""
+def _outbox_append(record: dict) -> None:
+    with OUTBOX.open("a") as f:
+        f.write(json.dumps(record, ensure_ascii=False) + "\n")
+
+
+def publish_everywhere(
+    item: ContentItem, account_map: dict[str, str], mode: Optional[str] = None
+) -> list[dict]:
+    """Fan one ContentItem out to every connected account.
+
+    mode (defaults to publish_mode()):
+      "dry"   — print + log, no network
+      "draft" — create as a Zernio DRAFT (omit scheduling → human publishes)
+      "live"  — schedule (if scheduled_for set) or publish now
+    """
+    mode = mode or publish_mode()
     results: list[dict] = []
     for platform, account_id in account_map.items():
         if not account_id:
             continue
         formatted = format_for_platform(item, platform)
+        record = {
+            "ts": datetime.now(timezone.utc).isoformat(),
+            "mode": mode, "type": item.type, "id": item.id, "platform": platform,
+            "scheduled_for": item.scheduled_for if mode == "live" else None,
+            "content": formatted["content"], "title": formatted.get("title", ""),
+            "cta_url": item.cta_url,
+        }
 
-        # ── Uncomment when zernio-sdk is installed and ZERNIO_API_KEY is set ──
-        # post = zernio.posts.create_post(
-        #     content=formatted["content"],
-        #     title=formatted.get("title", ""),
-        #     scheduled_for=item.scheduled_for,
-        #     timezone=item.timezone,
-        #     platforms=[{"platform": platform, "account_id": account_id}],
-        #     media_urls=",".join(item.media_urls) if item.media_urls else None,
-        # )
-        # results.append({"platform": platform, "post_id": post["_id"]})
+        if mode == "dry":
+            post_id = f"stub_{platform}_{item.id}"
+        else:
+            # ── Uncomment when zernio-sdk is installed and ZERNIO_API_KEY is set ──
+            # kwargs = dict(
+            #     content=formatted["content"],
+            #     title=formatted.get("title", ""),
+            #     timezone=item.timezone,
+            #     platforms=[{"platform": platform, "account_id": account_id}],
+            #     media_urls=",".join(item.media_urls) if item.media_urls else None,
+            # )
+            # if mode == "live":
+            #     if item.scheduled_for:
+            #         kwargs["scheduled_for"] = item.scheduled_for
+            #     else:
+            #         kwargs["publish_now"] = True
+            # # mode == "draft": omit scheduled_for/publish_now → saved as draft
+            # post = zernio.posts.create_post(**kwargs)
+            # post_id = post["_id"]
+            post_id = f"stub_{mode}_{platform}_{item.id}"   # remove when wired
 
-        # Stub until wired:
-        preview = formatted["content"].replace("\n", " ")[:90]
-        print(f"[zernio] would post -> {platform:9} | {item.type:20} | {preview}")
-        results.append({"platform": platform, "post_id": f"stub_{platform}_{item.id}"})
+        record["post_id"] = post_id
+        _outbox_append(record)
+        preview = formatted["content"].replace("\n", " ")[:80]
+        verb = {"dry": "would post", "draft": "drafted", "live": "queued"}[mode]
+        print(f"[zernio] {verb:10} {platform:9} | {item.type:20} | {preview}")
+        results.append({"platform": platform, "post_id": post_id})
     return results
+
+
+# ── Analytics-driven scheduling (ready-to-wire) ─────────────────────────────
+# Until Zernio has posting history, best_times() returns the DEFAULT_BEST_HOUR
+# heuristics. Once live, it pulls real getBestTimeToPost() data per platform.
+
+def analytics_best_times(account_map: dict[str, str]) -> dict[str, int]:
+    """Per-platform best hour-of-day (local). Falls back to heuristics."""
+    times = dict(DEFAULT_BEST_HOUR)
+    # ── Uncomment when wired ──
+    # try:
+    #     data = zernio.analytics.get_best_time_to_post()
+    #     for platform, info in data.items():
+    #         if "best_hour" in info:
+    #             times[platform] = int(info["best_hour"])
+    # except Exception:
+    #     pass  # keep heuristics
+    return {p: times.get(p, 9) for p in account_map}
+
+
+def schedule_at_best_time(
+    item: ContentItem, account_map: dict[str, str], when: Optional[datetime] = None
+) -> ContentItem:
+    """Set item.scheduled_for to the next occurrence of the *earliest* per-platform
+    best hour across the connected accounts. (Zernio posts one item to many
+    platforms in a single call, so we pick one send time — the soonest good slot.)
+    """
+    base = when or datetime.now(timezone.utc).astimezone()
+    best = analytics_best_times(account_map)
+    target_hour = min(best.values()) if best else 9
+    slot = base.replace(hour=target_hour, minute=0, second=0, microsecond=0)
+    if slot <= base:
+        slot += timedelta(days=1)
+    item.scheduled_for = slot.isoformat()
+    return item
 
 
 def account_map_from_env() -> dict[str, str]:
@@ -477,7 +572,6 @@ def sync_new_publications(posts: list[dict]) -> list[str]:
         return []
 
     accounts = account_map_from_env()
-    enabled = is_enabled()
     by_slug = {p.get("slug"): p for p in posts}
     new_slugs = [s for s in current if s not in seen]
 
@@ -485,17 +579,12 @@ def sync_new_publications(posts: list[dict]) -> list[str]:
         print("[zernio] no new posts to distribute")
         return []
 
-    mode = "LIVE" if enabled else "dry-run (no ZERNIO_API_KEY / accounts)"
-    print(f"[zernio] {len(new_slugs)} new post(s) to distribute — {mode}")
+    print(f"[zernio] {len(new_slugs)} new post(s) to distribute — mode={publish_mode()}")
     for slug in new_slugs:
         post = by_slug[slug]
         items = build_edition_sequence(post) if _is_edition(post) else [content_item_from_post(post)]
         for item in items:
-            if enabled:
-                publish_everywhere(item, accounts)
-            else:
-                fmt = format_for_platform(item, "twitter")["content"].replace("\n", " ")[:90]
-                print(f"[zernio]   would distribute [{item.type}] {fmt}")
+            publish_everywhere(item, accounts)   # respects publish_mode()
         seen.add(slug)
 
     _save_state({"published": sorted(seen)})
@@ -503,14 +592,12 @@ def sync_new_publications(posts: list[dict]) -> list[str]:
 
 
 def post_term_of_the_week(when: Optional[datetime] = None) -> list[dict]:
-    """Cron entry point. Publishes the Term of the Week (or dry-runs if not wired)."""
+    """Cron entry point. Schedules the Term of the Week at the best slot, then
+    publishes per publish_mode() (dry / draft / live)."""
     item = term_of_the_week(when)
-    accounts = account_map_from_env()
-    if is_enabled():
-        return publish_everywhere(item, accounts)
-    fmt = format_for_platform(item, "twitter")["content"].replace("\n", " ")[:90]
-    print(f"[zernio] term-of-the-week dry-run [{item.id}] {fmt}")
-    return []
+    accounts = account_map_from_env() or {"twitter": "demo"}
+    schedule_at_best_time(item, accounts, when)
+    return publish_everywhere(item, accounts)
 
 
 # ── CLI / demo ──────────────────────────────────────────────────────────────
@@ -548,9 +635,22 @@ if __name__ == "__main__":
         handled = sync_new_publications(_posts())
         print(f"[zernio] sync handled {len(handled)} new post(s)")
     elif cmd == "status":
-        print(f"[zernio] enabled={is_enabled()}  public_base={TW_PUBLIC_BASE}")
+        print(f"[zernio] enabled={is_enabled()}  mode={publish_mode()}  public_base={TW_PUBLIC_BASE}")
         print(f"[zernio] accounts={list(account_map_from_env()) or '(none)'}")
         st = _load_state()
         print(f"[zernio] state: {len(st.get('published', []))} posts recorded")
+        n = sum(1 for _ in OUTBOX.open()) if OUTBOX.exists() else 0
+        print(f"[zernio] outbox: {n} entries ({OUTBOX.name})")
+    elif cmd == "outbox":
+        # Human-review surface: the last N things generated, newest first.
+        if not OUTBOX.exists():
+            print("[zernio] outbox empty")
+        else:
+            rows = [json.loads(l) for l in OUTBOX.open() if l.strip()]
+            n = int(sys.argv[2]) if len(sys.argv) > 2 else 20
+            for r in rows[-n:]:
+                when = r.get("scheduled_for") or "now"
+                print(f"  [{r['mode']:5}] {r['platform']:9} {r['type']:18} @ {when}")
+                print(f"          {r['content'].splitlines()[0][:100]}")
     else:
-        print("usage: python3 zernio.py [term|evolution|constellation|edition|totw|sync|status]")
+        print("usage: python3 zernio.py [term|evolution|constellation|edition|totw|sync|status|outbox]")

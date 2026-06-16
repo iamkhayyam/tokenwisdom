@@ -67,15 +67,44 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.024 · W15 · Apr 13, 2023</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Regenerative · Deep Tech · Perovskite</div>
-  <h1 class="essay-title">The Promise of Perovskite Solar Cells — Solar 3.0</h1>
-  <p class="essay-deck">Unlocking the Future of Renewable Energy 🔮
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/01/19c3e232-1a7b-44a9-9fbd-08c72c6c23a6.jpeg" alt="The Promise of Perovskite Solar Cells — Solar 3.0" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Regenerative</div>
+    <h1 class="essay-title">The Promise of Perovskite Solar Cells — Solar 3.0</h1>
+    <p class="essay-deck">Unlocking the Future of Renewable Energy 🔮
 
 
 Can We Really Power the World with Renewable Energy?
@@ -87,17 +116,26 @@ Experts estimate that powering the world with solar energy would require 115,625
 Is solar energy powerful enough to meet the world&#x27;s energy needs and help mitigate climate change? Let&quot;s explore the possibilities.
 
 Sol</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>April 13, 2023</span>
-    <span class="sep">·</span>
-    <span>5 min read</span>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>5 min read</span>
+      <span class="sep">·</span>
+      <span>April 13, 2023</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <h3 id="unlocking-the-future-of-renewable-energy-%F0%9F%94%AE">Unlocking the Future of Renewable Energy 🔮</h3><hr><h2 id="can-we-really-power-the-world-with-renewable-energy">Can We Really Power the World with Renewable Energy?</h2><p class="essay-lede">Experts estimate that powering the world with solar energy would require 115,625<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3d3dy5heGlvbnBvd2VyLmNvbS9rbm93bGVkZ2UvcG93ZXItd29ybGQtd2l0aC1zb2xhci8_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtcHJvbWlzZS1vZi1wZXJvdnNraXRlLXNvbGFyLWNlbGxzLXNvbGFyLTMtMCNIb3dfTWFueV9Tb2xhcl9QYW5lbHNfV291bGRfSXRfVGFrZV9Ub19Qb3dlcl9UaGVfV29ybGQiLCJwb3N0X2lkIjoiNWE3MTYxNDAtYWVhNy00NjY1LWI0OTQtMjcwZjlhMWI3YmIzIiwicHVibGljYXRpb25faWQiOiJmZTI4MTY1OS1mOTYzLTRiM2UtODM0NS0yZmM3NjM4MzE0MDQiLCJ2aXNpdF90b2tlbiI6ImNmNGFiZjFhLTI4NjEtNDA5Ny05MWNiLWU5MzdkMWViZmVlMCIsImlhdCI6MTcwNTYzMDcxOSwiaXNzIjoib3JjaGlkIn0.8QEsphObDMqSAkL7Fd0NK__0c9dj5fYFSEQdDh-scIU?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><sup>1</sup></a>&nbsp;square miles of photovoltaic panels. Surprisingly, this would only occupy 1% of the Saharan desert. However, installing all those panels would be cheaper than using nuclear fuel.</p><p></p><p>Is solar energy powerful enough to meet the world's energy needs and help mitigate climate change? Let"s explore the possibilities.</p><p>Solar power is lauded for its positive environmental impact but remains largely unused due to its limited efficiency and cost. Solar 3.0's new perovskite system could revolutionize energy production.</p><h2 id="what-is-solar-30">What is Solar 3.0?</h2><p>Perovskite is a groundbreaking technology, offering superior efficiency and longevity compared to traditional solar panel designs. Utilizing perovskite material, these lightweight and flexible panels are easy to install and maintain, enabling use on surfaces never before suitable for solar panels. Imagine it as a vinyl sticker or fabric you can stick virtually anywhere.</p><h3 id="how-solar-30-works">How Solar 3.0 Works</h3><p>This solar technology employs advanced technology to absorb more sunlight than traditional silicon panels. They consist of thin, flexible cells which convert sunlight into electricity. Advanced engineering enables these solar panels to utilize more of the sunlight, resulting in greater electricity output, even in overcast areas.</p><p>This technology is significantly more efficient than traditional solar panels, with an impressive conversion rate of sunlight to energy nearing 31%,<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2luaGFiaXRhdC5jb20vcmV2b2x1dGlvbml6aW5nLWVuZXJneS13aXRoLXBlcm92c2tpdGUtc29sYXItY2VsbHMvP3V0bV9zb3VyY2U9dG9rZW53aXNkb20uYmVlaGlpdi5jb20mdXRtX21lZGl1bT1yZWZlcnJhbCZ1dG1fY2FtcGFpZ249dGhlLXByb21pc2Utb2YtcGVyb3Zza2l0ZS1zb2xhci1jZWxscy1zb2xhci0zLTAjOn46dGV4dD1DdXJyZW50bHklMkMlMjBzb21lJTIwb2YlMjB0aGUlMjBtb3N0LGxlYWQlMjB0byUyMGdlbmVyYXRlJTIwZWxlY3RyaWNhbCUyMGVuZXJneS4iLCJwb3N0X2lkIjoiNWE3MTYxNDAtYWVhNy00NjY1LWI0OTQtMjcwZjlhMWI3YmIzIiwicHVibGljYXRpb25faWQiOiJmZTI4MTY1OS1mOTYzLTRiM2UtODM0NS0yZmM3NjM4MzE0MDQiLCJ2aXNpdF90b2tlbiI6ImNmNGFiZjFhLTI4NjEtNDA5Ny05MWNiLWU5MzdkMWViZmVlMCIsImlhdCI6MTcwNTYzMDcxOSwiaXNzIjoib3JjaGlkIn0.R6rkM4yUKKGEvjACYheiF8VxGiyMZErnarlp3LG1xzI?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><sup>2</sup></a>&nbsp;compared to average and affordable solar panels at 15-20%<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3d3dy5jb25zdW1lcmFmZmFpcnMuY29tL3NvbGFyLWVuZXJneS9zb2xhci12cy1mb3NzaWwtZnVlbHMuaHRtbD91dG1fc291cmNlPXRva2Vud2lzZG9tLmJlZWhpaXYuY29tJnV0bV9tZWRpdW09cmVmZXJyYWwmdXRtX2NhbXBhaWduPXRoZS1wcm9taXNlLW9mLXBlcm92c2tpdGUtc29sYXItY2VsbHMtc29sYXItMy0wIiwicG9zdF9pZCI6IjVhNzE2MTQwLWFlYTctNDY2NS1iNDk0LTI3MGY5YTFiN2JiMyIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiJjZjRhYmYxYS0yODYxLTQwOTctOTFjYi1lOTM3ZDFlYmZlZTAiLCJpYXQiOjE3MDU2MzA3MTksImlzcyI6Im9yY2hpZCJ9.MSYo13vRsd3YmclE6_23hY5XE7sVYYaZrXVBiwlHBuQ?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><sup>3</sup></a>&nbsp;. These improved results stem from innovative engineering and improved materials, optimized to capture more solar energy.</p><p>Solar 3.0 has the potential to transform how solar energy is used. It is incredibly durable and flexible, making it ideal for remote or tough locations, supplying renewable energy to those without access to electricity.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3fd53ac4-b22b-4e31-9384-7676365e733b/Perovskite-Material-2.png" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">Perovskite is a calcium titanium oxide mineral composed of calcium titanate (CaTiO3)</span></figcaption></figure>
+    </div>
   </div>
-  <div class="prose">
-    <h3 id="unlocking-the-future-of-renewable-energy-%F0%9F%94%AE">Unlocking the Future of Renewable Energy 🔮</h3><hr><h2 id="can-we-really-power-the-world-with-renewable-energy">Can We Really Power the World with Renewable Energy?</h2><p>Experts estimate that powering the world with solar energy would require 115,625<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3d3dy5heGlvbnBvd2VyLmNvbS9rbm93bGVkZ2UvcG93ZXItd29ybGQtd2l0aC1zb2xhci8_dXRtX3NvdXJjZT10b2tlbndpc2RvbS5iZWVoaWl2LmNvbSZ1dG1fbWVkaXVtPXJlZmVycmFsJnV0bV9jYW1wYWlnbj10aGUtcHJvbWlzZS1vZi1wZXJvdnNraXRlLXNvbGFyLWNlbGxzLXNvbGFyLTMtMCNIb3dfTWFueV9Tb2xhcl9QYW5lbHNfV291bGRfSXRfVGFrZV9Ub19Qb3dlcl9UaGVfV29ybGQiLCJwb3N0X2lkIjoiNWE3MTYxNDAtYWVhNy00NjY1LWI0OTQtMjcwZjlhMWI3YmIzIiwicHVibGljYXRpb25faWQiOiJmZTI4MTY1OS1mOTYzLTRiM2UtODM0NS0yZmM3NjM4MzE0MDQiLCJ2aXNpdF90b2tlbiI6ImNmNGFiZjFhLTI4NjEtNDA5Ny05MWNiLWU5MzdkMWViZmVlMCIsImlhdCI6MTcwNTYzMDcxOSwiaXNzIjoib3JjaGlkIn0.8QEsphObDMqSAkL7Fd0NK__0c9dj5fYFSEQdDh-scIU?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><sup>1</sup></a>&nbsp;square miles of photovoltaic panels. Surprisingly, this would only occupy 1% of the Saharan desert. However, installing all those panels would be cheaper than using nuclear fuel.</p><p></p><p>Is solar energy powerful enough to meet the world's energy needs and help mitigate climate change? Let"s explore the possibilities.</p><p>Solar power is lauded for its positive environmental impact but remains largely unused due to its limited efficiency and cost. Solar 3.0's new perovskite system could revolutionize energy production.</p><h2 id="what-is-solar-30">What is Solar 3.0?</h2><p>Perovskite is a groundbreaking technology, offering superior efficiency and longevity compared to traditional solar panel designs. Utilizing perovskite material, these lightweight and flexible panels are easy to install and maintain, enabling use on surfaces never before suitable for solar panels. Imagine it as a vinyl sticker or fabric you can stick virtually anywhere.</p><h3 id="how-solar-30-works">How Solar 3.0 Works</h3><p>This solar technology employs advanced technology to absorb more sunlight than traditional silicon panels. They consist of thin, flexible cells which convert sunlight into electricity. Advanced engineering enables these solar panels to utilize more of the sunlight, resulting in greater electricity output, even in overcast areas.</p><p>This technology is significantly more efficient than traditional solar panels, with an impressive conversion rate of sunlight to energy nearing 31%,<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL2luaGFiaXRhdC5jb20vcmV2b2x1dGlvbml6aW5nLWVuZXJneS13aXRoLXBlcm92c2tpdGUtc29sYXItY2VsbHMvP3V0bV9zb3VyY2U9dG9rZW53aXNkb20uYmVlaGlpdi5jb20mdXRtX21lZGl1bT1yZWZlcnJhbCZ1dG1fY2FtcGFpZ249dGhlLXByb21pc2Utb2YtcGVyb3Zza2l0ZS1zb2xhci1jZWxscy1zb2xhci0zLTAjOn46dGV4dD1DdXJyZW50bHklMkMlMjBzb21lJTIwb2YlMjB0aGUlMjBtb3N0LGxlYWQlMjB0byUyMGdlbmVyYXRlJTIwZWxlY3RyaWNhbCUyMGVuZXJneS4iLCJwb3N0X2lkIjoiNWE3MTYxNDAtYWVhNy00NjY1LWI0OTQtMjcwZjlhMWI3YmIzIiwicHVibGljYXRpb25faWQiOiJmZTI4MTY1OS1mOTYzLTRiM2UtODM0NS0yZmM3NjM4MzE0MDQiLCJ2aXNpdF90b2tlbiI6ImNmNGFiZjFhLTI4NjEtNDA5Ny05MWNiLWU5MzdkMWViZmVlMCIsImlhdCI6MTcwNTYzMDcxOSwiaXNzIjoib3JjaGlkIn0.R6rkM4yUKKGEvjACYheiF8VxGiyMZErnarlp3LG1xzI?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><sup>2</sup></a>&nbsp;compared to average and affordable solar panels at 15-20%<a href="https://flight.beehiiv.net/v2/clicks/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1cmwiOiJodHRwczovL3d3dy5jb25zdW1lcmFmZmFpcnMuY29tL3NvbGFyLWVuZXJneS9zb2xhci12cy1mb3NzaWwtZnVlbHMuaHRtbD91dG1fc291cmNlPXRva2Vud2lzZG9tLmJlZWhpaXYuY29tJnV0bV9tZWRpdW09cmVmZXJyYWwmdXRtX2NhbXBhaWduPXRoZS1wcm9taXNlLW9mLXBlcm92c2tpdGUtc29sYXItY2VsbHMtc29sYXItMy0wIiwicG9zdF9pZCI6IjVhNzE2MTQwLWFlYTctNDY2NS1iNDk0LTI3MGY5YTFiN2JiMyIsInB1YmxpY2F0aW9uX2lkIjoiZmUyODE2NTktZjk2My00YjNlLTgzNDUtMmZjNzYzODMxNDA0IiwidmlzaXRfdG9rZW4iOiJjZjRhYmYxYS0yODYxLTQwOTctOTFjYi1lOTM3ZDFlYmZlZTAiLCJpYXQiOjE3MDU2MzA3MTksImlzcyI6Im9yY2hpZCJ9.MSYo13vRsd3YmclE6_23hY5XE7sVYYaZrXVBiwlHBuQ?ref=tokenwisdom.ghost.io" rel="noopener noreferrer nofollow"><sup>3</sup></a>&nbsp;. These improved results stem from innovative engineering and improved materials, optimized to capture more solar energy.</p><p>Solar 3.0 has the potential to transform how solar energy is used. It is incredibly durable and flexible, making it ideal for remote or tough locations, supplying renewable energy to those without access to electricity.</p><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/3fd53ac4-b22b-4e31-9384-7676365e733b/Perovskite-Material-2.png" class="kg-image" alt="" loading="lazy"><figcaption><span style="white-space: pre-wrap;">Perovskite is a calcium titanium oxide mineral composed of calcium titanate (CaTiO3)</span></figcaption></figure>
-  </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/regenerative.html">Regenerative</a><a class="post-tag" href="../tags/deeptech.html">Deep Tech</a><a class="post-tag" href="../tags/perovskite.html">Perovskite</a><a class="post-tag" href="../tags/solar.html">Solar Energy</a><a class="post-tag" href="../tags/renewable-energy.html">Renewable Energy</a><a class="post-tag" href="../tags/technology.html">Technology</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/regenerative.html">Regenerative</a><a class="post-tag" href="../tags/deeptech.html">Deep Tech</a><a class="post-tag" href="../tags/perovskite.html">Perovskite</a><a class="post-tag" href="../tags/solar.html">Solar Energy</a><a class="post-tag" href="../tags/renewable-energy.html">Renewable Energy</a><a class="post-tag" href="../tags/technology.html">Technology</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -113,52 +151,115 @@ Sol</p>
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>

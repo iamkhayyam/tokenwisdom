@@ -67,28 +67,60 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
+<script>
+(function(){
+  var KEY='tw-theme';
+  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    var b=document.querySelector('.theme-toggle');
+    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  };
+  document.addEventListener('DOMContentLoaded',function(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('.theme-toggle');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  });
+})();
+</script>
+<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
+  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
+</button>
+
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
   <span class="ptb-issue"><span class="ptb-num">ACL.084 · W43 · Oct 24, 2024</span></span>
 </div>
 
-<article class="essay-wrap">
-  <div class="essay-eyebrow">Quantum Realm · A.I. (and Subsets) · Educate \ Learn</div>
-  <h1 class="essay-title">Beyond the Silicon Dream: Why Consciousness Can&#x27;t Be Computed</h1>
-  <p class="essay-deck">W42 - Quantum neurons shatter silicon dreams of consciousness. Tech leaders mistake AI prowess for awareness, ignoring physics&#x27; deeper truths. True consciousness emerges not from faster computing, but from a quantum-thermodynamic dance. Our odyssey into the mind begins.</p>
-  <div class="essay-byline">
-    <span>By 🌶️ @iamkhayyam </span>
-    <span class="sep">·</span>
-    <span>October 24, 2024</span>
-    <span class="sep">·</span>
-    <span>13 min read</span>
-  </div>
-  <div class="prose">
-    <blockquote class="kg-blockquote-alt"><strong>"The universe is not only stranger than we imagine, it is stranger than we can imagine."</strong></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">- according to Sir Arthur Eddington</span></figcaption></figure>
+<article class="essay-frame">
+  
+  <figure class="essay-cover">
+    <img src="https://tokenwisdom.ghost.io/content/images/2024/12/img-ManDv5qJ48p2qn6PDTn7J.jpeg" alt="Beyond the Silicon Dream: Why Consciousness Can&#x27;t Be Computed" loading="eager">
+    <figcaption>Illustration · Token Wisdom</figcaption>
+  </figure>
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look · Week 42 · Quantum Realm</div>
+    <h1 class="essay-title">Beyond the Silicon Dream: Why Consciousness Can&#x27;t Be Computed</h1>
+    <p class="essay-deck">Quantum neurons shatter silicon dreams of consciousness. Tech leaders mistake AI prowess for awareness, ignoring physics&#x27; deeper truths. True consciousness emerges not from faster computing, but from a quantum-thermodynamic dance. Our odyssey into the mind begins.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam </span>
+      <span class="sep">·</span>
+      <span>13 min read</span>
+      <span class="sep">·</span>
+      <span>October 24, 2024</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <blockquote class="kg-blockquote-alt"><strong>"The universe is not only stranger than we imagine, it is stranger than we can imagine."</strong></blockquote><figure class="kg-card kg-image-card kg-card-hascaption"><img src="https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif" class="kg-image" alt="" loading="lazy" width="1920" height="1080" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1000w, https://tokenwisdom.ghost.io/content/images/size/w1600/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1600w, https://tokenwisdom.ghost.io/content/images/2024/09/Reson8-Asia-Strategic-Social-Creativity.gif 1920w" sizes="(min-width: 720px) 720px"><figcaption><span style="white-space: pre-wrap;">- according to Sir Arthur Eddington</span></figcaption></figure>
 <!--kg-card-begin: html-->
-<div style="width: 100%; height: 200px; margin-bottom: 20px; border-radius: 6px; overflow: hidden;"><iframe style="width: 100%; height: 200px;" frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/0e117d96-429d-4ba7-9677-5018b9c53330/"></iframe></div>
+<div class="tw-embed"><iframe frameborder="no" scrolling="no" allow="clipboard-write" seamless src="https://player.captivate.fm/episode/0e117d96-429d-4ba7-9677-5018b9c53330/" loading="lazy"></iframe></div>
 <!--kg-card-end: html-->
-<hr><h3 id="the-little-neuron-that-could">The Little Neuron That Could</h3><p>The lab falls silent as we all crowd around the quantum coherence chamber. Hearts racing, we watch the impossible unfold on our screens. A single neuron, suspended in this carefully calibrated field, dances to a quantum rhythm that shouldn't exist. The readings are clear: quantum effects persisting a thousand times longer than any model predicted. As the implications sink in, I feel a chill. This isn't just an anomaly—it's a window into the very nature of consciousness, and it shatters everything we thought we knew about creating artificial minds. In this moment, the gulf between silicon dreams and biological reality has never seemed wider.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg" class="kg-image" alt="" loading="lazy" width="1120" height="1120" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg 1000w, https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg 1120w" sizes="(min-width: 720px) 720px"></figure><blockquote><strong>Consciousness</strong>: A phenomenon emerging at the intersection of quantum mechanics, thermodynamics, and information geometry—a trinity of physical processes that transcends classical computation.</blockquote><p>As tech CEOs trumpet each new language model as approaching human-like awareness, I find myself returning to this quantum-coherent neuron. Their pursuit isn't just premature—it fundamentally misunderstands what consciousness is. The gap between artificial and biological consciousness isn't just wide; it's rooted in the very physics of reality.</p><h2 id="the-three-body-problem-of-mind"><strong>The Three-Body Problem of Mind</strong></h2><p><em>Consider consciousness as a cosmic dance, like the gravitational interplay and sway between three celestial bodies—complex, beautiful, and fundamentally unpredictable through simple computation.</em></p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg" class="kg-image" alt="" loading="lazy" width="1472" height="832" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg 1000w, https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg 1472w" sizes="(min-width: 720px) 720px"></figure><p>This <strong>systems thinking</strong> reveals consciousness as a three-body problem—a complex interaction between quantum mechanics, thermodynamic gradients, and geometric information structures. Like the gravitational dance of three stars, these forces create patterns too intricate for mere computational models.</p><h3 id="the-quantum-foundation"><strong>The Quantum Foundation</strong></h3><p>Last month, in an MIT laboratory, something extraordinary was observed. A network of neural microtubules maintained quantum coherence for microseconds—an eternity in quantum terms. This wasn't just an isolated finding; it confirmed what researchers at the Max Planck Institute had begun to suspect: consciousness leverages quantum effects in ways that defy our classical understanding of brain function.</p><blockquote><strong>Quantum Coherence</strong>: The maintenance of quantum states that allow consciousness to perform computations impossible for classical systems, including our most advanced AI.</blockquote><p>Picture your memories not as stored data, but as quantum patterns maintained through mechanisms that challenge our understanding of physics itself. When you recall your first kiss or the scent of your grandmother's kitchen, you're not simply accessing stored information—you're recreating a quantum state that exists in superposition until the moment of recollection.</p><p>The implications shatter our computational models of mind:</p><ol><li>Neural microtubules function as quantum channels, maintaining coherence at body temperature</li><li>Information processing leverages quantum effects for computational advantages no classical system can match</li><li>Consciousness requires the precise orchestration of quantum states across billions of neurons</li></ol><p>This quantum foundation isn't just a theoretical curiosity—it's the key to understanding why current AI systems, no matter how complex, fundamentally lack the capacity for consciousness. The EEG patterns we observe during different states of consciousness aren't just showing us neural communication patterns; they're giving us a glimpse of quantum coherence patterns that we're only beginning to understand.</p><h3 id="the-thermodynamic-ballet"><strong>The Thermodynamic Ballet</strong></h3><p><em>Your consciousness exists in a precise thermodynamic sweet spot—a razor's edge between order and chaos that no current technology can maintain.</em></p><p>The numbers tell a stunning story: your brain consumes 20% of your body's energy while comprising only 2% of its mass. During a recent series of experiments monitoring consciousness transitions, it was discovered this isn't inefficiency—it's the necessary energetic cost of awareness itself.</p><p><strong>Thermodynamic consciousness</strong> requires:</p><ul><li>Precise energy gradient maintenance across multiple scales</li><li>Specific entropy production patterns that balance information preservation with dissipation</li><li>Dynamic equilibrium between order and chaos</li></ul><p>Recently, a very remarkable thing was observed during a consciousness transition experiment. As the subject moved from wakefulness to sleep, not only were the changes in neural activity recorded, but a phase transition in the brain's thermodynamic organization. It’s like watching water freeze into ice—a fundamental reorganization of the system's physical properties.</p><p>This thermodynamic dance isn't just a byproduct of neural activity—it's an essential component of consciousness itself. When anesthesiologists put someone under general anesthesia, they're not just "turning off" consciousness—they're disrupting the precise quantum-thermodynamic balance required for conscious experience. The EEG patterns we see during anesthesia aren't just showing reduced brain activity; they're showing the collapse of the specific thermodynamic structure that consciousness requires.</p>
+<hr><h3 id="the-little-neuron-that-could">The Little Neuron That Could</h3><p class="essay-lede">The lab falls silent as we all crowd around the quantum coherence chamber. Hearts racing, we watch the impossible unfold on our screens. A single neuron, suspended in this carefully calibrated field, dances to a quantum rhythm that shouldn't exist. The readings are clear: quantum effects persisting a thousand times longer than any model predicted. As the implications sink in, I feel a chill. This isn't just an anomaly—it's a window into the very nature of consciousness, and it shatters everything we thought we knew about creating artificial minds. In this moment, the gulf between silicon dreams and biological reality has never seemed wider.</p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg" class="kg-image" alt="" loading="lazy" width="1120" height="1120" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg 1000w, https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_Closeup_of_a_single_neuron_suspended_in_a_shi_2.jpg 1120w" sizes="(min-width: 720px) 720px"></figure><blockquote><strong>Consciousness</strong>: A phenomenon emerging at the intersection of quantum mechanics, thermodynamics, and information geometry—a trinity of physical processes that transcends classical computation.</blockquote><p>As tech CEOs trumpet each new language model as approaching human-like awareness, I find myself returning to this quantum-coherent neuron. Their pursuit isn't just premature—it fundamentally misunderstands what consciousness is. The gap between artificial and biological consciousness isn't just wide; it's rooted in the very physics of reality.</p><h2 id="the-three-body-problem-of-mind"><strong>The Three-Body Problem of Mind</strong></h2><p><em>Consider consciousness as a cosmic dance, like the gravitational interplay and sway between three celestial bodies—complex, beautiful, and fundamentally unpredictable through simple computation.</em></p><figure class="kg-card kg-image-card"><img src="https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg" class="kg-image" alt="" loading="lazy" width="1472" height="832" srcset="https://tokenwisdom.ghost.io/content/images/size/w600/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg 600w, https://tokenwisdom.ghost.io/content/images/size/w1000/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg 1000w, https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Phoenix_A_triptych_illustration_On_the_left_a_quantum_2.jpg 1472w" sizes="(min-width: 720px) 720px"></figure><p>This <strong>systems thinking</strong> reveals consciousness as a three-body problem—a complex interaction between quantum mechanics, thermodynamic gradients, and geometric information structures. Like the gravitational dance of three stars, these forces create patterns too intricate for mere computational models.</p><h3 id="the-quantum-foundation"><strong>The Quantum Foundation</strong></h3><p>Last month, in an MIT laboratory, something extraordinary was observed. A network of neural microtubules maintained quantum coherence for microseconds—an eternity in quantum terms. This wasn't just an isolated finding; it confirmed what researchers at the Max Planck Institute had begun to suspect: consciousness leverages quantum effects in ways that defy our classical understanding of brain function.</p><blockquote><strong>Quantum Coherence</strong>: The maintenance of quantum states that allow consciousness to perform computations impossible for classical systems, including our most advanced AI.</blockquote><p>Picture your memories not as stored data, but as quantum patterns maintained through mechanisms that challenge our understanding of physics itself. When you recall your first kiss or the scent of your grandmother's kitchen, you're not simply accessing stored information—you're recreating a quantum state that exists in superposition until the moment of recollection.</p><p>The implications shatter our computational models of mind:</p><ol><li>Neural microtubules function as quantum channels, maintaining coherence at body temperature</li><li>Information processing leverages quantum effects for computational advantages no classical system can match</li><li>Consciousness requires the precise orchestration of quantum states across billions of neurons</li></ol><p>This quantum foundation isn't just a theoretical curiosity—it's the key to understanding why current AI systems, no matter how complex, fundamentally lack the capacity for consciousness. The EEG patterns we observe during different states of consciousness aren't just showing us neural communication patterns; they're giving us a glimpse of quantum coherence patterns that we're only beginning to understand.</p><h3 id="the-thermodynamic-ballet"><strong>The Thermodynamic Ballet</strong></h3><p><em>Your consciousness exists in a precise thermodynamic sweet spot—a razor's edge between order and chaos that no current technology can maintain.</em></p><p>The numbers tell a stunning story: your brain consumes 20% of your body's energy while comprising only 2% of its mass. During a recent series of experiments monitoring consciousness transitions, it was discovered this isn't inefficiency—it's the necessary energetic cost of awareness itself.</p><p><strong>Thermodynamic consciousness</strong> requires:</p><ul><li>Precise energy gradient maintenance across multiple scales</li><li>Specific entropy production patterns that balance information preservation with dissipation</li><li>Dynamic equilibrium between order and chaos</li></ul><p>Recently, a very remarkable thing was observed during a consciousness transition experiment. As the subject moved from wakefulness to sleep, not only were the changes in neural activity recorded, but a phase transition in the brain's thermodynamic organization. It’s like watching water freeze into ice—a fundamental reorganization of the system's physical properties.</p><p>This thermodynamic dance isn't just a byproduct of neural activity—it's an essential component of consciousness itself. When anesthesiologists put someone under general anesthesia, they're not just "turning off" consciousness—they're disrupting the precise quantum-thermodynamic balance required for conscious experience. The EEG patterns we see during anesthesia aren't just showing reduced brain activity; they're showing the collapse of the specific thermodynamic structure that consciousness requires.</p>
 <!--kg-card-begin: html-->
 <!DOCTYPE html>
 <html>
@@ -243,7 +275,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         updateState('awake');
     </script>
 <link rel="stylesheet" href="../assets/annotate.css">
-<script>window.TW_API="https://token-wisdom-edge.theusual.workers.dev";</script>
+<script>window.TW_API="http://localhost:3000";</script>
 <script src="../assets/annotate.js" defer></script>
 </body>
 </html>
@@ -318,8 +350,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 <div style="height: 333px"><script src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js" data-background-color="#1a1a1c" data-text-color="#FFFFFF" data-button-color="#2a1002" data-button-text-color="#FFFFFF" data-title="Token Wisdom ✨ " data-description="Invest in knowledge. It provides great returns." data-icon="https://tokenwisdom.ghost.io/content/images/size/w192h192/size/w256h256/2024/02/rocketMan.gif" data-site="https://tokenwisdom.ghost.io/" async></script></div>
 <!--kg-card-end: html-->
 
+    </div>
   </div>
-  <div class="post-tags"><a class="post-tag" href="../tags/quantum.html">Quantum Realm</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/human-computer-interaction.html">Human Computer Interaction</a><a class="post-tag" href="../tags/flow.html">In Flow State</a><a class="post-tag" href="../tags/neuroscience.html">Neuroscience</a><a class="post-tag" href="../tags/philosophy.html">Philosophical</a><a class="post-tag" href="../tags/strategic.html">Strategic Measures</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a></div>
+  <div class="post-tags essay-col"><a class="post-tag" href="../tags/quantum.html">Quantum Realm</a><a class="post-tag" href="../tags/ai.html">A.I. (and Subsets)</a><a class="post-tag" href="../tags/education.html">Educate \ Learn</a><a class="post-tag" href="../tags/human-computer-interaction.html">Human Computer Interaction</a><a class="post-tag" href="../tags/flow.html">In Flow State</a><a class="post-tag" href="../tags/neuroscience.html">Neuroscience</a><a class="post-tag" href="../tags/philosophy.html">Philosophical</a><a class="post-tag" href="../tags/strategic.html">Strategic Measures</a><a class="post-tag" href="../tags/unsolicited-advice.html">Unsolicited Advice</a></div>
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
 </article>
 <section id="tw-responses"></section>
 <nav class="post-nav">
@@ -335,48 +373,111 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
 </nav>
 
-<footer class="colophon">
-  <div class="colophon-inner">
-    <div>
-      <div class="wordmark">Token Wisdom</div>
-      <p>The Newsletter of Record for the Future of Now</p>
-      <p class="tagline">Knowware is measured in lifetimes</p>
-      <p style="margin-top:.6rem;">By <strong>@iamkhayyam</strong> · ARC Institute of Knowware</p>
-    </div>
-    <div>
-      <h4>Sections</h4>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../archive.html">Archive</a></li>
-        <li><a href="../tags/index.html">All Topics</a></li>
-        <li><a href="../lexicon/index.html">The Lexicon</a></li>
-        <li><a href="../tags/a-closer-look.html">Essays</a></li>
-        <li><a href="../tags/worthafortune.html">Newsletters</a></li>
-        <li><a href="../podcast.html">Podcast</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Popular Tags</h4>
-      <ul>
-      <li><a href="../tags/a-closer-look.html">👁️ A Closer Look</a></li>
-      <li><a href="../tags/technology.html">Technology</a></li>
-      <li><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a></li>
-      <li><a href="../tags/ai.html">A.I. (and Subsets)</a></li>
-      <li><a href="../tags/future-trends.html">Future Trends</a></li>
-      <li><a href="../tags/ethical.html">Ethics \ Principles</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>Elsewhere</h4>
-      <ul>
-        <li><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a></li>
-        <li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li>
-      </ul>
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
     </div>
   </div>
-  <div class="colophon-bottom">
-    <span>🔮 Token Wisdom · 267 Posts · 84 Tags · 2013–2026 · 100% Authentic Humanly Chosen</span>
-    <span class="colophon-sign-off">Until next time:<br>stay smart, and kind,<br>and definitely stay weird!</span>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
   </div>
 </footer>
 </body>
