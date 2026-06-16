@@ -227,8 +227,8 @@ def render_hero():
   <aside class="lead-side">
     <div class="side-list">
       {_render_ed_accordion(
-          editions[0:7],
-          [edition_ep] + [epB_by_yw.get(((p.get("published_at") or "")[:4], _week_of(p))) for p in editions[1:7]]
+          editions[0:5],
+          [edition_ep] + [epB_by_yw.get(((p.get("published_at") or "")[:4], _week_of(p))) for p in editions[1:5]]
       )}
     </div>
   </aside>
@@ -769,11 +769,13 @@ PLAYER_JS = r"""
   });
 })();
 function edToggle(btn){
-  var expanded=btn.getAttribute('aria-expanded')==='true';
+  // one is always open: clicking the open row keeps it open; never all-closed
+  if(btn.getAttribute('aria-expanded')==='true') return;
   var list=btn.closest('.side-list');
   list.querySelectorAll('.ed-row').forEach(function(b){b.setAttribute('aria-expanded','false');});
   list.querySelectorAll('.ed-body').forEach(function(d){d.hidden=true;});
-  if(!expanded){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.hidden=false;}
+  btn.setAttribute('aria-expanded','true');
+  btn.nextElementSibling.hidden=false;
 }
 </script>
 """
@@ -829,10 +831,10 @@ def build(out_name="home-v2.html"):
 {render_hero()}
 {render_listen()}
 {render_stack()}
-{render_recent()}
 </main>
 {render_subscribe()}
 <div class="wrap">
+{render_recent()}
 {render_topics()}
 {render_lexicon()}
 </div>

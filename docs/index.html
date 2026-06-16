@@ -623,62 +623,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
   </div>
 </div>
-<div class="ed-item">
-  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
-    <span class="ed-row-title">148th Edition · Week 08</span>
-    <span class="ed-row-caret">▾</span>
-  </button>
-  <div class="ed-body" hidden>
-    <a class="edition-feature" href="posts/148th-edition-token-wisdom-week-08.html">
-      <div class="ef-figure">
-        <img src="https://tokenwisdom.ghost.io/content/images/2026/02/200.gif" alt="148th Edition 🔮 Token Wisdom \ Week 08" loading="lazy">
-        <span class="figure-tag">Newsletter</span>
-      </div>
-      <div class="kicker kicker-accent">POW.148 · W08 · Feb 23, 2026</div>
-      <h2 class="edition-title">148th Edition · Week 08</h2>
-      <p class="edition-dek">This week: Mini brains solve engineering problems. AI reads MRIs at 97.5% accuracy without explaining why. Consciousness might live in electromagnetic fields. Forests changing how…</p>
-      <span class="readlink">Read the edition &rarr;</span>
-    </a>
-    
-    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/354b7378-7312-434c-8361-994bd28f39af.mp3">
-      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 27:57</div>
-      <a class="ptitle" href="posts/148th-edition-token-wisdom-week-08.html">148th Edition</a>
-      <div class="prow">
-        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
-        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
-        <span class="ptime"><span class="pcur">0:00</span> / 27:57</span>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="ed-item">
-  <button class="ed-row" aria-expanded="false" onclick="edToggle(this)">
-    <span class="ed-row-title">147th Edition · Week 07</span>
-    <span class="ed-row-caret">▾</span>
-  </button>
-  <div class="ed-body" hidden>
-    <a class="edition-feature" href="posts/147th-edition-token-wisdom-week-07.html">
-      <div class="ef-figure">
-        <img src="https://tokenwisdom.ghost.io/content/images/2026/02/giphy.webp" alt="147th Edition 🔮 Token Wisdom \ Week 07" loading="lazy">
-        <span class="figure-tag">Newsletter</span>
-      </div>
-      <div class="kicker kicker-accent">POW.147 · W07 · Feb 16, 2026</div>
-      <h2 class="edition-title">147th Edition · Week 07</h2>
-      <p class="edition-dek">This week: Systems so capable they&#x27;ve become fragile. So optimized they have no room left to fail. So advanced they&#x27;ve made us hostages to their own perfection. It takes 250…</p>
-      <span class="readlink">Read the edition &rarr;</span>
-    </a>
-    
-    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/df53ecde-87c0-45a8-921b-a470a36a81f4.mp3">
-      <div class="pkicker"><span class="pk-tag">The Edition</span> · NotebookLM · 27:06</div>
-      <a class="ptitle" href="posts/147th-edition-token-wisdom-week-07.html">147th Edition</a>
-      <div class="prow">
-        <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
-        <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
-        <span class="ptime"><span class="pcur">0:00</span> / 27:06</span>
-      </div>
-    </div>
-  </div>
-</div>
     </div>
   </aside>
 </section>
@@ -784,6 +728,17 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   </div>
 </a></div>
 </section>
+</main>
+
+<section class="subscribe">
+  <div class="sub-inner">
+    <div class="kicker kicker-on-dark">The Newsletter of Record for the Future of Now</div>
+    <h2 class="sub-title">One signal per week, from three years of looking ahead.</h2>
+    <p class="sub-dek">100% authentic, humanly chosen. No feed, no filler, no algorithm. Just the pearls.</p>
+    <a class="sub-cta" href="https://tokenwisdom.ghost.io/subscribe">Subscribe &rarr;</a>
+  </div>
+</section>
+<div class="wrap">
 
 <section class="block">
   <div class="rule-head"><h2 class="rule-label">A Closer Look</h2><span class="rule-meta">Essays &amp; OP-EDs</span></div>
@@ -863,17 +818,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
   </div>
 </section>
-</main>
-
-<section class="subscribe">
-  <div class="sub-inner">
-    <div class="kicker kicker-on-dark">The Newsletter of Record for the Future of Now</div>
-    <h2 class="sub-title">One signal per week, from three years of looking ahead.</h2>
-    <p class="sub-dek">100% authentic, humanly chosen. No feed, no filler, no algorithm. Just the pearls.</p>
-    <a class="sub-cta" href="https://tokenwisdom.ghost.io/subscribe">Subscribe &rarr;</a>
-  </div>
-</section>
-<div class="wrap">
 
 <section class="block">
   <div class="rule-head"><h2 class="rule-label">Browse by Idea</h2>
@@ -1014,11 +958,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   });
 })();
 function edToggle(btn){
-  var expanded=btn.getAttribute('aria-expanded')==='true';
+  // one is always open: clicking the open row keeps it open; never all-closed
+  if(btn.getAttribute('aria-expanded')==='true') return;
   var list=btn.closest('.side-list');
   list.querySelectorAll('.ed-row').forEach(function(b){b.setAttribute('aria-expanded','false');});
   list.querySelectorAll('.ed-body').forEach(function(d){d.hidden=true;});
-  if(!expanded){btn.setAttribute('aria-expanded','true');btn.nextElementSibling.hidden=false;}
+  btn.setAttribute('aria-expanded','true');
+  btn.nextElementSibling.hidden=false;
 }
 </script>
 
