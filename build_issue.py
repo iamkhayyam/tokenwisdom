@@ -11,6 +11,11 @@ Inputs that already exist:
   data/lexicon.json                the corpus (for "terms in motion")
   posts/*/post.json                the essay (referenced, not re-authored)
 
+Optional editorial overlay (Knowware CMS / Payload), applied after the CSV
+build when PAYLOAD_URL + PAYLOAD_API_KEY are set (see payload_overlay.py):
+  editors' edit.* title/blurb overrides + curated rail order flow back in.
+  Fail-safe: unreachable/absent CMS leaves the CSV build untouched.
+
 Output:
   data/issues/{YYYY}-W{WW}.json    validated against data/issue.schema.json
 
@@ -23,10 +28,13 @@ import argparse
 import csv
 import glob
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlparse
+
+from payload_overlay import overlay_sections
 
 ROOT = Path(__file__).parent
 LINKS_DIR = ROOT / "data" / "links"
@@ -199,9 +207,24 @@ def from_the_record(top_terms, all_terms):
     }
 
 
-def build(year, week, essay_slug, number):
+def build(year, week, essay_slug, number, use_payload=True):
     tnl, tnl_csv = load_links(year, week, "TNL", "article")
     tws, tws_csv = load_links(year, week, "TWS", "video")
+
+    # Overlay the editorial layer curated in Payload (text overrides + rail order)
+    # BEFORE anything downstream, so terms, counts and the report all derive from
+    # the curated truth. Fail-safe: no env / unreachable CMS → CSV build untouched.
+    issue_id = f"{year}-W{week:02d}"
+    overlay = {"applied": False, "reason": "disabled (--no-payload)"}
+    base, key = os.environ.get("PAYLOAD_URL"), os.environ.get("PAYLOAD_API_KEY")
+    if use_payload and base and key:
+        tnl, tws, overlay = overlay_sections(
+            issue_id, tnl, tws, base_url=base, api_key=key,
+            mode=os.environ.get("PAYLOAD_OVERLAY_MODE", "reorder"),
+        )
+    elif use_payload:
+        overlay = {"applied": False, "reason": "PAYLOAD_URL/PAYLOAD_API_KEY not set"}
+
     essay = pick_essay(essay_slug)
 
     week_text = " ".join(
@@ -223,7 +246,7 @@ def build(year, week, essay_slug, number):
     issue = {
         "$schema": "./issue.schema.json",
         "schema_version": "1.0",
-        "id": f"{year}-W{week:02d}",
+        "id": issue_id,
         "number": number,
         "year": year,
         "week": week,
@@ -252,6 +275,7 @@ def build(year, week, essay_slug, number):
             "source_csvs": [c for c in (tnl_csv, tws_csv) if c],
             "counts": {"newest_latest": len(tnl), "time_well_spent": len(tws),
                        "terms_in_motion": len(tim)},
+            "payload_overlay": overlay,
         },
     }
 
@@ -280,10 +304,20 @@ def main():
     ap.add_argument("--week", type=int, default=23)
     ap.add_argument("--essay", default=None, help="essay slug to feature (default: latest)")
     ap.add_argument("--number", type=int, default=None, help="edition number for the masthead")
+    ap.add_argument("--no-payload", action="store_true",
+                    help="skip the Payload editorial overlay (build from CSV only)")
     a = ap.parse_args()
 
-    out, issue = build(a.year, a.week, a.essay, a.number)
+    out, issue = build(a.year, a.week, a.essay, a.number, use_payload=not a.no_payload)
     print(f"Wrote {out}")
+    ov = issue["meta"]["payload_overlay"]
+    if ov.get("applied"):
+        print(f"  payload overlay:  {ov['edits']} text override(s), "
+              f"mode={ov['mode']}, reordered={ov['reordered']}, dropped={ov['dropped']}")
+    elif ov.get("error"):
+        print(f"  payload overlay:  skipped — {ov['error']} (CSV build used)")
+    else:
+        print(f"  payload overlay:  not applied — {ov.get('reason')}")
     print(f"  essay:            {issue['essay']['slug'] if issue['essay'] else '(none)'}")
     print(f"  newest/latest:    {issue['meta']['counts']['newest_latest']}")
     print(f"  time well spent:  {issue['meta']['counts']['time_well_spent']}")

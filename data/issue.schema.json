@@ -166,6 +166,11 @@
         "counts": {
           "type": "object",
           "additionalProperties": { "type": "integer" }
+        },
+        "payload_overlay": {
+          "type": ["object", "null"],
+          "description": "Result of the Knowware CMS (Payload) editorial overlay: edit.* text overrides + curated rail order pulled back into the build. Absent/not-applied when the CMS wasn't consulted (see payload_overlay.py).",
+          "additionalProperties": true
         }
       }
     }
