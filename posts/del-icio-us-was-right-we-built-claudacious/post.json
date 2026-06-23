@@ -1,0 +1,141 @@
+{
+  "id": "del-icio-us-was-right-we-built-claudacious",
+  "uuid": "a3f7c2e1-9b84-4d56-bc21-8e5f3a1d7092",
+  "title": "del.icio.us Was Right. It Was Just Twenty Years Too Early.",
+  "slug": "del-icio-us-was-right-we-built-claudacious",
+  "feature_image": null,
+  "featured": true,
+  "visibility": "public",
+  "created_at": "2026-06-23T00:00:00.000-07:00",
+  "updated_at": "2026-06-23T00:00:00.000-07:00",
+  "published_at": "2026-06-23T00:00:00.000-07:00",
+  "custom_excerpt": "In 2003, del.icio.us proved that human curation beats algorithmic ranking. Then Yahoo bought it, the feed arrived, and we forgot. We didn't forget. We built Claudacious—social bookmarking with a real Claude reading every link you save. Here's everything that went into it.",
+  "canonical_url": null,
+  "comment_id": "del-icio-us-was-right-we-built-claudacious",
+  "authors": [
+    {
+      "id": "6895a3000d912d00085b277d",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "iamkhayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "meta_title": null,
+      "meta_description": null,
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "build-log",
+      "name": "Build Log",
+      "slug": "build-log",
+      "description": "How things got made, and why.",
+      "feature_image": null,
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://tokenwisdom.ghost.io/tag/build-log/"
+    },
+    {
+      "id": "closer-look",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
+      "description": "A weekly essay from a bucket of topics consisting of all things blockchain, artificial intelligence, extended reality, quantum computing, renewable energy, and regenerative practices.",
+      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/aCloserLook-1.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://tokenwisdom.ghost.io/tag/a-closer-look/"
+    },
+    {
+      "id": "claudacious",
+      "name": "Claudacious",
+      "slug": "claudacious",
+      "description": "Building the assistant-over-your-second-brain at claudacio.us.",
+      "feature_image": null,
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://tokenwisdom.ghost.io/tag/claudacious/"
+    }
+  ],
+  "tag_details": [
+    {
+      "id": "build-log",
+      "name": "Build Log",
+      "slug": "build-log",
+      "visibility": "public"
+    },
+    {
+      "id": "closer-look",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
+      "visibility": "public"
+    },
+    {
+      "id": "claudacious",
+      "name": "Claudacious",
+      "slug": "claudacious",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "6895a3000d912d00085b277d",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "iamkhayyam"
+    }
+  ],
+  "reading_time": 18,
+  "og_image": null,
+  "og_title": "del.icio.us Was Right. It Was Just Twenty Years Too Early.",
+  "og_description": "In 2003, del.icio.us proved that human curation beats algorithmic ranking. Then Yahoo bought it, the feed arrived, and we forgot. We built Claudacious—social bookmarking with a real Claude reading every link you save. Here's everything that went into it.",
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "url": "https://tokenwisdom.ghost.io/del-icio-us-was-right-we-built-claudacious/"
+}
