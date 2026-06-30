@@ -51,6 +51,7 @@
   function clearToken() { localStorage.removeItem(LS_TOKEN); }
 
   function api(path, opts) {
+    if (!API) return Promise.reject(new Error("no API configured"));
     opts = opts || {};
     var headers = { "Content-Type": "application/json" };
     var t = token();

@@ -39,7 +39,7 @@ GHOST_URL = "https://tokenwisdom.ghost.io"
 
 # Community layer (highlights / notes / responses) — base URL of our self-hosted
 # API or the Cloudflare Worker that fronts it. Overridable at build time.
-TW_API_BASE = os.environ.get("TW_API_BASE", "http://localhost:3000")
+TW_API_BASE = os.environ.get("TW_API_BASE", "")
 
 
 def community_assets(prefix="../"):
@@ -4038,6 +4038,7 @@ def main():
         shutil.copy(font, fonts_dst / font.name)
     import mockup_home
     mockup_home.build("index.html")
+    mockup_home.build_featured("featured.html")
 
     # .nojekyll
     with open(DOCS_DIR / ".nojekyll", "w") as f:
