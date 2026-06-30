@@ -11,3 +11,9 @@ data/.zernio_state.json
 
 # Zernio distribution audit log (grows; state file IS committed)
 data/zernio_outbox.jsonl
+
+# Algolia indexer sidecar state (mirrors the zernio state pattern)
+data/.algolia_state.json
+
+# Scratch screenshots
+titles/
