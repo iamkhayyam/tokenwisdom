@@ -1338,11 +1338,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     var idx=document.querySelector('[data-essay-index]');
     if(!prose||!idx) return;
     var foot=document.querySelector('.essay-foot');
-    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    // Only h2 — matches the left-edge section counter so the numbers agree.
+    var heads=[].slice.call(prose.querySelectorAll('h2'));
     var sections=[{el:prose,name:'Opening',level:1}];
     heads.forEach(function(h,i){
       if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
-      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+      sections.push({el:h,name:(h.textContent||'').trim(),level:1});
     });
     var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
     var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
