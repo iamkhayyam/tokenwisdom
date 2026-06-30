@@ -52,8 +52,10 @@ def _is_featured(p):
     return "featured" in blurb
 
 
-# Curated highlights for the homepage Featured rail (chronological).
-featured_posts = [p for p in chrono if _is_featured(p)][:6]
+# Curated highlights (chronological). The rail shows the first few; the
+# /featured page lists them all.
+all_featured = [p for p in chrono if _is_featured(p)]
+featured_posts = all_featured[:6]
 
 
 _WK_RX = _re.compile(r"\bW\s*0?(\d{1,2})\b")  # essays write "W13"; editions write "Week 13"
@@ -336,12 +338,8 @@ def render_recent():
 </section>"""
 
 
-def render_featured():
-    if not featured_posts:
-        return ""
-    cards = ""
-    for p in featured_posts:
-        cards += f"""
+def _feat_card(p):
+    return f"""
     <a class="feat-card" href="{href(p)}">
       <div class="feat-fig"><img src="{e(img(p.get('feature_image')))}" alt="{e(p.get('title'))}" loading="lazy"></div>
       <div class="feat-body">
@@ -351,9 +349,19 @@ def render_featured():
         <div class="feat-meta">{e(meta(p))}</div>
       </div>
     </a>"""
+
+
+def render_featured():
+    if not featured_posts:
+        return ""
+    cards = "".join(_feat_card(p) for p in featured_posts)
+    if len(all_featured) > len(featured_posts):
+        meta_html = f'<a class="rule-meta linky" href="featured.html">All {len(all_featured)} featured &rarr;</a>'
+    else:
+        meta_html = '<span class="rule-meta">Editor&rsquo;s picks</span>'
     return f"""
 <section class="block">
-  <div class="rule-head"><h2 class="rule-label">Featured</h2><span class="rule-meta">Editor&rsquo;s picks</span></div>
+  <div class="rule-head"><h2 class="rule-label">Featured</h2>{meta_html}</div>
   <div class="feat-grid">{cards}
   </div>
 </section>"""
@@ -837,13 +845,11 @@ function edToggle(btn){
 </script>
 """
 
-def build(out_name="home-v2.html"):
-    """Assemble the homepage and write it to docs/<out_name>.
-    generate_site.py calls build('index.html') for production; running this
-    module directly writes 'home-v2.html' for preview."""
+def _site_colophon():
+    """The dark colophon footer, shared by the homepage and the /featured page."""
     _yrs = [p["published_at"][:4] for p in posts if p.get("published_at")]
     _years = f"{min(_yrs)}–{max(_yrs)}" if _yrs else ""
-    colophon_html = gs.render_colophon(
+    return gs.render_colophon(
         prefix="",
         mark_url="assets/crystal-ball.svg",
         primary=[
@@ -874,16 +880,29 @@ def build(out_name="home-v2.html"):
         subscribe_url=f"{gs.GHOST_URL}/subscribe",
         handle="@iamkhayyam",
     )
-    html = f"""<!DOCTYPE html>
+
+
+def _doc(title, body):
+    """Wrap body markup in the shared homepage shell (head + fonts + CSS)."""
+    return f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Token Wisdom — The Newsletter of Record for the Future of Now</title>
+<title>{e(title)}</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
 <style>{CSS}{gs.COLOPHON_CSS}{tw_theme.OVERLAY_CSS}</style>
 </head><body>
-{render_masthead()}
+{body}
+{PLAYER_JS}
+</body></html>"""
+
+
+def build(out_name="home-v2.html"):
+    """Assemble the homepage and write it to docs/<out_name>.
+    generate_site.py calls build('index.html') for production; running this
+    module directly writes 'home-v2.html' for preview."""
+    body = f"""{render_masthead()}
 <main class="wrap">
 {render_hero()}
 {render_listen()}
@@ -896,16 +915,34 @@ def build(out_name="home-v2.html"):
 {render_topics()}
 {render_lexicon()}
 </div>
-{colophon_html}
-{PLAYER_JS}
-</body></html>"""
+{_site_colophon()}"""
     out = DOCS / out_name
-    out.write_text(html)
+    out.write_text(_doc("Token Wisdom — The Newsletter of Record for the Future of Now", body))
+    return out
+
+
+def build_featured(out_name="featured.html"):
+    """The full Featured index — every featured piece, newest first."""
+    cards = "".join(_feat_card(p) for p in all_featured)
+    body = f"""{render_masthead()}
+<main class="wrap">
+  <section class="block">
+    <div class="rule-head"><h2 class="rule-label">Featured</h2>
+      <span class="rule-meta">{len(all_featured)} editor&rsquo;s picks</span></div>
+    <p class="lex-intro">Hand-picked pieces worth your time — the essays, letters, and deep dives we keep coming back to. Newest first.</p>
+    <div class="feat-grid">{cards}
+    </div>
+  </section>
+</main>
+{_site_colophon()}"""
+    out = DOCS / out_name
+    out.write_text(_doc("Featured — Token Wisdom", body))
     return out
 
 
 if __name__ == "__main__":
     _out = build("home-v2.html")
+    build_featured("featured.html")
     print(f"Wrote {_out}")
     print(f"  hero: {hero.get('title')!r}")
     print(f"  edition: {gs.clean_title(latest_ed)!r} ({gs.issue_code_string(latest_ed, issue_nums.get(latest_ed['slug'],0))})")

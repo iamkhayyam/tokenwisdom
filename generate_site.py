@@ -782,18 +782,17 @@ img { max-width: 100%; height: auto; }
 .essay-col { max-width: 720px; }
 
 /* Theme toggle — fixed pill, top-right */
-.theme-toggle {
-  position: fixed; top: 22px; right: 22px; z-index: 90;
-  display: flex; align-items: center; gap: 9px;
-  background: var(--paper); color: var(--ink);
-  border: 1.5px solid var(--ink); border-radius: 999px;
-  padding: 9px 15px; cursor: pointer;
+/* Inline theme toggle, lives in the post-top-bar alongside the issue code */
+.post-top-bar .ptb-right { margin-left: auto; display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; }
+.post-top-bar .ptb-theme {
+  background: none; border: none; padding: 0; cursor: pointer;
+  display: inline-flex; align-items: baseline; gap: .35em;
   font-family: var(--mono); font-weight: var(--mono-weight);
-  font-size: 10.5px; letter-spacing: .16em; text-transform: uppercase;
-  transition: background-color .2s ease, color .2s ease, border-color .2s ease;
+  font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--ink-muted); transition: color .15s ease;
 }
-.theme-toggle:hover { background: var(--paper-warm); }
-.theme-toggle .tt-glyph { font-size: 13px; line-height: 1; }
+.post-top-bar .ptb-theme:hover { color: var(--accent); }
+.post-top-bar .ptb-theme .tt-glyph { font-size: .9em; line-height: 1; }
 
 /* Cover */
 .essay-cover { margin: 30px 0 0; }
@@ -907,7 +906,6 @@ img { max-width: 100%; height: auto; }
   .essay-frame { padding: 0 1.25rem 1rem; }
   .essay-cover img { height: 280px; }
   .essay-head { padding: 32px 0 26px; }
-  .theme-toggle { top: 14px; right: 14px; padding: 7px 12px; }
 }
 
 /* ---------- NEWSLETTER TEMPLATE ---------- */
@@ -2266,13 +2264,18 @@ def page_shell(title, body, css_path, from_dir="root"):
 # ============================================================
 
 def render_post_top_bar(post, issue_num):
-    """Top-bar masthead strip: 'Token Wisdom · by @iamkhayyam'  |  'ACL.164 · W14 · Mar 26, 2026'"""
+    """Top-bar masthead strip: 'Token Wisdom · by @iamkhayyam'  |  'ACL.164 · W14 · Mar 26, 2026  ·  ☾ Light'"""
     issue = issue_code_string(post, issue_num)
     code, label = section_code(post)
     return f"""
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
-  <span class="ptb-issue"><span class="ptb-num">{esc(issue)}</span></span>
+  <span class="ptb-right">
+    <span class="ptb-issue"><span class="ptb-num">{esc(issue)}</span></span>
+    <button class="ptb-theme" type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme">
+      <span class="tt-glyph">☼</span><span class="tt-label">Light</span>
+    </button>
+  </span>
 </div>
 """
 
@@ -2319,26 +2322,26 @@ ESSAY_OVERRIDES = {
 ESSAY_THEME_SCRIPT = """
 <script>
 (function(){
-  var KEY='tw-theme';
-  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  // Essays ship DARK by default — the rest of the site stays light. Persist
+  // the reader's last choice (if any) to override the default.
+  var KEY='tw-theme', stored;
+  try{stored=localStorage.getItem(KEY);}catch(e){}
+  document.documentElement.setAttribute('data-theme', stored || 'dark');
   window.__twToggleTheme=function(){
     var d=document.documentElement;
     var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
     d.setAttribute('data-theme',next);
     try{localStorage.setItem(KEY,next);}catch(e){}
-    var b=document.querySelector('.theme-toggle');
-    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\\u263c':'\\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+    sync();
   };
-  document.addEventListener('DOMContentLoaded',function(){
+  function sync(){
     var dk=document.documentElement.getAttribute('data-theme')==='dark';
-    var b=document.querySelector('.theme-toggle');
+    var b=document.querySelector('.ptb-theme');
     if(b){b.querySelector('.tt-glyph').textContent=dk?'\\u263c':'\\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
-  });
+  }
+  document.addEventListener('DOMContentLoaded',sync);
 })();
 </script>
-<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
-  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
-</button>
 """
 
 
@@ -4053,6 +4056,16 @@ def main():
         zernio.sync_new_publications(posts)
     except Exception as e:  # noqa: BLE001 — distribution must never fail the build
         print(f"  [WARN] Zernio distribution skipped: {e}")
+
+    # Search index (Algolia) — push lexicon + public posts to the two TW indices.
+    # Dry-runs until ALGOLIA_APP_ID + ALGOLIA_ADMIN_API_KEY are set. Never allowed
+    # to break the build. See algolia_index.py.
+    print("Search index (Algolia)…")
+    try:
+        import algolia_index
+        algolia_index.main()
+    except Exception as e:  # noqa: BLE001 — indexing must never fail the build
+        print(f"  [WARN] Algolia indexing skipped: {e}")
 
     html_count = len(list(DOCS_DIR.glob("**/*.html")))
     print()

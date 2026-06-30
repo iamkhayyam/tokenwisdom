@@ -69,30 +69,35 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 
 <script>
 (function(){
-  var KEY='tw-theme';
-  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  // Essays ship DARK by default — the rest of the site stays light. Persist
+  // the reader's last choice (if any) to override the default.
+  var KEY='tw-theme', stored;
+  try{stored=localStorage.getItem(KEY);}catch(e){}
+  document.documentElement.setAttribute('data-theme', stored || 'dark');
   window.__twToggleTheme=function(){
     var d=document.documentElement;
     var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
     d.setAttribute('data-theme',next);
     try{localStorage.setItem(KEY,next);}catch(e){}
-    var b=document.querySelector('.theme-toggle');
-    if(b){var dk=next==='dark';b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+    sync();
   };
-  document.addEventListener('DOMContentLoaded',function(){
+  function sync(){
     var dk=document.documentElement.getAttribute('data-theme')==='dark';
-    var b=document.querySelector('.theme-toggle');
+    var b=document.querySelector('.ptb-theme');
     if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
-  });
+  }
+  document.addEventListener('DOMContentLoaded',sync);
 })();
 </script>
-<button class="theme-toggle" onclick="window.__twToggleTheme()" aria-label="Toggle dark mode">
-  <span class="tt-glyph">☾</span><span class="tt-label">Dark</span>
-</button>
 
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
-  <span class="ptb-issue"><span class="ptb-num">ACL.105 · W11 · Mar 13, 2025</span></span>
+  <span class="ptb-right">
+    <span class="ptb-issue"><span class="ptb-num">ACL.105 · W11 · Mar 13, 2025</span></span>
+    <button class="ptb-theme" type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme">
+      <span class="tt-glyph">☼</span><span class="tt-label">Light</span>
+    </button>
+  </span>
 </div>
 
 <article class="essay-frame">

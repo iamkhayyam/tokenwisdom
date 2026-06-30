@@ -183,13 +183,13 @@ body{{background-color:var(--paper);color:var(--ink);font-family:var(--sans);
 img{{max-width:100%;height:auto;display:block}}
 a{{color:inherit;text-decoration:none}}
 
-/* Theme toggle */
-.theme-toggle{{position:fixed;top:22px;right:22px;z-index:90;display:flex;align-items:center;gap:9px;
-  background:var(--paper);color:var(--ink);border:1.5px solid var(--ink);border-radius:999px;
-  padding:9px 15px;cursor:pointer;font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;
-  text-transform:uppercase;transition:background-color .2s,color .2s,border-color .2s}}
-.theme-toggle:hover{{background:var(--paper-warm)}}
-.theme-toggle .tt-glyph{{font-size:13px;line-height:1}}
+/* Inline theme toggle — lives at the right end of the essay top bar */
+.theme-toggle{{margin-left:auto;background:none;border:none;padding:0;cursor:pointer;
+  display:inline-flex;align-items:baseline;gap:.35em;
+  font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink-muted);transition:color .15s ease}}
+.theme-toggle:hover{{color:var(--accent)}}
+.theme-toggle .tt-glyph{{font-size:.95em;line-height:1}}
 
 /* Top bar */
 .essay-topbar{{border-bottom:1px solid var(--paper-rule)}}
@@ -283,7 +283,6 @@ a{{color:inherit;text-decoration:none}}
   .essay-topbar-inner,.essay-frame{{padding-left:1.25rem;padding-right:1.25rem}}
   .essay-cover img{{height:280px}}
   .essay-head{{padding:32px 0 26px}}
-  .theme-toggle{{top:14px;right:14px;padding:7px 12px}}
   .prose{{font-size:18px}}
   .prose .kg-bookmark-container{{flex-direction:column-reverse}}
   .prose .kg-bookmark-thumbnail{{flex-basis:auto;max-width:100%;height:160px;align-self:auto}}
@@ -298,8 +297,10 @@ a{{color:inherit;text-decoration:none}}
 _THEME_SCRIPT = """
 <script>
 (function(){
-  var KEY='tw-theme';
-  try{var s=localStorage.getItem(KEY);if(s)document.documentElement.setAttribute('data-theme',s);}catch(e){}
+  // Essays ship DARK by default; reader's choice (if any) overrides.
+  var KEY='tw-theme', stored;
+  try{stored=localStorage.getItem(KEY);}catch(e){}
+  document.documentElement.setAttribute('data-theme', stored || 'dark');
   window.__twToggleTheme=function(){
     var d=document.documentElement,next=d.getAttribute('data-theme')==='dark'?'light':'dark';
     d.setAttribute('data-theme',next);
@@ -658,6 +659,11 @@ def render_essay_inner(doc: EssayDoc) -> str:
               f'<span class="ef-edition">{esc(edition_line)}</span>'
               f'<a class="ef-back" href="{esc(back_href)}">{back_label}</a></footer>')
 
+    # Inline theme toggle, lives at the right end of the top bar.
+    toggle = ('<button class="theme-toggle" type="button" onclick="window.__twToggleTheme()" '
+              'aria-label="Toggle theme"><span class="tt-glyph">☼</span>'
+              '<span class="tt-label">Light</span></button>')
+
     # top bar
     topbar = ""
     if doc.brand or doc.back_label:
@@ -669,13 +675,9 @@ def render_essay_inner(doc: EssayDoc) -> str:
                     f'<a class="back" href="{esc(doc.back_url or "#")}">{esc(doc.back_label)}</a>')
         topbar = (f'\n<div class="essay-topbar"><div class="essay-topbar-inner">'
                   f'<a class="brand" href="{esc(doc.back_url or "#")}">{mark}'
-                  f'<span class="brand-name">{esc(doc.brand)}</span></a>{back}</div></div>')
+                  f'<span class="brand-name">{esc(doc.brand)}</span></a>{back}{toggle}</div></div>')
 
-    toggle = ('<button class="theme-toggle" onclick="window.__twToggleTheme()" '
-              'aria-label="Toggle dark mode"><span class="tt-glyph">☾</span>'
-              '<span class="tt-label">Dark</span></button>')
-
-    return f"""{_THEME_SCRIPT}{toggle}{topbar}
+    return f"""{_THEME_SCRIPT}{topbar}
 <article class="essay-frame">{cover}
   <header class="essay-head essay-col">
     <div class="essay-eyebrow">{esc(_kicker(doc))}</div>

@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Featured — Token Wisdom</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Light.otf') format('opentype');font-weight:300;font-style:normal}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Regular.otf') format('opentype');font-weight:400;font-style:normal}
+@font-face{font-family:'FauxCRA';src:url('assets/fonts/FauxCRA-Bold.otf') format('opentype');font-weight:700;font-style:normal}
+@font-face{font-family:'FauxCRA Mono';src:url('assets/fonts/FauxCRA-Monospaced.otf') format('opentype');font-weight:400;font-style:normal}
+
+:root{
+  --bg: oklch(0.992 0.004 70);
+  --surface: oklch(0.972 0.005 70);
+  --surface-ink: oklch(0.205 0.012 65);
+  --ink: oklch(0.235 0.012 60);
+  --ink-muted: oklch(0.505 0.012 60);
+  --ink-faint: oklch(0.66 0.010 60);
+  --rule: oklch(0.905 0.006 70);
+  --rule-strong: oklch(0.235 0.012 60);
+  --accent: oklch(0.585 0.155 47);
+  --accent-deep: oklch(0.475 0.140 44);
+  --accent-wash: oklch(0.95 0.030 60);
+  --teal: oklch(0.520 0.070 195);
+  --gold: oklch(0.700 0.095 85);
+  --sans:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif;
+  --display:'Libre Caslon Display',Georgia,serif;
+  --display-weight:400;
+  --serif:'Source Serif 4',Georgia,serif;
+  --mono:'FauxCRA Mono','FauxCRA',ui-monospace,monospace;
+  --w:1220px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+body{background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;overflow-x:hidden}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 28px}
+
+/* kicker / meta */
+.kicker{font-family:var(--mono);font-weight:300;font-size:.66rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted)}
+.kicker-accent{color:var(--accent)}
+.kicker-on-dark{color:oklch(0.78 0.10 55)}
+.meta{font-family:var(--mono);font-weight:300;font-size:.64rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* nameplate — the signature front-page moment */
+.nameplate{border-bottom:1px solid var(--ink);background:var(--bg)}
+.np-inner{max-width:var(--w);margin:0 auto;padding:20px 28px 22px;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:18px}
+.np-left{font-family:'FauxCRA',var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;justify-self:start}
+.np-right{font-family:'FauxCRA',var(--mono);font-weight:400;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-muted);line-height:1.5;text-align:right;justify-self:end}
+.np-mark{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.4rem,6.8vw,4.7rem);letter-spacing:-.025em;color:var(--ink);white-space:nowrap;line-height:.88}
+/* masthead nav */
+.mast{position:sticky;top:0;z-index:50;background:color-mix(in oklch,var(--bg) 90%,transparent);backdrop-filter:blur(8px);border-bottom:2px solid var(--ink)}
+.mast-inner{position:relative;max-width:var(--w);margin:0 auto;padding:11px 28px;display:flex;align-items:center;gap:24px}
+.mast-mark{display:inline-flex;align-items:center}
+.tw-orb{height:30px;width:auto;display:block}
+.foot .tw-orb{height:26px;vertical-align:-.45em;display:inline-block;margin-right:.15em}
+/* Inline text nav — visible on desktop, swapped for the menu button on mobile */
+.mast-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
+.mast-nav a:not(.mast-sub){font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
+.mast-nav a:not(.mast-sub):hover{color:var(--ink)}
+.mast-nav a.is-active{color:var(--accent);border-color:var(--accent)}
+.mast-sub{margin-left:auto;font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.mast-sub:hover{background:var(--accent-deep)}
+/* Menu button — opens the full-page takeover on mobile only */
+.mast-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:none;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:color .2s}
+.mast-toggle:hover{color:var(--accent)}
+.mast-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
+.mast-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
+.mast-toggle:hover .ham span{animation:tw-ham-ripple .45s ease}
+.mast-toggle:hover .ham span:nth-child(2){animation-delay:.07s}
+.mast-toggle:hover .ham span:nth-child(3){animation-delay:.14s}
+@keyframes tw-ham-ripple{0%{transform:translateX(0)}45%{transform:translateX(4px)}100%{transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){.mast-toggle:hover .ham span{animation:none}}
+.mast-toggle .mtxt{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+
+/* lead */
+.lead{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;padding:56px 0 12px;align-items:start}
+.lead-figure{aspect-ratio:3/2;overflow:hidden;background:var(--surface);margin-bottom:26px}
+.lead-figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.lead-main:hover .lead-figure img{transform:scale(1.04)}
+.lead-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,5.6vw,5.2rem);line-height:.93;letter-spacing:-.035em;margin:.7rem 0 .9rem;text-wrap:balance}
+.lead-main:hover .lead-title{color:oklch(0.34 0.07 45)}
+:where(.lead-dek,.edition-dek,.story-dek,.lexcard-def,.lex-intro,.sub-dek){font-optical-sizing:none;font-variation-settings:"opsz" 17}
+.lead-dek{font-family:var(--serif);font-size:1.22rem;line-height:1.5;color:var(--ink-muted);max-width:48ch;margin-bottom:1rem}
+.lead-side{align-self:stretch}
+.rail-head{border-top:2px solid var(--rule-strong);padding-top:.7rem;margin-bottom:1.1rem}
+/* this week's edition — image-led feature that balances the essay column */
+.edition-feature{display:block;margin-bottom:18px}
+.ef-figure{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--surface);margin-bottom:1rem}
+.ef-figure img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.8,.2,1)}
+.edition-feature:hover .ef-figure img{transform:scale(1.04)}
+.edition-feature:hover .edition-title{color:var(--accent-deep)}
+.edition-title{font-family:var(--sans);font-weight:700;font-size:1.6rem;line-height:1.08;letter-spacing:-.02em;margin:.5rem 0 .5rem;color:var(--ink)}
+.edition-dek{font-family:var(--serif);font-size:.98rem;line-height:1.45;color:var(--ink-muted);margin-bottom:.9rem}
+.readlink{font-family:var(--mono);font-size:.68rem;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.side-list{display:flex;flex-direction:column}
+.side-row{padding:.85rem 0;border-top:1px solid var(--rule);transition:color .15s}
+.side-row:hover{color:var(--accent)}
+.side-kicker{display:block;font-family:var(--mono);font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.25rem}
+.side-title{font-family:var(--sans);font-weight:600;font-size:1.02rem;line-height:1.25}
+
+/* edition accordion */
+.ed-item{border-top:1px solid var(--rule)}
+.ed-row{display:flex;align-items:center;width:100%;background:none;border:none;padding:.72rem 0;cursor:pointer;text-align:left;gap:.5rem}
+.ed-row-title{font-family:var(--sans);font-weight:600;font-size:.96rem;line-height:1.2;color:var(--ink-muted);flex:1;transition:color .15s}
+.ed-row:hover .ed-row-title,.ed-row[aria-expanded=true] .ed-row-title{color:var(--ink)}
+.ed-row-caret{font-size:.65rem;color:var(--ink-faint);transition:transform .2s;flex-shrink:0}
+.ed-row[aria-expanded=true] .ed-row-caret{transform:rotate(180deg)}
+.ed-body{padding-bottom:1rem}
+.ed-body[hidden]{display:none}
+
+/* section rule head */
+.block{padding:46px 0}
+.rule-head{display:flex;align-items:baseline;gap:1rem;border-top:3px solid var(--rule-strong);padding-top:.9rem;margin-bottom:2rem}
+.rule-label{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(1.5rem,2.6vw,2.1rem);letter-spacing:-.02em}
+.rule-meta{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);margin-left:auto}
+.rule-meta.linky{color:var(--accent)}
+
+/* recent */
+.recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
+.recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
+.story-wrap .player-rail{margin-top:auto;padding-top:.9rem;margin-bottom:0}
+.pairlink{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);align-self:flex-start;margin-top:.7rem;border-bottom:1px solid transparent;transition:border-color .15s}
+.pairlink:hover{border-color:var(--accent)}
+.story-figure{aspect-ratio:16/10;overflow:hidden;background:var(--surface);margin-bottom:14px}
+.story-figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.story:hover .story-figure img{transform:scale(1.03)}
+.story-title{font-family:var(--display);font-weight:var(--display-weight);font-size:1.5rem;line-height:1.08;letter-spacing:-.01em;margin:.5rem 0 .5rem}
+.story:hover .story-title{color:var(--accent-deep)}
+.story-dek{font-family:var(--serif);font-size:1rem;line-height:1.45;color:var(--ink-muted);margin-bottom:.7rem}
+.recent-list{display:flex;flex-direction:column}
+.recent-list .kicker{margin-bottom:.4rem}
+.list-row{display:flex;flex-direction:column;gap:.25rem;padding:.95rem 0;border-top:1px solid var(--rule);transition:color .15s}
+.list-row:first-of-type{border-top:1px solid var(--rule-strong)}
+.list-row:hover{color:var(--accent)}
+.list-kicker{font-family:var(--mono);font-size:.56rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.list-title{font-family:var(--sans);font-weight:600;font-size:1.05rem;line-height:1.2}
+.list-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* topics */
+.topic-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.topic-card{display:block}
+.tc-figure{position:relative;aspect-ratio:16/10;overflow:hidden;background:var(--surface)}
+.tc-figure img{width:100%;height:100%;object-fit:cover;transition:transform .55s cubic-bezier(.2,.8,.2,1),filter .4s ease}
+.tc-figure img{filter:grayscale(1) contrast(1.1) brightness(1.15)}
+.tc-figure::before{
+  content:'';
+  position:absolute;inset:0;z-index:1;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4'%3E%3Crect width='4' height='4' fill='%23fff'/%3E%3Crect x='0' y='0' width='1' height='1' fill='%23000'/%3E%3Crect x='2' y='0' width='1' height='1' fill='%23000'/%3E%3Crect x='1' y='1' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='3' y='1' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='0' y='2' width='1' height='1' fill='%23000'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%23000'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23000' opacity='.45'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%23000' opacity='.45'/%3E%3C/svg%3E");
+  background-size:6px 6px;
+  mix-blend-mode:multiply;
+  opacity:.35;transition:opacity .4s ease}
+.topic-card:hover .tc-figure img{transform:scale(1.06);filter:grayscale(0) contrast(1) brightness(1)}
+.topic-card:hover .tc-figure::before{opacity:0}
+.tc-bar{position:absolute;bottom:0;left:0;right:0;z-index:2;display:flex;align-items:baseline;gap:.55em;background:oklch(0.235 0.012 60 / 20%);padding:.45em .65em}
+.tc-count{font-family:var(--mono);font-weight:300;font-size:.58rem;letter-spacing:.08em;color:#fff;opacity:.6;flex-shrink:0}
+.tc-name{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media(max-width:820px){.topic-grid{grid-template-columns:1fr 1fr}}
+
+/* stack — this week's top 5 TNL + TWS */
+.block-stack{padding:2.4rem 0 2rem}
+.stack-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.85rem;margin-top:1rem}
+.stack-card{display:block;color:var(--ink);border:1px solid var(--rule);border-radius:4px;overflow:hidden;background:var(--surface);transition:border-color .2s,transform .2s}
+.stack-card:hover{border-color:var(--accent);transform:translateY(-2px);color:var(--ink)}
+.stack-card-img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:var(--rule)}
+.stack-card-ph{width:100%;aspect-ratio:16/9;background:var(--rule)}
+.stack-card-body{padding:.7rem .8rem .85rem}
+.stack-card-type{font-family:var(--mono);font-weight:300;font-size:.57rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:.35rem}
+.stack-card-title{font-family:var(--sans);font-weight:600;font-size:.88rem;line-height:1.3;color:var(--ink);display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.stack-card-excerpt{font-family:var(--serif);font-optical-sizing:none;font-variation-settings:"opsz" 17;font-size:.78rem;line-height:1.4;color:var(--ink-muted);margin-top:.3rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.stack-row-label{font-family:var(--mono);font-weight:300;font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin:.2rem 0 .15rem}
+
+/* lexicon strip */
+.block-lex{background:var(--surface);margin:0 -100vw;padding-left:100vw;padding-right:100vw}
+.block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
+.lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
+.lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard:nth-child(4n){border-right:none}
+.lexcard:hover{background:var(--bg)}
+.lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
+.lexcard:hover .lexcard-term{color:var(--accent)}
+.lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
+.lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
+.lexcard-spark{opacity:.9}
+.spark{display:block;width:100%;height:auto}
+
+/* featured — curated picks, 3-up framed cards before Browse by Idea */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.4rem}
+.feat-card{display:flex;flex-direction:column;border:1px solid var(--rule);border-radius:6px;overflow:hidden;background:var(--surface);color:var(--ink);transition:border-color .2s ease,transform .2s ease}
+.feat-card:hover{border-color:var(--accent);transform:translateY(-2px)}
+.feat-fig{aspect-ratio:16/9;overflow:hidden;background:var(--surface)}
+.feat-fig img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s cubic-bezier(.2,.8,.2,1)}
+.feat-card:hover .feat-fig img{transform:scale(1.04)}
+.feat-body{display:flex;flex-direction:column;gap:.45rem;padding:1rem 1.15rem 1.2rem}
+.feat-kicker{font-family:var(--mono);font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.feat-title{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em;color:var(--ink);transition:color .15s ease}
+.feat-card:hover .feat-title{color:var(--accent)}
+.feat-dek{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.feat-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-top:auto;padding-top:.3rem}
+@media(max-width:820px){.feat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.feat-card,.feat-fig img{transition:none}.feat-card:hover{transform:none}.feat-card:hover .feat-fig img{transform:none}}
+
+/* subscribe — the Fortune Brand crystal ball glowing in the background */
+.subscribe{
+  margin-top:56px;
+  color:oklch(0.95 0.02 65);
+  background-color:oklch(0.195 0.055 31);
+  background-image:
+    linear-gradient(90deg, oklch(0.185 0.055 31) 0%, oklch(0.185 0.055 31 / .95) 40%, oklch(0.185 0.055 31 / .25) 68%, transparent 90%),
+    url(assets/fortune_teller.gif);
+  background-repeat:no-repeat,no-repeat;
+  background-position:center, right -80px center;
+  background-size:cover,contain;
+}
+.sub-inner{max-width:var(--w);margin:0 auto;padding:94px 28px;position:relative}
+.sub-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.1rem,4.2vw,3.4rem);line-height:1.0;letter-spacing:-.02em;margin:.8rem 0 .7rem;max-width:16ch;color:oklch(0.97 0.02 72)}
+.sub-dek{font-family:var(--serif);font-size:1.18rem;color:oklch(0.84 0.02 66);max-width:46ch;margin-bottom:1.8rem}
+.sub-cta{display:inline-block;font-family:var(--mono);font-size:.76rem;letter-spacing:.1em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.95em 1.7em;transition:background .15s,transform .15s}
+.sub-cta:hover{background:oklch(0.66 0.16 50);transform:translateX(4px)}
+.kicker-on-dark{color:oklch(0.80 0.11 62)}
+
+/* footer */
+.foot{border-top:1px solid var(--rule);background:var(--bg)}
+.foot-inner{max-width:var(--w);margin:0 auto;padding:40px 28px}
+.foot .wordmark{font-size:1.05rem;margin-bottom:.5rem}
+.foot-tag{font-family:var(--serif);color:var(--ink-muted);margin-bottom:.4rem}
+.foot-meta{font-family:var(--mono);font-size:.62rem;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-faint)}
+
+/* this-week pair header */
+.thisweek-head{display:flex;align-items:center;gap:1.1rem;max-width:var(--w);margin:0 auto;padding:46px 28px 0}
+.tw-eyebrow{font-family:var(--mono);font-weight:500;font-size:.82rem;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.tw-line{flex:1;height:2px;background:var(--rule-strong)}
+.tw-meta{font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.lead{padding-top:26px}
+.lead-figure{position:relative}
+.figure-tag{position:absolute;top:0;left:0;background:var(--ink);color:var(--bg);font-family:var(--mono);font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;padding:.45em .75em}
+/* podcast embed */
+.listen{background:var(--surface-ink);padding:18px 20px 20px;margin-bottom:18px}
+.listen .kicker{color:oklch(0.80 0.10 55)}
+.listen-title{font-family:var(--sans);font-weight:700;font-size:1.08rem;line-height:1.18;margin:.45rem 0 .75rem;color:oklch(0.96 0.006 70)}
+.listen-audio{width:100%;height:36px;margin-bottom:.55rem}
+.listen-meta{font-family:var(--mono);font-size:.55rem;letter-spacing:.05em;text-transform:uppercase;color:oklch(0.72 0.008 70)}
+/* full-width audio players (this week in audio) */
+.players{display:flex;flex-direction:column}
+.player{display:flex;align-items:center;gap:1.3rem;padding:1.5rem 0;border-top:1px solid var(--rule)}
+.player:first-child{border-top:none}
+.pp{flex-shrink:0;width:54px;height:54px;border-radius:50%;background:var(--ink);color:var(--bg);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .15s,transform .15s}
+.pp:hover{background:var(--accent);transform:scale(1.05)}
+.pp-icon{width:0;height:0;border-left:14px solid currentColor;border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.player.playing .pp-icon{width:14px;height:15px;border:none;margin:0;background:linear-gradient(to right,currentColor 0 4px,transparent 4px 10px,currentColor 10px 14px)}
+.pbody{flex:1;min-width:0}
+.pkicker{font-family:var(--mono);font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint)}
+.pk-tag{color:var(--accent)}
+.ptitle{display:block;font-family:var(--sans);font-weight:700;font-size:clamp(1.1rem,1.8vw,1.4rem);line-height:1.18;letter-spacing:-.01em;margin:.25rem 0 .7rem;color:var(--ink)}
+.ptitle:hover{color:var(--accent)}
+.prow{display:flex;align-items:center;gap:1.1rem}
+.ptrack{position:relative;flex:1;height:6px;background:var(--rule);cursor:pointer}
+.pfill{position:absolute;left:0;top:0;height:100%;width:0;background:var(--accent)}
+.pknob{position:absolute;top:50%;left:0;width:13px;height:13px;border-radius:50%;background:var(--accent);transform:translate(-50%,-50%);display:none;box-shadow:0 0 0 3px var(--bg)}
+.player.playing .pknob,.ptrack:hover .pknob{display:block}
+.ptime{font-family:var(--mono);font-size:.68rem;letter-spacing:.03em;color:var(--ink-muted);white-space:nowrap;flex-shrink:0}
+.pcur{color:var(--ink)}
+/* "The Essay, Aloud" is the 3rd beat of This Week, not a new section:
+   thin hairline + tight spacing so it reads as a continuation. */
+.listen-week{padding-top:12px}
+.listen-week .rule-head{border-top:1px solid var(--rule);padding-top:.7rem;margin-bottom:1.3rem}
+/* front-and-center essay player runs a touch grander */
+.listen-week .player{padding:1.7rem 0}
+.listen-week .pp{width:60px;height:60px}
+.listen-week .ptitle{font-size:clamp(1.25rem,2.1vw,1.6rem)}
+/* rail edition player — compact, stacked, on a surface */
+.player-rail{flex-direction:column;align-items:stretch;gap:.5rem;background:var(--surface);padding:15px 17px 16px;border-top:none;margin-bottom:18px}
+.player-rail .ptitle{font-size:1.05rem;margin:.1rem 0 .4rem}
+.player-rail .prow{gap:.7rem}
+.player-rail .pp{width:38px;height:38px}
+.player-rail .pp-icon{border-left-width:11px;border-top-width:7px;border-bottom-width:7px}
+.player-rail.playing .pp-icon{width:11px;height:12px}
+.player-rail .ptime{font-size:.6rem;color:var(--ink-faint)}
+
+@media(max-width:980px){
+  .np-inner{grid-template-columns:1fr;justify-items:center;text-align:center;gap:10px}
+  .thisweek-head{flex-wrap:wrap;gap:.6rem}
+  .np-left,.np-right{justify-self:center;text-align:center}
+  .lead{grid-template-columns:1fr;gap:32px}
+  .recent{grid-template-columns:1fr;gap:32px}
+  .lexcards{grid-template-columns:1fr 1fr}
+  .lexcard:nth-child(4n){border-right:1px solid var(--rule)}
+  .lexcard:nth-child(2n){border-right:none}
+}
+/* mobile — tighten the menu bar */
+@media(max-width:1080px){.mast-nav{display:none}.mast-toggle{display:inline-flex}}
+@media(max-width:860px){.mast-inner{padding:10px 16px;gap:14px}}
+/* mobile — "This Week" card rows become edge-to-edge swipe rails */
+@media(max-width:860px){
+  .stack-grid{
+    display:flex;grid-template-columns:none;gap:.75rem;
+    overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;
+    scrollbar-width:none;-ms-overflow-style:none;
+    margin-inline:-28px;padding:0 28px .4rem;scroll-padding-left:28px;
+    overscroll-behavior-x:contain;
+  }
+  .stack-grid::-webkit-scrollbar{display:none}
+  .stack-card{flex:0 0 clamp(200px,70vw,250px);scroll-snap-align:start}
+  .stack-row-label{display:flex;align-items:baseline;gap:.5em}
+  .stack-row-label::after{content:"swipe →";margin-left:auto;color:var(--ink-faint);letter-spacing:.12em}
+}
+@media(max-width:620px){
+  .recent-cards{grid-template-columns:1fr}
+  .lexcards{grid-template-columns:1fr}
+  .lexcard{border-right:1px solid var(--rule)!important}
+}
+
+.tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#d98a4e;position:relative;background:var(--cg);color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
+.tw-colophon .col-inner{position:relative;max-width:1240px;margin:0 auto;padding:0 52px}
+.tw-colophon .col-ghost-wrap{position:absolute;left:0;top:0;bottom:0;z-index:0;display:flex;align-items:center;pointer-events:none}
+.tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(200px,32vw,440px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.055)}
+.tw-colophon .col-t1{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;padding:64px 0 52px}
+.tw-colophon .col-pitch{max-width:600px}
+.tw-colophon .col-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
+.tw-colophon .col-eyebrow img{height:26px;width:auto;opacity:.92}
+.tw-colophon .col-eyebrow span{font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--cacc)}
+.tw-colophon .col-h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,54px);line-height:1.02;letter-spacing:-.022em;color:var(--ci);margin:0;max-width:14ch}
+.tw-colophon .col-sub{width:340px;max-width:100%;flex-shrink:0}
+.tw-colophon .col-sub-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cm);margin-bottom:14px}
+.tw-colophon .col-subform{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--cr);padding-bottom:12px;transition:border-color .2s ease}
+.tw-colophon .col-subform:focus-within{border-color:var(--cacc)}
+.tw-colophon .col-subform input{flex:1;min-width:0;background:transparent;border:none;outline:none;color:var(--ci);font-family:var(--mono);font-size:13px;letter-spacing:.04em;padding:4px 0}
+.tw-colophon .col-subform input::placeholder{color:var(--cf)}
+.tw-colophon .col-subform button{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--cacc);transition:opacity .2s ease}
+.tw-colophon .col-subform button:hover{opacity:.65}
+.tw-colophon .col-t2{position:relative;z-index:1;padding:30px 0}
+.tw-colophon .col-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
+.tw-colophon .col-links a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--ci2);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;background:var(--cpanel);transition:color .18s ease,border-color .18s ease,background .18s ease}
+.tw-colophon .col-links a:hover{color:var(--ci);border-color:var(--cacc);background:rgba(217,138,78,.06)}
+.tw-colophon .col-meta{display:flex;flex-wrap:wrap;gap:10px}
+.tw-colophon .col-meta a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--cm);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;transition:color .18s ease,border-color .18s ease}
+.tw-colophon .col-meta a:hover{color:var(--ci);border-color:var(--cr)}
+.tw-colophon .col-tags{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:22px}
+.tw-colophon .col-tags-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cf);margin-right:6px}
+.tw-colophon .col-tags a{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;white-space:nowrap;color:var(--cm);border:1px solid var(--cr2);border-radius:999px;padding:5px 13px;transition:color .18s ease,border-color .18s ease}
+.tw-colophon .col-tags a:hover{color:var(--cacc);border-color:var(--cacc)}
+.tw-colophon .col-t3{position:relative;z-index:1;display:flex;flex-direction:column;gap:24px;padding:50px 0 56px}
+.tw-colophon .col-signoff{position:relative;z-index:2;font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.5;color:var(--ci2);margin:0;max-width:30ch}
+.tw-colophon .col-bar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+.tw-colophon .col-bar-l{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cf)}
+.tw-colophon .col-bar-l .col-strong{color:var(--ci2)}
+.tw-colophon .col-dot{width:3px;height:3px;border-radius:50%;background:var(--cf)}
+.tw-colophon .col-chosen{display:inline-flex;align-items:center;gap:6px}
+.tw-colophon .col-chosen .col-dia{color:var(--cacc)}
+.tw-colophon .col-bar-r{display:flex;align-items:center;gap:20px;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cm)}
+.tw-colophon .col-bar-r a{color:var(--cm)}
+.tw-colophon .col-bar-r a:hover{color:var(--cacc)}
+.tw-colophon .col-bar-r .col-vr{width:1px;height:12px;background:var(--cr)}
+.tw-colophon .col-bar-r .col-handle{color:var(--ci2)}
+@media(max-width:860px){
+  .tw-colophon .col-t1{flex-direction:column;align-items:flex-start;gap:34px}
+  .tw-colophon .col-bar{flex-direction:column;align-items:flex-start;gap:18px}
+  .tw-colophon .col-ghost{font-size:23vw}
+  .tw-colophon .col-inner{padding:0 24px}
+}
+
+/* ===== FULL-PAGE NAV TAKEOVER ===== */
+html.nav-open{overflow:hidden}
+.nav-takeover{
+  position:fixed;inset:0;z-index:200;
+  --nto-bg:#15110b;--nto-text:#f4eee1;--nto-muted:#9b9082;--nto-rule:rgba(244,238,225,.13);
+  background:var(--nto-bg);color:var(--nto-text);
+  display:flex;flex-direction:column;
+  padding:clamp(.9rem,3vh,1.7rem) clamp(1.2rem,5vw,3.6rem);
+  opacity:0;visibility:hidden;pointer-events:none;
+  clip-path:inset(0 0 100% 0);
+  transition:clip-path .55s cubic-bezier(.7,0,.18,1),opacity .01s linear .55s,visibility 0s linear .55s;
+  overflow-y:auto;overscroll-behavior:contain;
+}
+html.nav-open .nav-takeover{
+  opacity:1;visibility:visible;pointer-events:auto;clip-path:inset(0 0 0 0);
+  transition:clip-path .62s cubic-bezier(.16,1,.3,1),opacity .01s;
+}
+.nto-bg{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.nto-glow{position:absolute;inset:0;pointer-events:none;background:radial-gradient(115% 75% at 88% -12%,color-mix(in srgb,var(--accent) 40%,transparent),transparent 58%)}
+.nto-monogram{position:absolute;right:clamp(-1rem,1vw,1.5rem);bottom:clamp(-4rem,-5vw,-1.5rem);font-family:var(--display);font-weight:400;font-size:min(48vh,40vw);line-height:.7;color:var(--nto-text);opacity:.045;pointer-events:none;user-select:none}
+.nto-bar,.nto-nav,.nto-foot{position:relative;width:100%;max-width:1180px;margin-inline:auto}
+.nto-bar{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.nto-eyebrow{font-family:var(--mono);font-size:.66rem;letter-spacing:.22em;text-transform:uppercase;color:var(--nto-muted)}
+.nto-eyebrow b{color:var(--accent);font-weight:400}
+.nto-close{display:inline-flex;align-items:center;gap:.65em;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--nto-text);background:transparent;border:1px solid var(--nto-rule);padding:.7em 1em;cursor:pointer;transition:border-color .2s,color .2s}
+.nto-close:hover{color:var(--accent);border-color:var(--accent)}
+.nto-close .x{font-size:1.05em;line-height:1}
+.nto-nav{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(.4rem,1.4vh,1.3rem) 0}
+.nto-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:clamp(.8rem,2vw,1.6rem);padding:clamp(.3rem,1.05vh,.95rem) 0;border-top:1px solid var(--nto-rule);color:var(--nto-text);text-decoration:none;opacity:0;transform:translateY(30px)}
+.nto-row:last-of-type{border-bottom:1px solid var(--nto-rule)}
+html.nav-open .nto-row{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:calc(.14s + var(--i,0)*.05s)}
+.nto-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--accent);min-width:2.2em}
+.nto-label{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,min(7.5vw,5vh),4.4rem);line-height:.96;letter-spacing:-.02em;transition:transform .4s cubic-bezier(.16,1,.3,1),color .25s ease}
+.nto-desc{justify-self:end;text-align:right;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--nto-muted);max-width:16ch;opacity:0;transform:translateX(-10px);transition:opacity .3s ease,transform .3s ease}
+.nto-arrow{display:none}
+@media(hover:hover){
+  .nto-row:hover .nto-label{color:var(--accent);transform:translateX(clamp(8px,1.6vw,22px))}
+  .nto-row:hover .nto-desc{opacity:1;transform:none}
+}
+.nto-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem;padding-top:clamp(.7rem,1.8vh,1.4rem);border-top:1px solid var(--nto-rule);opacity:0;transform:translateY(20px)}
+html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:.62s}
+.nto-sub{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.95em 1.6em;transition:background .2s}
+.nto-sub:hover{background:var(--accent-deep)}
+.nto-foot-meta{display:flex;flex-direction:column;gap:.4rem;text-align:right;margin-left:auto}
+.nto-tag{font-family:var(--serif);font-style:italic;font-size:.95rem;color:var(--nto-text)}
+.nto-elsewhere{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--nto-muted)}
+.nto-elsewhere a{color:var(--nto-muted);border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
+.nto-elsewhere a:hover{color:var(--accent);border-color:var(--accent)}
+@media(max-width:620px){
+  .nto-desc{display:none}
+  .nto-foot{flex-direction:column;align-items:flex-start}
+  .nto-foot-meta{text-align:left;margin-left:0}
+}
+@media(prefers-reduced-motion:reduce){
+  .nav-takeover{clip-path:none!important;transition:opacity .2s ease,visibility 0s}
+  html.nav-open .nav-takeover{transition:opacity .2s ease}
+  .nto-row,html.nav-open .nto-row,.nto-foot,html.nav-open .nto-foot{transform:none;transition:opacity .2s ease;transition-delay:0s}
+}
+</style>
+</head><body>
+
+<div class="nameplate">
+  <div class="np-inner">
+    <div class="np-left">The Newsletter of Record<br>for the Future of Now</div>
+    <a class="np-mark" href="index.html">Token&nbsp;Wisdom</a>
+    <div class="np-right">No. 153<br>SAT · JUN 13, 2026</div>
+  </div>
+</div>
+<header class="mast">
+  <div class="mast-inner">
+    <a class="mast-mark" href="index.html" aria-label="Token Wisdom — home"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"></a>
+    <nav class="mast-nav" id="mast-nav">
+      <a href="archive.html">Archive</a><a href="tags/index.html">Topics</a><a href="lexicon/index.html">Lexicon</a><a href="links/index.html">Links</a><a href="tags/a-closer-look.html">Essays</a><a href="tags/worthafortune.html">Newsletters</a><a href="podcast.html">Podcast</a><a href="metrics.html">Report</a><a href="about/index.html">About</a>
+      <a class="mast-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
+    </nav>
+    <button class="mast-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
+      <span class="ham"><span></span><span></span><span></span></span>
+      <span class="mtxt">Menu</span>
+    </button>
+  </div>
+</header>
+
+<div class="nav-takeover" id="nav-takeover" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true">
+  <div class="nto-bg" aria-hidden="true">
+    <div class="nto-glow"></div>
+    <div class="nto-monogram">&amp;</div>
+  </div>
+  <div class="nto-bar">
+    <span class="nto-eyebrow">The Index <b>·</b> Token Wisdom</span>
+    <button class="nto-close" data-nav-close aria-label="Close menu">Close <span class="x">✕</span></button>
+  </div>
+  <nav class="nto-nav"><a class="nto-row" style="--i:0" href="archive.html"><span class="nto-num">01</span><span class="nto-label">Archive</span><span class="nto-desc">Every edition, dated</span></a><a class="nto-row" style="--i:1" href="tags/index.html"><span class="nto-num">02</span><span class="nto-label">Topics</span><span class="nto-desc">Browse by idea</span></a><a class="nto-row" style="--i:2" href="lexicon/index.html"><span class="nto-num">03</span><span class="nto-label">Lexicon</span><span class="nto-desc">The working vocabulary</span></a><a class="nto-row" style="--i:3" href="links/index.html"><span class="nto-num">04</span><span class="nto-label">Links</span><span class="nto-desc">The reading room</span></a><a class="nto-row" style="--i:4" href="tags/a-closer-look.html"><span class="nto-num">05</span><span class="nto-label">Essays</span><span class="nto-desc">A closer look</span></a><a class="nto-row" style="--i:5" href="tags/worthafortune.html"><span class="nto-num">06</span><span class="nto-label">Newsletters</span><span class="nto-desc">Worth a fortune</span></a><a class="nto-row" style="--i:6" href="podcast.html"><span class="nto-num">07</span><span class="nto-label">Podcast</span><span class="nto-desc">Listen in</span></a><a class="nto-row" style="--i:7" href="metrics.html"><span class="nto-num">08</span><span class="nto-label">Report</span><span class="nto-desc">The corpus, quantified</span></a><a class="nto-row" style="--i:8" href="about/index.html"><span class="nto-num">09</span><span class="nto-label">About</span><span class="nto-desc">Who & why</span></a></nav>
+  <div class="nto-foot">
+    <a class="nto-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe →</a>
+    <div class="nto-foot-meta">
+      <span class="nto-tag">Knowware is measured in lifetimes</span>
+      <span class="nto-elsewhere"><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">Ghost</a> · <a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+</div>
+<script>(function(){
+var root=document.documentElement,ov=document.getElementById('nav-takeover');
+var back=document.querySelector('[data-back]');
+if(back){back.addEventListener('click',function(e){try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}});}
+if(!ov)return;
+var toggles=document.querySelectorAll('[data-nav-toggle]');
+function set(o){root.classList.toggle('nav-open',o);ov.setAttribute('aria-hidden',o?'false':'true');toggles.forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false');});}
+toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();set(!root.classList.contains('nav-open'));});});
+ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
+})();</script>
+<main class="wrap">
+  <section class="block">
+    <div class="rule-head"><h2 class="rule-label">Featured</h2>
+      <span class="rule-meta">17 editor&rsquo;s picks</span></div>
+    <p class="lex-intro">Hand-picked pieces worth your time — the essays, letters, and deep dives we keep coming back to. Newest first.</p>
+    <div class="feat-grid">
+    <a class="feat-card" href="posts/del-icio-us-was-right-we-built-claudacious.html">
+      <div class="feat-fig"><img src="" alt="del.icio.us Was Right. It Was Just Twenty Years Too Early." loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Build Log</div>
+        <h3 class="feat-title">del.icio.us Was Right. It Was Just Twenty Years Too Early.</h3>
+        <p class="feat-dek">In 2003, del.icio.us proved that human curation beats algorithmic ranking. Then Yahoo bought it, the feed arrived, and we forgot.…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam · 18 min read · Jun 23, 2026</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/dear-sam.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2026/02/a-satirical-magazine-cover-illustration-_1gsp2Ya_QWSsWbovUFp0kQ_s7IXiWg6SAm-2OeMv1KvMA_cover_sd.jpeg" alt="Dear Sam," loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Dear ______ Letters</div>
+        <h3 class="feat-title">Dear Sam,</h3>
+        <p class="feat-dek">On vendor-financed delusions, circular capital, the $100 billion retreat nobody wants to name, and what it means that the CFO of…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 25 min read · Feb 24, 2026</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/dear-dario.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2026/01/a-sleek-sophisticated-spy-magazine-cover_qdIsO6siRgiEeTUXmOcnaA_NWkp3nkzSUeW0lHEejWBRg_sd.png" alt="Dear Dario," loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Dear ______ Letters</div>
+        <h3 class="feat-title">Dear Dario,</h3>
+        <p class="feat-dek">You preached AI ethics from your personal blog while selling Anthropic&#x27;s independence to Amazon. Now your &#x27;Constitutional AI&#x27;…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 18 min read · Jan 27, 2026</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/token-the-ultimate-reading-guide.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2026/01/fortune_teller_worth_a_fortune.gif" alt="The Ultimate Reading Guide ✨ 2025" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look</div>
+        <h3 class="feat-title">The Ultimate Reading Guide ✨ 2025</h3>
+        <p class="feat-dek">52 essays: $600B in AI delusions. Lab neurons firing without experience. A confession of what tech analysis erases. In 2025,…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 46 min read · Dec 25, 2025</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-transformative-power-of-generalists-in-a-specialized-world.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/03/generalist-or-specialist-OPT-1.gif" alt="The Transformative Power of Generalists in a Specialized World" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · A Story to Tell</div>
+        <h3 class="feat-title">The Transformative Power of Generalists in a Specialized World</h3>
+        <p class="feat-dek">W10 - Discover a dynamic future of work where generalists thrive alongside specialists, blending adaptability and expertise to…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 23 min read · Mar 17, 2024</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/revolutionizing-education-the-impact-of-artificial-intelligence.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/_img-4tiiLJotHMNtbZQ6Ii4jN-1.png" alt="Revolutionizing Education: When Silicon Meets Chalk" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Technology</div>
+        <h3 class="feat-title">Revolutionizing Education: When Silicon Meets Chalk</h3>
+        <p class="feat-dek">The Impact of Artificial Intelligence 🔮 In the wake of a digital dawn, the chalk-and-blackboard era of our past is ebbing away…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 11 min read · Oct 23, 2023</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/frances-mistral-ai-stepping-into-the-arena-to-challenge-the-giants.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/img-sLCDr8bEke7CXwdvDymeR.jpeg" alt="France’s Mistral AI: Stepping into the Arena" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Technology</div>
+        <h3 class="feat-title">France’s Mistral AI: Stepping into the Arena</h3>
+        <p class="feat-dek">Challenging the Giants 🔮 In an audacious move evidencing the global expansion of AI, France’s Mistral AI has rolled out its debut…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 10 min read · Sep 30, 2023</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/laundered-data.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/launderedData.gif" alt="Unmasking Biases in Pre-Trained Transformers with Laundered Data" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Cyber \ Security</div>
+        <h3 class="feat-title">Unmasking Biases in Pre-Trained Transformers with Laundered Data</h3>
+        <p class="feat-dek">The Dirty Truth: The Biased and Unsettling Low-Functioning Pre-Trained Transformers We’re Building Our Future On 🔮 Have you ever…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 9 min read · Jul 7, 2023</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-path-to-artificial-general-intelligence.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/409086c0-5b22-433b-ab6d-948afa2003b1.jpeg" alt="The Path to Artificial General Intelligence" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · ANI \ AGI \ ASI</div>
+        <h3 class="feat-title">The Path to Artificial General Intelligence</h3>
+        <p class="feat-dek">How Close Are We? 🔮 Artificial General Intelligence (AGI) enables AI systems to learn and understand any intellectual task that a…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 5 min read · May 18, 2023</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-rise-of-algorithms-are-they-taking-over.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/common_pound_cake-algorithm.png" alt="The Rise of Algorithms: Are They Taking Over?" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · A.I. (and Subsets)</div>
+        <h3 class="feat-title">The Rise of Algorithms: Are They Taking Over?</h3>
+        <p class="feat-dek">An Original Recipe for Change 🔮 Algorithms silently guide our daily decisions, influencing and forming the world we live in. From…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 7 min read · May 10, 2023</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-era-of-explainable-ai-in-todays-world.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/img-e0O9lupkei3Day2mzRkVe.png" alt="The Era of Explainable AI In Today&#x27;s World: The Future, The Insights, and The Trust" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · A.I. (and Subsets)</div>
+        <h3 class="feat-title">The Era of Explainable AI In Today&#x27;s World: The Future, The Insights, and The Trust</h3>
+        <p class="feat-dek">As machine learning models become increasingly complex, it has become difficult to understand how these models arrive at their…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 6 min read · Apr 11, 2023</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-rise-of-bitcoin-ordinals-why-they-matter.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/27f714d7-5980-4449-a4b3-cbe1b800cdeb.jpeg" alt="The Rise of Bitcoin Ordinals: Why They Matter" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Bitcoin \ Ordinals</div>
+        <h3 class="feat-title">The Rise of Bitcoin Ordinals: Why They Matter</h3>
+        <p class="feat-dek">The New Buzz in the Bitcoin World, Ordinals and NFTs 🔮 Bitcoin has been a popular cryptocurrency for years. Its volatility is…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 5 min read · Feb 16, 2023</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/linkedin-isnt-good-enough.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/1-rgsszdcnjfdmywkk-xbf8a.gif" alt="LinkedIn, Isn’t Good Enough" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · LinkedIn \ Pros</div>
+        <h3 class="feat-title">LinkedIn, Isn’t Good Enough</h3>
+        <p class="feat-dek">You need a resume and it’s got to be a good one! 🎖 It all started when I got recruited by a big fancy company. You can Google it.…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 5 min read · May 27, 2014</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/you-can-sell-your-time-but-you-can-never-buy-it-back.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0__pxy9UenL0S5vzsu-1.gif" alt="You Can Sell Your Time, But You Can Never Buy It Back" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Lessons Learned</div>
+        <h3 class="feat-title">You Can Sell Your Time, But You Can Never Buy It Back</h3>
+        <p class="feat-dek">Caveat Venditor 🔮 Time is precious. Stupid people are plentiful. The following are some guidelines that have served well over the…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 4 min read · Jun 22, 2013</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-cult-ure-of-innovation.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0__me8BlxtupNuOzrN.gif" alt="The Cult(ure) of Innovation" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Culture Club</div>
+        <h3 class="feat-title">The Cult(ure) of Innovation</h3>
+        <p class="feat-dek">Dive into what the future of advertising is in 2020, where culture breeds innovation and video content reigns supreme. Discover…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 5 min read · May 15, 2013</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-art-of-confidence.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/Victor.gif" alt="The Art of Confidence" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Persuasion</div>
+        <h3 class="feat-title">The Art of Confidence</h3>
+        <p class="feat-dek">The smoothest con man that ever lived. That’s what they say about Victor Lustig pictured above. His claim to fame is that he sold…</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 6 min read · May 12, 2013</div>
+      </div>
+    </a>
+    <a class="feat-card" href="posts/the-five-things-that-will-get-you-nowhere-fast.html">
+      <div class="feat-fig"><img src="https://tokenwisdom.ghost.io/content/images/2024/01/0-jiesh4q9slmjkgra.gif" alt="The Five Things That Will Get You Nowhere Fast" loading="lazy"></div>
+      <div class="feat-body">
+        <div class="feat-kicker">A Closer Look · Personal Growth</div>
+        <h3 class="feat-title">The Five Things That Will Get You Nowhere Fast</h3>
+        <p class="feat-dek">Recommendations on how to conduct oneself when meeting new acquaintances or business folk.</p>
+        <div class="feat-meta">🌶️ @iamkhayyam  · 1 min read · May 6, 2013</div>
+      </div>
+    </a>
+    </div>
+  </section>
+</main>
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+
+    <div class="col-t1">
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://tokenwisdom.ghost.io/subscribe" method="get" onsubmit="window.location.href='https://tokenwisdom.ghost.io/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-links"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="tags/index.html">All Topics</a><a href="lexicon/index.html">The Lexicon</a><a href="tags/a-closer-look.html">Essays</a><a href="tags/worthafortune.html">Newsletters</a><a href="podcast.html">Podcast</a></div>
+      <div class="col-meta"><a href="about/index.html">About</a><a href="links/index.html">Links</a><a href="metrics.html">Corpus Report</a><a href="https://tokenwisdom.ghost.io" target="_blank" rel="noopener">tokenwisdom.ghost.io</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="tags/technology.html">Technology</a><a href="tags/ai.html">A.I. (and Subsets)</a><a href="tags/future-trends.html">Future Trends</a><a href="tags/ethical.html">Ethics \ Principles</a><a href="tags/challenges.html">Challenges</a><a href="tags/strategic.html">Strategic Measures</a><a href="tags/opinionated-editorials.html">🚨 OP-ED</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>268 Posts · 81 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://tokenwisdom.ghost.io/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  function fmt(s){s=Math.floor(s||0);var m=Math.floor(s/60),x=s%60;return m+":"+(x<10?"0":"")+x;}
+  var current=null;
+  document.querySelectorAll('.player').forEach(function(p){
+    var src=p.getAttribute('data-src'), audio=null;
+    var btn=p.querySelector('.pp'), fill=p.querySelector('.pfill'),
+        knob=p.querySelector('.pknob'), track=p.querySelector('.ptrack'),
+        cur=p.querySelector('.pcur');
+    function ensure(){
+      if(audio) return audio;
+      audio=new Audio(src); audio.preload='metadata';
+      audio.addEventListener('timeupdate',function(){
+        var d=audio.duration||0, pct=d?audio.currentTime/d*100:0;
+        fill.style.width=pct+'%'; knob.style.left=pct+'%'; cur.textContent=fmt(audio.currentTime);
+      });
+      audio.addEventListener('ended',function(){p.classList.remove('playing');});
+      return audio;
+    }
+    btn.addEventListener('click',function(){
+      ensure();
+      if(audio.paused){
+        if(current&&current!==audio){current.pause();current.__p.classList.remove('playing');}
+        audio.play(); audio.__p=p; current=audio; p.classList.add('playing');
+      } else { audio.pause(); p.classList.remove('playing'); }
+    });
+    track.addEventListener('click',function(ev){
+      ensure();
+      var r=track.getBoundingClientRect(), pct=(ev.clientX-r.left)/r.width;
+      if(audio.duration) audio.currentTime=Math.max(0,Math.min(1,pct))*audio.duration;
+    });
+  });
+})();
+function edToggle(btn){
+  // one is always open: clicking the open row keeps it open; never all-closed
+  if(btn.getAttribute('aria-expanded')==='true') return;
+  var list=btn.closest('.side-list');
+  list.querySelectorAll('.ed-row').forEach(function(b){b.setAttribute('aria-expanded','false');});
+  list.querySelectorAll('.ed-body').forEach(function(d){d.hidden=true;});
+  btn.setAttribute('aria-expanded','true');
+  btn.nextElementSibling.hidden=false;
+}
+</script>
+
+</body></html>
