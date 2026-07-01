@@ -339,7 +339,8 @@ READING_APPARATUS_CSS = """
 /* ---- Left-edge section markers (wide screens only) ---- */
 @media (min-width:1160px){
   .essay-body .prose{counter-reset:tw-sec}
-  .essay-body .prose h2{position:relative;counter-increment:tw-sec}
+  .essay-body .prose h2,.essay-body .prose h3{counter-increment:tw-sec}
+  .essay-body .prose h2{position:relative}
   .essay-body .prose h2::before{content:counter(tw-sec,decimal-leading-zero);position:absolute;left:-4.25rem;top:.6rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--accent);opacity:.85}
 }
 
@@ -392,12 +393,13 @@ INDEX_SCRIPT = """
     var idx=document.querySelector('[data-essay-index]');
     if(!prose||!idx) return;
     var foot=document.querySelector('.essay-foot');
-    // Only h2 — matches the left-edge section counter so the numbers agree.
-    var heads=[].slice.call(prose.querySelectorAll('h2'));
+    // h2 + h3. The left-edge CSS counter also increments on both, so the
+    // visible h2 number marker matches the bottom panel's global position.
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
     var sections=[{el:prose,name:'Opening',level:1}];
     heads.forEach(function(h,i){
       if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
-      sections.push({el:h,name:(h.textContent||'').trim(),level:1});
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
     });
     var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
     var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');

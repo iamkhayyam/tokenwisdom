@@ -295,11 +295,19 @@ img { max-width: 100%; height: auto; }
 }
 .prose code {
   font-family: var(--mono);
-  font-size: .88em;
-  background: var(--paper-warm);
-  border: 0.5px solid var(--paper-rule);
-  padding: 0.1em 0.35em;
-  border-radius: 2px;
+  font-size: .9em;
+  font-weight: 500;
+  background: rgba(200, 82, 26, 0.085);
+  border: 1px solid rgba(200, 82, 26, 0.22);
+  color: var(--accent-deep);
+  padding: 0.12em 0.42em;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+:root[data-theme="dark"] .prose code {
+  background: rgba(217, 138, 78, 0.13);
+  border-color: rgba(217, 138, 78, 0.32);
+  color: var(--accent-deep);
 }
 .prose pre {
   font-family: var(--mono);
@@ -408,17 +416,17 @@ img { max-width: 100%; height: auto; }
 .essay-col { max-width: 720px; }
 
 /* Theme toggle — fixed pill, top-right */
-/* Inline theme toggle, lives in the post-top-bar alongside the issue code */
-.post-top-bar .ptb-right { margin-left: auto; display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; }
-.post-top-bar .ptb-theme {
+/* Theme toggle — lives inline in the site-top nav, before Subscribe */
+.site-top-theme {
   background: none; border: none; padding: 0; cursor: pointer;
-  display: inline-flex; align-items: baseline; gap: .35em;
-  font-family: var(--mono); font-weight: var(--mono-weight);
-  font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: .45em;
+  font-family: var(--mono); font-weight: 700;
+  font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink-muted); transition: color .15s ease;
+  -webkit-tap-highlight-color: transparent;
 }
-.post-top-bar .ptb-theme:hover { color: var(--accent); }
-.post-top-bar .ptb-theme .tt-glyph { font-size: .9em; line-height: 1; }
+.site-top-theme:hover { color: var(--accent); }
+.site-top-theme .tt-glyph { font-size: 1.05em; line-height: 1; }
 
 /* Cover */
 .essay-cover { margin: 30px 0 0; }
@@ -1793,7 +1801,8 @@ img { max-width: 100%; height: auto; }
 /* ---- Left-edge section markers (wide screens only) ---- */
 @media (min-width:1160px){
   .essay-body .prose{counter-reset:tw-sec}
-  .essay-body .prose h2{position:relative;counter-increment:tw-sec}
+  .essay-body .prose h2,.essay-body .prose h3{counter-increment:tw-sec}
+  .essay-body .prose h2{position:relative}
   .essay-body .prose h2::before{content:counter(tw-sec,decimal-leading-zero);position:absolute;left:-4.25rem;top:.6rem;font-family:var(--mono);font-size:.66rem;letter-spacing:.1em;color:var(--accent);opacity:.85}
 }
 

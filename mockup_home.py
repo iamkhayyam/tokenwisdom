@@ -29,7 +29,8 @@ def img(url, w=1400):
 
 # ---- data ----
 posts, tags, authors, pages = gs.load_data()
-chrono = sorted([p for p in posts if p.get("published_at")], key=lambda p: p["published_at"], reverse=True)
+chrono = sorted([p for p in posts if p.get("published_at") and not gs.is_hidden(p)],
+                key=lambda p: p["published_at"], reverse=True)
 issue_nums = gs.issue_number_map(posts)
 essays = [p for p in chrono if not gs.is_newsletter(p)]
 editions = [p for p in chrono if gs.is_newsletter(p)]
@@ -90,6 +91,8 @@ def _ep_week(ep):
 
 tag_to_posts = {}
 for p in posts:
+    if gs.is_hidden(p):
+        continue
     for t in p.get("tags", []) or []:
         tag_to_posts.setdefault(t["slug"], []).append(p)
 public_tags = [t for t in tags if not (t.get("name", "") or "").startswith("#")
@@ -875,7 +878,7 @@ def _site_colophon():
             {"label": "RSS", "href": f"{gs.GHOST_URL}/rss/"},
         ],
         signoff=" ".join(gs.SITE_SIGN_OFF_LINES),
-        stats=f"{len(posts)} Posts · {len(public_tags)} Tags",
+        stats=f"{len(chrono)} Posts · {len(public_tags)} Tags",
         copyright=f"© {_years} Token Wisdom" if _years else "© Token Wisdom",
         subscribe_url=f"{gs.GHOST_URL}/subscribe",
         handle="@iamkhayyam",

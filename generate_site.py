@@ -34,8 +34,21 @@ SITE_SIGN_OFF_LINES = [
     "stay smart, and kind,",
     "and definitely stay weird!",
 ]
-SITE_URL = "https://iamkhayyam.github.io/tokenwisdom"
+SITE_URL = "https://tokenwisdom.org"
 GHOST_URL = "https://tokenwisdom.ghost.io"
+
+# Posts to hide from every public listing while keeping their URL working. The
+# page still renders at docs/posts/{slug}.html and gets a robots:noindex meta,
+# so it can be shared privately by URL but won't appear in feeds, archives,
+# tag pages, featured picks, RSS, or another post's prev/next nav. Code-level
+# because tag edits in per-post data files get overwritten by Ghost re-sync.
+HIDDEN_POST_SLUGS = {
+    "del-icio-us-was-right-we-built-claudacious",
+}
+
+
+def is_hidden(post):
+    return (post.get("slug") or "") in HIDDEN_POST_SLUGS
 
 # Community layer (highlights / notes / responses) — base URL of our self-hosted
 # API or the Cloudflare Worker that fronts it. Overridable at build time.
@@ -669,11 +682,19 @@ img { max-width: 100%; height: auto; }
 }
 .prose code {
   font-family: var(--mono);
-  font-size: .88em;
-  background: var(--paper-warm);
-  border: 0.5px solid var(--paper-rule);
-  padding: 0.1em 0.35em;
-  border-radius: 2px;
+  font-size: .9em;
+  font-weight: 500;
+  background: rgba(200, 82, 26, 0.085);
+  border: 1px solid rgba(200, 82, 26, 0.22);
+  color: var(--accent-deep);
+  padding: 0.12em 0.42em;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+:root[data-theme="dark"] .prose code {
+  background: rgba(217, 138, 78, 0.13);
+  border-color: rgba(217, 138, 78, 0.32);
+  color: var(--accent-deep);
 }
 .prose pre {
   font-family: var(--mono);
@@ -782,17 +803,17 @@ img { max-width: 100%; height: auto; }
 .essay-col { max-width: 720px; }
 
 /* Theme toggle — fixed pill, top-right */
-/* Inline theme toggle, lives in the post-top-bar alongside the issue code */
-.post-top-bar .ptb-right { margin-left: auto; display: flex; align-items: baseline; gap: 1.2rem; flex-wrap: wrap; }
-.post-top-bar .ptb-theme {
+/* Theme toggle — lives inline in the site-top nav, before Subscribe */
+.site-top-theme {
   background: none; border: none; padding: 0; cursor: pointer;
-  display: inline-flex; align-items: baseline; gap: .35em;
-  font-family: var(--mono); font-weight: var(--mono-weight);
-  font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+  display: inline-flex; align-items: center; gap: .45em;
+  font-family: var(--mono); font-weight: 700;
+  font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
   color: var(--ink-muted); transition: color .15s ease;
+  -webkit-tap-highlight-color: transparent;
 }
-.post-top-bar .ptb-theme:hover { color: var(--accent); }
-.post-top-bar .ptb-theme .tt-glyph { font-size: .9em; line-height: 1; }
+.site-top-theme:hover { color: var(--accent); }
+.site-top-theme .tt-glyph { font-size: 1.05em; line-height: 1; }
 
 /* Cover */
 .essay-cover { margin: 30px 0 0; }
@@ -2161,7 +2182,8 @@ img { max-width: 100%; height: auto; }
 # FRAGMENT BUILDERS
 # ============================================================
 
-def head_tag(title, favicon_path="assets/crystal-ball.svg"):
+def head_tag(title, prefix="", noindex=False, description=None, og_url=None):
+    from tw_theme import meta_head
     fonts = (
         "https://fonts.googleapis.com/css2?"
         "family=Libre+Caslon+Display&"
@@ -2169,14 +2191,14 @@ def head_tag(title, favicon_path="assets/crystal-ball.svg"):
         "family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&"
         "family=DM+Mono:wght@300;400;500&display=swap"
     )
+    robots = '\n<meta name="robots" content="noindex, nofollow">' if noindex else ""
     return f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)} — {SITE_NAME}</title>
-<meta name="description" content="{esc(SITE_TAGLINE)}">
-<link rel="icon" type="image/svg+xml" href="{favicon_path}">
+{meta_head(title, description=description, prefix=prefix, url=og_url)}{robots}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{fonts}" rel="stylesheet">
@@ -2186,7 +2208,7 @@ def head_tag(title, favicon_path="assets/crystal-ball.svg"):
 """
 
 
-def site_top(from_dir="root"):
+def site_top(from_dir="root", theme_toggle=False):
     from tw_theme import NAV, nav_overlay
     prefix = "" if from_dir == "root" else "../"
     orb = f'<img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb">'
@@ -2194,13 +2216,18 @@ def site_top(from_dir="root"):
         f'<a href="{prefix}{href}">{label}</a>'
         for _, label, href in NAV
     )
+    theme_btn = ('<button class="site-top-theme" data-theme-toggle type="button"'
+                 ' onclick="window.__twToggleTheme()" aria-label="Toggle theme">'
+                 '<span class="tt-glyph">☼</span><span class="tt-label">Light</span></button>'
+                 ) if theme_toggle else ""
     return f"""
 <header class="site-top">
   <div class="site-top-inner">
-    <a href="{prefix}index.html" class="site-top-mark" aria-label="Token Wisdom — home">{orb}</a>
     <a class="site-top-back" href="{prefix}index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <a href="{prefix}index.html" class="site-top-mark" aria-label="Token Wisdom — home">{orb}</a>
     <nav class="site-top-nav" id="site-nav">
       {nav_links}
+      {theme_btn}
       <a class="site-top-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
     </nav>
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
@@ -2253,10 +2280,12 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
     return foot + "\n</body>\n</html>\n"
 
 
-def page_shell(title, body, css_path, from_dir="root"):
-    favicon = "assets/crystal-ball.svg" if from_dir == "root" else "../assets/crystal-ball.svg"
-    head = head_tag(title, favicon_path=favicon).format(css_path=css_path)
-    return head + site_top(from_dir) + body
+def page_shell(title, body, css_path, from_dir="root", theme_toggle=False, noindex=False,
+               description=None, og_url=None):
+    prefix = "" if from_dir == "root" else "../"
+    head = head_tag(title, prefix=prefix, noindex=noindex, description=description,
+                    og_url=og_url).format(css_path=css_path)
+    return head + site_top(from_dir, theme_toggle=theme_toggle) + body
 
 
 # ============================================================
@@ -2264,18 +2293,13 @@ def page_shell(title, body, css_path, from_dir="root"):
 # ============================================================
 
 def render_post_top_bar(post, issue_num):
-    """Top-bar masthead strip: 'Token Wisdom · by @iamkhayyam'  |  'ACL.164 · W14 · Mar 26, 2026  ·  ☾ Light'"""
+    """Top-bar masthead strip: 'Token Wisdom · by @iamkhayyam'  |  'ACL.164 · W14 · Mar 26, 2026'"""
     issue = issue_code_string(post, issue_num)
     code, label = section_code(post)
     return f"""
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
-  <span class="ptb-right">
-    <span class="ptb-issue"><span class="ptb-num">{esc(issue)}</span></span>
-    <button class="ptb-theme" type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme">
-      <span class="tt-glyph">☼</span><span class="tt-label">Light</span>
-    </button>
-  </span>
+  <span class="ptb-issue"><span class="ptb-num">{esc(issue)}</span></span>
 </div>
 """
 
@@ -2336,7 +2360,7 @@ ESSAY_THEME_SCRIPT = """
   };
   function sync(){
     var dk=document.documentElement.getAttribute('data-theme')==='dark';
-    var b=document.querySelector('.ptb-theme');
+    var b=document.querySelector('[data-theme-toggle]');
     if(b){b.querySelector('.tt-glyph').textContent=dk?'\\u263c':'\\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
   }
   document.addEventListener('DOMContentLoaded',sync);
@@ -2499,7 +2523,9 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
 </nav>
 {INDEX_MARKUP}{INDEX_SCRIPT}
 """
-    page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub")
+    page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", theme_toggle=True, noindex=is_hidden(post),
+                      description=post.get("custom_excerpt") or post.get("excerpt") or None,
+                      og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
     page = page.replace("</body>", community_assets() + "\n</body>", 1)
     return page
@@ -2572,7 +2598,9 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
   {nav_next}
 </nav>
 """
-    page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub")
+    page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", noindex=is_hidden(post),
+                      description=post.get("custom_excerpt") or post.get("excerpt") or None,
+                      og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
     page = page.replace("</body>", community_assets() + "\n</body>", 1)
     return page
@@ -3876,11 +3904,17 @@ def main():
     print("=" * 60)
 
     posts, tags, authors, pages = load_data()
-    print(f"Loaded: {len(posts)} posts, {len(tags)} tags, {len(authors)} authors")
+    hidden = [p for p in posts if is_hidden(p)]
+    print(f"Loaded: {len(posts)} posts, {len(tags)} tags, {len(authors)} authors"
+          + (f"  ·  {len(hidden)} hidden (URL-only)" if hidden else ""))
 
-    # Build relationships
+    # `posts` stays whole — we still render every page. `listable` is the
+    # subset used for all public listings and cross-references.
+    listable = [p for p in posts if not is_hidden(p)]
+
+    # Build relationships from listable posts only.
     tag_to_posts = defaultdict(list)
-    for post in posts:
+    for post in listable:
         for t in post.get("tags", []) or []:
             tag_to_posts[t["slug"]].append(post)
 
@@ -3889,12 +3923,14 @@ def main():
     top_tags = sorted(public_tags, key=lambda t: len(tag_to_posts.get(t["slug"], [])), reverse=True)
 
     # Year span
-    years = [p["published_at"][:4] for p in posts if p.get("published_at")]
+    years = [p["published_at"][:4] for p in listable if p.get("published_at")]
     years_span = f"{min(years)}–{max(years)}" if years else ""
 
-    # Sort posts chronologically for prev/next navigation
+    # Sort listable posts chronologically for prev/next navigation. Hidden
+    # posts aren't in this list, so they won't appear as any post's neighbor
+    # (and hidden posts themselves get no prev/next).
     chrono = sorted(
-        [p for p in posts if p.get("published_at")],
+        [p for p in listable if p.get("published_at")],
         key=lambda p: p["published_at"],
     )
     index_of = {p["slug"]: i for i, p in enumerate(chrono)}
@@ -3929,18 +3965,18 @@ def main():
     with open(DOCS_DIR / "style.css", "w") as f:
         f.write(CSS + READING_APPARATUS_CSS + COLOPHON_CSS + tw_theme.OVERLAY_CSS)
 
-    posts_count = len(posts)
+    posts_count = len(listable)
     tags_count = len(public_tags)
 
-    # Homepage
+    # Homepage (all listings feed off `listable` — hidden posts never surface)
     print("Homepage…")
     with open(DOCS_DIR / "index.html", "w") as f:
-        f.write(render_homepage(posts, tags_by_slug, tag_to_posts, top_tags, years_span))
+        f.write(render_homepage(listable, tags_by_slug, tag_to_posts, top_tags, years_span))
 
     # Archive
     print("Archive…")
     with open(DOCS_DIR / "archive.html", "w") as f:
-        f.write(render_archive(posts, posts_count, tags_count, years_span, top_tags))
+        f.write(render_archive(listable, posts_count, tags_count, years_span, top_tags))
 
     # Podcast
     print("Podcast…")
@@ -3949,7 +3985,7 @@ def main():
     if channel:
         print(f"  {len(episodes)} episodes")
         with open(DOCS_DIR / "podcast.html", "w") as f:
-            f.write(render_podcast_page(channel, episodes, posts, posts_count, tags_count, years_span, top_tags))
+            f.write(render_podcast_page(channel, episodes, listable, posts_count, tags_count, years_span, top_tags))
     else:
         print("  [WARN] Podcast page skipped (feed unavailable)")
 

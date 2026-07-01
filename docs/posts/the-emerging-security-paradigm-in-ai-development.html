@@ -15,8 +15,8 @@
 
 <header class="site-top">
   <div class="site-top-inner">
-    <a href="../index.html" class="site-top-mark" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
     <a class="site-top-back" href="../index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <a href="../index.html" class="site-top-mark" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
     <nav class="site-top-nav" id="site-nav">
       <a href="../archive.html">Archive</a>
       <a href="../tags/index.html">Topics</a>
@@ -27,6 +27,7 @@
       <a href="../podcast.html">Podcast</a>
       <a href="../metrics.html">Report</a>
       <a href="../about/index.html">About</a>
+      <button class="site-top-theme" data-theme-toggle type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme"><span class="tt-glyph">☼</span><span class="tt-label">Light</span></button>
       <a class="site-top-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
     </nav>
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
@@ -83,7 +84,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   };
   function sync(){
     var dk=document.documentElement.getAttribute('data-theme')==='dark';
-    var b=document.querySelector('.ptb-theme');
+    var b=document.querySelector('[data-theme-toggle]');
     if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
   }
   document.addEventListener('DOMContentLoaded',sync);
@@ -92,12 +93,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 
 <div class="post-top-bar">
   <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
-  <span class="ptb-right">
-    <span class="ptb-issue"><span class="ptb-num">ACL.106 · W12 · Mar 21, 2025</span></span>
-    <button class="ptb-theme" type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme">
-      <span class="tt-glyph">☼</span><span class="tt-label">Light</span>
-    </button>
-  </span>
+  <span class="ptb-issue"><span class="ptb-num">ACL.106 · W12 · Mar 21, 2025</span></span>
 </div>
 
 <article class="essay-frame">
@@ -167,12 +163,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     var idx=document.querySelector('[data-essay-index]');
     if(!prose||!idx) return;
     var foot=document.querySelector('.essay-foot');
-    // Only h2 — matches the left-edge section counter so the numbers agree.
-    var heads=[].slice.call(prose.querySelectorAll('h2'));
+    // h2 + h3. The left-edge CSS counter also increments on both, so the
+    // visible h2 number marker matches the bottom panel's global position.
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
     var sections=[{el:prose,name:'Opening',level:1}];
     heads.forEach(function(h,i){
       if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
-      sections.push({el:h,name:(h.textContent||'').trim(),level:1});
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
     });
     var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
     var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
@@ -246,7 +243,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <div class="col-bar">
         <div class="col-bar-l">
           <span class="col-strong">© 2013–2026 Token Wisdom</span>
-          <span class="col-dot"></span><span>268 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
           <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
         </div>
         <div class="col-bar-r">

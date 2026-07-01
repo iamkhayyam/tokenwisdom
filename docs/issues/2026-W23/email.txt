@@ -1,6 +1,6 @@
 TOKEN WISDOM
 The Newsletter of Record for the Future of Now
-No. 153 · Week 23 of 52 · June 16, 2026
+2026-W23 · Week 23 of 52 · June 30, 2026
 
 ────────────────────────────────────────────────────────────
 
@@ -21,7 +21,7 @@ building what the export-control map said was impossible. The market
 priced the mood. The lab kept working.
 
 Listen — NotebookLM reads this edition:
-https://tokenwisdom.org/issues/153
+https://tokenwisdom.org/issues/2026-W23
 
 ════════════════════════════════════════════════════════════
 NEWEST / LATEST — 10 Dispatches
@@ -91,16 +91,16 @@ A CLOSER LOOK
 
 ESSAY · INFRASTRUCTURE
 
-The Sky Has Been Warning Us Since 1859
+del.icio.us Was Right. It Was Just Twenty Years Too Early.
 
 "We didn't build a civilization since 1859. We built an antenna."
 
-W13 - The sun fired a warning shot in 1859. We had 165 years. We wrote
-reports, introduced legislation, held hearings — and kept building a
-bigger antenna. The solution to the oldest infrastructure problem in the
-modern world exists. It just isn't where anyone thought to look.
+In 2003, del.icio.us proved that human curation beats algorithmic
+ranking. Then Yahoo bought it, the feed arrived, and we forgot. We
+didn't forget. We built Claudacious—social bookmarking with a real
+Claude reading every link you save. Here's everything that went into it.
 
-Read the essay → https://tokenwisdom.org/posts/the-sky-has-been-warning-us-since-1859.html
+Read the essay → https://tokenwisdom.org/posts/del-icio-us-was-right-we-built-claudacious.html
 
 ════════════════════════════════════════════════════════════
 TIME WELL SPENT — 10 to Watch
@@ -193,6 +193,10 @@ TECHNICAL TERMS
   Consciousness
     Subjective experience of awareness
 
+  Technology
+    The applied tools, systems, and infrastructure through which
+    scientific knowledge is put to practical use.
+
 ACRONYMS
 
   AI
@@ -226,6 +230,6 @@ Knowware is measured in lifetimes.
 By @iamkhayyam · ARC Institute of Knowware
 This edition was curated by a human.
 
-Read online: https://tokenwisdom.org/issues/153
+Read online: https://tokenwisdom.org/issues/2026-W23
 Subscribe:   https://tokenwisdom.ghost.io/subscribe
 Unsubscribe: {{{unsubscribe_url}}}
