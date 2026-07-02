@@ -23,12 +23,18 @@ e = gs.esc
 
 
 def img(url, w=1400):
-    """Use the feature_image URL as-is (Ghost storage CDN resolves publicly)."""
-    return url or ""
+    """Localize Ghost-hosted image URLs to local content/images/ paths."""
+    return gs.localize_url(url) or url or ""
 
 
 # ---- data ----
 posts, tags, authors, pages = gs.load_data()
+for _p in posts:
+    if _p.get("feature_image"):
+        _p["feature_image"] = gs.localize_url(_p["feature_image"]) or _p["feature_image"]
+for _t in tags:
+    if _t.get("feature_image"):
+        _t["feature_image"] = gs.localize_url(_t["feature_image"]) or _t["feature_image"]
 chrono = sorted([p for p in posts if p.get("published_at") and not gs.is_hidden(p)],
                 key=lambda p: p["published_at"], reverse=True)
 issue_nums = gs.issue_number_map(posts)
@@ -868,7 +874,7 @@ def _site_colophon():
             {"label": "About", "href": "about/index.html"},
             {"label": "Links", "href": "links/index.html"},
             {"label": "Corpus Report", "href": "metrics.html"},
-            {"label": "tokenwisdom.ghost.io", "href": gs.GHOST_URL, "external": True},
+            {"label": "Ghost CMS", "href": gs.GHOST_URL, "external": True},
             {"label": "GitHub Archive", "href": "https://github.com/iamkhayyam/tokenwisdom", "external": True},
         ],
         tags=[{"name": t["name"], "href": f'tags/{t["slug"]}.html'} for t in top_tags[:7]],
@@ -887,10 +893,12 @@ def _site_colophon():
 
 def _doc(title, body):
     """Wrap body markup in the shared homepage shell (head + fonts + CSS)."""
+    bare_title = title.split(" — ")[0] if " — " in title else title
     return f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{e(title)}</title>
+{tw_theme.meta_head(bare_title, url=tw_theme.SITE_ORIGIN + "/")}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">

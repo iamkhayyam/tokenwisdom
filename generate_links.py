@@ -230,8 +230,9 @@ def build():
 </div>
 {TOGGLE_JS}"""
 
+    import generate_site as gs
     html = page("The Stack — Reading Room", body, prefix="../", active="links")
-    (out_dir / "index.html").write_text(html)
+    (out_dir / "index.html").write_text(gs.localize_images(html, prefix="../"))
     print(f"Wrote {out_dir / 'index.html'}")
     return db
 

@@ -26,6 +26,7 @@ from essay_template import (sanitize_body, mark_lede, demo_margin_notes,
 BACKUP_DIR = Path(__file__).parent
 DATA_DIR = BACKUP_DIR / "data"
 DOCS_DIR = BACKUP_DIR / "docs"
+IMAGES_DIR = BACKUP_DIR / "images" / "posts"
 
 SITE_NAME = "Token Wisdom"
 SITE_TAGLINE = "The Newsletter of Record for the Future of Now"
@@ -35,7 +36,7 @@ SITE_SIGN_OFF_LINES = [
     "and definitely stay weird!",
 ]
 SITE_URL = "https://tokenwisdom.org"
-GHOST_URL = "https://tokenwisdom.ghost.io"
+GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-47fd.up.railway.app")
 
 # Posts to hide from every public listing while keeping their URL working. The
 # page still renders at docs/posts/{slug}.html and gets a robots:noindex meta,
@@ -49,6 +50,76 @@ HIDDEN_POST_SLUGS = {
 
 def is_hidden(post):
     return (post.get("slug") or "") in HIDDEN_POST_SLUGS
+
+
+# ---------------------------------------------------------------------------
+# Image localization — rewrite tokenwisdom.ghost.io URLs to local paths
+# ---------------------------------------------------------------------------
+_IMAGE_MAP = None
+_GHOST_IMAGE_RE = re.compile(r'https://tokenwisdom\.ghost\.io/content/images/[^\s"\'<>)]+')
+_GHOST_SIZE_RE = re.compile(r'/content/images/(?:size/[^/]+/)*(?:icon|thumbnail)/(.+)')
+_GHOST_SIZE_STRIP = re.compile(r'/content/images/(?:size/[^/]+/)+')
+_GHOST_ANY_RE = re.compile(r'https://tokenwisdom\.ghost\.io/(?!content/images/)[^\s"\'<>)]+')
+
+def _load_image_map():
+    global _IMAGE_MAP
+    if _IMAGE_MAP is not None:
+        return _IMAGE_MAP
+    map_file = DATA_DIR / "post_image_map.json"
+    if map_file.exists():
+        _IMAGE_MAP = json.loads(map_file.read_text())
+    else:
+        _IMAGE_MAP = {}
+    return _IMAGE_MAP
+
+
+def localize_images(html, prefix="../"):
+    """Rewrite Ghost-hosted image URLs to local content/images/ paths."""
+    img_map = _load_image_map()
+    if not img_map:
+        return html
+    def _replace(m):
+        url = m.group(0)
+        local = img_map.get(url)
+        if local:
+            return f"{prefix}content/images/{local}"
+        # Ghost srcset variants: /content/images/size/wNNN/ → strip to canonical
+        canonical = _GHOST_SIZE_STRIP.sub("/content/images/", url)
+        if canonical != url:
+            local = img_map.get(canonical)
+            if local:
+                return f"{prefix}content/images/{local}"
+        return url
+    html = _GHOST_IMAGE_RE.sub(_replace, html)
+    # Rewrite any remaining Ghost Pro domain references to self-hosted
+    html = html.replace("https://tokenwisdom.ghost.io", GHOST_URL)
+    return html
+
+
+def localize_url(url):
+    """Rewrite a single Ghost image URL (e.g. feature_image) to local path."""
+    if not url:
+        return url
+    img_map = _load_image_map()
+    local = img_map.get(url)
+    if local:
+        return f"../content/images/{local}"
+    return url
+
+
+def copy_local_images():
+    """Copy backed-up images from images/posts/ to docs/content/images/."""
+    dest = DOCS_DIR / "content" / "images"
+    dest.mkdir(parents=True, exist_ok=True)
+    img_map = _load_image_map()
+    copied = 0
+    for ghost_url, local_name in img_map.items():
+        src = IMAGES_DIR / local_name
+        if src.exists():
+            shutil.copy2(src, dest / local_name)
+            copied += 1
+    return copied
+
 
 # Community layer (highlights / notes / responses) — base URL of our self-hosted
 # API or the Cloudflare Worker that fronts it. Overridable at build time.
@@ -2182,6 +2253,12 @@ img { max-width: 100%; height: auto; }
 # FRAGMENT BUILDERS
 # ============================================================
 
+def _prefix(from_dir):
+    """Relative path back to site root. 'abs' → root-absolute links, for pages
+    served at arbitrary depths (the 404 page)."""
+    return {"root": "", "sub": "../", "abs": "/"}.get(from_dir, "../")
+
+
 def head_tag(title, prefix="", noindex=False, description=None, og_url=None):
     from tw_theme import meta_head
     fonts = (
@@ -2210,7 +2287,7 @@ def head_tag(title, prefix="", noindex=False, description=None, og_url=None):
 
 def site_top(from_dir="root", theme_toggle=False):
     from tw_theme import NAV, nav_overlay
-    prefix = "" if from_dir == "root" else "../"
+    prefix = _prefix(from_dir)
     orb = f'<img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb">'
     nav_links = "\n      ".join(
         f'<a href="{prefix}{href}">{label}</a>'
@@ -2228,7 +2305,7 @@ def site_top(from_dir="root", theme_toggle=False):
     <nav class="site-top-nav" id="site-nav">
       {nav_links}
       {theme_btn}
-      <a class="site-top-sub" href="https://tokenwisdom.ghost.io/subscribe">Subscribe</a>
+      <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
     </nav>
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
       <span class="ham"><span></span><span></span><span></span></span>
@@ -2244,7 +2321,7 @@ def site_top(from_dir="root", theme_toggle=False):
 def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
     """The dark site colophon (shared renderer in essay_template), fed real
     nav, tags, counts, and socials. Closes the document."""
-    prefix = "" if from_dir == "root" else "../"
+    prefix = _prefix(from_dir)
     primary = [
         {"label": "Home", "href": f"{prefix}index.html"},
         {"label": "Archive", "href": f"{prefix}archive.html"},
@@ -2258,7 +2335,7 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
         {"label": "About", "href": f"{prefix}about/index.html"},
         {"label": "Links", "href": f"{prefix}links/index.html"},
         {"label": "Corpus Report", "href": f"{prefix}metrics.html"},
-        {"label": "tokenwisdom.ghost.io", "href": GHOST_URL, "external": True},
+        {"label": "Ghost CMS", "href": GHOST_URL, "external": True},
         {"label": "GitHub Archive", "href": "https://github.com/iamkhayyam/tokenwisdom", "external": True},
     ]
     tags = [{"name": t["name"], "href": f'{prefix}tags/{t["slug"]}.html'} for t in top_tags[:7]]
@@ -2282,10 +2359,59 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
 
 def page_shell(title, body, css_path, from_dir="root", theme_toggle=False, noindex=False,
                description=None, og_url=None):
-    prefix = "" if from_dir == "root" else "../"
-    head = head_tag(title, prefix=prefix, noindex=noindex, description=description,
+    head = head_tag(title, prefix=_prefix(from_dir), noindex=noindex, description=description,
                     og_url=og_url).format(css_path=css_path)
     return head + site_top(from_dir, theme_toggle=theme_toggle) + body
+
+
+# ============================================================
+# 404
+# ============================================================
+
+def render_404(posts_count, tags_count, years_span, top_tags):
+    """docs/404.html — Cloudflare Pages serves it for every missing route, at
+    any path depth, so all links/assets are root-absolute (from_dir='abs')."""
+    body = f"""
+<style>
+.nf-wrap {{ max-width: 680px; margin: 0 auto; padding: 5.5rem 28px 7rem; text-align: center; }}
+.nf-orb {{ width: 168px; margin: 0 auto 2.6rem; }}
+.nf-orb img {{ width: 100%; height: auto; }}
+.nf-kicker {{ font-family: var(--mono); font-size: .7rem; letter-spacing: .22em;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 1.1rem; }}
+.nf-title {{ font-family: var(--display, 'Libre Caslon Display', Georgia, serif); font-weight: 400;
+  font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: .95; letter-spacing: -.02em;
+  color: var(--ink); margin: 0 0 1.4rem; border: none; padding: 0; }}
+.nf-dek {{ font-family: var(--serif, 'Source Serif 4', Georgia, serif); font-size: 1.15rem;
+  line-height: 1.6; color: var(--ink-muted); max-width: 46ch; margin: 0 auto 1.1rem; }}
+.nf-path {{ font-family: var(--mono); font-size: .82rem; color: var(--ink-faint);
+  word-break: break-all; margin-bottom: 2.6rem; }}
+.nf-links {{ display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;
+  border-top: 0.5px solid var(--paper-rule); padding-top: 2rem; }}
+.nf-links a {{ font-family: var(--mono); font-size: .72rem; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink); border: 0.5px solid var(--paper-rule);
+  padding: .65rem 1.1rem; transition: all .15s ease; }}
+.nf-links a:hover {{ color: var(--accent); border-color: var(--accent); }}
+</style>
+<main class="nf-wrap">
+  <div class="nf-orb"><img src="/assets/crystal-ball.svg" alt="The Token Wisdom crystal ball"></div>
+  <div class="nf-kicker">Error 404 · Nothing Foretold Here</div>
+  <h1 class="nf-title">The ball has gone cloudy.</h1>
+  <p class="nf-dek">Whatever you were looking for isn&rsquo;t in the cards &mdash;
+  moved, renamed, or never written. The archive, however, sees all.</p>
+  <div class="nf-path" data-nf-path></div>
+  <nav class="nf-links">
+    <a href="/index.html">Front Page</a>
+    <a href="/archive.html">The Archive</a>
+    <a href="/lexicon/index.html">The Lexicon</a>
+    <a href="/tags/index.html">All Topics</a>
+  </nav>
+</main>
+<script>(function(){{var p=document.querySelector('[data-nf-path]');
+if(p&&location.pathname&&location.pathname!=='/404.html')p.textContent=location.pathname;}})();</script>
+"""
+    page = page_shell("Page Not Found", body, "/style.css", from_dir="abs", noindex=True)
+    page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="abs")
+    return page
 
 
 # ============================================================
@@ -3904,9 +4030,24 @@ def main():
     print("=" * 60)
 
     posts, tags, authors, pages = load_data()
+
+    # Localize feature_image URLs from Ghost Pro to local paths
+    img_map = _load_image_map()
+    localized_imgs = 0
+    for p in posts:
+        fi = p.get("feature_image")
+        if fi and fi in img_map:
+            p["feature_image"] = f"../content/images/{img_map[fi]}"
+            localized_imgs += 1
+    for t in tags:
+        fi = t.get("feature_image")
+        if fi and fi in img_map:
+            t["feature_image"] = f"../content/images/{img_map[fi]}"
+
     hidden = [p for p in posts if is_hidden(p)]
     print(f"Loaded: {len(posts)} posts, {len(tags)} tags, {len(authors)} authors"
           + (f"  ·  {len(hidden)} hidden (URL-only)" if hidden else ""))
+    print(f"  Image localization: {localized_imgs}/{len(posts)} feature images, {len(img_map)} total mappings")
 
     # `posts` stays whole — we still render every page. `listable` is the
     # subset used for all public listings and cross-references.
@@ -3985,9 +4126,14 @@ def main():
     if channel:
         print(f"  {len(episodes)} episodes")
         with open(DOCS_DIR / "podcast.html", "w") as f:
-            f.write(render_podcast_page(channel, episodes, listable, posts_count, tags_count, years_span, top_tags))
+            f.write(localize_images(render_podcast_page(channel, episodes, listable, posts_count, tags_count, years_span, top_tags)))
     else:
         print("  [WARN] Podcast page skipped (feed unavailable)")
+
+    # Copy backed-up images to docs/content/images/
+    print("Localizing images…")
+    n_copied = copy_local_images()
+    print(f"  {n_copied} images copied to docs/content/images/")
 
     # Post pages
     nl_count = 0
@@ -4003,6 +4149,7 @@ def main():
         else:
             html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num, issue_ref=essay_issue_map.get(slug))
             essay_count += 1
+        html_out = localize_images(html_out)
         with open(DOCS_DIR / "posts" / f"{slug}.html", "w") as f:
             f.write(html_out)
         if (i + 1) % 50 == 0:
@@ -4060,10 +4207,30 @@ def main():
     print("Homepage (v2)…")
     assets_dir = DOCS_DIR / "assets"
     assets_dir.mkdir(exist_ok=True)
-    for asset in ("crystal-ball.svg", "fortune_teller.gif"):
+    for asset in ("crystal-ball.svg", "fortune_teller.gif", "favicon.svg",
+                  "apple-touch-icon.png", "icon-192.png", "icon-512.png"):
         src_asset = BACKUP_DIR / "images" / asset
         if src_asset.exists():
             shutil.copy(src_asset, assets_dir / asset)
+    # Brand rasters (favicon.ico, og:image) — rendered by make_brand_assets.py,
+    # sources live in images/ so they survive the docs/ wipe.
+    ico_src = BACKUP_DIR / "images" / "favicon.ico"
+    if ico_src.exists():
+        shutil.copy(ico_src, DOCS_DIR / "favicon.ico")
+    og_src = BACKUP_DIR / "images" / "social" / "og-default.png"
+    if og_src.exists():
+        shutil.copy(og_src, assets_dir / "og-default.png")
+    with open(DOCS_DIR / "site.webmanifest", "w") as f:
+        json.dump({
+            "name": SITE_NAME, "short_name": SITE_NAME,
+            "description": SITE_TAGLINE,
+            "start_url": "/", "display": "standalone",
+            "background_color": "#15130e", "theme_color": "#15130e",
+            "icons": [
+                {"src": "/assets/icon-192.png", "sizes": "192x192", "type": "image/png"},
+                {"src": "/assets/icon-512.png", "sizes": "512x512", "type": "image/png"},
+            ],
+        }, f, indent=2)
     # Community layer client (highlights / notes / responses) — source lives in
     # assets/ (outside docs/, which is wiped on every build).
     for asset in ("annotate.js", "annotate.css"):
@@ -4078,6 +4245,11 @@ def main():
     import mockup_home
     mockup_home.build("index.html")
     mockup_home.build_featured("featured.html")
+
+    # 404 — Cloudflare Pages picks up docs/404.html for every missing route
+    print("404 page…")
+    with open(DOCS_DIR / "404.html", "w") as f:
+        f.write(render_404(posts_count, tags_count, years_span, top_tags))
 
     # .nojekyll
     with open(DOCS_DIR / ".nojekyll", "w") as f:

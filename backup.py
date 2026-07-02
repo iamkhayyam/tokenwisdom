@@ -17,9 +17,9 @@ from pathlib import Path
 from collections import defaultdict
 from datetime import datetime
 
-# Configuration
-GHOST_URL = "https://tokenwisdom.ghost.io"
-API_KEY = "4694c7c6437b467d3382d6ef6a"
+# Configuration — defaults to self-hosted Ghost on Railway; override with env vars.
+GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-47fd.up.railway.app")
+API_KEY = os.environ.get("GHOST_CONTENT_KEY", "10928acdf25a435441f12d6e78")
 API_BASE = f"{GHOST_URL}/ghost/api/content"
 BACKUP_DIR = Path(__file__).parent
 

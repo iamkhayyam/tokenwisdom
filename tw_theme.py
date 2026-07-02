@@ -1,6 +1,41 @@
 """Shared Token Wisdom theme (leaf module, no project deps).
 BASE_CSS + LEX_CSS + prefix-aware masthead/footer/page. Generated from
 mockup_home.py + mockup_lexicon.py; edit those then re-extract if needed."""
+import os
+
+SITE_ORIGIN = "https://tokenwisdom.org"
+SITE_DESCRIPTION = "The Newsletter of Record for the Future of Now. 100% humanly chosen since 2013."
+OG_DEFAULT_IMAGE = f"{SITE_ORIGIN}/assets/og-default.png"
+X_HANDLE = "@worthafortune"
+
+
+def meta_head(title, description=None, prefix="", url=None, image=None, og_type="website"):
+    """Favicon set + description + OG/Twitter cards, shared by every head
+    generator (head_tag / page / mockup_home). `title` is the bare page title
+    (no '— Token Wisdom' suffix); `prefix` is the page's relative path back to
+    site root ('' | '../' | '/'), used for icon links. og/twitter image and
+    url are always absolute. Asset set is rendered by make_brand_assets.py."""
+    import html as _h
+    e = lambda s: _h.escape(str(s), quote=True)
+    desc = description or SITE_DESCRIPTION
+    img = image or OG_DEFAULT_IMAGE
+    url_tag = f'\n<meta property="og:url" content="{e(url)}">' if url else ""
+    return f"""<meta name="description" content="{e(desc)}">
+<link rel="icon" href="{prefix}favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="{prefix}assets/favicon.svg">
+<link rel="apple-touch-icon" href="{prefix}assets/apple-touch-icon.png">
+<link rel="manifest" href="{prefix}site.webmanifest">
+<meta property="og:site_name" content="Token Wisdom">
+<meta property="og:type" content="{e(og_type)}">
+<meta property="og:title" content="{e(title)}">
+<meta property="og:description" content="{e(desc)}">
+<meta property="og:image" content="{e(img)}">{url_tag}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="{X_HANDLE}">
+<meta name="twitter:title" content="{e(title)}">
+<meta name="twitter:description" content="{e(desc)}">
+<meta name="twitter:image" content="{e(img)}">"""
+
 
 BASE_CSS = r'''
 /* FauxCRA — brand faces, matching the other pages (depth-1 pages → ../assets) */
@@ -361,7 +396,7 @@ SEARCH_JS = r'''
 '''
 
 
-GHOST_URL = "https://tokenwisdom.ghost.io"
+GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-47fd.up.railway.app")
 
 NAV = [
     ("archive",     "Archive",     "archive.html"),
@@ -528,16 +563,19 @@ def footer(prefix=""):
 </footer>"""
 
 
-def page(title, body, prefix="", lex=False, active="", extra_js=""):
+def page(title, body, prefix="", lex=False, active="", extra_js="",
+         description=None, og_url=None, og_image=None):
     import html as _h
     css = BASE_CSS + OVERLAY_CSS + (LEX_CSS + TERM_CSS if lex else "")
     fonts = ("https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900"
              "&family=Libre+Caslon+Display&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400"
              "&family=DM+Mono:wght@300;400;500&display=swap")
+    bare_title = title.split(" — ")[0] if " — " in title else title
     return f"""<!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{_h.escape(title)}</title>
+{meta_head(bare_title, description=description, prefix=prefix, url=og_url, image=og_image)}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{fonts}" rel="stylesheet">

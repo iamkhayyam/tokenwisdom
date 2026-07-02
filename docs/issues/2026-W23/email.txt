@@ -231,5 +231,5 @@ By @iamkhayyam · ARC Institute of Knowware
 This edition was curated by a human.
 
 Read online: https://tokenwisdom.org/issues/2026-W23
-Subscribe:   https://tokenwisdom.ghost.io/subscribe
+Subscribe:   https://ghost-production-47fd.up.railway.app/subscribe
 Unsubscribe: {{{unsubscribe_url}}}

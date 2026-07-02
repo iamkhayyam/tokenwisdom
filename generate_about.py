@@ -57,7 +57,7 @@ BODY = """
   <div class="about-body">
 
     <div class="about-gif">
-      <img src="https://tokenwisdom.ghost.io/content/images/2024/02/dropping_knowledge-2.gif" alt="Dropping Knowledge">
+      <img src="../content/images/page_about__dropping_knowledge-2.gif" alt="Dropping Knowledge">
     </div>
 
     <p>Hi! I am Khayyam and I'll be your host with the most for this rapidly accelerating journey into the future and back again to understand what's ahead of us and how to best navigate the space and time. You can find me on the <a href="https://twitter.com/iamkhayyam" rel="noreferrer"><em>Twitters</em></a> every once in a while and quite steadily on <a href="https://linkedin.com/in/iamkhayyam" rel="noreferrer"><strong>LinkedIn</strong></a>.</p>
@@ -69,7 +69,7 @@ BODY = """
     <p>In addition to my technical expertise, I catalyze positive change. By leading the way in commercializing technologies and forging new paths in the business landscape, I have consistently shaped the future through innovation and storytelling.</p>
 
     <div class="about-gif">
-      <img src="https://tokenwisdom.ghost.io/content/images/2024/02/451727_b817a.gif" alt="">
+      <img src="../content/images/page_about__451727_b817a.gif" alt="">
     </div>
 
     <p>Now, imagine standing on the deck of a ship, sailing through the vast sea of information. The waves of tech updates and AI breakthroughs are relentless, each one more powerful than the last. It's a storm of innovation insights and new discoveries, and navigating these waters can feel like steering through a tempest in the dark. But what if you had a guiding star, a crystal ball to glimpse the future?</p>
@@ -86,7 +86,7 @@ BODY = """
       <div class="about-cta-eyebrow">Sign up for Token Wisdom ✨</div>
       <div class="about-cta-title">Baked fresh daily.</div>
       <div class="about-cta-sub">Invest in knowledge. It provides great returns.</div>
-      <a class="about-cta-btn" href="https://tokenwisdom.ghost.io/subscribe">Invest in Knowledge →</a>
+      <a class="about-cta-btn" href="https://ghost-production-47fd.up.railway.app/subscribe">Invest in Knowledge →</a>
       <div class="about-cta-fine">No spam. Unsubscribe anytime.</div>
     </div>
 
@@ -122,7 +122,7 @@ BODY = """
     <div class="about-quote">"Luck is what happens when preparation meets opportunity."</div>
 
     <div class="about-gif">
-      <img src="https://tokenwisdom.ghost.io/content/images/2024/02/lucky_block_1.gif" alt="Lucky block">
+      <img src="../content/images/page_about__lucky_block_1.gif" alt="Lucky block">
     </div>
 
   </div>

@@ -757,7 +757,7 @@ def _sample_doc() -> EssayDoc:
         body_html=body,
         week=13,
         topic="Infrastructure",
-        cover_image="https://tokenwisdom.ghost.io/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg",
+        cover_image="../content/images/the-sky-has-been-warning-us-since-1859_feature__ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg",
         cover_caption="Sept. 1, 1859 — the operator stays at his key as the line runs hot. Illustration · Token Wisdom",
         dek=("The sun fired a warning shot in 1859. We had 165 years. We wrote reports, "
              "introduced legislation, held hearings — and kept building a bigger antenna."),
@@ -776,9 +776,10 @@ def _sample_doc() -> EssayDoc:
 
 
 def main():
+    import generate_site as gs
     doc = _sample_doc()
     out = ROOT / "docs" / "essay-template.html"
-    out.write_text(render_essay(doc))
+    out.write_text(gs.localize_images(render_essay(doc)))
     print(f"Wrote {out}")
 
 
