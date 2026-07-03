@@ -3,9 +3,23 @@
   "configurations": [
     {
       "name": "tokenwisdom",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8765", "--directory", "docs"],
-      "port": 8765
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "python3 -m http.server \"$PORT\" --directory docs"],
+      "port": 8765,
+      "autoPort": true
+    },
+    {
+      "name": "tw-ama-verify",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "python3 -m http.server \"$PORT\" --directory docs"],
+      "port": 8793,
+      "autoPort": true
+    },
+    {
+      "name": "cg-next-navigation",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "/Users/theusual_pro/claude-code/token-wisdom/cg-next-navigation", "run", "dev"],
+      "port": 3000
     }
   ]
 }

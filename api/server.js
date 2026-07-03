@@ -2,6 +2,7 @@ const express = require("express");
 const { q } = require("./db");
 const authModule = require("./auth");
 const annotations = require("./annotations");
+const links = require("./links");
 
 const app = express();
 app.use(express.json());
@@ -28,6 +29,7 @@ app.get("/", (req, res) => res.json({ ok: true, service: "token-wisdom-api" }));
 // ── Community: auth + annotations ───────────────────────────────────────────────
 app.use("/auth", authModule.router);
 app.use("/", annotations.router);
+app.use("/", links.router);
 
 // ── Terms ─────────────────────────────────────────────────────────────────────
 

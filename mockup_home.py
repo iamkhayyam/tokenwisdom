@@ -888,6 +888,7 @@ def _site_colophon():
         copyright=f"© {_years} Token Wisdom" if _years else "© Token Wisdom",
         subscribe_url=f"{gs.GHOST_URL}/subscribe",
         handle="@iamkhayyam",
+        ama=gs.get_ama_cta(),
     )
 
 

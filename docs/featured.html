@@ -334,9 +334,9 @@ a{color:inherit;text-decoration:none}
 
 .tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#6fe0bc;position:relative;background-color:var(--cg);background-image:linear-gradient(100deg,var(--cg) 0%,var(--cg) 46%,color-mix(in srgb,var(--cg) 35%,transparent) 70%,transparent 94%),url(assets/fortune_teller.gif);background-repeat:no-repeat,no-repeat;background-position:center,right -30px bottom 78px;background-size:cover,460px auto;color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
 .tw-colophon .col-inner{position:relative;max-width:1240px;margin:0 auto;padding:0 52px}
-.tw-colophon .col-ghost-wrap{position:absolute;left:0;top:0;bottom:0;z-index:0;display:flex;align-items:center;pointer-events:none}
-.tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(200px,32vw,440px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.055)}
-.tw-colophon .col-t1{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:36px;padding:34px 0 26px}
+.tw-colophon .col-ghost-wrap{position:absolute;inset:0;z-index:0;display:flex;align-items:center;pointer-events:none;overflow:hidden}
+.tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(90px,14vw,190px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.045)}
+.tw-colophon .col-t1{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:36px;padding:26px 0 20px}
 .tw-colophon .col-pitch{max-width:600px}
 .tw-colophon .col-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .tw-colophon .col-eyebrow img{height:20px;width:auto;opacity:.92}
@@ -350,11 +350,12 @@ a{color:inherit;text-decoration:none}
 .tw-colophon .col-subform input::placeholder{color:var(--cf)}
 .tw-colophon .col-subform button{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--cacc);transition:opacity .2s ease}
 .tw-colophon .col-subform button:hover{opacity:.65}
-.tw-colophon .col-t2{position:relative;z-index:1;padding:22px 0 18px;border-top:1px solid var(--cr)}
-.tw-colophon .col-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:16px}
-.tw-colophon .col-group-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cf);margin-bottom:9px}
-.tw-colophon .col-group-links{list-style:none;display:flex;flex-direction:column;gap:6px}
-.tw-colophon .col-group-links a{font-family:var(--sans);font-size:14px;color:var(--ci2);transition:color .18s ease}
+.tw-colophon .col-t2{position:relative;z-index:1;padding:16px 0 14px;border-top:1px solid var(--cr)}
+.tw-colophon .col-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:12px}
+.tw-colophon .col-group-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cf);margin-bottom:7px}
+.tw-colophon .col-group-links{list-style:none;columns:2;column-gap:14px}
+.tw-colophon .col-group-links li{margin-bottom:5px;break-inside:avoid}
+.tw-colophon .col-group-links a{font-family:var(--sans);font-size:13px;color:var(--ci2);white-space:nowrap;transition:color .18s ease}
 .tw-colophon .col-group-links a:hover{color:var(--cacc)}
 .tw-colophon .col-ama-ad{display:flex;align-items:center;gap:12px;width:100%;border:1px solid var(--cr);border-radius:8px;padding:9px;background:var(--cpanel);font:inherit;color:inherit;text-align:left;cursor:pointer;transition:border-color .18s ease,background .18s ease}
 .tw-colophon .col-ama-ad:hover,.tw-colophon .col-ama-ad[aria-expanded="true"]{border-color:var(--cacc);background:rgba(111,224,188,.06)}
@@ -376,11 +377,11 @@ a{color:inherit;text-decoration:none}
 .tw-colophon .col-ama-form button:hover{opacity:.7}
 .tw-colophon .col-ama-full{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(241,234,217,.6);transition:color .18s ease}
 .tw-colophon .col-ama-full:hover{color:var(--cacc)}
-.tw-colophon .col-tags{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-top:14px;padding-top:14px;border-top:1px solid var(--cr2)}
+.tw-colophon .col-tags{display:flex;align-items:center;flex-wrap:wrap;gap:8px;max-width:50%;margin-top:14px;padding-top:14px;border-top:1px solid var(--cr2)}
 .tw-colophon .col-tags-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cf);margin-right:6px}
 .tw-colophon .col-tags a{font-family:var(--mono);font-size:10px;letter-spacing:.05em;white-space:nowrap;color:var(--cm);border:1px solid var(--cr2);border-radius:999px;padding:4px 12px;transition:color .18s ease,border-color .18s ease}
 .tw-colophon .col-tags a:hover{color:var(--cacc);border-color:var(--cacc)}
-.tw-colophon .col-t3{position:relative;z-index:1;display:flex;flex-direction:column;gap:14px;padding:24px 0 28px}
+.tw-colophon .col-t3{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;padding:16px 0 20px}
 .tw-colophon .col-signoff{position:relative;z-index:2;font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.5;color:var(--ci2);margin:0;max-width:30ch}
 .tw-colophon .col-bar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .tw-colophon .col-bar-l{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cf)}
@@ -402,6 +403,8 @@ a{color:inherit;text-decoration:none}
 }
 @media(max-width:560px){
   .tw-colophon .col-cols{grid-template-columns:1fr;gap:28px}
+  .tw-colophon .col-group-links{columns:1}
+  .tw-colophon .col-tags{max-width:100%}
   .tw-colophon .col-ama-frost{padding:18px}
   .tw-colophon .col-ama-form{max-width:100%}
 }
@@ -679,9 +682,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 
 <footer class="tw-colophon">
   <div class="col-inner">
-    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
-
     <div class="col-t1">
+      <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
       <div class="col-pitch">
         <div class="col-eyebrow"><img src="assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
         <h2 class="col-h2">A field guide to the future of now.</h2>

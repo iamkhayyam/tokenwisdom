@@ -2,20 +2,23 @@
 <title>Token Wisdom crystal ball</title>
 <defs>
 <style>
-@keyframes pulse-inner{0%,100%{opacity:.5}50%{opacity:.92}}
+@keyframes pulse-inner{0%,100%{opacity:.45}50%{opacity:.88}}
+@keyframes pulse-core{0%,100%{opacity:.3}50%{opacity:.7}}
+@keyframes pulse-wide{0%,100%{opacity:.2}50%{opacity:.55}}
 @keyframes spin-cw{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
 @keyframes spin-ccw{from{transform:rotate(360deg)}to{transform:rotate(0deg)}}
-@keyframes spark{0%,100%{opacity:0;r:0}20%{opacity:1}50%{opacity:.8;r:2.2px}80%{opacity:.2}}
-@keyframes spark2{0%,100%{opacity:0;r:0}35%{opacity:.8}55%{opacity:1;r:1.8px}85%{opacity:0}}
 @keyframes mist-drift{0%{transform:translate(0,0)}40%{transform:translate(-6px,-5px)}70%{transform:translate(4px,7px)}100%{transform:translate(0,0)}}
-@keyframes rim-sweep{0%,100%{stroke-dashoffset:940}50%{stroke-dashoffset:0}}
-@keyframes base-glow{0%,100%{opacity:.2}50%{opacity:.44}}
+@keyframes spark{0%,100%{opacity:0}20%{opacity:1}50%{opacity:.8}80%{opacity:.2}}
+@keyframes spark2{0%,100%{opacity:0}35%{opacity:.8}55%{opacity:1}85%{opacity:0}}
 @keyframes flare-event{0%,72%,100%{opacity:0}76%{opacity:1}83%{opacity:.95}91%{opacity:0}}
 @keyframes flare-streak{0%,72%,100%{opacity:0}76%{opacity:.7}83%{opacity:.65}91%{opacity:0}}
+@keyframes rim-sweep{0%,100%{stroke-dashoffset:940}50%{stroke-dashoffset:0}}
 .cb-inner{animation:pulse-inner 3.4s ease-in-out infinite}
-.cb-ring1{transform-origin:200px 200px;animation:spin-cw 12s linear infinite}
-.cb-ring2{transform-origin:200px 200px;animation:spin-ccw 9s linear infinite}
-.cb-ring3{transform-origin:200px 200px;animation:spin-cw 17s linear infinite}
+.cb-core{animation:pulse-core 4.2s ease-in-out infinite}
+.cb-wide{animation:pulse-wide 5s ease-in-out 0.8s infinite}
+.cb-ring1{transform-origin:200px 195px;animation:spin-cw 12s linear infinite}
+.cb-ring2{transform-origin:200px 195px;animation:spin-ccw 9s linear infinite}
+.cb-ring3{transform-origin:200px 195px;animation:spin-cw 17s linear infinite}
 .cb-mist1{animation:mist-drift 8s ease-in-out infinite;transform-origin:200px 205px}
 .cb-mist2{animation:mist-drift 11s ease-in-out infinite reverse;transform-origin:200px 195px}
 .cb-sa{animation:spark 2.8s ease-in-out 0s infinite}
@@ -23,72 +26,77 @@
 .cb-sc{animation:spark 4s ease-in-out 1.3s infinite}
 .cb-sd{animation:spark2 2.5s ease-in-out 2s infinite}
 .cb-se{animation:spark 3.2s ease-in-out .9s infinite}
-.cb-rim{animation:rim-sweep 7s ease-in-out infinite}
-.cb-bg{animation:base-glow 3.4s ease-in-out infinite}
 .cb-flare{animation:flare-event 9s ease-in-out 1.5s infinite}
 .cb-flare-h{animation:flare-streak 9s ease-in-out 1.5s infinite}
 .cb-flare-v{animation:flare-streak 9s ease-in-out 1.6s infinite}
 .cb-flare-d{animation:flare-streak 9s ease-in-out 1.7s infinite}
+.cb-rim{animation:rim-sweep 7s ease-in-out infinite}
 </style>
-<radialGradient id="cb-rg-sphere" cx="65%" cy="22%" r="82%">
-  <stop offset="0%" stop-color="#ede8e0"/>
-  <stop offset="8%" stop-color="#c8bfaf"/>
-  <stop offset="25%" stop-color="#4a3d2c"/>
-  <stop offset="52%" stop-color="#1a1408"/>
-  <stop offset="78%" stop-color="#0a0804"/>
-  <stop offset="100%" stop-color="#040300"/>
+<radialGradient id="cb-rg-sphere" cx="58%" cy="26%" r="78%">
+  <stop offset="0%" stop-color="#f4ddef"/>
+  <stop offset="12%" stop-color="#d88cc8"/>
+  <stop offset="32%" stop-color="#a84898"/>
+  <stop offset="55%" stop-color="#5a1850"/>
+  <stop offset="78%" stop-color="#280c28"/>
+  <stop offset="100%" stop-color="#140814"/>
 </radialGradient>
-<radialGradient id="cb-rg-inner" cx="50%" cy="58%" r="52%">
-  <stop offset="0%" stop-color="#c8521a" stop-opacity=".95"/>
-  <stop offset="30%" stop-color="#7a2e0a" stop-opacity=".65"/>
-  <stop offset="100%" stop-color="#1a1408" stop-opacity="0"/>
+<radialGradient id="cb-rg-inner" cx="50%" cy="55%" r="50%">
+  <stop offset="0%" stop-color="#f06cb8" stop-opacity=".9"/>
+  <stop offset="35%" stop-color="#b83090" stop-opacity=".6"/>
+  <stop offset="100%" stop-color="#280c28" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="cb-rg-core" cx="50%" cy="48%" r="38%">
+  <stop offset="0%" stop-color="#fff0f8" stop-opacity=".6"/>
+  <stop offset="25%" stop-color="#f8a0d8" stop-opacity=".35"/>
+  <stop offset="60%" stop-color="#d060a8" stop-opacity=".15"/>
+  <stop offset="100%" stop-color="#5a1850" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="cb-rg-core2" cx="48%" cy="44%" r="55%">
+  <stop offset="0%" stop-color="#fce8f4" stop-opacity=".35"/>
+  <stop offset="30%" stop-color="#f0a0cc" stop-opacity=".2"/>
+  <stop offset="65%" stop-color="#c06098" stop-opacity=".08"/>
+  <stop offset="100%" stop-color="#5a1850" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="cb-rg-depth" cx="50%" cy="72%" r="45%">
+  <stop offset="0%" stop-color="#140814" stop-opacity=".6"/>
+  <stop offset="60%" stop-color="#280c28" stop-opacity=".25"/>
+  <stop offset="100%" stop-color="#280c28" stop-opacity="0"/>
+</radialGradient>
+<radialGradient id="cb-rg-frost" cx="50%" cy="50%" r="50%">
+  <stop offset="0%" stop-color="white" stop-opacity="0"/>
+  <stop offset="55%" stop-color="white" stop-opacity="0"/>
+  <stop offset="78%" stop-color="white" stop-opacity=".06"/>
+  <stop offset="90%" stop-color="white" stop-opacity=".12"/>
+  <stop offset="100%" stop-color="white" stop-opacity=".18"/>
 </radialGradient>
 <radialGradient id="cb-rg-mist1" cx="48%" cy="52%" r="55%">
-  <stop offset="0%" stop-color="#e8a060" stop-opacity=".42"/>
-  <stop offset="100%" stop-color="#c8521a" stop-opacity="0"/>
+  <stop offset="0%" stop-color="#f8a0d0" stop-opacity=".38"/>
+  <stop offset="100%" stop-color="#e04898" stop-opacity="0"/>
 </radialGradient>
 <radialGradient id="cb-rg-mist2" cx="42%" cy="45%" r="50%">
-  <stop offset="0%" stop-color="#f0b87a" stop-opacity=".25"/>
-  <stop offset="100%" stop-color="#c8521a" stop-opacity="0"/>
+  <stop offset="0%" stop-color="#fce8f4" stop-opacity=".22"/>
+  <stop offset="100%" stop-color="#f06cb8" stop-opacity="0"/>
 </radialGradient>
 <radialGradient id="cb-rg-sheen" cx="65%" cy="22%" r="52%">
-  <stop offset="0%" stop-color="rgba(255,248,240,.1)"/>
-  <stop offset="50%" stop-color="rgba(255,248,240,0)"/>
-</radialGradient>
-<radialGradient id="cb-rg-wood-body" cx="38%" cy="28%" r="72%">
-  <stop offset="0%" stop-color="#d4935a"/>
-  <stop offset="40%" stop-color="#a86830"/>
-  <stop offset="100%" stop-color="#5e3410"/>
-</radialGradient>
-<radialGradient id="cb-rg-wood-rim" cx="40%" cy="30%" r="68%">
-  <stop offset="0%" stop-color="#cc8840"/>
-  <stop offset="55%" stop-color="#8a5520"/>
-  <stop offset="100%" stop-color="#4a2808"/>
-</radialGradient>
-<radialGradient id="cb-rg-shadow" cx="50%" cy="50%" r="50%">
-  <stop offset="0%" stop-color="#1a0a04" stop-opacity=".45"/>
-  <stop offset="100%" stop-color="#1a0a04" stop-opacity="0"/>
+  <stop offset="0%" stop-color="rgba(255,244,252,.14)"/>
+  <stop offset="50%" stop-color="rgba(255,244,252,0)"/>
 </radialGradient>
 <radialGradient id="cb-rg-flare" cx="50%" cy="50%" r="50%">
   <stop offset="0%" stop-color="white"/>
   <stop offset="40%" stop-color="rgba(255,255,255,.9)"/>
   <stop offset="100%" stop-color="rgba(255,255,255,0)"/>
 </radialGradient>
-<clipPath id="cb-clip-sphere">
-  <circle cx="200" cy="232" r="148"/>
-</clipPath>
-<clipPath id="cb-clip-above-rim">
-  <rect x="0" y="0" width="400" height="349"/>
-</clipPath>
-<filter id="cb-f-blur-heavy" x="-60%" y="-60%" width="220%" height="220%">
-  <feGaussianBlur stdDeviation="14"/>
-</filter>
-<filter id="cb-f-blur-soft" x="-40%" y="-40%" width="180%" height="180%">
-  <feGaussianBlur stdDeviation="6"/>
-</filter>
-<filter id="cb-f-blur-micro" x="-30%" y="-30%" width="160%" height="160%">
-  <feGaussianBlur stdDeviation="2.5"/>
-</filter>
+<linearGradient id="cb-base-fill" x1="0%" y1="0%" x2="100%" y2="0%">
+  <stop offset="0%" stop-color="#f0d468"/>
+  <stop offset="28%" stop-color="#e8c040"/>
+  <stop offset="50%" stop-color="#c89828"/>
+  <stop offset="75%" stop-color="#986818"/>
+  <stop offset="100%" stop-color="#705010"/>
+</linearGradient>
+<clipPath id="cb-clip-sphere"><circle cx="200" cy="220" r="148"/></clipPath>
+<clipPath id="cb-clip-above-base"><path d="M 0,0 L 400,0 L 400,360 C 340,360 270,370 200,370 C 130,370 60,360 0,360 Z"/></clipPath>
+<filter id="cb-f-blur-micro" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="2.5"/></filter>
+<filter id="cb-f-blur-frost" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="8"/></filter>
 <filter id="cb-f-rim-glow" x="-10%" y="-10%" width="120%" height="120%">
   <feGaussianBlur stdDeviation="4" result="b"/>
   <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
@@ -99,72 +107,51 @@
 </filter>
 </defs>
 
-<ellipse cx="200" cy="434" rx="106" ry="11" fill="url(#cb-rg-shadow)" filter="url(#cb-f-blur-heavy)"/>
+<path d="M 130,355 C 150,375 180,380 200,380 C 220,380 250,375 270,355 C 280,370 290,395 290,405 C 290,415 260,422 200,422 C 140,422 110,415 110,405 C 110,395 120,370 130,355 Z" fill="url(#cb-base-fill)"/>
+<path d="M 130,355 C 120,370 110,395 110,405" fill="none" stroke="#f8e080" stroke-width="1.5" stroke-opacity=".3"/>
+<path d="M 270,355 C 280,370 290,395 290,405" fill="none" stroke="#5a3808" stroke-width="1.2" stroke-opacity=".25"/>
+<path d="M 132,357 C 152,377 182,382 200,382 C 218,382 248,377 268,357" fill="none" stroke="#f8e080" stroke-width="1.2" stroke-opacity=".25"/>
+<path d="M 112,407 C 140,420 170,423 200,424 C 230,423 260,420 288,407" fill="none" stroke="#f0d468" stroke-width="1" stroke-opacity=".2"/>
+<path d="M 114,400 C 150,408 175,410 200,410 C 225,410 250,408 286,400" fill="none" stroke="#a07820" stroke-width=".6" stroke-opacity=".25"/>
+<path d="M 130,355 C 150,375 180,380 200,380 C 200,380 200,422 200,422 C 140,422 110,415 110,405 C 110,395 120,370 130,355 Z" fill="rgba(248,224,128,.05)"/>
+<path d="M 140,360 C 160,378 185,382 200,382 C 215,382 240,378 260,360" fill="none" stroke="#f06cb8" stroke-width="3" stroke-opacity=".06" filter="url(#cb-f-blur-micro)"/>
 
-<path d="M 100,348 Q 92,400 200,408 Q 308,400 300,348 Z" fill="url(#cb-rg-wood-body)"/>
-<path d="M 108,362 Q 200,372 292,362" fill="none" stroke="#7a4810" stroke-width=".9" stroke-opacity=".4"/>
-<path d="M 100,378 Q 200,392 300,378" fill="none" stroke="#6a3a0c" stroke-width=".7" stroke-opacity=".32"/>
-<path d="M 102,396 Q 200,410 298,396" fill="none" stroke="#7a4810" stroke-width=".6" stroke-opacity=".24"/>
-<path d="M 100,348 A 100,14 0 0 1 300,348" fill="url(#cb-rg-wood-rim)"/>
-<ellipse cx="200" cy="350" rx="72" ry="10" fill="#2a1006" opacity=".7"/>
-<ellipse cx="200" cy="406" rx="66" ry="8" fill="#4e2c08"/>
-<ellipse cx="200" cy="406" rx="63" ry="6" fill="#6a3e14"/>
-<ellipse cx="180" cy="404" rx="20" ry="3" fill="rgba(180,110,50,.25)"/>
-
-<g clip-path="url(#cb-clip-above-rim)">
-  <circle cx="200" cy="232" r="152" fill="none" stroke="#888080" stroke-width="5" stroke-opacity=".35"/>
-  <circle cx="200" cy="232" r="150" fill="none" stroke="#b0a8a0" stroke-width="1.5" stroke-opacity=".22"/>
-  <circle cx="200" cy="232" r="148" fill="url(#cb-rg-sphere)"/>
+<g clip-path="url(#cb-clip-above-base)">
+  <circle cx="200" cy="220" r="152" fill="none" stroke="#604860" stroke-width="5" stroke-opacity=".3"/>
+  <circle cx="200" cy="220" r="150" fill="none" stroke="#886880" stroke-width="1.5" stroke-opacity=".18"/>
+  <circle cx="200" cy="220" r="148" fill="url(#cb-rg-sphere)"/>
   <g clip-path="url(#cb-clip-sphere)">
-    <ellipse cx="198" cy="215" rx="96" ry="80" fill="url(#cb-rg-inner)" class="cb-inner"/>
-    <ellipse cx="208" cy="205" rx="80" ry="60" fill="url(#cb-rg-mist1)" class="cb-mist1"/>
-    <ellipse cx="186" cy="195" rx="65" ry="48" fill="url(#cb-rg-mist2)" class="cb-mist2"/>
-    <g class="cb-ring1">
-      <ellipse cx="200" cy="200" rx="115" ry="55" fill="none" stroke="#c8521a" stroke-width="1" stroke-opacity=".25"/>
-    </g>
-    <g class="cb-ring2">
-      <ellipse cx="200" cy="200" rx="88" ry="40" fill="none" stroke="#e8a060" stroke-width=".8" stroke-opacity=".2"/>
-    </g>
-    <g class="cb-ring3">
-      <ellipse cx="200" cy="200" rx="62" ry="28" fill="none" stroke="#f0c080" stroke-width=".6" stroke-opacity=".16"/>
-    </g>
-    <circle cx="158" cy="185" r="1.8" fill="#ffb85c" class="cb-sa"/>
-    <circle cx="236" cy="175" r="1.5" fill="#fff0d0" class="cb-sb"/>
-    <circle cx="170" cy="210" r="1.8" fill="#ffb860" class="cb-sc"/>
-    <circle cx="248" cy="190" r="1.5" fill="#ffd090" class="cb-sd"/>
-    <circle cx="162" cy="165" r="1.8" fill="#ffe0a0" class="cb-se"/>
-
-    <!-- ═══ LENS FLARE — fires every 9s, bold enough to read at 17px ═══ -->
-    <!-- Halo bloom -->
-    <circle cx="268" cy="128" r="70" fill="url(#cb-rg-flare)" class="cb-flare"/>
-    <!-- Long horizontal streak -->
-    <ellipse cx="268" cy="128" rx="148" ry="6" fill="white" class="cb-flare-h"/>
-    <!-- Shorter vertical streak -->
-    <ellipse cx="268" cy="128" rx="5" ry="90" fill="white" class="cb-flare-v"/>
-    <!-- Diagonal streaks -->
-    <ellipse cx="268" cy="128" rx="80" ry="4" fill="white" transform="rotate(45 268 128)" class="cb-flare-d"/>
-    <ellipse cx="268" cy="128" rx="65" ry="3" fill="white" transform="rotate(-45 268 128)" class="cb-flare-d"/>
-    <!-- Bright core -->
-    <circle cx="268" cy="128" r="18" fill="url(#cb-rg-flare)" filter="url(#cb-f-flare)" class="cb-flare"/>
-    <circle cx="268" cy="128" r="9" fill="white" class="cb-flare"/>
+    <ellipse cx="200" cy="280" rx="130" ry="90" fill="url(#cb-rg-depth)"/>
+    <ellipse cx="198" cy="210" rx="96" ry="80" fill="url(#cb-rg-inner)" class="cb-inner"/>
+    <ellipse cx="195" cy="200" rx="72" ry="60" fill="url(#cb-rg-core)" class="cb-core"/>
+    <ellipse cx="200" cy="195" rx="110" ry="90" fill="url(#cb-rg-core2)" class="cb-wide"/>
+    <ellipse cx="208" cy="198" rx="80" ry="60" fill="url(#cb-rg-mist1)" class="cb-mist1"/>
+    <ellipse cx="186" cy="188" rx="65" ry="48" fill="url(#cb-rg-mist2)" class="cb-mist2"/>
+    <g class="cb-ring1"><ellipse cx="200" cy="195" rx="115" ry="55" fill="none" stroke="#f06cb8" stroke-width="1" stroke-opacity=".2"/></g>
+    <g class="cb-ring2"><ellipse cx="200" cy="195" rx="88" ry="40" fill="none" stroke="#f8a0d0" stroke-width=".8" stroke-opacity=".15"/></g>
+    <g class="cb-ring3"><ellipse cx="200" cy="195" rx="62" ry="28" fill="none" stroke="#fce8f4" stroke-width=".6" stroke-opacity=".12"/></g>
+    <circle cx="158" cy="178" r="1.8" fill="#fbcfe8" class="cb-sa"/>
+    <circle cx="236" cy="168" r="1.5" fill="#fce8f4" class="cb-sb"/>
+    <circle cx="170" cy="203" r="1.8" fill="#f8a0d0" class="cb-sc"/>
+    <circle cx="248" cy="183" r="1.5" fill="#fce8f4" class="cb-sd"/>
+    <circle cx="162" cy="158" r="1.8" fill="#fce8f4" class="cb-se"/>
+    <circle cx="268" cy="118" r="70" fill="url(#cb-rg-flare)" class="cb-flare"/>
+    <ellipse cx="268" cy="118" rx="148" ry="6" fill="white" class="cb-flare-h"/>
+    <ellipse cx="268" cy="118" rx="5" ry="90" fill="white" class="cb-flare-v"/>
+    <ellipse cx="268" cy="118" rx="80" ry="4" fill="white" transform="rotate(45 268 118)" class="cb-flare-d"/>
+    <ellipse cx="268" cy="118" rx="65" ry="3" fill="white" transform="rotate(-45 268 118)" class="cb-flare-d"/>
+    <circle cx="268" cy="118" r="18" fill="url(#cb-rg-flare)" filter="url(#cb-f-flare)" class="cb-flare"/>
+    <circle cx="268" cy="118" r="9" fill="white" class="cb-flare"/>
   </g>
-
-  <circle cx="200" cy="232" r="148" fill="url(#cb-rg-sheen)"/>
-  <circle cx="200" cy="232" r="148" fill="none" stroke="#050010" stroke-width="10" stroke-opacity=".5"/>
-  <circle cx="200" cy="232" r="148" fill="none" stroke="rgba(200,130,80,.3)" stroke-width="2" stroke-dasharray="68 930" class="cb-rim" filter="url(#cb-f-rim-glow)"/>
-  <ellipse cx="183" cy="320" rx="28" ry="10" fill="rgba(200,82,26,.3)" transform="rotate(-12 183 320)" filter="url(#cb-f-blur-micro)">
-    <animate attributeName="opacity" values=".28;.5;.28" dur="3.4s" repeatCount="indefinite"/>
+  <circle cx="200" cy="220" r="148" fill="url(#cb-rg-sheen)"/>
+  <circle cx="200" cy="220" r="148" fill="url(#cb-rg-frost)" filter="url(#cb-f-blur-frost)"/>
+  <circle cx="200" cy="220" r="148" fill="none" stroke="#0e040e" stroke-width="8" stroke-opacity=".35"/>
+  <circle cx="200" cy="220" r="148" fill="none" stroke="rgba(240,108,184,.25)" stroke-width="2" stroke-dasharray="68 930" class="cb-rim" filter="url(#cb-f-rim-glow)"/>
+  <ellipse cx="183" cy="310" rx="28" ry="10" fill="rgba(200,48,120,.25)" transform="rotate(-12 183 310)" filter="url(#cb-f-blur-micro)">
+    <animate attributeName="opacity" values=".25;.45;.25" dur="3.4s" repeatCount="indefinite"/>
   </ellipse>
-  <!-- Static specular highlight -->
-  <ellipse cx="258" cy="148" rx="38" ry="22" fill="rgba(255,252,245,.45)" transform="rotate(28 258 148)" filter="url(#cb-f-blur-micro)"/>
-  <ellipse cx="268" cy="135" rx="14" ry="8" fill="rgba(255,255,255,.72)" transform="rotate(28 268 135)"/>
-  <circle cx="278" cy="128" r="3.5" fill="white"/>
+  <ellipse cx="255" cy="138" rx="38" ry="22" fill="rgba(255,244,252,.4)" transform="rotate(28 255 138)" filter="url(#cb-f-blur-micro)"/>
+  <ellipse cx="265" cy="125" rx="14" ry="8" fill="rgba(255,255,255,.65)" transform="rotate(28 265 125)"/>
+  <circle cx="275" cy="118" r="3.5" fill="white"/>
 </g>
-
-<path d="M 100,348 A 100,14 0 0 0 300,348 L 300,349 A 100,14 0 0 1 100,349 Z" fill="url(#cb-rg-wood-body)"/>
-<path d="M 100,348 A 100,14 0 0 0 300,348" fill="url(#cb-rg-wood-rim)"/>
-<path d="M 100,348 A 100,14 0 0 0 300,348" fill="none" stroke="#e8aa58" stroke-width="1.2" stroke-opacity=".35"/>
-<path d="M 116,351 A 84,11 0 0 0 284,351" fill="none" stroke="#2a1006" stroke-width="2.5" stroke-opacity=".45"/>
-<ellipse cx="136" cy="348" rx="20" ry="4" fill="#dda050" opacity=".28" transform="rotate(-5 136 348)"/>
-<ellipse cx="200" cy="350" rx="70" ry="7" fill="#c8521a" opacity=".14" filter="url(#cb-f-blur-micro)" class="cb-bg"/>
 </svg>

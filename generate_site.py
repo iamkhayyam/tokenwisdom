@@ -973,6 +973,48 @@ img { max-width: 100%; height: auto; }
 }
 .essay-foot .ef-back:hover { border-color: var(--accent); color: var(--accent-deep); }
 
+/* ---------- AMA ARCHIVE (Reddit-style Q&A feed, on the AMA hub post) ---------- */
+.ama-archive { margin: 8px 0 40px; }
+.ama-archive-head {
+  display: flex; align-items: baseline; justify-content: space-between;
+  gap: 12px; border-bottom: 2px solid var(--ink); padding-bottom: 10px; margin-bottom: 4px;
+}
+.ama-archive-head h2 {
+  font-family: var(--display); font-size: 1.5rem; font-weight: 700;
+  color: var(--ink); letter-spacing: -.01em;
+}
+.ama-archive-count {
+  font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+.ama-thread {
+  display: flex; align-items: flex-start; gap: 14px;
+  padding: 16px 4px; border-bottom: 0.5px solid var(--paper-rule);
+  color: var(--ink); transition: background .15s ease;
+}
+.ama-thread:hover { background: var(--paper-warm); color: var(--ink); }
+.ama-thread-badge {
+  flex-shrink: 0; width: 30px; height: 30px; border-radius: 50%;
+  background: var(--paper-warm); border: 1px solid var(--paper-rule);
+  display: flex; align-items: center; justify-content: center; font-size: 13px;
+}
+.ama-thread-body { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.ama-thread-title {
+  font-family: var(--display); font-size: 1.05rem; font-weight: 700;
+  line-height: 1.3; color: var(--ink);
+}
+.ama-thread-excerpt {
+  font-family: var(--sans); font-size: 13.5px; line-height: 1.5; color: var(--ink-muted);
+}
+.ama-thread-meta {
+  font-family: var(--mono); font-size: 9.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: var(--ink-faint);
+}
+.ama-archive-empty {
+  font-family: var(--serif); font-style: italic; font-size: 15px;
+  color: var(--ink-muted); padding: 20px 4px;
+}
+
 @media (max-width: 1100px) {
   .tw-note { float: none; width: auto; margin: 14px 0 22px; }
 }
@@ -1085,23 +1127,52 @@ img { max-width: 100%; height: auto; }
 }
 
 /* ---------- POST NAV (prev / next) ---------- */
+/* Default: a standalone centered column (used on newsletters, which don't
+   have the essay's wide sidenote-gutter frame). */
 .post-nav {
   max-width: var(--max-read);
-  margin: 3rem auto 0;
-  padding: 1.6rem 1.5rem 0;
-  border-top: 0.5px solid var(--paper-rule);
+  margin: 2.5rem auto 0;
+  padding: 1.4rem 1.5rem 2.5rem;
+  border-top: 2px solid var(--ink);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1.5rem;
-  font-family: var(--mono);
-  font-size: .68rem;
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
+  gap: 1.2rem;
 }
-.post-nav .pn-label { display: block; margin-bottom: 4px; color: var(--ink-faint); }
-.post-nav a { color: var(--ink); font-family: var(--display); font-size: .95rem; font-weight: 600; letter-spacing: -.01em; text-transform: none; line-height: 1.3; display: block; }
-.post-nav a:hover { color: var(--accent); }
+/* Essays sit inside the wide asymmetric frame (text held left, gutter on the
+   right) — pin to that same left edge instead of self-centering, or it drifts
+   out of alignment with the essay column above it. */
+.essay-frame > .post-nav,
+.essay-frame > #tw-responses {
+  max-width: 720px;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+.post-nav .pn-prev, .post-nav .pn-next {
+  display: block;
+  padding: 1rem 1.2rem;
+  border: 1px solid var(--paper-rule);
+  border-radius: 4px;
+  background: var(--paper-warm);
+  color: var(--ink);
+  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.post-nav .pn-prev:hover, .post-nav .pn-next:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px -18px rgba(26, 24, 20, .4);
+}
+.post-nav .pn-label {
+  display: block; margin-bottom: 6px; color: var(--ink-faint);
+  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+}
+.post-nav .pn-title {
+  display: block; color: var(--ink);
+  font-family: var(--display); font-size: 1.05rem; font-weight: 700;
+  letter-spacing: -.01em; line-height: 1.3; transition: color .2s ease;
+}
+.post-nav .pn-prev:hover .pn-title, .post-nav .pn-next:hover .pn-title { color: var(--accent); }
 .post-nav .pn-next { text-align: right; }
 
 /* ---------- COLOPHON FOOTER ---------- */
@@ -2660,7 +2731,7 @@ def essay_kicker(post, override):
 
 
 def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
-                      years_span, top_tags, issue_num, issue_ref=None):
+                      years_span, top_tags, issue_num, issue_ref=None, ama_archive=None):
     tags = post.get("tags") or []
     override = ESSAY_OVERRIDES.get(post.get("slug", ""), {})
 
@@ -2724,15 +2795,41 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
   </footer>"""
 
     nav_prev = (f"""
-    <div class="pn-prev">
+    <a class="pn-prev" href="{prev_post['slug']}.html">
       <span class="pn-label">← Previous</span>
-      <a href="{prev_post['slug']}.html">{esc(prev_post.get('title', ''))}</a>
-    </div>""" if prev_post else '<div></div>')
+      <span class="pn-title">{esc(prev_post.get('title', ''))}</span>
+    </a>""" if prev_post else '<div></div>')
     nav_next = (f"""
-    <div class="pn-next">
+    <a class="pn-next" href="{next_post['slug']}.html">
       <span class="pn-label">Next →</span>
-      <a href="{next_post['slug']}.html">{esc(next_post.get('title', ''))}</a>
-    </div>""" if next_post else '<div></div>')
+      <span class="pn-title">{esc(next_post.get('title', ''))}</span>
+    </a>""" if next_post else '<div></div>')
+
+    # AMA archive — a Reddit-style feed of every answered question, only
+    # rendered on the "Ask Me Anything" hub post (ama_archive is set at the
+    # main() call site by looking up the ask-me-anything tag's other posts).
+    ama_archive_html = ""
+    if ama_archive is not None:
+        if ama_archive:
+            threads = "".join(f"""
+    <a class="ama-thread" href="{esc(p['slug'])}.html">
+      <span class="ama-thread-badge">📣</span>
+      <span class="ama-thread-body">
+        <span class="ama-thread-title">{esc(p.get('title', ''))}</span>
+        <span class="ama-thread-excerpt">{excerpt(p, 160)}</span>
+        <span class="ama-thread-meta">{esc(fmt_date_short(p.get('published_at')))} &middot; {reading_time(p)}</span>
+      </span>
+    </a>""" for p in ama_archive)
+        else:
+            threads = '<p class="ama-archive-empty">No questions answered yet — be the first to ask above.</p>'
+        ama_archive_html = f"""
+<section class="ama-archive essay-col">
+  <div class="ama-archive-head">
+    <h2>The Archive</h2>
+    <span class="ama-archive-count">{len(ama_archive)} answered</span>
+  </div>
+  {threads}
+</section>"""
 
     body = ESSAY_THEME_SCRIPT + f"""
 <article class="essay-frame">
@@ -2759,12 +2856,13 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
   </div>
   {tag_pills}
   {footer}
+  {ama_archive_html}
+  <section id="tw-responses" class="essay-col"></section>
+  <nav class="post-nav essay-col">
+    {nav_prev}
+    {nav_next}
+  </nav>
 </article>
-<section id="tw-responses"></section>
-<nav class="post-nav">
-  {nav_prev}
-  {nav_next}
-</nav>
 {INDEX_MARKUP}{INDEX_SCRIPT}
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", theme_toggle=True, noindex=is_hidden(post),
@@ -2808,18 +2906,18 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
     nav_next = ""
     if prev_post:
         nav_prev = f"""
-    <div class="pn-prev">
+    <a class="pn-prev" href="{prev_post['slug']}.html">
       <span class="pn-label">← Previous Edition</span>
-      <a href="{prev_post['slug']}.html">{esc(clean_title(prev_post) or prev_post.get('title', ''))}</a>
-    </div>"""
+      <span class="pn-title">{esc(clean_title(prev_post) or prev_post.get('title', ''))}</span>
+    </a>"""
     else:
         nav_prev = '<div></div>'
     if next_post:
         nav_next = f"""
-    <div class="pn-next">
+    <a class="pn-next" href="{next_post['slug']}.html">
       <span class="pn-label">Next Edition →</span>
-      <a href="{next_post['slug']}.html">{esc(clean_title(next_post) or next_post.get('title', ''))}</a>
-    </div>"""
+      <span class="pn-title">{esc(clean_title(next_post) or next_post.get('title', ''))}</span>
+    </a>"""
     else:
         nav_next = '<div></div>'
 
@@ -4373,7 +4471,14 @@ def main():
             html_out = render_newsletter_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num)
             nl_count += 1
         else:
-            html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num, issue_ref=essay_issue_map.get(slug))
+            ama_archive = None
+            if slug == "no-really-ask-me-anything":
+                ama_archive = sorted(
+                    [p for p in tag_to_posts.get("ask-me-anything", []) if p.get("slug") != slug],
+                    key=lambda p: p.get("published_at", ""), reverse=True,
+                )
+            html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num,
+                                          issue_ref=essay_issue_map.get(slug), ama_archive=ama_archive)
             essay_count += 1
         html_out = localize_images(html_out)
         with open(DOCS_DIR / "posts" / f"{slug}.html", "w") as f:

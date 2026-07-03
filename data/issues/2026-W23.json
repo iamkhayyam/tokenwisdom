@@ -5,7 +5,7 @@
   "number": null,
   "year": 2026,
   "week": 23,
-  "date": "2026-06-30",
+  "date": "2026-07-03",
   "status": "draft",
   "title": "Token Wisdom · 2026 · Week 23",
   "dek": "Verification week: a $1.3T chip selloff, even the CEOs admitting the buildout got ahead of itself — and, quietly, the lab kept working.",
@@ -303,7 +303,7 @@
       "slug": "darpa",
       "color": "teal",
       "category": "Acronyms",
-      "role": "Keystone",
+      "role": "Headliner",
       "edition_count": 9,
       "definition": "Defense Advanced Research Projects Agency: the U.S. Department of Defense agency responsible for developing emerging technologies for national security use",
       "url": "https://tokenwisdom.org/lexicon/darpa.html",
@@ -433,7 +433,7 @@
     }
   ],
   "meta": {
-    "generated_at": "2026-06-30T21:14:10.540586+00:00",
+    "generated_at": "2026-07-03T11:16:15.964675+00:00",
     "builder_version": "0.1.0",
     "source_csvs": [
       "26.W.23.TNL.csv",
@@ -445,19 +445,8 @@
       "terms_in_motion": 12
     },
     "payload_overlay": {
-      "applied": true,
-      "mode": "reorder",
-      "edits": 0,
-      "reordered": {
-        "tnl": false,
-        "tws": false
-      },
-      "dropped": {
-        "tnl": 0,
-        "tws": 0
-      },
-      "error": null,
-      "reason": null
+      "applied": false,
+      "reason": "PAYLOAD_URL/PAYLOAD_API_KEY not set"
     }
   }
 }

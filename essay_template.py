@@ -480,34 +480,54 @@ def demo_margin_notes(html_str):
 COLOPHON_CSS = """
 .tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#6fe0bc;position:relative;background-color:var(--cg);background-image:linear-gradient(100deg,var(--cg) 0%,var(--cg) 46%,color-mix(in srgb,var(--cg) 35%,transparent) 70%,transparent 94%),url(assets/fortune_teller.gif);background-repeat:no-repeat,no-repeat;background-position:center,right -30px bottom 78px;background-size:cover,460px auto;color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
 .tw-colophon .col-inner{position:relative;max-width:1240px;margin:0 auto;padding:0 52px}
-.tw-colophon .col-ghost-wrap{position:absolute;left:0;top:0;bottom:0;z-index:0;display:flex;align-items:center;pointer-events:none}
-.tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(200px,32vw,440px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.055)}
-.tw-colophon .col-t1{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:48px;padding:64px 0 52px}
+.tw-colophon .col-ghost-wrap{position:absolute;inset:0;z-index:0;display:flex;align-items:center;pointer-events:none;overflow:hidden}
+.tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(90px,14vw,190px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.045)}
+.tw-colophon .col-t1{position:relative;z-index:1;display:flex;align-items:flex-end;justify-content:space-between;gap:36px;padding:26px 0 20px}
 .tw-colophon .col-pitch{max-width:600px}
-.tw-colophon .col-eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:22px}
-.tw-colophon .col-eyebrow img{height:26px;width:auto;opacity:.92}
-.tw-colophon .col-eyebrow span{font-family:var(--mono);font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--cacc)}
-.tw-colophon .col-h2{font-family:var(--display);font-weight:400;font-size:clamp(32px,4.4vw,54px);line-height:1.02;letter-spacing:-.022em;color:var(--ci);margin:0;max-width:14ch}
-.tw-colophon .col-sub{width:340px;max-width:100%;flex-shrink:0}
-.tw-colophon .col-sub-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--cm);margin-bottom:14px}
-.tw-colophon .col-subform{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--cr);padding-bottom:12px;transition:border-color .2s ease}
+.tw-colophon .col-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.tw-colophon .col-eyebrow img{height:20px;width:auto;opacity:.92}
+.tw-colophon .col-eyebrow span{font-family:var(--mono);font-size:9.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--cacc)}
+.tw-colophon .col-h2{font-family:var(--display);font-weight:400;font-size:clamp(22px,2.6vw,32px);line-height:1.08;letter-spacing:-.018em;color:var(--ci);margin:0;max-width:18ch}
+.tw-colophon .col-sub{width:300px;max-width:100%;flex-shrink:0}
+.tw-colophon .col-sub-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--cm);margin-bottom:10px}
+.tw-colophon .col-subform{display:flex;align-items:center;gap:14px;border-bottom:1px solid var(--cr);padding-bottom:10px;transition:border-color .2s ease}
 .tw-colophon .col-subform:focus-within{border-color:var(--cacc)}
 .tw-colophon .col-subform input{flex:1;min-width:0;background:transparent;border:none;outline:none;color:var(--ci);font-family:var(--mono);font-size:13px;letter-spacing:.04em;padding:4px 0}
 .tw-colophon .col-subform input::placeholder{color:var(--cf)}
 .tw-colophon .col-subform button{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--cacc);transition:opacity .2s ease}
 .tw-colophon .col-subform button:hover{opacity:.65}
-.tw-colophon .col-t2{position:relative;z-index:1;padding:30px 0}
-.tw-colophon .col-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
-.tw-colophon .col-links a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--ci2);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;background:var(--cpanel);transition:color .18s ease,border-color .18s ease,background .18s ease}
-.tw-colophon .col-links a:hover{color:var(--ci);border-color:var(--cacc);background:rgba(111,224,188,.06)}
-.tw-colophon .col-meta{display:flex;flex-wrap:wrap;gap:10px}
-.tw-colophon .col-meta a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--cm);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;transition:color .18s ease,border-color .18s ease}
-.tw-colophon .col-meta a:hover{color:var(--ci);border-color:var(--cr)}
-.tw-colophon .col-tags{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-top:22px}
-.tw-colophon .col-tags-label{font-family:var(--mono);font-size:9.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cf);margin-right:6px}
-.tw-colophon .col-tags a{font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;white-space:nowrap;color:var(--cm);border:1px solid var(--cr2);border-radius:999px;padding:5px 13px;transition:color .18s ease,border-color .18s ease}
+.tw-colophon .col-t2{position:relative;z-index:1;padding:16px 0 14px;border-top:1px solid var(--cr)}
+.tw-colophon .col-cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px;margin-bottom:12px}
+.tw-colophon .col-group-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cf);margin-bottom:7px}
+.tw-colophon .col-group-links{list-style:none;columns:2;column-gap:14px}
+.tw-colophon .col-group-links li{margin-bottom:5px;break-inside:avoid}
+.tw-colophon .col-group-links a{font-family:var(--sans);font-size:13px;color:var(--ci2);white-space:nowrap;transition:color .18s ease}
+.tw-colophon .col-group-links a:hover{color:var(--cacc)}
+.tw-colophon .col-ama-ad{display:flex;align-items:center;gap:12px;width:100%;border:1px solid var(--cr);border-radius:8px;padding:9px;background:var(--cpanel);font:inherit;color:inherit;text-align:left;cursor:pointer;transition:border-color .18s ease,background .18s ease}
+.tw-colophon .col-ama-ad:hover,.tw-colophon .col-ama-ad[aria-expanded="true"]{border-color:var(--cacc);background:rgba(111,224,188,.06)}
+.tw-colophon .col-ama-thumb{width:44px;height:44px;border-radius:5px;object-fit:cover;flex-shrink:0;background:#000}
+.tw-colophon .col-ama-copy{display:flex;flex-direction:column;gap:3px;min-width:0}
+.tw-colophon .col-ama-title{font-family:var(--sans);font-size:13px;font-weight:600;color:var(--ci);line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.tw-colophon .col-ama-sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cacc)}
+.tw-colophon .col-ama-chevron{margin-left:auto;flex-shrink:0;color:var(--cf);font-size:11px;transition:transform .2s ease}
+.tw-colophon .col-ama-ad[aria-expanded="true"] .col-ama-chevron{transform:rotate(180deg);color:var(--cacc)}
+.tw-colophon .col-ama-panel{position:relative;overflow:hidden;border-radius:10px;margin-top:14px;border:1px solid var(--cr)}
+.tw-colophon .col-ama-panel[hidden]{display:none}
+.tw-colophon .col-ama-panel-bg{position:absolute;inset:0;background-size:cover;background-position:center}
+.tw-colophon .col-ama-frost{position:relative;z-index:1;backdrop-filter:blur(16px) saturate(1.3);-webkit-backdrop-filter:blur(16px) saturate(1.3);background:rgba(20,14,10,.6);padding:22px 24px;display:flex;flex-direction:column;gap:12px;align-items:flex-start}
+.tw-colophon .col-ama-hint{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.5;color:#f1ead9;margin:0;max-width:60ch}
+.tw-colophon .col-ama-form{display:flex;align-items:center;gap:14px;width:100%;max-width:480px;border-bottom:1px solid rgba(241,234,217,.35);padding-bottom:10px}
+.tw-colophon .col-ama-form input{flex:1;min-width:0;background:transparent;border:none;outline:none;color:#f1ead9;font-family:var(--mono);font-size:13px;padding:6px 0}
+.tw-colophon .col-ama-form input::placeholder{color:rgba(241,234,217,.5)}
+.tw-colophon .col-ama-form button{flex-shrink:0;background:none;border:none;cursor:pointer;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--cacc);transition:opacity .18s ease}
+.tw-colophon .col-ama-form button:hover{opacity:.7}
+.tw-colophon .col-ama-full{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(241,234,217,.6);transition:color .18s ease}
+.tw-colophon .col-ama-full:hover{color:var(--cacc)}
+.tw-colophon .col-tags{display:flex;align-items:center;flex-wrap:wrap;gap:8px;max-width:50%;margin-top:14px;padding-top:14px;border-top:1px solid var(--cr2)}
+.tw-colophon .col-tags-label{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--cf);margin-right:6px}
+.tw-colophon .col-tags a{font-family:var(--mono);font-size:10px;letter-spacing:.05em;white-space:nowrap;color:var(--cm);border:1px solid var(--cr2);border-radius:999px;padding:4px 12px;transition:color .18s ease,border-color .18s ease}
 .tw-colophon .col-tags a:hover{color:var(--cacc);border-color:var(--cacc)}
-.tw-colophon .col-t3{position:relative;z-index:1;display:flex;flex-direction:column;gap:24px;padding:50px 0 56px}
+.tw-colophon .col-t3{position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;padding:16px 0 20px}
 .tw-colophon .col-signoff{position:relative;z-index:2;font-family:var(--serif);font-style:italic;font-size:15px;line-height:1.5;color:var(--ci2);margin:0;max-width:30ch}
 .tw-colophon .col-bar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
 .tw-colophon .col-bar-l{display:flex;align-items:center;gap:18px;flex-wrap:wrap;font-family:var(--mono);font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--cf)}
@@ -525,6 +545,14 @@ COLOPHON_CSS = """
   .tw-colophon .col-bar{flex-direction:column;align-items:flex-start;gap:18px}
   .tw-colophon .col-ghost{font-size:23vw}
   .tw-colophon .col-inner{padding:0 24px}
+  .tw-colophon .col-cols{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .tw-colophon .col-cols{grid-template-columns:1fr;gap:28px}
+  .tw-colophon .col-group-links{columns:1}
+  .tw-colophon .col-tags{max-width:100%}
+  .tw-colophon .col-ama-frost{padding:18px}
+  .tw-colophon .col-ama-form{max-width:100%}
 }
 """
 
@@ -534,28 +562,68 @@ def render_colophon(*, prefix="", mark_url=None, primary=None, meta=None, tags=N
                     subscribe_url="#", socials=None, handle="@iamkhayyam",
                     eyebrow="The Newsletter of Record · Est. 2013",
                     headline="A field guide to the future of now.",
-                    sub_label="One weekly transmission · Humanly chosen"):
+                    sub_label="One weekly transmission · Humanly chosen",
+                    ama=None):
     """Render the dark site colophon. Data-driven so the static site and the CMS
-    both feed it real links/tags/counts."""
+    both feed it real links/tags/counts. `ama` (optional dict with name/slug/
+    img_file) renders a small classified-ad-sized card for Ask Me Anything,
+    which otherwise has no page of its own."""
     mark_url = mark_url if mark_url is not None else (prefix + "assets/crystal-ball.svg")
     primary, meta, tags, socials = primary or [], meta or [], tags or [], socials or []
 
-    def _a(it, cls=""):
+    def _li(it):
         ext = ' target="_blank" rel="noopener"' if it.get("external") else ""
-        return f'<a href="{esc(it["href"])}"{ext}>{esc(it["label"])}</a>'
+        return f'<li><a href="{esc(it["href"])}"{ext}>{esc(it["label"])}</a></li>'
 
-    primary_html = "".join(_a(i) for i in primary)
-    meta_html = "".join(_a(i) for i in meta)
+    primary_html = "".join(_li(i) for i in primary)
+    meta_html = "".join(_li(i) for i in meta)
     tags_html = "".join(f'<a href="{esc(t["href"])}">{esc(t["name"])}</a>' for t in tags)
     social_html = "".join(f'<a href="{esc(s["href"])}" target="_blank" rel="noopener">{esc(s["label"])}</a>' for s in socials)
     tags_block = (f'<div class="col-tags"><span class="col-tags-label">Popular tags</span>{tags_html}</div>'
                   if tags else "")
+
+    ama_block, ama_panel = "", ""
+    if ama:
+        thumb = (f'<img class="col-ama-thumb" src="{esc(prefix)}content/images/{esc(ama["img_file"])}" alt="" loading="lazy">'
+                 if ama.get("img_file") else "")
+        ama_block = f"""
+        <div class="col-group col-group--ama">
+          <div class="col-group-label">Have a question?</div>
+          <button type="button" class="col-ama-ad" data-ama-toggle aria-expanded="false" aria-controls="col-ama-panel">
+            {thumb}
+            <span class="col-ama-copy"><span class="col-ama-title">{esc(ama['name'])}</span><span class="col-ama-sub">Ask it &rarr;</span></span>
+            <span class="col-ama-chevron" aria-hidden="true">&#9662;</span>
+          </button>
+        </div>"""
+        panel_bg = (f'{esc(prefix)}content/images/{esc(ama["img_file"])}' if ama.get("img_file") else "")
+        post_href = f'{esc(prefix)}posts/{esc(ama["slug"])}.html'
+        ama_panel = f"""
+      <div id="col-ama-panel" class="col-ama-panel" hidden>
+        {'<div class="col-ama-panel-bg" style="background-image:url(' + panel_bg + ')"></div>' if panel_bg else ''}
+        <div class="col-ama-frost">
+          <p class="col-ama-hint">Type your question below and hit ask — or highlight anything that sparked it first.</p>
+          <form class="col-ama-form" action="{post_href}" method="get">
+            <input type="text" name="q" placeholder="What do you want to know?" aria-label="Your question">
+            <button type="submit">Ask &rarr;</button>
+          </form>
+          <a class="col-ama-full" href="{post_href}">Read the full AMA thread &rarr;</a>
+        </div>
+      </div>
+      <script>(function(){{
+        var btn=document.querySelector('[data-ama-toggle]'),panel=document.getElementById('col-ama-panel');
+        if(!btn||!panel)return;
+        btn.addEventListener('click',function(){{
+          var open=panel.hasAttribute('hidden');
+          if(open){{panel.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}}
+          else{{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}}
+        }});
+      }})();</script>"""
+
     return f"""
 <footer class="tw-colophon">
   <div class="col-inner">
-    <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
-
     <div class="col-t1">
+      <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
       <div class="col-pitch">
         <div class="col-eyebrow"><img src="{esc(mark_url)}" alt=""><span>{esc(eyebrow)}</span></div>
         <h2 class="col-h2">{esc(headline)}</h2>
@@ -570,8 +638,18 @@ def render_colophon(*, prefix="", mark_url=None, primary=None, meta=None, tags=N
     </div>
 
     <div class="col-t2">
-      <div class="col-links">{primary_html}</div>
-      <div class="col-meta">{meta_html}</div>
+      <div class="col-cols">
+        <div class="col-group">
+          <div class="col-group-label">Explore</div>
+          <ul class="col-group-links">{primary_html}</ul>
+        </div>
+        <div class="col-group">
+          <div class="col-group-label">More</div>
+          <ul class="col-group-links">{meta_html}</ul>
+        </div>
+        {ama_block}
+      </div>
+      {ama_panel}
       {tags_block}
     </div>
 

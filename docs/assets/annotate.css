@@ -157,7 +157,7 @@
 
 /* AMA composer that replaces the old Typeform embed on the AMA post */
 #tw-ask-box {
-  max-width: var(--w-read, 680px); margin: 1.75rem auto; padding: 1.25rem 1.3rem;
+  margin: 1.75rem 0; padding: 1.25rem 1.3rem;
   border: 1px solid var(--rule, #e2ddd4); border-top: 2px solid var(--ink, #1a1814);
   background: var(--surface, #f6f3ee);
 }

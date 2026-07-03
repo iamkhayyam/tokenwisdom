@@ -90,15 +90,10 @@ a{color:inherit;text-decoration:none}
 /* Back — mandatory return affordance on every subpage */
 .site-top-back{display:inline-flex;align-items:center;gap:.4em;font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-muted);white-space:nowrap;transition:color .15s}
 .site-top-back:hover{color:var(--accent)}
-/* Inline text nav — visible on desktop, swapped for the menu button on mobile */
-.site-top-nav{display:flex;align-items:center;flex:1;gap:16px;margin-left:6px;flex-wrap:wrap}
-.site-top-nav a:not(.site-top-sub){font-family:var(--mono);font-weight:700;font-size:.76rem;letter-spacing:.10em;text-transform:uppercase;color:var(--ink-muted);padding-top:4px;padding-bottom:2px;border-bottom:2px solid transparent;transition:color .15s}
-.site-top-nav a:not(.site-top-sub):hover{color:var(--ink)}
-.site-top-nav a.is-active{color:var(--accent);border-color:var(--accent)}
-.site-top-sub{margin-left:auto;font-family:var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
+.site-top-sub{margin-left:auto;font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.68rem;letter-spacing:.10em;text-transform:uppercase;background:var(--accent);color:oklch(0.99 0.004 70);padding:.6em 1.2em;transition:background .15s}
 .site-top-sub:hover{background:var(--accent-deep)}
-/* Menu button — opens the full-page takeover on mobile only */
-.site-top-toggle{display:none;margin-left:auto;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:none;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:color .2s}
+/* Menu button — opens the full-page takeover; the only nav trigger on interior pages */
+.site-top-toggle{display:inline-flex;align-items:center;gap:.6em;height:42px;padding:0 16px;background:transparent;border:none;cursor:pointer;color:var(--ink);-webkit-tap-highlight-color:transparent;transition:color .2s}
 .site-top-toggle:hover{color:var(--accent)}
 .site-top-toggle .ham{display:inline-flex;flex-direction:column;justify-content:center;gap:4px;width:18px;height:14px}
 .site-top-toggle .ham span{display:block;height:2px;width:100%;background:currentColor}
@@ -107,7 +102,7 @@ a{color:inherit;text-decoration:none}
 .site-top-toggle:hover .ham span:nth-child(3){animation-delay:.14s}
 @keyframes tw-ham-ripple{0%{transform:translateX(0)}45%{transform:translateX(4px)}100%{transform:translateX(0)}}
 @media(prefers-reduced-motion:reduce){.site-top-toggle:hover .ham span{animation:none}}
-.site-top-toggle .mtxt{font-family:var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
+.site-top-toggle .mtxt{font-family:'FauxCRA',var(--mono);font-weight:700;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase}
 
 /* lead */
 .lead{display:grid;grid-template-columns:1.7fr 1fr;gap:56px;padding:56px 0 12px;align-items:start}
@@ -267,8 +262,6 @@ a{color:inherit;text-decoration:none}
   .lexcard:nth-child(2n){border-right:none}
 }
 /* mobile — tighten the menu bar */
-/* Below 1080 the 9-item inline nav can't fit alongside Back + Subscribe — use the menu button */
-@media(max-width:1080px){.site-top-nav{display:none}.site-top-toggle{display:inline-flex}}
 @media(max-width:860px){.site-top-inner{padding:10px 16px;gap:14px}}
 @media(max-width:620px){
   .recent-cards{grid-template-columns:1fr}
@@ -459,11 +452,11 @@ html.nav-open .nav-takeover{
 .nto-close:hover{color:var(--accent);border-color:var(--accent)}
 .nto-close .x{font-size:1.05em;line-height:1}
 .nto-nav{flex:1;display:flex;flex-direction:column;justify-content:center;padding:clamp(.4rem,1.4vh,1.3rem) 0}
-.nto-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:clamp(.8rem,2vw,1.6rem);padding:clamp(.3rem,1.05vh,.95rem) 0;border-top:1px solid var(--nto-rule);color:var(--nto-text);text-decoration:none;opacity:0;transform:translateY(30px)}
+.nto-row{display:grid;grid-template-columns:auto 1fr auto;align-items:center;column-gap:clamp(.8rem,2vw,1.6rem);padding:clamp(.3rem,1.05vh,.95rem) 0;border-top:1px solid var(--nto-rule);color:var(--nto-text);text-decoration:none;opacity:0;transform:translateY(56px)}
 .nto-row:last-of-type{border-bottom:1px solid var(--nto-rule)}
-html.nav-open .nto-row{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:calc(.14s + var(--i,0)*.05s)}
+html.nav-open .nto-row{opacity:1;transform:none;transition:opacity .6s ease,transform .7s cubic-bezier(.16,1,.3,1);transition-delay:calc(.08s + var(--i,0)*.06s)}
 .nto-num{font-family:var(--mono);font-size:.7rem;letter-spacing:.14em;color:var(--accent);min-width:2.2em}
-.nto-label{font-family:var(--display);font-weight:400;font-size:clamp(1.9rem,min(7.5vw,5vh),4.4rem);line-height:.96;letter-spacing:-.02em;transition:transform .4s cubic-bezier(.16,1,.3,1),color .25s ease}
+.nto-label{font-family:var(--display);font-weight:400;font-size:clamp(2.3rem,min(9vw,6.2vh),5.6rem);line-height:.94;letter-spacing:-.02em;transition:transform .4s cubic-bezier(.16,1,.3,1),color .25s ease}
 .nto-desc{justify-self:end;text-align:right;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--nto-muted);max-width:16ch;opacity:0;transform:translateX(-10px);transition:opacity .3s ease,transform .3s ease}
 .nto-arrow{display:none}
 @media(hover:hover){
@@ -471,7 +464,7 @@ html.nav-open .nto-row{opacity:1;transform:none;transition:opacity .5s ease,tran
   .nto-row:hover .nto-desc{opacity:1;transform:none}
 }
 .nto-foot{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:1.2rem;padding-top:clamp(.7rem,1.8vh,1.4rem);border-top:1px solid var(--nto-rule);opacity:0;transform:translateY(20px)}
-html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:.62s}
+html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,transform .6s cubic-bezier(.16,1,.3,1);transition-delay:.78s}
 .nto-sub{font-family:var(--mono);font-size:.72rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;background:var(--accent);color:#fff;padding:.95em 1.6em;transition:background .2s}
 .nto-sub:hover{background:var(--accent-deep)}
 .nto-foot-meta{display:flex;flex-direction:column;gap:.4rem;text-align:right;margin-left:auto}
@@ -479,6 +472,10 @@ html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,tra
 .nto-elsewhere{font-family:var(--mono);font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--nto-muted)}
 .nto-elsewhere a{color:var(--nto-muted);border-bottom:1px solid transparent;transition:color .2s,border-color .2s}
 .nto-elsewhere a:hover{color:var(--accent);border-color:var(--accent)}
+.nto-close-glyph{position:absolute;left:clamp(-1.4rem,-2vw,-.6rem);bottom:clamp(-.2rem,0vw,.6rem);font-family:var(--sans);font-weight:600;font-size:clamp(2.6rem,7vw,5rem);line-height:.7;color:transparent;-webkit-text-stroke:1.5px var(--nto-rule);background:none;border:none;padding:0;cursor:pointer;user-select:none;opacity:0}
+html.nav-open .nto-close-glyph{opacity:1;transition:opacity .5s ease .5s,color .3s ease,-webkit-text-stroke-color .3s ease,transform .35s cubic-bezier(.16,1,.3,1)}
+.nto-close-glyph:hover{color:var(--accent);-webkit-text-stroke-color:var(--accent);transform:translateY(-8px) rotate(-4deg)}
+@media(max-width:860px){.nto-close-glyph{display:none}}
 @media(max-width:620px){
   .nto-desc{display:none}
   .nto-foot{flex-direction:column;align-items:flex-start}
@@ -488,6 +485,7 @@ html.nav-open .nto-foot{opacity:1;transform:none;transition:opacity .5s ease,tra
   .nav-takeover{clip-path:none!important;transition:opacity .2s ease,visibility 0s}
   html.nav-open .nav-takeover{transition:opacity .2s ease}
   .nto-row,html.nav-open .nto-row,.nto-foot,html.nav-open .nto-foot{transform:none;transition:opacity .2s ease;transition-delay:0s}
+  html.nav-open .nto-close-glyph{transition:opacity .2s ease;transform:none}
 }
 '''
 
@@ -529,26 +527,22 @@ def nav_overlay(prefix=""):
       <span class="nto-elsewhere"><a href="{GHOST_URL}" target="_blank" rel="noopener">Ghost</a> · <a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub</a></span>
     </div>
   </div>
+  <button class="nto-close-glyph" data-nav-close aria-label="Close menu">✕</button>
 </div>
 <script>{OVERLAY_JS}</script>'''
 
 
 def masthead(prefix="", active=""):
-    nav = "".join(
-        f'<a class="{("is-active" if active==k else "")}" href="{prefix}{href}">{label}</a>'
-        for k, label, href in NAV)
     return f"""
 <header class="site-top">
   <div class="site-top-inner">
-    <a class="site-top-mark" href="{prefix}index.html" aria-label="Token Wisdom — home"><img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb"></a>
     <a class="site-top-back" href="{prefix}index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
-    <nav class="site-top-nav" id="site-nav">{nav}
-      <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
-    </nav>
+    <a class="site-top-mark" href="{prefix}index.html" aria-label="Token Wisdom — home"><img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb"></a>
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
       <span class="ham"><span></span><span></span><span></span></span>
       <span class="mtxt">Menu</span>
     </button>
+    <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
   </div>
 </header>
 {nav_overlay(prefix)}"""
