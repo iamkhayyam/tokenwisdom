@@ -2,7 +2,7 @@
   "current_year": 2026,
   "current_week": 23,
   "total_weeks": 75,
-  "total_tnl": 749,
+  "total_tnl": 750,
   "total_tws": 750,
   "weeks": [
     {
@@ -9015,6 +9015,17 @@
       "year": 2025,
       "week": 40,
       "tnl": [
+        {
+          "id": "1366767650",
+          "title": "Ex Meta Engineer Develops Tech That Makes Any Screen 3D Using a Camera",
+          "note": "",
+          "excerpt": "The team proposed a method of utilizing head-tracked motion parallax to bring 3D capabilities to everyday devices.",
+          "url": "https://80.lv/articles/former-meta-engineer-builds-tech-that-turns-any-screen-3d-with-just-a-camera",
+          "tags": [],
+          "created": "2025-10-03T05:12:18.154Z",
+          "cover": "https://cdn.80.lv/api/upload/meta/44442/images/68de1a4a83713/contain_1200x630.jpg",
+          "favorite": false
+        },
         {
           "id": "1363319899",
           "title": "How LastPass and the Password Industry Have Evolved - CNET",
@@ -28298,6 +28309,20 @@
       "year": 2025,
       "week": 39,
       "section": "tws"
+    },
+    {
+      "id": "1366767650",
+      "title": "Ex Meta Engineer Develops Tech That Makes Any Screen 3D Using a Camera",
+      "note": "",
+      "excerpt": "The team proposed a method of utilizing head-tracked motion parallax to bring 3D capabilities to everyday devices.",
+      "url": "https://80.lv/articles/former-meta-engineer-builds-tech-that-turns-any-screen-3d-with-just-a-camera",
+      "tags": [],
+      "created": "2025-10-03T05:12:18.154Z",
+      "cover": "https://cdn.80.lv/api/upload/meta/44442/images/68de1a4a83713/contain_1200x630.jpg",
+      "favorite": false,
+      "year": 2025,
+      "week": 40,
+      "section": "tnl"
     },
     {
       "id": "1363319899",
