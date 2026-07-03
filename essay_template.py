@@ -478,7 +478,7 @@ def demo_margin_notes(html_str):
 # ============================================================
 
 COLOPHON_CSS = """
-.tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#6fe0bc;position:relative;background:var(--cg);color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
+.tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#6fe0bc;position:relative;background-color:var(--cg);background-image:linear-gradient(100deg,var(--cg) 0%,var(--cg) 46%,color-mix(in srgb,var(--cg) 35%,transparent) 70%,transparent 94%),url(assets/fortune_teller.gif);background-repeat:no-repeat,no-repeat;background-position:center,right -30px bottom 78px;background-size:cover,460px auto;color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
 .tw-colophon .col-inner{position:relative;max-width:1240px;margin:0 auto;padding:0 52px}
 .tw-colophon .col-ghost-wrap{position:absolute;left:0;top:0;bottom:0;z-index:0;display:flex;align-items:center;pointer-events:none}
 .tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(200px,32vw,440px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.055)}
