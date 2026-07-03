@@ -57,6 +57,7 @@ BASE_CSS = r'''
   --accent-wash: oklch(0.95 0.030 60);
   --teal: oklch(0.520 0.070 195);
   --gold: oklch(0.700 0.095 85);
+  --mint: oklch(0.680 0.115 160);
   --sans:'Archivo',-apple-system,BlinkMacSystemFont,sans-serif;
   --display:'Libre Caslon Display',Georgia,serif;
   --display-weight:400;
@@ -592,7 +593,7 @@ TERM_CSS = r'''
 .term-wrap{max-width:var(--w);margin:0 auto;padding:34px 28px 10px}
 .term-back{display:inline-block;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:1.4rem}
 .term-eyebrow{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;margin-bottom:.6rem}
-.lex-text-accent{color:var(--accent)} .lex-text-teal{color:var(--teal)} .lex-text-gold{color:var(--gold)}
+.lex-text-accent{color:var(--accent)} .lex-text-teal{color:var(--teal)} .lex-text-gold{color:var(--gold)} .lex-text-mint{color:var(--mint)}
 .term-title{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(2.6rem,6vw,4.6rem);line-height:.92;letter-spacing:-.03em;color:var(--ink);margin-bottom:1rem}
 .term-def{font-family:var(--serif);font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.4;color:var(--ink);max-width:780px;margin-bottom:.6rem}
 .term-def-src{font-family:var(--mono);font-size:.68rem;letter-spacing:.04em;color:var(--ink-faint);margin-bottom:2.4rem}

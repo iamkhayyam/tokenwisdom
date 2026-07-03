@@ -19,6 +19,12 @@
   --teal-light: #d4ede8;
   --gold: #b8860b;
   --gold-light: #f5e9c4;
+  /* Mint — pulled from the Fortune Brand crystal-ball mark's neon glow. A
+     second, brighter accent for occasional punch (404, delight moments);
+     --teal above stays the muted structural color (lexicon categories). */
+  --mint: #2f9e82;
+  --mint-glow: #5fd9b6;
+  --mint-dim: #d3ede5;
 
   --serif: 'Source Serif 4', Georgia, serif;
   --display: 'Libre Caslon Display', Georgia, serif;
@@ -33,6 +39,12 @@
 /* Dark mode — the Index palette (warm-dark ground, amber accent). Overrides the
    same custom properties, so any surface built on the tokens themes for free.
    Opt-in per page via <html data-theme="dark"> + the essay theme toggle. */
+/* Dark surfaces run on sea-foam, not orange — orange stays the constant brand
+   signal on light backgrounds (logo, primary CTAs); mint is the highlight/
+   link color wherever the surface itself is dark (essays default dark, the
+   colophon is always dark). --accent/-deep/-muted are the actual role used
+   by the existing link/hover network (prose, sidebar, tag-cloud, etc.), so
+   repointing them here is what makes it cascade with zero markup changes. */
 :root[data-theme="dark"] {
   --ink: #f3ecdd;
   --ink-muted: #a59c8a;
@@ -40,13 +52,21 @@
   --paper: #15130e;
   --paper-warm: #1f1c12;
   --paper-rule: #2a2718;
-  --accent: #d98a4e;
-  --accent-muted: #4a3a28;
-  --accent-deep: #e3a464;
+  --mint: #6fe0bc;
+  --mint-glow: #8ff5d4;
+  --mint-dim: #1c352c;
+  --accent: var(--mint);
+  --accent-muted: var(--mint-dim);
+  --accent-deep: var(--mint-glow);
   --teal: #4fa39b;
   --teal-light: #1e2a28;
   --gold: #c8a85e;
   --gold-light: #2a2416;
+  /* True orange, for the rare dark-surface spot that must stay brand-orange
+     (e.g. the 404's one deliberate primary-CTA anchor) — --accent above no
+     longer means "orange" in dark mode, so reach for this instead. */
+  --brand-orange: #d98a4e;
+  --brand-orange-deep: #e3a464;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -1831,7 +1851,7 @@ img { max-width: 100%; height: auto; }
 @media (max-width:680px){.essay-index .ei-inner{padding:0 12px}.essay-index .ei-panel{left:12px;right:12px}.essay-index .ei-current{max-width:32%}}
 @media (prefers-reduced-motion:reduce){.essay-index,.essay-index .ei-panel,.essay-index .ei-seg-fill{transition:none}}
 
-.tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#d98a4e;position:relative;background:var(--cg);color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
+.tw-colophon{--cg:oklch(0.195 0.055 31);--ci:#f1ead9;--ci2:#bcb3a0;--cm:#8b8270;--cf:#5f5848;--cr:rgba(241,234,217,.11);--cr2:rgba(241,234,217,.06);--cpanel:rgba(241,234,217,.025);--cacc:#6fe0bc;position:relative;background:var(--cg);color:var(--ci);overflow:hidden;border-top:1px solid var(--cr);font-family:var(--sans)}
 .tw-colophon .col-inner{position:relative;max-width:1240px;margin:0 auto;padding:0 52px}
 .tw-colophon .col-ghost-wrap{position:absolute;left:0;top:0;bottom:0;z-index:0;display:flex;align-items:center;pointer-events:none}
 .tw-colophon .col-ghost{font-family:var(--display);font-weight:400;font-size:clamp(200px,32vw,440px);line-height:.82;letter-spacing:-.04em;white-space:nowrap;color:transparent;-webkit-text-stroke:1px rgba(241,234,217,.055)}
@@ -1852,7 +1872,7 @@ img { max-width: 100%; height: auto; }
 .tw-colophon .col-t2{position:relative;z-index:1;padding:30px 0}
 .tw-colophon .col-links{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:10px}
 .tw-colophon .col-links a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--ci2);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;background:var(--cpanel);transition:color .18s ease,border-color .18s ease,background .18s ease}
-.tw-colophon .col-links a:hover{color:var(--ci);border-color:var(--cacc);background:rgba(217,138,78,.06)}
+.tw-colophon .col-links a:hover{color:var(--ci);border-color:var(--cacc);background:rgba(111,224,188,.06)}
 .tw-colophon .col-meta{display:flex;flex-wrap:wrap;gap:10px}
 .tw-colophon .col-meta a{font-family:var(--sans);font-size:14px;white-space:nowrap;color:var(--cm);border:1px solid var(--cr);border-radius:7px;padding:9px 17px;transition:color .18s ease,border-color .18s ease}
 .tw-colophon .col-meta a:hover{color:var(--ci);border-color:var(--cr)}

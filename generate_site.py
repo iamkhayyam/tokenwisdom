@@ -477,6 +477,12 @@ CSS = r"""
   --teal-light: #d4ede8;
   --gold: #b8860b;
   --gold-light: #f5e9c4;
+  /* Mint — pulled from the Fortune Brand crystal-ball mark's neon glow. A
+     second, brighter accent for occasional punch (404, delight moments);
+     --teal above stays the muted structural color (lexicon categories). */
+  --mint: #2f9e82;
+  --mint-glow: #5fd9b6;
+  --mint-dim: #d3ede5;
 
   --serif: 'Source Serif 4', Georgia, serif;
   --display: 'Libre Caslon Display', Georgia, serif;
@@ -491,6 +497,12 @@ CSS = r"""
 /* Dark mode — the Index palette (warm-dark ground, amber accent). Overrides the
    same custom properties, so any surface built on the tokens themes for free.
    Opt-in per page via <html data-theme="dark"> + the essay theme toggle. */
+/* Dark surfaces run on sea-foam, not orange — orange stays the constant brand
+   signal on light backgrounds (logo, primary CTAs); mint is the highlight/
+   link color wherever the surface itself is dark (essays default dark, the
+   colophon is always dark). --accent/-deep/-muted are the actual role used
+   by the existing link/hover network (prose, sidebar, tag-cloud, etc.), so
+   repointing them here is what makes it cascade with zero markup changes. */
 :root[data-theme="dark"] {
   --ink: #f3ecdd;
   --ink-muted: #a59c8a;
@@ -498,13 +510,21 @@ CSS = r"""
   --paper: #15130e;
   --paper-warm: #1f1c12;
   --paper-rule: #2a2718;
-  --accent: #d98a4e;
-  --accent-muted: #4a3a28;
-  --accent-deep: #e3a464;
+  --mint: #6fe0bc;
+  --mint-glow: #8ff5d4;
+  --mint-dim: #1c352c;
+  --accent: var(--mint);
+  --accent-muted: var(--mint-dim);
+  --accent-deep: var(--mint-glow);
   --teal: #4fa39b;
   --teal-light: #1e2a28;
   --gold: #c8a85e;
   --gold-light: #2a2416;
+  /* True orange, for the rare dark-surface spot that must stay brand-orange
+     (e.g. the 404's one deliberate primary-CTA anchor) — --accent above no
+     longer means "orange" in dark mode, so reach for this instead. */
+  --brand-orange: #d98a4e;
+  --brand-orange-deep: #e3a464;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -2259,7 +2279,7 @@ def _prefix(from_dir):
     return {"root": "", "sub": "../", "abs": "/"}.get(from_dir, "../")
 
 
-def head_tag(title, prefix="", noindex=False, description=None, og_url=None):
+def head_tag(title, prefix="", noindex=False, description=None, og_url=None, theme=None):
     from tw_theme import meta_head
     fonts = (
         "https://fonts.googleapis.com/css2?"
@@ -2269,8 +2289,9 @@ def head_tag(title, prefix="", noindex=False, description=None, og_url=None):
         "family=DM+Mono:wght@300;400;500&display=swap"
     )
     robots = '\n<meta name="robots" content="noindex, nofollow">' if noindex else ""
+    theme_attr = f' data-theme="{theme}"' if theme else ""
     return f"""<!DOCTYPE html>
-<html lang="en">
+<html lang="en"{theme_attr}>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -2358,9 +2379,9 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
 
 
 def page_shell(title, body, css_path, from_dir="root", theme_toggle=False, noindex=False,
-               description=None, og_url=None):
+               description=None, og_url=None, theme=None):
     head = head_tag(title, prefix=_prefix(from_dir), noindex=noindex, description=description,
-                    og_url=og_url).format(css_path=css_path)
+                    og_url=og_url, theme=theme).format(css_path=css_path)
     return head + site_top(from_dir, theme_toggle=theme_toggle) + body
 
 
@@ -2370,34 +2391,77 @@ def page_shell(title, body, css_path, from_dir="root", theme_toggle=False, noind
 
 def render_404(posts_count, tags_count, years_span, top_tags):
     """docs/404.html — Cloudflare Pages serves it for every missing route, at
-    any path depth, so all links/assets are root-absolute (from_dir='abs')."""
+    any path depth, so all links/assets are root-absolute (from_dir='abs').
+    Ships dark (data-theme="dark", static — no toggle needed for a one-off
+    page) with a mint accent pulled from the Fortune Brand mark's glow,
+    paired against the usual burnt-orange for a bit of punch."""
     body = f"""
 <style>
-.nf-wrap {{ max-width: 680px; margin: 0 auto; padding: 5.5rem 28px 7rem; text-align: center; }}
-.nf-orb {{ width: 168px; margin: 0 auto 2.6rem; }}
-.nf-orb img {{ width: 100%; height: auto; }}
+.nf-wrap {{ max-width: 680px; margin: 0 auto; padding: 5.5rem 28px 7rem; text-align: center; position: relative; }}
+.nf-orb {{ width: 168px; margin: 0 auto 2.6rem; position: relative; }}
+.nf-orb::before {{
+  content: ''; position: absolute; inset: -58px; border-radius: 50%;
+  background: radial-gradient(circle, var(--mint-glow) 0%, transparent 62%);
+  opacity: .4; filter: blur(9px); mix-blend-mode: screen;
+  animation: nf-pulse 3.6s ease-in-out infinite;
+}}
+@keyframes nf-pulse {{ 0%, 100% {{ opacity: .3; }} 50% {{ opacity: .58; }} }}
+.nf-orb img {{ width: 100%; height: auto; position: relative; }}
+.nf-motes {{ position: absolute; inset: -74px; pointer-events: none; }}
+.nf-mote {{
+  position: absolute; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--mint-glow); box-shadow: 0 0 9px 2.5px var(--mint-glow);
+  opacity: 0; animation: nf-float ease-in-out infinite;
+}}
+.nf-mote:nth-child(1) {{ top: 10%;  left: 14%;  animation-duration: 7s;   animation-delay: 0s; }}
+.nf-mote:nth-child(2) {{ top: 66%;  left: 2%;   animation-duration: 8.5s; animation-delay: 1.3s; }}
+.nf-mote:nth-child(3) {{ top: 12%;  left: 84%;  animation-duration: 6.5s; animation-delay: 2.6s; }}
+.nf-mote:nth-child(4) {{ top: 76%;  left: 88%;  animation-duration: 9s;   animation-delay: .7s; }}
+.nf-mote:nth-child(5) {{ top: 44%;  left: -6%;  animation-duration: 7.5s; animation-delay: 3.3s; }}
+.nf-mote:nth-child(6) {{ top: 42%;  left: 100%; animation-duration: 8s;   animation-delay: 1.9s; }}
+@keyframes nf-float {{
+  0%, 100% {{ opacity: 0; transform: translate(0,0) scale(.6); }}
+  18% {{ opacity: .9; }}
+  50% {{ opacity: .55; transform: translate(9px,-18px) scale(1); }}
+  84% {{ opacity: .75; }}
+}}
 .nf-kicker {{ font-family: var(--mono); font-size: .7rem; letter-spacing: .22em;
-  text-transform: uppercase; color: var(--accent); margin-bottom: 1.1rem; }}
+  text-transform: uppercase; margin-bottom: 1.1rem; }}
+.nf-kicker .dim {{ color: var(--ink-faint); }}
+.nf-kicker .accent {{ color: var(--brand-orange); }}
+.nf-kicker .mint {{ color: var(--mint-glow); }}
 .nf-title {{ font-family: var(--display, 'Libre Caslon Display', Georgia, serif); font-weight: 400;
   font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: .95; letter-spacing: -.02em;
   color: var(--ink); margin: 0 0 1.4rem; border: none; padding: 0; }}
 .nf-dek {{ font-family: var(--serif, 'Source Serif 4', Georgia, serif); font-size: 1.15rem;
   line-height: 1.6; color: var(--ink-muted); max-width: 46ch; margin: 0 auto 1.1rem; }}
+.nf-dek .mint {{ color: var(--mint-glow); }}
 .nf-path {{ font-family: var(--mono); font-size: .82rem; color: var(--ink-faint);
   word-break: break-all; margin-bottom: 2.6rem; }}
 .nf-links {{ display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;
-  border-top: 0.5px solid var(--paper-rule); padding-top: 2rem; }}
+  position: relative; padding-top: 2.3rem; }}
+.nf-links::before {{
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 140px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--mint) 50%, transparent);
+  opacity: .6;
+}}
 .nf-links a {{ font-family: var(--mono); font-size: .72rem; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink); border: 0.5px solid var(--paper-rule);
-  padding: .65rem 1.1rem; transition: all .15s ease; }}
-.nf-links a:hover {{ color: var(--accent); border-color: var(--accent); }}
+  text-transform: uppercase; color: var(--ink); padding: .65rem 1.1rem; transition: all .15s ease;
+  border: 0.5px solid color-mix(in srgb, var(--mint) 30%, var(--paper-rule)); }}
+.nf-links a:first-child {{ border-color: color-mix(in srgb, var(--brand-orange) 35%, var(--paper-rule)); }}
+.nf-links a:hover {{ color: var(--mint-glow); border-color: var(--mint); box-shadow: 0 0 0 1px var(--mint) inset; }}
+.nf-links a:first-child:hover {{ color: var(--brand-orange); border-color: var(--brand-orange); box-shadow: 0 0 0 1px var(--brand-orange) inset; }}
 </style>
 <main class="nf-wrap">
-  <div class="nf-orb"><img src="/assets/crystal-ball.svg" alt="The Token Wisdom crystal ball"></div>
-  <div class="nf-kicker">Error 404 · Nothing Foretold Here</div>
+  <div class="nf-orb">
+    <div class="nf-motes"><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span></div>
+    <img src="/assets/crystal-ball.svg" alt="The Token Wisdom crystal ball">
+  </div>
+  <div class="nf-kicker"><span class="accent">Error 404</span><span class="dim"> &middot; </span><span class="mint">Nothing Foretold Here</span></div>
   <h1 class="nf-title">The ball has gone cloudy.</h1>
   <p class="nf-dek">Whatever you were looking for isn&rsquo;t in the cards &mdash;
-  moved, renamed, or never written. The archive, however, sees all.</p>
+  moved, renamed, or never written. <span class="mint">The archive, however, sees all.</span></p>
   <div class="nf-path" data-nf-path></div>
   <nav class="nf-links">
     <a href="/index.html">Front Page</a>
@@ -2409,7 +2473,7 @@ def render_404(posts_count, tags_count, years_span, top_tags):
 <script>(function(){{var p=document.querySelector('[data-nf-path]');
 if(p&&location.pathname&&location.pathname!=='/404.html')p.textContent=location.pathname;}})();</script>
 """
-    page = page_shell("Page Not Found", body, "/style.css", from_dir="abs", noindex=True)
+    page = page_shell("Page Not Found", body, "/style.css", from_dir="abs", noindex=True, theme="dark")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="abs")
     return page
 

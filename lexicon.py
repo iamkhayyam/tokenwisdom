@@ -47,9 +47,9 @@ CAT_COLOR = {
     "Concepts": "accent",
     "Technical Terms": "gold",
     "Acronyms": "teal",
-    "People & Works": "accent",
+    "People & Works": "mint",
 }
-COLOR_VAR = {"accent": "var(--accent)", "teal": "var(--teal)", "gold": "var(--gold)"}
+COLOR_VAR = {"accent": "var(--accent)", "teal": "var(--teal)", "gold": "var(--gold)", "mint": "var(--mint)"}
 
 
 def esc(s):

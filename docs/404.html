@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -83,31 +83,71 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 <script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
 <style>
-.nf-wrap { max-width: 680px; margin: 0 auto; padding: 5.5rem 28px 7rem; text-align: center; }
-.nf-orb { width: 168px; margin: 0 auto 2.6rem; }
-.nf-orb img { width: 100%; height: auto; }
+.nf-wrap { max-width: 680px; margin: 0 auto; padding: 5.5rem 28px 7rem; text-align: center; position: relative; }
+.nf-orb { width: 168px; margin: 0 auto 2.6rem; position: relative; }
+.nf-orb::before {
+  content: ''; position: absolute; inset: -58px; border-radius: 50%;
+  background: radial-gradient(circle, var(--mint-glow) 0%, transparent 62%);
+  opacity: .4; filter: blur(9px); mix-blend-mode: screen;
+  animation: nf-pulse 3.6s ease-in-out infinite;
+}
+@keyframes nf-pulse { 0%, 100% { opacity: .3; } 50% { opacity: .58; } }
+.nf-orb img { width: 100%; height: auto; position: relative; }
+.nf-motes { position: absolute; inset: -74px; pointer-events: none; }
+.nf-mote {
+  position: absolute; width: 5px; height: 5px; border-radius: 50%;
+  background: var(--mint-glow); box-shadow: 0 0 9px 2.5px var(--mint-glow);
+  opacity: 0; animation: nf-float ease-in-out infinite;
+}
+.nf-mote:nth-child(1) { top: 10%;  left: 14%;  animation-duration: 7s;   animation-delay: 0s; }
+.nf-mote:nth-child(2) { top: 66%;  left: 2%;   animation-duration: 8.5s; animation-delay: 1.3s; }
+.nf-mote:nth-child(3) { top: 12%;  left: 84%;  animation-duration: 6.5s; animation-delay: 2.6s; }
+.nf-mote:nth-child(4) { top: 76%;  left: 88%;  animation-duration: 9s;   animation-delay: .7s; }
+.nf-mote:nth-child(5) { top: 44%;  left: -6%;  animation-duration: 7.5s; animation-delay: 3.3s; }
+.nf-mote:nth-child(6) { top: 42%;  left: 100%; animation-duration: 8s;   animation-delay: 1.9s; }
+@keyframes nf-float {
+  0%, 100% { opacity: 0; transform: translate(0,0) scale(.6); }
+  18% { opacity: .9; }
+  50% { opacity: .55; transform: translate(9px,-18px) scale(1); }
+  84% { opacity: .75; }
+}
 .nf-kicker { font-family: var(--mono); font-size: .7rem; letter-spacing: .22em;
-  text-transform: uppercase; color: var(--accent); margin-bottom: 1.1rem; }
+  text-transform: uppercase; margin-bottom: 1.1rem; }
+.nf-kicker .dim { color: var(--ink-faint); }
+.nf-kicker .accent { color: var(--brand-orange); }
+.nf-kicker .mint { color: var(--mint-glow); }
 .nf-title { font-family: var(--display, 'Libre Caslon Display', Georgia, serif); font-weight: 400;
   font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: .95; letter-spacing: -.02em;
   color: var(--ink); margin: 0 0 1.4rem; border: none; padding: 0; }
 .nf-dek { font-family: var(--serif, 'Source Serif 4', Georgia, serif); font-size: 1.15rem;
   line-height: 1.6; color: var(--ink-muted); max-width: 46ch; margin: 0 auto 1.1rem; }
+.nf-dek .mint { color: var(--mint-glow); }
 .nf-path { font-family: var(--mono); font-size: .82rem; color: var(--ink-faint);
   word-break: break-all; margin-bottom: 2.6rem; }
 .nf-links { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;
-  border-top: 0.5px solid var(--paper-rule); padding-top: 2rem; }
+  position: relative; padding-top: 2.3rem; }
+.nf-links::before {
+  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+  width: 140px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--mint) 50%, transparent);
+  opacity: .6;
+}
 .nf-links a { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink); border: 0.5px solid var(--paper-rule);
-  padding: .65rem 1.1rem; transition: all .15s ease; }
-.nf-links a:hover { color: var(--accent); border-color: var(--accent); }
+  text-transform: uppercase; color: var(--ink); padding: .65rem 1.1rem; transition: all .15s ease;
+  border: 0.5px solid color-mix(in srgb, var(--mint) 30%, var(--paper-rule)); }
+.nf-links a:first-child { border-color: color-mix(in srgb, var(--brand-orange) 35%, var(--paper-rule)); }
+.nf-links a:hover { color: var(--mint-glow); border-color: var(--mint); box-shadow: 0 0 0 1px var(--mint) inset; }
+.nf-links a:first-child:hover { color: var(--brand-orange); border-color: var(--brand-orange); box-shadow: 0 0 0 1px var(--brand-orange) inset; }
 </style>
 <main class="nf-wrap">
-  <div class="nf-orb"><img src="/assets/crystal-ball.svg" alt="The Token Wisdom crystal ball"></div>
-  <div class="nf-kicker">Error 404 · Nothing Foretold Here</div>
+  <div class="nf-orb">
+    <div class="nf-motes"><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span></div>
+    <img src="/assets/crystal-ball.svg" alt="The Token Wisdom crystal ball">
+  </div>
+  <div class="nf-kicker"><span class="accent">Error 404</span><span class="dim"> &middot; </span><span class="mint">Nothing Foretold Here</span></div>
   <h1 class="nf-title">The ball has gone cloudy.</h1>
   <p class="nf-dek">Whatever you were looking for isn&rsquo;t in the cards &mdash;
-  moved, renamed, or never written. The archive, however, sees all.</p>
+  moved, renamed, or never written. <span class="mint">The archive, however, sees all.</span></p>
   <div class="nf-path" data-nf-path></div>
   <nav class="nf-links">
     <a href="/index.html">Front Page</a>
@@ -148,7 +188,7 @@ if(p&&location.pathname&&location.pathname!=='/404.html')p.textContent=location.
       <div class="col-bar">
         <div class="col-bar-l">
           <span class="col-strong">© 2013–2026 Token Wisdom</span>
-          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span>268 Posts · 84 Tags</span>
           <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
         </div>
         <div class="col-bar-r">
