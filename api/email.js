@@ -11,13 +11,15 @@ function client() {
   return resend;
 }
 
-async function send({ to, subject, html, text }) {
+async function send({ to, subject, html, text, replyTo }) {
   const c = client();
   if (!c) {
-    console.log(`\n[email:dev] to=${to}\n  subject: ${subject}\n  ${text || html}\n`);
+    console.log(`\n[email:dev] to=${to}${replyTo ? ` replyTo=${replyTo}` : ""}\n  subject: ${subject}\n  ${text || html}\n`);
     return { dev: true };
   }
-  const { data, error } = await c.emails.send({ from: FROM, to, subject, html, text });
+  const payload = { from: FROM, to, subject, html, text };
+  if (replyTo) payload.replyTo = replyTo;
+  const { data, error } = await c.emails.send(payload);
   if (error) throw new Error(`Resend: ${error.message || JSON.stringify(error)}`);
   return data;
 }
@@ -61,4 +63,24 @@ async function sendModerationNotice({ to, postSlug, body, approveUrl, hideUrl })
   });
 }
 
-module.exports = { send, sendMagicLink, sendModerationNotice };
+async function sendQuestionNotice({ to, replyTo, postSlug, passage, question, asker, sourceUrl }) {
+  const quoted = passage
+    ? `<blockquote style="border-left:3px solid #e2ddd4;margin:.6em 0;padding:.2em 0 .2em 1em;color:#4a453d">${passage}</blockquote>`
+    : "";
+  return send({
+    to,
+    replyTo,
+    subject: `AMA question from ${asker || "a reader"} — ${postSlug}`,
+    text: `${asker || "A reader"} asked${passage ? ` about a passage in ${postSlug}` : ""}:\n\n"${question}"\n\n${passage ? `Passage: "${passage}"\n\n` : ""}Source: ${sourceUrl}\nReply directly to this email to answer ${asker || "them"}.`,
+    html: wrap(
+      "New Ask Me Anything question",
+      `<p style="font:12px ui-monospace,monospace;color:#8a8278">${postSlug}${asker ? ` · from ${asker}` : ""}</p>
+       ${quoted}
+       <p style="font-size:17px;color:#1a1814"><strong>${question}</strong></p>
+       <p><a href="${sourceUrl}" style="color:#b4521f">Read the source passage →</a></p>
+       <p style="font-size:12px;color:#8a8278">Reply to this email to answer directly.</p>`
+    ),
+  });
+}
+
+module.exports = { send, sendMagicLink, sendModerationNotice, sendQuestionNotice };

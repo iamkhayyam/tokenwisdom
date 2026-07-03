@@ -3,7 +3,7 @@
 const crypto = require("crypto");
 const express = require("express");
 const { q, one } = require("./db");
-const { sendModerationNotice } = require("./email");
+const { sendModerationNotice, sendQuestionNotice } = require("./email");
 const auth = require("./auth");
 
 const { optionalAuth, requireAuth, requireAdmin, signAction, verifyAction, publicMember } = auth;
@@ -13,9 +13,10 @@ const API_BASE = process.env.API_BASE || `http://localhost:${process.env.PORT ||
 const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
 const MAX_BODY = 5000;
 
-const KINDS = new Set(["highlight", "note", "response", "article_response"]);
-const PRIVATE_KINDS = new Set(["highlight", "note"]);
+const KINDS = new Set(["highlight", "note", "response", "article_response", "question"]);
+const PRIVATE_KINDS = new Set(["highlight", "note", "question"]); // question = private to the author (AMA)
 const PUBLIC_KINDS = new Set(["response", "article_response"]);
+const NEEDS_BODY = new Set(["response", "article_response", "question"]);
 
 const shape = (a) => ({
   id: a.id,
@@ -55,6 +56,7 @@ router.get("/posts/:slug/annotations", optionalAuth, async (req, res) => {
       highlights: all.filter((a) => a.kind === "highlight" || a.kind === "note"),
       responses: all.filter((a) => a.kind === "response"),
       articleResponses: all.filter((a) => a.kind === "article_response"),
+      questions: all.filter((a) => a.kind === "question"), // caller's own AMA questions
     });
   } catch (e) {
     res.status(500).json({ error: e.message });
@@ -69,11 +71,14 @@ router.post("/posts/:slug/annotations", optionalAuth, requireAuth, async (req, r
     if (!KINDS.has(kind)) return res.status(400).json({ error: "Invalid kind" });
 
     const privacy = PRIVATE_KINDS.has(kind) ? "private" : "public";
-    if (PUBLIC_KINDS.has(kind) && !String(body || "").trim())
-      return res.status(400).json({ error: "Response text required" });
+    if (NEEDS_BODY.has(kind) && !String(body || "").trim())
+      return res.status(400).json({ error: kind === "question" ? "Question text required" : "Response text required" });
     if (body && String(body).length > MAX_BODY)
       return res.status(400).json({ error: "Too long" });
-    if (kind !== "article_response" && !parent_id && !anchor && kind !== "highlight" && kind !== "note")
+    // Highlights/notes/questions may be anchorless (a question can be asked about the
+    // whole piece from the AMA box); anchored responses need an anchor or a parent.
+    const anchorlessOk = new Set(["highlight", "note", "article_response", "question"]);
+    if (!anchorlessOk.has(kind) && !parent_id && !anchor)
       return res.status(400).json({ error: "Anchor required" });
 
     if (parent_id) {
@@ -106,6 +111,9 @@ router.post("/posts/:slug/annotations", optionalAuth, requireAuth, async (req, r
 
     if (privacy === "public" && status === "pending" && ADMIN_EMAIL) {
       notifyAdmin(id, slug, String(body)).catch((e) => console.error("notify:", e.message));
+    }
+    if (kind === "question" && ADMIN_EMAIL) {
+      notifyQuestion(slug, String(body), anchor, req.member).catch((e) => console.error("notify-q:", e.message));
     }
 
     const row = await one(
@@ -169,6 +177,23 @@ router.get("/admin/moderation", optionalAuth, requireAdmin, async (req, res) => 
   }
 });
 
+// AMA question queue (private questions to the author). status: visible = open,
+// hidden = archived/answered (reuse the same moderation action endpoint to hide).
+router.get("/admin/questions", optionalAuth, requireAdmin, async (req, res) => {
+  try {
+    const status = ["visible", "hidden"].includes(req.query.status) ? req.query.status : "visible";
+    const rows = await q(
+      `SELECT a.*, m.display_name, m.avatar_color, m.role, m.email FROM annotations a
+       JOIN members m ON m.id = a.member_id
+       WHERE a.kind = 'question' AND a.status = ? ORDER BY a.created_at DESC LIMIT 200`,
+      [status]
+    );
+    res.json({ status, items: rows.map((r) => ({ ...shape(r), email: r.email })) });
+  } catch (e) {
+    res.status(500).json({ error: e.message });
+  }
+});
+
 router.post("/admin/annotations/:id/:action", optionalAuth, requireAdmin, async (req, res) => {
   try {
     const result = await applyModeration(req.params.id, req.params.action);
@@ -214,6 +239,21 @@ async function notifyAdmin(id, slug, body) {
   await sendModerationNotice({
     to: ADMIN_EMAIL, postSlug: slug, body: body.slice(0, 600),
     approveUrl: link("approve"), hideUrl: link("hide"),
+  });
+}
+
+const SITE_ORIGIN = (process.env.SITE_ORIGIN || "").split(",")[0] || "https://tokenwisdom.pages.dev";
+async function notifyQuestion(slug, question, anchor, member) {
+  const passage = anchor && anchor.exact ? String(anchor.exact).slice(0, 600) : "";
+  const frag = anchor && anchor.exact ? "#q=" + encodeURIComponent(String(anchor.exact).slice(0, 120)) : "";
+  await sendQuestionNotice({
+    to: ADMIN_EMAIL,
+    replyTo: member.email,               // reply straight to the asker
+    postSlug: slug,
+    passage,
+    question: question.slice(0, 2000),
+    asker: member.display_name || member.email,
+    sourceUrl: `${SITE_ORIGIN}/posts/${slug}.html${frag}`,
   });
 }
 

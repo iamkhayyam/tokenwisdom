@@ -19,6 +19,18 @@ Worker edge. The static site stays static; all interactivity is a dependency-fre
 and are copied during generation. Post pages get the client injected via
 `community_assets()` in `generate_site.py` (post renderers only).
 
+## Ask Me Anything (highlight → question)
+
+The selection toolbar's **Ask** action (and the composer that replaces the old Typeform
+on the AMA post, rendered into `#tw-ask-box`) send a `question` annotation — private to
+the author, sign-in required. Each question emails `ADMIN_EMAIL` (reply-to = the asker)
+and lands in `GET /admin/questions`. The best ones get answered as `ask-me-anything` posts.
+
+> **Deploy gotcha:** `question` is a new value in the `annotations.kind` ENUM. Existing
+> databases need the idempotent `ALTER TABLE annotations MODIFY COLUMN kind …` (already in
+> `schema.sql`) applied via `npm run migrate` **before** the feature works — the API does
+> not auto-migrate on deploy.
+
 ## Model
 
 - **Anonymous readers** highlight + write private notes → stored in `localStorage` only,

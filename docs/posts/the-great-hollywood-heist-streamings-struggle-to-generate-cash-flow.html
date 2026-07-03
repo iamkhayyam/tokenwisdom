@@ -31,23 +31,12 @@
   <div class="site-top-inner">
     <a class="site-top-back" href="../index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
     <a href="../index.html" class="site-top-mark" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
-    <nav class="site-top-nav" id="site-nav">
-      <a href="../archive.html">Archive</a>
-      <a href="../tags/index.html">Topics</a>
-      <a href="../lexicon/index.html">Lexicon</a>
-      <a href="../links/index.html">Links</a>
-      <a href="../tags/a-closer-look.html">Essays</a>
-      <a href="../tags/worthafortune.html">Newsletters</a>
-      <a href="../podcast.html">Podcast</a>
-      <a href="../metrics.html">Report</a>
-      <a href="../about/index.html">About</a>
-      <button class="site-top-theme" data-theme-toggle type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme"><span class="tt-glyph">☼</span><span class="tt-label">Light</span></button>
-      <a class="site-top-sub" href="https://ghost-production-47fd.up.railway.app/subscribe">Subscribe</a>
-    </nav>
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
       <span class="ham"><span></span><span></span><span></span></span>
       <span class="mtxt">Menu</span>
     </button>
+    <button class="site-top-theme" data-theme-toggle type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme"><span class="tt-glyph">☼</span><span class="tt-label">Light</span></button>
+    <a class="site-top-sub" href="https://ghost-production-47fd.up.railway.app/subscribe">Subscribe</a>
   </div>
 </header>
 
@@ -68,6 +57,7 @@
       <span class="nto-elsewhere"><a href="https://ghost-production-47fd.up.railway.app" target="_blank" rel="noopener">Ghost</a> · <a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub</a></span>
     </div>
   </div>
+  <button class="nto-close-glyph" data-nav-close aria-label="Close menu">✕</button>
 </div>
 <script>(function(){
 var root=document.documentElement,ov=document.getElementById('nav-takeover');
@@ -80,7 +70,6 @@ toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefa
 ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
 })();</script>
-<script>(function(){var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){var h=a.getAttribute('href').replace(/^(\.\.\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){a.classList.add('is-active');}});})();</script>
 
 <script>
 (function(){
@@ -105,11 +94,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();
 </script>
 
-<div class="post-top-bar">
-  <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
-  <span class="ptb-issue"><span class="ptb-num">ACL.040 · W50 · Dec 14, 2023</span></span>
-</div>
-
 <article class="essay-frame">
   
   <figure class="essay-cover">
@@ -126,6 +110,8 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <span>3 min read</span>
       <span class="sep">·</span>
       <span>December 14, 2023</span>
+      <span class="sep">·</span>
+      <span>ACL.040 · W50</span>
     </div>
   </header>
   
@@ -248,8 +234,46 @@ Sub-Topics: The Rise of Netflix, The Struggle to Generate Cash Flow, The 'Everyt
     </div>
 
     <div class="col-t2">
-      <div class="col-links"><a href="../index.html">Home</a><a href="../archive.html">Archive</a><a href="../tags/index.html">All Topics</a><a href="../lexicon/index.html">The Lexicon</a><a href="../tags/a-closer-look.html">Essays</a><a href="../tags/worthafortune.html">Newsletters</a><a href="../podcast.html">Podcast</a></div>
-      <div class="col-meta"><a href="../about/index.html">About</a><a href="../links/index.html">Links</a><a href="../metrics.html">Corpus Report</a><a href="https://ghost-production-47fd.up.railway.app" target="_blank" rel="noopener">Ghost CMS</a><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></div>
+      <div class="col-cols">
+        <div class="col-group">
+          <div class="col-group-label">Explore</div>
+          <ul class="col-group-links"><li><a href="../index.html">Home</a></li><li><a href="../archive.html">Archive</a></li><li><a href="../tags/index.html">All Topics</a></li><li><a href="../lexicon/index.html">The Lexicon</a></li><li><a href="../tags/a-closer-look.html">Essays</a></li><li><a href="../tags/worthafortune.html">Newsletters</a></li><li><a href="../podcast.html">Podcast</a></li></ul>
+        </div>
+        <div class="col-group">
+          <div class="col-group-label">More</div>
+          <ul class="col-group-links"><li><a href="../about/index.html">About</a></li><li><a href="../links/index.html">Links</a></li><li><a href="../metrics.html">Corpus Report</a></li><li><a href="https://ghost-production-47fd.up.railway.app" target="_blank" rel="noopener">Ghost CMS</a></li><li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li></ul>
+        </div>
+        
+        <div class="col-group col-group--ama">
+          <div class="col-group-label">Have a question?</div>
+          <button type="button" class="col-ama-ad" data-ama-toggle aria-expanded="false" aria-controls="col-ama-panel">
+            <img class="col-ama-thumb" src="../content/images/body__2024_01_Halpern_final.gif" alt="" loading="lazy">
+            <span class="col-ama-copy"><span class="col-ama-title">📣 Ask Me Anything</span><span class="col-ama-sub">Ask it &rarr;</span></span>
+            <span class="col-ama-chevron" aria-hidden="true">&#9662;</span>
+          </button>
+        </div>
+      </div>
+      
+      <div id="col-ama-panel" class="col-ama-panel" hidden>
+        <div class="col-ama-panel-bg" style="background-image:url(../content/images/body__2024_01_Halpern_final.gif)"></div>
+        <div class="col-ama-frost">
+          <p class="col-ama-hint">Type your question below and hit ask — or highlight anything that sparked it first.</p>
+          <form class="col-ama-form" action="../posts/no-really-ask-me-anything.html" method="get">
+            <input type="text" name="q" placeholder="What do you want to know?" aria-label="Your question">
+            <button type="submit">Ask &rarr;</button>
+          </form>
+          <a class="col-ama-full" href="../posts/no-really-ask-me-anything.html">Read the full AMA thread &rarr;</a>
+        </div>
+      </div>
+      <script>(function(){
+        var btn=document.querySelector('[data-ama-toggle]'),panel=document.getElementById('col-ama-panel');
+        if(!btn||!panel)return;
+        btn.addEventListener('click',function(){
+          var open=panel.hasAttribute('hidden');
+          if(open){panel.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}
+          else{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}
+        });
+      })();</script>
       <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
     </div>
 
@@ -258,7 +282,7 @@ Sub-Topics: The Rise of Netflix, The Struggle to Generate Cash Flow, The 'Everyt
       <div class="col-bar">
         <div class="col-bar-l">
           <span class="col-strong">© 2013–2026 Token Wisdom</span>
-          <span class="col-dot"></span><span>267 Posts · 84 Tags</span>
+          <span class="col-dot"></span><span>267 Posts · 83 Tags</span>
           <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
         </div>
         <div class="col-bar-r">

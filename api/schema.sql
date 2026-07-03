@@ -142,7 +142,7 @@ CREATE TABLE IF NOT EXISTS annotations (
   id         VARCHAR(36) PRIMARY KEY,
   post_slug  VARCHAR(512) NOT NULL,
   member_id  VARCHAR(36) NOT NULL,
-  kind       ENUM('highlight','note','response','article_response') NOT NULL,
+  kind       ENUM('highlight','note','response','article_response','question') NOT NULL,
   body       TEXT,
   privacy    ENUM('private','public') NOT NULL DEFAULT 'private',
   parent_id  VARCHAR(36),
@@ -159,3 +159,8 @@ CREATE INDEX idx_annotations_member ON annotations(member_id);
 CREATE INDEX idx_annotations_parent ON annotations(parent_id);
 CREATE INDEX idx_sessions_member    ON sessions(member_id);
 CREATE INDEX idx_auth_tokens_member ON auth_tokens(member_id);
+
+-- Idempotent: adds the 'question' kind (AMA) to any pre-existing annotations
+-- table. Re-running is a harmless no-op once the enum already matches.
+ALTER TABLE annotations
+  MODIFY COLUMN kind ENUM('highlight','note','response','article_response','question') NOT NULL;

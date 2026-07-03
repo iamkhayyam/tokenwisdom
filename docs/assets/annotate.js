@@ -228,10 +228,12 @@
     respond: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7A8.5 8.5 0 0 1 12.5 3 8.38 8.38 0 0 1 21 11.5z"/></svg>',
     share: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="M8.6 13.5l6.8 4M15.4 6.5l-6.8 4"/></svg>',
     note: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>',
+    ask: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9.2 9.3a2.8 2.8 0 0 1 5.4 1c0 1.9-2.6 2.3-2.6 3.9"/><circle cx="12" cy="17.2" r="0.6" fill="currentColor" stroke="none"/></svg>',
   };
   var toolbar = el("div", { class: "tw-toolbar" }, [
     el("button", { class: "tw-tb-btn", "data-act": "highlight", "data-tip": "Highlight", "aria-label": "Highlight", html: ICON.highlight }),
     el("button", { class: "tw-tb-btn", "data-act": "respond", "data-tip": "Respond", "aria-label": "Respond", html: ICON.respond }),
+    el("button", { class: "tw-tb-btn", "data-act": "ask", "data-tip": "Ask the author", "aria-label": "Ask the author", html: ICON.ask }),
     el("button", { class: "tw-tb-btn", "data-act": "share", "data-tip": "Share", "aria-label": "Share", html: ICON.share }),
     el("button", { class: "tw-tb-btn tw-divide", "data-act": "note", "data-tip": "Private note", "aria-label": "Private note", html: ICON.note }),
   ]);
@@ -267,6 +269,7 @@
     if (act === "highlight") { addHighlight(sel, "highlight").then(function () { toast("Highlighted"); }); window.getSelection().removeAllRanges(); }
     else if (act === "note") openNoteComposer(sel, rect);
     else if (act === "respond") openRespondComposer(sel, rect);
+    else if (act === "ask") openAskComposer(sel, rect);
     else if (act === "share") shareQuote(sel);
   });
 
@@ -332,6 +335,32 @@
             if (saved.status === "pending") toast("Submitted — pending review");
             else { state.responses.push(saved); var r = rangeFromSelector(sel); if (r) wrapRange(r, saved.id, "tw-response"); toast("Response posted"); }
           }).catch(function (e) { toast(e.message); });
+          window.getSelection().removeAllRanges();
+        } }),
+      ]),
+    ]);
+    activePop = pop; placePop(pop, rect); ta.focus();
+  }
+
+  // Ask the author a question about a highlighted passage → AMA queue.
+  function openAskComposer(sel, rect) {
+    closePop();
+    if (!authed()) return openAuthModal(rect);
+    var ta = el("textarea", { placeholder: "Ask the author a question about this passage…" });
+    var pop = el("div", { class: "tw-pop" }, [
+      el("p", { class: "tw-kicker", text: "Ask the author" }),
+      el("blockquote", { class: "tw-quote", text: "“" + sel.exact.slice(0, 160) + (sel.exact.length > 160 ? "…" : "") + "”" }),
+      ta,
+      el("p", { class: "tw-muted", text: "Goes straight to @iamkhayyam — the best questions get answered in Ask Me Anything." }),
+      el("div", { class: "tw-row" }, [
+        el("span", { class: "tw-spacer" }),
+        el("button", { class: "tw-btn tw-ghost", text: "Cancel", onclick: closePop }),
+        el("button", { class: "tw-btn", text: "Ask", onclick: function () {
+          var body = ta.value.trim(); if (!body) return;
+          api("/posts/" + encodeURIComponent(SLUG) + "/annotations", {
+            method: "POST", body: { kind: "question", body: body, anchor: sel },
+          }).then(function () { closePop(); toast("Question sent to the author"); })
+            .catch(function (e) { toast(e.message); });
           window.getSelection().removeAllRanges();
         } }),
       ]),
@@ -487,7 +516,7 @@
     closePop();
     var input = el("input", { type: "email", placeholder: "you@example.com" });
     var pop = el("div", { class: "tw-pop" }, [
-      el("p", { class: "tw-kicker", text: "Sign in to respond" }),
+      el("p", { class: "tw-kicker", text: "Sign in" }),
       el("p", { class: "tw-muted", text: "We'll email you a one-time sign-in link. No password." }),
       el("div", { style: "margin-top:10px" }, [input]),
       el("div", { class: "tw-row" }, [
@@ -510,6 +539,7 @@
     api("/auth/logout", { method: "POST" }).catch(function () {});
     clearToken(); state.me = null; toast("Signed out");
     renderResponses();
+    renderAskBox();
   }
 
   // ── boot ────────────────────────────────────────────────────────────────────
@@ -543,6 +573,35 @@
     })).then(function () { saveLocalHls([]); });
   }
 
+  // General "Ask Me Anything" composer — rendered into #tw-ask-box (the AMA post,
+  // where it replaces the old Typeform embed). Sign-in gated.
+  var askBox = document.getElementById("tw-ask-box");
+  function renderAskBox() {
+    if (!askBox) return;
+    askBox.innerHTML = "";
+    askBox.appendChild(el("p", { class: "tw-kicker", text: "Ask Me Anything" }));
+    if (authed()) {
+      var ta = el("textarea", { placeholder: "Ask @iamkhayyam anything…" });
+      askBox.appendChild(el("div", { class: "tw-composer" }, [ta,
+        el("div", { class: "tw-row" }, [
+          el("span", { class: "tw-muted", text: state.me ? "as " + state.me.display_name : "" }),
+          el("span", { class: "tw-spacer" }),
+          el("button", { class: "tw-btn", text: "Ask", onclick: function () {
+            var body = ta.value.trim(); if (!body) return;
+            api("/posts/" + encodeURIComponent(SLUG) + "/annotations", { method: "POST", body: { kind: "question", body: body } })
+              .then(function () { ta.value = ""; toast("Question sent — watch this space."); })
+              .catch(function (e) { toast(e.message); });
+          } }),
+        ]),
+      ]));
+    } else {
+      askBox.appendChild(el("p", { class: "tw-muted", text: "The most provocative reader question gets a full answer. Sign in to ask." }));
+      askBox.appendChild(el("div", { class: "tw-row", style: "justify-content:center;margin-top:10px" }, [
+        el("button", { class: "tw-btn", text: "Sign in to ask", onclick: function () { openAuthModal(); } }),
+      ]));
+    }
+  }
+
   function load() {
     var p = Promise.resolve();
     if (authed()) p = api("/auth/me").then(function (r) { state.me = r.member; }).catch(function () { clearToken(); });
@@ -557,6 +616,7 @@
       state.highlights = authed() ? (data.highlights || []) : localHls();
       renderAllHighlights();
       renderResponses();
+      renderAskBox();
     });
   }
 

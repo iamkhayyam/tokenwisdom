@@ -132,6 +132,19 @@ def community_assets(prefix="../"):
 <script>window.TW_API={json.dumps(TW_API_BASE)};</script>
 <script src="{prefix}assets/annotate.js" defer></script>"""
 
+
+def replace_typeform(html):
+    """Swap any embedded Typeform (the old AMA question form) for our own
+    self-hosted ask box; annotate.js fills #tw-ask-box with a sign-in-gated
+    'Ask Me Anything' composer wired to our API."""
+    if not html or "typeform" not in html.lower():
+        return html
+    html = re.sub(r"<script[^>]*embed\.typeform\.com[^>]*>\s*</script>", "", html, flags=re.I)
+    html = re.sub(r'<div[^>]*data-tf-live[^>]*>\s*</div>', '<div id="tw-ask-box"></div>', html, flags=re.I)
+    if "tw-ask-box" not in html:
+        html += '\n<div id="tw-ask-box"></div>'
+    return html
+
 # Section tag slugs — these are treated as "section" markers and hidden from the
 # normal eyebrow/pill display on post pages (they move into the top-bar issue code).
 SECTION_TAGS = {
@@ -144,6 +157,11 @@ SECTION_TAGS = {
 }
 NEWSLETTER_TAG_SLUG = "worthafortune"
 ESSAY_TAG_SLUG = "a-closer-look"
+
+# Not editorial topics — mechanisms used to build a site feature. Excluded from
+# the public tag listings (Topics Index, tag pages, top-tags) until each gets
+# its own dedicated page.
+HIDDEN_TOPIC_SLUGS = {"ask-me-anything"}
 
 PODCAST_FEED_URL = "https://feeds.captivate.fm/tokenwisdom-and-notebooklm/"
 PODCAST_CACHE = BACKUP_DIR / "data" / "podcast_feed.xml"
@@ -388,7 +406,7 @@ def issue_number_map(posts):
     return numbers
 
 
-def issue_code_string(post, number):
+def issue_code_string(post, number, include_date=True):
     """Return 'ACL.164 · W14 · Mar 26, 2026' style string."""
     code, _ = section_code(post)
     parts = [f"{code}.{number:03d}"]
@@ -404,7 +422,7 @@ def issue_code_string(post, number):
             parts.append(f"W{dt.isocalendar()[1]:02d}")
         except Exception:
             pass
-    if post.get("published_at"):
+    if include_date and post.get("published_at"):
         parts.append(fmt_date_short(post["published_at"]))
     return " · ".join(parts)
 
@@ -538,7 +556,7 @@ html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 }
 
 /* DM Mono — Light 300 */
-:where(.site-top-inner, .post-top-bar, .essay-eyebrow, .essay-byline,
+:where(.site-top-inner, .essay-eyebrow, .essay-byline,
   .nl-masthead-eyebrow, .nl-masthead-subtitle, .home-masthead-eyebrow,
   .home-masthead-sub, .section-label, .section-note, .hero-eyebrow,
   .hero-meta, .hero-cta, .essay-row-eyebrow, .post-nav, .colophon h4,
@@ -563,42 +581,6 @@ body {
 a { color: var(--ink); text-decoration: none; transition: color .2s ease; }
 a:hover { color: var(--accent); }
 img { max-width: 100%; height: auto; }
-
-/* ---------- POST TOP-BAR (article masthead strip) ---------- */
-.post-top-bar {
-  border-bottom: 2px solid var(--ink);
-  background: var(--paper);
-  padding: 1.1rem 1.5rem;
-  display: flex;
-  align-items: baseline;
-  gap: 1.2rem;
-  flex-wrap: wrap;
-  max-width: var(--max-wide);
-  margin: 0 auto;
-}
-.post-top-bar .ptb-brand {
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-.post-top-bar .ptb-brand strong {
-  font-weight: 500;
-  color: var(--ink);
-}
-.post-top-bar .ptb-issue {
-  margin-left: auto;
-  font-family: var(--mono);
-  font-size: 10px;
-  letter-spacing: .15em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-}
-.post-top-bar .ptb-issue .ptb-num {
-  color: var(--accent);
-  font-weight: 500;
-}
 
 /* ---------- SITE CHROME ---------- */
 /* Masthead nav — mirrors the homepage .mast for cross-site consistency */
@@ -637,15 +619,9 @@ img { max-width: 100%; height: auto; }
   color: var(--ink-muted); white-space: nowrap; transition: color 0.15s;
 }
 .site-top-back:hover { color: var(--accent); }
-/* Inline text nav — visible on desktop, swapped for the menu button below 1080 */
-.site-top-nav {
-  display: flex; align-items: center; flex: 1;
-  gap: 16px; margin-left: 6px; flex-wrap: wrap;
-}
-/* Menu button — opens the full-page takeover on mobile only */
+/* Menu button — opens the full-page takeover; the only nav trigger on interior pages */
 .site-top-toggle {
-  display: none;
-  margin-left: auto;
+  display: inline-flex;
   align-items: center;
   gap: 0.6em;
   height: 42px;
@@ -678,26 +654,12 @@ img { max-width: 100%; height: auto; }
   .site-top-toggle:hover .ham span { animation: none; }
 }
 .site-top-toggle .mtxt {
-  font-family: var(--mono); font-weight: 700; font-size: 0.7rem;
+  font-family: 'FauxCRA', var(--mono); font-weight: 700; font-size: 0.7rem;
   letter-spacing: 0.14em; text-transform: uppercase;
 }
-.site-top-nav a:not(.site-top-sub) {
-  font-family: var(--mono);
-  font-weight: 700;
-  font-size: 0.76rem;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: var(--ink-muted);
-  padding-top: 4px;
-  padding-bottom: 2px;
-  border-bottom: 2px solid transparent;
-  transition: color 0.15s;
-}
-.site-top-nav a:not(.site-top-sub):hover { color: var(--ink); }
-.site-top-nav a.is-active { color: var(--accent); border-color: var(--accent); }
 .site-top-sub {
   margin-left: auto;
-  font-family: var(--mono);
+  font-family: 'FauxCRA', var(--mono);
   font-weight: 700;
   font-size: 0.68rem;
   letter-spacing: 0.10em;
@@ -1708,26 +1670,109 @@ img { max-width: 100%; height: auto; }
 }
 .topic-card .desc:empty { display: none; }
 
-/* Featured topic billboards (first two) take full width */
-.topic-card.is-featured {
-  grid-column: span 3;
+/* Featured collections (Side A / Side B) — side by side, stacking on smaller
+   breakpoints */
+.topics-featured {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.6rem;
 }
 .topic-card.is-featured .gif-frame {
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 4 / 3;
 }
 .topic-card.is-featured .name {
-  font-size: 2.6rem;
-  max-width: 70%;
+  font-size: 2rem;
+  max-width: 90%;
 }
+@media (max-width: 768px) {
+  .topics-featured { grid-template-columns: 1fr; gap: 1.2rem; }
+  .topic-card.is-featured .gif-frame { aspect-ratio: 16 / 10; }
+  .topic-card.is-featured .name { font-size: 1.7rem; }
+}
+.topics-grid.cols-3 { grid-template-columns: repeat(3, 1fr); margin-top: 1.8rem; }
+
+/* View/sort toolbar above the switchable grid */
+.topics-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .8rem 1.4rem;
+  margin: 2.2rem 0 0;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--paper-rule);
+}
+.topics-toolbar-group { display: flex; align-items: center; gap: 6px; }
+.topics-toolbar-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-right: 2px;
+}
+.topics-toolbar-btn {
+  font-family: var(--mono);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  padding: 6px 13px;
+  border-radius: 20px;
+  border: 1px solid var(--paper-rule);
+  background: transparent;
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: all .15s ease;
+}
+.topics-toolbar-btn:hover { border-color: var(--ink); color: var(--ink); }
+.topics-toolbar-btn.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* List view: compact rows instead of image cards */
+.topics-list { display: flex; flex-direction: column; margin-top: 1.8rem; }
+.topic-row {
+  display: grid;
+  grid-template-columns: minmax(160px, 260px) 1fr auto;
+  align-items: baseline;
+  gap: 1.2rem;
+  padding: .9rem 0;
+  border-bottom: 0.5px solid var(--paper-rule);
+  color: var(--ink);
+}
+.topic-row:hover { color: var(--accent); }
+.topic-row .row-name {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: -.01em;
+}
+.topic-row .row-desc {
+  font-family: var(--sans);
+  font-size: .85rem;
+  line-height: 1.4;
+  color: var(--ink-muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.topic-row:hover .row-desc { color: inherit; }
+.topic-row .row-count {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
 @media (max-width: 1024px) {
   .topics-grid { grid-template-columns: repeat(2, 1fr); }
-  .topic-card.is-featured { grid-column: span 2; }
 }
 @media (max-width: 640px) {
   .topics-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-  .topic-card.is-featured { grid-column: span 1; }
-  .topic-card.is-featured .gif-frame { aspect-ratio: 16 / 10; }
-  .topic-card.is-featured .name { font-size: 1.6rem; max-width: 100%; }
+  .topics-toolbar { justify-content: flex-start; }
+  .topic-row { grid-template-columns: 1fr auto; }
+  .topic-row .row-desc { display: none; }
 }
 
 /* ---------- ARCHIVE ---------- */
@@ -2025,10 +2070,6 @@ img { max-width: 100%; height: auto; }
   .archive-item .tag { grid-column: 2; justify-self: start; margin-top: 2px; }
 }
 /* ---------- Below 1080: swap inline nav for the menu button ---------- */
-@media (max-width: 1080px) {
-  .site-top-nav { display: none; }
-  .site-top-toggle { display: inline-flex; }
-}
 @media (max-width: 860px) {
   .site-top-inner { padding: 10px 16px; gap: 14px; }
 }
@@ -2307,13 +2348,9 @@ def head_tag(title, prefix="", noindex=False, description=None, og_url=None, the
 
 
 def site_top(from_dir="root", theme_toggle=False):
-    from tw_theme import NAV, nav_overlay
+    from tw_theme import nav_overlay
     prefix = _prefix(from_dir)
     orb = f'<img src="{prefix}assets/crystal-ball.svg" alt="" class="tw-orb">'
-    nav_links = "\n      ".join(
-        f'<a href="{prefix}{href}">{label}</a>'
-        for _, label, href in NAV
-    )
     theme_btn = ('<button class="site-top-theme" data-theme-toggle type="button"'
                  ' onclick="window.__twToggleTheme()" aria-label="Toggle theme">'
                  '<span class="tt-glyph">☼</span><span class="tt-label">Light</span></button>'
@@ -2323,20 +2360,46 @@ def site_top(from_dir="root", theme_toggle=False):
   <div class="site-top-inner">
     <a class="site-top-back" href="{prefix}index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
     <a href="{prefix}index.html" class="site-top-mark" aria-label="Token Wisdom — home">{orb}</a>
-    <nav class="site-top-nav" id="site-nav">
-      {nav_links}
-      {theme_btn}
-      <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
-    </nav>
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
       <span class="ham"><span></span><span></span><span></span></span>
       <span class="mtxt">Menu</span>
     </button>
+    {theme_btn}
+    <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
   </div>
 </header>
 {nav_overlay(prefix)}
-<script>(function(){{var p=location.pathname;document.querySelectorAll('.site-top-nav a:not(.site-top-sub)').forEach(function(a){{var h=a.getAttribute('href').replace(/^(\\.\\.\\/)+/,'');if(h&&(p===('/'+h)||p.endsWith('/'+h))){{a.classList.add('is-active');}}}});}})();</script>
 """
+
+
+_AMA_CTA = None
+
+
+def get_ama_cta():
+    """Ask Me Anything has no page of its own — this classified-ad-sized
+    lookup feeds the small widget shown in every colophon. Lazily computed
+    once and cached; returns None if the tag/post ever disappear."""
+    global _AMA_CTA
+    if _AMA_CTA is not None:
+        return _AMA_CTA or None
+    _AMA_CTA = False
+    posts, tags, _authors, _pages = load_data()
+    ama_tag = next((t for t in tags if t.get("slug") == "ask-me-anything"), None)
+    if not ama_tag:
+        return None
+    ama_posts = sorted(
+        (p for p in posts if any(t.get("slug") == "ask-me-anything" for t in (p.get("tags") or []))),
+        key=lambda p: p.get("published_at", ""), reverse=True,
+    )
+    if not ama_posts:
+        return None
+    img_map = _load_image_map()
+    _AMA_CTA = {
+        "name": ama_tag["name"],
+        "img_file": img_map.get(ama_tag.get("feature_image") or "", ""),
+        "slug": ama_posts[0]["slug"],
+    }
+    return _AMA_CTA
 
 
 def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
@@ -2374,6 +2437,7 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
         copyright=f"© {years_span} Token Wisdom" if years_span else "© Token Wisdom",
         subscribe_url=f"{GHOST_URL}/subscribe",
         handle="@iamkhayyam",
+        ama=get_ama_cta(),
     )
     return foot + "\n</body>\n</html>\n"
 
@@ -2481,18 +2545,6 @@ if(p&&location.pathname&&location.pathname!=='/404.html')p.textContent=location.
 # ============================================================
 # POST PAGES
 # ============================================================
-
-def render_post_top_bar(post, issue_num):
-    """Top-bar masthead strip: 'Token Wisdom · by @iamkhayyam'  |  'ACL.164 · W14 · Mar 26, 2026'"""
-    issue = issue_code_string(post, issue_num)
-    code, label = section_code(post)
-    return f"""
-<div class="post-top-bar">
-  <span class="ptb-brand"><strong>Token Wisdom</strong> · by @iamkhayyam</span>
-  <span class="ptb-issue"><span class="ptb-num">{esc(issue)}</span></span>
-</div>
-"""
-
 
 def secondary_eyebrow_tags(post):
     """
@@ -2650,7 +2702,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
         )
         tag_pills = f'<div class="post-tags essay-col">{pills}</div>' if pills else ""
 
-    content = post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>"
+    content = replace_typeform(post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>")
     content = sanitize_body(content)              # repair Ghost embeds
     if post.get("slug") == "the-sky-has-been-warning-us-since-1859":
         content = demo_margin_notes(content)      # showcase the margin apparatus
@@ -2682,7 +2734,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
       <a href="{next_post['slug']}.html">{esc(next_post.get('title', ''))}</a>
     </div>""" if next_post else '<div></div>')
 
-    body = ESSAY_THEME_SCRIPT + render_post_top_bar(post, issue_num) + f"""
+    body = ESSAY_THEME_SCRIPT + f"""
 <article class="essay-frame">
   {cover}
   <header class="essay-head essay-col">
@@ -2695,6 +2747,8 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
       <span>{reading_time(post)}</span>
       <span class="sep">·</span>
       <span>{fmt_date(post.get('published_at'))}</span>
+      <span class="sep">·</span>
+      <span>{esc(issue_code_string(post, issue_num, include_date=False))}</span>
     </div>
   </header>
   {epigraph}
@@ -2731,6 +2785,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
     if meta:
         left_parts.append(esc(meta))
     left_parts.append(esc(fmt_date(post.get("published_at"))))
+    left_parts.append(esc(issue_code_string(post, issue_num, include_date=False)))
     left_html = " · ".join(left_parts)
     subtitle_html = (
         f'<span>{left_html}</span>'
@@ -2747,7 +2802,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
         )
         tag_pills = f'<div class="post-tags">{pills}</div>' if pills else ""
 
-    content = post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>"
+    content = replace_typeform(post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>")
 
     nav_prev = ""
     nav_next = ""
@@ -2768,7 +2823,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
     else:
         nav_next = '<div></div>'
 
-    body = render_post_top_bar(post, issue_num) + f"""
+    body = f"""
 <article class="nl-wrap">
   <header class="nl-masthead">
     <div class="nl-masthead-eyebrow">{esc(SITE_TAGLINE)}</div>
@@ -3776,21 +3831,22 @@ def render_archive(posts, posts_count, tags_count, years_span, top_tags):
 # ============================================================
 
 def render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, top_tags):
-    visible = [t for t in tags if not (t.get("name", "") or "").startswith("#")]
+    visible = [
+        t for t in tags
+        if not (t.get("name", "") or "").startswith("#")
+        and t.get("slug") not in HIDDEN_TOPIC_SLUGS
+    ]
     visible.sort(key=lambda t: len(tag_to_posts.get(t["slug"], [])), reverse=True)
+    by_slug = {t["slug"]: t for t in visible}
 
-    cards = ""
-    for i, t in enumerate(visible):
+    def full_card(t, featured=False):
         count = len(tag_to_posts.get(t["slug"], []))
         desc = (TAG_DESCRIPTIONS.get(t.get("slug", "")) or t.get("description") or "").strip()
         desc_html = f'<div class="desc">{esc(desc[:300])}</div>' if desc else '<div class="desc"></div>'
         feature_img = t.get("feature_image") or ""
-        img_html = ""
-        if feature_img:
-            img_html = f'<img src="{esc(feature_img)}" alt="{esc(t.get("name", ""))}" loading="lazy">'
-        # The two highest-post-count tags become full-width featured billboards
-        featured_class = " is-featured" if i < 2 else ""
-        cards += f"""
+        img_html = f'<img src="{esc(feature_img)}" alt="{esc(t.get("name", ""))}" loading="lazy">' if feature_img else ""
+        featured_class = " is-featured" if featured else ""
+        return f"""
   <a class="topic-card{featured_class}" href="{t['slug']}.html">
     <div class="gif-frame">
       {img_html}
@@ -3800,6 +3856,105 @@ def render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, t
     {desc_html}
   </a>"""
 
+    # A Closer Look and Pearls of Wisdom are the two full-frame featured collections,
+    # pinned above the sortable/switchable grid below.
+    featured = [by_slug[s] for s in (ESSAY_TAG_SLUG, NEWSLETTER_TAG_SLUG) if s in by_slug]
+    rest = [t for t in visible if t["slug"] not in (ESSAY_TAG_SLUG, NEWSLETTER_TAG_SLUG)]
+    featured_html = "".join(full_card(t, featured=True) for t in featured)
+
+    # Data for the rest, driving the client-side gallery/list view + sort toggles.
+    # Tag names keep their emoji by design — A-Z sort respects it too.
+    rest_data = []
+    for t in rest:
+        count = len(tag_to_posts.get(t["slug"], []))
+        desc = (TAG_DESCRIPTIONS.get(t.get("slug", "")) or t.get("description") or "").strip()
+        rest_data.append({
+            "s": t["slug"],
+            "n": esc(t["name"]),
+            "c": count,
+            "d": esc(desc[:200]),
+            "i": esc(t.get("feature_image") or ""),
+        })
+    rest_json = json.dumps(rest_data, separators=(",", ":"), ensure_ascii=False)
+
+    toolbar = """
+<div class="topics-toolbar">
+  <div class="topics-toolbar-group">
+    <span class="topics-toolbar-label">View</span>
+    <button type="button" class="topics-toolbar-btn active" data-view="gallery">Gallery</button>
+    <button type="button" class="topics-toolbar-btn" data-view="list">List</button>
+  </div>
+  <div class="topics-toolbar-group">
+    <span class="topics-toolbar-label">Sort</span>
+    <button type="button" class="topics-toolbar-btn active" data-sort="count">By Count</button>
+    <button type="button" class="topics-toolbar-btn" data-sort="az">A&ndash;Z</button>
+  </div>
+</div>
+"""
+
+    topics_js = """
+<script>
+(function(){
+  var TOPICS = __TOPICS__;
+  var host = document.getElementById('topics-host');
+  if (!host) return;
+  var state = { view: 'gallery', sort: 'count' };
+
+  function sorted(){
+    var arr = TOPICS.slice();
+    if (state.sort === 'az') arr.sort(function(a, b){ return a.n.localeCompare(b.n); });
+    else arr.sort(function(a, b){ return b.c - a.c; });
+    return arr;
+  }
+
+  function plural(c){ return c + ' post' + (c !== 1 ? 's' : ''); }
+
+  function render(){
+    var arr = sorted();
+    if (state.view === 'list') {
+      host.className = 'topics-list';
+      host.innerHTML = arr.map(function(t){
+        return '<a class="topic-row" href="' + t.s + '.html">' +
+          '<span class="row-name">' + t.n + '</span>' +
+          (t.d ? '<span class="row-desc">' + t.d + '</span>' : '<span class="row-desc"></span>') +
+          '<span class="row-count">' + plural(t.c) + '</span>' +
+        '</a>';
+      }).join('');
+    } else {
+      host.className = 'topics-grid cols-3';
+      host.innerHTML = arr.map(function(t){
+        var img = t.i ? '<img src="' + t.i + '" alt="' + t.n + '" loading="lazy">' : '';
+        return '<a class="topic-card" href="' + t.s + '.html">' +
+          '<div class="gif-frame">' + img +
+            '<span class="label">' + plural(t.c) + '</span>' +
+            '<div class="name">' + t.n + '</div>' +
+          '</div>' +
+          '<div class="desc">' + t.d + '</div>' +
+        '</a>';
+      }).join('');
+    }
+  }
+
+  document.querySelectorAll('[data-view]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      state.view = btn.dataset.view;
+      document.querySelectorAll('[data-view]').forEach(function(b){ b.classList.toggle('active', b === btn); });
+      render();
+    });
+  });
+  document.querySelectorAll('[data-sort]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      state.sort = btn.dataset.sort;
+      document.querySelectorAll('[data-sort]').forEach(function(b){ b.classList.toggle('active', b === btn); });
+      render();
+    });
+  });
+
+  render();
+})();
+</script>
+""".replace("__TOPICS__", rest_json)
+
     body = f"""
 <header class="tag-header">
   <div class="eyebrow">Topics Index</div>
@@ -3808,10 +3963,13 @@ def render_tags_index(tags, tag_to_posts, posts_count, tags_count, years_span, t
   <div class="meta">{esc(years_span)} · {len(visible)} tags · 100% authentic humanly chosen</div>
 </header>
 <div class="topics-wrap">
-  <div class="topics-grid">
-  {cards}
+  <div class="topics-featured">
+  {featured_html}
   </div>
+  {toolbar}
+  <div id="topics-host" class="topics-grid cols-3"></div>
 </div>
+{topics_js}
 """
     page = page_shell("All Tags", body, "../style.css", from_dir="sub")
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
@@ -4124,7 +4282,11 @@ def main():
             tag_to_posts[t["slug"]].append(post)
 
     tags_by_slug = {t["slug"]: t for t in tags}
-    public_tags = [t for t in tags if not (t.get("name", "") or "").startswith("#")]
+    public_tags = [
+        t for t in tags
+        if not (t.get("name", "") or "").startswith("#")
+        and t.get("slug") not in HIDDEN_TOPIC_SLUGS
+    ]
     top_tags = sorted(public_tags, key=lambda t: len(tag_to_posts.get(t["slug"], [])), reverse=True)
 
     # Year span

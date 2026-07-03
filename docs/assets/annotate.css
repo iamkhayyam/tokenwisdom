@@ -144,10 +144,24 @@
 }
 .tw-link:hover { color: var(--accent, #c8521a); }
 .tw-composer { margin-bottom: 1.6rem; }
+.tw-composer textarea, #tw-ask-box textarea {
+  width: 100%; box-sizing: border-box; resize: vertical; min-height: 80px;
+  font: 400 15px/1.5 var(--serif, Georgia, serif); color: var(--ink, #1a1814);
+  background: #fff; border: 1px solid var(--rule, #e2ddd4); padding: 8px 10px;
+}
+.tw-composer textarea:focus, #tw-ask-box textarea:focus { outline: none; border-color: var(--accent, #c8521a); }
 .tw-signedout {
   border: 1px dashed var(--rule, #e2ddd4); padding: 1rem 1.1rem; text-align: center;
   background: var(--surface, #f6f3ee);
 }
+
+/* AMA composer that replaces the old Typeform embed on the AMA post */
+#tw-ask-box {
+  max-width: var(--w-read, 680px); margin: 1.75rem auto; padding: 1.25rem 1.3rem;
+  border: 1px solid var(--rule, #e2ddd4); border-top: 2px solid var(--ink, #1a1814);
+  background: var(--surface, #f6f3ee);
+}
+#tw-ask-box .tw-kicker { margin-bottom: .8rem; }
 
 /* ── Toasts ──────────────────────────────────────────────────────────────────── */
 .tw-toast {
