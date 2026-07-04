@@ -56,7 +56,14 @@ def is_hidden(post):
 # Image localization — rewrite tokenwisdom.ghost.io URLs to local paths
 # ---------------------------------------------------------------------------
 _IMAGE_MAP = None
-_GHOST_IMAGE_RE = re.compile(r'https://tokenwisdom\.ghost\.io/content/images/[^\s"\'<>)]+')
+# Ghost re-serves every image URL under whichever host is CURRENTLY configured
+# as its site url, regardless of which host was live when a post was
+# originally imported — so this must match the live GHOST_URL, not just the
+# original tokenwisdom.ghost.io Pro domain (kept too, for any literal
+# references Ghost didn't rewrite, e.g. in og_image/twitter_image fields).
+_GHOST_IMAGE_RE = re.compile(
+    r'(?:' + re.escape(GHOST_URL) + r'|https://tokenwisdom\.ghost\.io)/content/images/[^\s"\'<>)]+'
+)
 _GHOST_SIZE_RE = re.compile(r'/content/images/(?:size/[^/]+/)*(?:icon|thumbnail)/(.+)')
 _GHOST_SIZE_STRIP = re.compile(r'/content/images/(?:size/[^/]+/)+')
 _GHOST_ANY_RE = re.compile(r'https://tokenwisdom\.ghost\.io/(?!content/images/)[^\s"\'<>)]+')
