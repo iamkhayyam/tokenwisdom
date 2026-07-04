@@ -390,7 +390,7 @@ SEARCH_JS = r'''
 '''
 
 
-GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-47fd.up.railway.app")
+GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-198e.up.railway.app")
 
 NAV = [
     ("archive",     "Archive",     "archive.html"),

@@ -1,0 +1,41 @@
+name: Rebuild site from Ghost
+
+on:
+  repository_dispatch:
+    types: [ghost-content-updated]
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ghost-rebuild
+  cancel-in-progress: false
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pull latest content from Ghost
+        run: python3 backup.py
+
+      - name: Regenerate static site
+        run: python3 generate_site.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "tw-ghost-bot"
+          git config user.email "tw-ghost-bot@users.noreply.github.com"
+          git add docs/ data/ images/
+          if git diff --cached --quiet; then
+            echo "No content changes, nothing to deploy."
+            exit 0
+          fi
+          git commit -m "Rebuild from Ghost CMS update"
+          git push

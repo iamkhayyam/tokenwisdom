@@ -1,0 +1,10 @@
+name = "tw-ghost-webhook"
+main = "src/index.js"
+compatibility_date = "2024-11-01"
+
+[vars]
+GITHUB_REPO = "iamkhayyam/tokenwisdom"
+
+# Secrets (set via `wrangler secret put <NAME>`, run from this directory):
+#   GHOST_WEBHOOK_SECRET — the secret Ghost generates when the webhook is created
+#   GITHUB_TOKEN         — PAT with repo+workflow scope, used to trigger repository_dispatch

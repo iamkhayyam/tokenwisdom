@@ -1,8 +1,8 @@
 [
   {
-    "id": "6895a3000d912d00085b277d",
-    "name": "🌶️ @iamkhayyam ",
-    "slug": "iamkhayyam",
+    "id": "1",
+    "name": "🌶️ @iamkhayyam",
+    "slug": "khayyam",
     "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
     "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
     "bio": null,
@@ -12,6 +12,6 @@
     "twitter": "@worthafortune",
     "meta_title": null,
     "meta_description": null,
-    "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+    "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
   }
 ]

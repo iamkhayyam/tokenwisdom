@@ -36,7 +36,7 @@ SITE_SIGN_OFF_LINES = [
     "and definitely stay weird!",
 ]
 SITE_URL = "https://tokenwisdom.org"
-GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-47fd.up.railway.app")
+GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-198e.up.railway.app")
 
 # Posts to hide from every public listing while keeping their URL working. The
 # page still renders at docs/posts/{slug}.html and gets a robots:noindex meta,

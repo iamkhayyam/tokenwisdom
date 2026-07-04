@@ -4,6 +4,7 @@ __pycache__/
 mcp-server/node_modules/
 api/node_modules/
 worker/node_modules/
+ghost-webhook/node_modules/
 .env
 *.env
 .dev.vars

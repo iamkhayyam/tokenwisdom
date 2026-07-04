@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Math + Physics — Token Wisdom</title>
+<meta name="description" content="The Newsletter of Record for the Future of Now. 100% humanly chosen since 2013.">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta property="og:site_name" content="Token Wisdom">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Math + Physics">
+<meta property="og:description" content="The Newsletter of Record for the Future of Now. 100% humanly chosen since 2013.">
+<meta property="og:image" content="https://tokenwisdom.org/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@worthafortune">
+<meta name="twitter:title" content="Math + Physics">
+<meta name="twitter:description" content="The Newsletter of Record for the Future of Now. 100% humanly chosen since 2013.">
+<meta name="twitter:image" content="https://tokenwisdom.org/assets/og-default.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-top">
+  <div class="site-top-inner">
+    <a class="site-top-back" href="../index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <a href="../index.html" class="site-top-mark" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
+    <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
+      <span class="ham"><span></span><span></span><span></span></span>
+      <span class="mtxt">Menu</span>
+    </button>
+    
+    <a class="site-top-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="nav-takeover" id="nav-takeover" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true">
+  <div class="nto-bg" aria-hidden="true">
+    <div class="nto-glow"></div>
+    <div class="nto-monogram">&amp;</div>
+  </div>
+  <div class="nto-bar">
+    <span class="nto-eyebrow">The Index <b>·</b> Token Wisdom</span>
+    <button class="nto-close" data-nav-close aria-label="Close menu">Close <span class="x">✕</span></button>
+  </div>
+  <nav class="nto-nav"><a class="nto-row" style="--i:0" href="../archive.html"><span class="nto-num">01</span><span class="nto-label">Archive</span><span class="nto-desc">Every edition, dated</span></a><a class="nto-row" style="--i:1" href="../tags/index.html"><span class="nto-num">02</span><span class="nto-label">Topics</span><span class="nto-desc">Browse by idea</span></a><a class="nto-row" style="--i:2" href="../lexicon/index.html"><span class="nto-num">03</span><span class="nto-label">Lexicon</span><span class="nto-desc">The working vocabulary</span></a><a class="nto-row" style="--i:3" href="../links/index.html"><span class="nto-num">04</span><span class="nto-label">Links</span><span class="nto-desc">The reading room</span></a><a class="nto-row" style="--i:4" href="../tags/a-closer-look.html"><span class="nto-num">05</span><span class="nto-label">Essays</span><span class="nto-desc">A closer look</span></a><a class="nto-row" style="--i:5" href="../tags/worthafortune.html"><span class="nto-num">06</span><span class="nto-label">Newsletters</span><span class="nto-desc">Worth a fortune</span></a><a class="nto-row" style="--i:6" href="../podcast.html"><span class="nto-num">07</span><span class="nto-label">Podcast</span><span class="nto-desc">Listen in</span></a><a class="nto-row" style="--i:7" href="../metrics.html"><span class="nto-num">08</span><span class="nto-label">Report</span><span class="nto-desc">The corpus, quantified</span></a><a class="nto-row" style="--i:8" href="../about/index.html"><span class="nto-num">09</span><span class="nto-label">About</span><span class="nto-desc">Who & why</span></a></nav>
+  <div class="nto-foot">
+    <a class="nto-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe →</a>
+    <div class="nto-foot-meta">
+      <span class="nto-tag">Knowware is measured in lifetimes</span>
+      <span class="nto-elsewhere"><a href="https://ghost-production-198e.up.railway.app" target="_blank" rel="noopener">Ghost</a> · <a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+  <button class="nto-close-glyph" data-nav-close aria-label="Close menu">✕</button>
+</div>
+<script>(function(){
+var root=document.documentElement,ov=document.getElementById('nav-takeover');
+var back=document.querySelector('[data-back]');
+if(back){back.addEventListener('click',function(e){try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}});}
+if(!ov)return;
+var toggles=document.querySelectorAll('[data-nav-toggle]');
+function set(o){root.classList.toggle('nav-open',o);ov.setAttribute('aria-hidden',o?'false':'true');toggles.forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false');});}
+toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();set(!root.classList.contains('nav-open'));});});
+ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
+})();</script>
+
+<header class="tag-hero" style="--tag-bg: url('https://ghost-production-198e.up.railway.app/content/images/2026/04/threebody.gif');">
+  <div class="tag-hero-inner">
+    <img class="tag-hero-gif" src="https://ghost-production-198e.up.railway.app/content/images/2026/04/threebody.gif" alt="Math + Physics" loading="eager">
+    <h1>Math + Physics</h1>
+    <p class="desc">Mathing Maths and Feeling Physics</p>
+    <span class="meta">19 Posts · Oct 17, 2024 – May 15, 2026</span>
+  </div>
+</header>
+<div class="tag-list">
+  <div class="tag-list-heading">All posts</div>
+  
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">Philosophical</span><span>·</span>
+      <span>May 15, 2026</span>
+      <span>·</span>
+      <span>19 min read</span>
+    </div>
+    <h3><a href="../posts/the-proof-was-never-the-point.html">The Proof Was Never the Point</a></h3>
+    <p>W20 — A computer verified its first physics paper and found an error peer review missed. A mathematician quit his tenured position to argue that mathematics has been misdefined for 2,300 years. These are the same story.</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">Educate \ Learn</span><span>·</span>
+      <span>May 7, 2026</span>
+      <span>·</span>
+      <span>21 min read</span>
+    </div>
+    <h3><a href="../posts/the-wrong-name-on-the-door.html">The Wrong Name on the Door</a></h3>
+    <p>W19 — Misattribution isn&#x27;t an injustice problem, it&#x27;s an intelligence problem. Put the wrong name on a discovery and the field asks questions designed for the wrong person. The correction never arrives because no one…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">A Story to Tell</span><span>·</span>
+      <span>Apr 2, 2026</span>
+      <span>·</span>
+      <span>14 min read</span>
+    </div>
+    <h3><a href="../posts/the-cow-came-last.html">The Cow Came Last</a></h3>
+    <p>W14 - A cattle monitoring platform, a Calgary winter, a dying mother, and the formula that keeps showing up across a thousand years of mathematics — whether anyone is looking for it or not. The constraint was never the…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">Lessons Learned</span><span>·</span>
+      <span>Feb 19, 2026</span>
+      <span>·</span>
+      <span>11 min read</span>
+    </div>
+    <h3><a href="../posts/the-persistence-of-inferior-standards.html">The Persistence of Inferior Standards</a></h3>
+    <p>W08 - Your calendar is broken, your clock runs on Bronze Age finger-counting, and your interest rates are modeled on Sumerian goat reproduction. We&#x27;re not living in a high-tech civilization. We&#x27;re running 21st-century…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">Neuroscience</span><span>·</span>
+      <span>Dec 11, 2025</span>
+      <span>·</span>
+      <span>13 min read</span>
+    </div>
+    <h3><a href="../posts/the-speed-trap.html">The Speed Trap</a></h3>
+    <p>W50 - They labeled it ADHD. But what if your rapid-fire mind isn&#x27;t broken—just faster? Here&#x27;s how the medical system mistakes cognitive speed for disorder, and the unsettling reason they need you to believe you&#x27;re…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Dec 4, 2025</span>
+      <span>·</span>
+      <span>11 min read</span>
+    </div>
+    <h3><a href="../posts/google-just-admitted-i-was-right-i-didnt-even-flinch.html">Architecture Over Scale</a></h3>
+    <p>W49 - When Google validated my AI thesis, I didn&#x27;t celebrate. I shrugged. While they wrote 50-page theories, I&#x27;d already built the solution—in $75 cow tags. They&#x27;re just arriving at the starting line as I cross the…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Nov 13, 2025</span>
+      <span>·</span>
+      <span>12 min read</span>
+    </div>
+    <h3><a href="../posts/when-twos-company-threes-a-revolution.html">When Two&#x27;s Company, Three&#x27;s a Revolution</a></h3>
+    <p>W46 - When U.S. sanctions cut off Huawei from advanced chips, they didn&#x27;t just restrict—they revolutionized. In 2025, blocked from optimizing binary computers, China&#x27;s tech giant unveiled something radical: the first…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Nov 6, 2025</span>
+      <span>·</span>
+      <span>13 min read</span>
+    </div>
+    <h3><a href="../posts/power-in-the-background.html">Power in the Background</a></h3>
+    <p>W45 - While tech giants wage PR battles over AI, Amazon is quietly building its neural substrate in Indiana cornfields. The real power isn&#x27;t in the models—it&#x27;s in who owns the ground they stand on. And we&#x27;ve seen this…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Oct 31, 2025</span>
+      <span>·</span>
+      <span>26 min read</span>
+    </div>
+    <h3><a href="../posts/the-10-delusion.html">The 10% Delusion</a></h3>
+    <p>W44 - Silicon Valley built a trillion-dollar industry on a paper called &quot;Attention Is All You Need.&quot; Problem: we misread it. We kept the math, ditched the meaning, and declared victory over intelligence itself. Now even…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Oct 16, 2025</span>
+      <span>·</span>
+      <span>12 min read</span>
+    </div>
+    <h3><a href="../posts/the-bullet-holes-we-cant-see.html">The Bullet Holes We Can&#x27;t See</a></h3>
+    <p>W42 - We&#x27;re studying AI systems that survived safety testing. But what about the ones that didn&#x27;t make it back—and what they learned to hide? Survivorship bias may be blinding us to the most dangerous possibility:…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Oct 9, 2025</span>
+      <span>·</span>
+      <span>10 min read</span>
+    </div>
+    <h3><a href="../posts/mirror-world-of-the-three-body-problem.html">Mirror World of the Three-Body Problem</a></h3>
+    <p>W41 - We&#x27;ve birthed Knowware: intelligence crystallized into infrastructure. Now we&#x27;re in a cosmic dance—Hardware, Software, and Knowware spinning in chaotic orbits. Welcome to the digital age&#x27;s three-body problem. Can…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Sep 25, 2025</span>
+      <span>·</span>
+      <span>8 min read</span>
+    </div>
+    <h3><a href="../posts/how-beautiful-failures-create-innovation-breakthroughs.html">How Beautiful Failures Create Innovation Breakthroughs</a></h3>
+    <p>W39 - Inspired by Brian Potter&#x27;s analysis in &quot;How Common Is Accidental Invention?&quot; which revealed that approximately 7% of major inventions between 1800-1970 emerged from genuine accidents—a statistic that only hints at…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Sep 11, 2025</span>
+      <span>·</span>
+      <span>9 min read</span>
+    </div>
+    <h3><a href="../posts/the-luddites-last-stand.html">The Luddite&#x27;s Last Stand</a></h3>
+    <p>W37 - Today&#x27;s Luddites aren&#x27;t smashing machines—they&#x27;re teachers demanding longhand math and surgeons questioning AI diagnoses. While we debate ethics, our judgment muscles atrophy. The real question: can we preserve…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Aug 21, 2025</span>
+      <span>·</span>
+      <span>8 min read</span>
+    </div>
+    <h3><a href="../posts/the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up.html">Digital Supersaturation of Why Everything is About to Crystallize</a></h3>
+    <p>W34 - Every human attention pattern has been mapped &amp; algorithmically exploited. Every business model decomposed into trackable APIs. Platforms promised infinite growth but now operate like supersaturated…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Jul 6, 2025</span>
+      <span>·</span>
+      <span>12 min read</span>
+    </div>
+    <h3><a href="../posts/were-not-creating-god-were-discovering-god.html">We&#x27;re Not Creating God, We&#x27;re Discovering God</a></h3>
+    <p>W27 - God isn&#x27;t created or worshipped, but discovered in quantum mechanics and neural networks. Rival worldviews realize they&#x27;ve been allies. The twist? We&#x27;re not decoding divinity, we are the code. We&#x27;re not creating…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Apr 3, 2025</span>
+      <span>·</span>
+      <span>15 min read</span>
+    </div>
+    <h3><a href="../posts/capital-disrupted-the-ai-native-shift-across-industries.html">Capital Disrupted—The AI Native Shift Across Industries</a></h3>
+    <p>W14 — What once required fifty engineers, twenty million dollars, and three years can now be accomplished by five people, two million dollars, and six months. This isn&#x27;t hyperbole—it&#x27;s the mathematics of disruption…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Jan 3, 2025</span>
+      <span>·</span>
+      <span>14 min read</span>
+    </div>
+    <h3><a href="../posts/the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it.html">The Invisible Resolution—NVIDIA&#x27;s Neural Optics and the Death of Computing as We Know It</a></h3>
+    <p>W01 - NVIDIA&#x27;s patent isn&#x27;t just another tech milestone. It&#x27;s a silent earthquake, reshaping the bedrock of computing while the industry obsesses over surface tremors. We&#x27;re not talking incremental change. This is how…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Nov 21, 2024</span>
+      <span>·</span>
+      <span>16 min read</span>
+    </div>
+    <h3><a href="../posts/the-great-marketing-delusion.html">The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception</a></h3>
+    <p>W46 - Forget spreadsheets! Businesses keep botching human psychology—the gap&#x27;s so wide you could park a train in it! Think: billion-dollar companies, all math, no matter. Explore how understanding perception trumps…</p>
+  </article>
+  <article class="essay-row">
+    <div class="essay-row-eyebrow">
+      <span class="cat">👁️ A Closer Look</span><span>·</span>
+      <span>Oct 17, 2024</span>
+      <span>·</span>
+      <span>4 min read</span>
+    </div>
+    <h3><a href="../posts/the-ai-revolution-isnt-what-you-think-it-is.html">The AI Revolution Isn&#x27;t What You Think It Is</a></h3>
+    <p>W41 - The AI revolution isn&#x27;t about machines thinking like humans—it&#x27;s about discovering that intelligence itself follows mathematical principles. What we&#x27;re learning isn&#x27;t just changing technology; it&#x27;s forcing us to…</p>
+  </article>
+</div>
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-t1">
+      <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://ghost-production-198e.up.railway.app/subscribe" method="get" onsubmit="window.location.href='https://ghost-production-198e.up.railway.app/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-cols">
+        <div class="col-group">
+          <div class="col-group-label">Explore</div>
+          <ul class="col-group-links"><li><a href="../index.html">Home</a></li><li><a href="../archive.html">Archive</a></li><li><a href="../tags/index.html">All Topics</a></li><li><a href="../lexicon/index.html">The Lexicon</a></li><li><a href="../tags/a-closer-look.html">Essays</a></li><li><a href="../tags/worthafortune.html">Newsletters</a></li><li><a href="../podcast.html">Podcast</a></li></ul>
+        </div>
+        <div class="col-group">
+          <div class="col-group-label">More</div>
+          <ul class="col-group-links"><li><a href="../about/index.html">About</a></li><li><a href="../links/index.html">Links</a></li><li><a href="../metrics.html">Corpus Report</a></li><li><a href="https://ghost-production-198e.up.railway.app" target="_blank" rel="noopener">Ghost CMS</a></li><li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li></ul>
+        </div>
+        
+        <div class="col-group col-group--ama">
+          <div class="col-group-label">Have a question?</div>
+          <button type="button" class="col-ama-ad" data-ama-toggle aria-expanded="false" aria-controls="col-ama-panel">
+            
+            <span class="col-ama-copy"><span class="col-ama-title">📣 Ask Me Anything</span><span class="col-ama-sub">Ask it &rarr;</span></span>
+            <span class="col-ama-chevron" aria-hidden="true">&#9662;</span>
+          </button>
+        </div>
+      </div>
+      
+      <div id="col-ama-panel" class="col-ama-panel" hidden>
+        
+        <div class="col-ama-frost">
+          <p class="col-ama-hint">Type your question below and hit ask — or highlight anything that sparked it first.</p>
+          <form class="col-ama-form" action="../posts/no-really-ask-me-anything.html" method="get">
+            <input type="text" name="q" placeholder="What do you want to know?" aria-label="Your question">
+            <button type="submit">Ask &rarr;</button>
+          </form>
+          <a class="col-ama-full" href="../posts/no-really-ask-me-anything.html">Read the full AMA thread &rarr;</a>
+        </div>
+      </div>
+      <script>(function(){
+        var btn=document.querySelector('[data-ama-toggle]'),panel=document.getElementById('col-ama-panel');
+        if(!btn||!panel)return;
+        btn.addEventListener('click',function(){
+          var open=panel.hasAttribute('hidden');
+          if(open){panel.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}
+          else{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}
+        });
+      })();</script>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>280 Posts · 85 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://ghost-production-198e.up.railway.app/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -18,10 +18,30 @@ from collections import defaultdict
 from datetime import datetime
 
 # Configuration — defaults to self-hosted Ghost on Railway; override with env vars.
-GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-47fd.up.railway.app")
-API_KEY = os.environ.get("GHOST_CONTENT_KEY", "10928acdf25a435441f12d6e78")
+GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-198e.up.railway.app")
+API_KEY = os.environ.get("GHOST_CONTENT_KEY", "3e5138609f5b6d55fe2d56ea34")
 API_BASE = f"{GHOST_URL}/ghost/api/content"
 BACKUP_DIR = Path(__file__).parent
+
+# Ghost's Admin API refuses to let integration keys rename the owner user
+# (staff/user management is session-auth only), so the branded byline is
+# patched in here instead — applied to every re-sync, unlike a one-off
+# Ghost-admin edit which only the primary Ghost account owner can do anyway.
+AUTHOR_OVERRIDES = {
+    "khayyam": {
+        "name": "🌶️ @iamkhayyam",
+        "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+        "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+        "twitter": "@worthafortune",
+    },
+}
+
+
+def apply_author_overrides(author):
+    override = AUTHOR_OVERRIDES.get(author.get("slug"))
+    if override:
+        author.update(override)
+    return author
 
 # Directory structure
 POSTS_DIR = BACKUP_DIR / "posts"
@@ -223,6 +243,9 @@ def main():
         "include": "count.posts",
         "fields": "id,name,slug,profile_image,cover_image,bio,website,location,facebook,twitter,meta_title,meta_description,url"
     })
+    all_authors = [apply_author_overrides(a) for a in all_authors]
+    for post in all_posts:
+        post["authors"] = [apply_author_overrides(a) for a in post.get("authors", [])]
     print(f"  Total authors: {len(all_authors)}")
 
     # Also fetch pages
