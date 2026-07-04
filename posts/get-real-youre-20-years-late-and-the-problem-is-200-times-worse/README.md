@@ -1,14 +1,14 @@
 ---
 title: "Get Real! You're 20 Years Late and the Problem is 200 Times Worse"
 slug: get-real-youre-20-years-late-and-the-problem-is-200-times-worse
-id: 681cfc1193f87a000179d8da
+id: 6a4816fb7d31280001f4faab
 published_at: 2025-05-08T12:32:13.000-07:00
 updated_at: 2025-05-18T09:58:16.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/05/W19.Get-Real--You-re-20-Years-Late-and-the-Problem-is-200x-Worse.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/W19.Get-Real--You-re-20-Years-Late-and-the-Problem-is-200x-Worse.png
 excerpt: "W19 - While government fumbles with 20-year-old ID programs, tech billionaires deploy iris scanners in malls across America. This isn't coincidence—it's a calculated power grab for the ultimate prize: control of your digital existence itself."
-url: https://tokenwisdom.ghost.io/get-real-youre-20-years-late-and-the-problem-is-200-times-worse/
+url: https://ghost-production-198e.up.railway.app/get-real-youre-20-years-late-and-the-problem-is-200-times-worse/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: privacy
   - name: Risk \ Reward
     slug: risk-reward
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Get Real! You're 20 Years Late and the Problem is 200 Times Worse

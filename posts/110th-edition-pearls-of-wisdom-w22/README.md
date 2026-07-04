@@ -1,21 +1,23 @@
 ---
 title: "110th Edition 🔮 Pearls of Wisdom ⑊ W22"
 slug: 110th-edition-pearls-of-wisdom-w22
-id: 683de0df62abb3000196ab66
+id: 6a4816fb7d31280001f4fab2
 published_at: 2025-06-02T11:53:41.000-07:00
 updated_at: 2025-06-02T11:53:41.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/Leonardo_Diffusion_XL_A_realistic_fortune_teller_hovering_over_0.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/Leonardo_Diffusion_XL_A_realistic_fortune_teller_hovering_over_0.jpg
 excerpt: "W22 - White-collar AI anxiety, OpenAI's mystery gadget, and China's spy lasers? Welcome to Token Wisdom's 110th edition, where we decode the digital chaos with a dash of wit. Grab your laser-proof notebook as we venture into tech's twilight zone – skepticism recommended, humor mandatory!
 "
-url: https://tokenwisdom.ghost.io/worthafortune/110th-edition-pearls-of-wisdom-w22/
+url: https://ghost-production-198e.up.railway.app/110th-edition-pearls-of-wisdom-w22/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 110th Edition 🔮 Pearls of Wisdom ⑊ W22

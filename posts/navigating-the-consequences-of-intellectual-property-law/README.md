@@ -1,14 +1,14 @@
 ---
 title: "Navigating the Consequences of Intellectual Property Law"
 slug: navigating-the-consequences-of-intellectual-property-law
-id: 65d4929f692af4000194452c
+id: 6a4816fb7d31280001f4fa22
 published_at: 2024-02-18T17:40:00.000-08:00
 updated_at: 2025-01-23T18:28:43.000-08:00
 featured: False
 reading_time: 16 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/img-EMTahuRsn87lSC05yV8vw.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/img-EMTahuRsn87lSC05yV8vw.png
 excerpt: "W06 - In the intricate ballet of innovation and economic growth, intellectual property (IP) rights are the silent conductors orchestrating a mixture of harmonic advances and dissonant setbacks."
-url: https://tokenwisdom.ghost.io/navigating-the-consequences-of-intellectual-property-law/
+url: https://ghost-production-198e.up.railway.app/navigating-the-consequences-of-intellectual-property-law/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -26,9 +26,11 @@ tags:
     slug: provenance
   - name: IP \ Copyright
     slug: copyright
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Navigating the Consequences of Intellectual Property Law

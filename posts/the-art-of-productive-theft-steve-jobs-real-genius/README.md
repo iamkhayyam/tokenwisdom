@@ -1,14 +1,14 @@
 ---
 title: "The Art of Productive Theft: Steve Jobs' Real Genius"
 slug: the-art-of-productive-theft-steve-jobs-real-genius
-id: 683b9e0cec2e7e0001fee938
+id: 6a4816fb7d31280001f4fab1
 published_at: 2025-05-31T18:35:27.000-07:00
 updated_at: 2025-06-10T09:15:02.000-07:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/the-orchestra-conductor-jobs-in-his-icon_4LtYfEhJRW2A53gnl8uyzw_C5tjwPofQIeT-SUsaiUd6A.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/the-orchestra-conductor-jobs-in-his-icon_4LtYfEhJRW2A53gnl8uyzw_C5tjwPofQIeT-SUsaiUd6A.png
 excerpt: "W22 - Ever wondered if Steve Jobs' greatest innovation was... stealing? From his \"borrowed\" mouse to the iPhone's inspiration, discover how the maestro of tech didn't create—he curated. His genius wasn't invention, but the art of productive theft. 🍎"
-url: https://tokenwisdom.ghost.io/the-art-of-productive-theft-steve-jobs-real-genius/
+url: https://ghost-production-198e.up.railway.app/the-art-of-productive-theft-steve-jobs-real-genius/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: storytelling
   - name: Philosophical
     slug: philosophy
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Art of Productive Theft: Steve Jobs' Real Genius

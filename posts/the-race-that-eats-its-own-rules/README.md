@@ -1,15 +1,15 @@
 ---
 title: "The Race That Eats Its Own Rules"
 slug: the-race-that-eats-its-own-rules
-id: 69af41ff408a6400011c9381
+id: 6a4816fb7d31280001f4fb08
 published_at: 2026-03-06T15:19:00.000-08:00
 updated_at: 2026-03-09T16:36:23.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/a-new-yorker-style-gouache-illustration-__T1HroJiRImXmq6XCxKw0g_EKJeR5TtSyuqorExo7UQNw_cover_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/a-new-yorker-style-gouache-illustration-__T1HroJiRImXmq6XCxKw0g_EKJeR5TtSyuqorExo7UQNw_cover_sd.jpeg
 excerpt: "W10 - The infrastructure of good intentions has quietly become the infrastructure of acceleration. Not corruption. Rational adaptation. Seven researchers warned about this in 1945. The people who built this understand it best — and they're all outside the institutions now.
 "
-url: https://tokenwisdom.ghost.io/the-race-that-eats-its-own-rules/
+url: https://ghost-production-198e.up.railway.app/the-race-that-eats-its-own-rules/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -31,9 +31,11 @@ tags:
     slug: philosophy
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Race That Eats Its Own Rules

@@ -1,13 +1,13 @@
 ---
 title: "The Promise of Perovskite Solar Cells — Solar 3.0"
 slug: the-promise-of-perovskite-solar-cells-solar-3-0
-id: 65a9f350ebf14f0001f3bfc0
+id: 6a4816fb7d31280001f4f9f6
 published_at: 2023-04-13T21:07:00.000-07:00
 updated_at: 2024-01-21T02:00:29.000-08:00
 featured: False
 reading_time: 5 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/19c3e232-1a7b-44a9-9fbd-08c72c6c23a6.jpeg
-url: https://tokenwisdom.ghost.io/the-promise-of-perovskite-solar-cells-solar-3-0/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/19c3e232-1a7b-44a9-9fbd-08c72c6c23a6.jpeg
+url: https://ghost-production-198e.up.railway.app/the-promise-of-perovskite-solar-cells-solar-3-0/
 tags:
   - name: Regenerative
     slug: regenerative
@@ -21,9 +21,11 @@ tags:
     slug: renewable-energy
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Promise of Perovskite Solar Cells — Solar 3.0

@@ -1,14 +1,14 @@
 ---
 title: "Building Without Blueprints"
 slug: building-without-blueprints
-id: 695f3a1559cfb10001d21896
+id: 6a4816fb7d31280001f4faf6
 published_at: 2026-01-08T00:12:05.000-08:00
 updated_at: 2026-02-22T16:35:15.000-08:00
 featured: False
 reading_time: 19 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/a-sophisticated-new-yorker-style-illustr_prpEcmyiRk6LHgNfxagmyQ_qxYkToYqRRSi4AS7aQPeVg-1.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/a-sophisticated-new-yorker-style-illustr_prpEcmyiRk6LHgNfxagmyQ_qxYkToYqRRSi4AS7aQPeVg-1.jpeg
 excerpt: "W02 - In a world obsessed with \"just fix it,\" here's the uncomfortable reality: Companies won't act ethically, governments won't regulate properly, and your reusable straw won't save the planet. Real change isn't about blueprints—it's about power. Build it or keep pretending."
-url: https://tokenwisdom.ghost.io/building-without-blueprints/
+url: https://ghost-production-198e.up.railway.app/building-without-blueprints/
 tags:
   - name: Technology
     slug: technology
@@ -30,9 +30,11 @@ tags:
     slug: opinionated-editorials
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Building Without Blueprints

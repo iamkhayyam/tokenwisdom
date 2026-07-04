@@ -1,14 +1,14 @@
 ---
 title: "I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You"
 slug: i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you
-id: 688590e5845b5c0001afe00d
+id: 6a4816fb7d31280001f4fac0
 published_at: 2025-07-31T09:40:00.000-07:00
 updated_at: 2025-09-14T13:19:15.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/08/a-digital-illustration-depicting-a-focus_DzkU1SlbQiSwGdlK95_hdg_8eLvjkdWQ7-F4qp7vs2cpw.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/08/a-digital-illustration-depicting-a-focus_DzkU1SlbQiSwGdlK95_hdg_8eLvjkdWQ7-F4qp7vs2cpw.jpeg
 excerpt: "W31 - My attempt to expose AI's dangers revealed my own dependency. Join my ironic journey navigating the blurry line between human thought and AI. With \"occasional\" help from ChatGPT, I'm losing the battle against reliance. Spoiler: Team human isn't winning."
-url: https://tokenwisdom.ghost.io/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/
+url: https://ghost-production-198e.up.railway.app/i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -36,9 +36,11 @@ tags:
     slug: agi
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # I Asked ChatGPT to Write My Anti-AI Op-Ed and the Results Will Shock You

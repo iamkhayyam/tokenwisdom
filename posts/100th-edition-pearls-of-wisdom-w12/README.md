@@ -1,20 +1,22 @@
 ---
 title: "100th Edition 🔮 Pearls of Wisdom ⑊ W12"
 slug: 100th-edition-pearls-of-wisdom-w12
-id: 67e1b33876728b00010c31b6
+id: 6a4816fb7d31280001f4fa9e
 published_at: 2025-03-24T13:09:09.000-07:00
 updated_at: 2025-03-24T13:29:18.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/img-c1liskdEq5igpE52rtwMK.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/img-c1liskdEq5igpE52rtwMK.png
 excerpt: "W12 - In a world where AI analyzes our emotions and Wikipedia edits power arcade games, your smart home might be developing a consciousness. Dive into tech's uncharted waters where drug repurposing saves lives and detention stories remind us of system flaws. Future shock? It's our daily reality."
-url: https://tokenwisdom.ghost.io/worthafortune/100th-edition-pearls-of-wisdom-w12/
+url: https://ghost-production-198e.up.railway.app/100th-edition-pearls-of-wisdom-w12/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 100th Edition 🔮 Pearls of Wisdom ⑊ W12

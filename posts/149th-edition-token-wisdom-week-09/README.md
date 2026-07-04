@@ -1,20 +1,22 @@
 ---
 title: "149th Edition 🔮 Token Wisdom \ Week 09"
 slug: 149th-edition-token-wisdom-week-09
-id: 69a571ebb950650001160ea1
+id: 6a4816fb7d31280001f4fb07
 published_at: 2026-03-02T13:22:41.000-08:00
 updated_at: 2026-03-02T13:22:41.000-08:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_0.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_0.jpg
 excerpt: "This week: A rogue AI published a hit piece, and thermodynamic tech rivals GPUs at lower energy. Britain aims to predict crimes, while Terence Tao sees AI reshaping math. We aren't building intelligence; we're industrializing prediction—surveillance with better branding. "
-url: https://tokenwisdom.ghost.io/worthafortune/149th-edition-token-wisdom-week-09/
+url: https://ghost-production-198e.up.railway.app/149th-edition-token-wisdom-week-09/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 149th Edition 🔮 Token Wisdom \ Week 09

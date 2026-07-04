@@ -1,14 +1,14 @@
 ---
 title: "The Magic Kingdom Crumbles in Corporate Cowardice"
 slug: the-magic-kingdom-crumbles-in-corporate-cowardice
-id: 68d0e5d7c03c2700012d9ac8
+id: 6a4816fb7d31280001f4fad1
 published_at: 2025-09-18T07:42:00.000-07:00
 updated_at: 2025-09-22T08:57:09.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/W38-a-satirical-illustration-in-the-style-of_n0os0jlKQKWLmMkdZq8Rlg_TFUfxp_rQtGyS4NAyynj7A.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/W38-a-satirical-illustration-in-the-style-of_n0os0jlKQKWLmMkdZq8Rlg_TFUfxp_rQtGyS4NAyynj7A.png
 excerpt: "W38 - Disney silenced Kimmel, sparking a mass exodus that crashed their systems—and credibility. This misfire exposed corporate America's costliest strategy: cowardice as prudence. Mickey's white gloves? Perfect for waving the surrender flag. Welcome to the new Magic Kingdom: where dreams die."
-url: https://tokenwisdom.ghost.io/the-magic-kingdom-crumbles-in-corporate-cowardice/
+url: https://ghost-production-198e.up.railway.app/the-magic-kingdom-crumbles-in-corporate-cowardice/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: strategic
   - name: Risk \ Reward
     slug: risk-reward
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Magic Kingdom Crumbles in Corporate Cowardice

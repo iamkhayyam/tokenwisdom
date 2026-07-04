@@ -1,20 +1,22 @@
 ---
 title: "115th Edition 🔮 Pearls of Wisdom ⑊ W27"
 slug: 115th-edition-pearls-of-wisdom-w27
-id: 6884ae07bf67a80001661d10
+id: 6a4816fb7d31280001f4fabd
 published_at: 2025-07-07T12:34:00.000-07:00
 updated_at: 2025-07-29T12:34:50.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/07/Leonardo_Diffusion_XL_A_fortune_teller_hovering_over_a_crystal_3.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/07/Leonardo_Diffusion_XL_A_fortune_teller_hovering_over_a_crystal_3.jpg
 excerpt: "W27 - From stamp-sized hard drives to adult brain cell growth, Week 27 of 2025 challenges our limits. As AI reshapes the internet and quantum randomness powers computing, are we decoding the universe or becoming the code itself? Prepare to question everything."
-url: https://tokenwisdom.ghost.io/worthafortune/115th-edition-pearls-of-wisdom-w27/
+url: https://ghost-production-198e.up.railway.app/115th-edition-pearls-of-wisdom-w27/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 115th Edition 🔮 Pearls of Wisdom ⑊ W27

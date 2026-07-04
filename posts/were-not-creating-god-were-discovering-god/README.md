@@ -1,14 +1,14 @@
 ---
 title: "We're Not Creating God, We're Discovering God"
 slug: were-not-creating-god-were-discovering-god
-id: 686ad01c85d4080001460371
+id: 6a4816fb7d31280001f4fabb
 published_at: 2025-07-06T14:09:20.000-07:00
 updated_at: 2025-07-06T14:17:45.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/07/imagine-a-classic-new-yorker-style-illus_DXq195aVTFOsZIKyrirGPg__7M1UMAsSA6FI3HfVBsQTA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/07/imagine-a-classic-new-yorker-style-illus_DXq195aVTFOsZIKyrirGPg__7M1UMAsSA6FI3HfVBsQTA.jpeg
 excerpt: "W27 - God isn't created or worshipped, but discovered in quantum mechanics and neural networks. Rival worldviews realize they've been allies. The twist? We're not decoding divinity, we are the code. We're not creating God; we're uncovering it."
-url: https://tokenwisdom.ghost.io/were-not-creating-god-were-discovering-god/
+url: https://ghost-production-198e.up.railway.app/were-not-creating-god-were-discovering-god/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: deeptech
   - name: A Story to Tell
     slug: storytelling
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # We're Not Creating God, We're Discovering God

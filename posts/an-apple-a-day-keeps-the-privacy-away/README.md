@@ -1,14 +1,14 @@
 ---
 title: "An Apple a Day Keeps the Privacy Away"
 slug: an-apple-a-day-keeps-the-privacy-away
-id: 66019ada19bcd2000130aa60
+id: 6a4816fb7d31280001f4fa3f
 published_at: 2024-03-25T15:33:40.000-07:00
 updated_at: 2024-09-21T20:36:57.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-QvI6yBb6mKDvOVakSWIED.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-QvI6yBb6mKDvOVakSWIED.jpeg
 excerpt: "W11 - Beyond the era of the iPhone, Apple constructs the foundation for a pioneering journey, laying the groundwork for a future that promises to redefine our interaction with technology in profound and unexpected ways."
-url: https://tokenwisdom.ghost.io/an-apple-a-day-keeps-the-privacy-away/
+url: https://ghost-production-198e.up.railway.app/an-apple-a-day-keeps-the-privacy-away/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: privacy
   - name: Deep Tech
     slug: deeptech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # An Apple a Day Keeps the Privacy Away

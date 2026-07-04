@@ -1,14 +1,14 @@
 ---
 title: "The AI Revolution in Healthcare: Reshaping the Future of Medicine"
 slug: innovations-and-challenges-in-wban-for-healthcare-copy
-id: 670a3e6647b6c200019d0454
+id: 6a4816fb7d31280001f4fa69
 published_at: 2024-01-25T02:23:00.000-08:00
 updated_at: 2024-10-12T02:32:30.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/img-8JzCOS34UlPrg9vQ43OQ0.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/img-8JzCOS34UlPrg9vQ43OQ0.jpeg
 excerpt: "W03 - In the quiet corridors of a bustling hospital, a silent revolution hums. AI analyzes images at lightning speed, detects threats before they manifest, and crafts treatments with eerie precision. The future of medicine isn't coming—it's already here, whispering in binary."
-url: https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare-copy/
+url: https://ghost-production-198e.up.railway.app/innovations-and-challenges-in-wban-for-healthcare-copy/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: deeptech
   - name: Brain Health
     slug: brain-health
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The AI Revolution in Healthcare: Reshaping the Future of Medicine

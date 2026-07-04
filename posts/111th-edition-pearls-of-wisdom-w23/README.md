@@ -1,21 +1,23 @@
 ---
 title: "111th Edition 🔮 Pearls of Wisdom ⑊ W23"
 slug: 111th-edition-pearls-of-wisdom-w23
-id: 684b24af65e4ce000100579f
+id: 6a4816fb7d31280001f4fab4
 published_at: 2025-06-09T13:00:00.000-07:00
 updated_at: 2025-06-13T14:33:59.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/Leonardo_Diffusion_XL_A_crystal_ball_with_a_stylized_Token_Wis_0.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/Leonardo_Diffusion_XL_A_crystal_ball_with_a_stylized_Token_Wis_0.jpg
 excerpt: "W23 - Dissolving plastics, billion-dollar app stores, and AI making moves in Hollywood? Welcome to Token Wisdom's 111th edition, where we navigate the digital frontier with a wink. Buckle up for a journey through tech's wonderland – sanity optional, humor guaranteed!
 "
-url: https://tokenwisdom.ghost.io/worthafortune/111th-edition-pearls-of-wisdom-w23/
+url: https://ghost-production-198e.up.railway.app/111th-edition-pearls-of-wisdom-w23/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 111th Edition 🔮 Pearls of Wisdom ⑊ W23

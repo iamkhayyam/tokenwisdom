@@ -1,14 +1,14 @@
 ---
 title: "Mirror World of the Three-Body Problem"
 slug: mirror-world-of-the-three-body-problem
-id: 68ead0cd483d610001a8700b
+id: 6a4816fb7d31280001f4fad8
 published_at: 2025-10-09T15:01:00.000-07:00
 updated_at: 2025-10-21T11:31:57.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/10/a-vibrant-full-color-illustration-in-the_qBdSvxp4TYGhlCl-vgwI9g_9pDqx1XHSeGvLmfyQlqmaQ.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/10/a-vibrant-full-color-illustration-in-the_qBdSvxp4TYGhlCl-vgwI9g_9pDqx1XHSeGvLmfyQlqmaQ.jpeg
 excerpt: "W41 - We've birthed Knowware: intelligence crystallized into infrastructure. Now we're in a cosmic dance—Hardware, Software, and Knowware spinning in chaotic orbits. Welcome to the digital age's three-body problem. Can we master the math of our creation?"
-url: https://tokenwisdom.ghost.io/mirror-world-of-the-three-body-problem/
+url: https://ghost-production-198e.up.railway.app/mirror-world-of-the-three-body-problem/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: agi
   - name: Challenges
     slug: challenges
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Mirror World of the Three-Body Problem

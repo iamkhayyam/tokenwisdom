@@ -1,14 +1,14 @@
 ---
 title: "From Tasks to Systems: The True AI Revolution in Services"
 slug: from-tasks-to-systems-the-true-ai-revolution-in-services
-id: 674bc975fa728b0001fe1fe8
+id: 6a4816fb7d31280001f4fa7e
 published_at: 2024-11-07T18:48:00.000-08:00
 updated_at: 2024-11-30T19:28:50.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/img-Avt0NAIydDjlY1qEqoxJ8.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/img-Avt0NAIydDjlY1qEqoxJ8.jpeg
 excerpt: "W44 - Silicon Valley obsesses over AI's party tricks while missing the $5 trillion revolution hiding in plain sight. The real transformation isn't about automation—it's about reimagining how entire industries create and capture value."
-url: https://tokenwisdom.ghost.io/from-tasks-to-systems-the-true-ai-revolution-in-services/
+url: https://ghost-production-198e.up.railway.app/from-tasks-to-systems-the-true-ai-revolution-in-services/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -26,9 +26,11 @@ tags:
     slug: technology
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # From Tasks to Systems: The True AI Revolution in Services

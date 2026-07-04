@@ -1,18 +1,20 @@
 ---
 title: "The Ultimate Reading Guide ✨ 2025"
 slug: token-the-ultimate-reading-guide
-id: 694dca61caeeb90001345841
+id: 6a4816fb7d31280001f4faf1
 published_at: 2025-12-25T20:20:21.000-08:00
 updated_at: 2026-01-02T18:57:32.000-08:00
 featured: True
 reading_time: 46 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/fortune_teller_worth_a_fortune.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/fortune_teller_worth_a_fortune.gif
 excerpt: "52 essays: $600B in AI delusions. Lab neurons firing without experience. A confession of what tech analysis erases. In 2025, Silicon Valley built a machine that engineers forgetting—this is how we remember what platforms want us to forget. This is Token Wisdom.."
-url: https://tokenwisdom.ghost.io/featured/token-the-ultimate-reading-guide/
+url: https://ghost-production-198e.up.railway.app/token-the-ultimate-reading-guide/
 tags:
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Ultimate Reading Guide ✨ 2025

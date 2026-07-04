@@ -1,13 +1,13 @@
 ---
 title: "Thanks Be Given"
 slug: thanks-be-given
-id: 65ab51bb4cf93c000184b747
+id: 6a4816fb7d31280001f4fa09
 published_at: 2015-10-11T16:18:36.000-07:00
 updated_at: 2024-01-20T11:40:06.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/1-2_2do_j-luyke-yi7vpooq.png
-url: https://tokenwisdom.ghost.io/thanks-be-given/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/1-2_2do_j-luyke-yi7vpooq.png
+url: https://ghost-production-198e.up.railway.app/thanks-be-given/
 tags:
   - name: Dear ______ Letters
     slug: dear-______-letters
@@ -15,9 +15,11 @@ tags:
     slug: storytelling
   - name: Personal Growth
     slug: personal-growth
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Thanks Be Given

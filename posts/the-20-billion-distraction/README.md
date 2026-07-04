@@ -1,14 +1,14 @@
 ---
 title: "The $20 Billion Distraction"
 slug: the-20-billion-distraction
-id: 6957a560510d1a0001d21a75
+id: 6a4816fb7d31280001f4faf3
 published_at: 2026-01-01T11:11:00.000-08:00
 updated_at: 2026-01-02T18:51:57.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/a-sophisticated-new-yorker-style-illustr_s11G3tqHTJ6ip41WUiwYcg_AdAGxWzHSZacWmltNvAQPA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/a-sophisticated-new-yorker-style-illustr_s11G3tqHTJ6ip41WUiwYcg_AdAGxWzHSZacWmltNvAQPA.jpeg
 excerpt: "W01 - While Silicon Valley built trillion-dollar AI castles, we mapped every patent but missed every human cost. 130+ weeks of tech analysis revealed our fatal blind spot: we're not creating intelligence—we're crystallizing it into infrastructure that thinks back."
-url: https://tokenwisdom.ghost.io/the-20-billion-distraction/
+url: https://ghost-production-198e.up.railway.app/the-20-billion-distraction/
 tags:
   - name: Technology
     slug: technology
@@ -30,9 +30,11 @@ tags:
     slug: opinionated-editorials
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The $20 Billion Distraction

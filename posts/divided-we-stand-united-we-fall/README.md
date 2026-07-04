@@ -1,14 +1,14 @@
 ---
 title: "Divided We Stand, United We Fall"
 slug: divided-we-stand-united-we-fall
-id: 6884ac17bf67a80001661ce0
+id: 6a4816fb7d31280001f4fabc
 published_at: 2025-07-10T12:37:00.000-07:00
 updated_at: 2025-07-30T11:14:36.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/07/create-a-new-yorker-style-illustration-i_V6XfTMElS9WkuLK44V6RTA_XMaUjvNZTZ2NQjqM0wDgww.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/07/create-a-new-yorker-style-illustration-i_V6XfTMElS9WkuLK44V6RTA_XMaUjvNZTZ2NQjqM0wDgww.jpeg
 excerpt: "W28 - Democracy crumbles from within as we fragment sovereignty along identity lines. Our rush to grant every group \"sovereign\" status weakens true political authority. Ironically, this quest for recognition may pave the way for the authoritarianism we fear."
-url: https://tokenwisdom.ghost.io/divided-we-stand-united-we-fall/
+url: https://ghost-production-198e.up.railway.app/divided-we-stand-united-we-fall/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: risk-reward
   - name: Educate \ Learn
     slug: education
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Divided We Stand, United We Fall

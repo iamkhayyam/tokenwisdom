@@ -1,9 +1,9 @@
 {
-  "id": "65ac20cc4cf93c000184bb26",
+  "id": "6a4816f97d31280001f4f9b5",
   "name": "LinkedIn \\ Pros",
   "slug": "linkedin",
   "description": null,
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/giphyLinkedIn.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/giphyLinkedIn.gif",
   "visibility": "public",
   "meta_title": null,
   "meta_description": null,
@@ -17,23 +17,23 @@
   "codeinjection_foot": null,
   "canonical_url": null,
   "accent_color": null,
-  "url": "https://tokenwisdom.ghost.io/tag/linkedin/",
+  "url": "https://ghost-production-198e.up.railway.app/tag/linkedin/",
   "posts": [
     {
-      "id": "65ab51bb4cf93c000184b73a",
+      "id": "6a4816fb7d31280001f4fa04",
       "title": "LinkedIn, Isn’t Good Enough",
       "slug": "linkedin-isnt-good-enough",
       "published_at": "2014-05-27T15:55:07.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/featured/linkedin-isnt-good-enough/",
+      "url": "https://ghost-production-198e.up.railway.app/linkedin-isnt-good-enough/",
       "featured": true,
       "reading_time": 5
     },
     {
-      "id": "65ab51bb4cf93c000184b739",
+      "id": "6a4816fb7d31280001f4fa03",
       "title": "LinkedIn Is Just Like Dating: Courtship Rules",
       "slug": "linkedin-is-just-like-dating-courtship-rules",
       "published_at": "2014-04-30T13:28:51.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/linkedin-is-just-like-dating-courtship-rules/",
+      "url": "https://ghost-production-198e.up.railway.app/linkedin-is-just-like-dating-courtship-rules/",
       "featured": false,
       "reading_time": 4
     }

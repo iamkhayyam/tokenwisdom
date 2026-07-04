@@ -1,14 +1,14 @@
 ---
 title: "How Apple and Companion AI Killed Privacy Without Anyone Noticing"
 slug: how-apple-and-companion-ai-killed-privacy-without-anyone-noticing
-id: 67c751255e07b200018d825b
+id: 6a4816fb7d31280001f4fa99
 published_at: 2025-03-05T12:08:26.000-08:00
 updated_at: 2025-03-06T01:21:42.000-08:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/in-a-stark-black-and-white-illustration-_Cy6g_gEvRpCegUKkdNp9jQ_eidWxBxXRXOxLoKGlUEizQ-1.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/in-a-stark-black-and-white-illustration-_Cy6g_gEvRpCegUKkdNp9jQ_eidWxBxXRXOxLoKGlUEizQ-1.png
 excerpt: "W10 - While you fought over encryption, Big Tech pulled off the greatest surveillance sleight-of-hand. Your iPhone isn't just watching—it's redefining privacy itself. And Apple, once privacy's champion, just became its greatest threat."
-url: https://tokenwisdom.ghost.io/how-apple-and-companion-ai-killed-privacy-without-anyone-noticing/
+url: https://ghost-production-198e.up.railway.app/how-apple-and-companion-ai-killed-privacy-without-anyone-noticing/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -34,9 +34,11 @@ tags:
     slug: big-tech
   - name: A.I. (and Subsets)
     slug: ai
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # How Apple and Companion AI Killed Privacy Without Anyone Noticing

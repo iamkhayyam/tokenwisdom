@@ -1,14 +1,14 @@
 ---
 title: "Explainable AI - Illuminating the Black Box"
 slug: explainable-ai-illuminating-the-black-box
-id: 670a4ed647b6c200019d048c
+id: 6a4816fb7d31280001f4fa6a
 published_at: 2024-06-06T03:47:00.000-07:00
 updated_at: 2024-11-16T12:50:17.000-08:00
 featured: False
 reading_time: 18 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/i-love-lucy-lucy-ricardo-1.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/i-love-lucy-lucy-ricardo-1.gif
 excerpt: "W22 - Peering into AI's mind: Can we illuminate the black box? From neural labyrinths to decision tree gardens, explore the quest to make machines explain themselves. Because in a world run by algorithms, understanding is the ultimate superpower."
-url: https://tokenwisdom.ghost.io/explainable-ai-illuminating-the-black-box/
+url: https://ghost-production-198e.up.railway.app/explainable-ai-illuminating-the-black-box/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: deeptech
   - name: Challenges
     slug: challenges
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Explainable AI - Illuminating the Black Box

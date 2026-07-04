@@ -1,13 +1,13 @@
 ---
 title: "The Era of Explainable AI In Today's World: The Future, The Insights, and The Trust"
 slug: the-era-of-explainable-ai-in-todays-world
-id: 65a9c3dfebf14f0001f3be6c
+id: 6a4816fb7d31280001f4f9e9
 published_at: 2023-04-11T17:40:00.000-07:00
 updated_at: 2024-01-19T09:05:31.000-08:00
 featured: True
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/img-e0O9lupkei3Day2mzRkVe.png
-url: https://tokenwisdom.ghost.io/featured/the-era-of-explainable-ai-in-todays-world/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-e0O9lupkei3Day2mzRkVe.png
+url: https://ghost-production-198e.up.railway.app/the-era-of-explainable-ai-in-todays-world/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -15,9 +15,11 @@ tags:
     slug: hash-unlisted
   - name: Explainable AI
     slug: explainable-ai
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Era of Explainable AI In Today's World: The Future, The Insights, and The Trust

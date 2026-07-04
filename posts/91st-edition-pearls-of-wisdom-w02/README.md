@@ -1,20 +1,22 @@
 ---
 title: "91st Edition 🔮 Pearls of Wisdom ⑊ W03"
 slug: 91st-edition-pearls-of-wisdom-w02
-id: 678cfcd878b17200019cf0e9
+id: 6a4816fb7d31280001f4fa8c
 published_at: 2025-01-19T05:49:08.000-08:00
 updated_at: 2025-02-16T08:30:42.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/img-vCSAAmVo3bWfhTfm4VdzO.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/img-vCSAAmVo3bWfhTfm4VdzO.png
 excerpt: "W03 - From AI courtroom drama to BMW's AR windshields, and the UAE's $1.5T AI ambitions – dive into a tech landscape where innovation meets controversy. Plus: Why Wikipedia's 'Maybe Later' button might be the most brilliant fundraising hack of 2025."
-url: https://tokenwisdom.ghost.io/worthafortune/91st-edition-pearls-of-wisdom-w02/
+url: https://ghost-production-198e.up.railway.app/91st-edition-pearls-of-wisdom-w02/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 91st Edition 🔮 Pearls of Wisdom ⑊ W03

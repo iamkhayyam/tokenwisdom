@@ -1,20 +1,22 @@
 ---
 title: "W10: 47th Edition \ Side A🎉"
 slug: w10-thenewestlatest-46
-id: 65f4898ced6d88000174ce01
+id: 6a4816fb7d31280001f4fa31
 published_at: 2024-03-10T11:58:00.000-07:00
 updated_at: 2024-10-11T00:11:49.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-Axe4TQ9SfSU8ye6ayMZPB.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-Axe4TQ9SfSU8ye6ayMZPB.jpeg
 excerpt: "Explore record-breaking fusion tech, the brain's emotion code, AI's selective forgetting, VR's social play, modern warfare's tech shift, archaeology via particle physics, Sony's immersive music, App Store controversies, endangered research papers, and AI's legal hurdles."
-url: https://tokenwisdom.ghost.io/newestlatest/w10-thenewestlatest-46/
+url: https://ghost-production-198e.up.railway.app/w10-thenewestlatest-46/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W10: 47th Edition \ Side A🎉

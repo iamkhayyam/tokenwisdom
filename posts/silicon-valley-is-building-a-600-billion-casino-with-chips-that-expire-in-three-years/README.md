@@ -1,14 +1,14 @@
 ---
 title: "Silicon Valley Is Building a $600 Billion Casino With Chips That Expire in Three Years"
 slug: silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years
-id: 68ffc27c78e9190001044cdc
+id: 6a4816fb7d31280001f4fadc
 published_at: 2025-10-23T22:43:00.000-07:00
 updated_at: 2025-10-29T14:26:28.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/10/a-new-yorker-style-watercolor-illustrati_2BQVZ6lBRDC-QU74lqn4rg_M3tco3jNS2e49iv5IviJQA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/10/a-new-yorker-style-watercolor-illustrati_2BQVZ6lBRDC-QU74lqn4rg_M3tco3jNS2e49iv5IviJQA.jpeg
 excerpt: "W43 - Tech giants are spending $600 billion to generate $40 billion in revenue—lighting $15 on fire for every $1 earned. The only innovation? Building the first bubble where the infrastructure rots faster than the business models that justify it."
-url: https://tokenwisdom.ghost.io/silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years/
+url: https://ghost-production-198e.up.railway.app/silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: future-trends
   - name: Business Models
     slug: business-intelligence
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Silicon Valley Is Building a $600 Billion Casino With Chips That Expire in Three Years

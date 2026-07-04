@@ -1,20 +1,22 @@
 ---
 title: "99th Edition 🔮 Pearls of Wisdom ⑊ W11"
 slug: 99th-edition-pearls-of-wisdom-w11
-id: 67d854cd87ccd80001e4ca03
+id: 6a4816fb7d31280001f4fa9c
 published_at: 2025-03-17T10:16:06.000-07:00
 updated_at: 2025-03-17T10:16:48.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/img-8W5tZJ6WQAsKS55lTdJPN.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/img-8W5tZJ6WQAsKS55lTdJPN.png
 excerpt: "W11 - In a world where lab-grown neurons play Pong and microplastics rain from above, your smart thermostat might develop strong opinions about crypto. Dive into tech's uncharted waters where Apple breaks laptops forever and AI creates uncanny emotional bonds. Future shock? It's already here."
-url: https://tokenwisdom.ghost.io/worthafortune/99th-edition-pearls-of-wisdom-w11/
+url: https://ghost-production-198e.up.railway.app/99th-edition-pearls-of-wisdom-w11/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 99th Edition 🔮 Pearls of Wisdom ⑊ W11

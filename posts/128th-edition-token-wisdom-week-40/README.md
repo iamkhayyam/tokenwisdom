@@ -1,20 +1,22 @@
 ---
 title: "128th Edition 🔮 Token Wisdom \\ Week 40"
 slug: 128th-edition-token-wisdom-week-40
-id: 68e5e9e7a6c145000155c1ef
+id: 6a4816fb7d31280001f4fad7
 published_at: 2025-10-05T22:05:00.000-07:00
 updated_at: 2025-10-08T10:59:48.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/10/Leonardo_Phoenix_09_Create_a_majestic_crystal_ball_with_intric_3.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/10/Leonardo_Phoenix_09_Create_a_majestic_crystal_ball_with_intric_3.jpg
 excerpt: "Password security, gaming ownership, sovereign payments, and energy innovation headline Token Wisdom's 128th edition. Follow how industries transform, digital sovereignty evolves, and technology reshapes our future—all amid corporate shifts and geopolitical tension."
-url: https://tokenwisdom.ghost.io/worthafortune/128th-edition-token-wisdom-week-40/
+url: https://ghost-production-198e.up.railway.app/128th-edition-token-wisdom-week-40/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 128th Edition 🔮 Token Wisdom \\ Week 40

@@ -1,13 +1,13 @@
 ---
 title: "The 5 Whys Guys? Toyota’s Ingeniously Persistent Curiosity"
 slug: the-5-whys-guys-toyotas-ingeniously-persistent-curiosity
-id: 65a9c748ebf14f0001f3bead
+id: 6a4816fb7d31280001f4f9eb
 published_at: 2023-09-28T17:51:00.000-07:00
 updated_at: 2024-01-19T18:30:22.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/img-IkGfLJDMq4KRNDFCTsdqA.jpeg
-url: https://tokenwisdom.ghost.io/the-5-whys-guys-toyotas-ingeniously-persistent-curiosity/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-IkGfLJDMq4KRNDFCTsdqA.jpeg
+url: https://ghost-production-198e.up.railway.app/the-5-whys-guys-toyotas-ingeniously-persistent-curiosity/
 tags:
   - name: Productivity
     slug: productivity
@@ -21,9 +21,11 @@ tags:
     slug: education
   - name: Life Hacks
     slug: life-hacks
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The 5 Whys Guys? Toyota’s Ingeniously Persistent Curiosity

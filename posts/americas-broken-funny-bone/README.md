@@ -1,14 +1,14 @@
 ---
 title: "America’s Broken Funny Bone"
 slug: americas-broken-funny-bone
-id: 68858d74845b5c0001afdfe7
+id: 6a4816fb7d31280001f4fabe
 published_at: 2025-07-17T10:58:00.000-07:00
 updated_at: 2025-07-30T21:36:17.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/07/a-new-yorker-style-illustration-depictin_1YYF7fwvQeOnhp0PI_BLoQ_Fu8nb6khRr2krWbO_GS4jQ.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/07/a-new-yorker-style-illustration-depictin_1YYF7fwvQeOnhp0PI_BLoQ_Fu8nb6khRr2krWbO_GS4jQ.png
 excerpt: "W29 - We've weaponized humor, chosen outrage over laughter, and turned comedy into tribal warfare. America's funny bone is amputated. The punchline? We can't laugh together. Welcome to the paradox: the joke's on us, but we've forgotten how to laugh."
-url: https://tokenwisdom.ghost.io/americas-broken-funny-bone/
+url: https://ghost-production-198e.up.railway.app/americas-broken-funny-bone/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: deeptech
   - name: A Story to Tell
     slug: storytelling
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # America’s Broken Funny Bone

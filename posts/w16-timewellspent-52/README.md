@@ -1,20 +1,22 @@
 ---
 title: "W16: 53rd Edition \ Side B 📺"
 slug: w16-timewellspent-52
-id: 6630b6e1a7d59a000155ff46
+id: 6a4816fb7d31280001f4fa4d
 published_at: 2024-04-30T19:22:24.000-07:00
 updated_at: 2024-10-11T00:36:26.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/ambient-tv-backlight.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/ambient-tv-backlight.gif
 excerpt: "Explore a labyrinth of emerging technologies and cultural shifts in this week's Token Wisdom! Dive into analog allure, digital repatriation, AI innovations, and beyond. Unpack how today's tech reshapes our connections and values. Get ready to be challenged and inspired."
-url: https://tokenwisdom.ghost.io/timewellspent/w16-timewellspent-52/
+url: https://ghost-production-198e.up.railway.app/w16-timewellspent-52/
 tags:
   - name: 📺 Time Well Spent
     slug: timewellspent
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W16: 53rd Edition \ Side B 📺

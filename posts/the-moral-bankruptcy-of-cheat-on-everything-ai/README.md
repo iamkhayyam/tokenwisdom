@@ -1,14 +1,14 @@
 ---
 title: "The Moral Bankruptcy of \"Cheat on Everything\" AI"
 slug: the-moral-bankruptcy-of-cheat-on-everything-ai
-id: 680a05dba9017d00015a0096
+id: 6a4816fb7d31280001f4faa7
 published_at: 2025-04-24T08:47:25.000-07:00
 updated_at: 2025-05-18T09:58:56.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/W17-The-Moral-Bankruptcy-of-_Cheat-on-Everything_-AI.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/W17-The-Moral-Bankruptcy-of-_Cheat-on-Everything_-AI.png
 excerpt: "W17 - In a world where 'Cheat on Everything' AI turns deceit into an art form, the real casualty is authenticity. Silicon Valley's latest darling teaches us not just how to fake it, but how to surrender the trust that glues our society together. Will we bank on deception or integrity?"
-url: https://tokenwisdom.ghost.io/the-moral-bankruptcy-of-cheat-on-everything-ai/
+url: https://ghost-production-198e.up.railway.app/the-moral-bankruptcy-of-cheat-on-everything-ai/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: future-of-work
   - name: Entrepreneurial
     slug: entrepreneurship
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Moral Bankruptcy of "Cheat on Everything" AI

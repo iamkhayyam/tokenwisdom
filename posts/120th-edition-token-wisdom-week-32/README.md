@@ -1,20 +1,22 @@
 ---
 title: "120th Edition 🔮 Token Wisdom ⑊ W32"
 slug: 120th-edition-token-wisdom-week-32
-id: 68c723adce413500019d5fb2
+id: 6a4816fb7d31280001f4fac5
 published_at: 2025-08-10T15:36:00.000-07:00
 updated_at: 2025-09-15T00:50:10.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/img-SuoKVBnNIx95jNj3ZOCza.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/img-SuoKVBnNIx95jNj3ZOCza.jpeg
 excerpt: "Exploring the rise of techno-religion, quantum biology, and AI's impact on global drug research. Welcome to our 120th edition—where we unravel technological advancements and their effects on society, from Silicon Valley's spiritual evolution to the quantum frontiers of life itself."
-url: https://tokenwisdom.ghost.io/worthafortune/120th-edition-token-wisdom-week-32/
+url: https://ghost-production-198e.up.railway.app/120th-edition-token-wisdom-week-32/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 120th Edition 🔮 Token Wisdom ⑊ W32

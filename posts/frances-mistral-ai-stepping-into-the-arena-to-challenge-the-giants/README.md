@@ -1,27 +1,29 @@
 ---
 title: "France’s Mistral AI: Stepping into the Arena"
 slug: frances-mistral-ai-stepping-into-the-arena-to-challenge-the-giants
-id: 65a9c53bebf14f0001f3be81
+id: 6a4816fb7d31280001f4f9ea
 published_at: 2023-09-30T17:45:00.000-07:00
 updated_at: 2024-01-18T16:49:17.000-08:00
 featured: True
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/img-sLCDr8bEke7CXwdvDymeR.jpeg
-url: https://tokenwisdom.ghost.io/featured/frances-mistral-ai-stepping-into-the-arena-to-challenge-the-giants/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-sLCDr8bEke7CXwdvDymeR.jpeg
+url: https://ghost-production-198e.up.railway.app/frances-mistral-ai-stepping-into-the-arena-to-challenge-the-giants/
 tags:
-  - name: Technology
-    slug: technology
   - name: Innovation
     slug: innovation
+  - name: Technology
+    slug: technology
   - name: #unlisted
     slug: hash-unlisted
   - name: Open-Source
     slug: open-source
   - name: A.I. (and Subsets)
     slug: ai
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # France’s Mistral AI: Stepping into the Arena

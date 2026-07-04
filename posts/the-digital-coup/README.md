@@ -1,14 +1,14 @@
 ---
 title: "The Digital Coup—How Technology Is Reshaping Power"
 slug: the-digital-coup
-id: 6800920e17bdb7000150e902
+id: 6a4816fb7d31280001f4faa5
 published_at: 2025-04-17T07:19:03.000-07:00
 updated_at: 2025-05-18T11:06:15.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/The-Digital-Coup_-Technology-Reshaping-Power.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/The-Digital-Coup_-Technology-Reshaping-Power.png
 excerpt: "W16 - The architecture of digital control operates unseen: comprehensive data collection feeding algorithmic processing that enables behavioral modification. We're not witnessing disruption—we're experiencing a coup executed not with tanks in the streets but with servers in the cloud."
-url: https://tokenwisdom.ghost.io/the-digital-coup/
+url: https://ghost-production-198e.up.railway.app/the-digital-coup/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: future-of-work
   - name: Entrepreneurial
     slug: entrepreneurship
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Digital Coup—How Technology Is Reshaping Power

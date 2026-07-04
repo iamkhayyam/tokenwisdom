@@ -1,14 +1,14 @@
 ---
 title: "The Misinformation Industrial Complex"
 slug: the-misinformation-industrial-complex
-id: 685ba5b2ed1d9d0001db189e
+id: 6a4816fb7d31280001f4fab9
 published_at: 2025-06-26T18:28:33.000-07:00
 updated_at: 2025-07-03T17:21:17.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/a-striking-illustrated-cover-for-token-w_OEiF6-iISXWiXmW9TV6OKw_VHhM1dGYQiGRAtMKN2El0A.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/a-striking-illustrated-cover-for-token-w_OEiF6-iISXWiXmW9TV6OKw_VHhM1dGYQiGRAtMKN2El0A.png
 excerpt: "W26 - Your social feed: a battleground where AI content farms profit from economic anxiety. Welcome to the Misinformation Industrial Complex. Fake corporate exodus stories exploit real fears. That viral video isn't just clickbait—it's information warfare fueled by your midnight scrolling."
-url: https://tokenwisdom.ghost.io/the-misinformation-industrial-complex/
+url: https://ghost-production-198e.up.railway.app/the-misinformation-industrial-complex/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: opinionated-editorials
   - name: Viral Content
     slug: viral-content
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Misinformation Industrial Complex

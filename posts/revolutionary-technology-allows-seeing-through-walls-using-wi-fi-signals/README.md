@@ -1,14 +1,14 @@
 ---
 title: "Revolutionary Technology Allows Seeing Through Walls Using Wi-Fi Signals"
 slug: revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals
-id: 66221b2a7bdbdb00011e47cf
+id: 6a4816fb7d31280001f4fa4b
 published_at: 2024-04-30T10:31:00.000-07:00
 updated_at: 2024-10-11T02:36:54.000-07:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/z4zHhUMH2YwplNk1dQw1kw0r631HweJ0DaWUdZns-2.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/z4zHhUMH2YwplNk1dQw1kw0r631HweJ0DaWUdZns-2.jpg
 excerpt: "W16 - Revolutionary Wi-Fi technology enables seeing through walls and tracking human movements, raising ethical considerations. Discover how DensePose and Wi-Fi advancements redefine possibilities in wireless sensing."
-url: https://tokenwisdom.ghost.io/revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals/
+url: https://ghost-production-198e.up.railway.app/revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: innovation
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Revolutionary Technology Allows Seeing Through Walls Using Wi-Fi Signals

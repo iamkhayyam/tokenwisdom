@@ -1,14 +1,14 @@
 ---
 title: "The Great Hollywood Heist: Streaming's Struggle to Generate Cash Flow"
 slug: the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow
-id: 65aa261cebf14f0001f3c0d9
+id: 6a4816fb7d31280001f4f9fd
 published_at: 2023-12-14T23:38:00.000-08:00
 updated_at: 2024-01-21T22:23:32.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/img-NXjOaFgw0a5CGsJuMk9XK.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-NXjOaFgw0a5CGsJuMk9XK.jpeg
 excerpt: "An in-depth look at the challenges faced by the entertainment industry in the era of streaming, and the potential solutions that could revitalize its financial landscape"
-url: https://tokenwisdom.ghost.io/the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow/
+url: https://ghost-production-198e.up.railway.app/the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow/
 tags:
   - name: Business Models
     slug: business-intelligence
@@ -18,9 +18,11 @@ tags:
     slug: technology
   - name: Entertainment \ LBE
     slug: entertainment-lbe
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Great Hollywood Heist: Streaming's Struggle to Generate Cash Flow

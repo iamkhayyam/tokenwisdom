@@ -1,14 +1,14 @@
 ---
 title: "Not Just Another Essay About DeepSeek—The Ransomware Edition"
 slug: not-just-another-essay-about-deepseek-a-ransomware-edition
-id: 679b4cd1d5bf6e00019c277f
+id: 6a4816fb7d31280001f4fa8f
 published_at: 2025-01-30T12:45:32.000-08:00
 updated_at: 2025-04-21T13:51:22.000-07:00
 featured: False
 reading_time: 30 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/a-hyper-realistic-digital-art-piece-of-a_zovdCW94StKS_GXurQrifQ_3-YCi6ttR46QQWzIC-caIA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/a-hyper-realistic-digital-art-piece-of-a_zovdCW94StKS_GXurQrifQ_3-YCi6ttR46QQWzIC-caIA.jpeg
 excerpt: "W05 - 2024: Silicon Valley unleashes AI ransomware on a global scale. Your creativity is the target. The ransom? Your future. Pay to protect your own ideas, or watch AI replicate them endlessly. Welcome to the digital protection racket, where innovation comes at a price."
-url: https://tokenwisdom.ghost.io/not-just-another-essay-about-deepseek-a-ransomware-edition/
+url: https://ghost-production-198e.up.railway.app/not-just-another-essay-about-deepseek-a-ransomware-edition/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,11 @@ tags:
     slug: future-trends
   - name: LLMs - Language Models
     slug: language-models
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Not Just Another Essay About DeepSeek—The Ransomware Edition

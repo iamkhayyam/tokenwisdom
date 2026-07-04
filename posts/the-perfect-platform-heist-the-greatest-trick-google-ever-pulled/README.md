@@ -1,14 +1,14 @@
 ---
 title: "The Perfect Platform Heist: The Greatest Trick Google Ever Pulled"
 slug: the-perfect-platform-heist-the-greatest-trick-google-ever-pulled
-id: 67722b029d10560001d201d7
+id: 6a4816fb7d31280001f4fa87
 published_at: 2024-12-29T22:02:56.000-08:00
 updated_at: 2024-12-29T22:08:28.000-08:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/img-npm9o5DZ1C3JYhoTS5W2H.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/img-npm9o5DZ1C3JYhoTS5W2H.png
 excerpt: "W52 - Google's Android XR isn't just a product launch—it's a daring heist of human consciousness. By hijacking neural optimization principles, they're not winning a platform war; they're rewriting evolution itself. The perfect crime? You're already an accomplice."
-url: https://tokenwisdom.ghost.io/the-perfect-platform-heist-the-greatest-trick-google-ever-pulled/
+url: https://ghost-production-198e.up.railway.app/the-perfect-platform-heist-the-greatest-trick-google-ever-pulled/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: future-trends
   - name: Human Computer Interaction
     slug: human-computer-interaction
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Perfect Platform Heist: The Greatest Trick Google Ever Pulled

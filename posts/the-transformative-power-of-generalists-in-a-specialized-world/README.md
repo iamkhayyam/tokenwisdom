@@ -1,14 +1,14 @@
 ---
 title: "The Transformative Power of Generalists in a Specialized World"
 slug: the-transformative-power-of-generalists-in-a-specialized-world
-id: 65f73d79ed6d88000174d2ac
+id: 6a4816fb7d31280001f4fa38
 published_at: 2024-03-17T12:22:29.000-07:00
 updated_at: 2024-09-21T20:37:20.000-07:00
 featured: True
 reading_time: 23 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/generalist-or-specialist-OPT-1.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/generalist-or-specialist-OPT-1.gif
 excerpt: "W10 - Discover a dynamic future of work where generalists thrive alongside specialists, blending adaptability and expertise to shape innovation in an AI-driven world and the future of work."
-url: https://tokenwisdom.ghost.io/featured/the-transformative-power-of-generalists-in-a-specialized-world/
+url: https://ghost-production-198e.up.railway.app/the-transformative-power-of-generalists-in-a-specialized-world/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: life-hacks
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Transformative Power of Generalists in a Specialized World

@@ -1,14 +1,14 @@
 ---
 title: "AI Didn't Break Democracy. We Did. Four Decades Ago."
 slug: ai-didnt-break-democracy-we-did-four-decades-ago
-id: 696ab7cbb7bc620001983ae8
+id: 6a4816fb7d31280001f4faf8
 published_at: 2026-01-15T11:11:00.000-08:00
 updated_at: 2026-01-17T12:37:28.000-08:00
 featured: False
 reading_time: 15 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/concept-a-sophisticated-editorial-illust_wDEi0nNESMuw5ejPHxjtJQ_eUXJQJC4S0ycWV6ICL_8cA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/concept-a-sophisticated-editorial-illust_wDEi0nNESMuw5ejPHxjtJQ_eUXJQJC4S0ycWV6ICL_8cA.jpeg
 excerpt: "W03 - AI didn't kill democracy; it exposed a decades-old decay. The real culprit? Years of choices hollowing our institutions. AI isn't the assassin, but a mirror reflecting what we've ignored. It didn't create the crisis—it just made it impossible to deny any longer."
-url: https://tokenwisdom.ghost.io/ai-didnt-break-democracy-we-did-four-decades-ago/
+url: https://ghost-production-198e.up.railway.app/ai-didnt-break-democracy-we-did-four-decades-ago/
 tags:
   - name: Ethics \ Principles
     slug: ethical
@@ -30,9 +30,11 @@ tags:
     slug: opinionated-editorials
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # AI Didn't Break Democracy. We Did. Four Decades Ago.

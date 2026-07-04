@@ -1,20 +1,22 @@
 ---
 title: "96th Edition 🔮 Pearls of Wisdom ⑊ W08"
 slug: 96th-edition-pearls-of-wisdom-w08
-id: 67bbaffa5f98d20001d9e752
+id: 6a4816fb7d31280001f4fa96
 published_at: 2025-02-23T15:58:53.000-08:00
 updated_at: 2025-02-23T18:07:09.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/Leonardo_Diffusion_XL_A_realistic_fortune_teller_hovering_over_0.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/Leonardo_Diffusion_XL_A_realistic_fortune_teller_hovering_over_0.jpg
 excerpt: "W08 - In a world where warp drives challenge Einstein and AI solves Rubik's cubes with flair, your smart toaster might recite poetry while your potted fern whispers soliloquies. Dive into this week's web weave of quirky tech tales and mind-bending leaps. Future shock? Guaranteed!"
-url: https://tokenwisdom.ghost.io/worthafortune/96th-edition-pearls-of-wisdom-w08/
+url: https://ghost-production-198e.up.railway.app/96th-edition-pearls-of-wisdom-w08/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 96th Edition 🔮 Pearls of Wisdom ⑊ W08

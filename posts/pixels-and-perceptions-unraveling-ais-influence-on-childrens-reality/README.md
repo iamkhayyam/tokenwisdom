@@ -1,14 +1,14 @@
 ---
 title: "Pixels and Perceptions: Unraveling AI's Influence on Children's Reality"
 slug: pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality
-id: 673775bf2031060001730e1c
+id: 6a4816fb7d31280001f4fa75
 published_at: 2024-08-22T06:27:00.000-07:00
 updated_at: 2024-11-16T11:14:02.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/img-UkJMFGOL7EG1bPIP191sj.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/img-UkJMFGOL7EG1bPIP191sj.jpeg
 excerpt: "W33 -  AI's not just changing the game, it's rewriting the rulebook of reality for our kids. Buckle up as we dive into a world where pixels paint perceptions and algorithms architect understanding. It's childhood 2.0, and it's wildly uncharted territory!"
-url: https://tokenwisdom.ghost.io/pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality/
+url: https://ghost-production-198e.up.railway.app/pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: strategic
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Pixels and Perceptions: Unraveling AI's Influence on Children's Reality

@@ -1,20 +1,22 @@
 ---
 title: "W11: 48th Edition \ Side A🎉"
 slug: w11-thenewestlatest-47
-id: 65f734a9ed6d88000174d293
+id: 6a4816fb7d31280001f4fa35
 published_at: 2024-03-17T23:55:56.000-07:00
 updated_at: 2024-10-11T00:11:05.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/https___lh3.googleusercontent.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/https___lh3.googleusercontent.jpg
 excerpt: "Unravel the biases embedded in AI and join us in the latest edition of Newest/Latest as we explore breakthroughs and revolutions shaping our world, from VR vistas to quantum leaps. Dare to discover tomorrow’s tech today!"
-url: https://tokenwisdom.ghost.io/newestlatest/w11-thenewestlatest-47/
+url: https://ghost-production-198e.up.railway.app/w11-thenewestlatest-47/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W11: 48th Edition \ Side A🎉

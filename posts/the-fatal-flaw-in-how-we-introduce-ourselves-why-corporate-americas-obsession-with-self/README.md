@@ -1,14 +1,14 @@
 ---
 title: "Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis"
 slug: the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self
-id: 672ec9f9a5ffdf000161a28c
+id: 6a4816fb7d31280001f4fa73
 published_at: 2024-08-08T18:53:00.000-07:00
 updated_at: 2024-12-29T22:12:19.000-08:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/W31---The-Paradox-of-Self-Introduction--A-Critical-Analysis-of-Contemporary-Practices-and-Their-Scientific-Basis.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/W31---The-Paradox-of-Self-Introduction--A-Critical-Analysis-of-Contemporary-Practices-and-Their-Scientific-Basis.jpg
 excerpt: "W31 - The self-improvement industry isn't just misguided—it's toxic. We're breeding professional frauds, experts at performance but inept at genuine connection. It's corporate America's Instagram filter: flawless facades masking a crisis of authenticity. The cost? Our very humanity."
-url: https://tokenwisdom.ghost.io/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/
+url: https://ghost-production-198e.up.railway.app/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: personal-growth
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis

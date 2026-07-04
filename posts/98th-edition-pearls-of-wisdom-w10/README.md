@@ -1,20 +1,22 @@
 ---
 title: "98th Edition 🔮 Pearls of Wisdom ⑊ W10"
 slug: 98th-edition-pearls-of-wisdom-w10
-id: 67cf1ce9a05bb40001b267e9
+id: 6a4816fb7d31280001f4fa9a
 published_at: 2025-03-10T10:28:07.000-07:00
 updated_at: 2025-03-10T10:29:14.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/img-niKvOTpGuMmlsmwNqFIdC.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/img-niKvOTpGuMmlsmwNqFIdC.jpeg
 excerpt: "W10 - In a world where RISC-V challenges Intel's dominance and AI shifts from chips to software, your investment portfolio might need a quantum recalibration. Dive into this week's web of tech tales and mind-bending discoveries. Future shock? It's already here!"
-url: https://tokenwisdom.ghost.io/worthafortune/98th-edition-pearls-of-wisdom-w10/
+url: https://ghost-production-198e.up.railway.app/98th-edition-pearls-of-wisdom-w10/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 98th Edition 🔮 Pearls of Wisdom ⑊ W10

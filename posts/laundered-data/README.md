@@ -1,13 +1,13 @@
 ---
 title: "Unmasking Biases in Pre-Trained Transformers with Laundered Data"
 slug: laundered-data
-id: 65aa1cfcebf14f0001f3c08a
+id: 6a4816fb7d31280001f4f9fc
 published_at: 2023-07-07T00:32:00.000-07:00
 updated_at: 2024-01-19T22:53:43.000-08:00
 featured: True
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/launderedData.gif
-url: https://tokenwisdom.ghost.io/featured/laundered-data/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/launderedData.gif
+url: https://ghost-production-198e.up.railway.app/laundered-data/
 tags:
   - name: Cyber \ Security
     slug: cybersecurity
@@ -21,9 +21,11 @@ tags:
     slug: ethical
   - name: All the Data
     slug: data
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Unmasking Biases in Pre-Trained Transformers with Laundered Data

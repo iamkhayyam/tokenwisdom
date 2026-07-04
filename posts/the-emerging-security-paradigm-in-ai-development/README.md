@@ -1,15 +1,15 @@
 ---
 title: "The Emerging Security Paradigm in AI Development"
 slug: the-emerging-security-paradigm-in-ai-development
-id: 67ddb15a41c5920001342506
+id: 6a4816fb7d31280001f4fa9d
 published_at: 2025-03-21T12:38:43.000-07:00
 updated_at: 2025-04-20T13:22:44.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/img-lJUaG1hG8246R1ysIh3UN.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/img-lJUaG1hG8246R1ysIh3UN.jpeg
 excerpt: "W12 — What most see as corporate AI competition is actually a new global security paradigm: Mutual Assured AI Malfunction (MAIM). AWS/Anthropic versus Microsoft/OpenAI aren't mere business rivals—they're deterrence blocs in a technological Cold War where algorithms are weapons.
 "
-url: https://tokenwisdom.ghost.io/the-emerging-security-paradigm-in-ai-development/
+url: https://ghost-production-198e.up.railway.app/the-emerging-security-paradigm-in-ai-development/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -35,9 +35,11 @@ tags:
     slug: technology
   - name: Strategic Measures
     slug: strategic
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Emerging Security Paradigm in AI Development

@@ -1,9 +1,9 @@
 {
-  "id": "65ad9aca2a0365000142be27",
+  "id": "6a4816f97d31280001f4f9cd",
   "name": "📣 Ask Me Anything",
   "slug": "ask-me-anything",
   "description": "Every week I answer the most provocative **Ask Me Anything** and will utilize my Large Life Experience-Model (known to most as an LL-EM) to provide answers that wouldn't otherwise be found. The results are posted below.",
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/Halpern_final.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/Halpern_final.gif",
   "visibility": "public",
   "meta_title": null,
   "meta_description": null,
@@ -17,14 +17,14 @@
   "codeinjection_foot": null,
   "canonical_url": null,
   "accent_color": null,
-  "url": "https://tokenwisdom.ghost.io/tag/ask-me-anything/",
+  "url": "https://ghost-production-198e.up.railway.app/tag/ask-me-anything/",
   "posts": [
     {
-      "id": "65fd1c985d866c0001163970",
+      "id": "6a4816fb7d31280001f4fa3a",
       "title": "Ask Me Anything! No, Really. Ask Me Any Thing!",
       "slug": "no-really-ask-me-anything",
       "published_at": "2024-03-21T22:22:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/no-really-ask-me-anything/",
+      "url": "https://ghost-production-198e.up.railway.app/no-really-ask-me-anything/",
       "featured": false,
       "reading_time": 0
     }

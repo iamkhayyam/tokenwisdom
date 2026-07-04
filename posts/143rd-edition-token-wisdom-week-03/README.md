@@ -1,20 +1,22 @@
 ---
 title: "143rd Edition 🔮 Token Wisdom \ Week 03"
 slug: 143rd-edition-token-wisdom-week-03
-id: 696d805fb7bc620001983baf
+id: 6a4816fb7d31280001f4faf9
 published_at: 2026-01-18T18:37:12.000-08:00
 updated_at: 2026-01-18T19:57:07.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/1960s-female-gypsy-fortune-teller-vintage-images.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/1960s-female-gypsy-fortune-teller-vintage-images.jpg
 excerpt: "This week: Corporate power reshapes society while AI disrupts traditional industries. From ranchers turning to carbon credits to tech giants consolidating control, we explore how surveillance capitalism and algorithmic efficiency are rewriting the rules of business, law, and human autonomy."
-url: https://tokenwisdom.ghost.io/worthafortune/143rd-edition-token-wisdom-week-03/
+url: https://ghost-production-198e.up.railway.app/143rd-edition-token-wisdom-week-03/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 143rd Edition 🔮 Token Wisdom \ Week 03

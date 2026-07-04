@@ -1,15 +1,15 @@
 ---
 title: "The Consulting Industry's Terminal Diagnosis"
 slug: the-consulting-industrys-terminal-diagnosis
-id: 67f77aaf2bf4e90001e39da5
+id: 6a4816fb7d31280001f4faa3
 published_at: 2025-04-10T07:27:06.000-07:00
 updated_at: 2025-04-10T07:27:05.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/a-corporate-style-cover-art-design-depic_FgFiCZwKTiCV7iN8T2h1ww_lR0JOPv_RcWNsOQDiu9L9w--1-.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/a-corporate-style-cover-art-design-depic_FgFiCZwKTiCV7iN8T2h1ww_lR0JOPv_RcWNsOQDiu9L9w--1-.jpeg
 excerpt: "W15 — When a single government contract cancellation wipes $14B from Accenture's value, it's not just a bad day—it's a diagnosis. The consulting industry built a fortune selling Google-able insights at 300% markups. Now AI has arrived with the receipts, and the patient is terminal.
 "
-url: https://tokenwisdom.ghost.io/the-consulting-industrys-terminal-diagnosis/
+url: https://ghost-production-198e.up.railway.app/the-consulting-industrys-terminal-diagnosis/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -25,9 +25,11 @@ tags:
     slug: future-of-work
   - name: Entrepreneurial
     slug: entrepreneurship
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Consulting Industry's Terminal Diagnosis

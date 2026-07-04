@@ -1,20 +1,22 @@
 ---
 title: "W08: 44th Edition \ Side A🎉"
 slug: w08-thenewestlatest-44
-id: 65dac622692af400019448ef
+id: 6a4816fb7d31280001f4fa25
 published_at: 2024-02-25T14:49:00.000-08:00
 updated_at: 2024-05-01T00:02:52.000-07:00
 featured: False
 reading_time: 17 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/The_Tug_of_War_of_Technological_Progress_and_Ethics__590856251-1.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/The_Tug_of_War_of_Technological_Progress_and_Ethics__590856251-1.png
 excerpt: "AI Lawsuit, Tyler Perry's Alarm, Neurobiology of Love, and NBA's Mind-Blowing Court: Unveiling the Latest Headlines!"
-url: https://tokenwisdom.ghost.io/newestlatest/w08-thenewestlatest-44/
+url: https://ghost-production-198e.up.railway.app/w08-thenewestlatest-44/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W08: 44th Edition \ Side A🎉

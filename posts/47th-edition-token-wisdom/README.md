@@ -1,20 +1,22 @@
 ---
 title: "47th Edition 🔮 Pearls of Wisdom ⑊ W10"
 slug: 47th-edition-token-wisdom
-id: 65f734b4ed6d88000174d2a4
+id: 6a4816fb7d31280001f4fa37
 published_at: 2024-03-18T06:27:53.000-07:00
 updated_at: 2025-01-12T11:59:17.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-eVcAM3hvu4znLMjASirqG.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-eVcAM3hvu4znLMjASirqG.jpeg
 excerpt: "Dive into the future this week with Token Wisdom—where AI ethics and innovative tech collide to redefine our world and a bunch of other cool stuff. Stay smart, stay curious. "
-url: https://tokenwisdom.ghost.io/worthafortune/47th-edition-token-wisdom/
+url: https://ghost-production-198e.up.railway.app/47th-edition-token-wisdom/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 47th Edition 🔮 Pearls of Wisdom ⑊ W10

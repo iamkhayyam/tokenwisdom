@@ -1,0 +1,34 @@
+{
+  "id": "6a4824a27d31280001f51219",
+  "name": "Resume \\ CV",
+  "slug": "resume-cv",
+  "description": null,
+  "feature_image": null,
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://ghost-production-198e.up.railway.app/tag/resume-cv/",
+  "posts": [
+    {
+      "id": "6a4824a27d31280001f51218",
+      "title": "LinkedIn, Isn’t Good Enough",
+      "slug": "linkedin-isnt-good-enough-2",
+      "published_at": "2014-05-27T15:55:07.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/linkedin-isnt-good-enough-2/",
+      "featured": true,
+      "reading_time": 5
+    }
+  ],
+  "post_count": 1,
+  "local_feature_image": null
+}

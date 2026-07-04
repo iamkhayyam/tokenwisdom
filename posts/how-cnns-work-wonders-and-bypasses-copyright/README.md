@@ -1,14 +1,14 @@
 ---
 title: "How CNN's Work Wonders and Bypasses Copyright"
 slug: how-cnns-work-wonders-and-bypasses-copyright
-id: 6708eb9447b6c200019d02be
+id: 6a4816fb7d31280001f4fa66
 published_at: 2024-04-25T02:29:00.000-07:00
 updated_at: 2025-01-02T17:21:29.000-08:00
 featured: False
 reading_time: 5 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/img-oqHp1o4Z19dkCOA7bxnTY.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/img-oqHp1o4Z19dkCOA7bxnTY.jpeg
 excerpt: "W15 - CNNs: The AI pasta maker that turns dog photos into digital spaghetti, slicing and dicing pixels until—voila!—it barks 'Woof!' Ethical food for thought: Is your AI's training data al dente or half-baked?\""
-url: https://tokenwisdom.ghost.io/how-cnns-work-wonders-and-bypasses-copyright/
+url: https://ghost-production-198e.up.railway.app/how-cnns-work-wonders-and-bypasses-copyright/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: generative
   - name: IP \ Copyright
     slug: copyright
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # How CNN's Work Wonders and Bypasses Copyright

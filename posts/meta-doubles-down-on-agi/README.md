@@ -1,14 +1,14 @@
 ---
 title: "Meta Doubles Down on AGI"
 slug: meta-doubles-down-on-agi
-id: 65b0bc9e4912bb0001d14f2f
+id: 6a4816fb7d31280001f4fa11
 published_at: 2024-01-21T00:09:00.000-08:00
 updated_at: 2024-02-12T21:03:08.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/getimg_ai-2024-01-24T07_44_31.513Z.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/getimg_ai-2024-01-24T07_44_31.513Z.png
 excerpt: "Meta's commitment to artificial general intelligence (AGI) opens up a world of possibilities for technological innovation. However, it is crucial to examine the implications of Meta's vast collection of behavioral data on Facebook users. "
-url: https://tokenwisdom.ghost.io/meta-doubles-down-on-agi/
+url: https://ghost-production-198e.up.railway.app/meta-doubles-down-on-agi/
 tags:
   - name: 🚨 OP-ED
     slug: opinionated-editorials
@@ -24,9 +24,11 @@ tags:
     slug: future-trends
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Meta Doubles Down on AGI

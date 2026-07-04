@@ -1,14 +1,14 @@
 ---
 title: "Demystifying AI's Role in Eco-Energy"
 slug: role-of-ai-in-eco-energy
-id: 65ccf5f1c3b7eb0001ca2547
+id: 6a4816fb7d31280001f4fa1c
 published_at: 2024-02-12T09:53:00.000-08:00
 updated_at: 2024-10-12T01:28:45.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-zqKsEFasoSLrknlN5N4su.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-zqKsEFasoSLrknlN5N4su.jpeg
 excerpt: "W05 - The question then arises, one as intriguing as it is vital: How can this intelligence, artificial yet astoundingly astute, revolutionize the way we manage and consume energy? Can it lead us to an oasis of efficiency, where waste is whittled away and every joule of power is used with purpose?"
-url: https://tokenwisdom.ghost.io/role-of-ai-in-eco-energy/
+url: https://ghost-production-198e.up.railway.app/role-of-ai-in-eco-energy/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -26,9 +26,11 @@ tags:
     slug: technology
   - name: A.I. (and Subsets)
     slug: ai
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Demystifying AI's Role in Eco-Energy

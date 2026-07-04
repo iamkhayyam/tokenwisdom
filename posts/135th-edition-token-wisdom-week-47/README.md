@@ -1,20 +1,22 @@
 ---
 title: "135th Edition 🔮 Token Wisdom \ Week 47"
 slug: 135th-edition-token-wisdom-week-47
-id: 692e76360c7b0d000112f03b
+id: 6a4816fb7d31280001f4fae5
 published_at: 2025-11-24T07:55:00.000-08:00
 updated_at: 2025-12-03T14:17:23.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_lo_2.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_lo_2.jpg
 excerpt: "This week: MIT probes consciousness, scientists warn of evolution-society mismatches, and new research transforms our grasp of time and memory. Meanwhile, AI ventures, smart farming, and math disputes show tech's growing impact on human experience."
-url: https://tokenwisdom.ghost.io/worthafortune/135th-edition-token-wisdom-week-47/
+url: https://ghost-production-198e.up.railway.app/135th-edition-token-wisdom-week-47/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 135th Edition 🔮 Token Wisdom \ Week 47

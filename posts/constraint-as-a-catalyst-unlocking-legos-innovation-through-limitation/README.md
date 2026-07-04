@@ -1,14 +1,14 @@
 ---
 title: "Constraint as a Catalyst: Unlocking Lego's Innovation Through Limitation"
 slug: constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation
-id: 66131f2001e9e40001950fe9
+id: 6a4816fb7d31280001f4fa46
 published_at: 2024-04-09T01:32:01.000-07:00
 updated_at: 2024-09-21T20:31:40.000-07:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/Lego-Overwatch-Animatrix-gif-1.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/Lego-Overwatch-Animatrix-gif-1.gif
 excerpt: "W13 - Explore how Lego's brush with bankruptcy ignited a creative revolution, turning constraints into innovation and redefining success through strategic licensing—a tale that challenges the very notion of limitation. Creativity from constraints!"
-url: https://tokenwisdom.ghost.io/constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation/
+url: https://ghost-production-198e.up.railway.app/constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: business-intelligence
   - name: Brands \ Agency
     slug: agency
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Constraint as a Catalyst: Unlocking Lego's Innovation Through Limitation

@@ -1,14 +1,14 @@
 ---
 title: "Dear Sam,"
 slug: dear-sam
-id: 699e7e4e58732800011e3c56
+id: 6a4816fb7d31280001f4fb05
 published_at: 2026-02-24T22:32:30.000-08:00
 updated_at: 2026-02-24T22:46:10.000-08:00
 featured: True
 reading_time: 25 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/a-satirical-magazine-cover-illustration-_1gsp2Ya_QWSsWbovUFp0kQ_s7IXiWg6SAm-2OeMv1KvMA_cover_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/a-satirical-magazine-cover-illustration-_1gsp2Ya_QWSsWbovUFp0kQ_s7IXiWg6SAm-2OeMv1KvMA_cover_sd.jpeg
 excerpt: "On vendor-financed delusions, circular capital, the $100 billion retreat nobody wants to name, and what it means that the CFO of the world's most important AI project doesn't bother with the money flywheel."
-url: https://tokenwisdom.ghost.io/featured/dear-sam/
+url: https://ghost-production-198e.up.railway.app/dear-sam/
 tags:
   - name: Dear ______ Letters
     slug: dear-______-letters
@@ -30,9 +30,11 @@ tags:
     slug: philosophy
   - name: ANI \ AGI \ ASI
     slug: agi
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Dear Sam,

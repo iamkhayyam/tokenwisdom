@@ -1,20 +1,22 @@
 ---
 title: "153rd Edition 🔮 Token Wisdom \ Week 13"
 slug: 153rd-edition-token-wisdom-week-13
-id: 69c9ea16371584000109bc83
+id: 6a4816fb7d31280001f4fb0f
 published_at: 2026-03-31T08:42:26.000-07:00
 updated_at: 2026-03-31T08:42:26.000-07:00
 featured: False
 reading_time: 16 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/mysterious-fortune-teller-reading-what-s_urQ-x6ztThu4v26v_MpwEQ_-Dc3XRSMSB6eKUj4huNDqQ_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/mysterious-fortune-teller-reading-what-s_urQ-x6ztThu4v26v_MpwEQ_-Dc3XRSMSB6eKUj4huNDqQ_sd.jpeg
 excerpt: "This week — a proposed fermion hints at a fifth dimension; AI flags a formal logic flaw in a physics paper; FCC mandates fiber, retiring copper; graphene photonics reframes compute; 5 AI CEOs now govern decisions affecting 8B people."
-url: https://tokenwisdom.ghost.io/worthafortune/153rd-edition-token-wisdom-week-13/
+url: https://ghost-production-198e.up.railway.app/153rd-edition-token-wisdom-week-13/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 153rd Edition 🔮 Token Wisdom \ Week 13

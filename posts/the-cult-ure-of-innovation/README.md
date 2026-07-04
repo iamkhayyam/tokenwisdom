@@ -1,14 +1,14 @@
 ---
 title: "The Cult(ure) of Innovation"
 slug: the-cult-ure-of-innovation
-id: 65a9e70aebf14f0001f3bf1f
+id: 6a4816fb7d31280001f4f9f1
 published_at: 2013-05-15T16:00:00.000-07:00
 updated_at: 2024-03-16T23:02:32.000-07:00
 featured: True
 reading_time: 5 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0__me8BlxtupNuOzrN.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0__me8BlxtupNuOzrN.gif
 excerpt: "Dive into what the future of advertising is in 2020, where culture breeds innovation and video content reigns supreme. Discover the power of involving consumers in the process and tapping into the \"why\" of your brand to create a cult(ure) of loyal enthusiasts. "
-url: https://tokenwisdom.ghost.io/featured/the-cult-ure-of-innovation/
+url: https://ghost-production-198e.up.railway.app/the-cult-ure-of-innovation/
 tags:
   - name: Culture Club
     slug: culture
@@ -28,9 +28,11 @@ tags:
     slug: future-trends
   - name: In Flow State
     slug: flow
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Cult(ure) of Innovation

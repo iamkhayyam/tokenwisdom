@@ -1,13 +1,13 @@
 ---
 title: "Truth or Deception? The Double-Edged Sword of Digital Authenticity"
 slug: truth-or-deception-the-double-edged-sword-of-digital-authenticity
-id: 65aa1b9febf14f0001f3c079
+id: 6a4816fb7d31280001f4f9fb
 published_at: 2023-11-27T22:53:00.000-08:00
 updated_at: 2024-02-12T22:29:16.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/img-G2GwEhssYoViDYamY75Vm.jpeg
-url: https://tokenwisdom.ghost.io/truth-or-deception-the-double-edged-sword-of-digital-authenticity/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-G2GwEhssYoViDYamY75Vm.jpeg
+url: https://ghost-production-198e.up.railway.app/truth-or-deception-the-double-edged-sword-of-digital-authenticity/
 tags:
   - name: IP \ Copyright
     slug: copyright
@@ -19,9 +19,11 @@ tags:
     slug: misinformation
   - name: Big Tech
     slug: big-tech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Truth or Deception? The Double-Edged Sword of Digital Authenticity

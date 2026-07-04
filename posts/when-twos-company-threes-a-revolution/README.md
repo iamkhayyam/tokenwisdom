@@ -1,14 +1,14 @@
 ---
 title: "When Two's Company, Three's a Revolution"
 slug: when-twos-company-threes-a-revolution
-id: 691b712e8444b4000102a6ab
+id: 6a4816fb7d31280001f4fae2
 published_at: 2025-11-13T11:34:00.000-08:00
 updated_at: 2025-12-21T14:51:55.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/11/a-sophisticated-editorial-illustration-i_lUe9IYTwQ96BXX3c5HcANQ_Nz35pfjAQeWpsq8E9oQTAg.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/11/a-sophisticated-editorial-illustration-i_lUe9IYTwQ96BXX3c5HcANQ_Nz35pfjAQeWpsq8E9oQTAg.jpeg
 excerpt: "W46 - When U.S. sanctions cut off Huawei from advanced chips, they didn't just restrict—they revolutionized. In 2025, blocked from optimizing binary computers, China's tech giant unveiled something radical: the first commercial three-state processor, upending 80 years of computing."
-url: https://tokenwisdom.ghost.io/when-twos-company-threes-a-revolution/
+url: https://ghost-production-198e.up.railway.app/when-twos-company-threes-a-revolution/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: big-tech
   - name: Challenges
     slug: challenges
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # When Two's Company, Three's a Revolution

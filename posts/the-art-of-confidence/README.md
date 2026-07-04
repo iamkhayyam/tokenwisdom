@@ -1,14 +1,14 @@
 ---
 title: "The Art of Confidence"
 slug: the-art-of-confidence
-id: 65ab51bb4cf93c000184b74f
+id: 6a4816fb7d31280001f4fa0c
 published_at: 2013-05-12T09:58:45.000-07:00
 updated_at: 2024-01-24T00:19:01.000-08:00
 featured: True
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/Victor.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/Victor.gif
 excerpt: "The smoothest con man that ever lived. That’s what they say about Victor Lustig pictured above. His claim to fame is that he sold the Eiffel Tower, twice. Yup, that happened. He became fluent in multiple languages, harnessed his ocean liner and started printing money, literally. "
-url: https://tokenwisdom.ghost.io/featured/the-art-of-confidence/
+url: https://ghost-production-198e.up.railway.app/the-art-of-confidence/
 tags:
   - name: Persuasion
     slug: grifters
@@ -24,9 +24,11 @@ tags:
     slug: strategic
   - name: Advertising
     slug: advertising
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Art of Confidence

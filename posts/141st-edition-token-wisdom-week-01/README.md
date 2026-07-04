@@ -1,20 +1,22 @@
 ---
 title: "141st Edition 🔮 Token Wisdom \ Week 01"
 slug: 141st-edition-token-wisdom-week-01
-id: 6958fd24cb780e0001af79aa
+id: 6a4816fb7d31280001f4faf5
 published_at: 2026-01-04T10:10:22.000-08:00
 updated_at: 2026-01-04T11:11:04.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/fortune-teller-s-hands-with-crystal-ball.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/fortune-teller-s-hands-with-crystal-ball.jpg
 excerpt: "This week: Scientific breakthroughs reshape our view of brain and environment, as tech raises privacy concerns. From 'mini-brains' illuminating mental disorders to bee colony collapse, we explore progress vs preservation. Innovation's impacts are complex."
-url: https://tokenwisdom.ghost.io/worthafortune/141st-edition-token-wisdom-week-01/
+url: https://ghost-production-198e.up.railway.app/141st-edition-token-wisdom-week-01/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 141st Edition 🔮 Token Wisdom \ Week 01

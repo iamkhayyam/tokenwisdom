@@ -1,5 +1,5 @@
 {
-  "id": "65b75b75a477580001830f19",
+  "id": "6a4816fb7d31280001f4fa13",
   "uuid": "a995f145-bb4b-419b-aac0-3e09c0b6b296",
   "title": "The Best Choice You Could Make Today",
   "slug": "signup",
@@ -11,21 +11,41 @@
   "updated_at": "2024-01-29T00:02:14.000-08:00",
   "published_at": "2024-01-29T00:02:14.000-08:00",
   "custom_excerpt": null,
-  "tags": [],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9dc",
+      "name": "#Import 2026-07-03 20:09",
+      "slug": "hash-import-2026-07-03-20-09",
+      "description": null,
+      "feature_image": null,
+      "visibility": "internal",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/404/"
+    }
+  ],
   "authors": [
     {
-      "id": "6895a3000d912d00085b277d",
-      "name": "🌶️ @iamkhayyam ",
-      "slug": "iamkhayyam",
-      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
-      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "id": "1",
+      "name": "Khayyam Wakil",
+      "slug": "khayyam",
+      "profile_image": "https://www.gravatar.com/avatar/d6d2193b1f25ed94195a03d1065e9216?s=250&r=x&d=mp",
+      "cover_image": null,
       "bio": null,
       "website": null,
       "location": null,
       "facebook": null,
-      "twitter": "@worthafortune",
-      "meta_title": null,
-      "meta_description": null,
+      "twitter": null,
       "threads": null,
       "bluesky": null,
       "mastodon": null,
@@ -33,10 +53,12 @@
       "youtube": null,
       "instagram": null,
       "linkedin": null,
-      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
-  "url": "https://tokenwisdom.ghost.io/signup/",
+  "url": "https://ghost-production-198e.up.railway.app/signup/",
   "excerpt": null,
   "meta_title": null,
   "meta_description": null

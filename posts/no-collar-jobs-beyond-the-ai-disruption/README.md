@@ -1,14 +1,14 @@
 ---
 title: "No Collar Jobs—Beyond the AI Disruption"
 slug: no-collar-jobs-beyond-the-ai-disruption
-id: 67b6e9b27c53cd0001c39f6f
+id: 6a4816fb7d31280001f4fa95
 published_at: 2025-02-20T15:08:30.000-08:00
 updated_at: 2025-04-21T13:50:13.000-07:00
 featured: False
 reading_time: 23 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/an-illustration-of-a-futuristic-workspac_yzfmGNEtRhaxgkRZGNuKxg_VCtaJ0XlQFuZqkttnjdZRQ.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/an-illustration-of-a-futuristic-workspac_yzfmGNEtRhaxgkRZGNuKxg_VCtaJ0XlQFuZqkttnjdZRQ.jpeg
 excerpt: "W08 - Psst! AI just overturned the job market applecart: It's not just a bad year—it's a swirling shift. Experience is now your biggest liability, and your resume? It’s more like a relic in this new AI-augmented world. Tune in to navigate the chaos—or watch as \"Apply Now\" becomes \"Apply Never.\""
-url: https://tokenwisdom.ghost.io/no-collar-jobs-beyond-the-ai-disruption/
+url: https://ghost-production-198e.up.railway.app/no-collar-jobs-beyond-the-ai-disruption/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: future-of-work
   - name: Productivity
     slug: productivity
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # No Collar Jobs—Beyond the AI Disruption

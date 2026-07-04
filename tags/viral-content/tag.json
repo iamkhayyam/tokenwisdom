@@ -1,9 +1,9 @@
 {
-  "id": "65ac1d3d4cf93c000184badf",
+  "id": "6a4816f97d31280001f4f9ab",
   "name": "Viral Content",
   "slug": "viral-content",
   "description": null,
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/viral-marketing-spread.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/viral-marketing-spread.gif",
   "visibility": "public",
   "meta_title": null,
   "meta_description": null,
@@ -17,32 +17,32 @@
   "codeinjection_foot": null,
   "canonical_url": null,
   "accent_color": null,
-  "url": "https://tokenwisdom.ghost.io/tag/viral-content/",
+  "url": "https://ghost-production-198e.up.railway.app/tag/viral-content/",
   "posts": [
     {
-      "id": "68858ddc845b5c0001afdffa",
+      "id": "6a4816fb7d31280001f4fabf",
       "title": "Scrapyard Futures in the Digital Ruins",
       "slug": "scrapyard-futures-in-the-digital-ruins",
       "published_at": "2025-07-24T09:20:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/scrapyard-futures-in-the-digital-ruins/",
+      "url": "https://ghost-production-198e.up.railway.app/scrapyard-futures-in-the-digital-ruins/",
       "featured": false,
       "reading_time": 9
     },
     {
-      "id": "685ba5b2ed1d9d0001db189e",
+      "id": "6a4816fb7d31280001f4fab9",
       "title": "The Misinformation Industrial Complex",
       "slug": "the-misinformation-industrial-complex",
       "published_at": "2025-06-26T18:28:33.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/the-misinformation-industrial-complex/",
+      "url": "https://ghost-production-198e.up.railway.app/the-misinformation-industrial-complex/",
       "featured": false,
       "reading_time": 11
     },
     {
-      "id": "65ab51bb4cf93c000184b751",
+      "id": "6a4816fb7d31280001f4fa0d",
       "title": "Say Viral One More Time! I'll Punch You in the Throat =)",
       "slug": "say-viral-one-more-time-ill-punch-you-in-the-throat",
       "published_at": "2013-05-20T11:20:34.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/say-viral-one-more-time-ill-punch-you-in-the-throat/",
+      "url": "https://ghost-production-198e.up.railway.app/say-viral-one-more-time-ill-punch-you-in-the-throat/",
       "featured": false,
       "reading_time": 4
     }

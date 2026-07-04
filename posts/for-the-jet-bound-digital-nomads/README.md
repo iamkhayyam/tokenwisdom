@@ -1,14 +1,14 @@
 ---
 title: "For The (Jet Bound) Digital Nomads"
 slug: for-the-jet-bound-digital-nomads
-id: 65ab51bb4cf93c000184b744
+id: 6a4816fb7d31280001f4fa06
 published_at: 2013-05-11T09:32:44.000-07:00
 updated_at: 2024-01-20T01:46:05.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0-xagc4gcwbhqs0pl--jpeg.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0-xagc4gcwbhqs0pl--jpeg.jpg
 excerpt: "A few tips for the heavy traveller."
-url: https://tokenwisdom.ghost.io/for-the-jet-bound-digital-nomads/
+url: https://ghost-production-198e.up.railway.app/for-the-jet-bound-digital-nomads/
 tags:
   - name: Unsolicited Advice
     slug: unsolicited-advice
@@ -16,9 +16,11 @@ tags:
     slug: travel
   - name: In Flow State
     slug: flow
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # For The (Jet Bound) Digital Nomads

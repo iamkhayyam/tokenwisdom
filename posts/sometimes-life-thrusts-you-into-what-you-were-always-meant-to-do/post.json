@@ -1,11 +1,11 @@
 {
-  "id": "65ab51bb4cf93c000184b736",
+  "id": "6a4816fb7d31280001f4fa02",
   "uuid": "537acb90-25c9-43bd-ad61-f065d2ff85d7",
   "title": "Sometimes, Life Thrusts You Into What You Were Always Meant To Do",
   "slug": "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do",
-  "html": "<h2 id=\"you-might-not-enjoy-how-you-get-there-thing-is-you-get-there-%F0%9F%94%AE\">You might not enjoy how you get there, thing is, you get there 🔮</h2><p></p><p>Today was one of those days, you know, wondering how you got where you are and contemplating the ideas of YOLO and FOMO :) On my birthday earlier this month, I made a wish. The wish was to be surrounded by my extended family, super smart people, life at the speed of a New York minute and doing what I love to do. Less than a week later, got my wish. The sense of loss is crippling, however, the sense of gain parts the clouds and allows the sun to beam down, a spotlight.</p><p>I feel like a caged lion finally being released. I’m scared shitless and in moments like this, these words come to mind:</p><blockquote class=\"kg-blockquote-alt\"><a href=\"https://www.youtube.com/watch?v=6QEuXDX40bE&ref=tokenwisdom.ghost.io\" rel=\"noopener\">“Every once in a while, the lion has to show the jackals, who he is. It’s too late to be scared. It’s time to kill.”</a></blockquote><figure class=\"kg-card kg-embed-card\"><iframe src=\"https://www.youtube.com/embed/6QEuXDX40bE?feature=oembed\" width=\"700\" height=\"393\" frameborder=\"0\" scrolling=\"no\"></iframe></figure><p><strong>I’m the lion.</strong></p>",
+  "html": "<h2 id=\"you-might-not-enjoy-how-you-get-there-thing-is-you-get-there-%F0%9F%94%AE\">You might not enjoy how you get there, thing is, you get there 🔮</h2><p></p><p>Today was one of those days, you know, wondering how you got where you are and contemplating the ideas of YOLO and FOMO :) On my birthday earlier this month, I made a wish. The wish was to be surrounded by my extended family, super smart people, life at the speed of a New York minute and doing what I love to do. Less than a week later, got my wish. The sense of loss is crippling, however, the sense of gain parts the clouds and allows the sun to beam down, a spotlight.</p><p>I feel like a caged lion finally being released. I’m scared shitless and in moments like this, these words come to mind:</p><blockquote class=\"kg-blockquote-alt\"><a href=\"https://www.youtube.com/watch?v=6QEuXDX40bE&ref=ghost-production-198e.up.railway.app\" rel=\"noopener\">“Every once in a while, the lion has to show the jackals, who he is. It’s too late to be scared. It’s time to kill.”</a></blockquote><figure class=\"kg-card kg-embed-card\"><iframe src=\"https://www.youtube.com/embed/6QEuXDX40bE?feature=oembed\" width=\"700\" height=\"393\" frameborder=\"0\" scrolling=\"no\"></iframe></figure><p><strong>I’m the lion.</strong></p>",
   "plaintext": "You might not enjoy how you get there, thing is, you get there 🔮\n\n\n\nToday was one of those days, you know, wondering how you got where you are and contemplating the ideas of YOLO and FOMO :) On my birthday earlier this month, I made a wish. The wish was to be surrounded by my extended family, super smart people, life at the speed of a New York minute and doing what I love to do. Less than a week later, got my wish. The sense of loss is crippling, however, the sense of gain parts the clouds and allows the sun to beam down, a spotlight.\n\nI feel like a caged lion finally being released. I’m scared shitless and in moments like this, these words come to mind:\n\n“Every once in a while, the lion has to show the jackals, who he is. It’s too late to be scared. It’s time to kill.”\n\nI’m the lion.",
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/Jq0JAU.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/Jq0JAU.gif",
   "featured": false,
   "visibility": "public",
   "created_at": "2013-06-25T17:50:09.000-07:00",
@@ -16,9 +16,9 @@
   "comment_id": "5b98f5d8631",
   "authors": [
     {
-      "id": "6895a3000d912d00085b277d",
-      "name": "🌶️ @iamkhayyam ",
-      "slug": "iamkhayyam",
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
       "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
       "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
       "bio": null,
@@ -26,8 +26,6 @@
       "location": null,
       "facebook": null,
       "twitter": "@worthafortune",
-      "meta_title": null,
-      "meta_description": null,
       "threads": null,
       "bluesky": null,
       "mastodon": null,
@@ -35,16 +33,18 @@
       "youtube": null,
       "instagram": null,
       "linkedin": null,
-      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
   "tags": [
     {
-      "id": "65ac1daf4cf93c000184baee",
+      "id": "6a4816f97d31280001f4f9af",
       "name": "Lessons Learned",
       "slug": "lessons-learned",
       "description": null,
-      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/lessons-learned-header-dribbble.gif",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/lessons-learned-header-dribbble.gif",
       "visibility": "public",
       "og_image": null,
       "og_title": null,
@@ -58,14 +58,14 @@
       "codeinjection_foot": null,
       "canonical_url": null,
       "accent_color": null,
-      "url": "https://tokenwisdom.ghost.io/tag/lessons-learned/"
+      "url": "https://ghost-production-198e.up.railway.app/tag/lessons-learned/"
     },
     {
-      "id": "65ab5be34cf93c000184b8d5",
+      "id": "6a4816f97d31280001f4f992",
       "name": "Personal Growth",
       "slug": "personal-growth",
       "description": null,
-      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/Muniz-Education-GIF.gif",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/Muniz-Education-GIF.gif",
       "visibility": "public",
       "og_image": null,
       "og_title": null,
@@ -79,14 +79,14 @@
       "codeinjection_foot": null,
       "canonical_url": null,
       "accent_color": null,
-      "url": "https://tokenwisdom.ghost.io/tag/personal-growth/"
+      "url": "https://ghost-production-198e.up.railway.app/tag/personal-growth/"
     },
     {
-      "id": "65ac1e314cf93c000184bb00",
+      "id": "6a4816f97d31280001f4f9b1",
       "name": "Life Hacks",
       "slug": "life-hacks",
       "description": null,
-      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/L9Go1v.gif",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/L9Go1v.gif",
       "visibility": "public",
       "og_image": null,
       "og_title": null,
@@ -100,14 +100,14 @@
       "codeinjection_foot": null,
       "canonical_url": null,
       "accent_color": null,
-      "url": "https://tokenwisdom.ghost.io/tag/life-hacks/"
+      "url": "https://ghost-production-198e.up.railway.app/tag/life-hacks/"
     },
     {
-      "id": "65ac1daf4cf93c000184baec",
+      "id": "6a4816f97d31280001f4f9ad",
       "name": "Entrepreneurial",
       "slug": "entrepreneurship",
       "description": null,
-      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/rocket-1.gif",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/rocket-1.gif",
       "visibility": "public",
       "og_image": null,
       "og_title": null,
@@ -121,10 +121,31 @@
       "codeinjection_foot": null,
       "canonical_url": null,
       "accent_color": null,
-      "url": "https://tokenwisdom.ghost.io/tag/entrepreneurship/"
+      "url": "https://ghost-production-198e.up.railway.app/tag/entrepreneurship/"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9dc",
+      "name": "#Import 2026-07-03 20:09",
+      "slug": "hash-import-2026-07-03-20-09",
+      "description": null,
+      "feature_image": null,
+      "visibility": "internal",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/404/"
     }
   ],
-  "url": "https://tokenwisdom.ghost.io/sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do/",
+  "url": "https://ghost-production-198e.up.railway.app/sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do/",
   "excerpt": "You might not enjoy how you get there, thing is, you get there 🔮\n\n\n\nToday was one of those days, you know, wondering how you got where you are and contemplating the ideas of YOLO and FOMO :) On my birthday earlier this month, I made a wish. The wish was to be surrounded by my extended family, super smart people, life at the speed of a New York minute and doing what I love to do. Less than a week later, got my wish. The sense of loss is crippling, however, the sense of gain parts the clouds and ",
   "reading_time": 1,
   "og_image": null,
@@ -137,35 +158,41 @@
   "meta_description": null,
   "tag_details": [
     {
-      "id": "65ac1daf4cf93c000184baee",
+      "id": "6a4816f97d31280001f4f9af",
       "name": "Lessons Learned",
       "slug": "lessons-learned",
       "visibility": "public"
     },
     {
-      "id": "65ab5be34cf93c000184b8d5",
+      "id": "6a4816f97d31280001f4f992",
       "name": "Personal Growth",
       "slug": "personal-growth",
       "visibility": "public"
     },
     {
-      "id": "65ac1e314cf93c000184bb00",
+      "id": "6a4816f97d31280001f4f9b1",
       "name": "Life Hacks",
       "slug": "life-hacks",
       "visibility": "public"
     },
     {
-      "id": "65ac1daf4cf93c000184baec",
+      "id": "6a4816f97d31280001f4f9ad",
       "name": "Entrepreneurial",
       "slug": "entrepreneurship",
       "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9dc",
+      "name": "#Import 2026-07-03 20:09",
+      "slug": "hash-import-2026-07-03-20-09",
+      "visibility": "internal"
     }
   ],
   "author_details": [
     {
-      "id": "6895a3000d912d00085b277d",
-      "name": "🌶️ @iamkhayyam ",
-      "slug": "iamkhayyam"
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
     }
   ],
   "local_feature_image": "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do_feature__Jq0JAU.gif"

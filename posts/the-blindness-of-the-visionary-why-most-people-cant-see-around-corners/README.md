@@ -1,14 +1,14 @@
 ---
 title: "The Blindness of the Visionary—Why Most People Can't See Around Corners"
 slug: the-blindness-of-the-visionary-why-most-people-cant-see-around-corners
-id: 68c73a84feb9ac00017a29ca
+id: 6a4816fb7d31280001f4fac9
 published_at: 2025-08-07T15:16:00.000-07:00
 updated_at: 2025-09-14T18:32:50.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/W32---a-new-yorker-style-cover-illustration-de_kcJCiwjyRlW6ALJfNly5Iw_25Bo7pA1Q--FiGX8MwDL8w.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/W32---a-new-yorker-style-cover-illustration-de_kcJCiwjyRlW6ALJfNly5Iw_25Bo7pA1Q--FiGX8MwDL8w.jpeg
 excerpt: "W32 - They call themselves visionaries while demanding to see the future before believing in it—like food critics insisting on tasting tomorrow's breakfast. They're not being wise; they're just chickens with fancy vocabularies."
-url: https://tokenwisdom.ghost.io/the-blindness-of-the-visionary-why-most-people-cant-see-around-corners/
+url: https://ghost-production-198e.up.railway.app/the-blindness-of-the-visionary-why-most-people-cant-see-around-corners/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: strategic
   - name: Risk \ Reward
     slug: risk-reward
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Blindness of the Visionary—Why Most People Can't See Around Corners

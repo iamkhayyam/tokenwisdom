@@ -1,13 +1,13 @@
 ---
 title: "Explosive Growth of AI: From Chat GPT to AGI Sparks"
 slug: the-explosive-growth-of-ai
-id: 65a9c163ebf14f0001f3be43
+id: 6a4816fb7d31280001f4f9e7
 published_at: 2023-04-01T17:28:00.000-07:00
 updated_at: 2024-02-17T00:50:10.000-08:00
 featured: False
 reading_time: 2 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/Pope-francis-artificial-intelligence-generated-image-white-coat.jpg
-url: https://tokenwisdom.ghost.io/the-explosive-growth-of-ai/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/Pope-francis-artificial-intelligence-generated-image-white-coat.jpg
+url: https://ghost-production-198e.up.railway.app/the-explosive-growth-of-ai/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -17,9 +17,11 @@ tags:
     slug: language-models
   - name: OpenAI + e/acc
     slug: gpt
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Explosive Growth of AI: From Chat GPT to AGI Sparks

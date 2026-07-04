@@ -1,20 +1,22 @@
 ---
 title: "107th Edition 🔮 Pearls of Wisdom ⑊ W19"
 slug: 107th-edition-pearls-of-wisdom-w19
-id: 6827aaff7054e000010513b3
+id: 6a4816fb7d31280001f4faac
 published_at: 2025-05-11T17:36:00.000-07:00
 updated_at: 2025-05-16T18:03:27.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/05/51st_img-5adYC6AJ5fEHA5WeeHErQ.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/51st_img-5adYC6AJ5fEHA5WeeHErQ.jpeg
 excerpt: "As cybersecurity failures expose billions of passwords and silicon-free processors promise a radical performance leap, the digital arms race intensifies. Apple faces a $95 million payout for Siri's eavesdropping while Meta confronts potential dismantling—2025's technological reckoning is upon us."
-url: https://tokenwisdom.ghost.io/worthafortune/107th-edition-pearls-of-wisdom-w19/
+url: https://ghost-production-198e.up.railway.app/107th-edition-pearls-of-wisdom-w19/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 107th Edition 🔮 Pearls of Wisdom ⑊ W19

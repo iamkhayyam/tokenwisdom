@@ -1,5 +1,5 @@
 {
-  "id": "6708d40e47b6c200019d0243",
+  "id": "6a4816fb7d31280001f4fa65",
   "uuid": "a3c55a0c-2ca8-4c02-9c46-96c508aadead",
   "title": "Vaguely Specific",
   "slug": "vaguely-specific",
@@ -14,11 +14,11 @@
   "custom_excerpt": "Bureau of Investigations",
   "tags": [
     {
-      "id": "65ce63b8dae46f00014dde9a",
+      "id": "6a4816f97d31280001f4f9d1",
       "name": "🎉 Newest / Latest",
       "slug": "newestlatest",
       "description": "Hand-picked and carefully curated content in a consumed collection of noteworthy articles that may shed some light on the future.",
-      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/download--1-.gif",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/download--1-.gif",
       "visibility": "public",
       "og_image": null,
       "og_title": null,
@@ -32,14 +32,14 @@
       "codeinjection_foot": null,
       "canonical_url": null,
       "accent_color": null,
-      "url": "https://tokenwisdom.ghost.io/tag/newestlatest/"
+      "url": "https://ghost-production-198e.up.railway.app/tag/newestlatest/"
     },
     {
-      "id": "65ab2eb64cf93c000184b6d2",
+      "id": "6a4816f97d31280001f4f98e",
       "name": "📺 Time Well Spent",
       "slug": "timewellspent",
       "description": "The week's top ten must-watch YouTube videos that is Time Well Spent, curated to save you time and deliver the Alph-alpha™️",
-      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/200w-2.gif",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/200w-2.gif",
       "visibility": "public",
       "og_image": null,
       "og_title": null,
@@ -53,23 +53,42 @@
       "codeinjection_foot": null,
       "canonical_url": null,
       "accent_color": "#eb510f",
-      "url": "https://tokenwisdom.ghost.io/tag/timewellspent/"
+      "url": "https://ghost-production-198e.up.railway.app/tag/timewellspent/"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9dc",
+      "name": "#Import 2026-07-03 20:09",
+      "slug": "hash-import-2026-07-03-20-09",
+      "description": null,
+      "feature_image": null,
+      "visibility": "internal",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/404/"
     }
   ],
   "authors": [
     {
-      "id": "6895a3000d912d00085b277d",
-      "name": "🌶️ @iamkhayyam ",
-      "slug": "iamkhayyam",
-      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
-      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "id": "1",
+      "name": "Khayyam Wakil",
+      "slug": "khayyam",
+      "profile_image": "https://www.gravatar.com/avatar/d6d2193b1f25ed94195a03d1065e9216?s=250&r=x&d=mp",
+      "cover_image": null,
       "bio": null,
       "website": null,
       "location": null,
       "facebook": null,
-      "twitter": "@worthafortune",
-      "meta_title": null,
-      "meta_description": null,
+      "twitter": null,
       "threads": null,
       "bluesky": null,
       "mastodon": null,
@@ -77,10 +96,12 @@
       "youtube": null,
       "instagram": null,
       "linkedin": null,
-      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
-  "url": "https://tokenwisdom.ghost.io/vaguely-specific/",
+  "url": "https://ghost-production-198e.up.railway.app/vaguely-specific/",
   "excerpt": "Bureau of Investigations",
   "meta_title": null,
   "meta_description": null

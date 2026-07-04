@@ -1,15 +1,15 @@
 ---
 title: "The Double Collapse"
 slug: the-double-collapse
-id: 69a37e91b950650001160e27
+id: 6a4816fb7d31280001f4fb06
 published_at: 2026-02-26T16:12:00.000-08:00
 updated_at: 2026-02-28T16:35:46.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/a-new-yorker-magazine-cover-illustration_p5gIjWylSPWyjSacBUDSmA_TjDvFv31RyiQlVk0G19Oeg_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/a-new-yorker-magazine-cover-illustration_p5gIjWylSPWyjSacBUDSmA_TjDvFv31RyiQlVk0G19Oeg_sd.jpeg
 excerpt: "W09 - The infrastructure of being unobserved has quietly ceased to exist. Not gradually. Now. Two papers, published weeks apart, confirm what most institutions have not yet accepted: anonymity is gone — and it took collective power with it.
 "
-url: https://tokenwisdom.ghost.io/the-double-collapse/
+url: https://ghost-production-198e.up.railway.app/the-double-collapse/
 tags:
   - name: Privacy
     slug: privacy
@@ -31,9 +31,11 @@ tags:
     slug: a-closer-look
   - name: A Story to Tell
     slug: storytelling
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Double Collapse

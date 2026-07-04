@@ -1,20 +1,22 @@
 ---
 title: "W14: 51st Edition \ Side B 📺"
 slug: w14-timewellspent-50
-id: 66131f1c01e9e40001950fe1
+id: 6a4816fb7d31280001f4fa45
 published_at: 2024-04-07T23:06:00.000-07:00
 updated_at: 2024-10-11T00:38:43.000-07:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/fantastic-mr-fox.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/fantastic-mr-fox.gif
 excerpt: "Jump in frontiers of progress with Side B - Time Well Spent, another Edition of Token Wisdom: E txplore groundbreaking AI in sports, navigate financial scams' murky waters, honor Gameboy's timeless genius, challenge tech's Goliaths, and envision tomorrow with VR's dream weavers."
-url: https://tokenwisdom.ghost.io/timewellspent/w14-timewellspent-50/
+url: https://ghost-production-198e.up.railway.app/w14-timewellspent-50/
 tags:
   - name: 📺 Time Well Spent
     slug: timewellspent
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W14: 51st Edition \ Side B 📺

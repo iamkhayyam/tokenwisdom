@@ -1,14 +1,14 @@
 ---
 title: "From AR Glasses to Reality-Bending Lenses"
 slug: from-ar-glasses-to-reality-bending-lenses
-id: 65dac628692af40001944900
+id: 6a4816fb7d31280001f4fa27
 published_at: 2024-02-25T20:21:18.000-08:00
 updated_at: 2025-01-23T18:28:22.000-08:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/img-DFTciinpGRggg9dNGMbeY.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/img-DFTciinpGRggg9dNGMbeY.png
 excerpt: "W07 - Quantum computing could revolutionize augmented reality, blending the digital and physical worlds seamlessly."
-url: https://tokenwisdom.ghost.io/from-ar-glasses-to-reality-bending-lenses/
+url: https://ghost-production-198e.up.railway.app/from-ar-glasses-to-reality-bending-lenses/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: emerging-technology
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # From AR Glasses to Reality-Bending Lenses

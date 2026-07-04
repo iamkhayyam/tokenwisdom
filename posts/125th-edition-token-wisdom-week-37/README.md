@@ -1,20 +1,22 @@
 ---
 title: "125th Edition 🔮 Token Wisdom \\ Week 37"
 slug: 125th-edition-token-wisdom-week-37
-id: 68d0dd5cc03c2700012d9a9a
+id: 6a4816fb7d31280001f4fad0
 published_at: 2025-09-14T22:37:00.000-07:00
 updated_at: 2025-09-21T22:38:14.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/img-gYxL7GFQyuEb7dpvtaH89.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/img-gYxL7GFQyuEb7dpvtaH89.png
 excerpt: "Exploring AI-inspired robot swarms, quantum cryptography breakthroughs, and the evolving landscape of workplace technology. Welcome to the 125th edition—where we unravel the complexities of technology, science, and society. Prepare for a journey from the digital realm to the quantum frontier!"
-url: https://tokenwisdom.ghost.io/worthafortune/125th-edition-token-wisdom-week-37/
+url: https://ghost-production-198e.up.railway.app/125th-edition-token-wisdom-week-37/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 125th Edition 🔮 Token Wisdom \\ Week 37

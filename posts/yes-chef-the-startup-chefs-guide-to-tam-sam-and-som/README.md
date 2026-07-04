@@ -1,14 +1,14 @@
 ---
 title: "Yes, Chef! The Startup Chef's Gourmet Guide to TAM, SAM, and SOM"
 slug: yes-chef-the-startup-chefs-guide-to-tam-sam-and-som
-id: 6709bfb747b6c200019d03d0
+id: 6a4816fb7d31280001f4fa68
 published_at: 2024-05-29T18:11:00.000-07:00
 updated_at: 2024-10-12T00:53:24.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/giphy.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/giphy.gif
 excerpt: "W21 - Hungry for startup success? Dive into our culinary-themed guide to TAM, SAM, and SOM. From global pantries to local menus, we'll spice up your market analysis. Warning: May cause cravings for both data and gourmet ice cream. Bon appétit, entrepreneurs!"
-url: https://tokenwisdom.ghost.io/yes-chef-the-startup-chefs-guide-to-tam-sam-and-som/
+url: https://ghost-production-198e.up.railway.app/yes-chef-the-startup-chefs-guide-to-tam-sam-and-som/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -22,9 +22,11 @@ tags:
     slug: technology
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Yes, Chef! The Startup Chef's Gourmet Guide to TAM, SAM, and SOM

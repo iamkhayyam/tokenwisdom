@@ -1,20 +1,22 @@
 ---
 title: "117th Edition 🔮 Pearls of Wisdom ⑊ W29"
 slug: 117th-edition-pearls-of-wisdom-w29
-id: 688af2e8aa4a950001545b7d
+id: 6a4816fb7d31280001f4fac2
 published_at: 2025-07-21T21:54:00.000-07:00
 updated_at: 2025-08-03T09:33:14.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/08/img-HfdhdUDqcqrEgI09SYNrj.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/08/img-HfdhdUDqcqrEgI09SYNrj.jpeg
 excerpt: "W29: From vibrating wind turbines to quantum breakthroughs, welcome to Token Wisdom #117. Join us for a wild ride through tech frontiers where innovation meets whimsy. Warning: May cause spontaneous enlightenment and uncontrollable \"aha\" moments! 🔮✨"
-url: https://tokenwisdom.ghost.io/worthafortune/117th-edition-pearls-of-wisdom-w29/
+url: https://ghost-production-198e.up.railway.app/117th-edition-pearls-of-wisdom-w29/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 117th Edition 🔮 Pearls of Wisdom ⑊ W29

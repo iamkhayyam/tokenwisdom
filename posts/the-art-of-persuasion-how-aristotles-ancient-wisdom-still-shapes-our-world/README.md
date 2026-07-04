@@ -1,14 +1,14 @@
 ---
 title: "The Art of Persuasion: How Aristotle's Ancient Wisdom Still Shapes Our World"
 slug: the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world
-id: 66efd73c75497b0001948d6f
+id: 6a4816fb7d31280001f4fa61
 published_at: 2024-04-14T01:53:00.000-07:00
 updated_at: 2024-09-28T13:43:24.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/09/img-rgKA8Y9knNPR9fzXWbz00.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/09/img-rgKA8Y9knNPR9fzXWbz00.jpeg
 excerpt: "W14 - Discover how Aristotle's ancient wisdom still shapes our digital world. From viral TED Talks to political debates, learn how ethos, pathos, and logos remain essential in modern persuasion. Uncover the timeless art of communication that bridges centuries, cultures, and technologies."
-url: https://tokenwisdom.ghost.io/the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world/
+url: https://ghost-production-198e.up.railway.app/the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -26,9 +26,11 @@ tags:
     slug: personal-growth
   - name: Strategic Measures
     slug: strategic
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Art of Persuasion: How Aristotle's Ancient Wisdom Still Shapes Our World

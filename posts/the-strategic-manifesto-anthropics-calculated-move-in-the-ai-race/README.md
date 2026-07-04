@@ -1,14 +1,14 @@
 ---
 title: "The Strategic Manifesto: Anthropic's Calculated Move in the AI Race"
 slug: the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race
-id: 673a7bcc2031060001730ee4
+id: 6a4816fb7d31280001f4fa76
 published_at: 2024-11-14T16:17:00.000-08:00
 updated_at: 2024-11-23T16:23:09.000-08:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/TokenWisdom-W44-The_Strategic_Manifesto_Anthropics_Calculated_Move_in_the_AI_Race-1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/TokenWisdom-W44-The_Strategic_Manifesto_Anthropics_Calculated_Move_in_the_AI_Race-1.jpg
 excerpt: "W45 - Anthropic's AI manifesto: A masterclass in corporate chess or a genuine ethical stand? Unpack the strategic brilliance and ethical quandaries as we dissect the gap between lofty rhetoric and controversial partnerships. The AI race is on—but at what cost?"
-url: https://tokenwisdom.ghost.io/the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race/
+url: https://ghost-production-198e.up.railway.app/the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -34,9 +34,11 @@ tags:
     slug: risk-reward
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Strategic Manifesto: Anthropic's Calculated Move in the AI Race

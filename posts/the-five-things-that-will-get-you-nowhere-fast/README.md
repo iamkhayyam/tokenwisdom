@@ -1,14 +1,14 @@
 ---
 title: "The Five Things That Will Get You Nowhere Fast"
 slug: the-five-things-that-will-get-you-nowhere-fast
-id: 65ab51bb4cf93c000184b752
+id: 6a4816fb7d31280001f4fa0e
 published_at: 2013-05-06T20:09:20.000-07:00
 updated_at: 2024-01-19T21:21:19.000-08:00
 featured: True
 reading_time: 1 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0-jiesh4q9slmjkgra.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0-jiesh4q9slmjkgra.gif
 excerpt: "Recommendations on how to conduct oneself when meeting new acquaintances or business folk."
-url: https://tokenwisdom.ghost.io/featured/the-five-things-that-will-get-you-nowhere-fast/
+url: https://ghost-production-198e.up.railway.app/the-five-things-that-will-get-you-nowhere-fast/
 tags:
   - name: Personal Growth
     slug: personal-growth
@@ -24,9 +24,11 @@ tags:
     slug: education
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Five Things That Will Get You Nowhere Fast

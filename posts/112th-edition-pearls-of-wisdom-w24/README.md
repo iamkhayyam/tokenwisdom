@@ -1,21 +1,23 @@
 ---
 title: "112th Edition 🔮 Pearls of Wisdom ⑊ W24"
 slug: 112th-edition-pearls-of-wisdom-w24
-id: 68510c3529a871000115d88e
+id: 6a4816fb7d31280001f4fab6
 published_at: 2025-06-16T09:40:00.000-07:00
 updated_at: 2025-06-16T23:58:40.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/a-prince-of-persia-arabian-nights-spider_jHHOvrX4TEOXsPBQJmVxvQ_JaD4Zrr1R7CAyi2Assd6Vw.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/a-prince-of-persia-arabian-nights-spider_jHHOvrX4TEOXsPBQJmVxvQ_JaD4Zrr1R7CAyi2Assd6Vw.png
 excerpt: "W24 - Glacier-triggered megatsunamis, time's mathematical secrets, and a $649 million Bitcoin treasure hunt? Welcome to Token Wisdom's 112th edition, where we navigate the digital frontier with a wink. Buckle up for a journey through tech's wonderland – sanity optional, humor guaranteed!
 "
-url: https://tokenwisdom.ghost.io/worthafortune/112th-edition-pearls-of-wisdom-w24/
+url: https://ghost-production-198e.up.railway.app/112th-edition-pearls-of-wisdom-w24/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 112th Edition 🔮 Pearls of Wisdom ⑊ W24

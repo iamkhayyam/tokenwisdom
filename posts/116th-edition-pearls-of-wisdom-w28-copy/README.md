@@ -1,20 +1,22 @@
 ---
 title: "116th Edition 🔮 Pearls of Wisdom ⑊ W28"
 slug: 116th-edition-pearls-of-wisdom-w28-copy
-id: 68892323efb976000149f752
+id: 6a4816fb7d31280001f4fac1
 published_at: 2025-07-14T23:14:00.000-07:00
 updated_at: 2025-07-30T21:50:55.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/07/Leonardo_Phoenix_09_A_professional_graphic_design_flat_vector_1.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/07/Leonardo_Phoenix_09_A_professional_graphic_design_flat_vector_1.png
 excerpt: "W28 - Paradox-free time travel proven, wireless power transmission breakthroughs, and security concerns in vibe coding. Welcome to Token Wisdom's 116th edition—where theoretical physics meets practical innovation. Reality optional, curiosity mandatory!"
-url: https://tokenwisdom.ghost.io/worthafortune/116th-edition-pearls-of-wisdom-w28-copy/
+url: https://ghost-production-198e.up.railway.app/116th-edition-pearls-of-wisdom-w28-copy/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 116th Edition 🔮 Pearls of Wisdom ⑊ W28

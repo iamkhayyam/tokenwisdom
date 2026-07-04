@@ -1,20 +1,22 @@
 ---
 title: "W12: 49th Edition \ Side A🎉"
 slug: w12-thenewestlatest-48
-id: 6601456419bcd2000130a9d4
+id: 6a4816fb7d31280001f4fa3c
 published_at: 2024-03-24T11:06:00.000-07:00
 updated_at: 2024-10-11T00:10:55.000-07:00
 featured: False
 reading_time: 14 min
 feature_image: https://images.unsplash.com/photo-1622042002773-a6f2913a6e84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJldm9sdXRpb25pemluZyUyMHJlYWxpdHl8ZW58MHx8fHwxNzExMzYxNDQzfDA&ixlib=rb-4.0.3&q=80&w=2000
 excerpt: "Dive into a future where Netflix enters retail, AI reshapes gaming, and biometrics unlock security. Witness tech's next leap with ENS, super fans, and the U.S. Cyber Trust Mark."
-url: https://tokenwisdom.ghost.io/newestlatest/w12-thenewestlatest-48/
+url: https://ghost-production-198e.up.railway.app/w12-thenewestlatest-48/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W12: 49th Edition \ Side A🎉

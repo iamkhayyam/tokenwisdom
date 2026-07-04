@@ -1,13 +1,13 @@
 ---
 title: "The Rise of Algorithms: Are They Taking Over?"
 slug: the-rise-of-algorithms-are-they-taking-over
-id: 65a9c298ebf14f0001f3be58
+id: 6a4816fb7d31280001f4f9e8
 published_at: 2023-05-10T17:34:00.000-07:00
 updated_at: 2024-01-19T21:30:29.000-08:00
 featured: True
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/common_pound_cake-algorithm.png
-url: https://tokenwisdom.ghost.io/featured/the-rise-of-algorithms-are-they-taking-over/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/common_pound_cake-algorithm.png
+url: https://ghost-production-198e.up.railway.app/the-rise-of-algorithms-are-they-taking-over/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -21,9 +21,11 @@ tags:
     slug: explainable-ai
   - name: Generative AI
     slug: generative
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Rise of Algorithms: Are They Taking Over?

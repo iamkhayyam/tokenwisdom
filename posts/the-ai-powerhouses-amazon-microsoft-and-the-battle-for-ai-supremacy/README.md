@@ -1,13 +1,13 @@
 ---
 title: "The AI Powerhouses: Amazon, Microsoft, and the Battle for AI Supremacy"
 slug: the-ai-powerhouses-amazon-microsoft-and-the-battle-for-ai-supremacy
-id: 65a9bccaebf14f0001f3be13
+id: 6a4816fb7d31280001f4f9e6
 published_at: 2023-09-27T17:20:00.000-07:00
 updated_at: 2024-01-18T23:49:06.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/1_DG-3P6HJ-XBkyDYmpB1RZg.jpg
-url: https://tokenwisdom.ghost.io/the-ai-powerhouses-amazon-microsoft-and-the-battle-for-ai-supremacy/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/1_DG-3P6HJ-XBkyDYmpB1RZg.jpg
+url: https://ghost-production-198e.up.railway.app/the-ai-powerhouses-amazon-microsoft-and-the-battle-for-ai-supremacy/
 tags:
   - name: Technology
     slug: technology
@@ -23,9 +23,11 @@ tags:
     slug: ethical
   - name: Big Tech
     slug: big-tech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The AI Powerhouses: Amazon, Microsoft, and the Battle for AI Supremacy

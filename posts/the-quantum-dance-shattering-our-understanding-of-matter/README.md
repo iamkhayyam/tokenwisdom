@@ -1,14 +1,14 @@
 ---
 title: "The Quantum Dance: Shattering Our Understanding of Matter"
 slug: the-quantum-dance-shattering-our-understanding-of-matter
-id: 674bf2ddfa728b0001fe2075
+id: 6a4816fb7d31280001f4fa80
 published_at: 2024-10-31T21:24:00.000-07:00
 updated_at: 2024-11-30T22:42:33.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/iHd0LiyNTHGH0Boa8J3ToA.webp
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/iHd0LiyNTHGH0Boa8J3ToA.webp
 excerpt: "W43 - Everything you think you know about magnetism isn't just incomplete—it's a fairy tale. While physicists cling to outdated models, a quantum revolution churns beneath our assumptions, threatening to shatter physics as we know it."
-url: https://tokenwisdom.ghost.io/the-quantum-dance-shattering-our-understanding-of-matter/
+url: https://ghost-production-198e.up.railway.app/the-quantum-dance-shattering-our-understanding-of-matter/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: future-trends
   - name: All the Data
     slug: data
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Quantum Dance: Shattering Our Understanding of Matter

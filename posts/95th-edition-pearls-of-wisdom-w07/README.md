@@ -1,20 +1,22 @@
 ---
 title: "95th Edition 🔮 Pearls of Wisdom ⑊ W07"
 slug: 95th-edition-pearls-of-wisdom-w07
-id: 67b374aa86cbbf000197c4c7
+id: 6a4816fb7d31280001f4fa94
 published_at: 2025-02-17T11:21:26.000-08:00
 updated_at: 2025-02-17T11:23:14.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/img-GKNmNgCVVjU4i7qczTsiY.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/img-GKNmNgCVVjU4i7qczTsiY.jpeg
 excerpt: "W07 - Dive into a tech wonderland where AI designs chips, bathhouses make a comeback, and quantum leaps rewrite reality. Brace for mind-bending innovations, cultural shifts, and the occasional talking houseplant. Your weekly dose of future shock awaits!"
-url: https://tokenwisdom.ghost.io/worthafortune/95th-edition-pearls-of-wisdom-w07/
+url: https://ghost-production-198e.up.railway.app/95th-edition-pearls-of-wisdom-w07/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 95th Edition 🔮 Pearls of Wisdom ⑊ W07

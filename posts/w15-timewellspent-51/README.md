@@ -1,20 +1,22 @@
 ---
 title: "W15: 52nd Edition \ Side B 📺"
 slug: w15-timewellspent-51
-id: 661e2033d992e10001514bce
+id: 6a4816fb7d31280001f4fa49
 published_at: 2024-04-17T13:53:47.000-07:00
 updated_at: 2024-10-11T00:38:50.000-07:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/2Y9g2o9mCwOF---01.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/2Y9g2o9mCwOF---01.gif
 excerpt: "Explore the secrets of consumer hardware success, the cinematic nuances of lens types, and the lost VFX magic of Disney. Embrace the roots of blues, critique AI's broken promises, examine food industry ethics, and discover NVIDIA's vision for VR and AI, all in this immersive edition."
-url: https://tokenwisdom.ghost.io/timewellspent/w15-timewellspent-51/
+url: https://ghost-production-198e.up.railway.app/w15-timewellspent-51/
 tags:
   - name: 📺 Time Well Spent
     slug: timewellspent
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W15: 52nd Edition \ Side B 📺

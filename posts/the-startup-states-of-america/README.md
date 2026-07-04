@@ -1,14 +1,14 @@
 ---
 title: "The Startup States of America"
 slug: the-startup-states-of-america
-id: 684c998ac694b2000157a9cb
+id: 6a4816fb7d31280001f4fab5
 published_at: 2025-06-14T11:37:12.000-07:00
 updated_at: 2025-06-14T11:37:12.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/_a-split-american-flag-where-the-left-hal_9wxRfclhRCSnxehRLSwlUw_qB9Bab7MRXK0FYbdnH3L2Q.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/_a-split-american-flag-where-the-left-hal_9wxRfclhRCSnxehRLSwlUw_qB9Bab7MRXK0FYbdnH3L2Q.png
 excerpt: "W24 - Your vote might count, but your voice is being algorithmized out of existence. We're not seeing democratic backsliding—we're witnessing startup methodology applied to governance itself, replacing democratic coordination with corporate management systems."
-url: https://tokenwisdom.ghost.io/the-startup-states-of-america/
+url: https://ghost-production-198e.up.railway.app/the-startup-states-of-america/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: innovation
   - name: Philosophical
     slug: philosophy
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Startup States of America

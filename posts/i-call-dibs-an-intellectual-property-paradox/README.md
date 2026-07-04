@@ -1,14 +1,14 @@
 ---
 title: "I Call Dibs: An Intellectual Property Paradox"
 slug: i-call-dibs-an-intellectual-property-paradox
-id: 676e1f859d10560001d200b9
+id: 6a4816fb7d31280001f4fa85
 published_at: 2024-12-19T19:53:00.000-08:00
 updated_at: 2024-12-27T04:06:40.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/img-NXdx894xjRrR62B4eMc9X.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/img-NXdx894xjRrR62B4eMc9X.png
 excerpt: "W50 - From Amazon patenting white backgrounds to billion-dollar battles over rounded rectangles, welcome to the intellectual property circus—where common sense goes to die, innovation moves at the speed of litigation, and even your coffee mug might sue for royalties."
-url: https://tokenwisdom.ghost.io/i-call-dibs-an-intellectual-property-paradox/
+url: https://ghost-production-198e.up.railway.app/i-call-dibs-an-intellectual-property-paradox/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -26,9 +26,11 @@ tags:
     slug: provenance
   - name: Strategic Measures
     slug: strategic
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # I Call Dibs: An Intellectual Property Paradox

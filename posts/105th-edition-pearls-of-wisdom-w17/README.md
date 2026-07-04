@@ -1,20 +1,22 @@
 ---
 title: "105th Edition 🔮 Pearls of Wisdom ⑊ W17"
 slug: 105th-edition-pearls-of-wisdom-w17
-id: 681298c7b183f4000172f25e
+id: 6a4816fb7d31280001f4faa8
 published_at: 2025-04-28T14:40:00.000-07:00
 updated_at: 2025-05-05T12:35:26.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/img-UN1r7C9TXyRzHJSNBN1jP.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/img-UN1r7C9TXyRzHJSNBN1jP.png
 excerpt: "Neural interfaces weave into fashion, quantum entanglement powers unhackable messaging, and synthetic proteins revolutionize medicine. As climate-resilient architecture transforms skylines, your kitchen appliances form philosophical book clubs. Welcome to 2025's techno-existential carnival."
-url: https://tokenwisdom.ghost.io/worthafortune/105th-edition-pearls-of-wisdom-w17/
+url: https://ghost-production-198e.up.railway.app/105th-edition-pearls-of-wisdom-w17/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 105th Edition 🔮 Pearls of Wisdom ⑊ W17

@@ -1,20 +1,22 @@
 ---
 title: "140th Edition 🔮 Token Wisdom \ Week 52"
 slug: 140th-edition-token-wisdom-week-52
-id: 694f710c3483180001155498
+id: 6a4816fb7d31280001f4faf2
 published_at: 2025-12-28T11:11:40.000-08:00
 updated_at: 2025-12-30T11:05:20.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/fortune_teller_twilight_zone_nick_of_time.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/fortune_teller_twilight_zone_nick_of_time.gif
 excerpt: "This week: AI reshapes job markets and surveillance debates intensify, while breakthroughs in quantum computing and ancient DNA analysis offer new perspectives on technology and history. Privacy concerns clash with innovation as we explore the delicate balance between progress and human values."
-url: https://tokenwisdom.ghost.io/worthafortune/140th-edition-token-wisdom-week-52/
+url: https://ghost-production-198e.up.railway.app/140th-edition-token-wisdom-week-52/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 140th Edition 🔮 Token Wisdom \ Week 52

@@ -1,20 +1,22 @@
 ---
 title: "104th Edition 🔮 Pearls of Wisdom ⑊ W16"
 slug: 104th-edition-pearls-of-wisdom-w16
-id: 6806a1eae95f790001ea196e
+id: 6a4816fb7d31280001f4faa6
 published_at: 2025-04-21T13:44:07.000-07:00
 updated_at: 2025-04-21T13:46:09.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/img-qyJsQITz10qEhI7fgcsjZ.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/img-qyJsQITz10qEhI7fgcsjZ.jpeg
 excerpt: "W16 - From the thalamus of consciousness to AI's musical muse, we're blurring reality's edges. While quantum chips defy Einstein and Pentagon teams resign en masse, your smart toaster might just be plotting an existential book club. Welcome to 2025's digital paradox."
-url: https://tokenwisdom.ghost.io/worthafortune/104th-edition-pearls-of-wisdom-w16/
+url: https://ghost-production-198e.up.railway.app/104th-edition-pearls-of-wisdom-w16/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 104th Edition 🔮 Pearls of Wisdom ⑊ W16

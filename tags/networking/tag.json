@@ -1,9 +1,9 @@
 {
-  "id": "65ab5be34cf93c000184b8d6",
+  "id": "6a4816f97d31280001f4f993",
   "name": "Networking",
   "slug": "networking",
   "description": null,
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/1_LnOSvWkXLLZPtkjWpau4MA.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/1_LnOSvWkXLLZPtkjWpau4MA.gif",
   "visibility": "public",
   "meta_title": null,
   "meta_description": null,
@@ -17,14 +17,14 @@
   "codeinjection_foot": null,
   "canonical_url": null,
   "accent_color": null,
-  "url": "https://tokenwisdom.ghost.io/tag/networking/",
+  "url": "https://ghost-production-198e.up.railway.app/tag/networking/",
   "posts": [
     {
-      "id": "65ab51bb4cf93c000184b752",
+      "id": "6a4816fb7d31280001f4fa0e",
       "title": "The Five Things That Will Get You Nowhere Fast",
       "slug": "the-five-things-that-will-get-you-nowhere-fast",
       "published_at": "2013-05-06T20:09:20.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/featured/the-five-things-that-will-get-you-nowhere-fast/",
+      "url": "https://ghost-production-198e.up.railway.app/the-five-things-that-will-get-you-nowhere-fast/",
       "featured": true,
       "reading_time": 1
     }

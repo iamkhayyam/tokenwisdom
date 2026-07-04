@@ -1,14 +1,14 @@
 ---
 title: "Economic Uncharted Territory—Moving Beyond Obsolete Maps"
 slug: economic-uncharted-territory-moving-beyond-obsolete-maps
-id: 67d301e976f8a70001440ab5
+id: 6a4816fb7d31280001f4fa9b
 published_at: 2025-03-13T12:28:01.000-07:00
 updated_at: 2025-04-21T13:49:54.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/in-this-stunning-image-one-half-depicts-_sHgLQzePT1CUuJpW0MnomA_bfwckgLhQieethzu4_9PBw.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/in-this-stunning-image-one-half-depicts-_sHgLQzePT1CUuJpW0MnomA_bfwckgLhQieethzu4_9PBw.jpg
 excerpt: "W11 - Capitalism isn't dying—it's metamorphosizing. But into what? This manifesto unveils the blind spots in our economic vision, challenging us to see beyond markets and states to the emerging landscapes of post-scarcity, network coordination, and biomimetic systems."
-url: https://tokenwisdom.ghost.io/economic-uncharted-territory-moving-beyond-obsolete-maps/
+url: https://ghost-production-198e.up.railway.app/economic-uncharted-territory-moving-beyond-obsolete-maps/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: strategic
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Economic Uncharted Territory—Moving Beyond Obsolete Maps

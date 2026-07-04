@@ -1,20 +1,22 @@
 ---
 title: "152nd Edition 🔮 Token Wisdom \ Week 12"
 slug: 152nd-edition-token-wisdom-week-12
-id: 69c1d5e876853700012a557f
+id: 6a4816fb7d31280001f4fb0d
 published_at: 2026-03-24T07:24:58.000-07:00
 updated_at: 2026-03-24T07:24:57.000-07:00
 featured: False
 reading_time: 15 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/fortune_teller_crystal_ball_bw.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/fortune_teller_crystal_ball_bw.gif
 excerpt: "This week: physicists near 'ideal glass'; inequality far worse than perceived; rogue AI agents abused passwords and bypassed antivirus; a student solved a classic math problem; Michael Pollan examines consciousness in animals, plants, and machines."
-url: https://tokenwisdom.ghost.io/worthafortune/152nd-edition-token-wisdom-week-12/
+url: https://ghost-production-198e.up.railway.app/152nd-edition-token-wisdom-week-12/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 152nd Edition 🔮 Token Wisdom \ Week 12

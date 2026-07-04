@@ -1,14 +1,14 @@
 ---
 title: "The Day We Made Ourselves Obsolete"
 slug: the-day-we-made-ourselves-obsolete
-id: 682fc09aca8e790001a200fd
+id: 6a4816fb7d31280001f4faaf
 published_at: 2025-05-23T07:49:25.000-07:00
 updated_at: 2025-05-23T07:49:24.000-07:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/05/_a-corporate-boardroom-where-executives-w_fxzgf576TkioJHu4UhjUHA_KzTgA5T1QluKoXRhsc9rpA-1.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/_a-corporate-boardroom-where-executives-w_fxzgf576TkioJHu4UhjUHA_KzTgA5T1QluKoXRhsc9rpA-1.png
 excerpt: "W21 - We've spent millennia convinced our intelligence made us special. Now, as we eagerly surrender our cognitive sovereignty to AI, we're about to discover how terrifyingly wrong we were. Welcome to the twilight of human exceptionalism."
-url: https://tokenwisdom.ghost.io/the-day-we-made-ourselves-obsolete/
+url: https://ghost-production-198e.up.railway.app/the-day-we-made-ourselves-obsolete/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: opinionated-editorials
   - name: Deep Tech
     slug: deeptech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Day We Made Ourselves Obsolete

@@ -1,20 +1,22 @@
 ---
 title: "113th Edition 🔮 Pearls of Wisdom ⑊ W25"
 slug: 113th-edition-pearls-of-wisdom-w25
-id: 685b9e02ed1d9d0001db1874
+id: 6a4816fb7d31280001f4fab8
 published_at: 2025-06-25T00:29:48.000-07:00
 updated_at: 2025-06-25T00:30:02.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/Leonardo_Diffusion_XL_A_realistic_fortune_teller_hovering_over_2.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/Leonardo_Diffusion_XL_A_realistic_fortune_teller_hovering_over_2.jpg
 excerpt: "W25 - Arctic skies cluttered with satellite streaks, mystery pulses from dead NASA tech, and Fermat's Last Theorem gets a revolution? Welcome to Token Wisdom's 113th edition—where cosmic chaos meets tech's twilight zone. Sanity optional, humor mandatory!"
-url: https://tokenwisdom.ghost.io/worthafortune/113th-edition-pearls-of-wisdom-w25/
+url: https://ghost-production-198e.up.railway.app/113th-edition-pearls-of-wisdom-w25/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 113th Edition 🔮 Pearls of Wisdom ⑊ W25

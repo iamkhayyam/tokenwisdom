@@ -1,14 +1,14 @@
 ---
 title: "The Grand Delusion: Why Our Models of Reality Are Fundamentally Incomplete"
 slug: the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete
-id: 682a01fd7054e000010513f0
+id: 6a4816fb7d31280001f4faad
 published_at: 2025-05-18T11:29:20.000-07:00
 updated_at: 2025-05-18T11:29:20.000-07:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/05/a-sophisticated-new-yorker-cover-illustr_hcGtfCJTQzi9Te2_gX6tOA_LJq6A1nsTmCsgvPPQFE6qA.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/a-sophisticated-new-yorker-cover-illustr_hcGtfCJTQzi9Te2_gX6tOA_LJq6A1nsTmCsgvPPQFE6qA.png
 excerpt: "W20 - Think you've got reality figured out? Think again, smartypants. From quantum quandaries to AI's identity crisis, we're all just blind bats in a cosmic cave. Dive into the hilarious hubris of human knowledge, where certainty is the ultimate delusion. Warning: May cause existential giggles."
-url: https://tokenwisdom.ghost.io/the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete/
+url: https://ghost-production-198e.up.railway.app/the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: education
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Grand Delusion: Why Our Models of Reality Are Fundamentally Incomplete

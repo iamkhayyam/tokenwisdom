@@ -1,14 +1,14 @@
 ---
 title: "Innovations and Challenges in WBAN for Healthcare"
 slug: innovations-and-challenges-in-wban-for-healthcare
-id: 65de6867d11d04000135b0c5
+id: 6a4816fb7d31280001f4fa28
 published_at: 2024-01-19T15:45:00.000-08:00
 updated_at: 2025-01-01T03:11:35.000-08:00
 featured: False
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/5ac43194-9377-4ea0-8863-ac55607d0f37.webp
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/5ac43194-9377-4ea0-8863-ac55607d0f37.webp
 excerpt: "W02 - These networks of wearable or implantable devices that communicate wirelessly have set the stage for a seismic shift: a future where proactive and personalized medical interventions become the standard, not the exception. "
-url: https://tokenwisdom.ghost.io/innovations-and-challenges-in-wban-for-healthcare/
+url: https://ghost-production-198e.up.railway.app/innovations-and-challenges-in-wban-for-healthcare/
 tags:
   - name: Human Body Communication
     slug: human-body-communication
@@ -30,9 +30,11 @@ tags:
     slug: innovation
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Innovations and Challenges in WBAN for Healthcare

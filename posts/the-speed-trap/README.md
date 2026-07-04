@@ -1,14 +1,14 @@
 ---
 title: "The Speed Trap"
 slug: the-speed-trap
-id: 693d2a92adf4ac0001a79109
+id: 6a4816fb7d31280001f4faeb
 published_at: 2025-12-11T01:33:00.000-08:00
 updated_at: 2025-12-21T14:50:46.000-08:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/title-the-speed-trap-visual-elements-a-t_Zb2Os0TcS-uhLCCIMWjiMg_dvD8B0MDSe2HXt0MRznVNA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/title-the-speed-trap-visual-elements-a-t_Zb2Os0TcS-uhLCCIMWjiMg_dvD8B0MDSe2HXt0MRznVNA.jpeg
 excerpt: "W50 - They labeled it ADHD. But what if your rapid-fire mind isn't broken—just faster? Here's how the medical system mistakes cognitive speed for disorder, and the unsettling reason they need you to believe you're broken."
-url: https://tokenwisdom.ghost.io/the-speed-trap/
+url: https://ghost-production-198e.up.railway.app/the-speed-trap/
 tags:
   - name: Neuroscience
     slug: neuroscience
@@ -30,9 +30,13 @@ tags:
     slug: opinionated-editorials
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Speed Trap

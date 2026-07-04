@@ -1,14 +1,14 @@
 ---
 title: "The Luddite's Last Stand"
 slug: the-luddites-last-stand
-id: 68d0d05cc03c2700012d9a3e
+id: 6a4816fb7d31280001f4facf
 published_at: 2025-09-11T21:52:00.000-07:00
 updated_at: 2025-09-21T22:09:18.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/a-new-yorker-style-cover-illustration-de_AvGfN39cTVuan3-Pas7V-w_AKIra1wVQx278Z0TOWbFcg.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/a-new-yorker-style-cover-illustration-de_AvGfN39cTVuan3-Pas7V-w_AKIra1wVQx278Z0TOWbFcg.jpeg
 excerpt: "W37 - Today's Luddites aren't smashing machines—they're teachers demanding longhand math and surgeons questioning AI diagnoses. While we debate ethics, our judgment muscles atrophy. The real question: can we preserve human agency before we forget we had it?"
-url: https://tokenwisdom.ghost.io/the-luddites-last-stand/
+url: https://ghost-production-198e.up.railway.app/the-luddites-last-stand/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: strategic
   - name: Risk \ Reward
     slug: risk-reward
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Luddite's Last Stand

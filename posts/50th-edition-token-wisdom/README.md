@@ -1,20 +1,22 @@
 ---
 title: "50th Edition 🔮 Pearls of Wisdom ⑊ W13"
 slug: 50th-edition-token-wisdom
-id: 66131f2301e9e40001950ff9
+id: 6a4816fb7d31280001f4fa47
 published_at: 2024-04-09T10:23:53.000-07:00
 updated_at: 2025-01-12T11:48:49.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/img-uU0NM1A3HLjAqMK3M6ed5.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/img-uU0NM1A3HLjAqMK3M6ed5.jpeg
 excerpt: "Discover Google's shift towards privacy, the immersive storytelling of Storiaverse, advanced AI in sports, ethical AI dilemmas, and Disney's animatronic innovations in the latest Token Wisdom."
-url: https://tokenwisdom.ghost.io/worthafortune/50th-edition-token-wisdom/
+url: https://ghost-production-198e.up.railway.app/50th-edition-token-wisdom/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 50th Edition 🔮 Pearls of Wisdom ⑊ W13

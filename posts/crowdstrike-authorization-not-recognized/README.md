@@ -1,14 +1,14 @@
 ---
 title: "Crowdstrike: Authorization Not Recognized"
 slug: crowdstrike-authorization-not-recognized
-id: 66efd70175497b0001948d60
+id: 6a4816fb7d31280001f4fa60
 published_at: 2024-05-10T03:05:00.000-07:00
 updated_at: 2024-11-09T03:19:55.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/img-YBH7cMkMa39SmgILhyHrI.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/img-YBH7cMkMa39SmgILhyHrI.jpeg
 excerpt: "W19 - In the quantum-AI labyrinth, firewalls crumble like ancient ruins. Yet authorization remains the Gordian knot tying our digital selves to cyberspace. As we race towards SSI and graph-powered identity, remember: even in zero-trust, someone still holds the keys."
-url: https://tokenwisdom.ghost.io/crowdstrike-authorization-not-recognized/
+url: https://ghost-production-198e.up.railway.app/crowdstrike-authorization-not-recognized/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,11 @@ tags:
     slug: challenges
   - name: A Story to Tell
     slug: storytelling
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Crowdstrike: Authorization Not Recognized

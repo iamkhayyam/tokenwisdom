@@ -1,20 +1,22 @@
 ---
 title: "124th Edition 🔮 Token Wisdom \\ Week 36"
 slug: 124th-edition-token-wisdom-week-36
-id: 68c86400da7f68000106e9bd
+id: 6a4816fb7d31280001f4face
 published_at: 2025-09-07T12:23:00.000-07:00
 updated_at: 2025-09-21T22:02:32.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/img-gocZccFc500b5Fo7K9wfQ.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/img-gocZccFc500b5Fo7K9wfQ.png
 excerpt: "From groundbreaking space discoveries to quantum computing breakthroughs, this week's Token Wisdom explores the frontiers of science and technology. Join us as we delve into the worlds of AI, education, and cutting-edge research that are shaping our future."
-url: https://tokenwisdom.ghost.io/worthafortune/124th-edition-token-wisdom-week-36/
+url: https://ghost-production-198e.up.railway.app/124th-edition-token-wisdom-week-36/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 124th Edition 🔮 Token Wisdom \\ Week 36

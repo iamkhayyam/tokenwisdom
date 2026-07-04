@@ -1,14 +1,14 @@
 ---
 title: "From Likes to Leaves—When Trust Became the Ultimate Unfriend"
 slug: from-likes-to-leaves-when-trust-became-the-ultimate-unfriend
-id: 678032bf346c9d0001d90383
+id: 6a4816fb7d31280001f4fa89
 published_at: 2025-01-11T06:42:50.000-08:00
 updated_at: 2025-04-21T13:52:16.000-07:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/img-MRRadOlNfC8Z1jrcHtlEX.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/img-MRRadOlNfC8Z1jrcHtlEX.png
 excerpt: "W02 - Meta's fact-checking fiasco triggers digital exodus, shattering platform theory. As users flee en masse, we witness the first \"collective flight response\" in social media history. Is trust the ultimate currency in our digital social contract?"
-url: https://tokenwisdom.ghost.io/from-likes-to-leaves-when-trust-became-the-ultimate-unfriend/
+url: https://ghost-production-198e.up.railway.app/from-likes-to-leaves-when-trust-became-the-ultimate-unfriend/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: ethical
   - name: Risk \ Reward
     slug: risk-reward
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # From Likes to Leaves—When Trust Became the Ultimate Unfriend

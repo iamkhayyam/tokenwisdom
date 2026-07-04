@@ -1,14 +1,14 @@
 ---
 title: "The Loyalty Revolution: From Punch Cards to Predictive Analytics"
 slug: the-loyalty-revolution-from-punch-cards-to-predictive-analytics
-id: 6726aebfe558fc000153557d
+id: 6a4816fb7d31280001f4fa71
 published_at: 2024-07-25T16:10:00.000-07:00
 updated_at: 2024-11-02T19:41:47.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/W29---The-Loyalty-Revolution---From-Punch-Cards-to-Predictive-Analytics.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/W29---The-Loyalty-Revolution---From-Punch-Cards-to-Predictive-Analytics.jpeg
 excerpt: "W29 - Welcome to the Loyalty Revolution: where coffee shops predict orders and AI replaces punch cards. Your shopping habits are now guarded like state secrets, and brands play 4D chess with your preferences. It's a brave new world of loyalty – romantic or creepy? You decide."
-url: https://tokenwisdom.ghost.io/the-loyalty-revolution-from-punch-cards-to-predictive-analytics/
+url: https://ghost-production-198e.up.railway.app/the-loyalty-revolution-from-punch-cards-to-predictive-analytics/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -34,9 +34,11 @@ tags:
     slug: technology
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Loyalty Revolution: From Punch Cards to Predictive Analytics

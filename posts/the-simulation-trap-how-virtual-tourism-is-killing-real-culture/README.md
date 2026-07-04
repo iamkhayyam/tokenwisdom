@@ -1,14 +1,14 @@
 ---
 title: "The Simulation Trap: How Virtual Tourism Is Killing Real Culture"
 slug: the-simulation-trap-how-virtual-tourism-is-killing-real-culture
-id: 673c00af2031060001730f74
+id: 6a4816fb7d31280001f4fa77
 published_at: 2024-08-29T19:15:00.000-07:00
 updated_at: 2024-11-23T13:18:38.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/img-5YLqIxkAejM178Zgv20OK.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/img-5YLqIxkAejM178Zgv20OK.jpeg
 excerpt: "W34 - In a world where digital tourists \"see\" the Sistine ever being there, we're teetering dangerously between access and artificiality. Are we democratizing travel or selling our soul to virtual reflections, leaving culture as mere pixels on a screen? Experience might just become a luxury."
-url: https://tokenwisdom.ghost.io/the-simulation-trap-how-virtual-tourism-is-killing-real-culture/
+url: https://ghost-production-198e.up.railway.app/the-simulation-trap-how-virtual-tourism-is-killing-real-culture/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: human-computer-interaction
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Simulation Trap: How Virtual Tourism Is Killing Real Culture

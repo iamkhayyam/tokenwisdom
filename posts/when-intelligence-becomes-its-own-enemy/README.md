@@ -1,14 +1,14 @@
 ---
 title: "When Intelligence Becomes Its Own Enemy"
 slug: when-intelligence-becomes-its-own-enemy
-id: 68548aa3550c8300014ca1bf
+id: 6a4816fb7d31280001f4fab7
 published_at: 2025-06-19T18:37:06.000-07:00
 updated_at: 2025-06-25T17:57:54.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/based-on-your-thought-provoking-essay-he_FT6gk7siS3eNARaBclKo8w_saeO4INSQfK_tSd_EG3I7g-1.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/based-on-your-thought-provoking-essay-he_FT6gk7siS3eNARaBclKo8w_saeO4INSQfK_tSd_EG3I7g-1.png
 excerpt: "W25 - You know that hollow feeling after three hours of phone scrolling? Eyes burning, neck aching, weirdly anxious about crises you can't solve but can't remember learning anything useful? That's your intelligence being strip-mined in real time."
-url: https://tokenwisdom.ghost.io/when-intelligence-becomes-its-own-enemy/
+url: https://ghost-production-198e.up.railway.app/when-intelligence-becomes-its-own-enemy/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: grifters
   - name: Brain Health
     slug: brain-health
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # When Intelligence Becomes Its Own Enemy

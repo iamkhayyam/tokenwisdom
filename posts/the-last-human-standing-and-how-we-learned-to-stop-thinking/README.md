@@ -1,14 +1,14 @@
 ---
 title: "The Last Human Standing and How We Learned to Stop Thinking"
 slug: the-last-human-standing-and-how-we-learned-to-stop-thinking
-id: 684a950265e4ce000100570b
+id: 6a4816fb7d31280001f4fab3
 published_at: 2025-06-05T12:51:00.000-07:00
 updated_at: 2025-06-19T15:09:19.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/_create-a-cover-illustration-in-the-iconi_bT8cdJjpSeGX9Sq0Zt6ifg_GMcPKmEqTLWszSSyq_67kw.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/_create-a-cover-illustration-in-the-iconi_bT8cdJjpSeGX9Sq0Zt6ifg_GMcPKmEqTLWszSSyq_67kw.png
 excerpt: "W23 -Welcome to the Great Human Cognitive Surrender where we trade thoughts for convenience, choices for efficiency, and essence for UI. AI isn't just rising—it's feasting on our discarded autonomy. We, the last Homo sapiens, gleefully serve ourselves as the main course. Nom! Nom! Nom!"
-url: https://tokenwisdom.ghost.io/the-last-human-standing-and-how-we-learned-to-stop-thinking/
+url: https://ghost-production-198e.up.railway.app/the-last-human-standing-and-how-we-learned-to-stop-thinking/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: personal-growth
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Last Human Standing and How We Learned to Stop Thinking

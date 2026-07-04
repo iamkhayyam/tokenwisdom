@@ -1,0 +1,91 @@
+{
+  "id": "6a48248c7d31280001f51073",
+  "uuid": "40168f1e-2fa4-439c-abc0-08d92081a665",
+  "title": "W10: 47th Edition \\ Side A🎉",
+  "slug": "w10-thenewestlatest-46-2",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/03/img-Axe4TQ9SfSU8ye6ayMZPB.jpeg",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2026-07-03T14:07:24.000-07:00",
+  "updated_at": "2026-07-03T14:07:24.000-07:00",
+  "published_at": "2024-03-10T11:58:00.000-07:00",
+  "custom_excerpt": "Explore record-breaking fusion tech, the brain's emotion code, AI's selective forgetting, VR's social play, modern warfare's tech shift, archaeology via particle physics, Sony's immersive music, App Store controversies, endangered research papers, and AI's legal hurdles.",
+  "canonical_url": null,
+  "comment_id": "6a48248c7d31280001f51073",
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "description": "Hand-picked and carefully curated content in a consumed collection of noteworthy articles that may shed some light on the future.",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/download--1-.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/newestlatest/"
+    }
+  ],
+  "url": "https://ghost-production-198e.up.railway.app/w10-thenewestlatest-46-2/",
+  "excerpt": "",
+  "reading_time": 2,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
+    }
+  ],
+  "local_feature_image": "w10-thenewestlatest-46-2_feature__img-Axe4TQ9SfSU8ye6ayMZPB.jpeg"
+}

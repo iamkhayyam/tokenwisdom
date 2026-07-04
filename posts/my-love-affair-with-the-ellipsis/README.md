@@ -1,13 +1,13 @@
 ---
 title: "My Love Affair with Ellipsis…"
 slug: my-love-affair-with-the-ellipsis
-id: 65ab51bb4cf93c000184b743
+id: 6a4816fb7d31280001f4fa05
 published_at: 2013-05-07T19:03:57.000-07:00
 updated_at: 2024-01-20T02:19:43.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0_S9Dn7Y2uHLdzhO8v.webp
-url: https://tokenwisdom.ghost.io/my-love-affair-with-the-ellipsis/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0_S9Dn7Y2uHLdzhO8v.webp
+url: https://ghost-production-198e.up.railway.app/my-love-affair-with-the-ellipsis/
 tags:
   - name: Personal Growth
     slug: personal-growth
@@ -17,9 +17,11 @@ tags:
     slug: unsolicited-advice
   - name: Philosophical
     slug: philosophy
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # My Love Affair with Ellipsis…

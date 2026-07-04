@@ -1,14 +1,14 @@
 ---
 title: "The Power of Questioning: Revolutionizing Learning in the AI Era"
 slug: the-power-of-questioning-revolutionizing-learning-in-the-ai-era
-id: 67424d2d7cd669000121393e
+id: 6a4816fb7d31280001f4fa7b
 published_at: 2024-09-26T14:05:00.000-07:00
 updated_at: 2024-11-23T14:56:52.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/Leonardo_Phoenix_A_surreal_digital_illustration_merging_ancien_1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/Leonardo_Phoenix_A_surreal_digital_illustration_merging_ancien_1.jpg
 excerpt: "W38 - Socrates meets Siri: Dive into a world where ancient wisdom collides with AI, transforming your daily jog into a quantum physics lesson. Discover how questioning, AI, and audio learning are revolutionizing education—and possibly human potential itself."
-url: https://tokenwisdom.ghost.io/the-power-of-questioning-revolutionizing-learning-in-the-ai-era/
+url: https://ghost-production-198e.up.railway.app/the-power-of-questioning-revolutionizing-learning-in-the-ai-era/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -36,9 +36,11 @@ tags:
     slug: technology
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Power of Questioning: Revolutionizing Learning in the AI Era

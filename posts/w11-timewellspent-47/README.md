@@ -1,20 +1,22 @@
 ---
 title: "W11: 48th Edition \ Side B 📺"
 slug: w11-timewellspent-47
-id: 65f734aeed6d88000174d29b
+id: 6a4816fb7d31280001f4fa36
 published_at: 2024-03-17T23:59:00.000-07:00
 updated_at: 2024-10-11T00:39:29.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/tv-man-titan.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/tv-man-titan.gif
 excerpt: "Explore the sway of culture on emotions, game theory's role in cooperation, and Central Park's storied past. Discover tech's seamless fusion with daily life and future innovations transforming our world."
-url: https://tokenwisdom.ghost.io/timewellspent/w11-timewellspent-47/
+url: https://ghost-production-198e.up.railway.app/w11-timewellspent-47/
 tags:
   - name: 📺 Time Well Spent
     slug: timewellspent
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W11: 48th Edition \ Side B 📺

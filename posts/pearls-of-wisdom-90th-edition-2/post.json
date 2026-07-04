@@ -1,0 +1,91 @@
+{
+  "id": "6a4824697d31280001f50d7d",
+  "uuid": "787c1577-6492-408d-8bae-a3c9b1aba95c",
+  "title": "90th Edition 🔮 Pearls of Wisdom \\ W02",
+  "slug": "pearls-of-wisdom-90th-edition-2",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2025/01/img-cgxsGl3ZP3UrDgmv7LDCD.jpeg",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2026-07-03T14:06:49.000-07:00",
+  "updated_at": "2026-07-03T14:06:49.000-07:00",
+  "published_at": "2025-01-12T05:33:59.000-08:00",
+  "custom_excerpt": "W02 - From AI's $56B funding boom to secret weapons and Cuban Netflix hacks, our 90th edition is a rollercoaster of tech, business, and intrigue. Buckle up for a mind-bending ride through the cutting edge of innovation and controversy!",
+  "canonical_url": null,
+  "comment_id": "6a4824697d31280001f50d7d",
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9d2",
+      "name": "✨ Pearls of Wisdom",
+      "slug": "worthafortune",
+      "description": "A finely curated collection of the wonderful web we weave with a weekly roundup of bits and pieces from the far corners of the super information highway ✨",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/05/tumblr_lk1bjustCg1qzznnqo1_500-2.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/worthafortune/"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "url": "https://ghost-production-198e.up.railway.app/pearls-of-wisdom-90th-edition-2/",
+  "excerpt": "",
+  "reading_time": 2,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "6a4816f97d31280001f4f9d2",
+      "name": "✨ Pearls of Wisdom",
+      "slug": "worthafortune",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
+    }
+  ],
+  "local_feature_image": "pearls-of-wisdom-90th-edition-2_feature__img-cgxsGl3ZP3UrDgmv7LDCD.jpeg"
+}

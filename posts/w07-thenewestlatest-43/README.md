@@ -1,20 +1,22 @@
 ---
 title: "W07: 43rd Edition \ Side A🎉"
 slug: w07-thenewestlatest-43
-id: 65d3851395b6a90001731210
+id: 6a4816fb7d31280001f4fa1f
 published_at: 2024-02-18T12:48:00.000-08:00
 updated_at: 2024-05-01T00:03:00.000-07:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/img-f6zzrBRDQlj7qDB7AOU7s.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/img-f6zzrBRDQlj7qDB7AOU7s.png
 excerpt: "Uncloaking the Future: AI Apocalypse, American Heartland Theme Park, IBC Revolution, and Python Mastery - Must-Read Insights!"
-url: https://tokenwisdom.ghost.io/newestlatest/w07-thenewestlatest-43/
+url: https://ghost-production-198e.up.railway.app/w07-thenewestlatest-43/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W07: 43rd Edition \ Side A🎉

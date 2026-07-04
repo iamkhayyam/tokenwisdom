@@ -1,0 +1,91 @@
+{
+  "id": "6a4824877d31280001f51026",
+  "uuid": "cfc671d2-42e3-4025-8500-acff5c20874c",
+  "title": "W12: 49th Edition \\ Side A🎉",
+  "slug": "w12-thenewestlatest-48-2",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://images.unsplash.com/photo-1622042002773-a6f2913a6e84?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDF8fHJldm9sdXRpb25pemluZyUyMHJlYWxpdHl8ZW58MHx8fHwxNzExMzYxNDQzfDA&ixlib=rb-4.0.3&q=80&w=2000",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2026-07-03T14:07:19.000-07:00",
+  "updated_at": "2026-07-03T14:07:19.000-07:00",
+  "published_at": "2024-03-24T11:06:00.000-07:00",
+  "custom_excerpt": "Dive into a future where Netflix enters retail, AI reshapes gaming, and biometrics unlock security. Witness tech's next leap with ENS, super fans, and the U.S. Cyber Trust Mark.",
+  "canonical_url": null,
+  "comment_id": "6a4824877d31280001f51026",
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "description": "Hand-picked and carefully curated content in a consumed collection of noteworthy articles that may shed some light on the future.",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/download--1-.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/newestlatest/"
+    }
+  ],
+  "url": "https://ghost-production-198e.up.railway.app/w12-thenewestlatest-48-2/",
+  "excerpt": "",
+  "reading_time": 2,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
+    }
+  ],
+  "local_feature_image": "w12-thenewestlatest-48-2_feature__photo-1622042002773-a6f2913a6e84"
+}

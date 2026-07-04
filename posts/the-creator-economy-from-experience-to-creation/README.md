@@ -1,14 +1,14 @@
 ---
 title: "The Creator Economy: From Experience to Creation"
 slug: the-creator-economy-from-experience-to-creation
-id: 670aafea47b6c200019d051a
+id: 6a4816fb7d31280001f4fa6c
 published_at: 2024-06-20T10:32:00.000-07:00
 updated_at: 2024-10-19T11:02:32.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/img-PA8zgOSgZm64i5YHUgBEa.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/img-PA8zgOSgZm64i5YHUgBEa.jpeg
 excerpt: "W25 - From latte art to livestreams, the Creator Economy has turned baristas into brands. But as we trade experiences for followers, are we brewing a potent blend of opportunity and anxiety? Grab your favorite mug and let's espresso ourselves on this caffeinated journey through digital creation."
-url: https://tokenwisdom.ghost.io/the-creator-economy-from-experience-to-creation/
+url: https://ghost-production-198e.up.railway.app/the-creator-economy-from-experience-to-creation/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: strategic
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Creator Economy: From Experience to Creation

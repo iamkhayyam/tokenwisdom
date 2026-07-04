@@ -1,14 +1,14 @@
 ---
 title: "Ultra-Wideband (UWB) Technology: Revolutionizing the Internet of Things"
 slug: ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things
-id: 674197037cd6690001213886
+id: 6a4816fb7d31280001f4fa79
 published_at: 2024-09-12T02:37:00.000-07:00
 updated_at: 2024-11-23T14:18:17.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/img-0SCudwhFg25R3DtmiZYLP.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/img-0SCudwhFg25R3DtmiZYLP.jpeg
 excerpt: "W36 - Picture a world where your car greets you, your home adjusts on cue, and your phone leads you through a crowded room. That's not magic – it's Ultra-Wideband (UWB). Let's unravel how this precise, powerful tech is redefining intimacy with our devices and revolutionizing the Internet of Things."
-url: https://tokenwisdom.ghost.io/ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things/
+url: https://ghost-production-198e.up.railway.app/ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,11 @@ tags:
     slug: technology
   - name: Internet of Things (IoT)
     slug: internet-of-things-iot
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Ultra-Wideband (UWB) Technology: Revolutionizing the Internet of Things

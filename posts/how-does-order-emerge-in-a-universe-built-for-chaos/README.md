@@ -1,15 +1,15 @@
 ---
 title: "How Does Order Emerge in a Universe Built for Chaos?"
 slug: how-does-order-emerge-in-a-universe-built-for-chaos
-id: 6987fd592424b80001899146
+id: 6a4816fb7d31280001f4faff
 published_at: 2026-02-05T23:02:00.000-08:00
 updated_at: 2026-03-05T20:36:44.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/a-timeline-illustration-in-the-distincti_lpMcj8crRUOPuk5uT_dX0A_ktUwOOHYRzWwVfwka7Lasw_sd.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/a-timeline-illustration-in-the-distincti_lpMcj8crRUOPuk5uT_dX0A_ktUwOOHYRzWwVfwka7Lasw_sd.png
 excerpt: "W06 - The universe writes in entropy, but you're an improbable paragraph. Physics can explain why everything falls apart but not why complex things like you exist in the first place. The universe's greatest paradox awaits.
 "
-url: https://tokenwisdom.ghost.io/how-does-order-emerge-in-a-universe-built-for-chaos/
+url: https://ghost-production-198e.up.railway.app/how-does-order-emerge-in-a-universe-built-for-chaos/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -31,9 +31,11 @@ tags:
     slug: unsolicited-advice
   - name: In Flow State
     slug: flow
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # How Does Order Emerge in a Universe Built for Chaos?

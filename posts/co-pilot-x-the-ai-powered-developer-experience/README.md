@@ -1,13 +1,13 @@
 ---
 title: "Co-Pilot X: The AI-Powered Developer Experience"
 slug: co-pilot-x-the-ai-powered-developer-experience
-id: 65a9f1e5ebf14f0001f3bfa9
+id: 6a4816fb7d31280001f4f9f5
 published_at: 2023-04-05T20:56:00.000-07:00
 updated_at: 2024-01-21T01:53:20.000-08:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/Untitled_design_-_2023-03-23T130633.236.jpeg
-url: https://tokenwisdom.ghost.io/co-pilot-x-the-ai-powered-developer-experience/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/Untitled_design_-_2023-03-23T130633.236.jpeg
+url: https://ghost-production-198e.up.railway.app/co-pilot-x-the-ai-powered-developer-experience/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -17,9 +17,11 @@ tags:
     slug: code-no-code
   - name: Github
     slug: github
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Co-Pilot X: The AI-Powered Developer Experience

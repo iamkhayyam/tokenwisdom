@@ -1,20 +1,22 @@
 ---
 title: "48th Edition 🔮 Pearls of Wisdom ⑊ W11"
 slug: 48th-edition-token-wisdom
-id: 6601456a19bcd2000130a9e6
+id: 6a4816fb7d31280001f4fa3e
 published_at: 2024-03-25T17:29:29.000-07:00
 updated_at: 2025-01-12T11:49:29.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-PaaGFEpl5SrhxBcvfDQS3-GEN.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-PaaGFEpl5SrhxBcvfDQS3-GEN.png
 excerpt: "Explore the future with Token Wisdom—where Netflix melds retail and streaming, AI redefines gaming, and biometrics meet innovation. Uncover insights, challenges, and the wisdom within tech's evolution. Join the adventure as we weave technology's unfolding narrative."
-url: https://tokenwisdom.ghost.io/worthafortune/48th-edition-token-wisdom/
+url: https://ghost-production-198e.up.railway.app/48th-edition-token-wisdom/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 48th Edition 🔮 Pearls of Wisdom ⑊ W11

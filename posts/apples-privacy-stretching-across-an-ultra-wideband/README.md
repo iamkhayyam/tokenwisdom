@@ -1,13 +1,13 @@
 ---
 title: "Apple’s Privacy: Stretching Across An Ultra-Wideband"
 slug: apples-privacy-stretching-across-an-ultra-wideband
-id: 65ab51bb4cf93c000184b72d
+id: 6a4816fb7d31280001f4fa00
 published_at: 2023-12-01T13:03:06.000-08:00
 updated_at: 2025-12-18T10:26:38.000-08:00
 featured: False
 reading_time: 16 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/1-ltfqsao8ovmjdw6agkh7sg.png
-url: https://tokenwisdom.ghost.io/apples-privacy-stretching-across-an-ultra-wideband/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/1-ltfqsao8ovmjdw6agkh7sg.png
+url: https://ghost-production-198e.up.railway.app/apples-privacy-stretching-across-an-ultra-wideband/
 tags:
   - name: Emerging Tech
     slug: emerging-technology
@@ -29,9 +29,11 @@ tags:
     slug: big-tech
   - name: Privacy
     slug: privacy
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Apple’s Privacy: Stretching Across An Ultra-Wideband

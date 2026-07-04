@@ -1,14 +1,14 @@
 ---
 title: "The Dangerous Delusion of Digital Spatial Intelligence: Silicon Valley's Trillion-Dollar Mistake"
 slug: the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake
-id: 67267ae3e558fc0001535482
+id: 6a4816fb7d31280001f4fa70
 published_at: 2024-07-18T14:38:00.000-07:00
 updated_at: 2024-11-02T19:44:36.000-07:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/Leonardo_Phoenix_A_surreal_digital_illustration_depicting_a_hu_1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/Leonardo_Phoenix_A_surreal_digital_illustration_depicting_a_hu_1.jpg
 excerpt: "W28 - Silicon Valley's trillion-dollar spatial computing gamble rests on a dangerous delusion: digitally replicating human spatial intelligence. This fallacy risks billions and decades of progress. We're not just chasing a mirage; we're driving the future of human-computer interaction off a cliff."
-url: https://tokenwisdom.ghost.io/the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake/
+url: https://ghost-production-198e.up.railway.app/the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -40,9 +40,11 @@ tags:
     slug: strategic
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Dangerous Delusion of Digital Spatial Intelligence: Silicon Valley's Trillion-Dollar Mistake

@@ -1,21 +1,23 @@
 ---
 title: "109th Edition 🔮 Pearls of Wisdom ⑊ W21"
 slug: 109th-edition-pearls-of-wisdom-w21
-id: 683b9255ec2e7e0001fee8f3
+id: 6a4816fb7d31280001f4fab0
 published_at: 2025-05-26T17:24:00.000-07:00
 updated_at: 2025-05-31T17:25:03.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/06/Leonardo_Phoenix_09_Create_a_majestic_crystal_ball_with_intric_1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/06/Leonardo_Phoenix_09_Create_a_majestic_crystal_ball_with_intric_1.jpg
 excerpt: "W21 - AI's productivity paradox, corporate drama, and robotic centipedes in farming? Welcome to Token Wisdom's 109th edition, where we navigate the digital frontier with a wink. Buckle up for a journey through tech's wonderland – sanity optional, humor guaranteed!
 "
-url: https://tokenwisdom.ghost.io/worthafortune/109th-edition-pearls-of-wisdom-w21/
+url: https://ghost-production-198e.up.railway.app/109th-edition-pearls-of-wisdom-w21/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 109th Edition 🔮 Pearls of Wisdom ⑊ W21

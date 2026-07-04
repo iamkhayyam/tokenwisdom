@@ -1,14 +1,14 @@
 ---
 title: "\"You're Not Special\" - Human Irrelevance in the Age of Exponential AI"
 slug: youre-not-special-human-irrelevance-in-the-age-of-exponential-ai
-id: 681332de7c9de4000138af6b
+id: 6a4816fb7d31280001f4faa9
 published_at: 2025-05-01T07:48:16.000-07:00
 updated_at: 2025-05-18T09:58:30.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/05/a-digital-painting-of-a-solitary-figure-_Hl_YG_R8Rw27ehPhGFcnGQ_MIlFpt4uQcWCNx8-8mhJLQ.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/a-digital-painting-of-a-solitary-figure-_Hl_YG_R8Rw27ehPhGFcnGQ_MIlFpt4uQcWCNx8-8mhJLQ.png
 excerpt: "W18 -  That witty tweet you crafted? While you hit 'post', AI filled a library with content. Your curated Instagram feed? A mass-produced illusion. Welcome to digital irrelevance, where your voice is a whisper in synthetic noise."
-url: https://tokenwisdom.ghost.io/youre-not-special-human-irrelevance-in-the-age-of-exponential-ai/
+url: https://ghost-production-198e.up.railway.app/youre-not-special-human-irrelevance-in-the-age-of-exponential-ai/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: future-of-work
   - name: Entrepreneurial
     slug: entrepreneurship
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # "You're Not Special" - Human Irrelevance in the Age of Exponential AI

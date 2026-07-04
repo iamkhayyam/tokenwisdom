@@ -1,21 +1,23 @@
 ---
 title: "108th Edition 🔮 Pearls of Wisdom ⑊ W20"
 slug: 108th-edition-pearls-of-wisdom-w20
-id: 682a2a3f7054e000010514bd
+id: 6a4816fb7d31280001f4faae
 published_at: 2025-05-19T07:52:48.000-07:00
 updated_at: 2025-05-19T07:52:47.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/05/img-XkvybdHTSvyXHqb5BGSal.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/img-XkvybdHTSvyXHqb5BGSal.png
 excerpt: "AI integration exposes organizational challenges while unlocking ancient scrolls through machine learning, marking 2025's accelerating tech transformation. Google's subscription milestone and Hollywood's evolving landscape demonstrate how AI is rapidly reshaping traditional industries.
 "
-url: https://tokenwisdom.ghost.io/worthafortune/108th-edition-pearls-of-wisdom-w20/
+url: https://ghost-production-198e.up.railway.app/108th-edition-pearls-of-wisdom-w20/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 108th Edition 🔮 Pearls of Wisdom ⑊ W20

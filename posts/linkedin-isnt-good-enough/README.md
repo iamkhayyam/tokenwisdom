@@ -1,25 +1,25 @@
 ---
 title: "LinkedIn, Isn’t Good Enough"
 slug: linkedin-isnt-good-enough
-id: 65ab51bb4cf93c000184b73a
+id: 6a4816fb7d31280001f4fa04
 published_at: 2014-05-27T15:55:07.000-07:00
 updated_at: 2024-05-01T00:33:18.000-07:00
 featured: True
 reading_time: 5 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/1-rgsszdcnjfdmywkk-xbf8a.gif
-url: https://tokenwisdom.ghost.io/featured/linkedin-isnt-good-enough/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/1-rgsszdcnjfdmywkk-xbf8a.gif
+url: https://ghost-production-198e.up.railway.app/linkedin-isnt-good-enough/
 tags:
   - name: LinkedIn \ Pros
     slug: linkedin
   - name: #unlisted
     slug: hash-unlisted
-  - name: Resume \ CV
-    slug: resume
   - name: Creative \ Design
     slug: creative-design
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # LinkedIn, Isn’t Good Enough

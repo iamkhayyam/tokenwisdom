@@ -1,14 +1,14 @@
 ---
 title: "The 10% Delusion"
 slug: the-10-delusion
-id: 690410a91bc34d000188c823
+id: 6a4816fb7d31280001f4fade
 published_at: 2025-10-31T14:43:00.000-07:00
 updated_at: 2025-12-21T14:52:32.000-08:00
 featured: False
 reading_time: 26 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/11/freepik__a-sophisticated-new-yorkerstyle-illustration-showi__33715.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/11/freepik__a-sophisticated-new-yorkerstyle-illustration-showi__33715.png
 excerpt: "W44 - Silicon Valley built a trillion-dollar industry on a paper called \"Attention Is All You Need.\" Problem: we misread it. We kept the math, ditched the meaning, and declared victory over intelligence itself. Now even AI's top researchers admit we're building \"ghosts,\" not minds."
-url: https://tokenwisdom.ghost.io/the-10-delusion/
+url: https://ghost-production-198e.up.railway.app/the-10-delusion/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: risk-reward
   - name: Philosophical
     slug: philosophy
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The 10% Delusion

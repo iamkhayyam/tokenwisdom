@@ -1,13 +1,13 @@
 ---
 title: "Art & Technology; The Longest Romance Going and What it Means in the Era of AI"
 slug: art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai
-id: 65a9f8c5ebf14f0001f3c012
+id: 6a4816fb7d31280001f4f9f8
 published_at: 2023-04-26T21:31:00.000-07:00
 updated_at: 2024-01-21T14:05:09.000-08:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/576430a7-f7fc-4dd0-b488-54a32021f665.jpeg
-url: https://tokenwisdom.ghost.io/art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/576430a7-f7fc-4dd0-b488-54a32021f665.jpeg
+url: https://ghost-production-198e.up.railway.app/art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai/
 tags:
   - name: Creative \ Design
     slug: creative-design
@@ -17,9 +17,11 @@ tags:
     slug: technology
   - name: Generative AI
     slug: generative
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Art & Technology; The Longest Romance Going and What it Means in the Era of AI

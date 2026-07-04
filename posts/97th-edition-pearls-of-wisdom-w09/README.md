@@ -1,20 +1,22 @@
 ---
 title: "97th Edition 🔮 Pearls of Wisdom ⑊ W09"
 slug: 97th-edition-pearls-of-wisdom-w09
-id: 67c61ad4ab19990001aa9df6
+id: 6a4816fb7d31280001f4fa98
 published_at: 2025-03-03T13:34:46.000-08:00
 updated_at: 2025-03-03T13:39:27.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/img-VtRdBC3pd9t8xbvzh5qqs.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/img-VtRdBC3pd9t8xbvzh5qqs.jpeg
 excerpt: "W09 - Dive into a tech wonderland where holographic cameras capture reality, quantum sensors revolutionize microscopy, and AI designs chips beyond human comprehension. Brace for mind-bending innovations, cultural shifts, and the occasional quantum leap. Your weekly dose of future shock awaits!"
-url: https://tokenwisdom.ghost.io/worthafortune/97th-edition-pearls-of-wisdom-w09/
+url: https://ghost-production-198e.up.railway.app/97th-edition-pearls-of-wisdom-w09/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 97th Edition 🔮 Pearls of Wisdom ⑊ W09

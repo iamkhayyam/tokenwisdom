@@ -1,15 +1,15 @@
 ---
 title: "The Science of Subjective Value: Understanding the Architecture of Experience"
 slug: the-science-of-subjective-value-2
-id: 67575ea4a7db91000127376a
+id: 6a4816fb7d31280001f4fa83
 published_at: 2024-11-28T13:21:00.000-08:00
 updated_at: 2024-12-15T10:30:31.000-08:00
 featured: False
 reading_time: 21 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/a-surreal-and-abstract-cover-art-inspired-by-salva-ix-rXhFzSRy9wYneGccvgA-oJxRj8uSTgCnn-DW-lDJ3Q.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/a-surreal-and-abstract-cover-art-inspired-by-salva-ix-rXhFzSRy9wYneGccvgA-oJxRj8uSTgCnn-DW-lDJ3Q.jpeg
 excerpt: "W47 - Why do Red Bull's smaller, pricier, worse-tasting drinks dominate the market? Why do Disney's longer posted wait times boost satisfaction? Dive into the neural architecture of how humans actually construct value—and why traditional metrics get it wrong.
 "
-url: https://tokenwisdom.ghost.io/the-science-of-subjective-value-2/
+url: https://ghost-production-198e.up.railway.app/the-science-of-subjective-value-2/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -31,9 +31,11 @@ tags:
     slug: strategic
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Science of Subjective Value: Understanding the Architecture of Experience

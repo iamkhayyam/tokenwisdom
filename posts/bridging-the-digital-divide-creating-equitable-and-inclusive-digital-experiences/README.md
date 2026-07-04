@@ -1,14 +1,14 @@
 ---
 title: "Bridging the Digital Divide: Creating Equitable and Inclusive Digital Experiences"
 slug: bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences
-id: 6709a86647b6c200019d0394
+id: 6a4816fb7d31280001f4fa67
 published_at: 2024-05-23T15:36:00.000-07:00
 updated_at: 2024-10-11T16:01:10.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/img-hFK4pjp2kjdLWQiwnn5HX.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/img-hFK4pjp2kjdLWQiwnn5HX.jpeg
 excerpt: "W20 - In Silicon Valley's shadow, a janitor squints at their smartphone, baffled. Across town, a 10-year-old codes effortlessly. This stark contrast embodies our digital divide - no longer about access, but literacy and opportunity. Can we bridge this growing chasm?"
-url: https://tokenwisdom.ghost.io/bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences/
+url: https://ghost-production-198e.up.railway.app/bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: challenges
   - name: Automation
     slug: automation
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Bridging the Digital Divide: Creating Equitable and Inclusive Digital Experiences

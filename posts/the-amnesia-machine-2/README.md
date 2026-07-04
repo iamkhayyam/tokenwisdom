@@ -1,14 +1,14 @@
 ---
 title: "The Amnesia Machine"
 slug: the-amnesia-machine-2
-id: 694ae2748d521d0001e1735f
+id: 6a4816fb7d31280001f4faef
 published_at: 2025-12-25T10:57:02.000-08:00
 updated_at: 2025-12-25T10:57:11.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/a-minimalist-illustration-showing-a-pers_LgC-JZL0RQuNZeBMqx8G2w_A9q7GNAHTiKrpXRSXgk_QQ.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/a-minimalist-illustration-showing-a-pers_LgC-JZL0RQuNZeBMqx8G2w_A9q7GNAHTiKrpXRSXgk_QQ.png
 excerpt: "W52 - Before the internet, erasing history required burning books. Now, Silicon Valley's memory merchants have perfected something far more powerful: curated forgetting. Their algorithms don't just bury inconvenient truths—they replace them with carefully selected distractions."
-url: https://tokenwisdom.ghost.io/the-amnesia-machine-2/
+url: https://ghost-production-198e.up.railway.app/the-amnesia-machine-2/
 tags:
   - name: Big Tech
     slug: big-tech
@@ -30,9 +30,11 @@ tags:
     slug: a-closer-look
   - name: 🚨 OP-ED
     slug: opinionated-editorials
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Amnesia Machine

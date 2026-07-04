@@ -1,20 +1,22 @@
 ---
 title: "145th Edition 🔮 Token Wisdom \ Week 05"
 slug: 145th-edition-token-wisdom-week-05
-id: 6980683e32c75a000188f63a
+id: 6a4816fb7d31280001f4fafe
 published_at: 2026-02-02T10:40:50.000-08:00
 updated_at: 2026-02-02T10:40:50.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/Lucid_Origin_A_mystic_Fortune_Teller_with_an_exotic_appearance_3.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/Lucid_Origin_A_mystic_Fortune_Teller_with_an_exotic_appearance_3.jpg
 excerpt: "This week: Donut-shaped light promises better wireless while scientists question Earth's population counts. Chinese satellites push competitors lower, academic work vanishes with one click—technology creates opportunities and vulnerabilities alike."
-url: https://tokenwisdom.ghost.io/worthafortune/145th-edition-token-wisdom-week-05/
+url: https://ghost-production-198e.up.railway.app/145th-edition-token-wisdom-week-05/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 145th Edition 🔮 Token Wisdom \ Week 05

@@ -1,14 +1,14 @@
 ---
 title: "The Age of Experience"
 slug: the-age-of-experience
-id: 68e5de54a6c145000155c19f
+id: 6a4816fb7d31280001f4fad6
 published_at: 2025-10-02T21:32:00.000-07:00
 updated_at: 2025-10-07T21:46:32.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/10/a-vast-saskatchewan-prairie-stretches-be_0JLIKCgFSZ60NF8fbMcVPg_TT6v3jYMTwWznzp8Q2IO5g.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/10/a-vast-saskatchewan-prairie-stretches-be_0JLIKCgFSZ60NF8fbMcVPg_TT6v3jYMTwWznzp8Q2IO5g.png
 excerpt: "W40 - What if our most advanced AI lacks what squirrels instinctively know? From Saskatchewan's endless prairies to cutting-edge robotics, discover why authentic experience—not perfect simulation—shapes our future. Reality's richness resists being flattened into mere data points."
-url: https://tokenwisdom.ghost.io/the-age-of-experience/
+url: https://ghost-production-198e.up.railway.app/the-age-of-experience/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: agi
   - name: Innovation
     slug: innovation
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Age of Experience

@@ -1,14 +1,14 @@
 ---
 title: "Love in the Time of Algorithms—An Open Letter to Valentine’s Day"
 slug: love-in-the-time-of-algorithms-an-open-letter-to-valentines-day
-id: 67b0bed11f633d0001f18a77
+id: 6a4816fb7d31280001f4fa93
 published_at: 2025-02-14T12:19:00.000-08:00
 updated_at: 2025-04-21T13:50:46.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/a-minimalist-clean-style-illustration-of_IvDTg-HpSQmYMbdChhiIXw_SGJZMk8dQfqb9oYVhkP2oQ.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/a-minimalist-clean-style-illustration-of_IvDTg-HpSQmYMbdChhiIXw_SGJZMk8dQfqb9oYVhkP2oQ.jpeg
 excerpt: "W07 - Cupid's arrows now come tipped with algorithms. This holiday isn't just about love—it's a masterclass in emotional capitalism. Where sighs become sales, and even cynicism turns profitable. Resistance? That's just another marketing opportunity."
-url: https://tokenwisdom.ghost.io/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/
+url: https://ghost-production-198e.up.railway.app/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -36,9 +36,11 @@ tags:
     slug: storytelling
   - name: All the Data
     slug: data
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Love in the Time of Algorithms—An Open Letter to Valentine’s Day

@@ -1,14 +1,14 @@
 ---
 title: "LinkedIn Is Just Like Dating: Courtship Rules"
 slug: linkedin-is-just-like-dating-courtship-rules
-id: 65ab51bb4cf93c000184b739
+id: 6a4816fb7d31280001f4fa03
 published_at: 2014-04-30T13:28:51.000-07:00
 updated_at: 2024-01-20T11:36:44.000-08:00
 featured: False
 reading_time: 4 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/1-dd-vddhnnlpsaqk9hk-74a.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/1-dd-vddhnnlpsaqk9hk-74a.gif
 excerpt: "If you want to get ahead, instead of just get some."
-url: https://tokenwisdom.ghost.io/linkedin-is-just-like-dating-courtship-rules/
+url: https://ghost-production-198e.up.railway.app/linkedin-is-just-like-dating-courtship-rules/
 tags:
   - name: LinkedIn \ Pros
     slug: linkedin
@@ -16,9 +16,11 @@ tags:
     slug: unsolicited-advice
   - name: Life Hacks
     slug: life-hacks
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # LinkedIn Is Just Like Dating: Courtship Rules

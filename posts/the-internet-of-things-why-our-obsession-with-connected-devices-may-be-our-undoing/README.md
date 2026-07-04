@@ -1,14 +1,14 @@
 ---
 title: "The Internet of Things: Why Our Obsession with Connected Devices May Be Our Undoing"
 slug: the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing
-id: 674b85b1fa728b0001fe1fa1
+id: 6a4816fb7d31280001f4fa7d
 published_at: 2024-10-03T14:18:00.000-07:00
 updated_at: 2024-12-02T00:46:48.000-08:00
 featured: False
 reading_time: 17 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/w39-a-closer-look-IoT.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/w39-a-closer-look-IoT.jpg
 excerpt: "W39 - Smart devices, dumb decisions: An exploration into building fully wired homes with cards of IoT. From compromised chemical plants to paralyzed cities, we're creating unprecedented vulnerabilities. The Internet of Things isn't progress—it's reckless endangerment, globally."
-url: https://tokenwisdom.ghost.io/the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing/
+url: https://ghost-production-198e.up.railway.app/the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,11 @@ tags:
     slug: technology
   - name: 🚨 OP-ED
     slug: opinionated-editorials
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Internet of Things: Why Our Obsession with Connected Devices May Be Our Undoing

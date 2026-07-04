@@ -1,14 +1,14 @@
 ---
 title: "Why Everything You Think About Deep Tech Is Right—And Wrong"
 slug: why-everything-you-think-about-deep-tech-is-right-and-wrong
-id: 672f1f71a5ffdf000161a2c9
+id: 6a4816fb7d31280001f4fa74
 published_at: 2024-08-15T01:45:00.000-07:00
 updated_at: 2024-11-09T02:13:14.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/W32---Why-Everything-You-Think-About-Deep-Tech-Is-Right-And-Wrong.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/W32---Why-Everything-You-Think-About-Deep-Tech-Is-Right-And-Wrong.png
 excerpt: "W32 -  In a lab outside Boston, three specialists stare at patterns none fully understand. They're not supposed to. The quantum physicist, pharmacist, and materials scientist each see different meanings—they're all correct, and all missing the point."
-url: https://tokenwisdom.ghost.io/why-everything-you-think-about-deep-tech-is-right-and-wrong/
+url: https://ghost-production-198e.up.railway.app/why-everything-you-think-about-deep-tech-is-right-and-wrong/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,11 @@ tags:
     slug: renewable-energy
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Why Everything You Think About Deep Tech Is Right—And Wrong

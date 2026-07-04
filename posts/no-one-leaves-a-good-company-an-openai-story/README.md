@@ -1,14 +1,14 @@
 ---
 title: "No One Leaves a Good Company: An OpenAI Story"
 slug: no-one-leaves-a-good-company-an-openai-story
-id: 676e89929d10560001d2014c
+id: 6a4816fb7d31280001f4fa86
 published_at: 2024-12-27T03:38:05.000-08:00
 updated_at: 2024-12-27T04:53:50.000-08:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/img-iJfB9WA2VtGCX8sB3Set7.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/img-iJfB9WA2VtGCX8sB3Set7.jpeg
 excerpt: "W51 - OpenAI's fall from grace isn't just corporate drama—it's a chilling preview of how every ethical AI governance attempt could unravel. As we race towards AGI, are we dismantling the very safeguards meant to protect us?"
-url: https://tokenwisdom.ghost.io/no-one-leaves-a-good-company-an-openai-story/
+url: https://ghost-production-198e.up.railway.app/no-one-leaves-a-good-company-an-openai-story/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -36,9 +36,11 @@ tags:
     slug: risk-reward
   - name: Strategic Measures
     slug: strategic
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # No One Leaves a Good Company: An OpenAI Story

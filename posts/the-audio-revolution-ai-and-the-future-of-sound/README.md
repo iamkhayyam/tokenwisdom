@@ -1,14 +1,14 @@
 ---
 title: "The Audio Revolution: AI and the Future of Sound"
 slug: the-audio-revolution-ai-and-the-future-of-sound
-id: 6742453b7cd66900012138dd
+id: 6a4816fb7d31280001f4fa7a
 published_at: 2024-09-19T13:25:00.000-07:00
 updated_at: 2024-11-23T14:25:09.000-08:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/img-asNwV7zZLYrVmFcKqdoTq.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/img-asNwV7zZLYrVmFcKqdoTq.jpeg
 excerpt: "W37 - From waveforms to words, AI is rewriting the audio editing playbook. Imagine deleting podcast bloopers with a keystroke or conjuring the perfect soundtrack at will. Welcome to the audio revolution—where your next masterpiece is just a click away."
-url: https://tokenwisdom.ghost.io/the-audio-revolution-ai-and-the-future-of-sound/
+url: https://ghost-production-198e.up.railway.app/the-audio-revolution-ai-and-the-future-of-sound/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -26,9 +26,11 @@ tags:
     slug: generative
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Audio Revolution: AI and the Future of Sound

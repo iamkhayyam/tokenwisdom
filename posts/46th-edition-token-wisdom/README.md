@@ -1,20 +1,22 @@
 ---
 title: "46th Edition 🔮 Pearls of Wisdom ⑊ W09"
 slug: 46th-edition-token-wisdom
-id: 65f48994ed6d88000174ce13
+id: 6a4816fb7d31280001f4fa33
 published_at: 2024-03-17T04:44:23.000-07:00
 updated_at: 2025-01-12T11:59:29.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/24.W10-tokenwisdom.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/24.W10-tokenwisdom.jpeg
 excerpt: "As your guide to this remarkable conflux, imagine your mind as a kaleidoscopic lens through which the pulsating beats of technology, creativity, and human endeavor are refracted into a spectrum of stellar narratives."
-url: https://tokenwisdom.ghost.io/worthafortune/46th-edition-token-wisdom/
+url: https://ghost-production-198e.up.railway.app/46th-edition-token-wisdom/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 46th Edition 🔮 Pearls of Wisdom ⑊ W09

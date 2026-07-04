@@ -1,20 +1,22 @@
 ---
 title: "38th Edition 🔮 Pearls of Wisdom ⑊ W01"
 slug: token-wisdom-38th-edition
-id: 65a9a157ebf14f0001f3bd5b
+id: 6a4816fb7d31280001f4f9e4
 published_at: 2024-01-15T14:07:00.000-08:00
 updated_at: 2025-01-12T12:00:12.000-08:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/img-f8Q9Da1THTT0CWUsZ67Yu.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-f8Q9Da1THTT0CWUsZ67Yu.jpeg
 excerpt: "Gaming's Revolution, Boosting Happiness, Graphene Breakthrough, Power of Culture, Illusion of Space and Time, Google's Farewell to Cookies, Qualcomm Topples IBM in Patents, Wi-Fi 7 Unleashes Lag-Free VR, Exposing Industrial Risks, and CRISPR in Agriculture."
-url: https://tokenwisdom.ghost.io/worthafortune/token-wisdom-38th-edition/
+url: https://ghost-production-198e.up.railway.app/token-wisdom-38th-edition/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 38th Edition 🔮 Pearls of Wisdom ⑊ W01

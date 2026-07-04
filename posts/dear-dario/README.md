@@ -1,14 +1,14 @@
 ---
 title: "Dear Dario,"
 slug: dear-dario
-id: 69798e109f969100018528d8
+id: 6a4816fb7d31280001f4fafc
 published_at: 2026-01-27T22:36:11.000-08:00
 updated_at: 2026-02-02T13:45:01.000-08:00
 featured: True
 reading_time: 18 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/a-sleek-sophisticated-spy-magazine-cover_qdIsO6siRgiEeTUXmOcnaA_NWkp3nkzSUeW0lHEejWBRg_sd.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/a-sleek-sophisticated-spy-magazine-cover_qdIsO6siRgiEeTUXmOcnaA_NWkp3nkzSUeW0lHEejWBRg_sd.png
 excerpt: "You preached AI ethics from your personal blog while selling Anthropic's independence to Amazon. Now your 'Constitutional AI' sits on Bezos's property, paying rent.\""
-url: https://tokenwisdom.ghost.io/featured/dear-dario/
+url: https://ghost-production-198e.up.railway.app/dear-dario/
 tags:
   - name: Dear ______ Letters
     slug: dear-______-letters
@@ -30,9 +30,11 @@ tags:
     slug: philosophy
   - name: ANI \ AGI \ ASI
     slug: agi
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Dear Dario,

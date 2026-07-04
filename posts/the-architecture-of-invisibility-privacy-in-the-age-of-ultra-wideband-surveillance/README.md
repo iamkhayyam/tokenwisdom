@@ -1,14 +1,14 @@
 ---
 title: "The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance"
 slug: the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance
-id: 672e874ca5ffdf000161a22c
+id: 6a4816fb7d31280001f4fa72
 published_at: 2024-08-01T08:00:00.000-07:00
 updated_at: 2024-11-09T23:22:34.000-08:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/W30---The-Architecture-of-Invisibility_-Privacy-in-the-Age-of-Ultra-Wideband-Surveillance-1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/W30---The-Architecture-of-Invisibility_-Privacy-in-the-Age-of-Ultra-Wideband-Surveillance-1.jpg
 excerpt: "W30 - In the heart of Silicon Valley, a revolution in surveillance unfolds—not with a bang, but with the silent pulse of invisible waves. The architecture of our digital future is being built, one smartphone at a time, and privacy may be its first casualty."
-url: https://tokenwisdom.ghost.io/the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance/
+url: https://ghost-production-198e.up.railway.app/the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -34,9 +34,11 @@ tags:
     slug: strategic
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Architecture of Invisibility: Privacy in the Age of Ultra-Wideband Surveillance

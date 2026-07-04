@@ -1,14 +1,14 @@
 ---
 title: "The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception"
 slug: the-great-marketing-delusion
-id: 67574c39a7db91000127370f
+id: 6a4816fb7d31280001f4fa82
 published_at: 2024-11-21T13:17:00.000-08:00
 updated_at: 2024-12-15T01:40:04.000-08:00
 featured: False
 reading_time: 16 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/a-surreal-m-c-escher-inspired-illustration-of-a-bu-84ZaUa38TeObdY45zkGz3w-ira7GizFQl6K_ozOdhdKtQ.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/a-surreal-m-c-escher-inspired-illustration-of-a-bu-84ZaUa38TeObdY45zkGz3w-ira7GizFQl6K_ozOdhdKtQ.jpeg
 excerpt: "W46 - Forget spreadsheets! Businesses keep botching human psychology—the gap's so wide you could park a train in it! Think: billion-dollar companies, all math, no matter. Explore how understanding perception trumps cost-cutting. Spoiler: it's a masterpiece of cognitive misfires!"
-url: https://tokenwisdom.ghost.io/the-great-marketing-delusion/
+url: https://ghost-production-198e.up.railway.app/the-great-marketing-delusion/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,13 @@ tags:
     slug: strategic
   - name: Technology
     slug: technology
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception

@@ -1,15 +1,15 @@
 ---
 title: "Threading a Very Fine Needle"
 slug: threading-a-very-fine-needle
-id: 698ccfc4829448000107b212
+id: 6a4816fb7d31280001f4fb01
 published_at: 2026-02-12T22:37:27.000-08:00
 updated_at: 2026-02-12T23:03:38.000-08:00
 featured: False
 reading_time: 19 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/a-minimalist-new-yorker-style-cartoon-re_4iERAbZOQBCQcK7Vi2axEg_CSSMmCKST-W1UnRDtm-OOw_sd--1-.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/a-minimalist-new-yorker-style-cartoon-re_4iERAbZOQBCQcK7Vi2axEg_CSSMmCKST-W1UnRDtm-OOw_sd--1-.jpeg
 excerpt: "W07 - We built a thing that's really good at making us not need ourselves anymore, and we're calling it progress. It only takes 250 poisoned documents to corrupt an entire AI system. Not millions. Not thousands. Two-hundred, and fifty. That’s less than a few hours work, collectively.
 "
-url: https://tokenwisdom.ghost.io/threading-a-very-fine-needle/
+url: https://ghost-production-198e.up.railway.app/threading-a-very-fine-needle/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -31,9 +31,11 @@ tags:
     slug: unsolicited-advice
   - name: LLMs - Language Models
     slug: language-models
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Threading a Very Fine Needle

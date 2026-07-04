@@ -1,9 +1,9 @@
 {
-  "id": "65aceb3d4cf93c000184bd04",
+  "id": "6a4816f97d31280001f4f9ca",
   "name": "Solar Energy",
   "slug": "solar",
   "description": null,
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/greener-grid.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/greener-grid.gif",
   "visibility": "public",
   "meta_title": null,
   "meta_description": null,
@@ -17,23 +17,23 @@
   "codeinjection_foot": null,
   "canonical_url": null,
   "accent_color": null,
-  "url": "https://tokenwisdom.ghost.io/tag/solar/",
+  "url": "https://ghost-production-198e.up.railway.app/tag/solar/",
   "posts": [
     {
-      "id": "65ccf5f1c3b7eb0001ca2547",
+      "id": "6a4816fb7d31280001f4fa1c",
       "title": "Demystifying AI's Role in Eco-Energy",
       "slug": "role-of-ai-in-eco-energy",
       "published_at": "2024-02-12T09:53:00.000-08:00",
-      "url": "https://tokenwisdom.ghost.io/role-of-ai-in-eco-energy/",
+      "url": "https://ghost-production-198e.up.railway.app/role-of-ai-in-eco-energy/",
       "featured": false,
       "reading_time": 11
     },
     {
-      "id": "65a9f350ebf14f0001f3bfc0",
+      "id": "6a4816fb7d31280001f4f9f6",
       "title": "The Promise of Perovskite Solar Cells — Solar 3.0",
       "slug": "the-promise-of-perovskite-solar-cells-solar-3-0",
       "published_at": "2023-04-13T21:07:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/the-promise-of-perovskite-solar-cells-solar-3-0/",
+      "url": "https://ghost-production-198e.up.railway.app/the-promise-of-perovskite-solar-cells-solar-3-0/",
       "featured": false,
       "reading_time": 5
     }

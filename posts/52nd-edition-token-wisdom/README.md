@@ -1,20 +1,22 @@
 ---
 title: "54th Edition 🔮 Pearls of Wisdom ⑊ W17"
 slug: 52nd-edition-token-wisdom
-id: 6630b6e6a7d59a000155ff5a
+id: 6a4816fb7d31280001f4fa4f
 published_at: 2024-05-06T21:41:00.000-07:00
 updated_at: 2025-01-12T11:48:02.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/07/img-3GFdEGiottiuaGOYlvlFv.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/07/img-3GFdEGiottiuaGOYlvlFv.jpeg
 excerpt: "Discover how technology and culture converge in this edition of The Newest Latest. Dive into topics from the charm of analog and groundbreaking AI advances to digital repatriations that reshape historical narratives, exploring their impact on society and technological progress."
-url: https://tokenwisdom.ghost.io/worthafortune/52nd-edition-token-wisdom/
+url: https://ghost-production-198e.up.railway.app/52nd-edition-token-wisdom/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 54th Edition 🔮 Pearls of Wisdom ⑊ W17

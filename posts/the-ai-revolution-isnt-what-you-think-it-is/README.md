@@ -1,14 +1,14 @@
 ---
 title: "The AI Revolution Isn't What You Think It Is"
 slug: the-ai-revolution-isnt-what-you-think-it-is
-id: 674b56a5fa728b0001fe1ef9
+id: 6a4816fb7d31280001f4fa7c
 published_at: 2024-10-17T12:00:00.000-07:00
 updated_at: 2024-11-30T14:33:10.000-08:00
 featured: False
 reading_time: 4 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/11/img-z9E2b6QaqPBOusflOxez0.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/11/img-z9E2b6QaqPBOusflOxez0.jpeg
 excerpt: "W41 - The AI revolution isn't about machines thinking like humans—it's about discovering that intelligence itself follows mathematical principles. What we're learning isn't just changing technology; it's forcing us to completely rethink consciousness, meaning, and thought itself."
-url: https://tokenwisdom.ghost.io/the-ai-revolution-isnt-what-you-think-it-is/
+url: https://ghost-production-198e.up.railway.app/the-ai-revolution-isnt-what-you-think-it-is/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -34,9 +34,13 @@ tags:
     slug: technology
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The AI Revolution Isn't What You Think It Is

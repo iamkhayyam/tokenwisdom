@@ -1,13 +1,13 @@
 ---
 title: "The Path to Artificial General Intelligence"
 slug: the-path-to-artificial-general-intelligence
-id: 65aa1327ebf14f0001f3c061
+id: 6a4816fb7d31280001f4f9fa
 published_at: 2023-05-18T23:17:00.000-07:00
 updated_at: 2024-01-19T23:21:04.000-08:00
 featured: True
 reading_time: 5 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/409086c0-5b22-433b-ab6d-948afa2003b1.jpeg
-url: https://tokenwisdom.ghost.io/featured/the-path-to-artificial-general-intelligence/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/409086c0-5b22-433b-ab6d-948afa2003b1.jpeg
+url: https://ghost-production-198e.up.railway.app/the-path-to-artificial-general-intelligence/
 tags:
   - name: ANI \ AGI \ ASI
     slug: agi
@@ -17,9 +17,11 @@ tags:
     slug: ethical
   - name: A.I. (and Subsets)
     slug: ai
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Path to Artificial General Intelligence

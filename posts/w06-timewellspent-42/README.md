@@ -1,20 +1,22 @@
 ---
 title: "W06: 42nd Edition \ Side B📺"
 slug: w06-timewellspent-42
-id: 65cecd7adae46f00014ddf9c
+id: 6a4816fb7d31280001f4fa1d
 published_at: 2024-02-11T19:35:00.000-08:00
 updated_at: 2024-04-30T23:57:39.000-07:00
 featured: False
 reading_time: 15 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/tv-evolution-gif.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/tv-evolution-gif.gif
 excerpt: "Gemini Ultra: AI Game Changer, AnythingW's 3D Metaverse, Cinematic Photography Redefined, Prototyping a Wireless Charge Stand, Open vs. Closed, Perplexity's AI, Teen Innovation, Privacy Revolution. Pixar's USD Transforms Workflows, and Making $100k with $0. "
-url: https://tokenwisdom.ghost.io/timewellspent/w06-timewellspent-42/
+url: https://ghost-production-198e.up.railway.app/w06-timewellspent-42/
 tags:
   - name: 📺 Time Well Spent
     slug: timewellspent
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W06: 42nd Edition \ Side B📺

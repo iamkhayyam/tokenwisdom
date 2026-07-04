@@ -1,14 +1,14 @@
 ---
 title: "Disney’s Autonomatronics Odyssey"
 slug: disneys-autonomatronics-odyssey
-id: 660adb03945b2e000170f06d
+id: 6a4816fb7d31280001f4fa43
 published_at: 2024-04-01T23:11:00.000-07:00
 updated_at: 2024-09-21T20:36:30.000-07:00
 featured: False
 reading_time: 22 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/9e980-1-1.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/9e980-1-1.gif
 excerpt: "W12 - Disney’s Imagineers redefine storytelling with Autonomatronics: the art of illusion meets autonomous interaction, where dreams dance with technology."
-url: https://tokenwisdom.ghost.io/disneys-autonomatronics-odyssey/
+url: https://ghost-production-198e.up.railway.app/disneys-autonomatronics-odyssey/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -34,9 +34,11 @@ tags:
     slug: pirate-talk
   - name: Innovation
     slug: innovation
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Disney’s Autonomatronics Odyssey

@@ -1,14 +1,14 @@
 ---
 title: "Architecture Over Scale"
 slug: google-just-admitted-i-was-right-i-didnt-even-flinch
-id: 69351e704ec7380001940c84
+id: 6a4816fb7d31280001f4fae9
 published_at: 2025-12-04T22:28:00.000-08:00
 updated_at: 2025-12-21T14:51:08.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/a-new-yorker-magazine-cover-illustration_2Em0pKyeSjCEl_Yn6WwSow_4gLXJKbQTD25FHerBa9bfA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/a-new-yorker-magazine-cover-illustration_2Em0pKyeSjCEl_Yn6WwSow_4gLXJKbQTD25FHerBa9bfA.jpeg
 excerpt: "W49 - When Google validated my AI thesis, I didn't celebrate. I shrugged. While they wrote 50-page theories, I'd already built the solution—in $75 cow tags. They're just arriving at the starting line as I cross the finish. Being right too early feels exactly like being wrong. Until it doesn't."
-url: https://tokenwisdom.ghost.io/google-just-admitted-i-was-right-i-didnt-even-flinch/
+url: https://ghost-production-198e.up.railway.app/google-just-admitted-i-was-right-i-didnt-even-flinch/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: future-trends
   - name: Challenges
     slug: challenges
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Architecture Over Scale

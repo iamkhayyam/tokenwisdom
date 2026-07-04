@@ -1,9 +1,9 @@
 {
-  "id": "65ab9d254cf93c000184ba02",
+  "id": "6a4816f97d31280001f4f9a3",
   "name": "Neuroscience",
   "slug": "neuroscience",
   "description": null,
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/4d101c3762b9aa35b49a74ff2bcf0398.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/4d101c3762b9aa35b49a74ff2bcf0398.gif",
   "visibility": "public",
   "meta_title": null,
   "meta_description": null,
@@ -17,117 +17,153 @@
   "codeinjection_foot": null,
   "canonical_url": null,
   "accent_color": null,
-  "url": "https://tokenwisdom.ghost.io/tag/neuroscience/",
+  "url": "https://ghost-production-198e.up.railway.app/tag/neuroscience/",
   "posts": [
     {
-      "id": "69b71aa405f1150001507a67",
+      "id": "6a4816fb7d31280001f4fb1e",
+      "title": "The Proof Was Never the Point",
+      "slug": "the-proof-was-never-the-point",
+      "published_at": "2026-05-15T22:55:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/",
+      "featured": false,
+      "reading_time": 19
+    },
+    {
+      "id": "6a4816fb7d31280001f4fb1a",
+      "title": "The Cost of Being Right",
+      "slug": "the-cost-of-being-right",
+      "published_at": "2026-05-01T16:13:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/the-cost-of-being-right/",
+      "featured": false,
+      "reading_time": 20
+    },
+    {
+      "id": "6a4816fb7d31280001f4fb14",
+      "title": "Who's Mind Is It Anyway?",
+      "slug": "whos-mind-is-it-anyway",
+      "published_at": "2026-04-16T22:03:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/whos-mind-is-it-anyway/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "6a4816fb7d31280001f4fb10",
+      "title": "The Cow Came Last",
+      "slug": "the-cow-came-last",
+      "published_at": "2026-04-02T01:15:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/the-cow-came-last/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
+      "id": "6a4816fb7d31280001f4fb0a",
       "title": "The Room Was Already Set Before You Walked In",
       "slug": "the-room-was-already-set-before-you-walked-in",
       "published_at": "2026-03-12T14:02:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/the-room-was-already-set-before-you-walked-in/",
+      "url": "https://ghost-production-198e.up.railway.app/the-room-was-already-set-before-you-walked-in/",
       "featured": false,
       "reading_time": 9
     },
     {
-      "id": "693d2a92adf4ac0001a79109",
+      "id": "6a4816fb7d31280001f4faeb",
       "title": "The Speed Trap",
       "slug": "the-speed-trap",
       "published_at": "2025-12-11T01:33:00.000-08:00",
-      "url": "https://tokenwisdom.ghost.io/the-speed-trap/",
+      "url": "https://ghost-production-198e.up.railway.app/the-speed-trap/",
       "featured": false,
       "reading_time": 13
     },
     {
-      "id": "693006587341820001acfb6f",
+      "id": "6a4816fb7d31280001f4fae6",
       "title": "Intelligence Without Experience",
       "slug": "intelligence-without-experience",
       "published_at": "2025-11-27T13:45:00.000-08:00",
-      "url": "https://tokenwisdom.ghost.io/intelligence-without-experience/",
+      "url": "https://ghost-production-198e.up.railway.app/intelligence-without-experience/",
       "featured": false,
       "reading_time": 12
     },
     {
-      "id": "68858d74845b5c0001afdfe7",
+      "id": "6a4816fb7d31280001f4fabe",
       "title": "America’s Broken Funny Bone",
       "slug": "americas-broken-funny-bone",
       "published_at": "2025-07-17T10:58:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/americas-broken-funny-bone/",
+      "url": "https://ghost-production-198e.up.railway.app/americas-broken-funny-bone/",
       "featured": false,
       "reading_time": 9
     },
     {
-      "id": "686ad01c85d4080001460371",
+      "id": "6a4816fb7d31280001f4fabb",
       "title": "We're Not Creating God, We're Discovering God",
       "slug": "were-not-creating-god-were-discovering-god",
       "published_at": "2025-07-06T14:09:20.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/were-not-creating-god-were-discovering-god/",
+      "url": "https://ghost-production-198e.up.railway.app/were-not-creating-god-were-discovering-god/",
       "featured": false,
       "reading_time": 12
     },
     {
-      "id": "67b0bed11f633d0001f18a77",
+      "id": "6a4816fb7d31280001f4fa93",
       "title": "Love in the Time of Algorithms—An Open Letter to Valentine’s Day",
       "slug": "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day",
       "published_at": "2025-02-14T12:19:00.000-08:00",
-      "url": "https://tokenwisdom.ghost.io/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/",
+      "url": "https://ghost-production-198e.up.railway.app/love-in-the-time-of-algorithms-an-open-letter-to-valentines-day/",
       "featured": false,
       "reading_time": 11
     },
     {
-      "id": "67575ea4a7db91000127376a",
+      "id": "6a4816fb7d31280001f4fa83",
       "title": "The Science of Subjective Value: Understanding the Architecture of Experience",
       "slug": "the-science-of-subjective-value-2",
       "published_at": "2024-11-28T13:21:00.000-08:00",
-      "url": "https://tokenwisdom.ghost.io/the-science-of-subjective-value-2/",
+      "url": "https://ghost-production-198e.up.railway.app/the-science-of-subjective-value-2/",
       "featured": false,
       "reading_time": 21
     },
     {
-      "id": "67574c39a7db91000127370f",
+      "id": "6a4816fb7d31280001f4fa82",
       "title": "The Great Marketing Delusion: Rethinking Business Psychology in the Age of Perception",
       "slug": "the-great-marketing-delusion",
       "published_at": "2024-11-21T13:17:00.000-08:00",
-      "url": "https://tokenwisdom.ghost.io/the-great-marketing-delusion/",
+      "url": "https://ghost-production-198e.up.railway.app/the-great-marketing-delusion/",
       "featured": false,
       "reading_time": 16
     },
     {
-      "id": "674bd374fa728b0001fe201d",
+      "id": "6a4816fb7d31280001f4fa7f",
       "title": "Beyond the Silicon Dream: Why Consciousness Can't Be Computed",
       "slug": "beyond-the-silicon-dream-why-consciousness-cant-be-computed",
       "published_at": "2024-10-24T20:00:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/beyond-the-silicon-dream-why-consciousness-cant-be-computed/",
+      "url": "https://ghost-production-198e.up.railway.app/beyond-the-silicon-dream-why-consciousness-cant-be-computed/",
       "featured": false,
       "reading_time": 13
     },
     {
-      "id": "674b56a5fa728b0001fe1ef9",
+      "id": "6a4816fb7d31280001f4fa7c",
       "title": "The AI Revolution Isn't What You Think It Is",
       "slug": "the-ai-revolution-isnt-what-you-think-it-is",
       "published_at": "2024-10-17T12:00:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/the-ai-revolution-isnt-what-you-think-it-is/",
+      "url": "https://ghost-production-198e.up.railway.app/the-ai-revolution-isnt-what-you-think-it-is/",
       "featured": false,
       "reading_time": 4
     },
     {
-      "id": "672ec9f9a5ffdf000161a28c",
+      "id": "6a4816fb7d31280001f4fa73",
       "title": "Self-Introduction: A Critical Analysis of Contemporary Practices and Their Scientific Basis",
       "slug": "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self",
       "published_at": "2024-08-08T18:53:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/",
+      "url": "https://ghost-production-198e.up.railway.app/the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self/",
       "featured": false,
       "reading_time": 10
     },
     {
-      "id": "65aa0ff5ebf14f0001f3c04f",
+      "id": "6a4816fb7d31280001f4f9f9",
       "title": "Experience Futures: The Rise of Human Experience (HX)",
       "slug": "experience-futures-the-rise-of-human-experience-hx",
       "published_at": "2023-05-04T23:08:00.000-07:00",
-      "url": "https://tokenwisdom.ghost.io/experience-futures-the-rise-of-human-experience-hx/",
+      "url": "https://ghost-production-198e.up.railway.app/experience-futures-the-rise-of-human-experience-hx/",
       "featured": false,
       "reading_time": 6
     }
   ],
-  "post_count": 12,
+  "post_count": 16,
   "local_feature_image": "neuroscience_feature__4d101c3762b9aa35b49a74ff2bcf0398.gif"
 }

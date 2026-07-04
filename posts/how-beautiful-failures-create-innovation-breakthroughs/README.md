@@ -1,14 +1,14 @@
 ---
 title: "How Beautiful Failures Create Innovation Breakthroughs"
 slug: how-beautiful-failures-create-innovation-breakthroughs
-id: 68d85b4e1c11b20001eb00f3
+id: 6a4816fb7d31280001f4fad4
 published_at: 2025-09-25T11:49:00.000-07:00
 updated_at: 2025-11-15T13:48:48.000-08:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/the-laboratory-spill-a-minimalist-illust_ddjGICy7STWtMHGCNttggQ_w48ATkRrS5Os2M30jniwng.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/the-laboratory-spill-a-minimalist-illust_ddjGICy7STWtMHGCNttggQ_w48ATkRrS5Os2M30jniwng.jpeg
 excerpt: "W39 - Inspired by Brian Potter's analysis in \"How Common Is Accidental Invention?\" which revealed that approximately 7% of major inventions between 1800-1970 emerged from genuine accidents—a statistic that only hints at the deeper cybernetic reality of how breakthrough innovation actually occurs."
-url: https://tokenwisdom.ghost.io/how-beautiful-failures-create-innovation-breakthroughs/
+url: https://ghost-production-198e.up.railway.app/how-beautiful-failures-create-innovation-breakthroughs/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: philosophy
   - name: Deep Tech
     slug: deeptech
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # How Beautiful Failures Create Innovation Breakthroughs

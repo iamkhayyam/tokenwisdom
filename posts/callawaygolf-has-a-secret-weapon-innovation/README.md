@@ -1,13 +1,13 @@
 ---
 title: "Innovation Is CallawayGolf's Secret Weapon"
 slug: callawaygolf-has-a-secret-weapon-innovation
-id: 65ab51bb4cf93c000184b74e
+id: 6a4816fb7d31280001f4fa0b
 published_at: 2013-07-03T12:18:56.000-07:00
 updated_at: 2024-01-20T11:35:14.000-08:00
 featured: False
 reading_time: 7 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0-dn-sthzjvdk9qhvp.gif
-url: https://tokenwisdom.ghost.io/callawaygolf-has-a-secret-weapon-innovation/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0-dn-sthzjvdk9qhvp.gif
+url: https://ghost-production-198e.up.railway.app/callawaygolf-has-a-secret-weapon-innovation/
 tags:
   - name: Innovation
     slug: innovation
@@ -15,9 +15,11 @@ tags:
     slug: sports
   - name: Interview with...
     slug: interview
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Innovation Is CallawayGolf's Secret Weapon

@@ -1,20 +1,22 @@
 ---
 title: "W06: 42nd Edition \ Side A🎉"
 slug: w06-thenewestlatest-42
-id: 65ceff15dae46f00014de0b2
+id: 6a4816fb7d31280001f4fa1e
 published_at: 2024-02-11T18:12:00.000-08:00
 updated_at: 2024-05-01T00:03:10.000-07:00
 featured: False
 reading_time: 16 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/img-qr4HEpShNTrGR9ohYUbCs.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/img-qr4HEpShNTrGR9ohYUbCs.png
 excerpt: "Gemini Ultra: AI Game Changer, AnythingW's 3D Metaverse, Cinematic Photography Redefined, Prototyping a Wireless Charge Stand, Open vs. Closed, Perplexity's AI, Teen Innovation, Privacy Revolution. Pixar's USD Transforms Workflows, and Making $100k with $0. "
-url: https://tokenwisdom.ghost.io/newestlatest/w06-thenewestlatest-42/
+url: https://ghost-production-198e.up.railway.app/w06-thenewestlatest-42/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W06: 42nd Edition \ Side A🎉

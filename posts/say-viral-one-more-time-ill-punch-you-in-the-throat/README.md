@@ -1,12 +1,12 @@
 ---
 title: "Say Viral One More Time! I'll Punch You in the Throat =)"
 slug: say-viral-one-more-time-ill-punch-you-in-the-throat
-id: 65ab51bb4cf93c000184b751
+id: 6a4816fb7d31280001f4fa0d
 published_at: 2013-05-20T11:20:34.000-07:00
 updated_at: 2024-05-01T00:33:47.000-07:00
 featured: False
 reading_time: 4 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0-qr0z9gkkcmp6fnvd.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0-qr0z9gkkcmp6fnvd.gif
 excerpt: "Fear Facing
 Adventure Experience
 Overcoming Challenges
@@ -17,7 +17,7 @@ Digging a bit deeper, the underlying topics GavanBot has discovered are:
 Personal Growth through Adventure
 Overcoming Fear and Challenges
 Encouragement to Take Risks"
-url: https://tokenwisdom.ghost.io/say-viral-one-more-time-ill-punch-you-in-the-throat/
+url: https://ghost-production-198e.up.railway.app/say-viral-one-more-time-ill-punch-you-in-the-throat/
 tags:
   - name: Challenges
     slug: challenges
@@ -29,9 +29,11 @@ tags:
     slug: unsolicited-advice
   - name: Marketing
     slug: marketing
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Say Viral One More Time! I'll Punch You in the Throat =)

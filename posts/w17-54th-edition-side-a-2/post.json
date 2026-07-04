@@ -1,0 +1,89 @@
+{
+  "id": "6a48247e7d31280001f50f83",
+  "uuid": "65f772fc-0bbf-4e44-b428-4051732b1fc7",
+  "title": "W17: 54th Edition \\ Side A 🎉",
+  "slug": "w17-54th-edition-side-a-2",
+  "html": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/10/img-LDtybHMVJyUj6Wh4GfrqV.jpeg",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2026-07-03T14:07:10.000-07:00",
+  "updated_at": "2026-07-03T14:07:10.000-07:00",
+  "published_at": "2024-05-05T00:22:00.000-07:00",
+  "custom_excerpt": "\nAI composes future hits while our eyes predict health. We're repatriating art digitally and chasing online clout. Analog comfort persists in digital chaos. As tech reshapes our world, we dance between innovation and humanity. The rhythm? Constant change.",
+  "canonical_url": null,
+  "comment_id": "6a48247e7d31280001f50f83",
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "description": "Hand-picked and carefully curated content in a consumed collection of noteworthy articles that may shed some light on the future.",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/download--1-.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/newestlatest/"
+    }
+  ],
+  "url": "https://ghost-production-198e.up.railway.app/w17-54th-edition-side-a-2/",
+  "excerpt": "",
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
+    }
+  ],
+  "local_feature_image": "w17-54th-edition-side-a-2_feature__img-LDtybHMVJyUj6Wh4GfrqV.jpeg"
+}

@@ -1,14 +1,14 @@
 ---
 title: "Crash Course on What’s Coming"
 slug: crash-course-on-whats-coming
-id: 65deaf76d11d04000135b111
+id: 6a4816fb7d31280001f4fa2a
 published_at: 2024-01-11T21:14:00.000-08:00
 updated_at: 2024-12-02T00:50:21.000-08:00
 featured: False
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-dDbvLfEcDN79Rw6csNRuc.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-dDbvLfEcDN79Rw6csNRuc.jpeg
 excerpt: "W01 - To truly appreciate the art and science of technology, we must become versed in the subtle, often silent, shifts of innovation's undercurrents. It is there, in the unseen, in the intricacies of code and the silent whispers of machine learning algorithms, that the future is being shaped."
-url: https://tokenwisdom.ghost.io/crash-course-on-whats-coming/
+url: https://ghost-production-198e.up.railway.app/crash-course-on-whats-coming/
 tags:
   - name: Unsolicited Advice
     slug: unsolicited-advice
@@ -22,9 +22,11 @@ tags:
     slug: future-trends
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Crash Course on What’s Coming

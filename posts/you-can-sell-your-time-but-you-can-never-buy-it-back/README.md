@@ -1,13 +1,13 @@
 ---
 title: "You Can Sell Your Time, But You Can Never Buy It Back"
 slug: you-can-sell-your-time-but-you-can-never-buy-it-back
-id: 65a9c7b7ebf14f0001f3bebb
+id: 6a4816fb7d31280001f4f9ec
 published_at: 2013-06-22T17:00:00.000-07:00
 updated_at: 2024-01-20T11:25:37.000-08:00
 featured: True
 reading_time: 4 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0__pxy9UenL0S5vzsu-1.gif
-url: https://tokenwisdom.ghost.io/featured/you-can-sell-your-time-but-you-can-never-buy-it-back/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0__pxy9UenL0S5vzsu-1.gif
+url: https://ghost-production-198e.up.railway.app/you-can-sell-your-time-but-you-can-never-buy-it-back/
 tags:
   - name: Lessons Learned
     slug: lessons-learned
@@ -21,9 +21,11 @@ tags:
     slug: life-hacks
   - name: Productivity
     slug: productivity
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # You Can Sell Your Time, But You Can Never Buy It Back

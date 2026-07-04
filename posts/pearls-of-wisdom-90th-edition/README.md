@@ -1,20 +1,22 @@
 ---
 title: "90th Edition 🔮 Pearls of Wisdom \ W02"
 slug: pearls-of-wisdom-90th-edition
-id: 678361a0e0cdc0000175cbef
+id: 6a4816fb7d31280001f4fa8a
 published_at: 2025-01-12T05:33:59.000-08:00
 updated_at: 2025-02-16T08:29:36.000-08:00
 featured: False
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/img-cgxsGl3ZP3UrDgmv7LDCD.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/img-cgxsGl3ZP3UrDgmv7LDCD.jpeg
 excerpt: "W02 - From AI's $56B funding boom to secret weapons and Cuban Netflix hacks, our 90th edition is a rollercoaster of tech, business, and intrigue. Buckle up for a mind-bending ride through the cutting edge of innovation and controversy!"
-url: https://tokenwisdom.ghost.io/worthafortune/pearls-of-wisdom-90th-edition/
+url: https://ghost-production-198e.up.railway.app/pearls-of-wisdom-90th-edition/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 90th Edition 🔮 Pearls of Wisdom \ W02

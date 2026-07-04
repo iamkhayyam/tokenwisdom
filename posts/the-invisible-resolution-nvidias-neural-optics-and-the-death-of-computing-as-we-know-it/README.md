@@ -1,14 +1,14 @@
 ---
 title: "The Invisible Resolution—NVIDIA's Neural Optics and the Death of Computing as We Know It"
 slug: the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it
-id: 6777d402e9cf8d00018d42d6
+id: 6a4816fb7d31280001f4fa88
 published_at: 2025-01-03T05:55:37.000-08:00
 updated_at: 2025-04-21T13:52:34.000-07:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/img-h0DQ7i1HDPE8cgLDv4ryD.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/img-h0DQ7i1HDPE8cgLDv4ryD.jpeg
 excerpt: "W01 - NVIDIA's patent isn't just another tech milestone. It's a silent earthquake, reshaping the bedrock of computing while the industry obsesses over surface tremors. We're not talking incremental change. This is how humans and machines merge."
-url: https://tokenwisdom.ghost.io/the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it/
+url: https://ghost-production-198e.up.railway.app/the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: future-trends
   - name: Innovation
     slug: innovation
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Invisible Resolution—NVIDIA's Neural Optics and the Death of Computing as We Know It

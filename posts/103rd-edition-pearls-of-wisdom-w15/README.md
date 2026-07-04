@@ -1,20 +1,22 @@
 ---
 title: "103rd Edition 🔮 Pearls of Wisdom ⑊ W15"
 slug: 103rd-edition-pearls-of-wisdom-w15
-id: 6800920b17bdb7000150e8fb
+id: 6a4816fb7d31280001f4faa4
 published_at: 2025-04-14T06:14:00.000-07:00
 updated_at: 2025-04-17T11:06:22.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/img-pfNB2SxlspUSFzycgQZBm.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/img-pfNB2SxlspUSFzycgQZBm.jpeg
 excerpt: "W15 - AI revives classic cartoons as crypto moguls plan space stations. Streaming wars fuel piracy while startups track time meticulously. ARR fades, energy-efficient chips emerge, and debates on interfaces heat up. We navigate the paradoxes of our digital era."
-url: https://tokenwisdom.ghost.io/worthafortune/103rd-edition-pearls-of-wisdom-w15/
+url: https://ghost-production-198e.up.railway.app/103rd-edition-pearls-of-wisdom-w15/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 103rd Edition 🔮 Pearls of Wisdom ⑊ W15

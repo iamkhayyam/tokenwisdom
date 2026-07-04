@@ -1,20 +1,22 @@
 ---
 title: "114th Edition 🔮 Pearls of Wisdom ⑊ W26"
 slug: 114th-edition-pearls-of-wisdom-w26
-id: 686ac9b885d4080001460345
+id: 6a4816fb7d31280001f4faba
 published_at: 2025-06-29T13:05:00.000-07:00
 updated_at: 2025-07-06T13:05:25.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/07/a-digital-painting-of-a-mysterious-fortu_xuz9zePIRZOo3SKCu4te8w_6KRksQdIS-ais2dmhhEKRw.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/07/a-digital-painting-of-a-mysterious-fortu_xuz9zePIRZOo3SKCu4te8w_6KRksQdIS-ais2dmhhEKRw.jpeg
 excerpt: "W26 - As companies realize their AI replacement mistakes and ancient pyramids challenge human history, 2025's tech awakening accelerates. From teleportation to cosmic discoveries, we're witnessing AI hubris collide with archaeological mysteries."
-url: https://tokenwisdom.ghost.io/worthafortune/114th-edition-pearls-of-wisdom-w26/
+url: https://ghost-production-198e.up.railway.app/114th-edition-pearls-of-wisdom-w26/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 114th Edition 🔮 Pearls of Wisdom ⑊ W26

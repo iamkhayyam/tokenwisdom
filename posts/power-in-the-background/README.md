@@ -1,14 +1,14 @@
 ---
 title: "Power in the Background"
 slug: power-in-the-background
-id: 690f90ead8e4cb0001a2fa05
+id: 6a4816fb7d31280001f4fae0
 published_at: 2025-11-06T12:49:00.000-08:00
 updated_at: 2025-12-21T14:52:11.000-08:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/11/a-new-yorker-magazine-cover-illustration_aLkHd-oJRT6JIkqPQ45n7g_Z5IaZTkjRsK9Vd7yw6JAtw.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/11/a-new-yorker-magazine-cover-illustration_aLkHd-oJRT6JIkqPQ45n7g_Z5IaZTkjRsK9Vd7yw6JAtw.png
 excerpt: "W45 - While tech giants wage PR battles over AI, Amazon is quietly building its neural substrate in Indiana cornfields. The real power isn't in the models—it's in who owns the ground they stand on. And we've seen this movie before."
-url: https://tokenwisdom.ghost.io/power-in-the-background/
+url: https://ghost-production-198e.up.railway.app/power-in-the-background/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: risk-reward
   - name: All the Data
     slug: data
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Power in the Background

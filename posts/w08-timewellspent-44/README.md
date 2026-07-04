@@ -1,20 +1,22 @@
 ---
 title: "W08: 44th Edition \ Side B📺"
 slug: w08-timewellspent-44
-id: 65dac61f692af400019448e5
+id: 6a4816fb7d31280001f4fa24
 published_at: 2024-02-25T19:52:00.000-08:00
 updated_at: 2024-04-30T23:56:26.000-07:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/timewellspent_01-0.5.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/timewellspent_01-0.5.gif
 excerpt: "Revolutionary Animation Techniques, Artificial General Intelligence, Mini Monitor Productivity Boost, and Wireless Powering Inside the Human Body: Unveiling the Future!"
-url: https://tokenwisdom.ghost.io/timewellspent/w08-timewellspent-44/
+url: https://ghost-production-198e.up.railway.app/w08-timewellspent-44/
 tags:
   - name: 📺 Time Well Spent
     slug: timewellspent
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W08: 44th Edition \ Side B📺

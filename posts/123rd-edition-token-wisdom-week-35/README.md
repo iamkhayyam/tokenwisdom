@@ -1,20 +1,22 @@
 ---
 title: "123rd Edition 🔮 Token Wisdom ⑊ W35"
 slug: 123rd-edition-token-wisdom-week-35
-id: 68c723b1ce413500019d5fb8
+id: 6a4816fb7d31280001f4fac6
 published_at: 2025-08-31T20:05:00.000-07:00
 updated_at: 2025-09-15T00:51:08.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/img-7iPT8883tmt0Zd6W5PQtc.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/img-7iPT8883tmt0Zd6W5PQtc.png
 excerpt: "Exploring AI copyright settlements, powerful supercomputers, and the changing landscape of college sports. Welcome to Token Wisdom's 123rd edition—where we unravel the complexities of technology, law, and society. Prepare for a journey from the digital realm to the playing field!"
-url: https://tokenwisdom.ghost.io/worthafortune/123rd-edition-token-wisdom-week-35/
+url: https://ghost-production-198e.up.railway.app/123rd-edition-token-wisdom-week-35/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 123rd Edition 🔮 Token Wisdom ⑊ W35

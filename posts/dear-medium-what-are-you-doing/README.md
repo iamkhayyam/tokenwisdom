@@ -1,13 +1,13 @@
 ---
 title: "Dear @Medium, What Are You Doing?"
 slug: dear-medium-what-are-you-doing
-id: 65ab51bb4cf93c000184b745
+id: 6a4816fb7d31280001f4fa07
 published_at: 2013-05-15T12:24:02.000-07:00
 updated_at: 2024-01-21T01:44:34.000-08:00
 featured: False
 reading_time: 3 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0_o8MpgdgEgHfhEwhY.gif
-url: https://tokenwisdom.ghost.io/dear-medium-what-are-you-doing/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0_o8MpgdgEgHfhEwhY.gif
+url: https://ghost-production-198e.up.railway.app/dear-medium-what-are-you-doing/
 tags:
   - name: Dear ______ Letters
     slug: dear-______-letters
@@ -17,9 +17,11 @@ tags:
     slug: content-creation
   - name: Brands \ Agency
     slug: agency
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Dear @Medium, What Are You Doing?

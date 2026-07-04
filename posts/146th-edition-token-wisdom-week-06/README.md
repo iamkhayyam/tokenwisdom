@@ -1,20 +1,22 @@
 ---
 title: "146th Edition 🔮 Token Wisdom \ Week 06"
 slug: 146th-edition-token-wisdom-week-06
-id: 6988fc802424b80001899202
+id: 6a4816fb7d31280001f4fb00
 published_at: 2026-02-08T14:24:22.000-08:00
 updated_at: 2026-02-08T14:26:54.000-08:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_0--1-.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_0--1-.jpg
 excerpt: "This week: How does anything complex exist in a chaos-built universe? Blood Falls explained after a century. Fast radio bursts from monster shocks. Ancient math predates writing. AI nears human intelligence. WiFi tracks you invisibly. Order shouldn't exist—but does."
-url: https://tokenwisdom.ghost.io/worthafortune/146th-edition-token-wisdom-week-06/
+url: https://ghost-production-198e.up.railway.app/146th-edition-token-wisdom-week-06/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 146th Edition 🔮 Token Wisdom \ Week 06

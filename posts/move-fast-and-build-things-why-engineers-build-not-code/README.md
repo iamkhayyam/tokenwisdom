@@ -1,14 +1,14 @@
 ---
 title: "Why Engineers Build, Not Code"
 slug: move-fast-and-build-things-why-engineers-build-not-code
-id: 68c743acfeb9ac00017a2a38
+id: 6a4816fb7d31280001f4faca
 published_at: 2025-08-14T15:51:00.000-07:00
 updated_at: 2025-09-14T19:33:02.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/W33---a-split-scene-illustration-in-the-style-_hEJPEG1mRgax5w1VUYiu7w_j5-oUliaTkSXs4UNyVQbPg.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/W33---a-split-scene-illustration-in-the-style-_hEJPEG1mRgax5w1VUYiu7w_j5-oUliaTkSXs4UNyVQbPg.jpeg
 excerpt: "W33 - Engineers build things. Coders follow instructions. We're creating a generation that confuses symbol manipulation with problem-solving—while bridges collapse and \"smart\" systems fail because nobody understands both code AND concrete."
-url: https://tokenwisdom.ghost.io/move-fast-and-build-things-why-engineers-build-not-code/
+url: https://ghost-production-198e.up.railway.app/move-fast-and-build-things-why-engineers-build-not-code/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: deeptech
   - name: Educate \ Learn
     slug: education
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Why Engineers Build, Not Code

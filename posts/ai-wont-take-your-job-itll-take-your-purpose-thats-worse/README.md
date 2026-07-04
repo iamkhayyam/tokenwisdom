@@ -1,14 +1,14 @@
 ---
 title: "AI Won't Take Your Job. It'll Take Your Purpose. That's Worse."
 slug: ai-wont-take-your-job-itll-take-your-purpose-thats-worse
-id: 692e76330c7b0d000112f02b
+id: 6a4816fb7d31280001f4fae4
 published_at: 2025-11-20T21:48:00.000-08:00
 updated_at: 2025-12-21T14:51:42.000-08:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/a-new-yorker-magazine-cover-illustration_Kck5jbmKSBKkKnbb7SMxCA_XzqluXsySkujZLqqX92A6A.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/a-new-yorker-magazine-cover-illustration_Kck5jbmKSBKkKnbb7SMxCA_XzqluXsySkujZLqqX92A6A.jpeg
 excerpt: "W47 - What took 200 years to destroy rural America will take 5 years to obliterate white-collar work. The farmers were blindsided by mechanization. We're not blindsided—we can read every word of our obsolescence in the Terms & Conditions. We just keep clicking 'Accept' anyway."
-url: https://tokenwisdom.ghost.io/ai-wont-take-your-job-itll-take-your-purpose-thats-worse/
+url: https://ghost-production-198e.up.railway.app/ai-wont-take-your-job-itll-take-your-purpose-thats-worse/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: risk-reward
   - name: Challenges
     slug: challenges
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # AI Won't Take Your Job. It'll Take Your Purpose. That's Worse.

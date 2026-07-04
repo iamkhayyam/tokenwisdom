@@ -1,20 +1,22 @@
 ---
 title: "92nd Edition 🔮 Pearls of Wisdom ⑊ W04"
 slug: 92nd-edition-pearls-of-wisdom-w03
-id: 6795ed0144db1f0001119342
+id: 6a4816fb7d31280001f4fa8e
 published_at: 2025-01-26T01:17:48.000-08:00
 updated_at: 2025-02-16T08:32:25.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/SYwc6IIETqWR-evyQc2s8w.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/SYwc6IIETqWR-evyQc2s8w.jpeg
 excerpt: "W04 - Excel gladiators clash in Vegas while AI titans feud over Stargate. In 2025's tech circus, spreadsheets are spectator sports and meme coins shape presidencies. Step right up to witness innovation's wild dance with the absurd! 🎪🚀"
-url: https://tokenwisdom.ghost.io/worthafortune/92nd-edition-pearls-of-wisdom-w03/
+url: https://ghost-production-198e.up.railway.app/92nd-edition-pearls-of-wisdom-w03/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 92nd Edition 🔮 Pearls of Wisdom ⑊ W04

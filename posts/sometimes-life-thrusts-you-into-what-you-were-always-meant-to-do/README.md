@@ -1,13 +1,13 @@
 ---
 title: "Sometimes, Life Thrusts You Into What You Were Always Meant To Do"
 slug: sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do
-id: 65ab51bb4cf93c000184b736
+id: 6a4816fb7d31280001f4fa02
 published_at: 2013-06-25T17:50:09.000-07:00
 updated_at: 2024-01-21T01:37:16.000-08:00
 featured: False
 reading_time: 1 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/Jq0JAU.gif
-url: https://tokenwisdom.ghost.io/sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/Jq0JAU.gif
+url: https://ghost-production-198e.up.railway.app/sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do/
 tags:
   - name: Lessons Learned
     slug: lessons-learned
@@ -17,9 +17,11 @@ tags:
     slug: life-hacks
   - name: Entrepreneurial
     slug: entrepreneurship
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Sometimes, Life Thrusts You Into What You Were Always Meant To Do

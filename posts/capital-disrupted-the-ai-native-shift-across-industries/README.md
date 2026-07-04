@@ -1,15 +1,15 @@
 ---
 title: "Capital Disrupted—The AI Native Shift Across Industries"
 slug: capital-disrupted-the-ai-native-shift-across-industries
-id: 67eecdd590d96f000163b782
+id: 6a4816fb7d31280001f4faa1
 published_at: 2025-04-03T12:48:37.000-07:00
 updated_at: 2025-04-03T13:00:48.000-07:00
 featured: False
 reading_time: 15 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/getimg_ai_img-PvYftxPODg66c4Ltk8Q9d.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/getimg_ai_img-PvYftxPODg66c4Ltk8Q9d.jpeg
 excerpt: "W14 — What once required fifty engineers, twenty million dollars, and three years can now be accomplished by five people, two million dollars, and six months. This isn't hyperbole—it's the mathematics of disruption unleashed by AI native businesses across every sector of the economy.
 "
-url: https://tokenwisdom.ghost.io/capital-disrupted-the-ai-native-shift-across-industries/
+url: https://ghost-production-198e.up.railway.app/capital-disrupted-the-ai-native-shift-across-industries/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -35,9 +35,13 @@ tags:
     slug: strategic
   - name: Technology
     slug: technology
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Capital Disrupted—The AI Native Shift Across Industries

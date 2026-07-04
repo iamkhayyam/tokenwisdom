@@ -1,14 +1,14 @@
 ---
 title: "The Greengrocer Goes To Davos"
 slug: the-greengrocer-goes-to-davos
-id: 6974bab905e0200001eea917
+id: 6a4816fb7d31280001f4fafa
 published_at: 2026-01-22T04:43:00.000-08:00
 updated_at: 2026-01-24T06:09:15.000-08:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/a-sophisticated-new-yorker-style-caricat_47zEjh-ETCyPb1ZBiBBUGg_yERSe8mmT_WQMuhN7DfE8g.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/a-sophisticated-new-yorker-style-caricat_47zEjh-ETCyPb1ZBiBBUGg_yERSe8mmT_WQMuhN7DfE8g.png
 excerpt: "W04 - When a system runs on collective pretense, it inevitably breaks. Not when the fiction fails, but when maintaining it costs more than telling the truth. I wrote this in a newsletter. Canada's PM just delivered it at Davos. Either Ottawa's subscribing, or truth has its own timing."
-url: https://tokenwisdom.ghost.io/the-greengrocer-goes-to-davos/
+url: https://ghost-production-198e.up.railway.app/the-greengrocer-goes-to-davos/
 tags:
   - name: Strategic Measures
     slug: strategic
@@ -30,9 +30,11 @@ tags:
     slug: a-closer-look
   - name: 🚨 OP-ED
     slug: opinionated-editorials
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Greengrocer Goes To Davos

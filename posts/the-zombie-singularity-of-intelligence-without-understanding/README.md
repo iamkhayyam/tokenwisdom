@@ -1,14 +1,14 @@
 ---
 title: "The Zombie Singularity of Intelligence Without Understanding"
 slug: the-zombie-singularity-of-intelligence-without-understanding
-id: 6980588132c75a000188f5c7
+id: 6a4816fb7d31280001f4fafd
 published_at: 2026-01-30T00:20:00.000-08:00
 updated_at: 2026-02-07T22:26:56.000-08:00
 featured: False
 reading_time: 19 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/primary-concept-chess-while-the-world-bu_dJV3wC3AR22OgjdeNYaMSA_pk3z5mwZSLmcaXNMsxrKtQ_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/primary-concept-chess-while-the-world-bu_dJV3wC3AR22OgjdeNYaMSA_pk3z5mwZSLmcaXNMsxrKtQ_sd.jpeg
 excerpt: "W05 - TV's \"Person of Interest\" warned us about AI without wisdom. Silicon Valley's response? Scale the zombies, optimize the pattern-matching, and call it progress. We're teaching machines to play chess while forgetting why some pieces shouldn't be sacrificed."
-url: https://tokenwisdom.ghost.io/the-zombie-singularity-of-intelligence-without-understanding/
+url: https://ghost-production-198e.up.railway.app/the-zombie-singularity-of-intelligence-without-understanding/
 tags:
   - name: ANI \ AGI \ ASI
     slug: agi
@@ -30,9 +30,11 @@ tags:
     slug: opinionated-editorials
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Zombie Singularity of Intelligence Without Understanding

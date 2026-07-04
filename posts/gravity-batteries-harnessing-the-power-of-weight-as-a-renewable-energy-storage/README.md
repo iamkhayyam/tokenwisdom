@@ -1,14 +1,14 @@
 ---
 title: "Gravity Batteries: Harnessing the Power of Weight as a Renewable Energy Storage"
 slug: gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage
-id: 670ada9a47b6c200019d054b
+id: 6a4816fb7d31280001f4fa6d
 published_at: 2024-06-27T13:23:00.000-07:00
 updated_at: 2024-10-19T10:14:14.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/img-e4YbMF1p5avUjWuDJRnwh.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/img-e4YbMF1p5avUjWuDJRnwh.jpeg
 excerpt: "W26 - Forget lithium dreams and nuclear schemes. The next energy revolution is yanking us back to basics, courtesy of gravity. Picture Godzilla-sized concrete blocks dancing a glacial ballet, transforming abandoned mines into clean energy cocoons. We're literally dropping the mic on climate change."
-url: https://tokenwisdom.ghost.io/gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage/
+url: https://ghost-production-198e.up.railway.app/gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: renewable-energy
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Gravity Batteries: Harnessing the Power of Weight as a Renewable Energy Storage

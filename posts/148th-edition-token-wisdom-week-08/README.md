@@ -1,20 +1,22 @@
 ---
 title: "148th Edition 🔮 Token Wisdom \ Week 08"
 slug: 148th-edition-token-wisdom-week-08
-id: 699bf62e0cf975000157defb
+id: 6a4816fb7d31280001f4fb04
 published_at: 2026-02-23T08:08:52.000-08:00
 updated_at: 2026-02-23T08:08:51.000-08:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/200.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/200.gif
 excerpt: "This week: Mini brains solve engineering problems. AI reads MRIs at 97.5% accuracy without explaining why. Consciousness might live in electromagnetic fields. Forests changing how they breathe. We built systems that work before we understand them."
-url: https://tokenwisdom.ghost.io/worthafortune/148th-edition-token-wisdom-week-08/
+url: https://ghost-production-198e.up.railway.app/148th-edition-token-wisdom-week-08/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 148th Edition 🔮 Token Wisdom \ Week 08

@@ -1,14 +1,14 @@
 ---
 title: "The Computational Autocracy—Inside the UAE's Blueprint for AI-Powered Control"
 slug: the-computational-autocracy
-id: 6788ac8a78b17200019cef64
+id: 6a4816fb7d31280001f4fa8b
 published_at: 2025-01-16T06:22:08.000-08:00
 updated_at: 2025-04-21T13:51:58.000-07:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/img-w3Av0Vr4KRGkhPnZRzGck.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/img-w3Av0Vr4KRGkhPnZRzGck.jpeg
 excerpt: "W03 - What if your every choice was subtly orchestrated by an invisible digital puppet master? Dive into Abu Dhabi's audacious AI gambit: a chess master's strategy for a future where the lines between choice and command blur. Welcome to the UAE's pioneering realm of computational autocracy."
-url: https://tokenwisdom.ghost.io/the-computational-autocracy/
+url: https://ghost-production-198e.up.railway.app/the-computational-autocracy/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: risk-reward
   - name: Strategic Measures
     slug: strategic
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Computational Autocracy—Inside the UAE's Blueprint for AI-Powered Control

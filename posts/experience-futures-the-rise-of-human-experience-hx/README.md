@@ -1,13 +1,13 @@
 ---
 title: "Experience Futures: The Rise of Human Experience (HX)"
 slug: experience-futures-the-rise-of-human-experience-hx
-id: 65aa0ff5ebf14f0001f3c04f
+id: 6a4816fb7d31280001f4f9f9
 published_at: 2023-05-04T23:08:00.000-07:00
 updated_at: 2024-01-21T14:07:00.000-08:00
 featured: False
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/HXPOV1.png
-url: https://tokenwisdom.ghost.io/experience-futures-the-rise-of-human-experience-hx/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/HXPOV1.png
+url: https://ghost-production-198e.up.railway.app/experience-futures-the-rise-of-human-experience-hx/
 tags:
   - name: User Experience
     slug: user-experience
@@ -21,9 +21,11 @@ tags:
     slug: technology
   - name: Neuroscience
     slug: neuroscience
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Experience Futures: The Rise of Human Experience (HX)

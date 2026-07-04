@@ -1,14 +1,14 @@
 ---
 title: "I'm an ElevenLabs Pro!"
 slug: im-an-elevenlabs-pro
-id: 65fa3184b29fd300012f676b
+id: 6a4816fb7d31280001f4fa39
 published_at: 2024-03-20T13:41:12.000-07:00
 updated_at: 2026-01-02T18:53:37.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/voice-synthesis-mouth.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/voice-synthesis-mouth.png
 excerpt: "Discover the revolution in voice synthesis with our deep dive into ElevenLabs: groundbreaking technology for animation and performance capture. Sample the magic ✨"
-url: https://tokenwisdom.ghost.io/im-an-elevenlabs-pro/
+url: https://ghost-production-198e.up.railway.app/im-an-elevenlabs-pro/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -24,9 +24,11 @@ tags:
     slug: language-models
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # I'm an ElevenLabs Pro!

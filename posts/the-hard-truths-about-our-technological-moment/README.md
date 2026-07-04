@@ -1,14 +1,14 @@
 ---
 title: "The Hard Truths About Our Technological Moment"
 slug: the-hard-truths-about-our-technological-moment
-id: 68d0f7d2c03c2700012d9b07
+id: 6a4816fb7d31280001f4fad2
 published_at: 2025-09-23T08:02:00.000-07:00
 updated_at: 2025-09-26T08:17:12.000-07:00
 featured: False
 reading_time: 17 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/a-sophisticated-new-yorker-magazine-cove_AHsJs1ShS8q9F_laQlRMJw_WvKnEOzmRW2TWFLxg7HOQg.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/a-sophisticated-new-yorker-magazine-cove_AHsJs1ShS8q9F_laQlRMJw_WvKnEOzmRW2TWFLxg7HOQg.jpeg
 excerpt: "Five Silicon Valley 'visionaries' walk into a bar, each convinced they're revolutionizing the future. Meanwhile, AI evolves faster than ethics, institutions crumble, and engineers forgot physics exists. Welcome to our delightfully doomed moment."
-url: https://tokenwisdom.ghost.io/the-hard-truths-about-our-technological-moment/
+url: https://ghost-production-198e.up.railway.app/the-hard-truths-about-our-technological-moment/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: privacy
   - name: Philosophical
     slug: philosophy
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Hard Truths About Our Technological Moment

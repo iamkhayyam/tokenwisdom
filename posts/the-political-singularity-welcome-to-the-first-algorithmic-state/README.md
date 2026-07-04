@@ -1,14 +1,14 @@
 ---
 title: "The Political Singularity—Welcome to the First Algorithmic State"
 slug: the-political-singularity-welcome-to-the-first-algorithmic-state
-id: 6791ecbc81993f00014a74e3
+id: 6a4816fb7d31280001f4fa8d
 published_at: 2025-01-23T08:08:58.000-08:00
 updated_at: 2025-04-21T13:51:42.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/01/Leonardo_Phoenix_09_A_classical_Roman_statue_of_Justice_holdin_1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/Leonardo_Phoenix_09_A_classical_Roman_statue_of_Justice_holdin_1.jpg
 excerpt: "W04 - When Trump launched his meme coin, traditional politics died. For the first time ever, you can buy a direct stake in presidential success. Welcome to the Political Casino, where influence isn't wielded in corridors of power—it's flashed in market volatility."
-url: https://tokenwisdom.ghost.io/the-political-singularity-welcome-to-the-first-algorithmic-state/
+url: https://ghost-production-198e.up.railway.app/the-political-singularity-welcome-to-the-first-algorithmic-state/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -24,9 +24,11 @@ tags:
     slug: strategic
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Political Singularity—Welcome to the First Algorithmic State

@@ -1,20 +1,22 @@
 ---
 title: "45th Edition 🔮 Pearls of Wisdom ⑊ W08"
 slug: 45th-edition-token-wisdom
-id: 65e55c1f39bf4b0001412d5a
+id: 6a4816fb7d31280001f4fa2f
 published_at: 2024-03-04T12:32:45.000-08:00
 updated_at: 2025-01-12T11:59:45.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-4JtvS2EHNEI8E8TuyxBgL.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-4JtvS2EHNEI8E8TuyxBgL.png
 excerpt: "As your guide to this remarkable conflux, imagine your mind as a kaleidoscopic lens through which the pulsating beats of technology, creativity, and human endeavor are refracted into a spectrum of stellar narratives."
-url: https://tokenwisdom.ghost.io/worthafortune/45th-edition-token-wisdom/
+url: https://ghost-production-198e.up.railway.app/45th-edition-token-wisdom/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 45th Edition 🔮 Pearls of Wisdom ⑊ W08

@@ -1,14 +1,14 @@
 ---
 title: "Navigating the Tightrope of AI Transparency and the Risk of Overexposure"
 slug: navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure
-id: 65e62bfc507b600001e20fcf
+id: 6a4816fb7d31280001f4fa30
 published_at: 2024-03-04T12:36:48.000-08:00
 updated_at: 2024-09-21T20:38:15.000-07:00
 featured: False
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-w70cRcM19NDqUJmas2TAp.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-w70cRcM19NDqUJmas2TAp.jpeg
 excerpt: "W08 - Dive into the tightrope walk of AI transparency: balancing crucial clarity against the pitfalls of overexposure, with insights on protecting progress, fostering trust, and ensuring ethical AI advancement."
-url: https://tokenwisdom.ghost.io/navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure/
+url: https://ghost-production-198e.up.railway.app/navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,11 @@ tags:
     slug: opinionated-editorials
   - name: Deep Tech
     slug: deeptech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Navigating the Tightrope of AI Transparency and the Risk of Overexposure

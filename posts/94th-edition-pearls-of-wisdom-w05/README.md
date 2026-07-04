@@ -1,20 +1,22 @@
 ---
 title: "94th Edition 🔮 Pearls of Wisdom ⑊ W06"
 slug: 94th-edition-pearls-of-wisdom-w05
-id: 67ac0777e23e1d0001789ae1
+id: 6a4816fb7d31280001f4fa92
 published_at: 2025-02-11T18:53:12.000-08:00
 updated_at: 2025-02-16T08:34:00.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/img-NCOJfeWAZ5BpmmBF9pjGW.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/img-NCOJfeWAZ5BpmmBF9pjGW.jpeg
 excerpt: "W06 - From AI-designed chips that baffle humans to button boards revolutionizing dog communication, this week's Token Wisdom serves a smorgasbord of tech marvels. Dive into quantum breakthroughs, ancient texts, and African innovations that challenge the status quo."
-url: https://tokenwisdom.ghost.io/worthafortune/94th-edition-pearls-of-wisdom-w05/
+url: https://ghost-production-198e.up.railway.app/94th-edition-pearls-of-wisdom-w05/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 94th Edition 🔮 Pearls of Wisdom ⑊ W06

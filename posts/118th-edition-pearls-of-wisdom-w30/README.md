@@ -1,20 +1,22 @@
 ---
 title: "118th Edition 🔮 Pearls of Wisdom ⑊ W30"
 slug: 118th-edition-pearls-of-wisdom-w30
-id: 688f85150839ea000123e3b9
+id: 6a4816fb7d31280001f4fac3
 published_at: 2025-07-28T09:20:00.000-07:00
 updated_at: 2025-09-15T00:51:58.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/08/img-t0oijoYNYCez8OhY2MvzR.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/08/img-t0oijoYNYCez8OhY2MvzR.png
 excerpt: "Critical thinking in the AI age, hacked data for sale, brain cells powering computers, and a mysterious door to hidden reality? Welcome to Token Wisdom's 118th edition—where technology's promises meet its perils. Curiosity required, skepticism recommended!"
-url: https://tokenwisdom.ghost.io/worthafortune/118th-edition-pearls-of-wisdom-w30/
+url: https://ghost-production-198e.up.railway.app/118th-edition-pearls-of-wisdom-w30/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 118th Edition 🔮 Pearls of Wisdom ⑊ W30

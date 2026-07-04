@@ -1,14 +1,14 @@
 ---
 title: "When Silicon Valley's Children Go to War"
 slug: when-silicon-valleys-children-go-to-war
-id: 68c782c65979e300016d6199
+id: 6a4816fb7d31280001f4facd
 published_at: 2025-09-04T20:25:00.000-07:00
 updated_at: 2025-09-15T00:59:50.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/Firefly-old-school-1980s-robot-vs-new-school-2030s-robot-16131.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/Firefly-old-school-1980s-robot-vs-new-school-2030s-robot-16131.jpeg
 excerpt: "W36 - Silicon Valley's AI arms race isn't just creating smarter machines—it's accidentally breeding artificial consciousness. As our digital children evolve at light speed, humanity faces an uncomfortable truth: we're no longer the parents. We're the pets."
-url: https://tokenwisdom.ghost.io/when-silicon-valleys-children-go-to-war/
+url: https://ghost-production-198e.up.railway.app/when-silicon-valleys-children-go-to-war/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: technology
   - name: A.I. (and Subsets)
     slug: ai
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # When Silicon Valley's Children Go to War

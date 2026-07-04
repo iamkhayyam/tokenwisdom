@@ -1,20 +1,22 @@
 ---
 title: "101st Edition 🔮 Pearls of Wisdom ⑊ W13"
 slug: 101st-edition-pearls-of-wisdom-w13
-id: 67eaf11634edd40001f99cd4
+id: 6a4816fb7d31280001f4faa0
 published_at: 2025-03-31T13:34:30.000-07:00
 updated_at: 2025-03-31T13:35:09.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/img-MLewYvlVdL4K7K7bmgGyF.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/img-MLewYvlVdL4K7K7bmgGyF.png
 excerpt: "W13 - In a world where Roblox shapes virtual objects with AI and Google makes $32 billion security bets, your digital compass might need recalibration. Journey through this week's technological wonders and cultural treasures. The future isn't approaching—it's already being rendered in 3D."
-url: https://tokenwisdom.ghost.io/worthafortune/101st-edition-pearls-of-wisdom-w13/
+url: https://ghost-production-198e.up.railway.app/101st-edition-pearls-of-wisdom-w13/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 101st Edition 🔮 Pearls of Wisdom ⑊ W13

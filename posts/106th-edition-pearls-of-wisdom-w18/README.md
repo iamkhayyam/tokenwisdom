@@ -1,20 +1,22 @@
 ---
 title: "106th Edition 🔮 Pearls of Wisdom ⑊ W18"
 slug: 106th-edition-pearls-of-wisdom-w18
-id: 68190fc48dc73700011a9571
+id: 6a4816fb7d31280001f4faaa
 published_at: 2025-05-05T13:41:52.000-07:00
 updated_at: 2025-05-05T13:41:52.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/05/img-w5Y7djTgNwzaVkIW2aNo6.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/img-w5Y7djTgNwzaVkIW2aNo6.png
 excerpt: "As gravity reveals its computational nature and quantum solves the impossible, our digital and physical realms converge. Amid tech milestones and AI's expansion, we're witnessing the universe's source code rewrite itself—2025's technological renaissance."
-url: https://tokenwisdom.ghost.io/worthafortune/106th-edition-pearls-of-wisdom-w18/
+url: https://ghost-production-198e.up.railway.app/106th-edition-pearls-of-wisdom-w18/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 106th Edition 🔮 Pearls of Wisdom ⑊ W18

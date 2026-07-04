@@ -1,0 +1,91 @@
+{
+  "id": "6a4824857d31280001f51004",
+  "uuid": "39c3dee1-14b1-4eb1-a395-77bc0389fc5b",
+  "title": "W13: 50th Edition \\ Side B 📺",
+  "slug": "w13-timewellspent-49-2",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/04/tv-man-tv-head.gif",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2026-07-03T14:07:17.000-07:00",
+  "updated_at": "2026-07-03T14:07:17.000-07:00",
+  "published_at": "2024-04-01T12:12:07.000-07:00",
+  "custom_excerpt": "Dive into the stories that transformed industries: from the Adidas-Puma feud to Chappelle's cultural impact, the AI ascent to retro computing renaissance, all in this edition of Token Wisdom.",
+  "canonical_url": null,
+  "comment_id": "6a4824857d31280001f51004",
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f98e",
+      "name": "📺 Time Well Spent",
+      "slug": "timewellspent",
+      "description": "The week's top ten must-watch YouTube videos that is Time Well Spent, curated to save you time and deliver the Alph-alpha™️",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/200w-2.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": "#eb510f",
+      "url": "https://ghost-production-198e.up.railway.app/tag/timewellspent/"
+    }
+  ],
+  "url": "https://ghost-production-198e.up.railway.app/w13-timewellspent-49-2/",
+  "excerpt": "",
+  "reading_time": 2,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "6a4816f97d31280001f4f98e",
+      "name": "📺 Time Well Spent",
+      "slug": "timewellspent",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
+    }
+  ],
+  "local_feature_image": "w13-timewellspent-49-2_feature__tv-man-tv-head.gif"
+}

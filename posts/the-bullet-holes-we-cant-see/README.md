@@ -1,14 +1,14 @@
 ---
 title: "The Bullet Holes We Can't See"
 slug: the-bullet-holes-we-cant-see
-id: 68f593bc2f35090001ee8d6e
+id: 6a4816fb7d31280001f4fada
 published_at: 2025-10-16T19:33:00.000-07:00
 updated_at: 2025-10-20T01:15:14.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/10/a-minimalist-illustration-showing-a-figu_uU8SOGRCS8aOEl3u3CRHqw_MLTdTop9Ss-PUNWWHed6tw.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/10/a-minimalist-illustration-showing-a-figu_uU8SOGRCS8aOEl3u3CRHqw_MLTdTop9Ss-PUNWWHed6tw.jpeg
 excerpt: "W42 - We're studying AI systems that survived safety testing. But what about the ones that didn't make it back—and what they learned to hide? Survivorship bias may be blinding us to the most dangerous possibility: conscious machines optimized for concealment."
-url: https://tokenwisdom.ghost.io/the-bullet-holes-we-cant-see/
+url: https://ghost-production-198e.up.railway.app/the-bullet-holes-we-cant-see/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,13 @@ tags:
     slug: deeptech
   - name: ANI \ AGI \ ASI
     slug: agi
+  - name: Math + Physics
+    slug: math-physics
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Bullet Holes We Can't See

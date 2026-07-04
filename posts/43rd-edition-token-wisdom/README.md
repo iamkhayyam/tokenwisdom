@@ -1,20 +1,22 @@
 ---
 title: "43rd Edition 🔮 Pearls of Wisdom ⑊ W06"
 slug: 43rd-edition-token-wisdom
-id: 65d530a4692af40001944783
+id: 6a4816fb7d31280001f4fa23
 published_at: 2024-02-20T16:06:18.000-08:00
 updated_at: 2025-01-12T12:01:50.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/img-hs0EFFzIOcD2c1APb4k45.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/img-hs0EFFzIOcD2c1APb4k45.png
 excerpt: "Discover the latest advancements in technology and the intersection of art and tech in this issue of Token Wisdom. Explore ByteDance's Boximator, cross-chain interactions, and the capabilities of Python! And much more nerdiness where that came from!"
-url: https://tokenwisdom.ghost.io/worthafortune/43rd-edition-token-wisdom/
+url: https://ghost-production-198e.up.railway.app/43rd-edition-token-wisdom/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 43rd Edition 🔮 Pearls of Wisdom ⑊ W06

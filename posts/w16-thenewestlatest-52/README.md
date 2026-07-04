@@ -1,20 +1,22 @@
 ---
 title: "W16: 53rd Edition \ Side A🎉"
 slug: w16-thenewestlatest-52
-id: 6630b6dda7d59a000155ff3e
+id: 6a4816fb7d31280001f4fa4c
 published_at: 2024-04-30T12:46:30.000-07:00
 updated_at: 2024-10-11T00:09:01.000-07:00
 featured: False
 reading_time: 14 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/04/img-y3b6gkgv8ehoXidtheHeu-1.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/img-y3b6gkgv8ehoXidtheHeu-1.jpeg
 excerpt: "Explore a labyrinth of emerging technologies and cultural shifts in this week's Token Wisdom! Dive into analog allure, digital repatriation, AI innovations, and beyond. Unpack how today's tech reshapes our connections and values. "
-url: https://tokenwisdom.ghost.io/newestlatest/w16-thenewestlatest-52/
+url: https://ghost-production-198e.up.railway.app/w16-thenewestlatest-52/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W16: 53rd Edition \ Side A🎉

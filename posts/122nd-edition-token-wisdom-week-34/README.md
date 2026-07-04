@@ -1,20 +1,22 @@
 ---
 title: "122nd Edition 🔮 Token Wisdom  ⑊ W34"
 slug: 122nd-edition-token-wisdom-week-34
-id: 68c723b3ce413500019d5fbe
+id: 6a4816fb7d31280001f4fac7
 published_at: 2025-08-24T19:21:00.000-07:00
 updated_at: 2025-09-15T00:49:40.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/img-cwFWoNIWXtL4pkS72aYg8.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/img-cwFWoNIWXtL4pkS72aYg8.jpeg
 excerpt: "AI disrupts industries while swarm intelligence reveals nature's genius. Explore how artificial intelligence transforms business, collective behavior solves complex problems, and semiconductors revolutionize tech. From corporate boardrooms to nature's blueprint for machine learning."
-url: https://tokenwisdom.ghost.io/worthafortune/122nd-edition-token-wisdom-week-34/
+url: https://ghost-production-198e.up.railway.app/122nd-edition-token-wisdom-week-34/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 122nd Edition 🔮 Token Wisdom  ⑊ W34

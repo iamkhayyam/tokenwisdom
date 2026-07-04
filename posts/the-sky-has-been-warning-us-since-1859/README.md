@@ -1,15 +1,15 @@
 ---
 title: "The Sky Has Been Warning Us Since 1859"
 slug: the-sky-has-been-warning-us-since-1859
-id: 69c9c04e371584000109bc34
+id: 6a4816fb7d31280001f4fb0e
 published_at: 2026-03-26T17:49:00.000-07:00
 updated_at: 2026-03-31T00:17:05.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg
 excerpt: "W13 - The sun fired a warning shot in 1859. We had 165 years. We wrote reports, introduced legislation, held hearings — and kept building a bigger antenna. The solution to the oldest infrastructure problem in the modern world exists. It just isn't where anyone thought to look.
 "
-url: https://tokenwisdom.ghost.io/the-sky-has-been-warning-us-since-1859/
+url: https://ghost-production-198e.up.railway.app/the-sky-has-been-warning-us-since-1859/
 tags:
   - name: Technology
     slug: technology
@@ -31,9 +31,11 @@ tags:
     slug: unsolicited-advice
   - name: 🚨 OP-ED
     slug: opinionated-editorials
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Sky Has Been Warning Us Since 1859

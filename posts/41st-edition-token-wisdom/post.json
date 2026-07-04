@@ -1,11 +1,11 @@
 {
-  "id": "65cb139e62726e000102c7c5",
+  "id": "6a4816fb7d31280001f4fa1a",
   "uuid": "74fb1689-1e23-48d7-bedf-3a19ade9d9ea",
   "title": "41st Edition 🔮 Pearls of Wisdom ⑊ W04",
   "slug": "41st-edition-token-wisdom",
-  "html": "<h4 id=\"now-begins-a-story\">:: Now begins a story...</h4><p>May I present to you, a finely curated section of a fine collection of the wonderful web we weave with a weekly roundup of bits and pieces from the far corners of the super information highway that I like to call — Token Wisdom ✨</p><figure class=\"kg-card kg-image-card kg-card-hascaption\"><img src=\"https://tokenwisdom.ghost.io/content/images/2024/02/token-wisdom-divider.gif\" class=\"kg-image\" alt=\"\" loading=\"lazy\" width=\"625\" height=\"72\" srcset=\"https://tokenwisdom.ghost.io/content/images/size/w600/2024/02/token-wisdom-divider.gif 600w, https://tokenwisdom.ghost.io/content/images/2024/02/token-wisdom-divider.gif 625w\"><figcaption><span style=\"white-space: pre-wrap;\">Taylor Swift swiftly adapts to what always happens; unpredictability... </span></figcaption></figure><blockquote class=\"kg-blockquote-alt\"><strong>Just because you make a good plan, doesn't mean that's what's gonna happen.</strong></blockquote><figure class=\"kg-card kg-image-card\"><img src=\"https://tokenwisdom.ghost.io/content/images/2024/07/token-wisdom-round-logo---01-5.png\" class=\"kg-image\" alt=\"\" loading=\"lazy\" width=\"500\" height=\"500\"></figure><hr><p>⌐◨-◨<br><em>Keeping up in this new generative mega-multi-meta-DAO-verse makes it hard to quantum all that spatial neural netting. You down with GPT? Ya, you know me. That's why I package up a small part of the internet that catches my eye, percolates my thoughts, stirs my mind, and share it with you from time to time.</em></p>",
+  "html": "<h4 id=\"now-begins-a-story\">:: Now begins a story...</h4><p>May I present to you, a finely curated section of a fine collection of the wonderful web we weave with a weekly roundup of bits and pieces from the far corners of the super information highway that I like to call — Token Wisdom ✨</p><figure class=\"kg-card kg-image-card kg-card-hascaption\"><img src=\"https://ghost-production-198e.up.railway.app/content/images/2024/02/token-wisdom-divider.gif\" class=\"kg-image\" alt=\"\" loading=\"lazy\" width=\"625\" height=\"72\" srcset=\"https://ghost-production-198e.up.railway.app/content/images/size/w600/2024/02/token-wisdom-divider.gif 600w, https://ghost-production-198e.up.railway.app/content/images/2024/02/token-wisdom-divider.gif 625w\"><figcaption><span style=\"white-space: pre-wrap;\">Taylor Swift swiftly adapts to what always happens; unpredictability... </span></figcaption></figure><blockquote class=\"kg-blockquote-alt\"><strong>Just because you make a good plan, doesn't mean that's what's gonna happen.</strong></blockquote><figure class=\"kg-card kg-image-card\"><img src=\"https://ghost-production-198e.up.railway.app/content/images/2024/07/token-wisdom-round-logo---01-5.png\" class=\"kg-image\" alt=\"\" loading=\"lazy\" width=\"500\" height=\"500\"></figure><hr><p>⌐◨-◨<br><em>Keeping up in this new generative mega-multi-meta-DAO-verse makes it hard to quantum all that spatial neural netting. You down with GPT? Ya, you know me. That's why I package up a small part of the internet that catches my eye, percolates my thoughts, stirs my mind, and share it with you from time to time.</em></p>",
   "plaintext": ":: Now begins a story...\n\nMay I present to you, a finely curated section of a fine collection of the wonderful web we weave with a weekly roundup of bits and pieces from the far corners of the super information highway that I like to call — Token Wisdom ✨\n\nJust because you make a good plan, doesn't mean that's what's gonna happen.\n\n⌐◨-◨\nKeeping up in this new generative mega-multi-meta-DAO-verse makes it hard to quantum all that spatial neural netting. You down with GPT? Ya, you know me. That's why I package up a small part of the internet that catches my eye, percolates my thoughts, stirs my mind, and share it with you from time to time.",
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/img-DgMcs0logmdA7WivYZoOT.jpeg",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/img-DgMcs0logmdA7WivYZoOT.jpeg",
   "featured": false,
   "visibility": "members",
   "created_at": "2024-02-12T23:00:46.000-08:00",
@@ -16,9 +16,9 @@
   "comment_id": "65cb139e62726e000102c7c5",
   "authors": [
     {
-      "id": "6895a3000d912d00085b277d",
-      "name": "🌶️ @iamkhayyam ",
-      "slug": "iamkhayyam",
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
       "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
       "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
       "bio": null,
@@ -26,8 +26,6 @@
       "location": null,
       "facebook": null,
       "twitter": "@worthafortune",
-      "meta_title": null,
-      "meta_description": null,
       "threads": null,
       "bluesky": null,
       "mastodon": null,
@@ -35,16 +33,18 @@
       "youtube": null,
       "instagram": null,
       "linkedin": null,
-      "url": "https://tokenwisdom.ghost.io/author/iamkhayyam/"
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
   "tags": [
     {
-      "id": "65cf03eedae46f00014de101",
+      "id": "6a4816f97d31280001f4f9d2",
       "name": "✨ Pearls of Wisdom",
       "slug": "worthafortune",
       "description": "A finely curated collection of the wonderful web we weave with a weekly roundup of bits and pieces from the far corners of the super information highway ✨",
-      "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/05/tumblr_lk1bjustCg1qzznnqo1_500-2.gif",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/05/tumblr_lk1bjustCg1qzznnqo1_500-2.gif",
       "visibility": "public",
       "og_image": null,
       "og_title": null,
@@ -58,10 +58,31 @@
       "codeinjection_foot": null,
       "canonical_url": null,
       "accent_color": null,
-      "url": "https://tokenwisdom.ghost.io/tag/worthafortune/"
+      "url": "https://ghost-production-198e.up.railway.app/tag/worthafortune/"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9dc",
+      "name": "#Import 2026-07-03 20:09",
+      "slug": "hash-import-2026-07-03-20-09",
+      "description": null,
+      "feature_image": null,
+      "visibility": "internal",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/404/"
     }
   ],
-  "url": "https://tokenwisdom.ghost.io/worthafortune/41st-edition-token-wisdom/",
+  "url": "https://ghost-production-198e.up.railway.app/41st-edition-token-wisdom/",
   "excerpt": "Holographic Fashion Redefines Luxury, AI Interaction, UK Supports Immersive Tech, Anthropic Raises Safety Concerns, Exploring Resilience, Infinite Graphs, New Electron Behavior, Expanding Consciousness Research, Netflix Adapts, Google's AI Ethics Scrutiny",
   "reading_time": 14,
   "og_image": null,
@@ -74,17 +95,23 @@
   "meta_description": null,
   "tag_details": [
     {
-      "id": "65cf03eedae46f00014de101",
+      "id": "6a4816f97d31280001f4f9d2",
       "name": "✨ Pearls of Wisdom",
       "slug": "worthafortune",
       "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9dc",
+      "name": "#Import 2026-07-03 20:09",
+      "slug": "hash-import-2026-07-03-20-09",
+      "visibility": "internal"
     }
   ],
   "author_details": [
     {
-      "id": "6895a3000d912d00085b277d",
-      "name": "🌶️ @iamkhayyam ",
-      "slug": "iamkhayyam"
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
     }
   ],
   "local_feature_image": "41st-edition-token-wisdom_feature__img-DgMcs0logmdA7WivYZoOT.jpeg"

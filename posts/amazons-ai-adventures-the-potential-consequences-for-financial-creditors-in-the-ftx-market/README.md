@@ -1,13 +1,13 @@
 ---
 title: "Amazon’s AI Adventures: The Potential Consequences for Financial Creditors in the FTX Market"
 slug: amazons-ai-adventures-the-potential-consequences-for-financial-creditors-in-the-ftx-market
-id: 65a9d3a7ebf14f0001f3bed7
+id: 6a4816fb7d31280001f4f9ed
 published_at: 2023-09-26T18:46:00.000-07:00
 updated_at: 2024-01-18T17:50:57.000-08:00
 featured: False
 reading_time: 2 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/1_8pRLVs5Fnc5CorSQ-Dxe2Q.jpg
-url: https://tokenwisdom.ghost.io/amazons-ai-adventures-the-potential-consequences-for-financial-creditors-in-the-ftx-market/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/1_8pRLVs5Fnc5CorSQ-Dxe2Q.jpg
+url: https://ghost-production-198e.up.railway.app/amazons-ai-adventures-the-potential-consequences-for-financial-creditors-in-the-ftx-market/
 tags:
   - name: Economic  ≠
     slug: economic-inequality
@@ -19,9 +19,11 @@ tags:
     slug: strategic
   - name: Big Tech
     slug: big-tech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Amazon’s AI Adventures: The Potential Consequences for Financial Creditors in the FTX Market

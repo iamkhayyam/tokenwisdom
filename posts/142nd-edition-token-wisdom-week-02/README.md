@@ -1,20 +1,22 @@
 ---
 title: "142nd Edition 🔮 Token Wisdom \ Week 02"
 slug: 142nd-edition-token-wisdom-week-02
-id: 6963b8a259cfb10001d21916
+id: 6a4816fb7d31280001f4faf7
 published_at: 2026-01-11T14:00:07.000-08:00
 updated_at: 2026-01-13T18:03:41.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/01/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_lo_1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_lo_1.jpg
 excerpt: "This week: Corporate power reshapes society while AI disrupts traditional industries. From ranchers turning to carbon credits to tech giants consolidating control, we explore how surveillance capitalism and algorithmic efficiency are rewriting the rules of business, law, and human autonomy."
-url: https://tokenwisdom.ghost.io/worthafortune/142nd-edition-token-wisdom-week-02/
+url: https://ghost-production-198e.up.railway.app/142nd-edition-token-wisdom-week-02/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 142nd Edition 🔮 Token Wisdom \ Week 02

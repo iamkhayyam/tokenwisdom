@@ -1,15 +1,15 @@
 ---
 title: "The Room Was Already Set Before You Walked In"
 slug: the-room-was-already-set-before-you-walked-in
-id: 69b71aa405f1150001507a67
+id: 6a4816fb7d31280001f4fb0a
 published_at: 2026-03-12T14:02:00.000-07:00
 updated_at: 2026-03-15T14:06:17.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/a-ink-illustrated-new-yorker-cover-style_1sDinQ6sSUOYZ0X72o6G0A_6qT4cZoKT9aNuL00Bg3Kqw_cover_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/a-ink-illustrated-new-yorker-cover-style_1sDinQ6sSUOYZ0X72o6G0A_6qT4cZoKT9aNuL00Bg3Kqw_cover_sd.jpeg
 excerpt: "W11 - You have spent your whole life learning to spot the argument. Nobody told you the argument was never the point. The persuasion is the last nail. Pre-suasion is the house. And someone else already built it.
 "
-url: https://tokenwisdom.ghost.io/the-room-was-already-set-before-you-walked-in/
+url: https://ghost-production-198e.up.railway.app/the-room-was-already-set-before-you-walked-in/
 tags:
   - name: Persuasion
     slug: grifters
@@ -31,9 +31,11 @@ tags:
     slug: neuroscience
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Room Was Already Set Before You Walked In

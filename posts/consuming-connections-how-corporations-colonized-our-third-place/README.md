@@ -1,15 +1,15 @@
 ---
 title: "Consuming Connections—How Corporations Colonized Our Third Place"
 slug: consuming-connections-how-corporations-colonized-our-third-place
-id: 67e6c51234edd40001f99bf7
+id: 6a4816fb7d31280001f4fa9f
 published_at: 2025-03-28T09:37:25.000-07:00
 updated_at: 2025-03-31T14:05:21.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/03/a-cartoon-illustration-of-the-starbucks-_jQxe6b8zSyO6ifbCfA7UeA_McOvtEHhSjOKU6DjzwpY7g.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/03/a-cartoon-illustration-of-the-starbucks-_jQxe6b8zSyO6ifbCfA7UeA_McOvtEHhSjOKU6DjzwpY7g.jpeg
 excerpt: "W13 - Remember when Starbucks was your 'third place'? Their recent 'buy something or leave' policy finally exposed what many suspected: the emperor never had clothes. From Instagram museums to food halls, we're now surrounded by spectacular substitutes for authentic community.
 "
-url: https://tokenwisdom.ghost.io/consuming-connections-how-corporations-colonized-our-third-place/
+url: https://ghost-production-198e.up.railway.app/consuming-connections-how-corporations-colonized-our-third-place/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -29,9 +29,11 @@ tags:
     slug: marketing
   - name: Strategic Measures
     slug: strategic
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Consuming Connections—How Corporations Colonized Our Third Place

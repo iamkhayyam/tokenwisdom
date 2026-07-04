@@ -1,20 +1,22 @@
 ---
 title: "Intelligence at the Edge of Chaos: Beyond the Mechanical Mind"
 slug: intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind
-id: 675e36bc5cb1d70001c50b4f
+id: 6a4816fb7d31280001f4fa84
 published_at: 2024-12-15T07:56:54.000-08:00
 updated_at: 2025-04-25T19:39:14.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/Leonardo_Lightning_XL_Create_an_image_depicting_the_intersecti_0.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/Leonardo_Lightning_XL_Create_an_image_depicting_the_intersecti_0.jpg
 excerpt: "W49 - Imagine capturing a hurricane in a jar. That's our AI folly—reducing cognition to a glorified Erector Set. We're building elaborate mousetraps while true intelligence slips through our fingers. It's time to smash our epistemological camera and rebuild from scratch."
-url: https://tokenwisdom.ghost.io/intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind/
+url: https://ghost-production-198e.up.railway.app/intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Intelligence at the Edge of Chaos: Beyond the Mechanical Mind

@@ -1,14 +1,14 @@
 ---
 title: "The $1.5 Billion Fishing Trip—How North Korea Caught the Biggest Crypto Whale Without Writing a Single Line of Code"
 slug: the-1-5-billion-fishing-trip
-id: 67c08175a27f550001a55d4e
+id: 6a4816fb7d31280001f4fa97
 published_at: 2025-02-27T07:39:07.000-08:00
 updated_at: 2025-04-21T13:50:33.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/img-88Lsp12SYjlqsQ0HO8DeS.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/img-88Lsp12SYjlqsQ0HO8DeS.jpeg
 excerpt: "W09 - North Korea's $1.5 billion crypto heist: No code, just a polite request. When state-of-the-art security crumbles with a click, who needs hackers? Dive into the tragicomic tale of how the world's most unhackable piggy bank was emptied by simply saying \"please.\""
-url: https://tokenwisdom.ghost.io/the-1-5-billion-fishing-trip/
+url: https://ghost-production-198e.up.railway.app/the-1-5-billion-fishing-trip/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: economic-inequality
   - name: Cyber \ Security
     slug: cybersecurity
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The $1.5 Billion Fishing Trip—How North Korea Caught the Biggest Crypto Whale Without Writing a Single Line of Code

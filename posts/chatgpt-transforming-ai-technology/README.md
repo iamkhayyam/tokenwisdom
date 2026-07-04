@@ -1,14 +1,14 @@
 ---
 title: "ChatGPT: Transforming AI Technology"
 slug: chatgpt-transforming-ai-technology
-id: 65e510c339bf4b0001412d44
+id: 6a4816fb7d31280001f4fa2e
 published_at: 2023-05-04T14:21:00.000-07:00
 updated_at: 2024-03-04T14:25:16.000-08:00
 featured: False
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-yoKRdvkk5rdgLRAKFt9fC.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-yoKRdvkk5rdgLRAKFt9fC.jpeg
 excerpt: "Embark on the odyssey of ChatGPT, where AI dazzles with linguistic mastery, echoing the human essence. This digital maestro ushers in a new communication era, threading a careful path between technological marvel and ethical canvas, reshaping the tapestry of society's future."
-url: https://tokenwisdom.ghost.io/chatgpt-transforming-ai-technology/
+url: https://ghost-production-198e.up.railway.app/chatgpt-transforming-ai-technology/
 tags:
   - name: OpenAI + e/acc
     slug: gpt
@@ -22,9 +22,11 @@ tags:
     slug: productivity
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # ChatGPT: Transforming AI Technology

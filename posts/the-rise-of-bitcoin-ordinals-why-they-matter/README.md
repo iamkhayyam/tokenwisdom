@@ -1,13 +1,13 @@
 ---
 title: "The Rise of Bitcoin Ordinals: Why They Matter"
 slug: the-rise-of-bitcoin-ordinals-why-they-matter
-id: 65a9f117ebf14f0001f3bf92
+id: 6a4816fb7d31280001f4f9f4
 published_at: 2023-02-16T19:51:00.000-08:00
 updated_at: 2024-01-19T18:29:16.000-08:00
 featured: True
 reading_time: 5 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/27f714d7-5980-4449-a4b3-cbe1b800cdeb.jpeg
-url: https://tokenwisdom.ghost.io/featured/the-rise-of-bitcoin-ordinals-why-they-matter/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/27f714d7-5980-4449-a4b3-cbe1b800cdeb.jpeg
+url: https://ghost-production-198e.up.railway.app/the-rise-of-bitcoin-ordinals-why-they-matter/
 tags:
   - name: Bitcoin \ Ordinals
     slug: bitcoin
@@ -15,9 +15,11 @@ tags:
     slug: hash-unlisted
   - name: Blockchain \ DLT
     slug: blockchain
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Rise of Bitcoin Ordinals: Why They Matter

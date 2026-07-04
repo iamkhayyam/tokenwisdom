@@ -1,15 +1,15 @@
 ---
 title: "The Proentropic Weed Manifesto"
 slug: the-proentropic-weed-manifesto
-id: 69c18d9976853700012a5526
+id: 6a4816fb7d31280001f4fb0c
 published_at: 2026-03-20T13:38:00.000-07:00
 updated_at: 2026-03-24T05:23:37.000-07:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/a-new-yorker-style-editorial-illustratio_QjfqSMFuQaKvReFwk6dShg_fSrVTEJbSXGHFtAca4Cj4w_cover_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/a-new-yorker-style-editorial-illustratio_QjfqSMFuQaKvReFwk6dShg_fSrVTEJbSXGHFtAca4Cj4w_cover_sd.jpeg
 excerpt: "W12 - We prize orchids — for rarity, for control, for perfect optimization — and we scrub away the mess. Reality isn’t a greenhouse; orchids perish outside. Physics guarantees disorder. Design for weeds: systems that gain strength from chaos. This is no metaphor: an actual physical law ensures it.
 "
-url: https://tokenwisdom.ghost.io/the-proentropic-weed-manifesto/
+url: https://ghost-production-198e.up.railway.app/the-proentropic-weed-manifesto/
 tags:
   - name: A.I. (and Subsets)
     slug: ai
@@ -31,9 +31,11 @@ tags:
     slug: a-closer-look
   - name: Risk \ Reward
     slug: risk-reward
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Proentropic Weed Manifesto

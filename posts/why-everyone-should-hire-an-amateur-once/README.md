@@ -1,13 +1,13 @@
 ---
 title: "Why Everyone Should Hire An Amateur, Once"
 slug: why-everyone-should-hire-an-amateur-once
-id: 65ab51bb4cf93c000184b753
+id: 6a4816fb7d31280001f4fa0f
 published_at: 2013-05-26T10:12:57.000-07:00
 updated_at: 2024-01-20T11:23:28.000-08:00
 featured: False
 reading_time: 2 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/0_y28IgBkliw8LdHzc.webp
-url: https://tokenwisdom.ghost.io/why-everyone-should-hire-an-amateur-once/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/0_y28IgBkliw8LdHzc.webp
+url: https://ghost-production-198e.up.railway.app/why-everyone-should-hire-an-amateur-once/
 tags:
   - name: Entrepreneurial
     slug: entrepreneurship
@@ -15,9 +15,11 @@ tags:
     slug: failing-up
   - name: Lessons Learned
     slug: lessons-learned
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Why Everyone Should Hire An Amateur, Once

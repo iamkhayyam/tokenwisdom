@@ -1,0 +1,91 @@
+{
+  "id": "6a4824917d31280001f510cb",
+  "uuid": "00e784b8-4cf1-4543-a78e-1674ab08d02d",
+  "title": "42nd Edition 🔮 Pearls of Wisdom ⑊ W05",
+  "slug": "tokenwisdom-w06-24-2",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/img-g5LcnVQxmVJkeclZmAMRR.png",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2026-07-03T14:07:29.000-07:00",
+  "updated_at": "2026-07-03T14:07:29.000-07:00",
+  "published_at": "2024-02-16T05:55:29.000-08:00",
+  "custom_excerpt": "Dive into the latest Token Wisdom: from the dynamics of bike mechanics, AI in art, to quantum revelations. Plus, metaverse insights, iPhone hacks' countermeasures, and powering up with AI for energy efficiency. Uncover hidden tech treasures—knowledge is worth a fortune.",
+  "canonical_url": null,
+  "comment_id": "6a4824917d31280001f510cb",
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9d2",
+      "name": "✨ Pearls of Wisdom",
+      "slug": "worthafortune",
+      "description": "A finely curated collection of the wonderful web we weave with a weekly roundup of bits and pieces from the far corners of the super information highway ✨",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/05/tumblr_lk1bjustCg1qzznnqo1_500-2.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/worthafortune/"
+    }
+  ],
+  "url": "https://ghost-production-198e.up.railway.app/tokenwisdom-w06-24-2/",
+  "excerpt": "",
+  "reading_time": 3,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "6a4816f97d31280001f4f9d2",
+      "name": "✨ Pearls of Wisdom",
+      "slug": "worthafortune",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
+    }
+  ],
+  "local_feature_image": "tokenwisdom-w06-24-2_feature__img-g5LcnVQxmVJkeclZmAMRR.png"
+}

@@ -1,20 +1,22 @@
 ---
 title: "W09: 45th Edition \ Side A🎉"
 slug: w09-thenewestlatest-45
-id: 65e3edb339bf4b0001412a54
+id: 6a4816fb7d31280001f4fa2c
 published_at: 2024-03-03T10:46:08.000-08:00
 updated_at: 2024-05-01T00:02:42.000-07:00
 featured: False
 reading_time: 15 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/img-8J8slADahzuYSKuK4c3my.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-8J8slADahzuYSKuK4c3my.jpeg
 excerpt: "AI Lawsuit, Tyler Perry's Alarm, Neurobiology of Love, and NBA's Mind-Blowing Court: Unveiling the Latest Headlines!"
-url: https://tokenwisdom.ghost.io/newestlatest/w09-thenewestlatest-45/
+url: https://ghost-production-198e.up.railway.app/w09-thenewestlatest-45/
 tags:
   - name: 🎉 Newest / Latest
     slug: newestlatest
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # W09: 45th Edition \ Side A🎉

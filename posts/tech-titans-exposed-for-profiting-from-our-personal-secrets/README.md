@@ -1,14 +1,14 @@
 ---
 title: "Tech Titans Exposed for Profiting from Our Personal Secrets"
 slug: tech-titans-exposed-for-profiting-from-our-personal-secrets
-id: 6630b6e3a7d59a000155ff4e
+id: 6a4816fb7d31280001f4fa4e
 published_at: 2024-04-30T21:20:40.000-07:00
 updated_at: 2024-09-21T20:28:42.000-07:00
 featured: False
 reading_time: 10 min
 feature_image: https://images.unsplash.com/photo-1595666944516-bbb485958fb5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDJ8fHByaXZhY3l8ZW58MHx8fHwxNzE0NTM1MjI1fDA&ixlib=rb-4.0.3&q=80&w=2000
 excerpt: "W17 - Discover how Big Tech uses our digital footprints to craft precise profiles and profit from our personal data, raising urgent questions about privacy and the ethical use of technology."
-url: https://tokenwisdom.ghost.io/tech-titans-exposed-for-profiting-from-our-personal-secrets/
+url: https://ghost-production-198e.up.railway.app/tech-titans-exposed-for-profiting-from-our-personal-secrets/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: opinionated-editorials
   - name: Deep Tech
     slug: deeptech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Tech Titans Exposed for Profiting from Our Personal Secrets

@@ -1,15 +1,15 @@
 ---
 title: "The Persistence of Inferior Standards"
 slug: the-persistence-of-inferior-standards
-id: 699bd1600cf975000157de5f
+id: 6a4816fb7d31280001f4fb03
 published_at: 2026-02-19T22:35:00.000-08:00
 updated_at: 2026-02-24T13:34:47.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/a-new-yorker-style-editorial-illustratio_acj0vvyHQb6sHDVBJ3TxfQ_qTHF8NjCRUKOyBroAfrpTw_sd-1.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/a-new-yorker-style-editorial-illustratio_acj0vvyHQb6sHDVBJ3TxfQ_qTHF8NjCRUKOyBroAfrpTw_sd-1.jpeg
 excerpt: "W08 - Your calendar is broken, your clock runs on Bronze Age finger-counting, and your interest rates are modeled on Sumerian goat reproduction. We're not living in a high-tech civilization. We're running 21st-century software on medieval firmware.
 "
-url: https://tokenwisdom.ghost.io/the-persistence-of-inferior-standards/
+url: https://ghost-production-198e.up.railway.app/the-persistence-of-inferior-standards/
 tags:
   - name: Lessons Learned
     slug: lessons-learned
@@ -19,8 +19,6 @@ tags:
     slug: storytelling
   - name: User Experience
     slug: user-experience
-  - name: Technology
-    slug: technology
   - name: Provenance
     slug: provenance
   - name: Philosophical
@@ -29,11 +27,15 @@ tags:
     slug: education
   - name: 🚨 OP-ED
     slug: opinionated-editorials
+  - name: Math + Physics
+    slug: math-physics
   - name: 👁️ A Closer Look
     slug: a-closer-look
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Persistence of Inferior Standards

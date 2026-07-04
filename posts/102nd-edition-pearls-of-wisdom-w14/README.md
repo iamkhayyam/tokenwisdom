@@ -1,20 +1,22 @@
 ---
 title: "102nd Edition 🔮 Pearls of Wisdom ⑊ W14"
 slug: 102nd-edition-pearls-of-wisdom-w14
-id: 67f4b1ab5dd0910001b89daa
+id: 6a4816fb7d31280001f4faa2
 published_at: 2025-04-07T23:36:18.000-07:00
 updated_at: 2025-04-07T23:36:52.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/04/img-Axj6fPyNRTHFIW9vti9KB.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/img-Axj6fPyNRTHFIW9vti9KB.jpeg
 excerpt: "W14 - From vector tech revolutionizing AI stacks to Visa's $100M Apple Card bid, your digital compass needs recalibration. Meanwhile, 23andMe's bankruptcy puts America's DNA up for sale. As always, I deliver your weekly journey through technological upheaval and society's metamorphosis =)"
-url: https://tokenwisdom.ghost.io/worthafortune/102nd-edition-pearls-of-wisdom-w14/
+url: https://ghost-production-198e.up.railway.app/102nd-edition-pearls-of-wisdom-w14/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 102nd Edition 🔮 Pearls of Wisdom ⑊ W14

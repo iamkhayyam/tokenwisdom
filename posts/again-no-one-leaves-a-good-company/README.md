@@ -1,14 +1,14 @@
 ---
 title: "Again, No One Leaves A Good Company"
 slug: again-no-one-leaves-a-good-company
-id: 694511d3bc99830001492c0c
+id: 6a4816fb7d31280001f4faed
 published_at: 2025-12-18T23:11:00.000-08:00
 updated_at: 2025-12-22T03:32:36.000-08:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/a-sophisticated-editorial-illustration-i_mmF_xz_UQpqgMibrp9iy-Q_jMNftE62RI2CA-xirYmuAQ.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/a-sophisticated-editorial-illustration-i_mmF_xz_UQpqgMibrp9iy-Q_jMNftE62RI2CA-xirYmuAQ.png
 excerpt: "W51 - For a year, I analyzed tech's shiny future while ignoring the human costs beneath. That wasn't an accident—it was by design. A Silicon Valley-adjacent insider's confession about the industry's selective amnesia."
-url: https://tokenwisdom.ghost.io/again-no-one-leaves-a-good-company/
+url: https://ghost-production-198e.up.railway.app/again-no-one-leaves-a-good-company/
 tags:
   - name: Technology
     slug: technology
@@ -30,9 +30,11 @@ tags:
     slug: a-closer-look
   - name: 🚨 OP-ED
     slug: opinionated-editorials
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Again, No One Leaves A Good Company

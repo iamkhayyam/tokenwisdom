@@ -1,20 +1,22 @@
 ---
 title: "147th Edition 🔮 Token Wisdom \ Week 07"
 slug: 147th-edition-token-wisdom-week-07
-id: 6992d34d23b3640001566e9f
+id: 6a4816fb7d31280001f4fb02
 published_at: 2026-02-16T08:11:29.000-08:00
 updated_at: 2026-02-16T08:11:29.000-08:00
 featured: False
 reading_time: 13 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/02/giphy.webp
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/giphy.webp
 excerpt: "This week: Systems so capable they've become fragile. So optimized they have no room left to fail. So advanced they've made us hostages to their own perfection. It takes 250 poisoned documents to collapse an entire AI. Not millions. Not thousands. Two hundred and fifty. We've called this progress."
-url: https://tokenwisdom.ghost.io/worthafortune/147th-edition-token-wisdom-week-07/
+url: https://ghost-production-198e.up.railway.app/147th-edition-token-wisdom-week-07/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 147th Edition 🔮 Token Wisdom \ Week 07

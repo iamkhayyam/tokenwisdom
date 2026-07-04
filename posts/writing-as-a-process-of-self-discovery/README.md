@@ -1,13 +1,13 @@
 ---
 title: "Writing as a Process of Self-Discovery"
 slug: writing-as-a-process-of-self-discovery
-id: 65ab51bb4cf93c000184b735
+id: 6a4816fb7d31280001f4fa01
 published_at: 2023-12-05T11:08:58.000-08:00
 updated_at: 2024-01-19T21:49:42.000-08:00
 featured: False
 reading_time: 5 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/1-2tsg-xqkuvpwyu1zyf440a.png
-url: https://tokenwisdom.ghost.io/writing-as-a-process-of-self-discovery/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/1-2tsg-xqkuvpwyu1zyf440a.png
+url: https://ghost-production-198e.up.railway.app/writing-as-a-process-of-self-discovery/
 tags:
   - name: A Story to Tell
     slug: storytelling
@@ -23,9 +23,11 @@ tags:
     slug: personal-growth
   - name: Unsolicited Advice
     slug: unsolicited-advice
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Writing as a Process of Self-Discovery

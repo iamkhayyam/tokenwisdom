@@ -1,14 +1,14 @@
 ---
 title: "The Lone Star State Transforms into a Tech Powerhouse"
 slug: texas-an-american-chipmaking-oasis
-id: 65c11a1c470b1400012b7a81
+id: 6a4816fb7d31280001f4fa19
 published_at: 2024-02-04T11:37:00.000-08:00
 updated_at: 2025-01-23T18:29:11.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/02/img-sI2CpuirRPRFXkQOrPlxD.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/img-sI2CpuirRPRFXkQOrPlxD.png
 excerpt: "W04 - Much like a small town becoming a Hollywood hotspot, Texas has drawn in major players, redefined its local economy, and positioned itself at the forefront of future chip manufacturing. Discover the factors that propelled Texas from modest beginnings to the core of American chip production. "
-url: https://tokenwisdom.ghost.io/texas-an-american-chipmaking-oasis/
+url: https://ghost-production-198e.up.railway.app/texas-an-american-chipmaking-oasis/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: data
   - name: Big Tech
     slug: big-tech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Lone Star State Transforms into a Tech Powerhouse

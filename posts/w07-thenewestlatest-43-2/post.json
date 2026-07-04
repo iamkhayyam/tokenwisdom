@@ -1,0 +1,91 @@
+{
+  "id": "6a4824917d31280001f510c6",
+  "uuid": "ebe6064f-0e89-4c20-a213-49a206c35b7b",
+  "title": "W07: 43rd Edition \\ Side A🎉",
+  "slug": "w07-thenewestlatest-43-2",
+  "html": "",
+  "plaintext": "",
+  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/02/img-f6zzrBRDQlj7qDB7AOU7s.png",
+  "featured": false,
+  "visibility": "members",
+  "created_at": "2026-07-03T14:07:29.000-07:00",
+  "updated_at": "2026-07-03T14:07:29.000-07:00",
+  "published_at": "2024-02-18T12:48:00.000-08:00",
+  "custom_excerpt": "Uncloaking the Future: AI Apocalypse, American Heartland Theme Park, IBC Revolution, and Python Mastery - Must-Read Insights!",
+  "canonical_url": null,
+  "comment_id": "6a4824917d31280001f510c6",
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "description": "Hand-picked and carefully curated content in a consumed collection of noteworthy articles that may shed some light on the future.",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/download--1-.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/newestlatest/"
+    }
+  ],
+  "url": "https://ghost-production-198e.up.railway.app/w07-thenewestlatest-43-2/",
+  "excerpt": "",
+  "reading_time": 3,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "meta_title": null,
+  "meta_description": null,
+  "tag_details": [
+    {
+      "id": "6a4816f97d31280001f4f9d1",
+      "name": "🎉 Newest / Latest",
+      "slug": "newestlatest",
+      "visibility": "public"
+    }
+  ],
+  "author_details": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam"
+    }
+  ],
+  "local_feature_image": "w07-thenewestlatest-43-2_feature__img-f6zzrBRDQlj7qDB7AOU7s.png"
+}

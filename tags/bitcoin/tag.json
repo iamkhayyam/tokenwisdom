@@ -1,9 +1,9 @@
 {
-  "id": "65ace8b24cf93c000184bcc9",
+  "id": "6a4816f97d31280001f4f9c0",
   "name": "Bitcoin \\ Ordinals",
   "slug": "bitcoin",
   "description": null,
-  "feature_image": "https://tokenwisdom.ghost.io/content/images/2024/01/ASCIIAbout-1.gif",
+  "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/01/ASCIIAbout-1.gif",
   "visibility": "public",
   "meta_title": null,
   "meta_description": null,
@@ -17,14 +17,14 @@
   "codeinjection_foot": null,
   "canonical_url": null,
   "accent_color": null,
-  "url": "https://tokenwisdom.ghost.io/tag/bitcoin/",
+  "url": "https://ghost-production-198e.up.railway.app/tag/bitcoin/",
   "posts": [
     {
-      "id": "65a9f117ebf14f0001f3bf92",
+      "id": "6a4816fb7d31280001f4f9f4",
       "title": "The Rise of Bitcoin Ordinals: Why They Matter",
       "slug": "the-rise-of-bitcoin-ordinals-why-they-matter",
       "published_at": "2023-02-16T19:51:00.000-08:00",
-      "url": "https://tokenwisdom.ghost.io/featured/the-rise-of-bitcoin-ordinals-why-they-matter/",
+      "url": "https://ghost-production-198e.up.railway.app/the-rise-of-bitcoin-ordinals-why-they-matter/",
       "featured": true,
       "reading_time": 5
     }

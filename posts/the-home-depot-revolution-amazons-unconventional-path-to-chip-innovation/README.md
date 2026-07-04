@@ -1,14 +1,14 @@
 ---
 title: "The Home Depot Revolution: Amazon's Unconventional Path to Chip Innovation"
 slug: the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation
-id: 6750e24b7cdec10001948613
+id: 6a4816fb7d31280001f4fa81
 published_at: 2024-12-05T09:00:00.000-08:00
 updated_at: 2024-12-17T11:38:52.000-08:00
 featured: False
 reading_time: 16 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/12/W48---Amazon-s-Home-Depot-Revolution_-Rethinking-AI-Chip-Innovation.png
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/12/W48---Amazon-s-Home-Depot-Revolution_-Rethinking-AI-Chip-Innovation.png
 excerpt: "W48 - Amazon's AI revolution isn't in a high-tech lab—it's in a bland office with Home Depot parts. While Silicon Valley polishes its crystal palaces, Amazon engineers are rewriting the innovation playbook, one drill press at a time."
-url: https://tokenwisdom.ghost.io/the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation/
+url: https://ghost-production-198e.up.railway.app/the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: semiconductor
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Home Depot Revolution: Amazon's Unconventional Path to Chip Innovation

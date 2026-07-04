@@ -1,20 +1,22 @@
 ---
 title: "93rd Edition 🔮 Pearls of Wisdom ⑊ W05"
 slug: 93rd-edition-pearls-of-wisdom-w04
-id: 67a674d3df16bb00019a29a1
+id: 6a4816fb7d31280001f4fa90
 published_at: 2025-02-06T13:14:00.000-08:00
 updated_at: 2025-02-16T08:33:12.000-08:00
 featured: False
 reading_time: 10 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/img-gs1YdstwpqZzfcxShgELz.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/img-gs1YdstwpqZzfcxShgELz.jpeg
 excerpt: "W05 - AI lawyers battle in digital courtrooms, while BMW turns windshields into sci-fi displays. UAE's chess-obsessed intelligence chief bets $1.5T on AI. Welcome to 2025, where spreadsheets are sports and meme coins shape presidencies. Step right up for this week's Token Wisdom! 🚀🔮"
-url: https://tokenwisdom.ghost.io/worthafortune/93rd-edition-pearls-of-wisdom-w04/
+url: https://ghost-production-198e.up.railway.app/93rd-edition-pearls-of-wisdom-w04/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 93rd Edition 🔮 Pearls of Wisdom ⑊ W05

@@ -1,14 +1,14 @@
 ---
 title: "Decoding AI: Why Transparent Models Matter in the Age of Machine Learning"
 slug: decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning
-id: 66f773b0ffed3900014150e8
+id: 6a4816fb7d31280001f4fa63
 published_at: 2024-05-09T05:55:00.000-07:00
 updated_at: 2024-10-11T03:17:55.000-07:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/09/img-B6mTFzX42YuhNkM64Opgk.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/09/img-B6mTFzX42YuhNkM64Opgk.jpeg
 excerpt: "W18 - As AI and ML technologies evolve, their transformative power hinges on transparency and trust. By unraveling complex models and ensuring interpretability, we align advanced computational methods with human values, paving the way for an ethically responsible AI future."
-url: https://tokenwisdom.ghost.io/decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning/
+url: https://ghost-production-198e.up.railway.app/decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -28,9 +28,11 @@ tags:
     slug: opinionated-editorials
   - name: Deep Tech
     slug: deeptech
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Decoding AI: Why Transparent Models Matter in the Age of Machine Learning

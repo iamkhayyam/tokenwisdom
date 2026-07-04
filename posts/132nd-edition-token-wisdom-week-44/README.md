@@ -1,20 +1,22 @@
 ---
 title: "132nd Edition 🔮 Token Wisdom \ Week 44"
 slug: 132nd-edition-token-wisdom-week-44
-id: 6907b5c4351b220001b26d26
+id: 6a4816fb7d31280001f4fadf
 published_at: 2025-11-02T12:20:00.000-08:00
 updated_at: 2025-11-02T12:20:00.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/11/Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_3--1-.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/11/Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_3--1-.jpg
 excerpt: "AI surveillance, privacy paradoxes, and simulation theory headline this week's edition. Follow how age verification drives VPN adoption, AI systems develop unpredictable behaviors, and mathematical proofs challenge our understanding of reality—all amid psychopathy research and social norm evolution."
-url: https://tokenwisdom.ghost.io/worthafortune/132nd-edition-token-wisdom-week-44/
+url: https://ghost-production-198e.up.railway.app/132nd-edition-token-wisdom-week-44/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 132nd Edition 🔮 Token Wisdom \ Week 44

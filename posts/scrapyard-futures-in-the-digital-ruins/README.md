@@ -1,14 +1,14 @@
 ---
 title: "Scrapyard Futures in the Digital Ruins"
 slug: scrapyard-futures-in-the-digital-ruins
-id: 68858ddc845b5c0001afdffa
+id: 6a4816fb7d31280001f4fabf
 published_at: 2025-07-24T09:20:00.000-07:00
 updated_at: 2025-08-04T06:35:22.000-07:00
 featured: False
 reading_time: 9 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/08/a-new-yorker-style-illustration-depicts-_Y9LYGVi3SKmz6_j2F5Dycg_MNXLwCDHRSudwdqNZYpXCA.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/08/a-new-yorker-style-illustration-depicts-_Y9LYGVi3SKmz6_j2F5Dycg_MNXLwCDHRSudwdqNZYpXCA.jpeg
 excerpt: "W30 - In 2050, as megacorps crumble, communities thrive by repurposing abandoned tech. Neighborhoods run on salvaged Powerwalls, Ring networks retooled for healthcare. Welcome to technological archaeology, where yesterday's e-waste is tomorrow's lifeline."
-url: https://tokenwisdom.ghost.io/scrapyard-futures-in-the-digital-ruins/
+url: https://ghost-production-198e.up.railway.app/scrapyard-futures-in-the-digital-ruins/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: opinionated-editorials
   - name: Viral Content
     slug: viral-content
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Scrapyard Futures in the Digital Ruins

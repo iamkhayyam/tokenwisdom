@@ -1,13 +1,13 @@
 ---
 title: "Command Engineering: A New Skill Prompting the Future"
 slug: the-rise-of-command-engineering
-id: 65a9dad0ebf14f0001f3bf0b
+id: 6a4816fb7d31280001f4f9f0
 published_at: 2023-04-04T19:16:00.000-07:00
 updated_at: 2024-01-21T15:34:08.000-08:00
 featured: False
 reading_time: 4 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/793af79b-5c77-447b-a80c-1c7181e9b49b.jpg
-url: https://tokenwisdom.ghost.io/the-rise-of-command-engineering/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/793af79b-5c77-447b-a80c-1c7181e9b49b.jpg
+url: https://ghost-production-198e.up.railway.app/the-rise-of-command-engineering/
 tags:
   - name: Prompt \ Engineering
     slug: prompt-engineering
@@ -19,9 +19,11 @@ tags:
     slug: language-models
   - name: Generative AI
     slug: generative
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Command Engineering: A New Skill Prompting the Future

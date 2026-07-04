@@ -1,20 +1,22 @@
 ---
 title: "138th Edition 🔮 Token Wisdom \ Week 50"
 slug: 138th-edition-token-wisdom-week-50-2
-id: 69410ac43563ae000122a199
+id: 6a4816fb7d31280001f4faec
 published_at: 2025-12-16T08:41:46.000-08:00
 updated_at: 2025-12-16T08:41:46.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_wi_3--1-.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_wi_3--1-.jpg
 excerpt: "This week: Collatz conjecture shows infinite complexity, quantum mechanics achieves true randomness, cyber exploits surge. Hypnagogic creativity unlocked, billion-record breaches exposed, Ramanujan's formulas reveal cosmic secrets."
-url: https://tokenwisdom.ghost.io/worthafortune/138th-edition-token-wisdom-week-50-2/
+url: https://ghost-production-198e.up.railway.app/138th-edition-token-wisdom-week-50-2/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 138th Edition 🔮 Token Wisdom \ Week 50

@@ -1,14 +1,14 @@
 ---
 title: "How Your Driver's License is Just Santa Claus With Government Backing"
 slug: how-your-drivers-license-is-just-santa-claus-with-government-backing
-id: 68c7787f5979e300016d611d
+id: 6a4816fb7d31280001f4facc
 published_at: 2025-08-28T19:42:00.000-07:00
 updated_at: 2025-09-24T17:45:21.000-07:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/09/W35---a-sophisticated-illustration-in-the-styl_wVud_Eh0Qjeo4pWHLCe3sg_9LDObWRxSJaO9V5aHngReg.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/W35---a-sophisticated-illustration-in-the-styl_wVud_Eh0Qjeo4pWHLCe3sg_9LDObWRxSJaO9V5aHngReg.jpeg
 excerpt: "W35 - What happens when an entire civilization discovers their most sacred institutions are running on childhood logic? Your driver's license is Santa Claus with government backing. We never grew up—just graduated to fairy tales with late fees, criminal penalties, and armed enforcement."
-url: https://tokenwisdom.ghost.io/how-your-drivers-license-is-just-santa-claus-with-government-backing/
+url: https://ghost-production-198e.up.railway.app/how-your-drivers-license-is-just-santa-claus-with-government-backing/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: technology
   - name: Innovation
     slug: innovation
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # How Your Driver's License is Just Santa Claus With Government Backing

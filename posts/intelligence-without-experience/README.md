@@ -1,14 +1,14 @@
 ---
 title: "Intelligence Without Experience"
 slug: intelligence-without-experience
-id: 693006587341820001acfb6f
+id: 6a4816fb7d31280001f4fae6
 published_at: 2025-11-27T13:45:00.000-08:00
 updated_at: 2025-12-21T14:51:21.000-08:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/12/a-sophisticated-editorial-illustration-i_FWTji3-8Sjq2ykn3bQTyHg_iBuEviGOSvi83l3uC1IZ8Q.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/12/a-sophisticated-editorial-illustration-i_FWTji3-8Sjq2ykn3bQTyHg_iBuEviGOSvi83l3uC1IZ8Q.jpeg
 excerpt: "W48 - Lab-grown neurons are firing patterns for sight and sound—without ever experiencing either. It's like discovering a library pre-loaded with stories no one wrote, forcing us to question everything we thought we knew about intelligence, learning, and consciousness."
-url: https://tokenwisdom.ghost.io/intelligence-without-experience/
+url: https://ghost-production-198e.up.railway.app/intelligence-without-experience/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: ethical
   - name: Innovation
     slug: innovation
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Intelligence Without Experience

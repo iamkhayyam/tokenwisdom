@@ -1,21 +1,23 @@
 ---
 title: "Is LayerZero’s Stargate a Portal to the Next Big Thing?"
 slug: is-layerzeros-stargate-a-portal-to-the-next-big-thing
-id: 65a9eb2febf14f0001f3bf77
+id: 6a4816fb7d31280001f4f9f3
 published_at: 2023-02-15T19:48:00.000-08:00
 updated_at: 2024-01-18T19:48:24.000-08:00
 featured: False
 reading_time: 6 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/Screen20Shot202022-03-3020at209.43.1720PM-1.jpeg
-url: https://tokenwisdom.ghost.io/is-layerzeros-stargate-a-portal-to-the-next-big-thing/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/Screen20Shot202022-03-3020at209.43.1720PM-1.jpeg
+url: https://ghost-production-198e.up.railway.app/is-layerzeros-stargate-a-portal-to-the-next-big-thing/
 tags:
   - name: Blockchain \ DLT
     slug: blockchain
   - name: LayerZero Networks
     slug: layerzero
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Is LayerZero’s Stargate a Portal to the Next Big Thing?

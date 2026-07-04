@@ -1,20 +1,22 @@
 ---
 title: "150th Edition 🔮 Token Wisdom \ Week 10"
 slug: 150th-edition-token-wisdom-week-10
-id: 69af5c07408a6400011c940e
+id: 6a4816fb7d31280001f4fb09
 published_at: 2026-03-10T08:44:59.000-07:00
 updated_at: 2026-03-10T11:54:34.000-07:00
 featured: False
 reading_time: 16 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2026/03/a-prince-of-persia-arabian-nights-themed_kqOLowBKRNuvppPqzeF4aQ_ntW4toPgTc61fj5YUgu9Sg_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/a-prince-of-persia-arabian-nights-themed_kqOLowBKRNuvppPqzeF4aQ_ntW4toPgTc61fj5YUgu9Sg_sd.jpeg
 excerpt: "This week: RSA encryption just got 10x easier to crack. Google quietly quantum-proofed HTTPS. Iranian drones hit Amazon data centers. And MIT found mastery lives in your eyes before your mouth. Everything underneath is moving."
-url: https://tokenwisdom.ghost.io/worthafortune/150th-edition-token-wisdom-week-10/
+url: https://ghost-production-198e.up.railway.app/150th-edition-token-wisdom-week-10/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 150th Edition 🔮 Token Wisdom \ Week 10

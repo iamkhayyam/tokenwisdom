@@ -1,14 +1,14 @@
 ---
 title: "The Bible—Humanity's First Large Language Model?"
 slug: the-bible-humanitys-first-large-language-model-2
-id: 67a72f40df16bb00019a29fc
+id: 6a4816fb7d31280001f4fa91
 published_at: 2025-02-08T12:32:57.000-08:00
 updated_at: 2025-04-21T13:51:00.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/02/img-u0f1VLycK3SenrDc0T7sU.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/02/img-u0f1VLycK3SenrDc0T7sU.jpeg
 excerpt: "W06 - What if the world's most sophisticated language model wasn't created in Silicon Valley, but emerged 3,000 years ago? Discover how the Bible outperforms modern AI in cultural adaptation, error correction, and millennial-scale stability."
-url: https://tokenwisdom.ghost.io/the-bible-humanitys-first-large-language-model-2/
+url: https://ghost-production-198e.up.railway.app/the-bible-humanitys-first-large-language-model-2/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: unsolicited-advice
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # The Bible—Humanity's First Large Language Model?

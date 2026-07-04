@@ -1,14 +1,14 @@
 ---
 title: "From Pages to Vectors: How Vector Embeddings are Reshaping the Internet"
 slug: how-vector-embeddings-are-reshaping-the-internet
-id: 6713f6dc144af500017fd425
+id: 6a4816fb7d31280001f4fa6e
 published_at: 2024-06-13T11:34:00.000-07:00
 updated_at: 2024-10-19T13:12:33.000-07:00
 featured: False
 reading_time: 8 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/10/From-Pages-to-Vectors---How-Vector-Embeddings-are-Reshaping-the-Internet-1.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/10/From-Pages-to-Vectors---How-Vector-Embeddings-are-Reshaping-the-Internet-1.jpg
 excerpt: "W23 - From dusty library to quantum leap: How vector embeddings are turning the internet into a mind-reading genius. Discover why your Netflix recommendations seem eerily accurate, and how AI might soon out-think us all. The future is here, measured in vectors."
-url: https://tokenwisdom.ghost.io/how-vector-embeddings-are-reshaping-the-internet/
+url: https://ghost-production-198e.up.railway.app/how-vector-embeddings-are-reshaping-the-internet/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -32,9 +32,11 @@ tags:
     slug: quantum
   - name: Technology
     slug: technology
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # From Pages to Vectors: How Vector Embeddings are Reshaping the Internet

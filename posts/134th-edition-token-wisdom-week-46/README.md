@@ -1,20 +1,22 @@
 ---
 title: "134th Edition 🔮 Token Wisdom \ Week 46"
 slug: 134th-edition-token-wisdom-week-46
-id: 691b71328444b4000102a6bb
+id: 6a4816fb7d31280001f4fae3
 published_at: 2025-11-17T12:08:13.000-08:00
 updated_at: 2025-11-17T12:08:13.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2025/11/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_wi_3.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/11/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_wi_3.jpg
 excerpt: "Quantum threats and privacy erosion dominate this week. Cryptography faces extinction from quantum computing, online anonymity crumbles globally, and corporate surveillance expands. Plus, forgotten computational pioneers, covert CIA operations, and breakthrough physics reshape our digital reality."
-url: https://tokenwisdom.ghost.io/worthafortune/134th-edition-token-wisdom-week-46/
+url: https://ghost-production-198e.up.railway.app/134th-edition-token-wisdom-week-46/
 tags:
   - name: ✨ Pearls of Wisdom
     slug: worthafortune
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # 134th Edition 🔮 Token Wisdom \ Week 46

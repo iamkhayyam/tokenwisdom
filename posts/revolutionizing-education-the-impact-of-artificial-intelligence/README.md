@@ -1,13 +1,13 @@
 ---
 title: "Revolutionizing Education: When Silicon Meets Chalk"
 slug: revolutionizing-education-the-impact-of-artificial-intelligence
-id: 65a9b75cebf14f0001f3bdf4
+id: 6a4816fb7d31280001f4f9e5
 published_at: 2023-10-23T16:50:00.000-07:00
 updated_at: 2024-12-14T15:35:23.000-08:00
 featured: True
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/01/_img-4tiiLJotHMNtbZQ6Ii4jN-1.png
-url: https://tokenwisdom.ghost.io/featured/revolutionizing-education-the-impact-of-artificial-intelligence/
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/_img-4tiiLJotHMNtbZQ6Ii4jN-1.png
+url: https://ghost-production-198e.up.railway.app/revolutionizing-education-the-impact-of-artificial-intelligence/
 tags:
   - name: Technology
     slug: technology
@@ -19,9 +19,11 @@ tags:
     slug: hash-unlisted
   - name: A.I. (and Subsets)
     slug: ai
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # Revolutionizing Education: When Silicon Meets Chalk

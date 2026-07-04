@@ -1,0 +1,34 @@
+{
+  "id": "6a4824047d31280001f50894",
+  "name": "Claudacious",
+  "slug": "claudacious",
+  "description": null,
+  "feature_image": null,
+  "visibility": "public",
+  "meta_title": null,
+  "meta_description": null,
+  "og_image": null,
+  "og_title": null,
+  "og_description": null,
+  "twitter_image": null,
+  "twitter_title": null,
+  "twitter_description": null,
+  "codeinjection_head": null,
+  "codeinjection_foot": null,
+  "canonical_url": null,
+  "accent_color": null,
+  "url": "https://ghost-production-198e.up.railway.app/tag/claudacious/",
+  "posts": [
+    {
+      "id": "6a4824217d31280001f508a0",
+      "title": "del.icio.us Was Right. It Was Just Twenty Years Too Early.",
+      "slug": "del-icio-us-was-right-we-built-claudacious",
+      "published_at": "2026-06-23T00:00:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/del-icio-us-was-right-we-built-claudacious/",
+      "featured": true,
+      "reading_time": 18
+    }
+  ],
+  "post_count": 1,
+  "local_feature_image": null
+}

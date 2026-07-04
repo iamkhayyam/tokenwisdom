@@ -1,14 +1,14 @@
 ---
 title: "A Comprehensive Exploration of NeRF and Gaussian Splatting"
 slug: a-comprehensive-exploration-of-nerf-and-gaussian-splatting
-id: 65f6733aed6d88000174d0e6
+id: 6a4816fb7d31280001f4fa34
 published_at: 2024-03-11T01:08:00.000-07:00
 updated_at: 2025-01-23T18:27:48.000-08:00
 featured: False
 reading_time: 11 min
-feature_image: https://tokenwisdom.ghost.io/content/images/2024/03/guassian-splatting-spline-announcement.gif
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/guassian-splatting-spline-announcement.gif
 excerpt: "W09 - Dive into the depths of NeRF and Gaussian Splatting: two 3D tech titans. Journey through their contrasts to elevate your digital projects!"
-url: https://tokenwisdom.ghost.io/a-comprehensive-exploration-of-nerf-and-gaussian-splatting/
+url: https://ghost-production-198e.up.railway.app/a-comprehensive-exploration-of-nerf-and-gaussian-splatting/
 tags:
   - name: 👁️ A Closer Look
     slug: a-closer-look
@@ -30,9 +30,11 @@ tags:
     slug: future-trends
   - name: Human Computer Interaction
     slug: human-computer-interaction
+  - name: #Import 2026-07-03 20:09
+    slug: hash-import-2026-07-03-20-09
 authors:
-  - name: 🌶️ @iamkhayyam 
-    slug: iamkhayyam
+  - name: 🌶️ @iamkhayyam
+    slug: khayyam
 ---
 
 # A Comprehensive Exploration of NeRF and Gaussian Splatting
