@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Webhook pipeline test (safe to delete) — Token Wisdom</title>
+<meta name="description" content="Testing the Ghost -&gt; Cloudflare Worker -&gt; GitHub Actions rebuild pipeline.">
+<link rel="icon" href="../favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<link rel="apple-touch-icon" href="../assets/apple-touch-icon.png">
+<link rel="manifest" href="../site.webmanifest">
+<meta property="og:site_name" content="Token Wisdom">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Webhook pipeline test (safe to delete)">
+<meta property="og:description" content="Testing the Ghost -&gt; Cloudflare Worker -&gt; GitHub Actions rebuild pipeline.">
+<meta property="og:image" content="https://tokenwisdom.org/assets/og-default.png">
+<meta property="og:url" content="https://tokenwisdom.org/posts/webhook-pipeline-test-delete-me.html">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@worthafortune">
+<meta name="twitter:title" content="Webhook pipeline test (safe to delete)">
+<meta name="twitter:description" content="Testing the Ghost -&gt; Cloudflare Worker -&gt; GitHub Actions rebuild pipeline.">
+<meta name="twitter:image" content="https://tokenwisdom.org/assets/og-default.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<header class="site-top">
+  <div class="site-top-inner">
+    <a class="site-top-back" href="../index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <a href="../index.html" class="site-top-mark" aria-label="Token Wisdom — home"><img src="../assets/crystal-ball.svg" alt="" class="tw-orb"></a>
+    <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
+      <span class="ham"><span></span><span></span><span></span></span>
+      <span class="mtxt">Menu</span>
+    </button>
+    <button class="site-top-theme" data-theme-toggle type="button" onclick="window.__twToggleTheme()" aria-label="Toggle theme"><span class="tt-glyph">☼</span><span class="tt-label">Light</span></button>
+    <a class="site-top-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="nav-takeover" id="nav-takeover" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true">
+  <div class="nto-bg" aria-hidden="true">
+    <div class="nto-glow"></div>
+    <div class="nto-monogram">&amp;</div>
+  </div>
+  <div class="nto-bar">
+    <span class="nto-eyebrow">The Index <b>·</b> Token Wisdom</span>
+    <button class="nto-close" data-nav-close aria-label="Close menu">Close <span class="x">✕</span></button>
+  </div>
+  <nav class="nto-nav"><a class="nto-row" style="--i:0" href="../archive.html"><span class="nto-num">01</span><span class="nto-label">Archive</span><span class="nto-desc">Every edition, dated</span></a><a class="nto-row" style="--i:1" href="../tags/index.html"><span class="nto-num">02</span><span class="nto-label">Topics</span><span class="nto-desc">Browse by idea</span></a><a class="nto-row" style="--i:2" href="../lexicon/index.html"><span class="nto-num">03</span><span class="nto-label">Lexicon</span><span class="nto-desc">The working vocabulary</span></a><a class="nto-row" style="--i:3" href="../links/index.html"><span class="nto-num">04</span><span class="nto-label">Links</span><span class="nto-desc">The reading room</span></a><a class="nto-row" style="--i:4" href="../tags/a-closer-look.html"><span class="nto-num">05</span><span class="nto-label">Essays</span><span class="nto-desc">A closer look</span></a><a class="nto-row" style="--i:5" href="../tags/worthafortune.html"><span class="nto-num">06</span><span class="nto-label">Newsletters</span><span class="nto-desc">Worth a fortune</span></a><a class="nto-row" style="--i:6" href="../podcast.html"><span class="nto-num">07</span><span class="nto-label">Podcast</span><span class="nto-desc">Listen in</span></a><a class="nto-row" style="--i:7" href="../metrics.html"><span class="nto-num">08</span><span class="nto-label">Report</span><span class="nto-desc">The corpus, quantified</span></a><a class="nto-row" style="--i:8" href="../about/index.html"><span class="nto-num">09</span><span class="nto-label">About</span><span class="nto-desc">Who & why</span></a></nav>
+  <div class="nto-foot">
+    <a class="nto-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe →</a>
+    <div class="nto-foot-meta">
+      <span class="nto-tag">Knowware is measured in lifetimes</span>
+      <span class="nto-elsewhere"><a href="https://ghost-production-198e.up.railway.app" target="_blank" rel="noopener">Ghost</a> · <a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+  <button class="nto-close-glyph" data-nav-close aria-label="Close menu">✕</button>
+</div>
+<script>(function(){
+var root=document.documentElement,ov=document.getElementById('nav-takeover');
+var back=document.querySelector('[data-back]');
+if(back){back.addEventListener('click',function(e){try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}});}
+if(!ov)return;
+var toggles=document.querySelectorAll('[data-nav-toggle]');
+function set(o){root.classList.toggle('nav-open',o);ov.setAttribute('aria-hidden',o?'false':'true');toggles.forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false');});}
+toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();set(!root.classList.contains('nav-open'));});});
+ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
+})();</script>
+
+<script>
+(function(){
+  // Essays ship DARK by default — the rest of the site stays light. Persist
+  // the reader's last choice (if any) to override the default.
+  var KEY='tw-theme', stored;
+  try{stored=localStorage.getItem(KEY);}catch(e){}
+  document.documentElement.setAttribute('data-theme', stored || 'dark');
+  window.__twToggleTheme=function(){
+    var d=document.documentElement;
+    var next=d.getAttribute('data-theme')==='dark'?'light':'dark';
+    d.setAttribute('data-theme',next);
+    try{localStorage.setItem(KEY,next);}catch(e){}
+    sync();
+  };
+  function sync(){
+    var dk=document.documentElement.getAttribute('data-theme')==='dark';
+    var b=document.querySelector('[data-theme-toggle]');
+    if(b){b.querySelector('.tt-glyph').textContent=dk?'\u263c':'\u263e';b.querySelector('.tt-label').textContent=dk?'Light':'Dark';}
+  }
+  document.addEventListener('DOMContentLoaded',sync);
+})();
+</script>
+
+<article class="essay-frame">
+  
+  <header class="essay-head essay-col">
+    <div class="essay-eyebrow">A Closer Look</div>
+    <h1 class="essay-title">Webhook pipeline test (safe to delete)</h1>
+    <p class="essay-deck">Testing the Ghost -&gt; Cloudflare Worker -&gt; GitHub Actions rebuild pipeline.</p>
+    <div class="essay-byline">
+      <span class="by">By 🌶️ @iamkhayyam</span>
+      <span class="sep">·</span>
+      <span>1 min read</span>
+      <span class="sep">·</span>
+      <span>July 3, 2026</span>
+      <span class="sep">·</span>
+      <span>ACL.172 · W27</span>
+    </div>
+  </header>
+  
+  <div class="essay-body">
+    <div class="prose">
+      <p>Testing the Ghost -&gt; Cloudflare Worker -&gt; GitHub Actions rebuild pipeline.</p>
+    </div>
+  </div>
+  
+  
+  <footer class="essay-foot essay-col">
+    <span class="ef-edition">🔮 Token Wisdom · A Closer Look</span>
+    <a class="ef-back" href="../index.html">Back to Token Wisdom →</a>
+  </footer>
+  
+  <section id="tw-responses" class="essay-col"></section>
+  <nav class="post-nav essay-col">
+    
+    <a class="pn-prev" href="the-proof-was-never-the-point.html">
+      <span class="pn-label">← Previous</span>
+      <span class="pn-title">The Proof Was Never the Point</span>
+    </a>
+    <div></div>
+  </nav>
+</article>
+
+<div class="essay-index" data-essay-index aria-label="Reading progress and contents">
+  <div class="ei-inner">
+    <div class="ei-panel"><div class="ei-panel-head">Contents</div></div>
+    <div class="ei-bar" role="button" tabindex="0" aria-label="Table of contents">
+      <span class="ei-current">Opening</span>
+      <div class="ei-track"></div>
+      <span class="ei-pct">0%</span>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  function init(){
+    var prose=document.querySelector('.essay-body .prose');
+    var idx=document.querySelector('[data-essay-index]');
+    if(!prose||!idx) return;
+    var foot=document.querySelector('.essay-foot');
+    // h2 + h3. The left-edge CSS counter also increments on both, so the
+    // visible h2 number marker matches the bottom panel's global position.
+    var heads=[].slice.call(prose.querySelectorAll('h2, h3'));
+    var sections=[{el:prose,name:'Opening',level:1}];
+    heads.forEach(function(h,i){
+      if(!h.id){ h.id='sec-'+(i+1)+'-'+((h.textContent||'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-+|-+$/g,'').slice(0,40)); }
+      sections.push({el:h,name:(h.textContent||'').trim(),level:h.tagName==='H3'?2:1});
+    });
+    var track=idx.querySelector('.ei-track'), panel=idx.querySelector('.ei-panel');
+    var curLabel=idx.querySelector('.ei-current'), pct=idx.querySelector('.ei-pct');
+    function jump(s){ var y=s.el.getBoundingClientRect().top+window.scrollY-92; window.scrollTo({top:Math.max(0,y),behavior:'smooth'}); }
+    sections.forEach(function(s,i){
+      var seg=document.createElement('div'); seg.className='ei-seg'; var fill=document.createElement('i'); fill.className='ei-seg-fill'; seg.appendChild(fill);
+      seg.addEventListener('click',function(e){e.stopPropagation();jump(s);}); track.appendChild(seg); s.seg=seg; s.fill=fill;
+      var row=document.createElement('button'); row.type='button'; row.className='ei-row'+(s.level===2?' ei-row--sub':'');
+      row.innerHTML='<span class="ei-row-n">'+(i===0?'\u2022':(''+i).padStart(2,'0'))+'</span><span class="ei-row-name"></span>';
+      row.querySelector('.ei-row-name').textContent=s.name;
+      row.addEventListener('click',function(){jump(s);}); panel.appendChild(row); s.row=row;
+    });
+    function tops(){ return sections.map(function(s){return s.el.getBoundingClientRect().top+window.scrollY;}); }
+    function update(){
+      var vh=window.innerHeight, y=window.scrollY, t=tops();
+      var startY=t[0], endY=(foot?foot.getBoundingClientRect().top+y:document.body.scrollHeight)-vh*0.5;
+      if(endY<=startY) endY=startY+1;
+      pct.textContent=Math.round(Math.max(0,Math.min(1,(y+120-startY)/(endY-startY)))*100)+'%';
+      var cur=0; for(var i=0;i<sections.length;i++){ if(t[i]-120<=y) cur=i; }
+      sections.forEach(function(s,i){
+        var f=0;
+        if(i<cur) f=1;
+        else if(i===cur){ var next=(i+1<t.length)?t[i+1]:endY+vh; f=Math.max(0,Math.min(1,(y+120-t[i])/Math.max(1,next-t[i]))); }
+        s.fill.style.transform='scaleX('+f.toFixed(3)+')';
+        s.seg.classList.toggle('is-current',i===cur);
+        s.row.classList.toggle('is-current',i===cur);
+      });
+      curLabel.textContent=sections[cur].name;
+      var nearFoot=foot && foot.getBoundingClientRect().top<vh*0.55;
+      idx.toggleAttribute('data-shown', y>320 && !nearFoot);
+    }
+    var bar=idx.querySelector('.ei-bar');
+    function togglePin(){ idx.toggleAttribute('data-open'); }
+    bar.addEventListener('click',function(e){ if(e.target.closest('.ei-track'))return; togglePin(); });
+    bar.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();togglePin();} });
+    window.addEventListener('scroll',update,{passive:true});
+    window.addEventListener('resize',update);
+    update();
+  }
+  if(document.readyState!=='loading') init(); else document.addEventListener('DOMContentLoaded',init);
+})();
+</script>
+
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-t1">
+      <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="../assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://ghost-production-198e.up.railway.app/subscribe" method="get" onsubmit="window.location.href='https://ghost-production-198e.up.railway.app/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-cols">
+        <div class="col-group">
+          <div class="col-group-label">Explore</div>
+          <ul class="col-group-links"><li><a href="../index.html">Home</a></li><li><a href="../archive.html">Archive</a></li><li><a href="../tags/index.html">All Topics</a></li><li><a href="../lexicon/index.html">The Lexicon</a></li><li><a href="../tags/a-closer-look.html">Essays</a></li><li><a href="../tags/worthafortune.html">Newsletters</a></li><li><a href="../podcast.html">Podcast</a></li></ul>
+        </div>
+        <div class="col-group">
+          <div class="col-group-label">More</div>
+          <ul class="col-group-links"><li><a href="../about/index.html">About</a></li><li><a href="../links/index.html">Links</a></li><li><a href="../metrics.html">Corpus Report</a></li><li><a href="https://ghost-production-198e.up.railway.app" target="_blank" rel="noopener">Ghost CMS</a></li><li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li></ul>
+        </div>
+        
+        <div class="col-group col-group--ama">
+          <div class="col-group-label">Have a question?</div>
+          <button type="button" class="col-ama-ad" data-ama-toggle aria-expanded="false" aria-controls="col-ama-panel">
+            
+            <span class="col-ama-copy"><span class="col-ama-title">📣 Ask Me Anything</span><span class="col-ama-sub">Ask it &rarr;</span></span>
+            <span class="col-ama-chevron" aria-hidden="true">&#9662;</span>
+          </button>
+        </div>
+      </div>
+      
+      <div id="col-ama-panel" class="col-ama-panel" hidden>
+        
+        <div class="col-ama-frost">
+          <p class="col-ama-hint">Type your question below and hit ask — or highlight anything that sparked it first.</p>
+          <form class="col-ama-form" action="../posts/no-really-ask-me-anything.html" method="get">
+            <input type="text" name="q" placeholder="What do you want to know?" aria-label="Your question">
+            <button type="submit">Ask &rarr;</button>
+          </form>
+          <a class="col-ama-full" href="../posts/no-really-ask-me-anything.html">Read the full AMA thread &rarr;</a>
+        </div>
+      </div>
+      <script>(function(){
+        var btn=document.querySelector('[data-ama-toggle]'),panel=document.getElementById('col-ama-panel');
+        if(!btn||!panel)return;
+        btn.addEventListener('click',function(){
+          var open=panel.hasAttribute('hidden');
+          if(open){panel.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}
+          else{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}
+        });
+      })();</script>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="../tags/a-closer-look.html">👁️ A Closer Look</a><a href="../tags/technology.html">Technology</a><a href="../tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="../tags/ai.html">A.I. (and Subsets)</a><a href="../tags/future-trends.html">Future Trends</a><a href="../tags/ethical.html">Ethics \ Principles</a><a href="../tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>281 Posts · 85 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://ghost-production-198e.up.railway.app/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<link rel="stylesheet" href="../assets/annotate.css">
+<script>window.TW_API="";</script>
+<script src="../assets/annotate.js" defer></script>
+</body>
+</html>
