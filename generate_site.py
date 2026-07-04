@@ -27,6 +27,8 @@ BACKUP_DIR = Path(__file__).parent
 DATA_DIR = BACKUP_DIR / "data"
 DOCS_DIR = BACKUP_DIR / "docs"
 IMAGES_DIR = BACKUP_DIR / "images" / "posts"
+TAG_IMAGES_DIR = BACKUP_DIR / "images" / "tags"
+AUTHOR_IMAGES_DIR = BACKUP_DIR / "images" / "authors"
 
 SITE_NAME = "Token Wisdom"
 SITE_TAGLINE = "The Newsletter of Record for the Future of Now"
@@ -72,11 +74,14 @@ def _load_image_map():
     global _IMAGE_MAP
     if _IMAGE_MAP is not None:
         return _IMAGE_MAP
-    map_file = DATA_DIR / "post_image_map.json"
-    if map_file.exists():
-        _IMAGE_MAP = json.loads(map_file.read_text())
-    else:
-        _IMAGE_MAP = {}
+    _IMAGE_MAP = {}
+    # Merged from all three backup.py maps — keys are the original Ghost
+    # image URLs (globally unique), so a single dict covers post, tag, and
+    # author images alike for both localize_images()/localize_url() lookups.
+    for name in ("post_image_map.json", "tag_image_map.json", "author_image_map.json"):
+        map_file = DATA_DIR / name
+        if map_file.exists():
+            _IMAGE_MAP.update(json.loads(map_file.read_text()))
     return _IMAGE_MAP
 
 
@@ -115,16 +120,18 @@ def localize_url(url):
 
 
 def copy_local_images():
-    """Copy backed-up images from images/posts/ to docs/content/images/."""
+    """Copy backed-up images from images/{posts,tags,authors}/ to docs/content/images/."""
     dest = DOCS_DIR / "content" / "images"
     dest.mkdir(parents=True, exist_ok=True)
     img_map = _load_image_map()
     copied = 0
     for ghost_url, local_name in img_map.items():
-        src = IMAGES_DIR / local_name
-        if src.exists():
-            shutil.copy2(src, dest / local_name)
-            copied += 1
+        for source_dir in (IMAGES_DIR, TAG_IMAGES_DIR, AUTHOR_IMAGES_DIR):
+            src = source_dir / local_name
+            if src.exists():
+                shutil.copy2(src, dest / local_name)
+                copied += 1
+                break
     return copied
 
 
@@ -3126,7 +3133,7 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
     desc = TAG_DESCRIPTIONS.get(tag.get("slug", "")) or tag.get("description") or ""
     desc_html = f'<p class="desc">{esc(desc)}</p>' if desc else ""
 
-    feature_img = tag.get("feature_image") or ""
+    feature_img = localize_url(tag.get("feature_image") or "")
     date_range = ""
     if sorted_posts:
         latest = fmt_date_short(sorted_posts[0].get("published_at"))
