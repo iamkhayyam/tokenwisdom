@@ -1,0 +1,138 @@
+<!doctype html>
+<meta charset="utf-8">
+<title>Token Wisdom — Links Admin</title>
+<style>
+  :root{--ink:#2b2722;--muted:#8a8278;--rule:#e2ddd4;--accent:#b4521f;--ok:#2b7a4b;--bad:#9a3434}
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,"Segoe UI",sans-serif;max-width:640px;margin:2.5rem auto;padding:0 1.25rem;color:var(--ink);background:#fdfbf8}
+  h1{font-size:1.3rem;margin:0 0 .3rem}
+  p.sub{color:var(--muted);font-size:.85rem;margin:0 0 1.6rem}
+  section{border:1px solid var(--rule);border-radius:8px;padding:1.1rem 1.2rem;margin-bottom:1.2rem;background:#fff}
+  section h2{font-size:.95rem;margin:0 0 .8rem;letter-spacing:.02em}
+  label{display:block;font-size:.75rem;color:var(--muted);margin:.6rem 0 .25rem;text-transform:uppercase;letter-spacing:.06em}
+  input,select{width:100%;padding:.5rem .6rem;border:1px solid var(--rule);border-radius:5px;font-size:.9rem;font-family:inherit}
+  .row{display:flex;gap:.6rem}
+  .row>div{flex:1}
+  button{margin-top:1rem;background:var(--accent);color:#fff;border:none;padding:.6rem 1.1rem;border-radius:6px;font-weight:600;cursor:pointer;font-size:.88rem}
+  button:hover{opacity:.9}
+  button:disabled{opacity:.5;cursor:default}
+  pre{background:#f5f1ea;border-radius:6px;padding:.8rem;font-size:.78rem;overflow-x:auto;white-space:pre-wrap;word-break:break-word}
+  .ok{color:var(--ok)}.bad{color:var(--bad)}
+  #existing{font-size:.78rem;color:var(--muted);max-height:120px;overflow-y:auto}
+</style>
+
+<h1>Reading Room — Links Admin</h1>
+<p class="sub">Upload a weekly CSV export, or pull straight from a tagged Raindrop batch. Both commit to <code>data/links/</code> on GitHub and rebuild <code>data/links.json</code> — the static Reading Room page still needs its usual local build + push.</p>
+
+<section>
+  <h2>Session token</h2>
+  <label>Bearer token (from your Token Wisdom sign-in — pasted once, kept in this browser)</label>
+  <input id="token" type="password" placeholder="paste your tw_token here">
+</section>
+
+<section>
+  <h2>Existing weeks</h2>
+  <div id="existing">Loading…</div>
+  <button id="refresh" type="button">Refresh</button>
+</section>
+
+<section>
+  <h2>Upload CSV</h2>
+  <label>File (named like 26.W23.TNL.csv, or set the name below)</label>
+  <input id="file" type="file" accept=".csv">
+  <label>Filename override (optional)</label>
+  <input id="filename" type="text" placeholder="26.W23.TNL.csv">
+  <button id="upload" type="button">Upload</button>
+</section>
+
+<section>
+  <h2>Sync from Raindrop</h2>
+  <p class="sub" style="margin:0 0 .4rem">Pulls every item tagged <code>#tnl</code> / <code>#tws</code> in that section's collection that hasn't already been synced.</p>
+  <div class="row">
+    <div>
+      <label>Section</label>
+      <select id="section"><option>TNL</option><option>TWS</option></select>
+    </div>
+    <div>
+      <label>Year</label>
+      <input id="year" type="number">
+    </div>
+    <div>
+      <label>Week</label>
+      <input id="week" type="number" min="1" max="53">
+    </div>
+  </div>
+  <button id="sync" type="button">Sync now</button>
+</section>
+
+<pre id="result">Results appear here.</pre>
+
+<script>
+const $ = (id) => document.getElementById(id);
+const tokenInput = $("token");
+tokenInput.value = localStorage.getItem("tw_admin_token") || "";
+tokenInput.addEventListener("input", () => localStorage.setItem("tw_admin_token", tokenInput.value));
+
+function authHeaders(extra) {
+  return { Authorization: `Bearer ${tokenInput.value.trim()}`, ...extra };
+}
+
+function show(data, isError) {
+  const pre = $("result");
+  pre.textContent = JSON.stringify(data, null, 2);
+  pre.className = isError ? "bad" : "ok";
+}
+
+async function loadExisting() {
+  $("existing").textContent = "Loading…";
+  try {
+    const res = await fetch("/admin/links", { headers: authHeaders() });
+    const data = await res.json();
+    if (!res.ok) { $("existing").textContent = data.error || "Failed to load"; return; }
+    const files = data.files || [];
+    $("existing").textContent = files.length
+      ? files.map((f) => `${f.year ?? "?"} W${String(f.week ?? "?").padStart(2, "0")} ${f.section ?? ""} — ${f.name}`).join("\n")
+      : "No files yet.";
+    const last = files[files.length - 1];
+    if (last && !$("year").value) { $("year").value = last.year; $("week").value = last.week + 1; }
+  } catch (e) {
+    $("existing").textContent = "Error: " + e.message;
+  }
+}
+
+$("refresh").addEventListener("click", loadExisting);
+
+$("upload").addEventListener("click", async () => {
+  const file = $("file").files[0];
+  if (!file) return show({ error: "Choose a file first" }, true);
+  const fd = new FormData();
+  fd.append("csv", file);
+  if ($("filename").value.trim()) fd.append("filename", $("filename").value.trim());
+  try {
+    const res = await fetch("/admin/links/upload", { method: "POST", headers: authHeaders(), body: fd });
+    const data = await res.json();
+    show(data, !res.ok);
+    if (res.ok) loadExisting();
+  } catch (e) {
+    show({ error: e.message }, true);
+  }
+});
+
+$("sync").addEventListener("click", async () => {
+  const body = { section: $("section").value, year: Number($("year").value), week: Number($("week").value) };
+  try {
+    const res = await fetch("/admin/links/raindrop-sync", {
+      method: "POST",
+      headers: authHeaders({ "Content-Type": "application/json" }),
+      body: JSON.stringify(body),
+    });
+    const data = await res.json();
+    show(data, !res.ok);
+    if (res.ok) loadExisting();
+  } catch (e) {
+    show({ error: e.message }, true);
+  }
+});
+
+loadExisting();
+</script>
