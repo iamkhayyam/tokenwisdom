@@ -138,7 +138,7 @@ def _find_ep(marker, week=None):
 
 _wk = gs.WEEK_RX.search(latest_ed.get("title", "") or "") or gs.WEEK_RX.search(latest_ed.get("slug", "") or "")
 _week = int(_wk.group(1)) if _wk else None
-essay_ep = _find_ep("A", _week)
+essay_ep = _find_ep("A", _week_of(hero))
 edition_ep = _find_ep("B", _week)
 
 # (year, week) -> the edition's •B• podcast episode, so an essay can link its
