@@ -1424,6 +1424,20 @@ img { max-width: 100%; height: auto; }
   color: var(--ink-muted);
   line-height: 1.6;
 }
+.essay-row.has-thumb { display: flex; gap: 1.2rem; align-items: flex-start; }
+.essay-row-thumb {
+  width: 112px;
+  height: 112px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 2px;
+  background: var(--paper-warm);
+}
+.essay-row-body { flex: 1; min-width: 0; }
+@media (max-width: 640px) {
+  .essay-row-thumb { width: 76px; height: 76px; }
+  .essay-row.has-thumb { gap: .8rem; }
+}
 
 /* Sidebar (newsletter index, tag cloud) */
 .sidebar-block {
@@ -3118,16 +3132,22 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
         meta = edition_meta(p) if is_newsletter(p) else ""
         if meta:
             cat = f'<span class="cat">{esc(meta)}</span><span>·</span>'
+        thumb_url = localize_url(p.get("feature_image") or "")
+        thumb_html = f'<img class="essay-row-thumb" src="{esc(thumb_url)}" alt="" loading="lazy">' if thumb_url else ""
+        row_class = "essay-row has-thumb" if thumb_html else "essay-row"
         rows += f"""
-  <article class="essay-row">
-    <div class="essay-row-eyebrow">
-      {cat}
-      <span>{fmt_date_short(p.get('published_at'))}</span>
-      <span>·</span>
-      <span>{reading_time(p)}</span>
+  <article class="{row_class}">
+    {thumb_html}
+    <div class="essay-row-body">
+      <div class="essay-row-eyebrow">
+        {cat}
+        <span>{fmt_date_short(p.get('published_at'))}</span>
+        <span>·</span>
+        <span>{reading_time(p)}</span>
+      </div>
+      <h3><a href="../posts/{p['slug']}.html">{esc(p.get('title', ''))}</a></h3>
+      <p>{excerpt(p, 220)}</p>
     </div>
-    <h3><a href="../posts/{p['slug']}.html">{esc(p.get('title', ''))}</a></h3>
-    <p>{excerpt(p, 220)}</p>
   </article>"""
 
     desc = TAG_DESCRIPTIONS.get(tag.get("slug", "")) or tag.get("description") or ""
