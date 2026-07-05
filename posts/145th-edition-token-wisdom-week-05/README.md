@@ -1,5 +1,5 @@
 ---
-title: "145th Edition 🔮 Token Wisdom \ Week 05"
+title: "145th Edition 🔮 Week 05"
 slug: 145th-edition-token-wisdom-week-05
 id: 6a4816fb7d31280001f4fafe
 published_at: 2026-02-02T10:40:50.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 145th Edition 🔮 Token Wisdom \ Week 05
+# 145th Edition 🔮 Week 05
 
 
 

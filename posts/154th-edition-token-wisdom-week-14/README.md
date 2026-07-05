@@ -1,5 +1,5 @@
 ---
-title: "154th Edition 🔮 Token Wisdom \ Week 14"
+title: "154th Edition 🔮 Week 14"
 slug: 154th-edition-token-wisdom-week-14
 id: 6a4816fb7d31280001f4fb11
 published_at: 2026-04-07T10:10:58.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 154th Edition 🔮 Token Wisdom \ Week 14
+# 154th Edition 🔮 Week 14
 
 W14 •B• Pearls of Wisdom - 154th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of The Deep Dig, we explore Khayyam Wakil’s landmark 154th edition of his weekly intelligence curation, organized around a single radica…NotebookLM ➡ Token Wisdom ✨
 

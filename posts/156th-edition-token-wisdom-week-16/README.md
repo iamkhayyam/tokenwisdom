@@ -1,5 +1,5 @@
 ---
-title: "156th Edition 🔮 Token Wisdom \ Week 16"
+title: "156th Edition 🔮 Week 16"
 slug: 156th-edition-token-wisdom-week-16
 id: 6a4816fb7d31280001f4fb15
 published_at: 2026-04-21T09:52:13.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 156th Edition 🔮 Token Wisdom \ Week 16
+# 156th Edition 🔮 Week 16
 
 W16 •B• Pearls of Wisdom - 156th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨NotebookLM ➡ Token Wisdom ✨
 

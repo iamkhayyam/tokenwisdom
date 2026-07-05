@@ -1,5 +1,5 @@
 ---
-title: "155th Edition 🔮 Token Wisdom \ Week 15"
+title: "155th Edition 🔮 Week 15"
 slug: 155th-edition-token-wisdom-week-15
 id: 6a4816fb7d31280001f4fb13
 published_at: 2026-04-14T07:48:56.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 155th Edition 🔮 Token Wisdom \ Week 15
+# 155th Edition 🔮 Week 15
 
 W15 •B• Pearls of Wisdom - 155th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of the Deep Dig, we explore Khayyam Wakil’s 155th edition of Token Wisdom, titled We Train It on Human Weaponry. The episode takes a cro…NotebookLM ➡ Token Wisdom ✨
 

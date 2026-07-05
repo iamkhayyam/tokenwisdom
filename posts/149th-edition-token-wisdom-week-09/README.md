@@ -1,5 +1,5 @@
 ---
-title: "149th Edition 🔮 Token Wisdom \ Week 09"
+title: "149th Edition 🔮 Week 09"
 slug: 149th-edition-token-wisdom-week-09
 id: 6a4816fb7d31280001f4fb07
 published_at: 2026-03-02T13:22:41.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 149th Edition 🔮 Token Wisdom \ Week 09
+# 149th Edition 🔮 Week 09
 
 W09 •B• Pearls of Wisdom - 149th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of The Deep Dig, hosts explore the 148th edition of Token Wisdom, themed around a single powerful concept: substrate — the underlying…NotebookLM ➡ Token Wisdom ✨
 

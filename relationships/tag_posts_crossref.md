@@ -4,10 +4,10 @@ Generated: 2026-07-04T19:24:38.530975
 
 | Tag | Post Count | Posts |
 |-----|-----------|-------|
-| #Import 2026-07-03 20:09 | 280 | The Proof Was Never the Point, 159th Edition 🔮 Token Wisdom \ Week 19, The Wrong Name on the Door, 158th Edition 🔮 Token Wisdom \ Week 18, The Cost of Being Right (+275 more) |
+| #Import 2026-07-03 20:09 | 280 | The Proof Was Never the Point, 159th Edition 🔮 Week 19, The Wrong Name on the Door, 158th Edition 🔮 Week 18, The Cost of Being Right (+275 more) |
 | 👁️ A Closer Look | 125 | del.icio.us Was Right. It Was Just Twent, Data Is Not the New Oil, Human-in-the-Room, The Proof Was Never the Point, The Wrong Name on the Door (+120 more) |
 | Technology | 91 | Human-in-the-Room, The Proof Was Never the Point, The Sky Has Been Warning Us Since 1859, AI Didn't Break Democracy. We Did. Four , Building Without Blueprints (+86 more) |
-| ✨ Pearls of Wisdom | 85 | 159th Edition 🔮 Token Wisdom \ Week 19, 158th Edition 🔮 Token Wisdom \ Week 18, 157th Edition 🔮 Token Wisdom \ Week 17, 156th Edition 🔮 Token Wisdom \ Week 16, 155th Edition 🔮 Token Wisdom \ Week 15 (+80 more) |
+| ✨ Pearls of Wisdom | 85 | 159th Edition 🔮 Week 19, 158th Edition 🔮 Week 18, 157th Edition 🔮 Week 17, 156th Edition 🔮 Week 16, 155th Edition 🔮 Week 15 (+80 more) |
 | A.I. (and Subsets) | 76 | Data Is Not the New Oil, The Wrong Name on the Door, No Heir. No Lesson., Who's Mind Is It Anyway?, We Trained It on Human Weaponry (+71 more) |
 | Future Trends | 73 | Who's Mind Is It Anyway?, We Trained It on Human Weaponry, The Sky Has Been Warning Us Since 1859, The Proentropic Weed Manifesto, Threading a Very Fine Needle (+68 more) |
 | Ethics \ Principles | 70 | Data Is Not the New Oil, Human-in-the-Room, The Proof Was Never the Point, The Wrong Name on the Door, The Cost of Being Right (+65 more) |

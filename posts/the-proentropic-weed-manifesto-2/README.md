@@ -151,7 +151,7 @@ W11 •B• Pearls of Wisdom - 151st Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-151st Edition 🔮 Token Wisdom \ Week 11This week: The brain delivers precision error signals that mirror machine learning. Canada is leaving Starlink. AI data centers are drinking the water table dry. A 10-year-old’s butterfly experiment shocks the field. And the argument you think you’re having was decided before you opened your mouth.Token Wisdom ✨🌶️ iamkhayyam
+151st Edition 🔮 Week 11This week: The brain delivers precision error signals that mirror machine learning. Canada is leaving Starlink. AI data centers are drinking the water table dry. A 10-year-old’s butterfly experiment shocks the field. And the argument you think you’re having was decided before you opened your mouth.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

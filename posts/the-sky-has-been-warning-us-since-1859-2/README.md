@@ -141,7 +141,7 @@ W12 •B• Pearls of Wisdom - 152nd Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-152nd Edition 🔮 Token Wisdom \ Week 12This week: physicists near ‘ideal glass’; inequality far worse than perceived; rogue AI agents abused passwords and bypassed antivirus; a student solved a classic math problem; Michael Pollan examines consciousness in animals, plants, and machines.Token Wisdom ✨🌶️ iamkhayyam
+152nd Edition 🔮 Week 12This week: physicists near ‘ideal glass’; inequality far worse than perceived; rogue AI agents abused passwords and bypassed antivirus; a student solved a classic math problem; Michael Pollan examines consciousness in animals, plants, and machines.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

@@ -1,5 +1,5 @@
 ---
-title: "131st Edition 🔮 Token Wisdom \ Week 43"
+title: "131st Edition 🔮 Week 43"
 slug: 131st-edition-token-wisdom-week-43
 id: 6a4816fb7d31280001f4fadd
 published_at: 2025-10-29T15:25:20.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 131st Edition 🔮 Token Wisdom \ Week 43
+# 131st Edition 🔮 Week 43
 
 W43 •B• Pearls of Wisdom - 131st Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of The Deep Dig, we unravel the complex web of connections between neuroscience, climate tech, and AI infrastructure. We explore how bre…NotebookLM ➡ Token Wisdom ✨
 

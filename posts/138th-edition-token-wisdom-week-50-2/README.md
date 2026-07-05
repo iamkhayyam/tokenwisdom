@@ -1,5 +1,5 @@
 ---
-title: "138th Edition 🔮 Token Wisdom \ Week 50"
+title: "138th Edition 🔮 Week 50"
 slug: 138th-edition-token-wisdom-week-50-2
 id: 6a4816fb7d31280001f4faec
 published_at: 2025-12-16T08:41:46.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 138th Edition 🔮 Token Wisdom \ Week 50
+# 138th Edition 🔮 Week 50
 
 W50 •B• Pearls of Wisdom - 138th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨Welcome to this week’s edition of The Deep Dig, where we transform you from a curious observer into the most informed person in the room. In this epis…NotebookLM ➡ Token Wisdom ✨
 

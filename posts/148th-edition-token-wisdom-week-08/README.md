@@ -1,5 +1,5 @@
 ---
-title: "148th Edition 🔮 Token Wisdom \ Week 08"
+title: "148th Edition 🔮 Week 08"
 slug: 148th-edition-token-wisdom-week-08
 id: 6a4816fb7d31280001f4fb04
 published_at: 2026-02-23T08:08:52.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 148th Edition 🔮 Token Wisdom \ Week 08
+# 148th Edition 🔮 Week 08
 
 W08 •B• Pearls of Wisdom - 148th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of The Deep Dig, we name the central anxiety of our technological moment: the capability-comprehension gap. For most of human history, t…NotebookLM ➡ Token Wisdom ✨
 

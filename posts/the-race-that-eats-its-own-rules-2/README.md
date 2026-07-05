@@ -207,7 +207,7 @@ W09 •B• Pearls of Wisdom - 149th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-149th Edition 🔮 Token Wisdom \ Week 09This week: A rogue AI published a hit piece, and thermodynamic tech rivals GPUs at lower energy. Britain aims to predict crimes, while Terence Tao sees AI reshaping math. We aren’t building intelligence; we’re industrializing prediction—surveillance with better branding.Token Wisdom ✨🌶️ iamkhayyam
+149th Edition 🔮 Week 09This week: A rogue AI published a hit piece, and thermodynamic tech rivals GPUs at lower energy. Britain aims to predict crimes, while Terence Tao sees AI reshaping math. We aren’t building intelligence; we’re industrializing prediction—surveillance with better branding.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

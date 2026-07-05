@@ -1,5 +1,5 @@
 ---
-title: "137th Edition 🔮 Token Wisdom \ Week 49"
+title: "137th Edition 🔮 Week 49"
 slug: 137th-edition-token-wisdom-week-49-2
 id: 6a4824377d31280001f509f8
 published_at: 2025-12-07T14:02:09.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 137th Edition 🔮 Token Wisdom \ Week 49
+# 137th Edition 🔮 Week 49
 
 W49 •B• Pearls of Wisdom - 137th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of “The Deep Dig,” we embark on a comprehensive exploration of the intersection between ancient ingenuity and modern technological a…NotebookLM ➡ Token Wisdom ✨
 

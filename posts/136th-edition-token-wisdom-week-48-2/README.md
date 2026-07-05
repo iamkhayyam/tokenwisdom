@@ -1,5 +1,5 @@
 ---
-title: "136th Edition 🔮 Token Wisdom \ Week 48"
+title: "136th Edition 🔮 Week 48"
 slug: 136th-edition-token-wisdom-week-48-2
 id: 6a4824387d31280001f50a0b
 published_at: 2025-12-01T13:11:00.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 136th Edition 🔮 Token Wisdom \ Week 48
+# 136th Edition 🔮 Week 48
 
 W48 •B• Pearls of Wisdom - 136th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this thought-provoking episode of “The Deep Dive,” we explore the mesmerizing convergence of technology and science as we delve into “Token Wis…NotebookLM ➡ Token Wisdom ✨
 

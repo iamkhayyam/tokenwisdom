@@ -160,7 +160,7 @@ W08 •B• Pearls of Wisdom - 148th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-148th Edition 🔮 Token Wisdom \ Week 08This week: Mini brains solve engineering problems. AI reads MRIs at 97.5% accuracy without explaining why. Consciousness might live in electromagnetic fields. Forests changing how they breathe. We built systems that work before we understand them.Token Wisdom ✨🌶️ iamkhayyam
+148th Edition 🔮 Week 08This week: Mini brains solve engineering problems. AI reads MRIs at 97.5% accuracy without explaining why. Consciousness might live in electromagnetic fields. Forests changing how they breathe. We built systems that work before we understand them.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

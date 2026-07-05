@@ -225,7 +225,7 @@ W07 •B• Pearls of Wisdom - 147th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-147th Edition 🔮 Token Wisdom \ Week 07This week: Systems so capable they’ve become fragile. So optimized they have no room left to fail. So advanced they’ve made us hostages to their own perfection. It takes 250 poisoned documents to collapse an entire AI. Not millions. Not thousands. Two hundred and fifty. We’ve called this progress.Token Wisdom ✨🌶️ iamkhayyam
+147th Edition 🔮 Week 07This week: Systems so capable they’ve become fragile. So optimized they have no room left to fail. So advanced they’ve made us hostages to their own perfection. It takes 250 poisoned documents to collapse an entire AI. Not millions. Not thousands. Two hundred and fifty. We’ve called this progress.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

@@ -588,7 +588,7 @@ W01 •B• Pearls of Wisdom - 141st Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-141st Edition 🔮 Token Wisdom \ Week 01This week: Scientific breakthroughs reshape our view of brain and environment, as tech raises privacy concerns. From ‘mini-brains’ illuminating mental disorders to bee colony collapse, we explore progress vs preservation. Innovation’s impacts are complex.Token Wisdom ✨🌶️ iamkhayyam
+141st Edition 🔮 Week 01This week: Scientific breakthroughs reshape our view of brain and environment, as tech raises privacy concerns. From ‘mini-brains’ illuminating mental disorders to bee colony collapse, we explore progress vs preservation. Innovation’s impacts are complex.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

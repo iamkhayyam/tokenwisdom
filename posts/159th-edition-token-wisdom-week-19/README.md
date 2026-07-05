@@ -1,5 +1,5 @@
 ---
-title: "159th Edition 🔮 Token Wisdom \ Week 19"
+title: "159th Edition 🔮 Week 19"
 slug: 159th-edition-token-wisdom-week-19
 id: 6a4816fb7d31280001f4fb1d
 published_at: 2026-05-11T21:26:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 159th Edition 🔮 Token Wisdom \ Week 19
+# 159th Edition 🔮 Week 19
 
 W19 •B• Pearls of Wisdom - 159th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of The Deep Dig, we confront a deceptively simple question with civilization-scale consequences: what happens when the wrong name gets s…NotebookLM ➡ Token Wisdom ✨
 

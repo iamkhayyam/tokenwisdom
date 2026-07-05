@@ -1,5 +1,5 @@
 ---
-title: "134th Edition 🔮 Token Wisdom \ Week 46"
+title: "134th Edition 🔮 Week 46"
 slug: 134th-edition-token-wisdom-week-46-2
 id: 6a48243a7d31280001f50a31
 published_at: 2025-11-17T12:08:13.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 134th Edition 🔮 Token Wisdom \ Week 46
+# 134th Edition 🔮 Week 46
 
 W46 •B• Pearls of Wisdom - 134th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨Welcome to this week’s episode of the Deep Dive, or as we’re calling it, the Deep Dig. In this episode, we sift through a curated collection of arti…NotebookLM ➡ Token Wisdom ✨
 

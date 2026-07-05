@@ -1,5 +1,5 @@
 ---
-title: "133rd Edition 🔮 Token Wisdom \ Week 45"
+title: "133rd Edition 🔮 Week 45"
 slug: 133rd-edition-token-wisdom-week-45-2
 id: 6a48243b7d31280001f50a44
 published_at: 2025-11-09T11:11:01.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 133rd Edition 🔮 Token Wisdom \ Week 45
+# 133rd Edition 🔮 Week 45
 
 W45 •B• Pearls of Wisdom - 133rd Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨YOUR ARTICLE HEREA Closer Look from Token Wisdom, courtesy of your friendly neighborhood, Khayyam ✨For A Closer Look, click the link for our weekly co…NotebookLM ➡ Token Wisdom ✨
 

@@ -1,5 +1,5 @@
 ---
-title: "142nd Edition 🔮 Token Wisdom \ Week 02"
+title: "142nd Edition 🔮 Week 02"
 slug: 142nd-edition-token-wisdom-week-02
 id: 6a4816fb7d31280001f4faf7
 published_at: 2026-01-11T14:00:07.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 142nd Edition 🔮 Token Wisdom \ Week 02
+# 142nd Edition 🔮 Week 02
 
 
 

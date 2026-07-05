@@ -1,5 +1,5 @@
 ---
-title: "152nd Edition 🔮 Token Wisdom \ Week 12"
+title: "152nd Edition 🔮 Week 12"
 slug: 152nd-edition-token-wisdom-week-12-2
 id: 6a4824237d31280001f508bb
 published_at: 2026-03-24T07:24:58.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 152nd Edition 🔮 Token Wisdom \ Week 12
+# 152nd Edition 🔮 Week 12
 
 W12 •B• Pearls of Wisdom - 152nd Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of The Deep Dig, we explore the overarching tension between humanity’s obsession with engineered control and the universe’s irreducible…NotebookLM ➡ Token Wisdom ✨
 

@@ -1,5 +1,5 @@
 ---
-title: "141st Edition 🔮 Token Wisdom \ Week 01"
+title: "141st Edition 🔮 Week 01"
 slug: 141st-edition-token-wisdom-week-01
 id: 6a4816fb7d31280001f4faf5
 published_at: 2026-01-04T10:10:22.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 141st Edition 🔮 Token Wisdom \ Week 01
+# 141st Edition 🔮 Week 01
 
 
 

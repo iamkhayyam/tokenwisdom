@@ -1,5 +1,5 @@
 ---
-title: "158th Edition 🔮 Token Wisdom \ Week 18"
+title: "158th Edition 🔮 Week 18"
 slug: 158th-edition-token-wisdom-week-18
 id: 6a4816fb7d31280001f4fb1b
 published_at: 2026-05-04T17:58:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 158th Edition 🔮 Token Wisdom \ Week 18
+# 158th Edition 🔮 Week 18
 
 W18 •B• Pearls of Wisdom - 158th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode, we unpack the 158th edition of Token Wisdom, themed around a single provocative question: can we still find out when we’re wrong? The n…NotebookLM ➡ Token Wisdom ✨
 

@@ -1,5 +1,5 @@
 ---
-title: "135th Edition 🔮 Token Wisdom \ Week 47"
+title: "135th Edition 🔮 Week 47"
 slug: 135th-edition-token-wisdom-week-47
 id: 6a4816fb7d31280001f4fae5
 published_at: 2025-11-24T07:55:00.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 135th Edition 🔮 Token Wisdom \ Week 47
+# 135th Edition 🔮 Week 47
 
 W47 •B• Pearls of Wisdom - 135th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨Join us for an enlightening journey in the latest episode of “The Deep Dig,” where we explore the complex interplay between human consciousness, bio…NotebookLM ➡ Token Wisdom ✨
 

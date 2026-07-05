@@ -1,5 +1,5 @@
 ---
-title: "151st Edition 🔮 Token Wisdom \ Week 11"
+title: "151st Edition 🔮 Week 11"
 slug: 151st-edition-token-wisdom-week-11-2
 id: 6a4824247d31280001f508ce
 published_at: 2026-03-16T08:24:45.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 151st Edition 🔮 Token Wisdom \ Week 11
+# 151st Edition 🔮 Week 11
 
 W11 •B• Pearls of Wisdom - 151st Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of The Deep Dive, your hosts unpack one of the most unsettling theses in modern thinking: the substrate precedes the content — the ide…NotebookLM ➡ Token Wisdom ✨
 

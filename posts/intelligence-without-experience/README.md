@@ -216,7 +216,7 @@ W47 •B• Pearls of Wisdom - 135th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-135th Edition 🔮 Token Wisdom \ Week 47This week: MIT probes consciousness, scientists warn of evolution-society mismatches, and new research transforms our grasp of time and memory. Meanwhile, AI ventures, smart farming, and math disputes show tech’s growing impact on human experience.Token Wisdom ✨🌶️ iamkhayyam
+135th Edition 🔮 Week 47This week: MIT probes consciousness, scientists warn of evolution-society mismatches, and new research transforms our grasp of time and memory. Meanwhile, AI ventures, smart farming, and math disputes show tech’s growing impact on human experience.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

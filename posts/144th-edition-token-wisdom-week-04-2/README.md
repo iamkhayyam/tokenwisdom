@@ -1,5 +1,5 @@
 ---
-title: "144th Edition 🔮 Token Wisdom \ Week 04"
+title: "144th Edition 🔮 Week 04"
 slug: 144th-edition-token-wisdom-week-04-2
 id: 6a48242e7d31280001f5096f
 published_at: 2026-01-25T16:44:24.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 144th Edition 🔮 Token Wisdom \ Week 04
+# 144th Edition 🔮 Week 04
 
 
 

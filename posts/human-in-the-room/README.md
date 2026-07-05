@@ -173,7 +173,7 @@ W19 •B• Pearls of Wisdom - 159th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-159th Edition 🔮 Token Wisdom \ Week 19This week — Edison didn’t invent the light bulb. Pascal didn’t discover his triangle. From misattributed theorems to erased mathematicians to AI labs inheriting credit they synthesized, we map what happens when the wrong name is on the door. The questions you can’t ask are the ones that matter most.Token Wisdom ✨🌶️ iamkhayyam
+159th Edition 🔮 Week 19This week — Edison didn’t invent the light bulb. Pascal didn’t discover his triangle. From misattributed theorems to erased mathematicians to AI labs inheriting credit they synthesized, we map what happens when the wrong name is on the door. The questions you can’t ask are the ones that matter most.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

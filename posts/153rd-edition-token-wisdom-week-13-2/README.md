@@ -1,5 +1,5 @@
 ---
-title: "153rd Edition 🔮 Token Wisdom \ Week 13"
+title: "153rd Edition 🔮 Week 13"
 slug: 153rd-edition-token-wisdom-week-13-2
 id: 6a4824227d31280001f508a8
 published_at: 2026-03-31T08:42:26.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 153rd Edition 🔮 Token Wisdom \ Week 13
+# 153rd Edition 🔮 Week 13
 
 W13 •B• Pearls of Wisdom - 153rd Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In&nbsp;this&nbsp;episode&nbsp;of&nbsp;The&nbsp;Deep&nbsp;Dig,&nbsp;hosts&nbsp;mine&nbsp;the&nbsp;heaviest&nbsp;signals&nbsp;from&nbsp;Khayyam’s&nbsp;To…NotebookLM ➡ Token Wisdom ✨
 

@@ -1,5 +1,5 @@
 ---
-title: "146th Edition 🔮 Token Wisdom \ Week 06"
+title: "146th Edition 🔮 Week 06"
 slug: 146th-edition-token-wisdom-week-06-2
 id: 6a48242b7d31280001f5093b
 published_at: 2026-02-08T14:24:22.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 146th Edition 🔮 Token Wisdom \ Week 06
+# 146th Edition 🔮 Week 06
 
 
 

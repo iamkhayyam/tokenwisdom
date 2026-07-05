@@ -1,5 +1,5 @@
 ---
-title: "147th Edition 🔮 Token Wisdom \ Week 07"
+title: "147th Edition 🔮 Week 07"
 slug: 147th-edition-token-wisdom-week-07
 id: 6a4816fb7d31280001f4fb02
 published_at: 2026-02-16T08:11:29.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 147th Edition 🔮 Token Wisdom \ Week 07
+# 147th Edition 🔮 Week 07
 
 W07 •B• Pearls of Wisdom - 147th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode of the Deep Dig, hosts break down the curation from Khayyam for Week 07, themed “Tthreading a Very Fine Needle.” What sounds like de…NotebookLM ➡ Token Wisdom ✨
 

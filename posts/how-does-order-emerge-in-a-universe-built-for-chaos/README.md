@@ -225,7 +225,7 @@ W05 •B• Pearls of Wisdom - 145th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-145th Edition 🔮 Token Wisdom \ Week 05This week: Donut-shaped light promises better wireless while scientists question Earth’s population counts. Chinese satellites push competitors lower, academic work vanishes with one click—technology creates opportunities and vulnerabilities alike.Token Wisdom ✨🌶️ iamkhayyam
+145th Edition 🔮 Week 05This week: Donut-shaped light promises better wireless while scientists question Earth’s population counts. Chinese satellites push competitors lower, academic work vanishes with one click—technology creates opportunities and vulnerabilities alike.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

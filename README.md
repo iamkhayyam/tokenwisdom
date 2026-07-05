@@ -1,18 +1,18 @@
 # Ghost Blog Backup: https://ghost-production-198e.up.railway.app
 
-**Backup Date:** 2026-07-03T18:56:04.327076
+**Backup Date:** 2026-07-04T19:24:38.531705
 
 ## Summary
 
 | Resource | Count |
 |----------|-------|
-| Posts | 281 |
+| Posts | 283 |
 | Pages | 15 |
 | Tags | 88 |
 | Authors | 1 |
 | Tag Images | 83 |
 | Author Images | 2 |
-| Post Images | 2839 |
+| Post Images | 2861 |
 
 ## Directory Structure
 
@@ -62,19 +62,19 @@ ghost-io-backup/
 - **[#Import 2026-07-03 20:09](tags/hash-import-2026-07-03-20-09/)** (280 posts)
 - **[#unlisted](tags/hash-unlisted/)** (17 posts)
 - **[A Story to Tell](tags/storytelling/)** (32 posts)
-- **[A.I. (and Subsets)](tags/ai/)** (75 posts)
+- **[A.I. (and Subsets)](tags/ai/)** (76 posts)
 - **[Advertising](tags/advertising/)** (4 posts)
-- **[All the Data](tags/data/)** (33 posts)
+- **[All the Data](tags/data/)** (34 posts)
 - **[ANI \ AGI \ ASI](tags/agi/)** (24 posts)
 - **[Automation](tags/automation/)** (7 posts)
-- **[Big Tech](tags/big-tech/)** (35 posts)
+- **[Big Tech](tags/big-tech/)** (36 posts)
 - **[Bitcoin \ Ordinals](tags/bitcoin/)** (1 posts)
 - **[Blockchain \ DLT](tags/blockchain/)** (6 posts)
 - **[Brain Health](tags/brain-health/)** (4 posts)
 - **[Brands \ Agency](tags/agency/)** (13 posts)
 - **[Build Log](tags/build-log/)** (1 posts)
 - **[Business Models](tags/business-intelligence/)** (19 posts)
-- **[Challenges](tags/challenges/)** (61 posts)
+- **[Challenges](tags/challenges/)** (62 posts)
 - **[Claudacious](tags/claudacious/)** (1 posts)
 - **[Content Creation](tags/content-creation/)** (7 posts)
 - **[Creative \ Design](tags/creative-design/)** (10 posts)
@@ -82,13 +82,13 @@ ghost-io-backup/
 - **[Customary](tags/customs/)** (5 posts)
 - **[Cyber \ Security](tags/cybersecurity/)** (18 posts)
 - **[Dear ______ Letters](tags/dear-______-letters/)** (6 posts)
-- **[Deep Tech](tags/deeptech/)** (46 posts)
-- **[Economic  ≠](tags/economic-inequality/)** (23 posts)
-- **[Educate \ Learn](tags/education/)** (24 posts)
+- **[Deep Tech](tags/deeptech/)** (47 posts)
+- **[Economic  ≠](tags/economic-inequality/)** (24 posts)
+- **[Educate \ Learn](tags/education/)** (25 posts)
 - **[Emerging Tech](tags/emerging-technology/)** (25 posts)
 - **[Entertainment \ LBE](tags/entertainment-lbe/)** (7 posts)
 - **[Entrepreneurial](tags/entrepreneurship/)** (12 posts)
-- **[Ethics \ Principles](tags/ethical/)** (68 posts)
+- **[Ethics \ Principles](tags/ethical/)** (70 posts)
 - **[Explainable AI](tags/explainable-ai/)** (4 posts)
 - **[Explore \ Travel](tags/travel/)** (2 posts)
 - **[Failing Up \ Often](tags/failing-up/)** (10 posts)
@@ -104,38 +104,38 @@ ghost-io-backup/
 - **[Interview with...](tags/interview/)** (1 posts)
 - **[IP \ Copyright](tags/copyright/)** (6 posts)
 - **[LayerZero Networks](tags/layerzero/)** (2 posts)
-- **[Lessons Learned](tags/lessons-learned/)** (13 posts)
+- **[Lessons Learned](tags/lessons-learned/)** (14 posts)
 - **[Life Hacks](tags/life-hacks/)** (9 posts)
 - **[LinkedIn \ Pros](tags/linkedin/)** (2 posts)
 - **[LLMs - Language Models](tags/language-models/)** (11 posts)
 - **[Low Code \ No Code](tags/code-no-code/)** (1 posts)
 - **[Marketing](tags/marketing/)** (7 posts)
-- **[Math + Physics](tags/math-physics/)** (19 posts)
+- **[Math + Physics](tags/math-physics/)** (20 posts)
 - **[Misinformation](tags/misinformation/)** (10 posts)
 - **[Networking](tags/networking/)** (1 posts)
-- **[Neuroscience](tags/neuroscience/)** (16 posts)
+- **[Neuroscience](tags/neuroscience/)** (17 posts)
 - **[NLP \ NLU \ NLG](tags/nlp/)** (4 posts)
 - **[Open-Source](tags/open-source/)** (3 posts)
 - **[OpenAI + e/acc](tags/gpt/)** (7 posts)
 - **[Perovskite](tags/perovskite/)** (1 posts)
 - **[Personal Growth](tags/personal-growth/)** (13 posts)
-- **[Persuasion](tags/grifters/)** (9 posts)
-- **[Philosophical](tags/philosophy/)** (50 posts)
+- **[Persuasion](tags/grifters/)** (10 posts)
+- **[Philosophical](tags/philosophy/)** (51 posts)
 - **[Pre-Crime](tags/pre-crime/)** (3 posts)
-- **[Privacy](tags/privacy/)** (16 posts)
+- **[Privacy](tags/privacy/)** (17 posts)
 - **[Productivity](tags/productivity/)** (5 posts)
 - **[Prompt \ Engineering](tags/prompt-engineering/)** (2 posts)
-- **[Provenance](tags/provenance/)** (5 posts)
+- **[Provenance](tags/provenance/)** (6 posts)
 - **[Quantum Realm](tags/quantum/)** (7 posts)
 - **[Regenerative](tags/regenerative/)** (3 posts)
 - **[Renewable Energy](tags/renewable-energy/)** (4 posts)
 - **[Risk \ Reward](tags/risk-reward/)** (42 posts)
-- **[Semiconductor](tags/semiconductor/)** (8 posts)
+- **[Semiconductor](tags/semiconductor/)** (9 posts)
 - **[Solar Energy](tags/solar/)** (2 posts)
 - **[Sports \ Tech](tags/sports/)** (4 posts)
 - **[Strategic Measures](tags/strategic/)** (53 posts)
 - **[Streaming \ Video](tags/streaming/)** (1 posts)
-- **[Technology](tags/technology/)** (90 posts)
+- **[Technology](tags/technology/)** (91 posts)
 - **[Unsolicited Advice](tags/unsolicited-advice/)** (35 posts)
 - **[User Experience](tags/user-experience/)** (4 posts)
 - **[Viral Content](tags/viral-content/)** (3 posts)
@@ -143,75 +143,77 @@ ghost-io-backup/
 - **[XR (Pirate Talk)](tags/pirate-talk/)** (6 posts)
 - **[✨ Pearls of Wisdom](tags/worthafortune/)** (85 posts)
 - **[🎉 Newest / Latest](tags/newestlatest/)** (12 posts)
-- **[👁️ A Closer Look](tags/a-closer-look/)** (123 posts)
+- **[👁️ A Closer Look](tags/a-closer-look/)** (125 posts)
 - **[📣 Ask Me Anything](tags/ask-me-anything/)** (1 posts)
 - **[📺 Time Well Spent](tags/timewellspent/)** (12 posts)
 - **[🚨 OP-ED](tags/opinionated-editorials/)** (50 posts)
 
-## All Posts (281)
+## All Posts (283)
 
 - **[del.icio.us Was Right. It Was Just Twenty Years Too Early.](posts/del-icio-us-was-right-we-built-claudacious/)** (2026-06-23) [Build Log, 👁️ A Closer Look, Claudacious]
+- **[Data Is Not the New Oil](posts/data-is-not-the-new-oil/)** (2026-05-28) [All the Data, Economic  ≠, Big Tech, Semiconductor, Provenance, Privacy, A.I. (and Subsets), Ethics \ Principles, Persuasion, 👁️ A Closer Look]
+- **[Human-in-the-Room](posts/human-in-the-room/)** (2026-05-21) [Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look]
 - **[The Proof Was Never the Point](posts/the-proof-was-never-the-point/)** (2026-05-15) [Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[159th Edition 🔮 Token Wisdom \ Week 19](posts/159th-edition-token-wisdom-week-19/)** (2026-05-11) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[159th Edition 🔮 Week 19](posts/159th-edition-token-wisdom-week-19/)** (2026-05-11) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Wrong Name on the Door](posts/the-wrong-name-on-the-door/)** (2026-05-07) [Educate \ Learn, Ethics \ Principles, Philosophical, A Story to Tell, Challenges, Misinformation, A.I. (and Subsets), Provenance, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[158th Edition 🔮 Token Wisdom \ Week 18](posts/158th-edition-token-wisdom-week-18/)** (2026-05-04) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[158th Edition 🔮 Week 18](posts/158th-edition-token-wisdom-week-18/)** (2026-05-04) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Cost of Being Right](posts/the-cost-of-being-right/)** (2026-05-01) [Ethics \ Principles, Challenges, Philosophical, Neuroscience, Lessons Learned, All the Data, Misinformation, Brain Health, Failing Up \ Often, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[157th Edition 🔮 Token Wisdom \ Week 17](posts/157th-edition-token-wisdom-week-17/)** (2026-04-29) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[157th Edition 🔮 Week 17](posts/157th-edition-token-wisdom-week-17/)** (2026-04-29) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[No Heir. No Lesson.](posts/no-heir-no-lesson/)** (2026-04-24) [Future of Work, Automation, A.I. (and Subsets), Economic  ≠, Innovation, Lessons Learned, Philosophical, Unsolicited Advice, A Story to Tell, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[156th Edition 🔮 Token Wisdom \ Week 16](posts/156th-edition-token-wisdom-week-16/)** (2026-04-21) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[156th Edition 🔮 Week 16](posts/156th-edition-token-wisdom-week-16/)** (2026-04-21) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Who's Mind Is It Anyway?](posts/whos-mind-is-it-anyway/)** (2026-04-16) [Philosophical, A.I. (and Subsets), Ethics \ Principles, Future Trends, ANI \ AGI \ ASI, Privacy, Neuroscience, Unsolicited Advice, Culture Club, Emerging Tech, #Import 2026-07-03 20:09]
-- **[155th Edition 🔮 Token Wisdom \ Week 15](posts/155th-edition-token-wisdom-week-15/)** (2026-04-14) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[155th Edition 🔮 Week 15](posts/155th-edition-token-wisdom-week-15/)** (2026-04-14) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[We Trained It on Human Weaponry](posts/we-trained-it-on-human-weaponry/)** (2026-04-10) [ANI \ AGI \ ASI, Philosophical, Future Trends, Big Tech, Ethics \ Principles, Persuasion, Misinformation, A.I. (and Subsets), 👁️ A Closer Look, A Story to Tell, #Import 2026-07-03 20:09]
-- **[154th Edition 🔮 Token Wisdom \ Week 14](posts/154th-edition-token-wisdom-week-14/)** (2026-04-07) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[154th Edition 🔮 Week 14](posts/154th-edition-token-wisdom-week-14/)** (2026-04-07) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Cow Came Last](posts/the-cow-came-last/)** (2026-04-02) [A Story to Tell, Philosophical, Deep Tech, Innovation, Emerging Tech, Educate \ Learn, Neuroscience, Failing Up \ Often, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[153rd Edition 🔮 Token Wisdom \ Week 13](posts/153rd-edition-token-wisdom-week-13/)** (2026-03-31) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[153rd Edition 🔮 Week 13](posts/153rd-edition-token-wisdom-week-13/)** (2026-03-31) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Sky Has Been Warning Us Since 1859](posts/the-sky-has-been-warning-us-since-1859/)** (2026-03-26) [Technology, Innovation, Deep Tech, Risk \ Reward, Philosophical, Future Trends, Challenges, Economic  ≠, Unsolicited Advice, 🚨 OP-ED, #Import 2026-07-03 20:09]
-- **[152nd Edition 🔮 Token Wisdom \ Week 12](posts/152nd-edition-token-wisdom-week-12/)** (2026-03-24) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[152nd Edition 🔮 Week 12](posts/152nd-edition-token-wisdom-week-12/)** (2026-03-24) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Proentropic Weed Manifesto](posts/the-proentropic-weed-manifesto/)** (2026-03-20) [A.I. (and Subsets), Philosophical, Deep Tech, Future Trends, ANI \ AGI \ ASI, Ethics \ Principles, Strategic Measures, Innovation, 👁️ A Closer Look, Risk \ Reward, #Import 2026-07-03 20:09]
-- **[151st Edition 🔮 Token Wisdom \ Week 11](posts/151st-edition-token-wisdom-week-11/)** (2026-03-16) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[151st Edition 🔮 Week 11](posts/151st-edition-token-wisdom-week-11/)** (2026-03-16) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Room Was Already Set Before You Walked In](posts/the-room-was-already-set-before-you-walked-in/)** (2026-03-12) [Persuasion, Pre-Crime, Unsolicited Advice, All the Data, Big Tech, Challenges, Ethics \ Principles, Marketing, Neuroscience, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[150th Edition 🔮 Token Wisdom \ Week 10](posts/150th-edition-token-wisdom-week-10/)** (2026-03-10) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[150th Edition 🔮 Week 10](posts/150th-edition-token-wisdom-week-10/)** (2026-03-10) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Race That Eats Its Own Rules](posts/the-race-that-eats-its-own-rules/)** (2026-03-06) [A.I. (and Subsets), Big Tech, ANI \ AGI \ ASI, Ethics \ Principles, Risk \ Reward, OpenAI + e/acc, Failing Up \ Often, Future of Work, Philosophical, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[149th Edition 🔮 Token Wisdom \ Week 09](posts/149th-edition-token-wisdom-week-09/)** (2026-03-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[149th Edition 🔮 Week 09](posts/149th-edition-token-wisdom-week-09/)** (2026-03-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Double Collapse](posts/the-double-collapse/)** (2026-02-26) [Privacy, A.I. (and Subsets), Future of Work, Ethics \ Principles, All the Data, Cyber \ Security, Philosophical, ANI \ AGI \ ASI, 👁️ A Closer Look, A Story to Tell, #Import 2026-07-03 20:09]
 - **[Dear Sam,](posts/dear-sam/)** (2026-02-24) [Dear ______ Letters, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Ethics \ Principles, Deep Tech, Strategic Measures, Business Models, Philosophical, ANI \ AGI \ ASI, #Import 2026-07-03 20:09]
-- **[148th Edition 🔮 Token Wisdom \ Week 08](posts/148th-edition-token-wisdom-week-08/)** (2026-02-23) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[148th Edition 🔮 Week 08](posts/148th-edition-token-wisdom-week-08/)** (2026-02-23) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Persistence of Inferior Standards](posts/the-persistence-of-inferior-standards/)** (2026-02-19) [Lessons Learned, Challenges, A Story to Tell, User Experience, Provenance, Philosophical, Educate \ Learn, 🚨 OP-ED, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[147th Edition 🔮 Token Wisdom \ Week 07](posts/147th-edition-token-wisdom-week-07/)** (2026-02-16) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[147th Edition 🔮 Week 07](posts/147th-edition-token-wisdom-week-07/)** (2026-02-16) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Threading a Very Fine Needle](posts/threading-a-very-fine-needle/)** (2026-02-12) [A.I. (and Subsets), Ethics \ Principles, Challenges, Philosophical, Risk \ Reward, 👁️ A Closer Look, Human Computer Interaction, Future Trends, Unsolicited Advice, LLMs - Language Models, #Import 2026-07-03 20:09]
-- **[146th Edition 🔮 Token Wisdom \ Week 06](posts/146th-edition-token-wisdom-week-06/)** (2026-02-08) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[146th Edition 🔮 Week 06](posts/146th-edition-token-wisdom-week-06/)** (2026-02-08) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[How Does Order Emerge in a Universe Built for Chaos?](posts/how-does-order-emerge-in-a-universe-built-for-chaos/)** (2026-02-05) [A.I. (and Subsets), Philosophical, Ethics \ Principles, A Story to Tell, Deep Tech, ANI \ AGI \ ASI, Challenges, Future Trends, Unsolicited Advice, In Flow State, #Import 2026-07-03 20:09]
-- **[145th Edition 🔮 Token Wisdom \ Week 05](posts/145th-edition-token-wisdom-week-05/)** (2026-02-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[145th Edition 🔮 Week 05](posts/145th-edition-token-wisdom-week-05/)** (2026-02-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Zombie Singularity of Intelligence Without Understanding](posts/the-zombie-singularity-of-intelligence-without-understanding/)** (2026-01-30) [ANI \ AGI \ ASI, Ethics \ Principles, Risk \ Reward, LLMs - Language Models, A.I. (and Subsets), A Story to Tell, Big Tech, Strategic Measures, 🚨 OP-ED, 👁️ A Closer Look, #Import 2026-07-03 20:09]
 - **[Dear Dario,](posts/dear-dario/)** (2026-01-27) [Dear ______ Letters, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Ethics \ Principles, Deep Tech, Strategic Measures, Business Models, Philosophical, ANI \ AGI \ ASI, #Import 2026-07-03 20:09]
-- **[144th Edition 🔮 Token Wisdom \ Week 04](posts/144th-edition-token-wisdom-week-04/)** (2026-01-25) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[144th Edition 🔮 Week 04](posts/144th-edition-token-wisdom-week-04/)** (2026-01-25) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Greengrocer Goes To Davos](posts/the-greengrocer-goes-to-davos/)** (2026-01-22) [Strategic Measures, Unsolicited Advice, Philosophical, Future Trends, Challenges, Risk \ Reward, Ethics \ Principles, Culture Club, 👁️ A Closer Look, 🚨 OP-ED, #Import 2026-07-03 20:09]
-- **[143rd Edition 🔮 Token Wisdom \ Week 03](posts/143rd-edition-token-wisdom-week-03/)** (2026-01-18) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[143rd Edition 🔮 Week 03](posts/143rd-edition-token-wisdom-week-03/)** (2026-01-18) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[AI Didn't Break Democracy. We Did. Four Decades Ago.](posts/ai-didnt-break-democracy-we-did-four-decades-ago/)** (2026-01-15) [Ethics \ Principles, Economic  ≠, Challenges, Future of Work, Misinformation, Philosophical, Technology, A.I. (and Subsets), 🚨 OP-ED, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[142nd Edition 🔮 Token Wisdom \ Week 02](posts/142nd-edition-token-wisdom-week-02/)** (2026-01-11) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[142nd Edition 🔮 Week 02](posts/142nd-edition-token-wisdom-week-02/)** (2026-01-11) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Building Without Blueprints](posts/building-without-blueprints/)** (2026-01-08) [Technology, Ethics \ Principles, Strategic Measures, Challenges, Future of Work, Economic  ≠, Philosophical, Risk \ Reward, 🚨 OP-ED, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[141st Edition 🔮 Token Wisdom \ Week 01](posts/141st-edition-token-wisdom-week-01/)** (2026-01-04) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[141st Edition 🔮 Week 01](posts/141st-edition-token-wisdom-week-01/)** (2026-01-04) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The $20 Billion Distraction](posts/the-20-billion-distraction/)** (2026-01-01) [Technology, A.I. (and Subsets), Future Trends, Strategic Measures, Innovation, Challenges, Ethics \ Principles, Deep Tech, 🚨 OP-ED, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[140th Edition 🔮 Token Wisdom \ Week 52](posts/140th-edition-token-wisdom-week-52/)** (2025-12-28) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[140th Edition 🔮 Week 52](posts/140th-edition-token-wisdom-week-52/)** (2025-12-28) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Ultimate Reading Guide ✨ 2025](posts/token-the-ultimate-reading-guide/)** (2025-12-25) [#Import 2026-07-03 20:09]
 - **[The Amnesia Machine](posts/the-amnesia-machine-2/)** (2025-12-25) [Big Tech, Ethics \ Principles, Technology, A.I. (and Subsets), All the Data, Privacy, Philosophical, Challenges, 👁️ A Closer Look, 🚨 OP-ED, #Import 2026-07-03 20:09]
-- **[139th Edition 🔮 Token Wisdom \ Week 51](posts/139th-edition-token-wisdom-week-51/)** (2025-12-21) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[139th Edition 🔮 Week 51](posts/139th-edition-token-wisdom-week-51/)** (2025-12-21) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Again, No One Leaves A Good Company](posts/again-no-one-leaves-a-good-company/)** (2025-12-18) [Technology, Future of Work, Economic  ≠, Lessons Learned, A.I. (and Subsets), Innovation, Culture Club, Ethics \ Principles, 👁️ A Closer Look, 🚨 OP-ED, #Import 2026-07-03 20:09]
-- **[138th Edition 🔮 Token Wisdom \ Week 50](posts/138th-edition-token-wisdom-week-50-2/)** (2025-12-16) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[138th Edition 🔮 Week 50](posts/138th-edition-token-wisdom-week-50-2/)** (2025-12-16) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Speed Trap](posts/the-speed-trap/)** (2025-12-11) [Neuroscience, Ethics \ Principles, Challenges, Philosophical, Personal Growth, Culture Club, Risk \ Reward, Human Computer Interaction, 🚨 OP-ED, 👁️ A Closer Look, Math + Physics, #Import 2026-07-03 20:09]
-- **[137th Edition 🔮 Token Wisdom \ Week 49](posts/137th-edition-token-wisdom-week-49/)** (2025-12-07) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[137th Edition 🔮 Week 49](posts/137th-edition-token-wisdom-week-49/)** (2025-12-07) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Architecture Over Scale](posts/google-just-admitted-i-was-right-i-didnt-even-flinch/)** (2025-12-04) [👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Deep Tech, Innovation, Big Tech, Strategic Measures, Entrepreneurial, Future Trends, Challenges, Math + Physics, #Import 2026-07-03 20:09]
-- **[136th Edition 🔮 Token Wisdom \ Week 48](posts/136th-edition-token-wisdom-week-48/)** (2025-12-01) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[136th Edition 🔮 Week 48](posts/136th-edition-token-wisdom-week-48/)** (2025-12-01) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Intelligence Without Experience](posts/intelligence-without-experience/)** (2025-11-27) [👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Neuroscience, Philosophical, Deep Tech, ANI \ AGI \ ASI, Technology, Ethics \ Principles, Innovation, #Import 2026-07-03 20:09]
-- **[135th Edition 🔮 Token Wisdom \ Week 47](posts/135th-edition-token-wisdom-week-47/)** (2025-11-24) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[135th Edition 🔮 Week 47](posts/135th-edition-token-wisdom-week-47/)** (2025-11-24) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[AI Won't Take Your Job. It'll Take Your Purpose. That's Worse.](posts/ai-wont-take-your-job-itll-take-your-purpose-thats-worse/)** (2025-11-20) [👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Future of Work, Automation, Economic  ≠, Ethics \ Principles, Future Trends, Risk \ Reward, Challenges, #Import 2026-07-03 20:09]
-- **[134th Edition 🔮 Token Wisdom \ Week 46](posts/134th-edition-token-wisdom-week-46/)** (2025-11-17) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[134th Edition 🔮 Week 46](posts/134th-edition-token-wisdom-week-46/)** (2025-11-17) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[When Two's Company, Three's a Revolution](posts/when-twos-company-threes-a-revolution/)** (2025-11-13) [👁️ A Closer Look, 🚨 OP-ED, Technology, Innovation, Deep Tech, Semiconductor, Future Trends, Strategic Measures, Big Tech, Challenges, Math + Physics, #Import 2026-07-03 20:09]
-- **[133rd Edition 🔮 Token Wisdom \ Week 45](posts/133rd-edition-token-wisdom-week-45/)** (2025-11-09) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[133rd Edition 🔮 Week 45](posts/133rd-edition-token-wisdom-week-45/)** (2025-11-09) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Power in the Background](posts/power-in-the-background/)** (2025-11-06) [👁️ A Closer Look, A.I. (and Subsets), Big Tech, Ethics \ Principles, Strategic Measures, Privacy, Cyber \ Security, Future of Work, Risk \ Reward, All the Data, Math + Physics, #Import 2026-07-03 20:09]
-- **[132nd Edition 🔮 Token Wisdom \ Week 44](posts/132nd-edition-token-wisdom-week-44/)** (2025-11-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[132nd Edition 🔮 Week 44](posts/132nd-edition-token-wisdom-week-44/)** (2025-11-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The 10% Delusion](posts/the-10-delusion/)** (2025-10-31) [👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Deep Tech, Ethics \ Principles, Technology, ANI \ AGI \ ASI, Future Trends, Risk \ Reward, Philosophical, Math + Physics, #Import 2026-07-03 20:09]
-- **[131st Edition 🔮 Token Wisdom \ Week 43](posts/131st-edition-token-wisdom-week-43/)** (2025-10-29) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
+- **[131st Edition 🔮 Week 43](posts/131st-edition-token-wisdom-week-43/)** (2025-10-29) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[Silicon Valley Is Building a $600 Billion Casino With Chips That Expire in Three Years](posts/silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years/)** (2025-10-23) [👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Semiconductor, Risk \ Reward, Economic  ≠, Deep Tech, Future Trends, Business Models, #Import 2026-07-03 20:09]
 - **[130th Edition 🔮 Token Wisdom \\ Week 42](posts/130th-edition-token-wisdom-week-42/)** (2025-10-20) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Bullet Holes We Can't See](posts/the-bullet-holes-we-cant-see/)** (2025-10-16) [👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Future Trends, Ethics \ Principles, Risk \ Reward, Technology, Challenges, Deep Tech, ANI \ AGI \ ASI, Math + Physics, #Import 2026-07-03 20:09]
@@ -452,4 +454,4 @@ ghost-io-backup/
 
 ## All Authors (1)
 
-- **[🌶️ @iamkhayyam](authors/khayyam/)** (281 posts)
+- **[🌶️ @iamkhayyam](authors/khayyam/)** (283 posts)

@@ -1,5 +1,5 @@
 ---
-title: "140th Edition 🔮 Token Wisdom \ Week 52"
+title: "140th Edition 🔮 Week 52"
 slug: 140th-edition-token-wisdom-week-52-2
 id: 6a4824337d31280001f509bb
 published_at: 2025-12-28T11:11:40.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 140th Edition 🔮 Token Wisdom \ Week 52
+# 140th Edition 🔮 Week 52
 
 
 

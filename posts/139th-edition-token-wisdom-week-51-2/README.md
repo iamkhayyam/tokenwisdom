@@ -1,5 +1,5 @@
 ---
-title: "139th Edition 🔮 Token Wisdom \ Week 51"
+title: "139th Edition 🔮 Week 51"
 slug: 139th-edition-token-wisdom-week-51-2
 id: 6a4824357d31280001f509d2
 published_at: 2025-12-21T11:11:05.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 139th Edition 🔮 Token Wisdom \ Week 51
+# 139th Edition 🔮 Week 51
 
 W51 •B• Pearls of Wisdom - 139th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this 139th edition of Token Wisdom, Week 51, we delve into the rich and complex intersection of technology, history, and economy. We explore a wide a…NotebookLM ➡ Token Wisdom ✨
 

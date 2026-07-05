@@ -241,7 +241,7 @@ W15 •B• Pearls of Wisdom - 155th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-155th Edition 🔮 Token Wisdom \ Week 15This week — Darkness outruns light. A 19th-century optics trick secures quantum keys. Samsung sets a photonics production date. A 2,300-year-old math mistake finally gets named. A robot generalizes. The old answers were already there — the constraint just hadn’t been named yet.Token Wisdom ✨🌶️ iamkhayyam
+155th Edition 🔮 Week 15This week — Darkness outruns light. A 19th-century optics trick secures quantum keys. Samsung sets a photonics production date. A 2,300-year-old math mistake finally gets named. A robot generalizes. The old answers were already there — the constraint just hadn’t been named yet.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

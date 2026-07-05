@@ -1,5 +1,5 @@
 ---
-title: "157th Edition 🔮 Token Wisdom \ Week 17"
+title: "157th Edition 🔮 Week 17"
 slug: 157th-edition-token-wisdom-week-17
 id: 6a4816fb7d31280001f4fb17
 published_at: 2026-04-29T11:11:22.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 157th Edition 🔮 Token Wisdom \ Week 17
+# 157th Edition 🔮 Week 17
 
 W17 •B• Pearls of Wisdom - 157th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this edition of The Deep Dig, we explore Khayyam Wakil’s curated sources for Week 17, centering on a provocative thesis: humanity may be the new work…NotebookLM ➡ Token Wisdom ✨
 

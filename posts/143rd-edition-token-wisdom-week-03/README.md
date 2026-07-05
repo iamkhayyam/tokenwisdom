@@ -1,5 +1,5 @@
 ---
-title: "143rd Edition 🔮 Token Wisdom \ Week 03"
+title: "143rd Edition 🔮 Week 03"
 slug: 143rd-edition-token-wisdom-week-03
 id: 6a4816fb7d31280001f4faf9
 published_at: 2026-01-18T18:37:12.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 143rd Edition 🔮 Token Wisdom \ Week 03
+# 143rd Edition 🔮 Week 03
 
 
 

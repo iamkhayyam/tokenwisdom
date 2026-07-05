@@ -1,5 +1,5 @@
 ---
-title: "150th Edition 🔮 Token Wisdom \ Week 10"
+title: "150th Edition 🔮 Week 10"
 slug: 150th-edition-token-wisdom-week-10-2
 id: 6a4824257d31280001f508e1
 published_at: 2026-03-10T08:44:59.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 150th Edition 🔮 Token Wisdom \ Week 10
+# 150th Edition 🔮 Week 10
 
 W10 •B• Pearls of Wisdom - 150th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨Infrastructure Audit: Math, Machines, and MindsIn this landmark 150th edition of the Deep Dig, curated by Khayyam Wakil, hosts conduct a sweeping “infra…NotebookLM ➡ Token Wisdom ✨
 
