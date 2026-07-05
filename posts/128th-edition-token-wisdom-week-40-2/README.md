@@ -1,5 +1,5 @@
 ---
-title: "128th Edition 🔮 Token Wisdom \\ Week 40"
+title: "128th Edition 🔮 Week 40"
 slug: 128th-edition-token-wisdom-week-40-2
 id: 6a4824417d31280001f50aa3
 published_at: 2025-10-05T22:05:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 128th Edition 🔮 Token Wisdom \\ Week 40
+# 128th Edition 🔮 Week 40
 
 
 

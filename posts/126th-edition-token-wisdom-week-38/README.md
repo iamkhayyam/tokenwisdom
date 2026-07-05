@@ -1,5 +1,5 @@
 ---
-title: "126th Edition 🔮 Token Wisdom \\ Week 38"
+title: "126th Edition 🔮 Week 38"
 slug: 126th-edition-token-wisdom-week-38
 id: 6a4816fb7d31280001f4fad3
 published_at: 2025-09-21T14:28:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 126th Edition 🔮 Token Wisdom \\ Week 38
+# 126th Edition 🔮 Week 38
 
 
 

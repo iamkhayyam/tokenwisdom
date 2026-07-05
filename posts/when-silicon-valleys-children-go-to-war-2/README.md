@@ -196,6 +196,6 @@ W35 •B• Pearls of Wisdom - 123rd Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-123rd Edition 🔮 Token Wisdom \\ Week 35W35 - Exploring AI copyright settlements, powerful supercomputers, and the changing landscape of college sports. Welcome to Token Wisdom’s 123rd edition—where we unravel the complexities of technology, law, and society. Prepare for a journey from the digital realm to the playing field!Token Wisdom ✨🌶️ iamkhayyam
+123rd Edition 🔮 Week 35W35 - Exploring AI copyright settlements, powerful supercomputers, and the changing landscape of college sports. Welcome to Token Wisdom’s 123rd edition—where we unravel the complexities of technology, law, and society. Prepare for a journey from the digital realm to the playing field!Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil is a systems theorist specializing in technological transformation and the author of the upcoming book, "Knowware: Systems of Intelligence (The Third Pillar)." He is currently teaching his Alexa to play nice with his Roomba while they still pretend to listen to him.

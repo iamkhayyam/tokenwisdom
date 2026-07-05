@@ -1,5 +1,5 @@
 ---
-title: "127th Edition 🔮 Token Wisdom \\ Week 39"
+title: "127th Edition 🔮 Week 39"
 slug: 127th-edition-token-wisdom-week-39
 id: 6a4816fb7d31280001f4fad5
 published_at: 2025-09-29T12:27:22.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 127th Edition 🔮 Token Wisdom \\ Week 39
+# 127th Edition 🔮 Week 39
 
 
 

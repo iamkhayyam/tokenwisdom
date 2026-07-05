@@ -1,5 +1,5 @@
 ---
-title: "125th Edition 🔮 Token Wisdom \\ Week 37"
+title: "125th Edition 🔮 Week 37"
 slug: 125th-edition-token-wisdom-week-37
 id: 6a4816fb7d31280001f4fad0
 published_at: 2025-09-14T22:37:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 125th Edition 🔮 Token Wisdom \\ Week 37
+# 125th Edition 🔮 Week 37
 
 
 

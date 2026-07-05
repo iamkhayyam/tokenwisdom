@@ -1,5 +1,5 @@
 ---
-title: "130th Edition 🔮 Token Wisdom \\ Week 42"
+title: "130th Edition 🔮 Week 42"
 slug: 130th-edition-token-wisdom-week-42-2
 id: 6a48243f7d31280001f50a7d
 published_at: 2025-10-20T11:29:22.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 130th Edition 🔮 Token Wisdom \\ Week 42
+# 130th Edition 🔮 Week 42
 
 W42 •B• Pearls of Wisdom - 130th Edition 🔮 Weekly Curated List - NotebookLM ➡ Token Wisdom ✨In this episode we explore the 130th edition of Token Wisdom, curated by Khayyam for October 12th to the 18th, the 42nd week of 2025. We delve into the…NotebookLM ➡ Token Wisdom ✨
 

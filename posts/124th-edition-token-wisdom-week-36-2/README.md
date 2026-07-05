@@ -1,5 +1,5 @@
 ---
-title: "124th Edition 🔮 Token Wisdom \\ Week 36"
+title: "124th Edition 🔮 Week 36"
 slug: 124th-edition-token-wisdom-week-36-2
 id: 6a4824467d31280001f50afd
 published_at: 2025-09-07T12:23:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 124th Edition 🔮 Token Wisdom \\ Week 36
+# 124th Edition 🔮 Week 36
 
 
 

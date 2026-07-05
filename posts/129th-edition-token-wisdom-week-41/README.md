@@ -1,5 +1,5 @@
 ---
-title: "129th Edition 🔮 Token Wisdom \\ Week 41"
+title: "129th Edition 🔮 Week 41"
 slug: 129th-edition-token-wisdom-week-41
 id: 6a4816fb7d31280001f4fad9
 published_at: 2025-10-12T09:57:41.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 129th Edition 🔮 Token Wisdom \\ Week 41
+# 129th Edition 🔮 Week 41
 
 
 

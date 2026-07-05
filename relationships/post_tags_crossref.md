@@ -69,20 +69,20 @@ Generated: 2026-07-04T19:24:38.531245
 | The 10% Delusion | 2025-10-31 | 👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Deep Tech, Ethics \ Principles, Technology, ANI \ AGI \ ASI, Future Trends, Risk \ Reward, Philosophical, Math + Physics, #Import 2026-07-03 20:09 |
 | 131st Edition 🔮 Week 43 | 2025-10-29 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | Silicon Valley Is Building a $600 Billion Casino W | 2025-10-23 | 👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Semiconductor, Risk \ Reward, Economic  ≠, Deep Tech, Future Trends, Business Models, #Import 2026-07-03 20:09 |
-| 130th Edition 🔮 Token Wisdom \\ Week 42 | 2025-10-20 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 130th Edition 🔮 Week 42 | 2025-10-20 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Bullet Holes We Can't See | 2025-10-16 | 👁️ A Closer Look, 🚨 OP-ED, A.I. (and Subsets), Future Trends, Ethics \ Principles, Risk \ Reward, Technology, Challenges, Deep Tech, ANI \ AGI \ ASI, Math + Physics, #Import 2026-07-03 20:09 |
-| 129th Edition 🔮 Token Wisdom \\ Week 41 | 2025-10-12 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 129th Edition 🔮 Week 41 | 2025-10-12 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | Mirror World of the Three-Body Problem | 2025-10-09 | 👁️ A Closer Look, 🚨 OP-ED, Technology, Future Trends, A.I. (and Subsets), Ethics \ Principles, Deep Tech, Philosophical, ANI \ AGI \ ASI, Challenges, Math + Physics, #Import 2026-07-03 20:09 |
-| 128th Edition 🔮 Token Wisdom \\ Week 40 | 2025-10-05 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 128th Edition 🔮 Week 40 | 2025-10-05 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Age of Experience | 2025-10-02 | 👁️ A Closer Look, 🚨 OP-ED, Philosophical, Human Computer Interaction, Deep Tech, Future Trends, Ethics \ Principles, Technology, ANI \ AGI \ ASI, Innovation, #Import 2026-07-03 20:09 |
-| 127th Edition 🔮 Token Wisdom \\ Week 39 | 2025-09-29 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 127th Edition 🔮 Week 39 | 2025-09-29 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | How Beautiful Failures Create Innovation Breakthro | 2025-09-25 | 👁️ A Closer Look, 🚨 OP-ED, Innovation, Failing Up \ Often, Strategic Measures, Technology, Future Trends, Challenges, Philosophical, Deep Tech, Math + Physics, #Import 2026-07-03 20:09 |
 | The Hard Truths About Our Technological Moment | 2025-09-23 | 👁️ A Closer Look, All the Data, A Story to Tell, A.I. (and Subsets), Big Tech, Ethics \ Principles, Future Trends, Innovation, Privacy, Philosophical, #Import 2026-07-03 20:09 |
-| 126th Edition 🔮 Token Wisdom \\ Week 38 | 2025-09-21 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 126th Edition 🔮 Week 38 | 2025-09-21 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Magic Kingdom Crumbles in Corporate Cowardice | 2025-09-18 | 👁️ A Closer Look, 🚨 OP-ED, Technology, Ethics \ Principles, Future Trends, Human Computer Interaction, Challenges, Philosophical, Strategic Measures, Risk \ Reward, #Import 2026-07-03 20:09 |
-| 125th Edition 🔮 Token Wisdom \\ Week 37 | 2025-09-14 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 125th Edition 🔮 Week 37 | 2025-09-14 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Luddite's Last Stand | 2025-09-11 | 👁️ A Closer Look, 🚨 OP-ED, Technology, Ethics \ Principles, Future Trends, Human Computer Interaction, Challenges, Philosophical, Strategic Measures, Risk \ Reward, Math + Physics, #Import 2026-07-03 20:09 |
-| 124th Edition 🔮 Token Wisdom \\ Week 36 | 2025-09-07 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 124th Edition 🔮 Week 36 | 2025-09-07 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | When Silicon Valley's Children Go to War | 2025-09-04 | 👁️ A Closer Look, 🚨 OP-ED, Future Trends, Challenges, Ethics \ Principles, Deep Tech, Risk \ Reward, ANI \ AGI \ ASI, Technology, A.I. (and Subsets), #Import 2026-07-03 20:09 |
 | 123rd Edition 🔮 W35 | 2025-08-31 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | How Your Driver's License is Just Santa Claus With | 2025-08-28 | 👁️ A Closer Look, 🚨 OP-ED, Philosophical, Ethics \ Principles, Challenges, Future Trends, Economic  ≠, Emerging Tech, Technology, Innovation, #Import 2026-07-03 20:09 |
