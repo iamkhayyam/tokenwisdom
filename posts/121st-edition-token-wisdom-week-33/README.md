@@ -1,5 +1,5 @@
 ---
-title: "121st Edition 🔮 Token Wisdom ⑊ W33"
+title: "121st Edition 🔮 W33"
 slug: 121st-edition-token-wisdom-week-33
 id: 6a4816fb7d31280001f4fac8
 published_at: 2025-08-18T17:30:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 121st Edition 🔮 Token Wisdom ⑊ W33
+# 121st Edition 🔮 W33
 
 
 

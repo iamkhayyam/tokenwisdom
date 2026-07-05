@@ -1,5 +1,5 @@
 ---
-title: "123rd Edition 🔮 Token Wisdom ⑊ W35"
+title: "123rd Edition 🔮 W35"
 slug: 123rd-edition-token-wisdom-week-35
 id: 6a4816fb7d31280001f4fac6
 published_at: 2025-08-31T20:05:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 123rd Edition 🔮 Token Wisdom ⑊ W35
+# 123rd Edition 🔮 W35
 
 
 

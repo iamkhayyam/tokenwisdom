@@ -1,5 +1,5 @@
 ---
-title: "119th Edition 🔮 Token Wisdom ⑊ W31"
+title: "119th Edition 🔮 W31"
 slug: 119th-edition-token-wisdom-week-31
 id: 6a4816fb7d31280001f4fac4
 published_at: 2025-08-03T13:17:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 119th Edition 🔮 Token Wisdom ⑊ W31
+# 119th Edition 🔮 W31
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "120th Edition 🔮 Token Wisdom ⑊ W32"
+title: "120th Edition 🔮 W32"
 slug: 120th-edition-token-wisdom-week-32-2
 id: 6a48244a7d31280001f50b49
 published_at: 2025-08-10T15:36:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 120th Edition 🔮 Token Wisdom ⑊ W32
+# 120th Edition 🔮 W32
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "122nd Edition 🔮 Token Wisdom  ⑊ W34"
+title: "122nd Edition 🔮 W34"
 slug: 122nd-edition-token-wisdom-week-34
 id: 6a4816fb7d31280001f4fac7
 published_at: 2025-08-24T19:21:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 122nd Edition 🔮 Token Wisdom  ⑊ W34
+# 122nd Edition 🔮 W34
 
 
 
