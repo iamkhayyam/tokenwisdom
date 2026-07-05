@@ -41,8 +41,9 @@ issue_nums = gs.issue_number_map(posts)
 essays = [p for p in chrono if not gs.is_newsletter(p)]
 editions = [p for p in chrono if gs.is_newsletter(p)]
 hero = essays[0]
-secondary = essays[1:4]
-more = essays[4:12]
+top_three = essays[1:4]
+secondary = essays[4:6]
+more = essays[6:12]
 latest_ed = editions[0]
 
 
@@ -307,15 +308,13 @@ def render_listen():
 </section>"""
 
 
-def render_recent():
-    cards = ""
-    for p in secondary:
-        ep = paired_audio(p)
-        ed_post = paired_edition(p)
-        audio = (render_player(ep, "Paired edition",
-                               href(ed_post) if ed_post else "podcast.html", rail=True)
-                 if ep else pair_link(p))
-        cards += f"""
+def _story_card(p):
+    ep = paired_audio(p)
+    ed_post = paired_edition(p)
+    audio = (render_player(ep, "Paired edition",
+                           href(ed_post) if ed_post else "podcast.html", rail=True)
+             if ep else pair_link(p))
+    return f"""
     <div class="story-wrap">
     <a class="story" href="{href(p)}">
       <div class="story-figure"><img src="{e(img(p.get('feature_image')))}" alt="{e(p.get('title'))}" loading="lazy"></div>
@@ -326,6 +325,11 @@ def render_recent():
     </a>
     {audio}
     </div>"""
+
+
+def render_recent():
+    top_cards = "".join(_story_card(p) for p in top_three)
+    cards = "".join(_story_card(p) for p in secondary)
     rows = ""
     for p in more:
         rows += f"""
@@ -337,6 +341,8 @@ def render_recent():
     return f"""
 <section class="block">
   <div class="rule-head"><h2 class="rule-label">A Closer Look</h2><span class="rule-meta">Essays &amp; OP-EDs</span></div>
+  <div class="top-three-cards">{top_cards}
+  </div>
   <div class="recent">
     <div class="recent-cards">{cards}
     </div>
@@ -611,8 +617,9 @@ a{color:inherit;text-decoration:none}
 .rule-meta.linky{color:var(--accent)}
 
 /* recent */
+.top-three-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-bottom:44px}
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
-.recent-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
 .story-wrap .player-rail{margin-top:auto;padding-top:.9rem;margin-bottom:0}
 .pairlink{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);align-self:flex-start;margin-top:.7rem;border-bottom:1px solid transparent;transition:border-color .15s}
@@ -694,7 +701,7 @@ a{color:inherit;text-decoration:none}
 .feat-dek{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .feat-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-top:auto;padding-top:.3rem}
 @media(max-width:820px){.feat-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:820px){.recent-cards{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.top-three-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.feat-card,.feat-fig img{transition:none}.feat-card:hover{transform:none}.feat-card:hover .feat-fig img{transform:none}}
 
@@ -803,6 +810,7 @@ a{color:inherit;text-decoration:none}
   .stack-row-label::after{content:"swipe →";margin-left:auto;color:var(--ink-faint);letter-spacing:.12em}
 }
 @media(max-width:620px){
+  .top-three-cards{grid-template-columns:1fr}
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
   .lexcard{border-right:1px solid var(--rule)!important}
