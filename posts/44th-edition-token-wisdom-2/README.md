@@ -1,5 +1,5 @@
 ---
-title: "44th Edition 🔮 Pearls of Wisdom ⑊ W07"
+title: "44th Edition 🔮 W07"
 slug: 44th-edition-token-wisdom-2
 id: 6a48248e7d31280001f51096
 published_at: 2024-02-26T06:49:33.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 44th Edition 🔮 Pearls of Wisdom ⑊ W07
+# 44th Edition 🔮 W07
 
 :: Now begins a story...
 

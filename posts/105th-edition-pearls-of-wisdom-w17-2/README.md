@@ -1,5 +1,5 @@
 ---
-title: "105th Edition 🔮 Pearls of Wisdom ⑊ W17"
+title: "105th Edition 🔮 W17"
 slug: 105th-edition-pearls-of-wisdom-w17-2
 id: 6a48245a7d31280001f50c64
 published_at: 2025-04-28T14:40:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 105th Edition 🔮 Pearls of Wisdom ⑊ W17
+# 105th Edition 🔮 W17
 
 :: Now begins a story...
 

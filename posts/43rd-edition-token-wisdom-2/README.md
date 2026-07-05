@@ -1,5 +1,5 @@
 ---
-title: "43rd Edition 🔮 Pearls of Wisdom ⑊ W06"
+title: "43rd Edition 🔮 W06"
 slug: 43rd-edition-token-wisdom-2
 id: 6a4824907d31280001f510b0
 published_at: 2024-02-20T16:06:18.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 43rd Edition 🔮 Pearls of Wisdom ⑊ W06
+# 43rd Edition 🔮 W06
 
 :: Now begins a story...
 

@@ -1,5 +1,5 @@
 ---
-title: "47th Edition 🔮 Pearls of Wisdom ⑊ W10"
+title: "47th Edition 🔮 W10"
 slug: 47th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa37
 published_at: 2024-03-18T06:27:53.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 47th Edition 🔮 Pearls of Wisdom ⑊ W10
+# 47th Edition 🔮 W10
 
 :: Now begins a story...
 

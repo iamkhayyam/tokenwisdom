@@ -1,5 +1,5 @@
 ---
-title: "95th Edition 🔮 Pearls of Wisdom ⑊ W07"
+title: "95th Edition 🔮 W07"
 slug: 95th-edition-pearls-of-wisdom-w07
 id: 6a4816fb7d31280001f4fa94
 published_at: 2025-02-17T11:21:26.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 95th Edition 🔮 Pearls of Wisdom ⑊ W07
+# 95th Edition 🔮 W07
 
 :: Now begins a story...
 

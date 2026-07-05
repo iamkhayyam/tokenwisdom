@@ -1,5 +1,5 @@
 ---
-title: "96th Edition 🔮 Pearls of Wisdom ⑊ W08"
+title: "96th Edition 🔮 W08"
 slug: 96th-edition-pearls-of-wisdom-w08-2
 id: 6a4824637d31280001f50d0b
 published_at: 2025-02-23T15:58:53.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 96th Edition 🔮 Pearls of Wisdom ⑊ W08
+# 96th Edition 🔮 W08
 
 :: Now begins a story...
 

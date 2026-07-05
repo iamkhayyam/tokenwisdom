@@ -1,5 +1,5 @@
 ---
-title: "112th Edition 🔮 Pearls of Wisdom ⑊ W24"
+title: "112th Edition 🔮 W24"
 slug: 112th-edition-pearls-of-wisdom-w24
 id: 6a4816fb7d31280001f4fab6
 published_at: 2025-06-16T09:40:00.000-07:00
@@ -20,7 +20,7 @@ authors:
     slug: khayyam
 ---
 
-# 112th Edition 🔮 Pearls of Wisdom ⑊ W24
+# 112th Edition 🔮 W24
 
 
 

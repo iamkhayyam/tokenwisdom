@@ -1,5 +1,5 @@
 ---
-title: "102nd Edition 🔮 Pearls of Wisdom ⑊ W14"
+title: "102nd Edition 🔮 W14"
 slug: 102nd-edition-pearls-of-wisdom-w14-2
 id: 6a48245d7d31280001f50c94
 published_at: 2025-04-07T23:36:18.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 102nd Edition 🔮 Pearls of Wisdom ⑊ W14
+# 102nd Edition 🔮 W14
 
 :: Now begins a story...
 

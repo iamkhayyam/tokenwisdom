@@ -1,5 +1,5 @@
 ---
-title: "111th Edition 🔮 Pearls of Wisdom ⑊ W23"
+title: "111th Edition 🔮 W23"
 slug: 111th-edition-pearls-of-wisdom-w23-2
 id: 6a4824547d31280001f50bf6
 published_at: 2025-06-09T13:00:00.000-07:00
@@ -18,7 +18,7 @@ authors:
     slug: khayyam
 ---
 
-# 111th Edition 🔮 Pearls of Wisdom ⑊ W23
+# 111th Edition 🔮 W23
 
 
 

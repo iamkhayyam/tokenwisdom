@@ -278,6 +278,6 @@ W26 •B• Pearls of Wisdom - 114th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-114th Edition 🔮 Pearls of Wisdom ⑊ W26W26 - As companies realize their AI replacement mistakes and ancient pyramids challenge human history, 2025’s tech awakening accelerates. From teleportation to cosmic discoveries, we’re witnessing AI hubris collide with archaeological mysteries.Token Wisdom ✨🌶️ iamkhayyam
+114th Edition 🔮 W26W26 - As companies realize their AI replacement mistakes and ancient pyramids challenge human history, 2025’s tech awakening accelerates. From teleportation to cosmic discoveries, we’re witnessing AI hubris collide with archaeological mysteries.Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil studies how intelligent systems—both natural and artificial—process information and develop systems of intelligence. His research spans from machine learning architectures to meditation practices deeply rooted in pattern recognition, seeking connections between consciousness as we experience it and the computational patterns that may underlie all of reality.

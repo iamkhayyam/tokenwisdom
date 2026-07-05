@@ -181,6 +181,6 @@ Don't miss the weekly roundup of articles and videos from the week in the form o
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-94th Edition 🔮 Pearls of Wisdom ⑊ W05W05 - From AI-designed chips that baffle humans to button boards revolutionizing dog communication, this week’s Token Wisdom serves a smorgasbord of tech marvels. Dive into quantum breakthroughs, ancient texts, and African innovations that challenge the status quo.Token Wisdom ✨🌶️ iamkhayyam
+94th Edition 🔮 W05W05 - From AI-designed chips that baffle humans to button boards revolutionizing dog communication, this week’s Token Wisdom serves a smorgasbord of tech marvels. Dive into quantum breakthroughs, ancient texts, and African innovations that challenge the status quo.Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam is a researcher in systems of intelligence and cultural evolution, exploring the intersection of ancient wisdom and modern technology with pioneering innovation.

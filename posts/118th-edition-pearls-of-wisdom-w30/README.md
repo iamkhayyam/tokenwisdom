@@ -1,5 +1,5 @@
 ---
-title: "118th Edition 🔮 Pearls of Wisdom ⑊ W30"
+title: "118th Edition 🔮 W30"
 slug: 118th-edition-pearls-of-wisdom-w30
 id: 6a4816fb7d31280001f4fac3
 published_at: 2025-07-28T09:20:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 118th Edition 🔮 Pearls of Wisdom ⑊ W30
+# 118th Edition 🔮 W30
 
 
 

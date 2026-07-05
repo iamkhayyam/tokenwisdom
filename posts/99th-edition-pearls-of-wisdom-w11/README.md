@@ -1,5 +1,5 @@
 ---
-title: "99th Edition 🔮 Pearls of Wisdom ⑊ W11"
+title: "99th Edition 🔮 W11"
 slug: 99th-edition-pearls-of-wisdom-w11
 id: 6a4816fb7d31280001f4fa9c
 published_at: 2025-03-17T10:16:06.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 99th Edition 🔮 Pearls of Wisdom ⑊ W11
+# 99th Edition 🔮 W11
 
 :: Now begins a story...
 

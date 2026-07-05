@@ -1,5 +1,5 @@
 ---
-title: "94th Edition 🔮 Pearls of Wisdom ⑊ W06"
+title: "94th Edition 🔮 W06"
 slug: 94th-edition-pearls-of-wisdom-w05-2
 id: 6a4824657d31280001f50d33
 published_at: 2025-02-11T18:53:12.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 94th Edition 🔮 Pearls of Wisdom ⑊ W06
+# 94th Edition 🔮 W06
 
 :: Now begins a story...
 

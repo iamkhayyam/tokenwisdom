@@ -1,5 +1,5 @@
 ---
-title: "110th Edition 🔮 Pearls of Wisdom ⑊ W22"
+title: "110th Edition 🔮 W22"
 slug: 110th-edition-pearls-of-wisdom-w22
 id: 6a4816fb7d31280001f4fab2
 published_at: 2025-06-02T11:53:41.000-07:00
@@ -20,7 +20,7 @@ authors:
     slug: khayyam
 ---
 
-# 110th Edition 🔮 Pearls of Wisdom ⑊ W22
+# 110th Edition 🔮 W22
 
 
 

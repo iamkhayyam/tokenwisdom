@@ -1,5 +1,5 @@
 ---
-title: "40th Edition 🔮 Pearls of Wisdom ⑊ W03"
+title: "40th Edition 🔮 W03"
 slug: 40th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa18
 published_at: 2024-01-27T22:22:00.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 40th Edition 🔮 Pearls of Wisdom ⑊ W03
+# 40th Edition 🔮 W03
 
 :: Now begins a story...
 

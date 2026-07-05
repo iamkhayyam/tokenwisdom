@@ -1,5 +1,5 @@
 ---
-title: "116th Edition 🔮 Pearls of Wisdom ⑊ W28"
+title: "116th Edition 🔮 W28"
 slug: 116th-edition-pearls-of-wisdom-w28-copy-2
 id: 6a48244e7d31280001f50b98
 published_at: 2025-07-14T23:14:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 116th Edition 🔮 Pearls of Wisdom ⑊ W28
+# 116th Edition 🔮 W28
 
 
 

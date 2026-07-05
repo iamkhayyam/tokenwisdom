@@ -1,5 +1,5 @@
 ---
-title: "106th Edition 🔮 Pearls of Wisdom ⑊ W18"
+title: "106th Edition 🔮 W18"
 slug: 106th-edition-pearls-of-wisdom-w18
 id: 6a4816fb7d31280001f4faaa
 published_at: 2025-05-05T13:41:52.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 106th Edition 🔮 Pearls of Wisdom ⑊ W18
+# 106th Edition 🔮 W18
 
 :: Now begins a story...
 

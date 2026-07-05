@@ -1,5 +1,5 @@
 ---
-title: "104th Edition 🔮 Pearls of Wisdom ⑊ W16"
+title: "104th Edition 🔮 W16"
 slug: 104th-edition-pearls-of-wisdom-w16-2
 id: 6a48245b7d31280001f50c74
 published_at: 2025-04-21T13:44:07.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 104th Edition 🔮 Pearls of Wisdom ⑊ W16
+# 104th Edition 🔮 W16
 
 :: Now begins a story...
 

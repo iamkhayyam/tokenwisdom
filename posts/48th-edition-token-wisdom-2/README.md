@@ -1,5 +1,5 @@
 ---
-title: "48th Edition 🔮 Pearls of Wisdom ⑊ W11"
+title: "48th Edition 🔮 W11"
 slug: 48th-edition-token-wisdom-2
 id: 6a4824867d31280001f5100e
 published_at: 2024-03-25T17:29:29.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 48th Edition 🔮 Pearls of Wisdom ⑊ W11
+# 48th Edition 🔮 W11
 
 :: Now begins a story...
 

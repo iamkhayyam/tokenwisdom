@@ -1,5 +1,5 @@
 ---
-title: "92nd Edition 🔮 Pearls of Wisdom ⑊ W04"
+title: "92nd Edition 🔮 W04"
 slug: 92nd-edition-pearls-of-wisdom-w03
 id: 6a4816fb7d31280001f4fa8e
 published_at: 2025-01-26T01:17:48.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 92nd Edition 🔮 Pearls of Wisdom ⑊ W04
+# 92nd Edition 🔮 W04
 
 :: Now begins a story...
 

@@ -1,5 +1,5 @@
 ---
-title: "38th Edition 🔮 Pearls of Wisdom ⑊ W01"
+title: "38th Edition 🔮 W01"
 slug: token-wisdom-38th-edition-2
 id: 6a4824967d31280001f51129
 published_at: 2024-01-15T14:07:00.000-08:00
@@ -17,5 +17,5 @@ authors:
     slug: khayyam
 ---
 
-# 38th Edition 🔮 Pearls of Wisdom ⑊ W01
+# 38th Edition 🔮 W01
 

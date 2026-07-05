@@ -187,6 +187,6 @@ W22 •B• Pearls of Wisdom - 110th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-110th Edition 🔮 Pearls of Wisdom ⑊ W22W22 - White-collar AI anxiety, OpenAI’s mystery gadget, and China’s spy lasers? Welcome to Token Wisdom’s 110th edition, where we decode the digital chaos with a dash of wit. Grab your laser-proof notebook as we venture into tech’s twilight zone – skepticism recommended, humor mandatory!Token Wisdom ✨🌶️ iamkhayyam
+110th Edition 🔮 W22W22 - White-collar AI anxiety, OpenAI’s mystery gadget, and China’s spy lasers? Welcome to Token Wisdom’s 110th edition, where we decode the digital chaos with a dash of wit. Grab your laser-proof notebook as we venture into tech’s twilight zone – skepticism recommended, humor mandatory!Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil is a researcher in technological systems and human cognition. His work examines the intersection of artificial intelligence, human agency, and the future of conscious choice in an increasingly automated world.

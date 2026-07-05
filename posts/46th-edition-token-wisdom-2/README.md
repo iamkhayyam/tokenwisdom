@@ -1,5 +1,5 @@
 ---
-title: "46th Edition 🔮 Pearls of Wisdom ⑊ W09"
+title: "46th Edition 🔮 W09"
 slug: 46th-edition-token-wisdom-2
 id: 6a48248b7d31280001f5105b
 published_at: 2024-03-17T04:44:23.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 46th Edition 🔮 Pearls of Wisdom ⑊ W09
+# 46th Edition 🔮 W09
 
 :: Now begins a story...
 

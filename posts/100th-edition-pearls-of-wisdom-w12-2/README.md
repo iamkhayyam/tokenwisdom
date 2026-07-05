@@ -1,5 +1,5 @@
 ---
-title: "100th Edition 🔮 Pearls of Wisdom ⑊ W12"
+title: "100th Edition 🔮 W12"
 slug: 100th-edition-pearls-of-wisdom-w12-2
 id: 6a48245f7d31280001f50cbb
 published_at: 2025-03-24T13:09:09.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 100th Edition 🔮 Pearls of Wisdom ⑊ W12
+# 100th Edition 🔮 W12
 
 :: Now begins a story...
 

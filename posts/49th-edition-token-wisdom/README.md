@@ -1,5 +1,5 @@
 ---
-title: "49th Edition 🔮 Pearls of Wisdom ⑊ W12"
+title: "49th Edition 🔮 W12"
 slug: 49th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa42
 published_at: 2024-04-01T23:43:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 49th Edition 🔮 Pearls of Wisdom ⑊ W12
+# 49th Edition 🔮 W12
 
 :: Now begins a story...
 

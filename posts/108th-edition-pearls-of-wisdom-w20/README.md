@@ -1,5 +1,5 @@
 ---
-title: "108th Edition 🔮 Pearls of Wisdom ⑊ W20"
+title: "108th Edition 🔮 W20"
 slug: 108th-edition-pearls-of-wisdom-w20
 id: 6a4816fb7d31280001f4faae
 published_at: 2025-05-19T07:52:48.000-07:00
@@ -20,7 +20,7 @@ authors:
     slug: khayyam
 ---
 
-# 108th Edition 🔮 Pearls of Wisdom ⑊ W20
+# 108th Edition 🔮 W20
 
 
 

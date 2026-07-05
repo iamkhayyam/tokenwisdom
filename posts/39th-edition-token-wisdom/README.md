@@ -1,5 +1,5 @@
 ---
-title: "39th Edition 🔮 Pearls of Wisdom ⑊ W02"
+title: "39th Edition 🔮 W02"
 slug: 39th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa10
 published_at: 2024-01-21T16:52:00.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 39th Edition 🔮 Pearls of Wisdom ⑊ W02
+# 39th Edition 🔮 W02
 
 .:: Now begins a story...
 

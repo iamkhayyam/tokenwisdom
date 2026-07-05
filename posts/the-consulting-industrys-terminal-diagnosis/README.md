@@ -134,6 +134,6 @@ Token Wisdom’s 102nd Edition: AI, Corporate Moves & Privacy Concerns - Noteboo
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-102nd Edition 🔮 Pearls of Wisdom ⑊ W14W14 - From vector tech revolutionizing AI stacks to Visa’s $100M Apple Card bid, your digital compass needs recalibration. Meanwhile, 23andMe’s bankruptcy puts America’s DNA up for sale. As always, I deliver your weekly journey through technological upheaval and society’s metamorphosis =)Token Wisdom ✨🌶️ iamkhayyam
+102nd Edition 🔮 W14W14 - From vector tech revolutionizing AI stacks to Visa’s $100M Apple Card bid, your digital compass needs recalibration. Meanwhile, 23andMe’s bankruptcy puts America’s DNA up for sale. As always, I deliver your weekly journey through technological upheaval and society’s metamorphosis =)Token Wisdom ✨🌶️ iamkhayyam
 
 This obituary for the consulting industry is based on public data, insider insights, and the mathematical certainty that selling Google-able knowledge at premium prices isn't a sustainable business model.

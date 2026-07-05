@@ -1,5 +1,5 @@
 ---
-title: "117th Edition 🔮 Pearls of Wisdom ⑊ W29"
+title: "117th Edition 🔮 W29"
 slug: 117th-edition-pearls-of-wisdom-w29
 id: 6a4816fb7d31280001f4fac2
 published_at: 2025-07-21T21:54:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 117th Edition 🔮 Pearls of Wisdom ⑊ W29
+# 117th Edition 🔮 W29
 
 
 

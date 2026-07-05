@@ -1,5 +1,5 @@
 ---
-title: "107th Edition 🔮 Pearls of Wisdom ⑊ W19"
+title: "107th Edition 🔮 W19"
 slug: 107th-edition-pearls-of-wisdom-w19-2
 id: 6a4824587d31280001f50c41
 published_at: 2025-05-11T17:36:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 107th Edition 🔮 Pearls of Wisdom ⑊ W19
+# 107th Edition 🔮 W19
 
 :: Now begins a story...
 

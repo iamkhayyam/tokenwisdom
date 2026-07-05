@@ -1,5 +1,5 @@
 ---
-title: "53rd Edition 🔮 Pearls of Wisdom ⑊ W16"
+title: "53rd Edition 🔮 W16"
 slug: 51st-edition-token-wisdom-2
 id: 6a4816fb7d31280001f4fa55
 published_at: 2024-04-29T23:58:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 53rd Edition 🔮 Pearls of Wisdom ⑊ W16
+# 53rd Edition 🔮 W16
 
 :: Now begins a story...
 

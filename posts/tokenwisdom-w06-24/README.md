@@ -1,5 +1,5 @@
 ---
-title: "42nd Edition 🔮 Pearls of Wisdom ⑊ W05"
+title: "42nd Edition 🔮 W05"
 slug: tokenwisdom-w06-24
 id: 6a4816fb7d31280001f4fa1b
 published_at: 2024-02-16T05:55:29.000-08:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 42nd Edition 🔮 Pearls of Wisdom ⑊ W05
+# 42nd Edition 🔮 W05
 
 :: Now begins a story...
 

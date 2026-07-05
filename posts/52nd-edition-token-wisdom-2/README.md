@@ -1,5 +1,5 @@
 ---
-title: "54th Edition 🔮 Pearls of Wisdom ⑊ W17"
+title: "54th Edition 🔮 W17"
 slug: 52nd-edition-token-wisdom-2
 id: 6a48247e7d31280001f50f79
 published_at: 2024-05-06T21:41:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 54th Edition 🔮 Pearls of Wisdom ⑊ W17
+# 54th Edition 🔮 W17
 
 :: Now begins a story...
 

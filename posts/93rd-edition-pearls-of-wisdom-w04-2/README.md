@@ -1,5 +1,5 @@
 ---
-title: "93rd Edition 🔮 Pearls of Wisdom ⑊ W05"
+title: "93rd Edition 🔮 W05"
 slug: 93rd-edition-pearls-of-wisdom-w04-2
 id: 6a4824667d31280001f50d46
 published_at: 2025-02-06T13:14:00.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 93rd Edition 🔮 Pearls of Wisdom ⑊ W05
+# 93rd Edition 🔮 W05
 
 :: Now begins a story...
 

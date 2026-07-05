@@ -1,5 +1,5 @@
 ---
-title: "101st Edition 🔮 Pearls of Wisdom ⑊ W13"
+title: "101st Edition 🔮 W13"
 slug: 101st-edition-pearls-of-wisdom-w13-2
 id: 6a48245e7d31280001f50ca9
 published_at: 2025-03-31T13:34:30.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 101st Edition 🔮 Pearls of Wisdom ⑊ W13
+# 101st Edition 🔮 W13
 
 :: Now begins a story...
 

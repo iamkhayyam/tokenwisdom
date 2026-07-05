@@ -1,5 +1,5 @@
 ---
-title: "98th Edition 🔮 Pearls of Wisdom ⑊ W10"
+title: "98th Edition 🔮 W10"
 slug: 98th-edition-pearls-of-wisdom-w10-2
 id: 6a4824617d31280001f50ce3
 published_at: 2025-03-10T10:28:07.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 98th Edition 🔮 Pearls of Wisdom ⑊ W10
+# 98th Edition 🔮 W10
 
 :: Now begins a story...
 

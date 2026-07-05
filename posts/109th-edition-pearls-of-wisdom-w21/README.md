@@ -1,5 +1,5 @@
 ---
-title: "109th Edition 🔮 Pearls of Wisdom ⑊ W21"
+title: "109th Edition 🔮 W21"
 slug: 109th-edition-pearls-of-wisdom-w21
 id: 6a4816fb7d31280001f4fab0
 published_at: 2025-05-26T17:24:00.000-07:00
@@ -20,7 +20,7 @@ authors:
     slug: khayyam
 ---
 
-# 109th Edition 🔮 Pearls of Wisdom ⑊ W21
+# 109th Edition 🔮 W21
 
 
 

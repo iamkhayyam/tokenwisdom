@@ -1,5 +1,5 @@
 ---
-title: "41st Edition 🔮 Pearls of Wisdom ⑊ W04"
+title: "41st Edition 🔮 W04"
 slug: 41st-edition-token-wisdom-2
 id: 6a4824937d31280001f510e6
 published_at: 2024-02-05T11:16:00.000-08:00
@@ -17,5 +17,5 @@ authors:
     slug: khayyam
 ---
 
-# 41st Edition 🔮 Pearls of Wisdom ⑊ W04
+# 41st Edition 🔮 W04
 

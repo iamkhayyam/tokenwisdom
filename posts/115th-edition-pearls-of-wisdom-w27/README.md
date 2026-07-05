@@ -1,5 +1,5 @@
 ---
-title: "115th Edition 🔮 Pearls of Wisdom ⑊ W27"
+title: "115th Edition 🔮 W27"
 slug: 115th-edition-pearls-of-wisdom-w27
 id: 6a4816fb7d31280001f4fabd
 published_at: 2025-07-07T12:34:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 115th Edition 🔮 Pearls of Wisdom ⑊ W27
+# 115th Edition 🔮 W27
 
 
 

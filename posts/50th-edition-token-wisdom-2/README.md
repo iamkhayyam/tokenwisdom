@@ -1,5 +1,5 @@
 ---
-title: "50th Edition 🔮 Pearls of Wisdom ⑊ W13"
+title: "50th Edition 🔮 W13"
 slug: 50th-edition-token-wisdom-2
 id: 6a4824827d31280001f50fd2
 published_at: 2024-04-09T10:23:53.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 50th Edition 🔮 Pearls of Wisdom ⑊ W13
+# 50th Edition 🔮 W13
 
 :: Now begins a story...
 

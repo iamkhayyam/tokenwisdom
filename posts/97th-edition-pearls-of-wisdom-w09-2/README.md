@@ -1,5 +1,5 @@
 ---
-title: "97th Edition 🔮 Pearls of Wisdom ⑊ W09"
+title: "97th Edition 🔮 W09"
 slug: 97th-edition-pearls-of-wisdom-w09-2
 id: 6a4824627d31280001f50cf8
 published_at: 2025-03-03T13:34:46.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 97th Edition 🔮 Pearls of Wisdom ⑊ W09
+# 97th Edition 🔮 W09
 
 :: Now begins a story...
 

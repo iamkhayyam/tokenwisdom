@@ -1,5 +1,5 @@
 ---
-title: "114th Edition 🔮 Pearls of Wisdom ⑊ W26"
+title: "114th Edition 🔮 W26"
 slug: 114th-edition-pearls-of-wisdom-w26-2
 id: 6a4824517d31280001f50bbd
 published_at: 2025-06-29T13:05:00.000-07:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 114th Edition 🔮 Pearls of Wisdom ⑊ W26
+# 114th Edition 🔮 W26
 
 
 

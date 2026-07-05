@@ -1,5 +1,5 @@
 ---
-title: "91st Edition 🔮 Pearls of Wisdom ⑊ W03"
+title: "91st Edition 🔮 W03"
 slug: 91st-edition-pearls-of-wisdom-w02-2
 id: 6a4824687d31280001f50d6a
 published_at: 2025-01-19T05:49:08.000-08:00
@@ -17,7 +17,7 @@ authors:
     slug: khayyam
 ---
 
-# 91st Edition 🔮 Pearls of Wisdom ⑊ W03
+# 91st Edition 🔮 W03
 
 :: Now begins a story...
 

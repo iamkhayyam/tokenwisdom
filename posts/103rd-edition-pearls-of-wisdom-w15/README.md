@@ -1,5 +1,5 @@
 ---
-title: "103rd Edition 🔮 Pearls of Wisdom ⑊ W15"
+title: "103rd Edition 🔮 W15"
 slug: 103rd-edition-pearls-of-wisdom-w15
 id: 6a4816fb7d31280001f4faa4
 published_at: 2025-04-14T06:14:00.000-07:00
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 103rd Edition 🔮 Pearls of Wisdom ⑊ W15
+# 103rd Edition 🔮 W15
 
 :: Now begins a story...
 
