@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/challenges/",
   "posts": [
     {
+      "id": "6a48778f7d31280001f513b3",
+      "title": "Human-in-the-Room",
+      "slug": "human-in-the-room",
+      "published_at": "2026-05-21T20:13:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/human-in-the-room/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
       "id": "6a4816fb7d31280001f4fb1e",
       "title": "The Proof Was Never the Point",
       "slug": "the-proof-was-never-the-point",
@@ -569,6 +578,6 @@
       "reading_time": 4
     }
   ],
-  "post_count": 61,
+  "post_count": 62,
   "local_feature_image": "challenges_feature__18-38-04-285_512.gif"
 }

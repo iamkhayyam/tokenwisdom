@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/big-tech/",
   "posts": [
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
       "id": "6a4816fb7d31280001f4fb12",
       "title": "We Trained It on Human Weaponry",
       "slug": "we-trained-it-on-human-weaponry",
@@ -335,6 +344,6 @@
       "reading_time": 5
     }
   ],
-  "post_count": 35,
+  "post_count": 36,
   "local_feature_image": "big-tech_feature__30Techfix-illo-superJumbo.gif"
 }

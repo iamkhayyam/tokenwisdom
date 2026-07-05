@@ -3,10 +3,10 @@ title: "The Wrong Name on the Door"
 slug: the-wrong-name-on-the-door
 id: 6a4816fb7d31280001f4fb1c
 published_at: 2026-05-07T20:13:00.000-07:00
-updated_at: 2026-05-22T20:15:15.000-07:00
+updated_at: 2026-07-04T18:08:03.000-07:00
 featured: False
 reading_time: 21 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/05/1778970022282.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/w19-the-wrong-name-on-the-door.jpg
 excerpt: "W19 — Misattribution isn't an injustice problem, it's an intelligence problem. Put the wrong name on a discovery and the field asks questions designed for the wrong person. The correction never arrives because no one knows it's missing."
 url: https://ghost-production-198e.up.railway.app/the-wrong-name-on-the-door/
 tags:

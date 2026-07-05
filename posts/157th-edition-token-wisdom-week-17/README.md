@@ -3,10 +3,10 @@ title: "157th Edition 🔮 Token Wisdom \ Week 17"
 slug: 157th-edition-token-wisdom-week-17
 id: 6a4816fb7d31280001f4fb17
 published_at: 2026-04-29T11:11:22.000-07:00
-updated_at: 2026-04-29T11:11:22.000-07:00
+updated_at: 2026-07-04T14:55:48.000-07:00
 featured: False
 reading_time: 13 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/04/a-photograph-of-a-mysterious-fortune-tel_uHQPnMvJSVan_SRUnlE4lw_6KRksQdIS-ais2dmhhEKRw.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/157th-edition-w17.jpg
 excerpt: "This week: 26 million horses didn't fail, their function was reassigned. From AI-managed stores without taste to ASML's physical bottleneck to Palantir inheriting the farm, we map what survives when three-state inheritance compresses into two. The record is the only thing that survives."
 url: https://ghost-production-198e.up.railway.app/157th-edition-token-wisdom-week-17/
 tags:

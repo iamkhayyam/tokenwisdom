@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/040823_chatgpt_feat-2.gif
 **Local Image:** `images/tags/education_feature__040823_chatgpt_feat-2.gif`
 
-## Posts (24)
+## Posts (25)
 
+- [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
 - [The Wrong Name on the Door](https://ghost-production-198e.up.railway.app/the-wrong-name-on-the-door/) (2026-05-07)
 - [The Cow Came Last](https://ghost-production-198e.up.railway.app/the-cow-came-last/) (2026-04-02)

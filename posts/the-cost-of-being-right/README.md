@@ -3,10 +3,10 @@ title: "The Cost of Being Right"
 slug: the-cost-of-being-right
 id: 6a4816fb7d31280001f4fb1a
 published_at: 2026-05-01T16:13:00.000-07:00
-updated_at: 2026-05-22T18:02:35.000-07:00
+updated_at: 2026-07-04T18:13:46.000-07:00
 featured: False
 reading_time: 20 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/05/1778723956723.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/w18-the-cost-of-being-right.jpg
 excerpt: "W18 — Wrong beliefs don't survive because the evidence is hidden. They survive because they're embedded in economies, careers, and identities that resist correction. From MBTI's AI-powered metastasis to psychiatry's overdue reckoning, here's the machinery that keeps us confidently wrong."
 url: https://ghost-production-198e.up.railway.app/the-cost-of-being-right/
 tags:

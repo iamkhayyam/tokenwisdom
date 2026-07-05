@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/Image-2a5b55b3-733d-43f5-a3a1-e0a9de1805a3.gif
 **Local Image:** `images/tags/data_feature__Image-2a5b55b3-733d-43f5-a3a1-e0a9de1805a3.gif`
 
-## Posts (33)
+## Posts (34)
 
+- [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [The Cost of Being Right](https://ghost-production-198e.up.railway.app/the-cost-of-being-right/) (2026-05-01)
 - [The Room Was Already Set Before You Walked In](https://ghost-production-198e.up.railway.app/the-room-was-already-set-before-you-walked-in/) (2026-03-12)
 - [The Double Collapse](https://ghost-production-198e.up.railway.app/the-double-collapse/) (2026-02-26)

@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/8a5af1148221413.62d15cea5fce4.gif
 **Local Image:** `images/tags/technology_feature__8a5af1148221413.62d15cea5fce4.gif`
 
-## Posts (90)
+## Posts (91)
 
+- [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
 - [The Sky Has Been Warning Us Since 1859](https://ghost-production-198e.up.railway.app/the-sky-has-been-warning-us-since-1859/) (2026-03-26)
 - [AI Didn't Break Democracy. We Did. Four Decades Ago.](https://ghost-production-198e.up.railway.app/ai-didnt-break-democracy-we-did-four-decades-ago/) (2026-01-15)

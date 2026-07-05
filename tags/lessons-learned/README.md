@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/lessons-learned-header-dribbble.gif
 **Local Image:** `images/tags/lessons-learned_feature__lessons-learned-header-dribbble.gif`
 
-## Posts (13)
+## Posts (14)
 
+- [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
 - [The Cost of Being Right](https://ghost-production-198e.up.railway.app/the-cost-of-being-right/) (2026-05-01)
 - [No Heir. No Lesson.](https://ghost-production-198e.up.railway.app/no-heir-no-lesson/) (2026-04-24)

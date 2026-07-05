@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/07/google_deep_mind_ai_system_002.gif
 **Local Image:** `images/tags/deeptech_feature__google_deep_mind_ai_system_002.gif`
 
-## Posts (46)
+## Posts (47)
 
+- [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
 - [The Cow Came Last](https://ghost-production-198e.up.railway.app/the-cow-came-last/) (2026-04-02)
 - [The Sky Has Been Warning Us Since 1859](https://ghost-production-198e.up.railway.app/the-sky-has-been-warning-us-since-1859/) (2026-03-26)

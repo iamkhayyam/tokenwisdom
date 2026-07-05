@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/provenance/",
   "posts": [
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
       "id": "6a4816fb7d31280001f4fb1c",
       "title": "The Wrong Name on the Door",
       "slug": "the-wrong-name-on-the-door",
@@ -65,6 +74,6 @@
       "reading_time": 9
     }
   ],
-  "post_count": 5,
+  "post_count": 6,
   "local_feature_image": "provenance_feature__tumblr_nq37a9SXrw1u7o3wio1_500-1.gif"
 }

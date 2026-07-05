@@ -3,9 +3,10 @@ title: "del.icio.us Was Right. It Was Just Twenty Years Too Early."
 slug: del-icio-us-was-right-we-built-claudacious
 id: 6a4824217d31280001f508a0
 published_at: 2026-06-23T00:00:00.000-07:00
-updated_at: 2026-07-03T14:05:37.000-07:00
+updated_at: 2026-07-04T18:21:36.000-07:00
 featured: True
 reading_time: 18 min
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/Screenshot-2026-07-04-at-19.21.02.png
 excerpt: "In 2003, del.icio.us proved that human curation beats algorithmic ranking. Then Yahoo bought it, the feed arrived, and we forgot. We didn't forget. We built Claudacious—social bookmarking with a real Claude reading every link you save. Here's everything that went into it."
 url: https://ghost-production-198e.up.railway.app/del-icio-us-was-right-we-built-claudacious/
 tags:

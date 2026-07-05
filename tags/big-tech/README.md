@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/30Techfix-illo-superJumbo.gif
 **Local Image:** `images/tags/big-tech_feature__30Techfix-illo-superJumbo.gif`
 
-## Posts (35)
+## Posts (36)
 
+- [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [We Trained It on Human Weaponry](https://ghost-production-198e.up.railway.app/we-trained-it-on-human-weaponry/) (2026-04-10)
 - [The Room Was Already Set Before You Walked In](https://ghost-production-198e.up.railway.app/the-room-was-already-set-before-you-walked-in/) (2026-03-12)
 - [The Race That Eats Its Own Rules](https://ghost-production-198e.up.railway.app/the-race-that-eats-its-own-rules/) (2026-03-06)

@@ -3,10 +3,10 @@ title: "155th Edition 🔮 Token Wisdom \ Week 15"
 slug: 155th-edition-token-wisdom-week-15
 id: 6a4816fb7d31280001f4fb13
 published_at: 2026-04-14T07:48:56.000-07:00
-updated_at: 2026-04-20T21:36:55.000-07:00
+updated_at: 2026-07-04T14:51:18.000-07:00
 featured: False
 reading_time: 16 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/04/a-mystical-digital-art-scene-blending-pe_XZQKF6yETIemuw5zi5GfwQ_KJY5mEMGRCisNeyqiTLs3g_cover_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/155th-edition-w15.jpg
 excerpt: "This week — Darkness outruns light. A 19th-century optics trick secures quantum keys. Samsung sets a photonics production date. A 2,300-year-old math mistake finally gets named. A robot generalizes. The old answers were already there — the constraint just hadn't been named yet."
 url: https://ghost-production-198e.up.railway.app/155th-edition-token-wisdom-week-15/
 tags:

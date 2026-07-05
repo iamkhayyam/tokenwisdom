@@ -19,6 +19,130 @@
       "visibility": "public"
     }
   ],
+  "data-is-not-the-new-oil": [
+    {
+      "id": "6a4816f97d31280001f4f9a2",
+      "name": "All the Data",
+      "slug": "data",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9a8",
+      "name": "Economic  ≠",
+      "slug": "economic-inequality",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9ce",
+      "name": "Big Tech",
+      "slug": "big-tech",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9d0",
+      "name": "Semiconductor",
+      "slug": "semiconductor",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f98a",
+      "name": "Provenance",
+      "slug": "provenance",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9d7",
+      "name": "Privacy",
+      "slug": "privacy",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f98c",
+      "name": "A.I. (and Subsets)",
+      "slug": "ai",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f995",
+      "name": "Ethics \\ Principles",
+      "slug": "ethical",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f99f",
+      "name": "Persuasion",
+      "slug": "grifters",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9cf",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
+      "visibility": "public"
+    }
+  ],
+  "human-in-the-room": [
+    {
+      "id": "6a4816f97d31280001f4f9a5",
+      "name": "Philosophical",
+      "slug": "philosophy",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9d8",
+      "name": "Deep Tech",
+      "slug": "deeptech",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f98d",
+      "name": "Educate \\ Learn",
+      "slug": "education",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9aa",
+      "name": "Challenges",
+      "slug": "challenges",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f995",
+      "name": "Ethics \\ Principles",
+      "slug": "ethical",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f989",
+      "name": "Technology",
+      "slug": "technology",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9a3",
+      "name": "Neuroscience",
+      "slug": "neuroscience",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9af",
+      "name": "Lessons Learned",
+      "slug": "lessons-learned",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9db",
+      "name": "Math + Physics",
+      "slug": "math-physics",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9cf",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
+      "visibility": "public"
+    }
+  ],
   "the-proof-was-never-the-point": [
     {
       "id": "6a4816f97d31280001f4f9a5",

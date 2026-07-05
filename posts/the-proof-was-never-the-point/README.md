@@ -3,10 +3,10 @@ title: "The Proof Was Never the Point"
 slug: the-proof-was-never-the-point
 id: 6a4816fb7d31280001f4fb1e
 published_at: 2026-05-15T22:55:00.000-07:00
-updated_at: 2026-05-22T22:57:22.000-07:00
+updated_at: 2026-07-03T20:05:26.000-07:00
 featured: False
 reading_time: 19 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/05/a-translucent-human-hand-and-a-circuit-b_HzBEKOrJX0Ol4A24bZfN8Q_yaf52QhpQ3-mmxu5oi-0UA_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/a-translucent-human-hand-and-a-circuit-b_HzBEKOrJX0Ol4A24bZfN8Q_yaf52QhpQ3-mmxu5oi-0UA_sd-1.jpeg
 excerpt: "W20 — A computer verified its first physics paper and found an error peer review missed. A mathematician quit his tenured position to argue that mathematics has been misdefined for 2,300 years. These are the same story."
 url: https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/
 tags:

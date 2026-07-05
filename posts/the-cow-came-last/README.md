@@ -3,10 +3,10 @@ title: "The Cow Came Last"
 slug: the-cow-came-last
 id: 6a4816fb7d31280001f4fb10
 published_at: 2026-04-02T01:15:00.000-07:00
-updated_at: 2026-04-09T14:48:06.000-07:00
+updated_at: 2026-07-04T18:09:06.000-07:00
 featured: False
 reading_time: 14 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/04/a-single-cow-standing-in-an-open-prairie_dm7eSnVKRKaW1HHdoe1Ixw_JA9UN-0lS9mPFR-IaF4fRA_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/w14-the-cow-came-last.jpg
 excerpt: "W14 - A cattle monitoring platform, a Calgary winter, a dying mother, and the formula that keeps showing up across a thousand years of mathematics — whether anyone is looking for it or not. The constraint was never the obstacle. It was always the answer."
 url: https://ghost-production-198e.up.railway.app/the-cow-came-last/
 tags:

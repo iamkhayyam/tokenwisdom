@@ -3,10 +3,10 @@ title: "156th Edition 🔮 Token Wisdom \ Week 16"
 slug: 156th-edition-token-wisdom-week-16
 id: 6a4816fb7d31280001f4fb15
 published_at: 2026-04-21T09:52:13.000-07:00
-updated_at: 2026-04-21T09:52:12.000-07:00
+updated_at: 2026-07-04T14:53:01.000-07:00
 featured: False
 reading_time: 12 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/04/a-prince-of-persia-arabian-nights-themed_X5s2DjLNRrOeLe_ITK0aaw_h5_JM337QWy9dUKcxErDsA_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/156th-edition-w16.jpg
 excerpt: "This week — Darkness outruns light. A 19th-century optics trick secures quantum keys. Samsung sets a photonics production date. A 2,300-year-old math mistake finally gets named. A robot generalizes. The old answers were already there — the constraint just hadn't been named yet."
 url: https://ghost-production-198e.up.railway.app/156th-edition-token-wisdom-week-16/
 tags:

@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/PA-060320-Blue-Collar-Support-Pete-Ryan-web.gif
 **Local Image:** `images/tags/economic-inequality_feature__PA-060320-Blue-Collar-Support-Pete-Ryan-web.gif`
 
-## Posts (23)
+## Posts (24)
 
+- [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [No Heir. No Lesson.](https://ghost-production-198e.up.railway.app/no-heir-no-lesson/) (2026-04-24)
 - [The Sky Has Been Warning Us Since 1859](https://ghost-production-198e.up.railway.app/the-sky-has-been-warning-us-since-1859/) (2026-03-26)
 - [AI Didn't Break Democracy. We Did. Four Decades Ago.](https://ghost-production-198e.up.railway.app/ai-didnt-break-democracy-we-did-four-decades-ago/) (2026-01-15)

@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/05/privacy-is-no-longer-a-social-norm-colours_0.gif
 **Local Image:** `images/tags/privacy_feature__privacy-is-no-longer-a-social-norm-colours_0.gif`
 
-## Posts (16)
+## Posts (17)
 
+- [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [Who's Mind Is It Anyway?](https://ghost-production-198e.up.railway.app/whos-mind-is-it-anyway/) (2026-04-16)
 - [The Double Collapse](https://ghost-production-198e.up.railway.app/the-double-collapse/) (2026-02-26)
 - [The Amnesia Machine](https://ghost-production-198e.up.railway.app/the-amnesia-machine-2/) (2025-12-25)

@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/18-38-04-285_512.gif
 **Local Image:** `images/tags/challenges_feature__18-38-04-285_512.gif`
 
-## Posts (61)
+## Posts (62)
 
+- [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
 - [The Wrong Name on the Door](https://ghost-production-198e.up.railway.app/the-wrong-name-on-the-door/) (2026-05-07)
 - [The Cost of Being Right](https://ghost-production-198e.up.railway.app/the-cost-of-being-right/) (2026-05-01)

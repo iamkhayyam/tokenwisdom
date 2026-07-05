@@ -3,10 +3,10 @@ title: "We Trained It on Human Weaponry"
 slug: we-trained-it-on-human-weaponry
 id: 6a4816fb7d31280001f4fb12
 published_at: 2026-04-10T19:45:00.000-07:00
-updated_at: 2026-04-13T02:12:32.000-07:00
+updated_at: 2026-07-04T18:10:44.000-07:00
 featured: False
 reading_time: 15 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/04/black-and-white-new-yorker-style-ink-ill_w7oYb-_9QRGeTpF0Npm-JQ_QhS34mG8Q1GUEBBwm_l-uA_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/w15-we-trained-it-on-human-weaponry.jpg
 excerpt: "W15 - The corpus didn't capture human knowledge. It captured what traveled. And what travels, across centuries of civilization, is weaponry, it's the fraction of human cognition evolved specifically to exploit other humans. We built the host condition before the parasite arrived."
 url: https://ghost-production-198e.up.railway.app/we-trained-it-on-human-weaponry/
 tags:

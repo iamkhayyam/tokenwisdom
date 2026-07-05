@@ -1,10 +1,12 @@
 # Post-to-Tags Cross Reference
 
-Generated: 2026-07-03T18:56:04.326606
+Generated: 2026-07-04T19:24:38.531245
 
 | Post | Published | Tags |
 |------|-----------|------|
 | del.icio.us Was Right. It Was Just Twenty Years To | 2026-06-23 | Build Log, 👁️ A Closer Look, Claudacious |
+| Data Is Not the New Oil | 2026-05-28 | All the Data, Economic  ≠, Big Tech, Semiconductor, Provenance, Privacy, A.I. (and Subsets), Ethics \ Principles, Persuasion, 👁️ A Closer Look |
+| Human-in-the-Room | 2026-05-21 | Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look |
 | The Proof Was Never the Point | 2026-05-15 | Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09 |
 | 159th Edition 🔮 Token Wisdom \ Week 19 | 2026-05-11 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Wrong Name on the Door | 2026-05-07 | Educate \ Learn, Ethics \ Principles, Philosophical, A Story to Tell, Challenges, Misinformation, A.I. (and Subsets), Provenance, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09 |

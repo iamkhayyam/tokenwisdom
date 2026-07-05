@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/economic-inequality/",
   "posts": [
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
       "id": "6a4816fb7d31280001f4fb16",
       "title": "No Heir. No Lesson.",
       "slug": "no-heir-no-lesson",
@@ -227,6 +236,6 @@
       "reading_time": 5
     }
   ],
-  "post_count": 23,
+  "post_count": 24,
   "local_feature_image": "economic-inequality_feature__PA-060320-Blue-Collar-Support-Pete-Ryan-web.gif"
 }

@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/ai_button_2.gif
 **Local Image:** `images/tags/ai_feature__ai_button_2.gif`
 
-## Posts (75)
+## Posts (76)
 
+- [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [The Wrong Name on the Door](https://ghost-production-198e.up.railway.app/the-wrong-name-on-the-door/) (2026-05-07)
 - [No Heir. No Lesson.](https://ghost-production-198e.up.railway.app/no-heir-no-lesson/) (2026-04-24)
 - [Who's Mind Is It Anyway?](https://ghost-production-198e.up.railway.app/whos-mind-is-it-anyway/) (2026-04-16)

@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/data/",
   "posts": [
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
       "id": "6a4816fb7d31280001f4fb1a",
       "title": "The Cost of Being Right",
       "slug": "the-cost-of-being-right",
@@ -317,6 +326,6 @@
       "reading_time": 7
     }
   ],
-  "post_count": 33,
+  "post_count": 34,
   "local_feature_image": "data_feature__Image-2a5b55b3-733d-43f5-a3a1-e0a9de1805a3.gif"
 }

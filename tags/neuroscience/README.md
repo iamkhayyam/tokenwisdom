@@ -7,8 +7,9 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/4d101c3762b9aa35b49a74ff2bcf0398.gif
 **Local Image:** `images/tags/neuroscience_feature__4d101c3762b9aa35b49a74ff2bcf0398.gif`
 
-## Posts (16)
+## Posts (17)
 
+- [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
 - [The Cost of Being Right](https://ghost-production-198e.up.railway.app/the-cost-of-being-right/) (2026-05-01)
 - [Who's Mind Is It Anyway?](https://ghost-production-198e.up.railway.app/whos-mind-is-it-anyway/) (2026-04-16)

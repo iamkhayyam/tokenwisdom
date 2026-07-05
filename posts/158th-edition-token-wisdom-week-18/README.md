@@ -3,10 +3,10 @@ title: "158th Edition 🔮 Token Wisdom \ Week 18"
 slug: 158th-edition-token-wisdom-week-18
 id: 6a4816fb7d31280001f4fb1b
 published_at: 2026-05-04T17:58:00.000-07:00
-updated_at: 2026-05-22T18:00:04.000-07:00
+updated_at: 2026-07-04T14:56:10.000-07:00
 featured: False
 reading_time: 11 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/05/146th-edition-token-wisdom-week-06_feature__Lucid_Origin_A_mystical_fortune_teller_with_an_enchanting_gaze_0--1-.jpg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/158th-edition-w18.jpg
 excerpt: "This week — wrong beliefs don't die from evidence, they die when defending it costs more than abandoning it. From MBTI's AI metastasis to paper mills contaminating science, we map what keeps civilizations confidently wrong and ask: it the correction mechanism broken?"
 url: https://ghost-production-198e.up.railway.app/158th-edition-token-wisdom-week-18/
 tags:

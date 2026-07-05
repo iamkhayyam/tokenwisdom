@@ -23,6 +23,24 @@
       "reading_time": 18
     },
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
+      "id": "6a48778f7d31280001f513b3",
+      "title": "Human-in-the-Room",
+      "slug": "human-in-the-room",
+      "published_at": "2026-05-21T20:13:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/human-in-the-room/",
+      "featured": false,
+      "reading_time": 15
+    },
+    {
       "id": "6a4816fb7d31280001f4fb1e",
       "title": "The Proof Was Never the Point",
       "slug": "the-proof-was-never-the-point",
@@ -2543,7 +2561,7 @@
       "reading_time": 1
     }
   ],
-  "post_count": 281,
+  "post_count": 283,
   "local_profile_image": "khayyam_profile__token_wisdom_orb-1.gif",
   "local_cover_image": "khayyam_cover__fortune_teller_worth_a_fortune-1.gif"
 }

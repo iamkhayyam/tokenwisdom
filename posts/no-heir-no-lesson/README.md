@@ -3,10 +3,10 @@ title: "No Heir. No Lesson."
 slug: no-heir-no-lesson
 id: 6a4816fb7d31280001f4fb16
 published_at: 2026-04-24T14:36:00.000-07:00
-updated_at: 2026-04-29T15:13:12.000-07:00
+updated_at: 2026-07-04T18:12:31.000-07:00
 featured: False
 reading_time: 14 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/04/a-solitary-farmer-in-overalls-stands-in-_E3NQNMZvREuvVtEfoIHa4A_CiGpxVBQRoOda8eWmkkdPw_cover_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/w17-no-heir-no-lesson.jpg
 excerpt: "W17 — The farm already has an heir: the system that owns the inputs. When time compresses, inheritance dissolves. We don't run simulations seeking truth, we seek permission for what's decided. This isn't about jobs, it's about the flattening of time itself. The record matters."
 url: https://ghost-production-198e.up.railway.app/no-heir-no-lesson/
 tags:

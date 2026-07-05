@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/ai/",
   "posts": [
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
       "id": "6a4816fb7d31280001f4fb1c",
       "title": "The Wrong Name on the Door",
       "slug": "the-wrong-name-on-the-door",
@@ -695,6 +704,6 @@
       "reading_time": 2
     }
   ],
-  "post_count": 75,
+  "post_count": 76,
   "local_feature_image": "ai_feature__ai_button_2.gif"
 }

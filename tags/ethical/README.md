@@ -7,8 +7,10 @@
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/01/fff63b50-0943-11ee-a9dd-649a2dab66a0.gif
 **Local Image:** `images/tags/ethical_feature__fff63b50-0943-11ee-a9dd-649a2dab66a0.gif`
 
-## Posts (68)
+## Posts (70)
 
+- [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
+- [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
 - [The Wrong Name on the Door](https://ghost-production-198e.up.railway.app/the-wrong-name-on-the-door/) (2026-05-07)
 - [The Cost of Being Right](https://ghost-production-198e.up.railway.app/the-cost-of-being-right/) (2026-05-01)

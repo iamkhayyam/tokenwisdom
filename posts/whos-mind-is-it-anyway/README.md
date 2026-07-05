@@ -3,10 +3,10 @@ title: "Who's Mind Is It Anyway?"
 slug: whos-mind-is-it-anyway
 id: 6a4816fb7d31280001f4fb14
 published_at: 2026-04-16T22:03:00.000-07:00
-updated_at: 2026-04-21T02:47:57.000-07:00
+updated_at: 2026-07-04T18:11:04.000-07:00
 featured: False
 reading_time: 14 min
-feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/04/new-yorker-style-cover-art-prompt-no-tex_4HFgWaPwSM62F-E4BnnmFw_v8c6qDKrTt2-o8os_znKIw_cover_sd.jpeg
+feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/w16-whos-mind-is-it-anyway.jpg
 excerpt: "W16 — Everyone's asking what to do about AI. Wrong question. Everything worth saving rests on one capacity we're quietly trading for convenience. The question isn't what to protect—it's whether you're still doing the thinking."
 url: https://ghost-production-198e.up.railway.app/whos-mind-is-it-anyway/
 tags:

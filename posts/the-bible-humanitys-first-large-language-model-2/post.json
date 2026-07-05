@@ -14,6 +14,30 @@
   "custom_excerpt": "W06 - What if the world's most sophisticated language model wasn't created in Silicon Valley, but emerged 3,000 years ago? Discover how the Bible outperforms modern AI in cultural adaptation, error correction, and millennial-scale stability.",
   "canonical_url": null,
   "comment_id": "67a72f40df16bb00019a29fc",
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
   "tags": [
     {
       "id": "6a4816f97d31280001f4f9cf",
@@ -245,30 +269,6 @@
       "canonical_url": null,
       "accent_color": null,
       "url": "https://ghost-production-198e.up.railway.app/404/"
-    }
-  ],
-  "authors": [
-    {
-      "id": "1",
-      "name": "🌶️ @iamkhayyam",
-      "slug": "khayyam",
-      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
-      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
-      "bio": null,
-      "website": null,
-      "location": null,
-      "facebook": null,
-      "twitter": "@worthafortune",
-      "threads": null,
-      "bluesky": null,
-      "mastodon": null,
-      "tiktok": null,
-      "youtube": null,
-      "instagram": null,
-      "linkedin": null,
-      "meta_title": null,
-      "meta_description": null,
-      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
   "url": "https://ghost-production-198e.up.railway.app/the-bible-humanitys-first-large-language-model-2/",

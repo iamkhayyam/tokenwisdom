@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/privacy/",
   "posts": [
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
       "id": "6a4816fb7d31280001f4fb14",
       "title": "Who's Mind Is It Anyway?",
       "slug": "whos-mind-is-it-anyway",
@@ -164,6 +173,6 @@
       "reading_time": 16
     }
   ],
-  "post_count": 16,
+  "post_count": 17,
   "local_feature_image": "privacy_feature__privacy-is-no-longer-a-social-norm-colours_0.gif"
 }

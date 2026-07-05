@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/tag/semiconductor/",
   "posts": [
     {
+      "id": "6a487ac87d31280001f513e3",
+      "title": "Data Is Not the New Oil",
+      "slug": "data-is-not-the-new-oil",
+      "published_at": "2026-05-28T20:19:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/",
+      "featured": false,
+      "reading_time": 13
+    },
+    {
       "id": "6a4816fb7d31280001f4fae2",
       "title": "When Two's Company, Three's a Revolution",
       "slug": "when-twos-company-threes-a-revolution",
@@ -92,6 +101,6 @@
       "reading_time": 12
     }
   ],
-  "post_count": 8,
+  "post_count": 9,
   "local_feature_image": "semiconductor_feature__ChipElectro-TopArt.gif"
 }
