@@ -179,7 +179,7 @@ def kicker(p):
 
 
 def meta(p):
-    return f"{gs.author_name(p)} · {gs.reading_time(p)} · {gs.fmt_date_short(p.get('published_at'))}"
+    return f"{gs.reading_time(p)} · {gs.fmt_date_short(p.get('published_at'))}"
 
 
 def href(p):

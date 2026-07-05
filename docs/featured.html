@@ -136,6 +136,7 @@ a{color:inherit;text-decoration:none}
 .rule-meta.linky{color:var(--accent)}
 
 /* recent */
+.top-three-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-bottom:44px}
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
 .recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
@@ -219,6 +220,7 @@ a{color:inherit;text-decoration:none}
 .feat-dek{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .feat-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-top:auto;padding-top:.3rem}
 @media(max-width:820px){.feat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.top-three-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.feat-card,.feat-fig img{transition:none}.feat-card:hover{transform:none}.feat-card:hover .feat-fig img{transform:none}}
 
@@ -327,6 +329,7 @@ a{color:inherit;text-decoration:none}
   .stack-row-label::after{content:"swipe →";margin-left:auto;color:var(--ink-faint);letter-spacing:.12em}
 }
 @media(max-width:620px){
+  .top-three-cards{grid-template-columns:1fr}
   .recent-cards{grid-template-columns:1fr}
   .lexcards{grid-template-columns:1fr}
   .lexcard{border-right:1px solid var(--rule)!important}
@@ -538,7 +541,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Dear ______ Letters</div>
         <h3 class="feat-title">Dear Sam,</h3>
         <p class="feat-dek">On vendor-financed delusions, circular capital, the $100 billion retreat nobody wants to name, and what it means that the CFO of…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 25 min read · Feb 24, 2026</div>
+        <div class="feat-meta">25 min read · Feb 24, 2026</div>
       </div>
     </a>
     <a class="feat-card" href="posts/dear-dario.html">
@@ -547,7 +550,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Dear ______ Letters</div>
         <h3 class="feat-title">Dear Dario,</h3>
         <p class="feat-dek">You preached AI ethics from your personal blog while selling Anthropic&#x27;s independence to Amazon. Now your &#x27;Constitutional AI&#x27;…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 18 min read · Jan 27, 2026</div>
+        <div class="feat-meta">18 min read · Jan 27, 2026</div>
       </div>
     </a>
     <a class="feat-card" href="posts/token-the-ultimate-reading-guide.html">
@@ -556,7 +559,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look</div>
         <h3 class="feat-title">The Ultimate Reading Guide ✨ 2025</h3>
         <p class="feat-dek">52 essays: $600B in AI delusions. Lab neurons firing without experience. A confession of what tech analysis erases. In 2025,…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 46 min read · Dec 25, 2025</div>
+        <div class="feat-meta">46 min read · Dec 25, 2025</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-transformative-power-of-generalists-in-a-specialized-world.html">
@@ -565,7 +568,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · A Story to Tell</div>
         <h3 class="feat-title">The Transformative Power of Generalists in a Specialized World</h3>
         <p class="feat-dek">W10 - Discover a dynamic future of work where generalists thrive alongside specialists, blending adaptability and expertise to…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 23 min read · Mar 17, 2024</div>
+        <div class="feat-meta">23 min read · Mar 17, 2024</div>
       </div>
     </a>
     <a class="feat-card" href="posts/revolutionizing-education-the-impact-of-artificial-intelligence.html">
@@ -574,7 +577,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Technology</div>
         <h3 class="feat-title">Revolutionizing Education: When Silicon Meets Chalk</h3>
         <p class="feat-dek">The Impact of Artificial Intelligence 🔮 In the wake of a digital dawn, the chalk-and-blackboard era of our past is ebbing away…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 11 min read · Oct 23, 2023</div>
+        <div class="feat-meta">11 min read · Oct 23, 2023</div>
       </div>
     </a>
     <a class="feat-card" href="posts/frances-mistral-ai-stepping-into-the-arena-to-challenge-the-giants.html">
@@ -583,7 +586,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Innovation</div>
         <h3 class="feat-title">France’s Mistral AI: Stepping into the Arena</h3>
         <p class="feat-dek">Challenging the Giants 🔮 In an audacious move evidencing the global expansion of AI, France’s Mistral AI has rolled out its debut…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 10 min read · Sep 30, 2023</div>
+        <div class="feat-meta">10 min read · Sep 30, 2023</div>
       </div>
     </a>
     <a class="feat-card" href="posts/laundered-data.html">
@@ -592,7 +595,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Cyber \ Security</div>
         <h3 class="feat-title">Unmasking Biases in Pre-Trained Transformers with Laundered Data</h3>
         <p class="feat-dek">The Dirty Truth: The Biased and Unsettling Low-Functioning Pre-Trained Transformers We’re Building Our Future On 🔮 Have you ever…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 9 min read · Jul 7, 2023</div>
+        <div class="feat-meta">9 min read · Jul 7, 2023</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-path-to-artificial-general-intelligence.html">
@@ -601,7 +604,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · ANI \ AGI \ ASI</div>
         <h3 class="feat-title">The Path to Artificial General Intelligence</h3>
         <p class="feat-dek">How Close Are We? 🔮 Artificial General Intelligence (AGI) enables AI systems to learn and understand any intellectual task that a…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 5 min read · May 18, 2023</div>
+        <div class="feat-meta">5 min read · May 18, 2023</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-rise-of-algorithms-are-they-taking-over.html">
@@ -610,7 +613,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · A.I. (and Subsets)</div>
         <h3 class="feat-title">The Rise of Algorithms: Are They Taking Over?</h3>
         <p class="feat-dek">An Original Recipe for Change 🔮 Algorithms silently guide our daily decisions, influencing and forming the world we live in. From…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 7 min read · May 10, 2023</div>
+        <div class="feat-meta">7 min read · May 10, 2023</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-era-of-explainable-ai-in-todays-world.html">
@@ -619,7 +622,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · A.I. (and Subsets)</div>
         <h3 class="feat-title">The Era of Explainable AI In Today&#x27;s World: The Future, The Insights, and The Trust</h3>
         <p class="feat-dek">As machine learning models become increasingly complex, it has become difficult to understand how these models arrive at their…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 6 min read · Apr 11, 2023</div>
+        <div class="feat-meta">6 min read · Apr 11, 2023</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-rise-of-bitcoin-ordinals-why-they-matter.html">
@@ -628,7 +631,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Bitcoin \ Ordinals</div>
         <h3 class="feat-title">The Rise of Bitcoin Ordinals: Why They Matter</h3>
         <p class="feat-dek">The New Buzz in the Bitcoin World, Ordinals and NFTs 🔮 Bitcoin has been a popular cryptocurrency for years. Its volatility is…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 5 min read · Feb 16, 2023</div>
+        <div class="feat-meta">5 min read · Feb 16, 2023</div>
       </div>
     </a>
     <a class="feat-card" href="posts/linkedin-isnt-good-enough.html">
@@ -637,7 +640,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · LinkedIn \ Pros</div>
         <h3 class="feat-title">LinkedIn, Isn’t Good Enough</h3>
         <p class="feat-dek">You need a resume and it’s got to be a good one! 🎖 It all started when I got recruited by a big fancy company. You can Google it.…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 5 min read · May 27, 2014</div>
+        <div class="feat-meta">5 min read · May 27, 2014</div>
       </div>
     </a>
     <a class="feat-card" href="posts/you-can-sell-your-time-but-you-can-never-buy-it-back.html">
@@ -646,7 +649,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Lessons Learned</div>
         <h3 class="feat-title">You Can Sell Your Time, But You Can Never Buy It Back</h3>
         <p class="feat-dek">Caveat Venditor 🔮 Time is precious. Stupid people are plentiful. The following are some guidelines that have served well over the…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 4 min read · Jun 22, 2013</div>
+        <div class="feat-meta">4 min read · Jun 22, 2013</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-cult-ure-of-innovation.html">
@@ -655,7 +658,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Culture Club</div>
         <h3 class="feat-title">The Cult(ure) of Innovation</h3>
         <p class="feat-dek">Dive into what the future of advertising is in 2020, where culture breeds innovation and video content reigns supreme. Discover…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 5 min read · May 15, 2013</div>
+        <div class="feat-meta">5 min read · May 15, 2013</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-art-of-confidence.html">
@@ -664,7 +667,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Persuasion</div>
         <h3 class="feat-title">The Art of Confidence</h3>
         <p class="feat-dek">The smoothest con man that ever lived. That’s what they say about Victor Lustig pictured above. His claim to fame is that he sold…</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 6 min read · May 12, 2013</div>
+        <div class="feat-meta">6 min read · May 12, 2013</div>
       </div>
     </a>
     <a class="feat-card" href="posts/the-five-things-that-will-get-you-nowhere-fast.html">
@@ -673,7 +676,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <div class="feat-kicker">A Closer Look · Personal Growth</div>
         <h3 class="feat-title">The Five Things That Will Get You Nowhere Fast</h3>
         <p class="feat-dek">Recommendations on how to conduct oneself when meeting new acquaintances or business folk.</p>
-        <div class="feat-meta">🌶️ @iamkhayyam · 1 min read · May 6, 2013</div>
+        <div class="feat-meta">1 min read · May 6, 2013</div>
       </div>
     </a>
     </div>
