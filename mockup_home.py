@@ -41,8 +41,8 @@ issue_nums = gs.issue_number_map(posts)
 essays = [p for p in chrono if not gs.is_newsletter(p)]
 editions = [p for p in chrono if gs.is_newsletter(p)]
 hero = essays[0]
-secondary = essays[1:3]
-more = essays[3:9]
+secondary = essays[1:6]
+more = essays[6:12]
 latest_ed = editions[0]
 
 
