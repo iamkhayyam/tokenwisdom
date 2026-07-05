@@ -41,8 +41,8 @@ issue_nums = gs.issue_number_map(posts)
 essays = [p for p in chrono if not gs.is_newsletter(p)]
 editions = [p for p in chrono if gs.is_newsletter(p)]
 hero = essays[0]
-secondary = essays[1:6]
-more = essays[6:12]
+secondary = essays[1:4]
+more = essays[4:12]
 latest_ed = editions[0]
 
 
@@ -612,7 +612,7 @@ a{color:inherit;text-decoration:none}
 
 /* recent */
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
-.recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.recent-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
 .lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
 .story-wrap .player-rail{margin-top:auto;padding-top:.9rem;margin-bottom:0}
 .pairlink{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);align-self:flex-start;margin-top:.7rem;border-bottom:1px solid transparent;transition:border-color .15s}
@@ -694,6 +694,7 @@ a{color:inherit;text-decoration:none}
 .feat-dek{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .feat-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);margin-top:auto;padding-top:.3rem}
 @media(max-width:820px){.feat-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.recent-cards{grid-template-columns:1fr 1fr}}
 @media(max-width:560px){.feat-grid{grid-template-columns:1fr}}
 @media(prefers-reduced-motion:reduce){.feat-card,.feat-fig img{transition:none}.feat-card:hover{transform:none}.feat-card:hover .feat-fig img{transform:none}}
 
