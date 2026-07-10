@@ -140,11 +140,22 @@ def copy_local_images():
 TW_API_BASE = os.environ.get("TW_API_BASE", "")
 
 
+def next_post_body_attrs(next_post, prefix="../"):
+    """Return data-* attribute string for the peek transition, or empty string."""
+    if not next_post:
+        return ""
+    href  = f"{prefix}posts/{next_post['slug']}.html"
+    title = esc(clean_title(next_post) or next_post.get('title', ''))
+    image = esc(next_post.get('feature_image') or '')
+    return f' data-next-href="{href}" data-next-title="{title}" data-next-image="{image}"'
+
+
 def community_assets(prefix="../"):
     """Stylesheet + config + annotate client. Injected on post pages only."""
     return f"""<link rel="stylesheet" href="{prefix}assets/annotate.css">
 <script>window.TW_API={json.dumps(TW_API_BASE)};</script>
-<script src="{prefix}assets/annotate.js" defer></script>"""
+<script src="{prefix}assets/annotate.js" defer></script>
+<script src="{prefix}assets/transitions.js" defer></script>"""
 
 
 def replace_typeform(html):
@@ -2896,6 +2907,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", theme_toggle=True, noindex=is_hidden(post),
                       description=post.get("custom_excerpt") or post.get("excerpt") or None,
                       og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html")
+    page = page.replace('<body>', '<body' + next_post_body_attrs(next_post, prefix='../') + '>', 1)
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
     page = page.replace("</body>", community_assets() + "\n</body>", 1)
     return page
@@ -2972,6 +2984,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", noindex=is_hidden(post),
                       description=post.get("custom_excerpt") or post.get("excerpt") or None,
                       og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html")
+    page = page.replace('<body>', '<body' + next_post_body_attrs(next_post, prefix='../') + '>', 1)
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
     page = page.replace("</body>", community_assets() + "\n</body>", 1)
     return page
@@ -4598,7 +4611,7 @@ def main():
         }, f, indent=2)
     # Community layer client (highlights / notes / responses) — source lives in
     # assets/ (outside docs/, which is wiped on every build).
-    for asset in ("annotate.js", "annotate.css"):
+    for asset in ("annotate.js", "annotate.css", "transitions.js"):
         src_asset = BACKUP_DIR / "assets" / asset
         if src_asset.exists():
             shutil.copy(src_asset, assets_dir / asset)
