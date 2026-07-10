@@ -190,7 +190,22 @@
 
     /* No body padding needed — tray is hidden at rest and only reveals
        once the reader has scrolled past 50% / 95% of the page. */
-    'body.has-tray { padding-bottom: 0; }'
+    'body.has-tray { padding-bottom: 0; }',
+
+    /* Essay-index progress bar coordination:
+       - At 50%+ scroll, lift the bar above the peek sliver so both stack.
+       - At 95%+ scroll, fade the bar out — the footer tray takes over. */
+    '.essay-index {',
+    '  transition: opacity 320ms ease, transform 320ms cubic-bezier(0.19,1,0.22,1), bottom 320ms cubic-bezier(0.19,1,0.22,1) !important;',
+    '}',
+    'body.tw-peek-shown .essay-index {',
+    '  bottom: ' + PEEK_SLIM + 'px !important;',
+    '}',
+    'body.tw-foot-shown .essay-index {',
+    '  opacity: 0 !important;',
+    '  pointer-events: none !important;',
+    '  transform: translateY(10px) !important;',
+    '}'
   ].join('\n');
   document.head.appendChild(style);
 
@@ -308,13 +323,19 @@
     if (pct >= 0.95) {
       tray.classList.remove('tw-peek-shown');
       tray.classList.add('tw-foot-shown');
+      body.classList.remove('tw-peek-shown');
+      body.classList.add('tw-foot-shown');
     } else if (pct >= 0.50) {
       tray.classList.remove('tw-foot-shown');
       tray.classList.add('tw-peek-shown');
+      body.classList.remove('tw-foot-shown');
+      body.classList.add('tw-peek-shown');
     } else {
       tray.classList.remove('tw-peek-shown');
       tray.classList.remove('tw-foot-shown');
       tray.classList.remove('tw-open');
+      body.classList.remove('tw-peek-shown');
+      body.classList.remove('tw-foot-shown');
     }
   }
   window.addEventListener('scroll', updateTrayVisibility, { passive: true });
