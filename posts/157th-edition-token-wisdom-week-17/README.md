@@ -3,7 +3,7 @@ title: "157th Edition 🔮 Week 17"
 slug: 157th-edition-token-wisdom-week-17
 id: 6a4816fb7d31280001f4fb17
 published_at: 2026-04-29T11:11:22.000-07:00
-updated_at: 2026-07-04T14:55:48.000-07:00
+updated_at: 2026-07-05T00:59:49.000-07:00
 featured: False
 reading_time: 13 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/07/157th-edition-w17.jpg

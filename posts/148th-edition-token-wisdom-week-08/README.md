@@ -3,7 +3,7 @@ title: "148th Edition 🔮 Week 08"
 slug: 148th-edition-token-wisdom-week-08
 id: 6a4816fb7d31280001f4fb04
 published_at: 2026-02-23T08:08:52.000-08:00
-updated_at: 2026-02-23T08:08:51.000-08:00
+updated_at: 2026-07-05T02:47:17.000-07:00
 featured: False
 reading_time: 13 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/200.gif

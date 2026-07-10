@@ -13,7 +13,6 @@ A weekly essay from a bucket of topics consisting of all things blockchain, arti
 
 ## Posts (125)
 
-- [del.icio.us Was Right. It Was Just Twenty Years Too Early.](https://ghost-production-198e.up.railway.app/del-icio-us-was-right-we-built-claudacious/) (2026-06-23)
 - [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)
@@ -22,6 +21,7 @@ A weekly essay from a bucket of topics consisting of all things blockchain, arti
 - [No Heir. No Lesson.](https://ghost-production-198e.up.railway.app/no-heir-no-lesson/) (2026-04-24)
 - [We Trained It on Human Weaponry](https://ghost-production-198e.up.railway.app/we-trained-it-on-human-weaponry/) (2026-04-10)
 - [The Cow Came Last](https://ghost-production-198e.up.railway.app/the-cow-came-last/) (2026-04-02)
+- [The Sky Has Been Warning Us Since 1859](https://ghost-production-198e.up.railway.app/the-sky-has-been-warning-us-since-1859/) (2026-03-26)
 - [The Proentropic Weed Manifesto](https://ghost-production-198e.up.railway.app/the-proentropic-weed-manifesto/) (2026-03-20)
 - [The Room Was Already Set Before You Walked In](https://ghost-production-198e.up.railway.app/the-room-was-already-set-before-you-walked-in/) (2026-03-12)
 - [The Race That Eats Its Own Rules](https://ghost-production-198e.up.railway.app/the-race-that-eats-its-own-rules/) (2026-03-06)

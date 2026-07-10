@@ -3,7 +3,7 @@ title: "144th Edition 🔮 Week 04"
 slug: 144th-edition-token-wisdom-week-04
 id: 6a4816fb7d31280001f4fafb
 published_at: 2026-01-25T16:44:24.000-08:00
-updated_at: 2026-01-25T16:44:24.000-08:00
+updated_at: 2026-07-05T02:47:20.000-07:00
 featured: False
 reading_time: 12 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/Lucid_Origin_A_close_up_of_a_mystical_Fortune_Teller_with_a_wi_0--1----01.jpg

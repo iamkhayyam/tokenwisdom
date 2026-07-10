@@ -3,7 +3,7 @@ title: "106th Edition 🔮 W18"
 slug: 106th-edition-pearls-of-wisdom-w18
 id: 6a4816fb7d31280001f4faaa
 published_at: 2025-05-05T13:41:52.000-07:00
-updated_at: 2025-05-05T13:41:52.000-07:00
+updated_at: 2026-07-05T02:58:08.000-07:00
 featured: False
 reading_time: 12 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/05/img-w5Y7djTgNwzaVkIW2aNo6.png

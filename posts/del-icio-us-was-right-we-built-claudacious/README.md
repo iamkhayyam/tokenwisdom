@@ -10,12 +10,8 @@ feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/
 excerpt: "In 2003, del.icio.us proved that human curation beats algorithmic ranking. Then Yahoo bought it, the feed arrived, and we forgot. We didn't forget. We built Claudacious—social bookmarking with a real Claude reading every link you save. Here's everything that went into it."
 url: https://ghost-production-198e.up.railway.app/del-icio-us-was-right-we-built-claudacious/
 tags:
-  - name: Build Log
-    slug: build-log
-  - name: 👁️ A Closer Look
-    slug: a-closer-look
-  - name: Claudacious
-    slug: claudacious
+  - name: #unlisted
+    slug: hash-unlisted
 authors:
   - name: 🌶️ @iamkhayyam
     slug: khayyam

@@ -1,10 +1,10 @@
 # Post-to-Tags Cross Reference
 
-Generated: 2026-07-04T19:24:38.531245
+Generated: 2026-07-10T10:54:38.821793
 
 | Post | Published | Tags |
 |------|-----------|------|
-| del.icio.us Was Right. It Was Just Twenty Years To | 2026-06-23 | Build Log, 👁️ A Closer Look, Claudacious |
+| del.icio.us Was Right. It Was Just Twenty Years To | 2026-06-23 | #unlisted |
 | Data Is Not the New Oil | 2026-05-28 | All the Data, Economic  ≠, Big Tech, Semiconductor, Provenance, Privacy, A.I. (and Subsets), Ethics \ Principles, Persuasion, 👁️ A Closer Look |
 | Human-in-the-Room | 2026-05-21 | Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look |
 | The Proof Was Never the Point | 2026-05-15 | Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09 |
@@ -21,7 +21,7 @@ Generated: 2026-07-04T19:24:38.531245
 | 154th Edition 🔮 Week 14 | 2026-04-07 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Cow Came Last | 2026-04-02 | A Story to Tell, Philosophical, Deep Tech, Innovation, Emerging Tech, Educate \ Learn, Neuroscience, Failing Up \ Often, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09 |
 | 153rd Edition 🔮 Week 13 | 2026-03-31 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
-| The Sky Has Been Warning Us Since 1859 | 2026-03-26 | Technology, Innovation, Deep Tech, Risk \ Reward, Philosophical, Future Trends, Challenges, Economic  ≠, Unsolicited Advice, 🚨 OP-ED, #Import 2026-07-03 20:09 |
+| The Sky Has Been Warning Us Since 1859 | 2026-03-26 | Technology, Innovation, Deep Tech, Risk \ Reward, Philosophical, Future Trends, Challenges, Economic  ≠, Unsolicited Advice, 🚨 OP-ED, 👁️ A Closer Look, #Import 2026-07-03 20:09 |
 | 152nd Edition 🔮 Week 12 | 2026-03-24 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Proentropic Weed Manifesto | 2026-03-20 | A.I. (and Subsets), Philosophical, Deep Tech, Future Trends, ANI \ AGI \ ASI, Ethics \ Principles, Strategic Measures, Innovation, 👁️ A Closer Look, Risk \ Reward, #Import 2026-07-03 20:09 |
 | 151st Edition 🔮 Week 11 | 2026-03-16 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
@@ -150,7 +150,7 @@ Generated: 2026-07-04T19:24:38.531245
 | The Political Singularity—Welcome to the First Alg | 2025-01-23 | 👁️ A Closer Look, Blockchain \ DLT, Economic  ≠, Future Trends, Philosophical, Strategic Measures, Unsolicited Advice, #Import 2026-07-03 20:09 |
 | 91st Edition 🔮 W03 | 2025-01-19 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | The Computational Autocracy—Inside the UAE's Bluep | 2025-01-16 | 👁️ A Closer Look, A.I. (and Subsets), Privacy, Ethics \ Principles, Cyber \ Security, Culture Club, All the Data, Philosophical, Risk \ Reward, Strategic Measures, #Import 2026-07-03 20:09 |
-| 90th Edition 🔮 Pearls of Wisdom \ W02 | 2025-01-12 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
+| 90th Edition 🔮 W02 | 2025-01-12 | ✨ Pearls of Wisdom, #Import 2026-07-03 20:09 |
 | From Likes to Leaves—When Trust Became the Ultimat | 2025-01-11 | 👁️ A Closer Look, Big Tech, Cyber \ Security, Misinformation, Future Trends, Emerging Tech, Technology, A Story to Tell, Ethics \ Principles, Risk \ Reward, #Import 2026-07-03 20:09 |
 | The Invisible Resolution—NVIDIA's Neural Optics an | 2025-01-03 | 👁️ A Closer Look, IP \ Copyright, XR (Pirate Talk), Technology, Strategic Measures, A.I. (and Subsets), Emerging Tech, Entertainment \ LBE, Future Trends, Innovation, Math + Physics, #Import 2026-07-03 20:09 |
 | The Perfect Platform Heist: The Greatest Trick Goo | 2024-12-29 | 👁️ A Closer Look, XR (Pirate Talk), Risk \ Reward, Technology, All the Data, Future Trends, Human Computer Interaction, #Import 2026-07-03 20:09 |

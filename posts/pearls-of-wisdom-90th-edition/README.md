@@ -1,9 +1,9 @@
 ---
-title: "90th Edition 🔮 Pearls of Wisdom \ W02"
+title: "90th Edition 🔮 W02"
 slug: pearls-of-wisdom-90th-edition
 id: 6a4816fb7d31280001f4fa8a
 published_at: 2025-01-12T05:33:59.000-08:00
-updated_at: 2025-02-16T08:29:36.000-08:00
+updated_at: 2026-07-05T02:59:42.000-07:00
 featured: False
 reading_time: 6 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/img-cgxsGl3ZP3UrDgmv7LDCD.jpeg
@@ -19,7 +19,7 @@ authors:
     slug: khayyam
 ---
 
-# 90th Edition 🔮 Pearls of Wisdom \ W02
+# 90th Edition 🔮 W02
 
 Editor's Notes 📆 Week 2 of 52 // January 5th 🧿 11th, 2025
 

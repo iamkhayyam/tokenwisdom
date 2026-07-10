@@ -149,7 +149,7 @@
 - [The Political Singularity—Welcome to the First Algorithmic State](https://ghost-production-198e.up.railway.app/the-political-singularity-welcome-to-the-first-algorithmic-state/) (2025-01-23)
 - [91st Edition 🔮 W03](https://ghost-production-198e.up.railway.app/91st-edition-pearls-of-wisdom-w02/) (2025-01-19)
 - [The Computational Autocracy—Inside the UAE's Blueprint for AI-Powered Control](https://ghost-production-198e.up.railway.app/the-computational-autocracy/) (2025-01-16)
-- [90th Edition 🔮 Pearls of Wisdom \ W02](https://ghost-production-198e.up.railway.app/pearls-of-wisdom-90th-edition/) (2025-01-12)
+- [90th Edition 🔮 W02](https://ghost-production-198e.up.railway.app/pearls-of-wisdom-90th-edition/) (2025-01-12)
 - [From Likes to Leaves—When Trust Became the Ultimate Unfriend](https://ghost-production-198e.up.railway.app/from-likes-to-leaves-when-trust-became-the-ultimate-unfriend/) (2025-01-11)
 - [The Invisible Resolution—NVIDIA's Neural Optics and the Death of Computing as We Know It](https://ghost-production-198e.up.railway.app/the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it/) (2025-01-03)
 - [The Perfect Platform Heist: The Greatest Trick Google Ever Pulled](https://ghost-production-198e.up.railway.app/the-perfect-platform-heist-the-greatest-trick-google-ever-pulled/) (2024-12-29)

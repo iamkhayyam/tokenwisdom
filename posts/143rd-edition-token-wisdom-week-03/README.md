@@ -3,7 +3,7 @@ title: "143rd Edition 🔮 Week 03"
 slug: 143rd-edition-token-wisdom-week-03
 id: 6a4816fb7d31280001f4faf9
 published_at: 2026-01-18T18:37:12.000-08:00
-updated_at: 2026-01-18T19:57:07.000-08:00
+updated_at: 2026-07-05T02:47:21.000-07:00
 featured: False
 reading_time: 12 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/1960s-female-gypsy-fortune-teller-vintage-images.jpg

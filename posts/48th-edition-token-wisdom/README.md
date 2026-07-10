@@ -3,7 +3,7 @@ title: "48th Edition 🔮 W11"
 slug: 48th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa3e
 published_at: 2024-03-25T17:29:29.000-07:00
-updated_at: 2025-01-12T11:49:29.000-08:00
+updated_at: 2026-07-05T02:58:22.000-07:00
 featured: False
 reading_time: 11 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-PaaGFEpl5SrhxBcvfDQS3-GEN.png

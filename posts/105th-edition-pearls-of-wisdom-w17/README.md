@@ -3,7 +3,7 @@ title: "105th Edition 🔮 W17"
 slug: 105th-edition-pearls-of-wisdom-w17
 id: 6a4816fb7d31280001f4faa8
 published_at: 2025-04-28T14:40:00.000-07:00
-updated_at: 2025-05-05T12:35:26.000-07:00
+updated_at: 2026-07-05T02:58:09.000-07:00
 featured: False
 reading_time: 12 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/04/img-UN1r7C9TXyRzHJSNBN1jP.png

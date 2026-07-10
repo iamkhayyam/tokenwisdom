@@ -3,7 +3,7 @@ title: "45th Edition 🔮 W08"
 slug: 45th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa2f
 published_at: 2024-03-04T12:32:45.000-08:00
-updated_at: 2025-01-12T11:59:45.000-08:00
+updated_at: 2026-07-05T02:58:24.000-07:00
 featured: False
 reading_time: 11 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/03/img-4JtvS2EHNEI8E8TuyxBgL.png

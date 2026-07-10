@@ -668,7 +668,7 @@ W06 •B• Pearls of Wisdom - 146th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-146th Edition 🔮 Week 06This week: How does anything complex exist in a chaos-built universe? Blood Falls explained after a century. Fast radio bursts from monster shocks. Ancient math predates writing. AI nears human intelligence. WiFi tracks you invisibly. Order shouldn’t exist—but does.Token Wisdom ✨🌶️ iamkhayyam
+146th Edition 🔮 Token Wisdom \ Week 06This week: How does anything complex exist in a chaos-built universe? Blood Falls explained after a century. Fast radio bursts from monster shocks. Ancient math predates writing. AI nears human intelligence. WiFi tracks you invisibly. Order shouldn’t exist—but does.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

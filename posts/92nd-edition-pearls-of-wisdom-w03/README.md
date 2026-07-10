@@ -3,7 +3,7 @@ title: "92nd Edition 🔮 W04"
 slug: 92nd-edition-pearls-of-wisdom-w03
 id: 6a4816fb7d31280001f4fa8e
 published_at: 2025-01-26T01:17:48.000-08:00
-updated_at: 2025-02-16T08:32:25.000-08:00
+updated_at: 2026-07-05T02:58:18.000-07:00
 featured: False
 reading_time: 11 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/01/SYwc6IIETqWR-evyQc2s8w.jpeg

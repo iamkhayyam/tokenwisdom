@@ -214,6 +214,6 @@ W30 •B• Pearls of Wisdom - 118th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-118th Edition 🔮 W30W30 - Critical thinking in the AI age, hacked data for sale, brain cells powering computers, and a mysterious door to hidden reality? Welcome to Token Wisdom’s 118th edition—where technology’s promises meet its perils. Curiosity required, skepticism recommended!Token Wisdom ✨🌶️ iamkhayyam
+118th Edition 🔮 Pearls of Wisdom ⑊ W30W30 - Critical thinking in the AI age, hacked data for sale, brain cells powering computers, and a mysterious door to hidden reality? Welcome to Token Wisdom’s 118th edition—where technology’s promises meet its perils. Curiosity required, skepticism recommended!Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil allegedly researches cognitive tech and human-AI interaction. This totally human-written bio was crafted using only his brain, five AI assistants, and a ouija board connected to Siri. He's not AI-dependent and will fight anyone who says otherwise (once ChatGPT helps him craft the perfect comeback). His indignation is 99.9% genuine, according to GPT-4's sentiment analysis.

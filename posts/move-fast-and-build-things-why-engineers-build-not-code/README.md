@@ -192,6 +192,6 @@ W32 •B• Pearls of Wisdom - 120th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-120th Edition 🔮 Week 32W32 - Exploring the rise of techno-religion, quantum biology, and AI’s impact on global drug research. Welcome to our 120th edition—where we unravel technological advancements and their effects on society, from Silicon Valley’s spiritual evolution to the quantum frontiers of life itself.Token Wisdom ✨🌶️ iamkhayyam
+120th Edition 🔮 Token Wisdom \\ Week 32W32 - Exploring the rise of techno-religion, quantum biology, and AI’s impact on global drug research. Welcome to our 120th edition—where we unravel technological advancements and their effects on society, from Silicon Valley’s spiritual evolution to the quantum frontiers of life itself.Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil is a systems theorist and pioneer in immersive technology, spatial computing, and quantum information systems. His work spans from the technological foundations of Google Street View to Emmy Award-winning immersive experiences and UN humanitarian initiatives. When not designing the future, he's probably fixing hard problems that these experts or full-stack <fill-in-the-blanks> couldn’t solve.

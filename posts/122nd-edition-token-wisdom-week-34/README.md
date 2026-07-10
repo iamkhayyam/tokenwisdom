@@ -3,7 +3,7 @@ title: "122nd Edition 🔮 W34"
 slug: 122nd-edition-token-wisdom-week-34
 id: 6a4816fb7d31280001f4fac7
 published_at: 2025-08-24T19:21:00.000-07:00
-updated_at: 2025-09-15T00:49:40.000-07:00
+updated_at: 2026-07-05T03:08:10.000-07:00
 featured: False
 reading_time: 11 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/09/img-cwFWoNIWXtL4pkS72aYg8.jpeg

@@ -184,7 +184,7 @@ W18 •B• Pearls of Wisdom - 158th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-158th Edition 🔮 Week 18This week — wrong beliefs don’t die from evidence, they die when defending it costs more than abandoning it. From MBTI’s AI metastasis to paper mills contaminating science, we map what keeps civilizations confidently wrong and ask: it the correction mechanism broken?Token Wisdom ✨🌶️ iamkhayyam
+158th Edition 🔮 Token Wisdom \ Week 18This week — wrong beliefs don’t die from evidence, they die when defending it costs more than abandoning it. From MBTI’s AI metastasis to paper mills contaminating science, we map what keeps civilizations confidently wrong and ask: it the correction mechanism broken?Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

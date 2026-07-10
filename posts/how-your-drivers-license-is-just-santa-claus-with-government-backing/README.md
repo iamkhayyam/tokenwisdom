@@ -181,6 +181,6 @@ W34 •B• Pearls of Wisdom - 122nd Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-122nd Edition 🔮 Week 34W34 - AI disrupts industries while swarm intelligence reveals nature’s genius. Explore how artificial intelligence transforms business, collective behavior solves complex problems, and semiconductors revolutionize tech. From corporate boardrooms to nature’s blueprint for machine learning.Token Wisdom ✨🌶️ iamkhayyam
+122nd Edition 🔮 Token Wisdom \\ Week 34W34 - AI disrupts industries while swarm intelligence reveals nature’s genius. Explore how artificial intelligence transforms business, collective behavior solves complex problems, and semiconductors revolutionize tech. From corporate boardrooms to nature’s blueprint for machine learning.Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil studies how institutions consume more energy than they create. His work on "thermodynamic debt" explores civilization-scale extraction patterns and post-scarcity alternatives. When not mapping institutional absurdities at sparsely-attended conferences, he's designing systems that don't require permission slips to function—and still can't believe we need plastic cards to prove we exist.

@@ -224,7 +224,7 @@ W17 •B• Pearls of Wisdom - 157th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-157th Edition 🔮 Week 17This week: 26 million horses didn’t fail, their function was reassigned. From AI-managed stores without taste to ASML’s physical bottleneck to Palantir inheriting the farm, we map what survives when three-state inheritance compresses into two. The record is the only thing that survives.Token Wisdom ✨🌶️ iamkhayyam
+157th Edition 🔮 Token Wisdom \ Week 17This week: 26 million horses didn’t fail, their function was reassigned. From AI-managed stores without taste to ASML’s physical bottleneck to Palantir inheriting the farm, we map what survives when three-state inheritance compresses into two. The record is the only thing that survives.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

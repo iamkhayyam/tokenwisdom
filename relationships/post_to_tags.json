@@ -1,22 +1,10 @@
 {
   "del-icio-us-was-right-we-built-claudacious": [
     {
-      "id": "6a4824047d31280001f50893",
-      "name": "Build Log",
-      "slug": "build-log",
-      "visibility": "public"
-    },
-    {
-      "id": "6a4816f97d31280001f4f9cf",
-      "name": "👁️ A Closer Look",
-      "slug": "a-closer-look",
-      "visibility": "public"
-    },
-    {
-      "id": "6a4824047d31280001f50894",
-      "name": "Claudacious",
-      "slug": "claudacious",
-      "visibility": "public"
+      "id": "6a4816f97d31280001f4f9d3",
+      "name": "#unlisted",
+      "slug": "hash-unlisted",
+      "visibility": "internal"
     }
   ],
   "data-is-not-the-new-oil": [
@@ -776,6 +764,12 @@
       "id": "6a4816f97d31280001f4f9b7",
       "name": "🚨 OP-ED",
       "slug": "opinionated-editorials",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9cf",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
       "visibility": "public"
     },
     {

@@ -208,7 +208,7 @@ W42 •B• Pearls of Wisdom - 130th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-130th Edition 🔮 Week 42Quantum computing breakthroughs, agricultural innovation, and cybersecurity threats headline this week’s Token Wisdom. Follow how analog circuits resurface, farming scales to new heights, and infrastructure vulnerabilities emerge—all amid AI governance battles and technological convergence.Token Wisdom ✨🌶️ iamkhayyam
+130th Edition 🔮 Token Wisdom \\ Week 42Quantum computing breakthroughs, agricultural innovation, and cybersecurity threats headline this week’s Token Wisdom. Follow how analog circuits resurface, farming scales to new heights, and infrastructure vulnerabilities emerge—all amid AI governance battles and technological convergence.Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil is a systems theorist specializing in technological transformation. His work created foundations for the creators of Google Street View and 360° live-streaming. He has zero dollars invested in AI infrastructure and owns gold, silver, and treasury bonds, making him both the most boring person at Silicon Valley parties and the one who'll probably be right about all this.
 

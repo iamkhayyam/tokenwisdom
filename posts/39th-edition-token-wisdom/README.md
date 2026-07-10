@@ -3,7 +3,7 @@ title: "39th Edition 🔮 W02"
 slug: 39th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa10
 published_at: 2024-01-21T16:52:00.000-08:00
-updated_at: 2025-01-12T12:02:59.000-08:00
+updated_at: 2026-07-05T02:58:28.000-07:00
 featured: False
 reading_time: 13 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-nROWW57a9NW4SyFTnWb19.jpeg

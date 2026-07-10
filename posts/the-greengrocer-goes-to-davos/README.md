@@ -574,7 +574,7 @@ W03 •B• Pearls of Wisdom - 143rd Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-143rd Edition 🔮 Week 03This week: Corporate power reshapes society while AI disrupts traditional industries. From ranchers turning to carbon credits to tech giants consolidating control, we explore how surveillance capitalism and algorithmic efficiency are rewriting the rules of business, law, and human autonomy.Token Wisdom ✨🌶️ iamkhayyam
+143rd Edition 🔮 Token Wisdom \ Week 03This week: Corporate power reshapes society while AI disrupts traditional industries. From ranchers turning to carbon credits to tech giants consolidating control, we explore how surveillance capitalism and algorithmic efficiency are rewriting the rules of business, law, and human autonomy.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

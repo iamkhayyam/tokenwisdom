@@ -3,7 +3,7 @@ title: "44th Edition 🔮 W07"
 slug: 44th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa26
 published_at: 2024-02-26T06:49:33.000-08:00
-updated_at: 2025-01-12T12:00:01.000-08:00
+updated_at: 2026-07-05T02:58:25.000-07:00
 featured: False
 reading_time: 11 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/02/img-XuLOguJ7ENpopOgbrRnFX.png

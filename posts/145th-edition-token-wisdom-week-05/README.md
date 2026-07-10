@@ -3,7 +3,7 @@ title: "145th Edition 🔮 Week 05"
 slug: 145th-edition-token-wisdom-week-05
 id: 6a4816fb7d31280001f4fafe
 published_at: 2026-02-02T10:40:50.000-08:00
-updated_at: 2026-02-02T10:40:50.000-08:00
+updated_at: 2026-07-05T02:47:20.000-07:00
 featured: False
 reading_time: 12 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/Lucid_Origin_A_mystic_Fortune_Teller_with_an_exotic_appearance_3.jpg

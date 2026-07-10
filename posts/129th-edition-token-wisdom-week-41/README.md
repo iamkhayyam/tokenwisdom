@@ -3,7 +3,7 @@ title: "129th Edition 🔮 Week 41"
 slug: 129th-edition-token-wisdom-week-41
 id: 6a4816fb7d31280001f4fad9
 published_at: 2025-10-12T09:57:41.000-07:00
-updated_at: 2025-10-12T13:17:46.000-07:00
+updated_at: 2026-07-05T03:16:41.000-07:00
 featured: False
 reading_time: 12 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/10/we-need-a-closeup-on-a-crystal-ball-of-a_RAlnGpZMRmepLooOPkYGmQ_7aTjumC2RNy3kVxz34A6Mg.jpeg

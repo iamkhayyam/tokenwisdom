@@ -3,7 +3,7 @@ title: "50th Edition 🔮 W13"
 slug: 50th-edition-token-wisdom
 id: 6a4816fb7d31280001f4fa47
 published_at: 2024-04-09T10:23:53.000-07:00
-updated_at: 2025-01-12T11:48:49.000-08:00
+updated_at: 2026-07-05T02:58:21.000-07:00
 featured: False
 reading_time: 9 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/04/img-uU0NM1A3HLjAqMK3M6ed5.jpeg

@@ -165,6 +165,6 @@ W29 •B• Pearls of Wisdom - 117th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-117th Edition 🔮 W29W29: From vibrating wind turbines to quantum breakthroughs, welcome to Token Wisdom #117. Join us for a wild ride through tech frontiers where innovation meets whimsy. Warning: May cause spontaneous enlightenment and uncontrollable “aha” moments! 🔮✨Token Wisdom ✨🌶️ iamkhayyam
+117th Edition 🔮 Pearls of Wisdom ⑊ W29W29: From vibrating wind turbines to quantum breakthroughs, welcome to Token Wisdom #117. Join us for a wild ride through tech frontiers where innovation meets whimsy. Warning: May cause spontaneous enlightenment and uncontrollable “aha” moments! 🔮✨Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil is a technological archaeologist and systems theorist exploring the social afterlives of abandoned infrastructure. Through his field research in post-corporate communities, he documents how yesterday's proprietary technologies are being reimagined as tomorrow's commons. When he's not saving lives, he's showing others how to jailbreak the future from technology's past.

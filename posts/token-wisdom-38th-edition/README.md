@@ -3,7 +3,7 @@ title: "38th Edition 🔮 W01"
 slug: token-wisdom-38th-edition
 id: 6a4816fb7d31280001f4f9e4
 published_at: 2024-01-15T14:07:00.000-08:00
-updated_at: 2025-01-12T12:00:12.000-08:00
+updated_at: 2026-07-05T02:58:29.000-07:00
 featured: False
 reading_time: 8 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2024/01/img-f8Q9Da1THTT0CWUsZ67Yu.jpeg

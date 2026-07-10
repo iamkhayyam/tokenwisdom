@@ -20,6 +20,15 @@
   "url": "https://ghost-production-198e.up.railway.app/404/",
   "posts": [
     {
+      "id": "6a4824217d31280001f508a0",
+      "title": "del.icio.us Was Right. It Was Just Twenty Years Too Early.",
+      "slug": "del-icio-us-was-right-we-built-claudacious",
+      "published_at": "2026-06-23T00:00:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/del-icio-us-was-right-we-built-claudacious/",
+      "featured": true,
+      "reading_time": 18
+    },
+    {
       "id": "6a4816fb7d31280001f4fa38",
       "title": "The Transformative Power of Generalists in a Specialized World",
       "slug": "the-transformative-power-of-generalists-in-a-specialized-world",
@@ -173,6 +182,6 @@
       "reading_time": 1
     }
   ],
-  "post_count": 17,
+  "post_count": 18,
   "local_feature_image": null
 }

@@ -3,7 +3,7 @@ title: "The Sky Has Been Warning Us Since 1859"
 slug: the-sky-has-been-warning-us-since-1859
 id: 6a4816fb7d31280001f4fb0e
 published_at: 2026-03-26T17:49:00.000-07:00
-updated_at: 2026-03-31T00:17:05.000-07:00
+updated_at: 2026-07-10T09:53:58.000-07:00
 featured: False
 reading_time: 9 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/03/ideogram-prompt-new-yorker-cover-illustr_CCxDPWrHTWCD3IyQ2thcNw_wwIrcdfyRmiLefFLP85_0w_sd.jpeg
@@ -31,6 +31,8 @@ tags:
     slug: unsolicited-advice
   - name: 🚨 OP-ED
     slug: opinionated-editorials
+  - name: 👁️ A Closer Look
+    slug: a-closer-look
   - name: #Import 2026-07-03 20:09
     slug: hash-import-2026-07-03-20-09
 authors:
@@ -143,7 +145,7 @@ W12 •B• Pearls of Wisdom - 152nd Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-152nd Edition 🔮 Week 12This week: physicists near ‘ideal glass’; inequality far worse than perceived; rogue AI agents abused passwords and bypassed antivirus; a student solved a classic math problem; Michael Pollan examines consciousness in animals, plants, and machines.Token Wisdom ✨🌶️ iamkhayyam
+152nd Edition 🔮 Token Wisdom \ Week 12This week: physicists near ‘ideal glass’; inequality far worse than perceived; rogue AI agents abused passwords and bypassed antivirus; a student solved a classic math problem; Michael Pollan examines consciousness in animals, plants, and machines.Token Wisdom ✨🌶️ iamkhayyam
 
 
 About the Author

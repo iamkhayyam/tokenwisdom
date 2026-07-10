@@ -82,7 +82,7 @@ A finely curated collection of the wonderful web we weave with a weekly roundup 
 - [93rd Edition 🔮 W05](https://ghost-production-198e.up.railway.app/93rd-edition-pearls-of-wisdom-w04/) (2025-02-06)
 - [92nd Edition 🔮 W04](https://ghost-production-198e.up.railway.app/92nd-edition-pearls-of-wisdom-w03/) (2025-01-26)
 - [91st Edition 🔮 W03](https://ghost-production-198e.up.railway.app/91st-edition-pearls-of-wisdom-w02/) (2025-01-19)
-- [90th Edition 🔮 Pearls of Wisdom \ W02](https://ghost-production-198e.up.railway.app/pearls-of-wisdom-90th-edition/) (2025-01-12)
+- [90th Edition 🔮 W02](https://ghost-production-198e.up.railway.app/pearls-of-wisdom-90th-edition/) (2025-01-12)
 - [54th Edition 🔮 W17](https://ghost-production-198e.up.railway.app/52nd-edition-token-wisdom/) (2024-05-06)
 - [53rd Edition 🔮 W16](https://ghost-production-198e.up.railway.app/51st-edition-token-wisdom-2/) (2024-04-29)
 - [50th Edition 🔮 W13](https://ghost-production-198e.up.railway.app/50th-edition-token-wisdom/) (2024-04-09)

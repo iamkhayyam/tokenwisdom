@@ -227,7 +227,7 @@ W13 •B• Pearls of Wisdom - 153rd Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-153rd Edition 🔮 Week 13This week — a proposed fermion hints at a fifth dimension; AI flags a formal logic flaw in a physics paper; FCC mandates fiber, retiring copper; graphene photonics reframes compute; 5 AI CEOs now govern decisions affecting 8B people.Token Wisdom ✨🌶️ iamkhayyam
+153rd Edition 🔮 Token Wisdom \ Week 13This week — a proposed fermion hints at a fifth dimension; AI flags a formal logic flaw in a physics paper; FCC mandates fiber, retiring copper; graphene photonics reframes compute; 5 AI CEOs now govern decisions affecting 8B people.Token Wisdom ✨🌶️ iamkhayyam
 
 The Constitutional Sieve Programme — nine papers, nine essays, one mechanism — is available at the ARC Institute of Knowware. The principal open step is the extension of θ_W = 5/8 from cascade moduli to a family broad enough for GPY input. The formula predicts θ₅ = 27/32. Whether that prediction holds is a question for the mathematics, not for this essay.
 

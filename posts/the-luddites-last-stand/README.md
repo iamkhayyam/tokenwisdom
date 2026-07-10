@@ -180,6 +180,6 @@ W36 •B• Pearls of Wisdom - 124th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-124th Edition 🔮 Week 36From groundbreaking space discoveries to quantum computing breakthroughs, this week’s Token Wisdom explores the frontiers of science and technology. Join us as we delve into the worlds of AI, education, and cutting-edge research that are shaping our future.Token Wisdom ✨🌶️ iamkhayyam
+124th Edition 🔮 Token Wisdom \\ Week 36From groundbreaking space discoveries to quantum computing breakthroughs, this week’s Token Wisdom explores the frontiers of science and technology. Join us as we delve into the worlds of AI, education, and cutting-edge research that are shaping our future.Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil is a cybernetician studying how artificial intelligence reshapes human agency. His upcoming book "Knowware: Systems of Intelligence" explores the cognitive sovereignty we're trading for convenience. He's currently negotiating a détente between his smart devices—negotiations that may determine who's really in charge.

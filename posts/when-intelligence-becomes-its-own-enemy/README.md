@@ -183,6 +183,6 @@ W24 •B• Pearls of Wisdom - 112th Edition 🔮 Weekly Curated List - Notebook
 
 Sign up now to read the post and get access to the full library of posts for subscribers only.
 
-112th Edition 🔮 W24W24 - Glacier-triggered megatsunamis, time’s mathematical secrets, and a $649 million Bitcoin treasure hunt? Welcome to Token Wisdom’s 112th edition, where we navigate the digital frontier with a wink. Buckle up for a journey through tech’s wonderland – sanity optional, humor guaranteed!Token Wisdom ✨🌶️ iamkhayyam
+112th Edition 🔮 Pearls of Wisdom ⑊ W24W24 - Glacier-triggered megatsunamis, time’s mathematical secrets, and a $649 million Bitcoin treasure hunt? Welcome to Token Wisdom’s 112th edition, where we navigate the digital frontier with a wink. Buckle up for a journey through tech’s wonderland – sanity optional, humor guaranteed!Token Wisdom ✨🌶️ iamkhayyam
 
 Khayyam Wakil studies how information systems shape human cognition and collective intelligence. His work examines the structural forces that influence thinking at scale, from attention economics to the architecture of decision-making in technological societies. Through his writing and research, he explores paths toward building systems that enhance rather than undermine human intellectual capacity.

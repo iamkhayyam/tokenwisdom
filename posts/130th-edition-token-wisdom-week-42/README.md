@@ -3,7 +3,7 @@ title: "130th Edition 🔮 Week 42"
 slug: 130th-edition-token-wisdom-week-42
 id: 6a4816fb7d31280001f4fadb
 published_at: 2025-10-20T11:29:22.000-07:00
-updated_at: 2025-10-20T11:29:22.000-07:00
+updated_at: 2026-07-05T03:16:41.000-07:00
 featured: False
 reading_time: 12 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2025/10/img-FpTsz1I3m0Jf0gqnF95pf.jpeg
