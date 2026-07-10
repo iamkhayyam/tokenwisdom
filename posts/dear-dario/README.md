@@ -3,7 +3,7 @@ title: "Dear Dario,"
 slug: dear-dario
 id: 6a4816fb7d31280001f4fafc
 published_at: 2026-01-27T22:36:11.000-08:00
-updated_at: 2026-02-02T13:45:01.000-08:00
+updated_at: 2026-07-10T10:19:38.000-07:00
 featured: True
 reading_time: 18 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/01/a-sleek-sophisticated-spy-magazine-cover_qdIsO6siRgiEeTUXmOcnaA_NWkp3nkzSUeW0lHEejWBRg_sd.png
@@ -30,6 +30,8 @@ tags:
     slug: philosophy
   - name: ANI \ AGI \ ASI
     slug: agi
+  - name: 👁️ A Closer Look
+    slug: a-closer-look
   - name: #Import 2026-07-03 20:09
     slug: hash-import-2026-07-03-20-09
 authors:

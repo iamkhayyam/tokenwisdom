@@ -74,6 +74,15 @@
       "reading_time": 14
     },
     {
+      "id": "6a4816fb7d31280001f4fb14",
+      "title": "Who's Mind Is It Anyway?",
+      "slug": "whos-mind-is-it-anyway",
+      "published_at": "2026-04-16T22:03:00.000-07:00",
+      "url": "https://ghost-production-198e.up.railway.app/whos-mind-is-it-anyway/",
+      "featured": false,
+      "reading_time": 14
+    },
+    {
       "id": "6a4816fb7d31280001f4fb12",
       "title": "We Trained It on Human Weaponry",
       "slug": "we-trained-it-on-human-weaponry",
@@ -137,6 +146,15 @@
       "reading_time": 12
     },
     {
+      "id": "6a4816fb7d31280001f4fb05",
+      "title": "Dear Sam,",
+      "slug": "dear-sam",
+      "published_at": "2026-02-24T22:32:30.000-08:00",
+      "url": "https://ghost-production-198e.up.railway.app/dear-sam/",
+      "featured": true,
+      "reading_time": 25
+    },
+    {
       "id": "6a4816fb7d31280001f4fb03",
       "title": "The Persistence of Inferior Standards",
       "slug": "the-persistence-of-inferior-standards",
@@ -155,6 +173,15 @@
       "reading_time": 19
     },
     {
+      "id": "6a4816fb7d31280001f4faff",
+      "title": "How Does Order Emerge in a Universe Built for Chaos?",
+      "slug": "how-does-order-emerge-in-a-universe-built-for-chaos",
+      "published_at": "2026-02-05T23:02:00.000-08:00",
+      "url": "https://ghost-production-198e.up.railway.app/how-does-order-emerge-in-a-universe-built-for-chaos/",
+      "featured": false,
+      "reading_time": 9
+    },
+    {
       "id": "6a4816fb7d31280001f4fafd",
       "title": "The Zombie Singularity of Intelligence Without Understanding",
       "slug": "the-zombie-singularity-of-intelligence-without-understanding",
@@ -162,6 +189,15 @@
       "url": "https://ghost-production-198e.up.railway.app/the-zombie-singularity-of-intelligence-without-understanding/",
       "featured": false,
       "reading_time": 19
+    },
+    {
+      "id": "6a4816fb7d31280001f4fafc",
+      "title": "Dear Dario,",
+      "slug": "dear-dario",
+      "published_at": "2026-01-27T22:36:11.000-08:00",
+      "url": "https://ghost-production-198e.up.railway.app/dear-dario/",
+      "featured": true,
+      "reading_time": 18
     },
     {
       "id": "6a4816fb7d31280001f4fafa",
@@ -1145,6 +1181,6 @@
       "reading_time": 6
     }
   ],
-  "post_count": 125,
+  "post_count": 129,
   "local_feature_image": "a-closer-look_feature__aCloserLook-1.gif"
 }

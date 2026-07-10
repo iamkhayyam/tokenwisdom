@@ -3,7 +3,7 @@ title: "Dear Sam,"
 slug: dear-sam
 id: 6a4816fb7d31280001f4fb05
 published_at: 2026-02-24T22:32:30.000-08:00
-updated_at: 2026-02-24T22:46:10.000-08:00
+updated_at: 2026-07-10T10:19:38.000-07:00
 featured: True
 reading_time: 25 min
 feature_image: https://ghost-production-198e.up.railway.app/content/images/2026/02/a-satirical-magazine-cover-illustration-_1gsp2Ya_QWSsWbovUFp0kQ_s7IXiWg6SAm-2OeMv1KvMA_cover_sd.jpeg
@@ -30,6 +30,8 @@ tags:
     slug: philosophy
   - name: ANI \ AGI \ ASI
     slug: agi
+  - name: 👁️ A Closer Look
+    slug: a-closer-look
   - name: #Import 2026-07-03 20:09
     slug: hash-import-2026-07-03-20-09
 authors:

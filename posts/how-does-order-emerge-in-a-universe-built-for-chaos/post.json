@@ -9,7 +9,7 @@
   "featured": false,
   "visibility": "public",
   "created_at": "2026-02-07T19:04:57.000-08:00",
-  "updated_at": "2026-03-05T20:36:44.000-08:00",
+  "updated_at": "2026-07-10T10:19:39.000-07:00",
   "published_at": "2026-02-05T23:02:00.000-08:00",
   "custom_excerpt": "W06 - The universe writes in entropy, but you're an improbable paragraph. Physics can explain why everything falls apart but not why complex things like you exist in the first place. The universe's greatest paradox awaits.\n",
   "canonical_url": null,
@@ -226,6 +226,27 @@
       "url": "https://ghost-production-198e.up.railway.app/tag/flow/"
     },
     {
+      "id": "6a4816f97d31280001f4f9cf",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
+      "description": "A weekly essay from a bucket of topics consisting of all things blockchain, artificial intelligence, extended reality, quantum computing, renewable energy, and regenerative practices.",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/aCloserLook-1.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/a-closer-look/"
+    },
+    {
       "id": "6a4816f97d31280001f4f9dc",
       "name": "#Import 2026-07-03 20:09",
       "slug": "hash-import-2026-07-03-20-09",
@@ -341,6 +362,12 @@
       "id": "6a4816f97d31280001f4f99e",
       "name": "In Flow State",
       "slug": "flow",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9cf",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
       "visibility": "public"
     },
     {

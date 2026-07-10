@@ -9,7 +9,7 @@
   "featured": true,
   "visibility": "public",
   "created_at": "2026-01-27T20:18:24.000-08:00",
-  "updated_at": "2026-02-02T13:45:01.000-08:00",
+  "updated_at": "2026-07-10T10:19:38.000-07:00",
   "published_at": "2026-01-27T22:36:11.000-08:00",
   "custom_excerpt": "You preached AI ethics from your personal blog while selling Anthropic's independence to Amazon. Now your 'Constitutional AI' sits on Bezos's property, paying rent.\"",
   "canonical_url": null,
@@ -226,6 +226,27 @@
       "url": "https://ghost-production-198e.up.railway.app/tag/agi/"
     },
     {
+      "id": "6a4816f97d31280001f4f9cf",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
+      "description": "A weekly essay from a bucket of topics consisting of all things blockchain, artificial intelligence, extended reality, quantum computing, renewable energy, and regenerative practices.",
+      "feature_image": "https://ghost-production-198e.up.railway.app/content/images/2024/02/aCloserLook-1.gif",
+      "visibility": "public",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/tag/a-closer-look/"
+    },
+    {
       "id": "6a4816f97d31280001f4f9dc",
       "name": "#Import 2026-07-03 20:09",
       "slug": "hash-import-2026-07-03-20-09",
@@ -341,6 +362,12 @@
       "id": "6a4816f97d31280001f4f998",
       "name": "ANI \\ AGI \\ ASI",
       "slug": "agi",
+      "visibility": "public"
+    },
+    {
+      "id": "6a4816f97d31280001f4f9cf",
+      "name": "👁️ A Closer Look",
+      "slug": "a-closer-look",
       "visibility": "public"
     },
     {
