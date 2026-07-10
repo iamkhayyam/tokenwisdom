@@ -44,7 +44,10 @@ POSTS_FILE = BACKUP_DIR / "data" / "all_posts.json"
 LEXICON_FILE = BACKUP_DIR / "data" / "lexicon.json"
 OUT_FILE = BACKUP_DIR / "data" / "margin_notes.json"
 
-MAX_NOTES_PER_POST = 4
+MAX_NOTES_DEFAULT   = 4
+MAX_NOTES_LONG_READ = 6
+LONG_READ_MINUTES   = 12
+WORDS_PER_MINUTE    = 220
 
 # Posts that ship hand-authored notes; skip auto-enrichment for them.
 SKIP_SLUGS = {
@@ -115,9 +118,14 @@ def _acronym_note(acronym: str, expansion: str) -> str:
     )
 
 
+_QUOTE_CHARS = '"“”„‟‘’‚‛«»\''
+
+
 def _quote_note(text: str) -> str:
-    # Trim quote to a single sentence-worth for the gutter
-    trimmed = text.strip().rstrip(".").strip()
+    # Trim quote to a single sentence-worth for the gutter. Strip any
+    # existing leading/trailing quote glyphs from the source so we don't
+    # end up with double-quoted text once we add our own &ldquo;/&rdquo;.
+    trimmed = text.strip().strip(_QUOTE_CHARS).strip().rstrip(".").strip(_QUOTE_CHARS).strip()
     if len(trimmed) > 180:
         trimmed = trimmed[:177].rsplit(" ", 1)[0] + "…"
     return f'<span class="tw-note tw-note--quote">&ldquo;{html_stdlib.escape(trimmed)}&rdquo;</span>'
@@ -276,10 +284,21 @@ def is_essay(post: dict) -> bool:
     return not (slugs & NEWSLETTER_TAG_SLUGS)
 
 
+def _word_count(html_body: str) -> int:
+    return len(strip_tags(html_body).split())
+
+
+def _max_notes_for(html_body: str) -> int:
+    """Long reads (>12 min at 220 wpm) get 6 notes; others get 4."""
+    minutes = _word_count(html_body) / WORDS_PER_MINUTE
+    return MAX_NOTES_LONG_READ if minutes > LONG_READ_MINUTES else MAX_NOTES_DEFAULT
+
+
 def enrich_post(post: dict, term_index: list[dict], acronym_map: dict[str, str]) -> list[dict]:
     """Produce a de-duplicated, capped list of note dicts for one essay."""
     slug = post.get("slug", "")
     html_body = post.get("html") or ""
+    max_notes = _max_notes_for(html_body)
 
     # Quote notes are anchored to the paragraph immediately before the
     # blockquote in the original HTML. Simpler: attach to the first
@@ -326,7 +345,7 @@ def enrich_post(post: dict, term_index: list[dict], acronym_map: dict[str, str])
             "anchor": note["_anchor_prefix"],
             "note_html": note["note_html"],
         })
-        if len(kept) >= MAX_NOTES_PER_POST:
+        if len(kept) >= max_notes:
             break
     return kept
 
