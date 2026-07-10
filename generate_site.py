@@ -20,6 +20,7 @@ from datetime import datetime
 from collections import defaultdict, Counter
 
 from essay_template import (sanitize_body, mark_lede, demo_margin_notes,
+                            apply_margin_notes,
                             READING_APPARATUS_CSS, INDEX_MARKUP, INDEX_SCRIPT,
                             COLOPHON_CSS, render_colophon)
 
@@ -58,6 +59,14 @@ def is_hidden(post):
 # Image localization — rewrite tokenwisdom.ghost.io URLs to local paths
 # ---------------------------------------------------------------------------
 _IMAGE_MAP = None
+
+# Auto-generated margin notes, per-slug. Produced by enrich_margins.py and
+# read here at build time; missing file → essays render without gutter
+# notes (they were optional to begin with).
+try:
+    _MARGIN_NOTES = json.loads((BACKUP_DIR / "data" / "margin_notes.json").read_text())
+except (FileNotFoundError, json.JSONDecodeError):
+    _MARGIN_NOTES = {}
 # Ghost re-serves every image URL under whichever host is CURRENTLY configured
 # as its site url, regardless of which host was live when a post was
 # originally imported — so this must match the live GHOST_URL, not just the
@@ -2928,7 +2937,12 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
     content = replace_typeform(post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>")
     content = sanitize_body(content)              # repair Ghost embeds
     if post.get("slug") == "the-sky-has-been-warning-us-since-1859":
-        content = demo_margin_notes(content)      # showcase the margin apparatus
+        content = demo_margin_notes(content)      # hand-authored demo
+    else:
+        # Auto-enriched margin notes from data/margin_notes.json
+        notes_for_post = _MARGIN_NOTES.get(post.get("slug", ""), [])
+        if notes_for_post:
+            content = apply_margin_notes(content, notes_for_post)
     content = mark_lede(content)                  # drop cap on the opening paragraph
 
     # Footer — back to the edition that featured this essay

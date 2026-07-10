@@ -469,6 +469,40 @@ def demo_margin_notes(html_str):
     return html_str
 
 
+def apply_margin_notes(html_str, notes):
+    """Inject auto-generated margin notes into an essay's HTML body.
+
+    Each note in `notes` is a dict:
+        {"kind": ..., "trigger": ..., "anchor": "first few words", "note_html": "<span ...>"}
+
+    We locate the first <p> whose text starts with `anchor` and prepend
+    `note_html` right after the <p> tag. Skips silently on no match — the
+    anchor may have been edited since the enrichment JSON was generated.
+    """
+    if not notes:
+        return html_str
+    for note in notes:
+        anchor = (note.get("anchor") or "").strip()
+        note_html = note.get("note_html") or ""
+        if not anchor or not note_html:
+            continue
+        # Match: <p ...>, optional whitespace, then the anchor's first word.
+        # Using just the first word of the anchor avoids inner-tag punctuation
+        # mismatches (e.g. anchor "You're" vs HTML "You&rsquo;re").
+        first_word = anchor.split()[0] if anchor else ""
+        if len(first_word) < 3:
+            continue
+        pat = re.compile(
+            r'(<p\b[^>]*>)(\s*' + re.escape(first_word) + r')',
+            re.IGNORECASE,
+        )
+        html_str = pat.sub(
+            lambda m, n=note_html: m.group(1) + n + m.group(2),
+            html_str, count=1,
+        )
+    return html_str
+
+
 # ============================================================
 # SITE COLOPHON — the dark "of-record" footer
 # A three-tier sandwich: (1) pitch + slim subscribe, (2) pill links + popular
