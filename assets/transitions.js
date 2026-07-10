@@ -207,7 +207,7 @@
       return;
     }
     var pct = window.scrollY / scrollable;
-    if (pct >= 0.75) {
+    if (pct >= 0.67) {
       peek.classList.add('tw-shown');
       body.classList.add('tw-peek-shown');
     } else {
