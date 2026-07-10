@@ -150,6 +150,72 @@ def next_post_body_attrs(next_post, prefix="../"):
     return f' data-next-href="{href}" data-next-title="{title}" data-next-image="{image}"'
 
 
+def pick_recommendations(cur_post, all_posts, kind='essay', limit=4):
+    """Return N recommended posts of the given kind for the current post.
+
+    Sort key: (shared-tag count desc, published_at desc). Excludes hidden
+    posts and the current one. Used at the tail of the most recent post
+    (where there's no chronological 'next') in place of prev/next nav.
+    """
+    cur_slug = cur_post.get('slug')
+    cur_tag_set = {t.get('slug') for t in (cur_post.get('tags') or []) if t.get('slug')}
+    want_newsletter = (kind == 'newsletter')
+
+    candidates = []
+    for p in all_posts:
+        if not p.get('published_at'): continue
+        if p.get('slug') == cur_slug: continue
+        if is_hidden(p): continue
+        if is_newsletter(p) != want_newsletter: continue
+        p_tags = {t.get('slug') for t in (p.get('tags') or []) if t.get('slug')}
+        shared = len(cur_tag_set & p_tags)
+        candidates.append((shared, p.get('published_at', ''), p))
+
+    candidates.sort(key=lambda t: (t[0], t[1]), reverse=True)
+    return [t[2] for t in candidates[:limit]]
+
+
+def render_recommendations(cur_post, all_posts, kind='essay'):
+    """Bottom-of-post carousel for posts with no chronological successor.
+
+    Renders a horizontal strip of up to 4 recommendation cards, each
+    showing feature image, primary tag, and title, linking to the post.
+    Returns empty string if no candidates exist.
+    """
+    recs = pick_recommendations(cur_post, all_posts, kind, limit=4)
+    if not recs:
+        return ''
+
+    cards = []
+    for r in recs:
+        img = r.get('feature_image', '') or ''
+        title = esc(clean_title(r) or r.get('title', ''))
+        slug = r.get('slug', '')
+        primary_tag = ''
+        for t in (r.get('tags') or []):
+            if t.get('slug') in SECTION_TAGS: continue
+            if (t.get('name', '') or '').startswith('#'): continue
+            primary_tag = t.get('name', '')
+            break
+        eyebrow = f'<div class="rec-eyebrow">{esc(primary_tag)}</div>' if primary_tag else ''
+        thumb = f'<img src="{esc(img)}" alt="" loading="lazy">' if img else ''
+        cards.append(f'''<a class="rec-card" href="{slug}.html">
+      <div class="rec-thumb">{thumb}</div>
+      <div class="rec-meta">{eyebrow}<div class="rec-title">{title}</div></div>
+    </a>''')
+
+    return f'''
+<section class="rec-carousel essay-col" aria-label="Read next">
+  <header class="rec-header">
+    <span class="rec-kicker">Read Next</span>
+    <span class="rec-note">More like this</span>
+  </header>
+  <div class="rec-strip">
+    {''.join(cards)}
+  </div>
+</section>'''
+
+
 def community_assets(prefix="../"):
     """Stylesheet + config + annotate client. Injected on post pages only."""
     return f"""<link rel="stylesheet" href="{prefix}assets/annotate.css">
@@ -584,7 +650,7 @@ html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 :where(.site-top-inner, .essay-eyebrow, .essay-byline,
   .nl-masthead-eyebrow, .nl-masthead-subtitle, .home-masthead-eyebrow,
   .home-masthead-sub, .section-label, .section-note, .hero-eyebrow,
-  .hero-meta, .hero-cta, .essay-row-eyebrow, .post-nav, .colophon h4,
+  .hero-meta, .hero-cta, .essay-row-eyebrow, .rec-kicker, .rec-note, .colophon h4,
   .colophon-bottom, .post-tag, .tag-cloud a, .stat .label,
   .sidebar-block h4, .sidebar-item .edition, .archive-item .when,
   .archive-item .tag, .prose h4, .prose figcaption, .prose th,
@@ -1151,54 +1217,102 @@ img { max-width: 100%; height: auto; }
   border-color: var(--accent-muted);
 }
 
-/* ---------- POST NAV (prev / next) ---------- */
-/* Default: a standalone centered column (used on newsletters, which don't
-   have the essay's wide sidenote-gutter frame). */
-.post-nav {
-  max-width: var(--max-read);
-  margin: 2.5rem auto 0;
-  padding: 1.4rem 1.5rem 2.5rem;
-  border-top: 2px solid var(--ink);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-}
-/* Essays sit inside the wide asymmetric frame (text held left, gutter on the
-   right) — pin to that same left edge instead of self-centering, or it drifts
-   out of alignment with the essay column above it. */
-.essay-frame > .post-nav,
-.essay-frame > #tw-responses {
+/* ---------- RECOMMENDATIONS CAROUSEL ---------- */
+/* Bottom-of-post "Read Next" carousel, shown only on the most recent post
+   in each track (essay/newsletter) — replaces the removed prev/next nav
+   when there's no chronological successor for the bottom peek to point to. */
+.essay-frame > #tw-responses,
+.essay-frame > .rec-carousel {
   max-width: 720px;
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
 }
-.post-nav .pn-prev, .post-nav .pn-next {
-  display: block;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--paper-rule);
-  border-radius: 4px;
-  background: var(--paper-warm);
+.rec-carousel {
+  max-width: var(--max-wide);
+  margin: 2.6rem auto 3rem;
+  padding: 0 1.5rem;
+}
+.rec-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  border-top: 2px solid var(--ink);
+  padding-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.rec-kicker {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
   color: var(--ink);
-  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.post-nav .pn-prev:hover, .post-nav .pn-next:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px -18px rgba(26, 24, 20, .4);
+.rec-note {
+  font-family: var(--mono);
+  font-size: .62rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
 }
-.post-nav .pn-label {
-  display: block; margin-bottom: 6px; color: var(--ink-faint);
-  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+.rec-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
 }
-.post-nav .pn-title {
-  display: block; color: var(--ink);
-  font-family: var(--display); font-size: 1.05rem; font-weight: 700;
-  letter-spacing: -.01em; line-height: 1.3; transition: color .2s ease;
+@media (max-width: 900px) {
+  .rec-strip {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1.5rem;
+    padding-bottom: .5rem;
+  }
+  .rec-card { scroll-snap-align: start; }
 }
-.post-nav .pn-prev:hover .pn-title, .post-nav .pn-next:hover .pn-title { color: var(--accent); }
-.post-nav .pn-next { text-align: right; }
+.rec-card {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .25s ease;
+}
+.rec-card:hover { transform: translateY(-3px); }
+.rec-thumb {
+  aspect-ratio: 3 / 2;
+  background: var(--paper-warm);
+  border: 1px solid var(--paper-rule);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: .7rem;
+}
+.rec-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter .25s ease;
+}
+.rec-card:hover .rec-thumb img { filter: brightness(1.05); }
+.rec-eyebrow {
+  font-family: var(--mono);
+  font-size: .6rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .35rem;
+}
+.rec-title {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  transition: color .2s ease;
+}
+.rec-card:hover .rec-title { color: var(--accent); }
 
 /* ---------- COLOPHON FOOTER ---------- */
 .colophon {
@@ -2189,8 +2303,6 @@ img { max-width: 100%; height: auto; }
   .colophon-bottom { flex-direction: column; }
   .colophon-sign-off { text-align: left; }
   .nl-wrap { padding-left: 1rem; padding-right: 1rem; }
-  .post-nav { grid-template-columns: 1fr; }
-  .post-nav .pn-next { text-align: left; }
   .home-masthead-title { letter-spacing: -.03em; }
 }
 
@@ -2770,7 +2882,8 @@ def essay_kicker(post, override):
 
 
 def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
-                      years_span, top_tags, issue_num, issue_ref=None, ama_archive=None):
+                      years_span, top_tags, issue_num, issue_ref=None, ama_archive=None,
+                      all_posts=None):
     tags = post.get("tags") or []
     override = ESSAY_OVERRIDES.get(post.get("slug", ""), {})
 
@@ -2833,6 +2946,13 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
     <a class="ef-back" href="{back_href}">{back_label}</a>
   </footer>"""
 
+    # Recommendations — only shown on the tail post (no chronological
+    # successor); replaces the removed prev/next nav with a small
+    # carousel of related recent essays.
+    recommendations_html = ""
+    if next_post is None and all_posts:
+        recommendations_html = render_recommendations(post, all_posts, kind='essay')
+
     # AMA archive — a Reddit-style feed of every answered question, only
     # rendered on the "Ask Me Anything" hub post (ama_archive is set at the
     # main() call site by looking up the ask-me-anything tag's other posts).
@@ -2886,6 +3006,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
   {footer}
   {ama_archive_html}
   <section id="tw-responses" class="essay-col"></section>
+  {recommendations_html}
 </article>
 {INDEX_MARKUP}{INDEX_SCRIPT}
 """
@@ -2898,7 +3019,7 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
     return page
 
 
-def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, years_span, top_tags, issue_num):
+def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, years_span, top_tags, issue_num, all_posts=None):
     tags = post.get("tags") or []
     meta = edition_meta(post)
     nice_title = clean_title(post).strip() or post.get("title", "")
@@ -2927,6 +3048,10 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
 
     content = replace_typeform(post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>")
 
+    recommendations_html = ""
+    if next_post is None and all_posts:
+        recommendations_html = render_recommendations(post, all_posts, kind='newsletter')
+
     body = f"""
 <article class="nl-wrap">
   <header class="nl-masthead">
@@ -2942,6 +3067,7 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
   {tag_pills}
 </article>
 <section id="tw-responses"></section>
+{recommendations_html}
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", noindex=is_hidden(post),
                       description=post.get("custom_excerpt") or post.get("excerpt") or None,
@@ -4477,7 +4603,7 @@ def main():
         prev_p, next_p = siblings(post)
         num = issue_nums.get(slug, 0)
         if is_newsletter(post):
-            html_out = render_newsletter_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num)
+            html_out = render_newsletter_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num, all_posts=posts)
             nl_count += 1
         else:
             ama_archive = None
@@ -4487,7 +4613,7 @@ def main():
                     key=lambda p: p.get("published_at", ""), reverse=True,
                 )
             html_out = render_essay_post(post, prev_p, next_p, posts_count, tags_count, years_span, top_tags, num,
-                                          issue_ref=essay_issue_map.get(slug), ama_archive=ama_archive)
+                                          issue_ref=essay_issue_map.get(slug), ama_archive=ama_archive, all_posts=posts)
             essay_count += 1
         html_out = localize_images(html_out)
         with open(DOCS_DIR / "posts" / f"{slug}.html", "w") as f:

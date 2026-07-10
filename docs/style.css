@@ -83,7 +83,7 @@ html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; 
 :where(.site-top-inner, .essay-eyebrow, .essay-byline,
   .nl-masthead-eyebrow, .nl-masthead-subtitle, .home-masthead-eyebrow,
   .home-masthead-sub, .section-label, .section-note, .hero-eyebrow,
-  .hero-meta, .hero-cta, .essay-row-eyebrow, .post-nav, .colophon h4,
+  .hero-meta, .hero-cta, .essay-row-eyebrow, .rec-kicker, .rec-note, .colophon h4,
   .colophon-bottom, .post-tag, .tag-cloud a, .stat .label,
   .sidebar-block h4, .sidebar-item .edition, .archive-item .when,
   .archive-item .tag, .prose h4, .prose figcaption, .prose th,
@@ -650,54 +650,102 @@ img { max-width: 100%; height: auto; }
   border-color: var(--accent-muted);
 }
 
-/* ---------- POST NAV (prev / next) ---------- */
-/* Default: a standalone centered column (used on newsletters, which don't
-   have the essay's wide sidenote-gutter frame). */
-.post-nav {
-  max-width: var(--max-read);
-  margin: 2.5rem auto 0;
-  padding: 1.4rem 1.5rem 2.5rem;
-  border-top: 2px solid var(--ink);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.2rem;
-}
-/* Essays sit inside the wide asymmetric frame (text held left, gutter on the
-   right) — pin to that same left edge instead of self-centering, or it drifts
-   out of alignment with the essay column above it. */
-.essay-frame > .post-nav,
-.essay-frame > #tw-responses {
+/* ---------- RECOMMENDATIONS CAROUSEL ---------- */
+/* Bottom-of-post "Read Next" carousel, shown only on the most recent post
+   in each track (essay/newsletter) — replaces the removed prev/next nav
+   when there's no chronological successor for the bottom peek to point to. */
+.essay-frame > #tw-responses,
+.essay-frame > .rec-carousel {
   max-width: 720px;
   margin-left: 0;
   margin-right: 0;
   padding-left: 0;
   padding-right: 0;
 }
-.post-nav .pn-prev, .post-nav .pn-next {
-  display: block;
-  padding: 1rem 1.2rem;
-  border: 1px solid var(--paper-rule);
-  border-radius: 4px;
-  background: var(--paper-warm);
+.rec-carousel {
+  max-width: var(--max-wide);
+  margin: 2.6rem auto 3rem;
+  padding: 0 1.5rem;
+}
+.rec-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  border-top: 2px solid var(--ink);
+  padding-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.rec-kicker {
+  font-family: var(--mono);
+  font-size: .7rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
   color: var(--ink);
-  transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease;
 }
-.post-nav .pn-prev:hover, .post-nav .pn-next:hover {
-  border-color: var(--accent);
-  transform: translateY(-2px);
-  box-shadow: 0 14px 28px -18px rgba(26, 24, 20, .4);
+.rec-note {
+  font-family: var(--mono);
+  font-size: .62rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
 }
-.post-nav .pn-label {
-  display: block; margin-bottom: 6px; color: var(--ink-faint);
-  font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase;
+.rec-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1.2rem;
 }
-.post-nav .pn-title {
-  display: block; color: var(--ink);
-  font-family: var(--display); font-size: 1.05rem; font-weight: 700;
-  letter-spacing: -.01em; line-height: 1.3; transition: color .2s ease;
+@media (max-width: 900px) {
+  .rec-strip {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 72%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 1.5rem;
+    padding-bottom: .5rem;
+  }
+  .rec-card { scroll-snap-align: start; }
 }
-.post-nav .pn-prev:hover .pn-title, .post-nav .pn-next:hover .pn-title { color: var(--accent); }
-.post-nav .pn-next { text-align: right; }
+.rec-card {
+  display: block;
+  color: var(--ink);
+  text-decoration: none;
+  transition: transform .25s ease;
+}
+.rec-card:hover { transform: translateY(-3px); }
+.rec-thumb {
+  aspect-ratio: 3 / 2;
+  background: var(--paper-warm);
+  border: 1px solid var(--paper-rule);
+  border-radius: 3px;
+  overflow: hidden;
+  margin-bottom: .7rem;
+}
+.rec-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter .25s ease;
+}
+.rec-card:hover .rec-thumb img { filter: brightness(1.05); }
+.rec-eyebrow {
+  font-family: var(--mono);
+  font-size: .6rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: .35rem;
+}
+.rec-title {
+  font-family: var(--display);
+  font-size: 1.05rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--ink);
+  transition: color .2s ease;
+}
+.rec-card:hover .rec-title { color: var(--accent); }
 
 /* ---------- COLOPHON FOOTER ---------- */
 .colophon {
@@ -1688,8 +1736,6 @@ img { max-width: 100%; height: auto; }
   .colophon-bottom { flex-direction: column; }
   .colophon-sign-off { text-align: left; }
   .nl-wrap { padding-left: 1rem; padding-right: 1rem; }
-  .post-nav { grid-template-columns: 1fr; }
-  .post-nav .pn-next { text-align: left; }
   .home-masthead-title { letter-spacing: -.03em; }
 }
 
