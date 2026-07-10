@@ -45,15 +45,25 @@
     '}',
 
     /* ── Peek strip ── */
+    /* Uses top+bottom instead of height so the strip sweeps upward from the
+       bottom edge of the viewport when navigating. */
     '#tw-peek {',
-    '  position: relative;',
-    '  height: ' + PEEK_SLIM + 'px;',
+    '  position: fixed;',
+    '  left: 0;',
+    '  right: 0;',
+    '  bottom: ' + FOOT_SLIM + 'px;',
+    '  top: calc(100vh - ' + (FOOT_SLIM + PEEK_SLIM) + 'px);',
     '  overflow: hidden;',
     '  cursor: pointer;',
-    '  transition: height 420ms cubic-bezier(0.165,0.84,0.44,1);',
+    '  z-index: 901;',
+    '  transition: top 460ms cubic-bezier(0.165,0.84,0.44,1);',
     '}',
     '#tw-peek.tw-peek-open {',
-    '  height: ' + PEEK_FULL + 'px;',
+    '  top: calc(100vh - ' + (FOOT_SLIM + PEEK_FULL) + 'px);',
+    '}',
+    '#tw-peek.tw-peek-sweeping {',
+    '  top: 0;',
+    '  transition: top 500ms cubic-bezier(0.165,0.84,0.44,1);',
     '}',
     '#tw-peek-bg {',
     '  position: absolute;',
@@ -64,7 +74,8 @@
     '  transform: scale(1.05);',
     '  transition: transform 500ms ease, filter 420ms ease;',
     '}',
-    '#tw-peek.tw-peek-open #tw-peek-bg {',
+    '#tw-peek.tw-peek-open #tw-peek-bg,',
+    '#tw-peek.tw-peek-sweeping #tw-peek-bg {',
     '  transform: scale(1);',
     '  filter: brightness(0.42);',
     '}',
@@ -232,8 +243,10 @@
     });
 
     function navigate() {
+      if (peek.classList.contains('tw-peek-sweeping')) return;
       peek.classList.remove('tw-peek-open');
-      fadeOutPage(function () { location.href = nextHref; });
+      peek.classList.add('tw-peek-sweeping');
+      setTimeout(function () { location.href = nextHref; }, 520);
     }
     peek.addEventListener('click', navigate);
     peek.addEventListener('keydown', function (e) {
