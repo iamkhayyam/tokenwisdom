@@ -32,7 +32,8 @@
     '  pointer-events: none !important;',
     '}',
 
-    /* Tray — one docked unit, flex-column so parts stack visually */
+    /* Tray — one docked unit, flex-column so parts stack visually.
+       Hidden at rest; slides up in stages: peek at 50% scroll, foot at 95%. */
     '#tw-tray {',
     '  position: fixed;',
     '  bottom: 0;',
@@ -41,6 +42,15 @@
     '  z-index: 900;',
     '  display: flex;',
     '  flex-direction: column;',
+    '  transform: translateY(100%);',
+    '  will-change: transform;',
+    '  transition: transform 520ms cubic-bezier(0.19, 1, 0.22, 1);',
+    '}',
+    '#tw-tray.tw-peek-shown {',
+    '  transform: translateY(' + FOOT_SLIM + 'px);',
+    '}',
+    '#tw-tray.tw-foot-shown {',
+    '  transform: translateY(0);',
     '}',
 
     /* Peek — sliver at rest, expands with tray on hover */
@@ -78,12 +88,16 @@
     '  left: 50%;',
     '  transform: translateX(-50%);',
     '  width: 100%;',
-    '  max-width: calc(var(--max-wide, 1080px) - 5rem);',
+    '  max-width: 100%;',
     '  height: 440px;',
     '  object-fit: cover;',
     '  object-position: 50% 38%;',
     '  filter: brightness(0.5);',
     '  display: block;',
+    '  transition: max-width 520ms cubic-bezier(0.19, 1, 0.22, 1);',
+    '}',
+    '#tw-tray.tw-open #tw-peek-bg {',
+    '  max-width: calc(var(--max-wide, 1080px) - 5rem);',
     '}',
     '@media (max-width: 720px) {',
     '  #tw-peek-bg { height: 280px; }',
@@ -174,9 +188,9 @@
     '  overflow-y: auto;',
     '}',
 
-    /* Body clearance */
-    'body.has-tray { padding-bottom: ' + FOOT_SLIM + 'px; }',
-    'body.has-tray.has-peek { padding-bottom: ' + (FOOT_SLIM + PEEK_SLIM) + 'px; }'
+    /* No body padding needed — tray is hidden at rest and only reveals
+       once the reader has scrolled past 50% / 95% of the page. */
+    'body.has-tray { padding-bottom: 0; }'
   ].join('\n');
   document.head.appendChild(style);
 
@@ -270,9 +284,11 @@
     foot.style.setProperty('--tw-foot-full', fullH + 'px');
   });
 
-  /* ── Unified hover on the whole unit ── */
+  /* ── Unified hover on the whole unit (only when at least peek is shown) ── */
   tray.addEventListener('mouseenter', function () {
-    tray.classList.add('tw-open');
+    if (tray.classList.contains('tw-peek-shown') || tray.classList.contains('tw-foot-shown')) {
+      tray.classList.add('tw-open');
+    }
   });
   tray.addEventListener('mouseleave', function (e) {
     if (!tray.contains(e.relatedTarget)) {
@@ -280,8 +296,30 @@
     }
   });
 
-  body.classList.add('has-tray');
-  if (peek) body.classList.add('has-peek');
+  /* ── Scroll-based reveal: peek at 50%, foot at 95% ── */
+  function updateTrayVisibility() {
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    if (scrollable <= 0) {
+      tray.classList.add('tw-foot-shown');
+      tray.classList.remove('tw-peek-shown');
+      return;
+    }
+    var pct = window.scrollY / scrollable;
+    if (pct >= 0.95) {
+      tray.classList.remove('tw-peek-shown');
+      tray.classList.add('tw-foot-shown');
+    } else if (pct >= 0.50) {
+      tray.classList.remove('tw-foot-shown');
+      tray.classList.add('tw-peek-shown');
+    } else {
+      tray.classList.remove('tw-peek-shown');
+      tray.classList.remove('tw-foot-shown');
+      tray.classList.remove('tw-open');
+    }
+  }
+  window.addEventListener('scroll', updateTrayVisibility, { passive: true });
+  window.addEventListener('resize', updateTrayVisibility);
+  requestAnimationFrame(updateTrayVisibility);
 
   /* ── Post-nav links ──────────────────────────────────────────────── */
   document.querySelectorAll('.pn-prev, .pn-next').forEach(function (a) {
