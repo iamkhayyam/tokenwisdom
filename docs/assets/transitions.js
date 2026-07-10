@@ -56,28 +56,21 @@
     '  overflow: hidden;',
     '  cursor: pointer;',
     '  z-index: 901;',
-    '  transition: top 460ms cubic-bezier(0.165,0.84,0.44,1);',
+    '  transition: top 300ms ease;',
     '}',
     '#tw-peek.tw-peek-open {',
     '  top: calc(100vh - ' + (FOOT_SLIM + PEEK_FULL) + 'px);',
     '}',
     '#tw-peek.tw-peek-sweeping {',
     '  top: 0;',
-    '  transition: top 500ms cubic-bezier(0.165,0.84,0.44,1);',
+    '  transition: top 600ms ease-in-out;',
     '}',
     '#tw-peek-bg {',
     '  position: absolute;',
     '  inset: 0;',
     '  background-size: cover;',
     '  background-position: center 30%;',
-    '  filter: brightness(0.48);',
-    '  transform: scale(1.05);',
-    '  transition: transform 500ms ease, filter 420ms ease;',
-    '}',
-    '#tw-peek.tw-peek-open #tw-peek-bg,',
-    '#tw-peek.tw-peek-sweeping #tw-peek-bg {',
-    '  transform: scale(1);',
-    '  filter: brightness(0.42);',
+    '  filter: brightness(0.5);',
     '}',
     '#tw-peek-label {',
     '  position: absolute;',
@@ -246,7 +239,7 @@
       if (peek.classList.contains('tw-peek-sweeping')) return;
       peek.classList.remove('tw-peek-open');
       peek.classList.add('tw-peek-sweeping');
-      setTimeout(function () { location.href = nextHref; }, 520);
+      setTimeout(function () { location.href = nextHref; }, 620);
     }
     peek.addEventListener('click', navigate);
     peek.addEventListener('keydown', function (e) {
