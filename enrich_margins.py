@@ -300,18 +300,11 @@ def enrich_post(post: dict, term_index: list[dict], acronym_map: dict[str, str])
     html_body = post.get("html") or ""
     max_notes = _max_notes_for(html_body)
 
-    # Quote notes are anchored to the paragraph immediately before the
-    # blockquote in the original HTML. Simpler: attach to the first
-    # paragraph *after* the blockquote for post-context.
+    # Quote notes disabled: blockquotes already render inline as visible
+    # pull quotes in the prose, so a gutter copy would be pure duplication.
+    # The find_quote_matches helper is kept for future selective use (e.g.
+    # attribution-only glosses), but is not called by default.
     all_notes: list[dict] = []
-    for q in find_quote_matches(html_body):
-        # Anchor: first 6 words of the first paragraph following the quote
-        after = html_body[q["position"]:]
-        para_m = _PARA_RE.search(after[after.find("</blockquote>"):])
-        if para_m:
-            anchor = " ".join(strip_tags(para_m.group(1)).split()[:6])
-            q["_anchor_prefix"] = anchor
-            all_notes.append(q)
 
     # For text-based matches (term, acronym, stat), we scan per paragraph
     # so we already know the anchor.
