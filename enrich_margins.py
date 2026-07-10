@@ -215,8 +215,14 @@ def find_quote_matches(post_html: str) -> list[dict]:
     return matches
 
 
+# Multi-char units listed FIRST so alternation doesn't stop early on a
+# single-letter prefix (e.g. "2 ms" was matching just "2 m" because M
+# came before ms). Word-char units get a trailing \b so we don't match
+# mid-word (e.g. "2 million" falsely matching "2 m"). Symbol units (%, ×)
+# don't need \b — they end at a non-word char naturally.
 STAT_PAT = re.compile(
-    r"(~?\$?[0-9]+(?:[.,][0-9]+)?\s*(?:%|×|x|k|M|B|bn|mn|mph|ms|GW|MW|kW|Hz|MHz|GHz|nm|mm|km|mi))",
+    r"(~?\$?[0-9]+(?:[.,][0-9]+)?\s*"
+    r"(?:(?:MHz|GHz|mph|ms|bn|mn|kW|MW|GW|Hz|nm|mm|km|mi|k|M|B|x)\b|[%×]))",
     re.IGNORECASE,
 )
 

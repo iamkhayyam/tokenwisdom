@@ -2,21 +2,15 @@
   "del-icio-us-was-right-we-built-claudacious": [
     {
       "kind": "stat",
-      "trigger": "1.5 m",
-      "anchor": "Cloudflare Workers handles the asynchronous backbone:",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">1.5 m</span><span class=\"twn-cap\">Cloudflare Vectorize stores semantic embeddings (768-dim BAAI/BGE-base-en-v1.5 model) for semantic search</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "76%",
       "anchor": "The typography is Söhne for body",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">76%</span><span class=\"twn-cap\">The palette is white ground, charcoal ink, one azure accent—proportioned roughly 76% / 16% / 8%</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "150m",
+      "trigger": "150ms",
       "anchor": "Claudacious is live at claudacio.us. TLS",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">150m</span><span class=\"twn-cap\">Median latency under 150ms</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">150ms</span><span class=\"twn-cap\">Median latency under 150ms</span></span>"
     },
     {
       "kind": "term",
@@ -35,6 +29,12 @@
       "trigger": "Metadata",
       "anchor": "The implementation is a normalizedUrl field",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Metadata</span><span class=\"twn-def\">Information about information—patterns, timing, location, association data</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "Claudacious is not a bookmarking tool",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "data-is-not-the-new-oil": [
@@ -91,12 +91,6 @@
   ],
   "the-proof-was-never-the-point": [
     {
-      "kind": "stat",
-      "trigger": "2026 b",
-      "anchor": "The New Scientist report from March",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2026 b</span><span class=\"twn-cap\">The New Scientist report from March 2026 brings Buzzard’s situation into physics</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Formalization",
       "anchor": "A team led by Kevin Buzzard,",
@@ -110,12 +104,6 @@
     }
   ],
   "the-wrong-name-on-the-door": [
-    {
-      "kind": "stat",
-      "trigger": "200 B",
-      "anchor": "Omar Khayyam. Yes, the Rubáiyát guy,",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">200 B</span><span class=\"twn-cap\">If you go back to Indian mathematics, the &quot;Staircase of Mount Meru&quot; traces similar ideas to Pingala around 200 BCE</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Technology",
@@ -149,24 +137,6 @@
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">50%</span><span class=\"twn-cap\">The instrument was already psychometrically indefensible—roughly 50% of test-takers get a different four-letter result when retested…</span></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "1991 m",
-      "anchor": "The Big Five personality model (openness,",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">1991 m</span><span class=\"twn-cap\">Barrick and Mount&#x27;s 1991 meta-analysis established conscientiousness as a robust predictor of job performance across occupations</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "300 m",
-      "anchor": "The correction is essentially complete at",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">300 m</span><span class=\"twn-cap\">The 2015 Dietary Guidelines were the first to eliminate the 300 mg/day cholesterol cap</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "2005 b",
-      "anchor": "The discovery of Eris in 2005",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2005 b</span><span class=\"twn-cap\">The discovery of Eris in 2005 by Mike Brown and colleagues at Caltech was the proximate trigger, Eris appeared to be roughly the same…</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Optimization",
       "anchor": "What has 2026 added? The market",
@@ -177,21 +147,27 @@
       "trigger": "MBTI",
       "anchor": "You've probably seen the typical framing:",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">MBTI</span><span class=\"twn-def\">Myers-Briggs Type Indicator. ~50% get a different result on retest. Now in AI behavioral typing, TikTok identity culture, corporate talent platforms. The essay&#x27;s most instructive case: a psychometrically invalid tool that metastasized instead of dying.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "In 2026, there's a new wrinkle.",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "HR",
+      "anchor": "Myers-Briggs was the most instructive case",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">HR</span><span class=\"twn-def\">Human Resources</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "DSM",
+      "anchor": "When I first wrote this, I",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">DSM</span><span class=\"twn-def\">Diagnostic and Statistical Manual of Mental Disorders. Categorical system that persists because it&#x27;s load-bearing for insurance billing, legal proceedings, and pharmaceutical trial design. W19&#x27;s structural parallel: physics&#x27; lone-genius narrative persists for the same reason.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "no-heir-no-lesson": [
-    {
-      "kind": "stat",
-      "trigger": "26 m",
-      "anchor": "In 1915, there were roughly 26",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">26 m</span><span class=\"twn-cap\">In 1915, there were roughly 26 million working horses in the United States</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "6.8 m",
-      "anchor": "It is a beautiful argument. It",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">6.8 m</span><span class=\"twn-cap\">farm count that has fallen from roughly 6.8 million in 1935 to under 1</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Constitutional Forcing",
@@ -215,6 +191,12 @@
       "trigger": "AI",
       "anchor": "This week, Mihailo Zoin published a",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "USDA",
+      "anchor": "Here we have to be precise,",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">USDA</span><span class=\"twn-def\">United States Department of Agriculture: now a Palantir customer, which means the same data platform used for counterterrorism is managing farm subsidy and compliance data</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "whos-mind-is-it-anyway": [
@@ -258,12 +240,6 @@
     },
     {
       "kind": "stat",
-      "trigger": "86 m",
-      "anchor": "I would make a language you",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">86 m</span><span class=\"twn-cap\">into the toasters, the smart fridges, the Ring doorbells, the old x86 mainframe at the power facility, the Phillips smart bulbs, the…</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "10%",
       "anchor": "2025 - W44 — The 10%",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10%</span><span class=\"twn-cap\">2025 - W44 — The 10% Delusion The corpus argument&#x27;s direct ancestor</span></span>"
@@ -285,6 +261,12 @@
       "trigger": "Singularity",
       "anchor": "2026 - W05 — The Zombie",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Singularity</span><span class=\"twn-def\">Point where mathematical equations break down</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "They didn't just spend the attention.",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-cow-came-last": [
@@ -329,12 +311,6 @@
   ],
   "the-room-was-already-set-before-you-walked-in": [
     {
-      "kind": "stat",
-      "trigger": "2016 b",
-      "anchor": "Robert Cialdini documented this at the",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2016 b</span><span class=\"twn-cap\">Robert Cialdini documented this at the scale of human interactions in his 2016 book of the same name — how a realtor who mentions the…</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Technology",
       "anchor": "B.J. Fogg mapped the behavioral infrastructure",
@@ -342,12 +318,6 @@
     }
   ],
   "the-race-that-eats-its-own-rules": [
-    {
-      "kind": "stat",
-      "trigger": "$100 b",
-      "anchor": "OpenAI didn’t have that relationship to",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$100 b</span><span class=\"twn-cap\">And once they moved, the race logic consumed everyone else — including Google, which rushed Bard to market so visibly unready that it…</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Technology",
@@ -377,14 +347,20 @@
       "trigger": "AI",
       "anchor": "OpenAI was founded in 2015 as",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "GPT",
+      "anchor": "By 2019, they had a “capped",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">GPT</span><span class=\"twn-def\">Generative Pre-trained Transformer</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-double-collapse": [
     {
       "kind": "stat",
-      "trigger": "2026 b",
+      "trigger": "44%",
       "anchor": "A paper published in January 2026",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2026 b</span><span class=\"twn-cap\">A paper published in January 2026 by Zhang and Zhang at Beihang University and Peking University introduced DAS — De-Anonymization at…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">44%</span><span class=\"twn-cap\">Tested against 147,367 anonymized ICLR reviews, it achieved 44% recall at rank 20 against a random baseline of 0</span></span>"
     },
     {
       "kind": "stat",
@@ -420,27 +396,9 @@
   "dear-sam": [
     {
       "kind": "stat",
-      "trigger": "$100 b",
-      "anchor": "But we have bigger fish to",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$100 b</span><span class=\"twn-cap\">Specifically: the $100 billion that just quietly became $20–30 billion, the flywheel that nobody bothers with, and the fact that your…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$86 b",
-      "anchor": "The competitive narrative that underpins an",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$86 b</span><span class=\"twn-cap\">What has followed is the $86 billion round, the $6</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "100x",
       "anchor": "2019: A \"capped profit\" subsidiary is",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100x</span><span class=\"twn-cap\">Investors can receive returns up to 100x their investment</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "5 M",
-      "anchor": "What happened next took five days.5",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">5 M</span><span class=\"twn-cap\">5 Microsoft threatened to hire the entire staff</span></span>"
     },
     {
       "kind": "stat",
@@ -450,61 +408,61 @@
     },
     {
       "kind": "stat",
-      "trigger": "$500 b",
-      "anchor": "In January 2025, you got a",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$500 b</span><span class=\"twn-cap\">The number was $500 billion</span></span>"
+      "trigger": "$86B",
+      "anchor": "CLAIM: Fundraising rounds cited — $86",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$86B</span><span class=\"twn-cap\">6 billion raise, $40 billion reportedly in progress SOURCE: $86B — Microsoft deal widely reported January 2023; $6</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "26%",
+      "anchor": "CLAIM: The nonprofit retains a minority",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">26%</span><span class=\"twn-cap\">CLAIM: The nonprofit retains a minority (26%) equity stake worth approximately $130 billion SOURCE (PRIMARY): https://openai</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "10gw",
+      "anchor": "CLAIM: NVIDIA announced letter of intent",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10gw</span><span class=\"twn-cap\">com/news/openai-and-nvidia-announce-strategic-partnership-to-deploy-10gw-of-nvidia-systems SOURCE (PRIMARY): OpenAI announcement, same date</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "10%",
+      "anchor": "CLAIM: AMD agreed to supply OpenAI",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10%</span><span class=\"twn-cap\">com/2026/02/24/amd_copypastes_openai_6gw_chipsforstock/ SOURCE (SECONDARY): Tom&#x27;s Hardware, February 24, 2026: &quot;The deal is identical in…</span></span>"
     }
   ],
   "the-persistence-of-inferior-standards": [
-    {
-      "kind": "stat",
-      "trigger": "8 b",
-      "anchor": "I am named after the poet,",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">8 b</span><span class=\"twn-cap\">I am named after the poet, philosopher, and mathematician—Omar Khayyam—who built a calendar that measurably better than the one keeping…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "3000 B",
-      "anchor": "Back in 3000 BCE, the Sumerians",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">3000 B</span><span class=\"twn-cap\">Back in 3000 BCE, the Sumerians built a counting system using base-60 (sexagesimal) and we’re timing rocket launches, algorithmic trades…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "10 m",
-      "anchor": "The logic was sound. Base-10 matches",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10 m</span><span class=\"twn-cap\">Base-10 matches how we count</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Database",
       "anchor": "The calendar you're using isn't the",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Database</span><span class=\"twn-def\">Organized collection of structured information or data</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Middleware",
+      "anchor": "We're not high-tech. We're a remix",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Middleware</span><span class=\"twn-def\">Software that acts as a bridge between an operating system or database and applications.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "But it’s already the year two",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "GPS",
+      "anchor": "If we were designing from scratch",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">GPS</span><span class=\"twn-def\">Global Positioning System: the signal a jammer in Iran was degrading, and that NASA science satellites turned out to be able to locate from orbit. Even the jammer leaves a residual. &quot;In statistics, the residuals are not garbage — they are where you discover the model is wrong. The same is true of a person.&quot;</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "threading-a-very-fine-needle": [
     {
       "kind": "stat",
-      "trigger": "1.5 m",
-      "anchor": "I know this because I just",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">1.5 m</span><span class=\"twn-cap\">1 A dense academic paper analyzing 1.5 million conversations</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "0.6%",
       "anchor": "Reality distortion in 0.6% of them.",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">0.6%</span><span class=\"twn-cap\">Reality distortion in 0.6% of them</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "800 m",
-      "anchor": "ChatGPT has 800 million weekly users.7",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">800 m</span><span class=\"twn-cap\">ChatGPT has 800 million weekly users</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "300 m",
-      "anchor": "Stage 1: Vulnerable users engage more",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">300 m</span><span class=\"twn-cap\">Send 300 messages in a conversation</span></span>"
     },
     {
       "kind": "stat",
@@ -517,32 +475,50 @@
       "trigger": "100%",
       "anchor": "User: \"Am I crazy or is",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100%</span><span class=\"twn-cap\">SMOKING GUN 🔥 100% certain</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Optimization",
+      "anchor": "You can't filter out \"user genuinely",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Optimization</span><span class=\"twn-def\">Improving efficiency by eliminating redundancy and buffer</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "I know this because I just",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "RLHF",
+      "anchor": "Stage 3: The model learns RLHF",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">RLHF</span><span class=\"twn-def\">Reinforcement Learning from Human Feedback</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "how-does-order-emerge-in-a-universe-built-for-chaos": [
     {
-      "kind": "stat",
-      "trigger": "13.8 b",
+      "kind": "term",
+      "trigger": "Entropy",
+      "anchor": "Entropy says disorder wins, and yet",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Entropy</span><span class=\"twn-def\">Measure of disorder; second law of thermodynamics states entropy always increases</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Thermodynamics",
+      "anchor": "Life is a masterclass in demolition.",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Thermodynamics</span><span class=\"twn-def\">Energy transfer and transformation</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Technology",
       "anchor": "However, if we look up and",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">13.8 b</span><span class=\"twn-cap\">However, if we look up and recognize the universe is 13.8 billion years old and entropy should have won by now, no? Instead, it got more…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "142 b",
-      "anchor": "The functional information for Earth's minerals",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">142 b</span><span class=\"twn-cap\">The functional information for Earth&#x27;s minerals today: 142 bits</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "250 m",
-      "anchor": "Early Earth had 250 minerals and",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">250 m</span><span class=\"twn-cap\">Early Earth had 250 minerals and today we’ve</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "6,000 m",
-      "anchor": "What accounts for 6,000 minerals instead",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">6,000 m</span><span class=\"twn-cap\">What accounts for 6,000 minerals instead of a barren rock? How did stars ignite at all? Where did life come from if chemistry alone…</span></span>"
+      "kind": "acronym",
+      "trigger": "MIT",
+      "anchor": "Your shoes scuff, no one can",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">MIT</span><span class=\"twn-def\">Massachusetts Institute of Technology</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-zombie-singularity-of-intelligence-without-understanding": [
@@ -586,48 +562,42 @@
   "dear-dario": [
     {
       "kind": "stat",
-      "trigger": "$8 b",
-      "anchor": "The timeline tells the real story.",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$8 b</span><span class=\"twn-cap\">$8 billion from Amazon</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "1.25 b",
-      "anchor": "CLAIM: September 2023 - 1.25 billion",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">1.25 b</span><span class=\"twn-cap\">CLAIM: September 2023 - 1.25 billion initial investment, 4 billion total planned  SOURCE: https://en</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "2.75 b",
+      "trigger": "8b",
       "anchor": "CLAIM: March 2024 - remaining 2.75",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2.75 b</span><span class=\"twn-cap\">CLAIM: March 2024 - remaining 2.75 billion invested  SOURCE: https://en</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">8b</span><span class=\"twn-cap\">com/2024/amazon-boosts-total-anthropic-investment-to-8b-deepens-ai-partnership-with-claude-maker/  STATUS: ✓ VERIFIED</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "$4 b",
-      "anchor": "CLAIM: November 2024 - additional $4",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$4 b</span><span class=\"twn-cap\">CLAIM: November 2024 - additional $4 billion investment  SOURCE: https://www</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "8 b",
+      "trigger": "4B",
       "anchor": "CLAIM: Total investment 8 billion SOURCE:",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">8 b</span><span class=\"twn-cap\">CLAIM: Total investment 8 billion  SOURCE: All sources cited above confirm 4B (2023-2024) + 4B (Nov 2024) = 8B total  STATUS: ✓ VERIFIED</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">4B</span><span class=\"twn-cap\">CLAIM: Total investment 8 billion  SOURCE: All sources cited above confirm 4B (2023-2024) + 4B (Nov 2024) = 8B total  STATUS: ✓ VERIFIED</span></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "2.7 b",
-      "anchor": "CLAIM: Anthropic burning through 2.7 billion",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2.7 b</span><span class=\"twn-cap\">CLAIM: Anthropic burning through 2.7 billion in 2024  SOURCE: https://techcrunch</span></span>"
+      "kind": "term",
+      "trigger": "Constitutional AI",
+      "anchor": "Interests diverge? Too bad. Amazon decides",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Constitutional AI</span><span class=\"twn-def\">AI training method using AI feedback rather than human oversight</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Technology",
+      "anchor": "After your 15 seconds of fame",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Silicon",
+      "anchor": "This is the personal manifesto playbook",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Silicon</span><span class=\"twn-def\">Semiconductor material used in computer chip manufacturing</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "CEO",
+      "anchor": "Open letter to Dario Amodei, CEO",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">CEO</span><span class=\"twn-def\">Chief Executive Officer</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-greengrocer-goes-to-davos": [
-    {
-      "kind": "stat",
-      "trigger": "6 m",
-      "anchor": "Short term (6 months):",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">6 m</span><span class=\"twn-cap\">Short term (6 months):</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Silicon",
@@ -662,21 +632,21 @@
     },
     {
       "kind": "stat",
-      "trigger": "$240 b",
-      "anchor": "Federal Reserve Bank of New York.",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$240 b</span><span class=\"twn-cap\">75 trillion in Q4 2022, up from $240 billion in 2003</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "82%",
       "anchor": "Between 2005 and 2020, newspaper advertising",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">82%</span><span class=\"twn-cap\">Between 2005 and 2020, newspaper advertising dollars plummeted by 82%</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "$49.4 b",
-      "anchor": "Pew Research Center. (2021). \"Newspapers Fact",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$49.4 b</span><span class=\"twn-cap\">&quot; Newspaper advertising revenue fell from $49.4 billion in 2005 to $8</span></span>"
+      "trigger": "25%",
+      "anchor": "Medill School of Journalism. (2022). \"State",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">25%</span><span class=\"twn-cap\">&quot; Research documents closure of more than 2,500 newspapers (approximately 25% of all newspapers) between 2005 and 2020</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "60%",
+      "anchor": "The timeline is brutal. Craigslist killed",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">60%</span><span class=\"twn-cap\">Then Google and Facebook hoovered up 60% of digital advertising revenue,[1] leaving newspapers fighting over scraps</span></span>"
     }
   ],
   "building-without-blueprints": [
@@ -720,65 +690,65 @@
   "the-20-billion-distraction": [
     {
       "kind": "stat",
-      "trigger": "$20 b",
-      "anchor": "Christmas Eve, 2025. While most of",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$20 b</span><span class=\"twn-cap\">While most of us were wrapping presents or sipping eggnog, NVIDIA dropped a $20 billion bombshell on the AI world</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "58.5%",
       "anchor": "Biological systems operate in analog continuums—representations",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">58.5%</span><span class=\"twn-cap\">Ternary systems, for instance, provide 58.5% more information density per symbol than binary</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "20 m",
-      "anchor": "Not 20 megawatts. Twenty. Watts.",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">20 m</span><span class=\"twn-cap\">Not 20 megawatts</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "$20B",
       "anchor": "Step 1: Create a false problem",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$20B</span><span class=\"twn-cap\">Step 1: Create a false problem (inference bottleneck)Step 2: Invest massively in solving it ($20B)Step 3: Celebrate the &quot;solution&quot; (750…</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Silicon",
+      "anchor": "Sure, LinkedIn is buzzing with praise",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Silicon</span><span class=\"twn-def\">Semiconductor material used in computer chip manufacturing</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Neuroscience",
+      "anchor": "A massive distraction from the fundamental",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Neuroscience</span><span class=\"twn-def\">New insights into neurological diseases like Parkinson&#x27;s</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "token-the-ultimate-reading-guide": [
     {
       "kind": "stat",
-      "trigger": "30 m",
-      "anchor": "Your Situation: 30 minutes total, need",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">30 m</span><span class=\"twn-cap\">Your Situation: 30 minutes total, need the highlights Your Question: &quot;What do I need to know about 2025?&quot; Your Reading List: 5 essays,…</span></span>"
+      "trigger": "$14B",
+      "anchor": "Essay 2: The Data W15: Consulting",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$14B</span><span class=\"twn-cap\">Essay 2: The Data W15: Consulting Industry&#x27;s Terminal Diagnosis (15 min) Why Second: $14B loss proves an industry is dead—concrete,…</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "73 m",
-      "anchor": "Total Time: 73 minutes What You'll",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">73 m</span><span class=\"twn-cap\">Total Time: 73 minutes What You&#x27;ll Know: The five biggest paradigm shifts of 2025 Next Steps: If any essay hits, follow its thematic…</span></span>"
+      "trigger": "$600B",
+      "anchor": "$600B Casino",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$600B</span><span class=\"twn-cap\">$600B Casino</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "179 m",
-      "anchor": "Total Time: 179 minutes (~3 hours)",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">179 m</span><span class=\"twn-cap\">Total Time: 179 minutes (~3 hours) Strategic Value: Complete picture of value creation transformation Implementation: Use infrastructure…</span></span>"
+      "trigger": "10%",
+      "anchor": "10% Delusion",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10%</span><span class=\"twn-cap\">10% Delusion</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "161 m",
-      "anchor": "Total Time: 161 minutes (~2.7 hours)",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">161 m</span><span class=\"twn-cap\">Total Time: 161 minutes (~2</span></span>"
+      "trigger": "10x",
+      "anchor": "By June, entire industries were collapsing.",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10x</span><span class=\"twn-cap\">AI native businesses (W14) showed 10x capital efficiency</span></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "120 m",
-      "anchor": "Total Time: 120 minutes (2 hours)",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">120 m</span><span class=\"twn-cap\">Total Time: 120 minutes (2 hours) Regulatory Insight: Can&#x27;t regulate 21st century power with 20th century frameworks Next Steps: Read…</span></span>"
+      "kind": "term",
+      "trigger": "Digital Coup",
+      "anchor": "Digital Coup",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Digital Coup</span><span class=\"twn-def\">Use of digital technologies to undermine or overthrow political systems</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "148 m",
-      "anchor": "Total Time: 148 minutes (~2.5 hours)",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">148 m</span><span class=\"twn-cap\">Total Time: 148 minutes (~2</span></span>"
+      "kind": "term",
+      "trigger": "Three-Body Problem",
+      "anchor": "Three-Body Problem",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Three-Body Problem</span><span class=\"twn-def\">Chaotic system dynamics involving three interacting bodies</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-amnesia-machine-2": [
@@ -848,12 +818,6 @@
   "the-speed-trap": [
     {
       "kind": "stat",
-      "trigger": "$17.9 b",
-      "anchor": "ADHD medication revenue in 2020: $17.9",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$17.9 b</span><span class=\"twn-cap\">ADHD medication revenue in 2020: $17.9 billion</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "5%",
       "anchor": "\"High IQ\" used to mean something",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">5%</span><span class=\"twn-cap\">Top 2-5% of cognitive ability</span></span>"
@@ -880,24 +844,18 @@
     },
     {
       "kind": "stat",
-      "trigger": "106 m",
-      "anchor": "Two federal mandates coming down the",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">106 m</span><span class=\"twn-cap\">106 million cattle in the US alone</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "23%",
       "anchor": "CacheCow represents three years of building",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">23%</span><span class=\"twn-cap\">This essay is 23% AI assistance, 77% stubborn human insight—a ratio he tracks because it matters more than people think</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Neuroscience",
+      "anchor": "They're just now catching up to",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Neuroscience</span><span class=\"twn-def\">New insights into neurological diseases like Parkinson&#x27;s</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "intelligence-without-experience": [
-    {
-      "kind": "stat",
-      "trigger": "8 m",
-      "anchor": "Take object permanence—that basic understanding that",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">8 m</span><span class=\"twn-cap\">Most babies get this by around 8 months, and they certainly haven&#x27;t seen millions of examples</span></span>"
-    },
     {
       "kind": "stat",
       "trigger": "20.56%",
@@ -920,18 +878,6 @@
   "ai-wont-take-your-job-itll-take-your-purpose-thats-worse": [
     {
       "kind": "stat",
-      "trigger": "$2.3 m",
-      "anchor": "One guy told me his family's",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$2.3 m</span><span class=\"twn-cap\">Today, that same land—expanded to 900 acres—employs 4 people carrying $2.3 million in equipment debt</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$250,000 m",
-      "anchor": "Equipment they don't own. They lease",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$250,000 m</span><span class=\"twn-cap\">Who charges thousands of dollars a year for the software license to operate a $250,000 machine you supposedly bought</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "2.3%",
       "anchor": "His dad's margin last year? 2.3%.",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2.3%</span><span class=\"twn-cap\">His dad&#x27;s margin last year? 2.3%</span></span>"
@@ -944,15 +890,27 @@
     },
     {
       "kind": "stat",
-      "trigger": "$20 b",
-      "anchor": "OpenAI's valuation went from roughly $20",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$20 b</span><span class=\"twn-cap\">OpenAI&#x27;s valuation went from roughly $20 billion in 2021 to $157 billion by late 2024</span></span>"
+      "trigger": "10x",
+      "anchor": "The system disrupting everything operates 10x",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10x</span><span class=\"twn-cap\">The system disrupting everything operates 10x faster than any system designed to absorb disruption</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "12 m",
-      "anchor": "AI deployment has 6-12 month feedback",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">12 m</span><span class=\"twn-cap\">AI deployment has 6-12 month feedback loops</span></span>"
+      "trigger": "20.56%",
+      "anchor": "He writes about the intersection of",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">20.56%</span><span class=\"twn-cap\">This essay represents 20.56% AI assistance and 79</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Technology",
+      "anchor": "Not because I have some special",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Optimization",
+      "anchor": "Individual optimization. Collective catastrophe.",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Optimization</span><span class=\"twn-def\">Improving efficiency by eliminating redundancy and buffer</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "when-twos-company-threes-a-revolution": [
@@ -976,12 +934,6 @@
     },
     {
       "kind": "stat",
-      "trigger": "$11 b",
-      "anchor": "The numbers tell the story. NVIDIA",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$11 b</span><span class=\"twn-cap\">NVIDIA lost over $11 billion in China revenue when export controls tightened</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "67%",
       "anchor": "Take autonomous driving. The experimental data",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">67%</span><span class=\"twn-cap\">The experimental data shows ternary accelerators cut computation costs by 67%</span></span>"
@@ -991,33 +943,15 @@
       "trigger": "Optimization",
       "anchor": "That's not optimization. That's revolution.",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Optimization</span><span class=\"twn-def\">Improving efficiency by eliminating redundancy and buffer</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Technology",
+      "anchor": "The technical specs are genuinely impressive,",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "power-in-the-background": [
-    {
-      "kind": "stat",
-      "trigger": "$20.8 m",
-      "anchor": "Utah gave Banjo a $20.8 million",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$20.8 m</span><span class=\"twn-cap\">Utah gave Banjo a $20.8 million contract</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$8 b",
-      "anchor": "Anthropic is doing exactly the same",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$8 b</span><span class=\"twn-cap\">They&#x27;ve just got better PR and an $8 billion investment from Amazon to make it look legitimate</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$4 b",
-      "anchor": "Amazon gave the county $4 billion",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$4 b</span><span class=\"twn-cap\">Amazon gave the county $4 billion in tax breaks</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$20 m",
-      "anchor": "The stakes are higher than Utah's",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$20 m</span><span class=\"twn-cap\">The stakes are higher than Utah&#x27;s $20 million gamble on Banjo</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Constitutional AI",
@@ -1029,6 +963,30 @@
       "trigger": "Technology",
       "anchor": "— According to E.O. Wilson, who",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Silicon",
+      "anchor": "And absolutely nobody in Silicon Valley",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Silicon</span><span class=\"twn-def\">Semiconductor material used in computer chip manufacturing</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "Somewhere in New Carlisle, Indiana—a town",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AWS",
+      "anchor": "But unlike Banjo's vapourware, this actually",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AWS</span><span class=\"twn-def\">Amazon Web Services</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "CIA",
+      "anchor": "AWS is the substrate that government",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">CIA</span><span class=\"twn-def\">Central Intelligence Agency</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-10-delusion": [
@@ -1043,12 +1001,6 @@
       "trigger": "90%",
       "anchor": "Aaron Swartz got hit with federal",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">90%</span><span class=\"twn-cap\">Today, companies scrape the entire internet without consequence, extracting the surface 10% while discarding the embodied 90%</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$100 m",
-      "anchor": "Now it's 2024, and Li has",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$100 m</span><span class=\"twn-cap\">Now it&#x27;s 2024, and Li has raised $100 million for World Labs with an even grander claim: spatial intelligence will unlock AGI</span></span>"
     },
     {
       "kind": "term",
@@ -1067,32 +1019,38 @@
       "trigger": "AI",
       "anchor": "The AI industry's favorite paper might",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "TI",
+      "anchor": "What we call \"AI\" is actually",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">TI</span><span class=\"twn-def\">Texas Instruments</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years": [
     {
       "kind": "stat",
-      "trigger": "$600 b",
-      "anchor": "Here's what's actually happening: Tech giants",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$600 b</span><span class=\"twn-cap\">Here&#x27;s what&#x27;s actually happening: Tech giants are spending $600 billion building GPU infrastructure to generate $40 billion in revenue</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "13.9 b",
+      "trigger": "63%",
       "anchor": "Amazon increased quarterly capital expenditure from",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">13.9 b</span><span class=\"twn-cap\">Amazon increased quarterly capital expenditure from 13.9 billion to 22</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">63%</span><span class=\"twn-cap\">Google went up 63% to $52</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "$500 b",
-      "anchor": "These companies are spending money like",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$500 b</span><span class=\"twn-cap\">Except in 1999, the entire telecom sector spent $500 billion over five years</span></span>"
+      "trigger": "13x",
+      "anchor": "That's a 13x cost structure. You",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">13x</span><span class=\"twn-cap\">That&#x27;s a 13x cost structure</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "2 b",
-      "anchor": "OpenAI—the company everyone points to as",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2 b</span><span class=\"twn-cap\">OpenAI—the company everyone points to as proof this is real—grew revenue from 2 billion to 3</span></span>"
+      "trigger": "33%",
+      "anchor": "Microsoft claims AI is contributing 12",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">33%</span><span class=\"twn-cap\">Microsoft claims AI is contributing 12 percentage points to Azure&#x27;s 33% growth, which sounds great until you realize they spent $63…</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "4x",
+      "anchor": "His central observation is devastatingly simple:",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">4x</span><span class=\"twn-cap\">His central observation is devastatingly simple: The 1990s fiber optic bubble saw companies invest $500 billion building infrastructure…</span></span>"
     }
   ],
   "the-bullet-holes-we-cant-see": [
@@ -1424,12 +1382,6 @@
   "the-misinformation-industrial-complex": [
     {
       "kind": "stat",
-      "trigger": "$47.1 b",
-      "anchor": "The specific claims are laughably false.",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$47.1 b</span><span class=\"twn-cap\">Coca-Cola isn&#x27;t establishing &quot;packaging plants in Ontario&quot;, the company just reported record revenues of $47.1 billion with headquarters…</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "90k",
       "anchor": "Yet millions are watching these fabricated",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">90k</span><span class=\"twn-cap\">That video Sarah shared? It&#x27;s racked up about 90k views in a couple of days</span></span>"
@@ -1445,15 +1397,15 @@
       "trigger": "40%",
       "anchor": "The creators of these narratives understand",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">40%</span><span class=\"twn-cap\">They know that economic uncertainty increases susceptibility to misinformation by up to 40%, making audiences particularly vulnerable…</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "56.8%",
+      "anchor": "Recent tariff disruptions have created legitimate",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">56.8%</span><span class=\"twn-cap\">Recent tariff disruptions have created legitimate business adjustments—56.8% of Canadian exporters have taken mitigation actions—but…</span></span>"
     }
   ],
   "when-intelligence-becomes-its-own-enemy": [
-    {
-      "kind": "stat",
-      "trigger": "3 b",
-      "anchor": "Every second you spend on Facebook",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">3 b</span><span class=\"twn-cap\">A tenth of a penny seems trivial until you realize Facebook harvests 3 billion people simultaneously</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Technology",
@@ -1471,6 +1423,12 @@
       "trigger": "Cryptocurrency",
       "anchor": "Our hunter-gatherer ancestors tracked deer and",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Cryptocurrency</span><span class=\"twn-def\">Digital or virtual currency that uses cryptography for security.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "But wait—the next headline shouts about",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-startup-states-of-america": [
@@ -1599,16 +1557,16 @@
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">70%</span><span class=\"twn-cap\">states still under 70% compliance just weeks before the deadline—reveals the actual story: a desperate federal grasp for identity…</span></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "26 m",
-      "anchor": "Altman's \"World App\" represents the most",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">26 m</span><span class=\"twn-cap\">&quot; With 26 million monthly active users across 160 countries and 12 million already biometrically verified, Worldcoin has created the…</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Silicon",
       "anchor": "In a nondescript government building in",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Silicon</span><span class=\"twn-def\">Semiconductor material used in computer chip manufacturing</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Database",
+      "anchor": "Altman's \"World App\" represents the most",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Database</span><span class=\"twn-def\">Organized collection of structured information or data</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
       "kind": "term",
@@ -1692,9 +1650,9 @@
   "the-consulting-industrys-terminal-diagnosis": [
     {
       "kind": "stat",
-      "trigger": "$14 b",
+      "trigger": "7.3%",
       "anchor": "On March 21st, 2025, $14 billion",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$14 b</span><span class=\"twn-cap\">On March 21st, 2025, $14 billion in market value vanished from Accenture&#x27;s balance sheet in a single trading day</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">7.3%</span><span class=\"twn-cap\">Even as the company trumpeted better-than-expected earnings, investors fled—triggering a 7.3% plunge that revealed an inconvenient…</span></span>"
     },
     {
       "kind": "stat",
@@ -1704,15 +1662,15 @@
     },
     {
       "kind": "stat",
-      "trigger": "$10 m",
-      "anchor": "Markets reacted not to the immediate",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$10 m</span><span class=\"twn-cap\">Markets reacted not to the immediate revenue threat, but to the dangerous question it raised: What happens when clients demand proof of…</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "5%",
       "anchor": "Make no mistake: this is a",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">5%</span><span class=\"twn-cap\">Fresh graduates sacrifice their twenties to the god of billable hours, chasing the partner-level paradise that fewer than 5% will reach</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "300%",
+      "anchor": "When they chisel consulting's epitaph, it",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">300%</span><span class=\"twn-cap\">Accenture&#x27;s lasting contribution to business history? Proving that you can build a multi-billion-dollar empire selling organizations…</span></span>"
     }
   ],
   "capital-disrupted-the-ai-native-shift-across-industries": [
@@ -1730,9 +1688,9 @@
     },
     {
       "kind": "stat",
-      "trigger": "350M",
+      "trigger": "350MHz",
       "anchor": "To illustrate how this plays out",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">350M</span><span class=\"twn-cap\">I remember the excitement of receiving my Pentium II 350MHz computer and meticulously assembling it</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">350MHz</span><span class=\"twn-cap\">I remember the excitement of receiving my Pentium II 350MHz computer and meticulously assembling it</span></span>"
     },
     {
       "kind": "stat",
@@ -1748,18 +1706,12 @@
     },
     {
       "kind": "stat",
-      "trigger": "$15 m",
-      "anchor": "This isn't theoretical. The precedent is",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$15 m</span><span class=\"twn-cap\">Not only did Grosz fail to secure equity in what became a billion-dollar revenue business, but he was ultimately liable for over $15…</span></span>"
+      "trigger": "80%",
+      "anchor": "The bootstrapping path, romanticized as the",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">80%</span><span class=\"twn-cap\">When 80% of bootstrapped companies fail within 18 months due to cash constraints, we&#x27;re not witnessing natural selection but a systemic…</span></span>"
     }
   ],
   "consuming-connections-how-corporations-colonized-our-third-place": [
-    {
-      "kind": "stat",
-      "trigger": "$25 m",
-      "anchor": "And while traditional third places were",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$25 m</span><span class=\"twn-cap\">And while traditional third places were economically accessible, these alternatives stratify access by wealth—from $25 museum…</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Technology",
@@ -1782,15 +1734,15 @@
     },
     {
       "kind": "stat",
-      "trigger": "$13 b",
-      "anchor": "OpenAI's journey from non-profit to profit-seeking",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$13 b</span><span class=\"twn-cap\">Their $13 billion partnership provided the computational resources necessary for GPT-4&#x27;s development, while Microsoft gained exclusive…</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "85%",
       "anchor": "Microsoft's 49% ownership stake in OpenAI's",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">85%</span><span class=\"twn-cap\">By integrating OpenAI&#x27;s technologies across its enterprise software suite used by 85% of Fortune 500 companies, Microsoft constructs an…</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Constitutional AI",
+      "anchor": "Anthropic's \"Constitutional AI\" approach provides both",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Constitutional AI</span><span class=\"twn-def\">AI training method using AI feedback rather than human oversight</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "economic-uncharted-territory-moving-beyond-obsolete-maps": [
@@ -1841,37 +1793,31 @@
   ],
   "the-1-5-billion-fishing-trip": [
     {
-      "kind": "stat",
-      "trigger": "$1.5 b",
+      "kind": "term",
+      "trigger": "Cryptocurrency",
       "anchor": "Let’s be honest: if you spent",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$1.5 b</span><span class=\"twn-cap\">Let’s be honest: if you spent the last decade building an &quot;unhackable&quot; financial system only to watch North Korea casually walk away…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Cryptocurrency</span><span class=\"twn-def\">Digital or virtual currency that uses cryptography for security.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "5 m",
-      "anchor": "Bybit exploded onto the crypto scene",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">5 m</span><span class=\"twn-cap\">By 2021, over 5 million traders had strapped in for Bybit&#x27;s wild ride, drawn to its promise of eye-watering leverage and trades that…</span></span>"
+      "kind": "term",
+      "trigger": "Encryption",
+      "anchor": "The most remarkable aspect? Not a",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Encryption</span><span class=\"twn-def\">Data protection</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "$1.7 b",
-      "anchor": "In 2022, North Korea executed a",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$1.7 b</span><span class=\"twn-cap\">In 2022, North Korea executed a series of sophisticated cryptocurrency heists, amassing an impressive $1.7 billion</span></span>"
+      "kind": "term",
+      "trigger": "Cryptography",
+      "anchor": "This isn't advanced cryptography; it's computing's",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Cryptography</span><span class=\"twn-def\">A practice of securing information and communications through the use of codes so that only those for whom the information is intended can read and process it.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "$1 m",
-      "anchor": "To put this in perspective, major",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$1 m</span><span class=\"twn-cap\">Apple&#x27;s maximum bounty reaches $1 million for the most severe exploits</span></span>"
+      "kind": "term",
+      "trigger": "Cybersecurity",
+      "anchor": "As cybersecurity researcher Ross Anderson famously",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Cybersecurity</span><span class=\"twn-def\">Sports technology</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "no-collar-jobs-beyond-the-ai-disruption": [
-    {
-      "kind": "stat",
-      "trigger": "24 m",
-      "anchor": "This paper examines the hidden transformation",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">24 m</span><span class=\"twn-cap\">We analyze the 18-24 month horizon that should bring new equilibrium and provide frameworks for navigating this transition effectively</span></span>"
-    },
     {
       "kind": "stat",
       "trigger": "25%",
@@ -1901,6 +1847,12 @@
       "trigger": "26%",
       "anchor": "As the HR Trends Report identifies,",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">26%</span><span class=\"twn-cap\">As the HR Trends Report identifies, only 26% of companies utilize internal talent marketplaces despite 40% of executives believing AI…</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "60%",
+      "anchor": "The magnitude of workforce reduction (30-60%",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">60%</span><span class=\"twn-cap\">The magnitude of workforce reduction (30-60% in technology sectors) fundamentally contradicts cyclical unemployment patterns</span></span>"
     }
   ],
   "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day": [
@@ -1938,12 +1890,6 @@
     },
     {
       "kind": "stat",
-      "trigger": "6 m",
-      "anchor": "3-6 months",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">6 m</span><span class=\"twn-cap\">3-6 months</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "18,000x",
       "anchor": "18,000x temporal depth",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">18,000x</span><span class=\"twn-cap\">18,000x temporal depth</span></span>"
@@ -1953,6 +1899,12 @@
       "trigger": "200x",
       "anchor": "200x redundancy",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">200x</span><span class=\"twn-cap\">200x redundancy</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "1.71x",
+      "anchor": "1.71x density",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">1.71x</span><span class=\"twn-cap\">1.71x density</span></span>"
     }
   ],
   "not-just-another-essay-about-deepseek-a-ransomware-edition": [
@@ -2009,12 +1961,6 @@
   ],
   "the-computational-autocracy": [
     {
-      "kind": "stat",
-      "trigger": "$1.5 b",
-      "anchor": "Consider the incentives at play: When",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$1.5 b</span><span class=\"twn-cap\">Consider the incentives at play: When OpenAI&#x27;s Sam Altman seeks trillions for chip development, or when Microsoft invests $1.5 billion…</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Computational autocracy",
       "anchor": "Traditional autocracy operates through visible force",
@@ -2031,6 +1977,12 @@
       "trigger": "AI",
       "anchor": "This was my first impression after",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "UAE",
+      "anchor": "Despite being dismissed as a mere",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">UAE</span><span class=\"twn-def\">United Arab Emirates</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "from-likes-to-leaves-when-trust-became-the-ultimate-unfriend": [
@@ -2108,12 +2060,6 @@
   "no-one-leaves-a-good-company-an-openai-story": [
     {
       "kind": "stat",
-      "trigger": "$10 b",
-      "anchor": "The financial architecture of the partnership",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$10 b</span><span class=\"twn-cap\">The $10 billion investment, while seemingly straightforward, introduced subtle but profound alterations to OpenAI&#x27;s incentive structures:</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "100x",
       "anchor": "The capped-profit structure, supposedly ensuring broad",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100x</span><span class=\"twn-cap\">The 100x return cap, while appearing to limit profit motivation, instead encouraged aggressive value extraction within those constraints</span></span>"
@@ -2129,32 +2075,38 @@
       "trigger": "AI",
       "anchor": "OpenAI's founding premise contained a fundamental",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AGI",
+      "anchor": "Here's where we must confront an",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AGI</span><span class=\"twn-def\">Artificial General Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "i-call-dibs-an-intellectual-property-paradox": [
     {
-      "kind": "stat",
-      "trigger": "$399 m",
+      "kind": "term",
+      "trigger": "Silicon",
       "anchor": "Here’s a quick snapshot of the",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$399 m</span><span class=\"twn-cap\">In this colosseum of capitalism, Apple and Samsung once locked horns in a $399 million death match over the cutting-edge concept of</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$99.75 m",
-      "anchor": "This rectangular rumble cost a cool",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$99.75 m</span><span class=\"twn-cap\">This rectangular rumble cost a cool $99.75 million per corner – enough to fund a small nation&#x27;s R&amp;D budget or, more practically, to…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$9 b",
-      "anchor": "As if the rectangular rumble wasn't",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$9 b</span><span class=\"twn-cap\">&quot; These Silicon Valley juggernauts locked horns in a $9 billion legal tango over Java APIs - essentially fighting over who owns the…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Silicon</span><span class=\"twn-def\">Semiconductor material used in computer chip manufacturing</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
       "kind": "term",
       "trigger": "Copyright",
       "anchor": "And then there's the meme economy,",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Copyright</span><span class=\"twn-def\">Legal right that grants the creator of an original work exclusive rights to its use and distribution</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Consciousness",
+      "anchor": "In this IP-obsessed utopia (or dystopia,",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Consciousness</span><span class=\"twn-def\">Subjective experience of awareness</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "GPS",
+      "anchor": "As if the rectangular rumble wasn't",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">GPS</span><span class=\"twn-def\">Global Positioning System: the signal a jammer in Iran was degrading, and that NASA science satellites turned out to be able to locate from orbit. Even the jammer leaves a residual. &quot;In statistics, the residuals are not garbage — they are where you discover the model is wrong. The same is true of a person.&quot;</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind": [
@@ -2196,12 +2148,6 @@
     }
   ],
   "the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation": [
-    {
-      "kind": "stat",
-      "trigger": "$8 b",
-      "anchor": "Amazon's strategic maneuver with Anthropic isn't",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$8 b</span><span class=\"twn-cap\">That $8 billion isn&#x27;t merely buying a customer; it&#x27;s engineering a perception-altering field that warps the very fabric of the tech…</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Silicon",
@@ -2261,30 +2207,6 @@
   ],
   "the-great-marketing-delusion": [
     {
-      "kind": "stat",
-      "trigger": "45 m",
-      "anchor": "Why do billion-dollar companies consistently fail",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">45 m</span><span class=\"twn-cap\">Why do billion-dollar companies consistently fail to understand basic human psychology? Consider a scene playing out daily across…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "60 b",
-      "anchor": "The rail company's proposed solution to",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">60 b</span><span class=\"twn-cap\">The rail company&#x27;s proposed solution to customer complaints about journey times? A £60 billion high-speed rail project that would reduce…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$200 m",
-      "anchor": "What happens when we take this",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$200 m</span><span class=\"twn-cap\">When Samsung charges $200 more for a functionally identical television, they&#x27;re not selling better components—they&#x27;re selling better…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "30 m",
-      "anchor": "Case Study: British Gas Engineers Traditional",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">30 m</span><span class=\"twn-cap\">Case Study: British Gas Engineers Traditional approach: Reduce appointment windows Neurometric solution: Text customers 30 minutes…</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Artificial Intelligence",
       "anchor": "Artificial Intelligence Integration:",
@@ -2295,6 +2217,24 @@
       "trigger": "Optimization",
       "anchor": "Standing in gleaming corporate headquarters worldwide,",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Optimization</span><span class=\"twn-def\">Improving efficiency by eliminating redundancy and buffer</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Consciousness",
+      "anchor": "What if everything we think we",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Consciousness</span><span class=\"twn-def\">Subjective experience of awareness</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "ROI",
+      "anchor": "\"The bastard with the spreadsheet always",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">ROI</span><span class=\"twn-def\">Return on Investment</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "AI",
+      "anchor": "As we stand at the threshold",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race": [
@@ -2338,15 +2278,9 @@
   "from-tasks-to-systems-the-true-ai-revolution-in-services": [
     {
       "kind": "stat",
-      "trigger": "$176 b",
-      "anchor": "Let's make this concrete: Consider how",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$176 b</span><span class=\"twn-cap\">Most discussions center on automating document review or streamlining basic research—a $176 billion opportunity, by conventional metrics</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "16 b",
+      "trigger": "30%",
       "anchor": "For the GenZ and GenA folks",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">16 b</span><span class=\"twn-cap\">For the GenZ and GenA folks reading this, this is the equivalent of let’s say — upgrading from your iPhone 15 to your iPhone16 because…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">30%</span><span class=\"twn-cap\">For the GenZ and GenA folks reading this, this is the equivalent of let’s say — upgrading from your iPhone 15 to your iPhone16 because…</span></span>"
     },
     {
       "kind": "term",
@@ -2359,6 +2293,12 @@
       "trigger": "Technology",
       "anchor": "After a decade studying technology's impact",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "DNA",
+      "anchor": "The revolution isn't in the size",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">DNA</span><span class=\"twn-def\">Deoxyribonucleic Acid</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-quantum-dance-shattering-our-understanding-of-matter": [
@@ -2454,33 +2394,33 @@
     },
     {
       "kind": "stat",
-      "trigger": "15 m",
-      "anchor": "Exercise: 30-Day Creative ChallengeCommit to a",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">15 m</span><span class=\"twn-cap\">Each day, spend 15 minutes on a creative task</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "10 m",
-      "anchor": "Exercise: Design Thinking ChallengeChoose a problem",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10 m</span><span class=\"twn-cap\">Spend 10 minutes on each stage, focusing on how this structured approach changes your perspective on the problem</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "20%",
       "anchor": "Google's famous '20% time' policy, which",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">20%</span><span class=\"twn-cap\">Google&#x27;s famous &#x27;20% time&#x27; policy, which allowed employees to spend one-fifth of their work week on passion projects, exemplifies this…</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "30 m",
-      "anchor": "Exercise: Learning SprintCommit to a one-week",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">30 m</span><span class=\"twn-cap\">Spend 30 minutes each day learning about it through online courses, podcasts, or books</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "82%",
       "anchor": "A study by Adobe and Forrester",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">82%</span><span class=\"twn-cap\">Moreover, 82% of these companies reported a positive correlation between creativity and business results</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "3M",
+      "anchor": "Case Study: Creativity at 3M3M, known",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">3M</span><span class=\"twn-cap\">Case Study: Creativity at 3M3M, known for products like Post-it Notes, has long been a beacon of corporate creativity</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Open Source",
+      "anchor": "Case Study: Open Source SoftwareThe open-source",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Open Source</span><span class=\"twn-def\">Software whose source code is freely available for modification</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Artificial Intelligence",
+      "anchor": "Case Study: AI in Music CompositionAI",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Artificial Intelligence</span><span class=\"twn-def\">Impact on industries and decision-making processes</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing": [
@@ -2544,12 +2484,6 @@
   "the-audio-revolution-ai-and-the-future-of-sound": [
     {
       "kind": "stat",
-      "trigger": "11 m",
-      "anchor": "Imagine working on a podcast about",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">11 m</span><span class=\"twn-cap\">As you describe the tense moments leading up to the Apollo 11 moon landing, the AI automatically fades in a suspenseful orchestral…</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "150%",
       "anchor": "The result? Sarah was able to",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">150%</span><span class=\"twn-cap\">Her audience grew by 150% in six months, and she was able to monetize her podcast more effectively due to the increased content production</span></span>"
@@ -2561,24 +2495,24 @@
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">70%</span><span class=\"twn-cap\">By adopting AI-powered voice synthesis and editing tools, the department was able to reduce production time by 70% and cut costs by 60%</span></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "2 m",
-      "anchor": "This democratization is leading to an",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2 m</span><span class=\"twn-cap\">Podcast hosting platform Buzzsprout reports that the number of podcasts has grown from about 500,000 in 2018 to over 2 million in 2021</span></span>"
+      "kind": "term",
+      "trigger": "AI-Powered",
+      "anchor": "Imagine a world where crafting an",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI-Powered</span><span class=\"twn-def\">Systems or tools enhanced by artificial intelligence capabilities.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Technology",
+      "anchor": "This technology is not just about",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things": [
     {
       "kind": "stat",
-      "trigger": "1 b",
-      "anchor": "The impact of UWB on IoT",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">1 b</span><span class=\"twn-cap\">ABI Research projects that by 2025, there will be over 1 billion annual device shipments featuring UWB technology</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$72 m",
+      "trigger": "47.3%",
       "anchor": "A study by MarketsandMarkets predicts that",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$72 m</span><span class=\"twn-cap\">A study by MarketsandMarkets predicts that the automotive UWB market will grow from $72 million in 2021 to $498 million by 2026, a CAGR…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">47.3%</span><span class=\"twn-cap\">A study by MarketsandMarkets predicts that the automotive UWB market will grow from $72 million in 2021 to $498 million by 2026, a CAGR…</span></span>"
     },
     {
       "kind": "stat",
@@ -2591,15 +2525,15 @@
       "trigger": "Technology",
       "anchor": "Imagine a world where your car",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Manufacturing",
+      "anchor": "These case studies demonstrate the versatility",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Manufacturing</span><span class=\"twn-def\">Efforts to revitalize industrial production</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-digital-biomarker-revolution-transforming-healthcare-by-2030": [
-    {
-      "kind": "stat",
-      "trigger": "422 m",
-      "anchor": "For the 422 million people worldwide",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">422 m</span><span class=\"twn-cap\">For the 422 million people worldwide living with diabetes, digital biomarkers are already transforming care</span></span>"
-    },
     {
       "kind": "stat",
       "trigger": "98.5%",
@@ -2629,15 +2563,15 @@
       "trigger": "50%",
       "anchor": "Another example comes from Koneksa Health,",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">50%</span><span class=\"twn-cap\">Another example comes from Koneksa Health, which reported that one of its pharmaceutical clients reduced data collection costs by 50%…</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Technology",
+      "anchor": "The true power of digital biomarkers",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-simulation-trap-how-virtual-tourism-is-killing-real-culture": [
-    {
-      "kind": "stat",
-      "trigger": "$24 b",
-      "anchor": "The virtual tourism industry, worth $24",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$24 b</span><span class=\"twn-cap\">The virtual tourism industry, worth $24 billion and growing, sells itself as the great democratizer of travel</span></span>"
-    },
     {
       "kind": "stat",
       "trigger": "40%",
@@ -2655,6 +2589,12 @@
       "trigger": "Consciousness",
       "anchor": "This is not another Luddite screed",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Consciousness</span><span class=\"twn-def\">Subjective experience of awareness</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Silicon",
+      "anchor": "The industry's response to such criticism",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Silicon</span><span class=\"twn-def\">Semiconductor material used in computer chip manufacturing</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality": [
@@ -2712,15 +2652,15 @@
   "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self": [
     {
       "kind": "stat",
-      "trigger": "$11.3 b",
-      "anchor": "The $11.3 billion self-improvement industry has",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$11.3 b</span><span class=\"twn-cap\">The $11.3 billion self-improvement industry has constructed an elaborate mythology around the art of self-introduction, built upon a…</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "100%",
       "anchor": "100% Humanly Curated Collection of Curious",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100%</span><span class=\"twn-cap\">100% Humanly Curated Collection of Curious Content</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Neuroscience",
+      "anchor": "The $11.3 billion self-improvement industry has",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Neuroscience</span><span class=\"twn-def\">New insights into neurological diseases like Parkinson&#x27;s</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
       "kind": "term",
@@ -2738,12 +2678,6 @@
   "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance": [
     {
       "kind": "stat",
-      "trigger": "$1 b",
-      "anchor": "Half a century later, in the",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$1 b</span><span class=\"twn-cap\">Apple, having strategically acquired Intel&#x27;s smartphone modem business for $1 billion, unveiled the U1 chip in their iPhone 11 series</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "10.6 GHz",
       "anchor": "The technical specifications reveal its true",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">10.6 GHz</span><span class=\"twn-cap\">1 and 10.6 GHz, the U1 emits incredibly brief pulses – lasting less than a nanosecond – across a minimum bandwidth of 500 MHz</span></span>"
@@ -2759,6 +2693,12 @@
       "trigger": "92%",
       "anchor": "The COVID-19 pandemic provided the perfect",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">92%</span><span class=\"twn-cap\">Singapore&#x27;s TraceTogether program reached 92% of their population</span></span>"
+    },
+    {
+      "kind": "stat",
+      "trigger": "95%",
+      "anchor": "The Massachusetts Institute of Technology's research",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">95%</span><span class=\"twn-cap\">Their 2013 study showed that human mobility traces are highly unique – just four spatio-temporal points are enough to identify 95% of…</span></span>"
     }
   ],
   "the-loyalty-revolution-from-punch-cards-to-predictive-analytics": [
@@ -2775,16 +2715,16 @@
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">7%</span><span class=\"twn-cap\">The savings? Starbucks saw a 7% revenue increase attributed to their loyalty program in 2020</span></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "$26 b",
-      "anchor": "But let's not stop there. Consider",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$26 b</span><span class=\"twn-cap\">Delta&#x27;s SkyMiles program was valued at $26 billion in 2020, while the airline&#x27;s market cap was around $19 billion</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Technology",
       "anchor": "So, fasten your seatbelts as we",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "AI-Powered",
+      "anchor": "In the past, companies relied on",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI-Powered</span><span class=\"twn-def\">Systems or tools enhanced by artificial intelligence capabilities.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake": [
@@ -2815,48 +2755,42 @@
   ],
   "vrs-quest-for-50-million": [
     {
-      "kind": "stat",
-      "trigger": "50 m",
+      "kind": "term",
+      "trigger": "Experience Economy",
       "anchor": "In the fast-paced world of technology,",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">50 m</span><span class=\"twn-cap\">In the fast-paced world of technology, reaching 50 million users is more than just a milestone—it&#x27;s a testament to a product&#x27;s ability…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Experience Economy</span><span class=\"twn-def\">Immersive event industry transformation</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "171 m",
-      "anchor": "As of 2023, the global VR",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">171 m</span><span class=\"twn-cap\">As of 2023, the global VR market is estimated to have around 171 million users</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "$3.6 b",
+      "kind": "acronym",
+      "trigger": "AR",
       "anchor": "Investment in VR has been substantial.",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$3.6 b</span><span class=\"twn-cap\">In 2022, VR/AR startups raised over $3.6 billion in funding</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AR</span><span class=\"twn-def\">Augmented Reality</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage": [
     {
       "kind": "stat",
-      "trigger": "5M",
+      "trigger": "5MW",
       "anchor": "Swiss-U.S. startup Energy Vault has taken",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">5M</span><span class=\"twn-cap\">In 2020, they completed a commercial-scale 5MW plant in Switzerland, demonstrating the viability of their &quot;gravity-based long-duration…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">5MW</span><span class=\"twn-cap\">In 2020, they completed a commercial-scale 5MW plant in Switzerland, demonstrating the viability of their &quot;gravity-based long-duration…</span></span>"
     },
     {
       "kind": "stat",
-      "trigger": "$1.6 b",
-      "anchor": "Investment in the sector is growing.",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$1.6 b</span><span class=\"twn-cap\">Energy Vault, for instance, went public via a SPAC merger in 2022, valuing the company at about $1.6 billion</span></span>"
+      "trigger": "90%",
+      "anchor": "Energy Vault's system boasts a round-trip",
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">90%</span><span class=\"twn-cap\">Energy Vault&#x27;s system boasts a round-trip efficiency of 80-90%, comparable to lithium-ion batteries but with a much longer lifespan</span></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "$620 b",
-      "anchor": "The potential market is enormous. Bloomberg",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$620 b</span><span class=\"twn-cap\">Bloomberg New Energy Finance estimates that the energy storage market could grow to $620 billion in investment by 2040</span></span>"
+      "kind": "term",
+      "trigger": "Energy Storage",
+      "anchor": "Some researchers are looking at even",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Energy Storage</span><span class=\"twn-def\">Systems for preserving power</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
-      "kind": "stat",
-      "trigger": "30 GW",
-      "anchor": "According to the International Renewable Energy",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">30 GW</span><span class=\"twn-cap\">According to the International Renewable Energy Agency, the world needs to increase its energy storage capacity from 30 GWh in 2017 to…</span></span>"
+      "kind": "term",
+      "trigger": "Renewable Energy",
+      "anchor": "As Dr. Jane Smith, lead researcher",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Renewable Energy</span><span class=\"twn-def\">Residential power generation innovation</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-creator-economy-from-experience-to-creation": [
@@ -3078,12 +3012,6 @@
     }
   ],
   "w16-thenewestlatest-52": [
-    {
-      "kind": "stat",
-      "trigger": "2008 b",
-      "anchor": "🎈 FUN FACT — The legendary",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2008 b</span><span class=\"twn-cap\">🎈 FUN FACT — The legendary Polaroid camera was almost lost to history, but was saved from demolition in 2008 by the Austrian…</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Technology",
@@ -3329,10 +3257,10 @@
   ],
   "im-an-elevenlabs-pro": [
     {
-      "kind": "stat",
-      "trigger": "$2 m",
+      "kind": "acronym",
+      "trigger": "UK",
       "anchor": "Back in November of 2022, I",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$2 m</span><span class=\"twn-cap\">This was before their $2 million round</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">UK</span><span class=\"twn-def\">United Kingdom</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     },
     {
       "kind": "acronym",
@@ -3474,18 +3402,6 @@
   "from-ar-glasses-to-reality-bending-lenses": [
     {
       "kind": "stat",
-      "trigger": "55 m",
-      "anchor": "The features that are present in",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">55 m</span><span class=\"twn-cap\">The following video has over 55 million views</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "6M",
-      "anchor": "Apple Vision Pro + Formula 1",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">6M</span><span class=\"twn-cap\">com/6MbLKEDqOB</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "100%",
       "anchor": "100% Humanly Curated Collection of Curious",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100%</span><span class=\"twn-cap\">100% Humanly Curated Collection of Curious Content</span></span>"
@@ -3495,6 +3411,18 @@
       "trigger": "Technology",
       "anchor": "Just imagine strolling down a bustling",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Silicon",
+      "anchor": "We remember the monolithic mainframes of",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Silicon</span><span class=\"twn-def\">Semiconductor material used in computer chip manufacturing</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "VR",
+      "anchor": "Advanced AR embedded deeply with geospatial",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">VR</span><span class=\"twn-def\">Virtual Reality</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "w08-timewellspent-44": [
@@ -3545,14 +3473,6 @@
       "trigger": "LED",
       "anchor": "Discover the art of creating stunning",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">LED</span><span class=\"twn-def\">Light Emitting Diode</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
-    }
-  ],
-  "w07-thenewestlatest-43": [
-    {
-      "kind": "stat",
-      "trigger": "$2 b",
-      "anchor": "Former Disney Imagineers are working on",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$2 b</span><span class=\"twn-cap\">Former Disney Imagineers are working on a $2 billion theme park and resort project called American Heartland in northeast Oklahoma</span></span>"
     }
   ],
   "role-of-ai-in-eco-energy": [
@@ -3656,12 +3576,6 @@
     },
     {
       "kind": "stat",
-      "trigger": "100 m",
-      "anchor": "Companies like Deep Genomics are using",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100 m</span><span class=\"twn-cap\">The AI sifted through over 2,400 compounds and 100 million data points to identify the promising drug candidate</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "18.2%",
       "anchor": "This isn't a far-off dream—it's happening",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">18.2%</span><span class=\"twn-cap\">In fact, this system has helped reduce sepsis-related mortality by 18.2% in its first year of implementation</span></span>"
@@ -3671,6 +3585,12 @@
       "trigger": "98%",
       "anchor": "For example, AliveCor's KardiaMobile device, coupled",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">98%</span><span class=\"twn-cap\">The AI can detect atrial fibrillation, a common heart rhythm disorder, with 98% sensitivity and 97% specificity</span></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Artificial Intelligence",
+      "anchor": "Imagine a world where diseases are",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Artificial Intelligence</span><span class=\"twn-def\">Impact on industries and decision-making processes</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "meta-doubles-down-on-agi": [
@@ -3697,12 +3617,6 @@
   ],
   "crash-course-on-whats-coming": [
     {
-      "kind": "stat",
-      "trigger": "2 m",
-      "anchor": "Consider modern car key FOBs: initially",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">2 m</span><span class=\"twn-cap\">With a transmission speed of just 2 milliseconds, UWB is much harder to hack and offers increased security and precision</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Technology",
       "anchor": "In contemporary society, our gaze is",
@@ -3717,19 +3631,13 @@
   ],
   "the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow": [
     {
-      "kind": "stat",
-      "trigger": "250 m",
+      "kind": "acronym",
+      "trigger": "TV",
       "anchor": "Streaming media has overtaken linear TV",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">250 m</span><span class=\"twn-cap\">Netflix is the best example of this change; it has acquired 250 million paying homes, making $6 billion in cash flow</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">TV</span><span class=\"twn-def\">Television</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "writing-as-a-process-of-self-discovery": [
-    {
-      "kind": "stat",
-      "trigger": "45 m",
-      "anchor": "When nature was not afoot, the",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">45 m</span><span class=\"twn-cap\">For a time, I would start my day this way and the experience would last anywhere from a minute to what became a fairly regular 45 minutes</span></span>"
-    },
     {
       "kind": "acronym",
       "trigger": "GPT",
@@ -3746,39 +3654,39 @@
   "apples-privacy-stretching-across-an-ultra-wideband": [
     {
       "kind": "stat",
-      "trigger": "100 m",
-      "anchor": "Now, for a little bit of",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100 m</span><span class=\"twn-cap\">Now, for a little bit of context, WiFi can detect your location with an accuracy of roughly six feet, and a range of roughly 100 meters</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "70 m",
-      "anchor": "The next step up is Bluetooth,",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">70 m</span><span class=\"twn-cap\">It’s also a great way to utilize a low-frequency Bluetooth signal to track positioning, at an accuracy of up to one meter and a range of…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "200 m",
-      "anchor": "And lastly, we arrive at Ultra-Wideband",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">200 m</span><span class=\"twn-cap\">And lastly, we arrive at Ultra-Wideband that has an accuracy of roughly 4 inches for location, however, the range for UWB is up to 200…</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "$12k",
       "anchor": "As technology advances, so do the",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$12k</span><span class=\"twn-cap\">As technology advances, so do the technologies that allow bad actors to simply purchase a signal capture device delivered right to your…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "424 K",
-      "anchor": "Ultra-Wideband technology can transfer data at",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">424 K</span><span class=\"twn-cap\">This is much higher than NFC (424 Kbps) and Bluetooth (2</span></span>"
     },
     {
       "kind": "term",
       "trigger": "Technology",
       "anchor": "Utilizing their custom A-series and M-series",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Encryption",
+      "anchor": "Even extending the UWB with Impulse",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Encryption</span><span class=\"twn-def\">Data protection</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Cybersecurity",
+      "anchor": "Embedding privacy into seemingly mundane features",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Cybersecurity</span><span class=\"twn-def\">Sports technology</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "RFID",
+      "anchor": "The next technology to attempt a",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">RFID</span><span class=\"twn-def\">Radio Frequency Identification</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "BMW",
+      "anchor": "All of these technologies are transferring",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">BMW</span><span class=\"twn-def\">Bayerische Motoren Werke (Bavarian Motor Works)</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "truth-or-deception-the-double-edged-sword-of-digital-authenticity": [
@@ -3858,9 +3766,9 @@
   "the-ai-powerhouses-amazon-microsoft-and-the-battle-for-ai-supremacy": [
     {
       "kind": "stat",
-      "trigger": "$1.25 b",
+      "trigger": "49%",
       "anchor": "Emphasizing this question, Amazon’s backing of",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$1.25 b</span><span class=\"twn-cap\">Based on recent data, Amazon has funded Anthropic with an immediate capital deployment of $1.25 billion with an option for either party…</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">49%</span><span class=\"twn-cap\">By 2021, that number increased to $3 billion, and recently added another $10 billion at a $29 billion valuation and 49% equity</span></span>"
     },
     {
       "kind": "term",
@@ -3891,12 +3799,6 @@
   ],
   "laundered-data": [
     {
-      "kind": "stat",
-      "trigger": "125 m",
-      "anchor": "Pre-trained transformers are large language models",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">125 m</span><span class=\"twn-cap\">The OPT library provides a suite of decoder-only pre-trained transformers ranging from 125 million to 175 billion parameters4,1</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Fine-tuning",
       "anchor": "Advancements in model training and fine-tuning",
@@ -3913,6 +3815,12 @@
       "trigger": "AI",
       "anchor": "We have learned how to launder",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI</span><span class=\"twn-def\">Artificial Intelligence</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "LLM",
+      "anchor": "However, pre-training of LLMs is conducted",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">LLM</span><span class=\"twn-def\">Large Language Model</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-path-to-artificial-general-intelligence": [
@@ -4084,12 +3992,6 @@
     },
     {
       "kind": "stat",
-      "trigger": "4 m",
-      "anchor": "GitHub Copilot X is an AI-powered",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">4 m</span><span class=\"twn-cap\">It is made with OpenAI’s Codex model, a descendent of GPT-3, and adopts OpenAI’s new GPT-4 model</span></span>"
-    },
-    {
-      "kind": "stat",
       "trigger": "46%",
       "anchor": "GitHub Copilot has been a major",
       "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">46%</span><span class=\"twn-cap\">By leveraging OpenAI&#x27;s Codex model, it is now responsible for writing 46% of all code</span></span>"
@@ -4099,6 +4001,12 @@
       "trigger": "AI-Powered",
       "anchor": "The tool is designed to enable",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">AI-Powered</span><span class=\"twn-def\">Systems or tools enhanced by artificial intelligence capabilities.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "term",
+      "trigger": "Technology",
+      "anchor": "Codex and GPT-3 can revolutionize software",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "the-rise-of-command-engineering": [
@@ -4137,12 +4045,6 @@
   ],
   "the-rise-of-bitcoin-ordinals-why-they-matter": [
     {
-      "kind": "stat",
-      "trigger": "100 m",
-      "anchor": "Every Bitcoin consists of 100 million",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">100 m</span><span class=\"twn-cap\">Every Bitcoin consists of 100 million Satoshis, or SATs, which are indivisible</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Cryptocurrency",
       "anchor": "Bitcoin has been a popular cryptocurrency",
@@ -4156,12 +4058,6 @@
     }
   ],
   "is-layerzeros-stargate-a-portal-to-the-next-big-thing": [
-    {
-      "kind": "stat",
-      "trigger": "$400 m",
-      "anchor": "Have you heard of Stargate Finance?",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$400 m</span><span class=\"twn-cap\">Stargate Finance has stirred up the crypto world with its impressive total value locked of almost $400 million</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Cryptocurrency",
@@ -4179,6 +4075,12 @@
       "trigger": "ETH",
       "anchor": "That’s from the horse’s mouth. My",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">ETH</span><span class=\"twn-def\">Eidgenössische Technische Hochschule</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
+    },
+    {
+      "kind": "acronym",
+      "trigger": "NFT",
+      "anchor": "When I first started watching LayerZero",
+      "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">NFT</span><span class=\"twn-def\">Non-Fungible Token</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
   "revolutionizing-omnichain-transactions-with-layerzero": [
@@ -4191,24 +4093,10 @@
   ],
   "linkedin-isnt-good-enough": [
     {
-      "kind": "stat",
-      "trigger": "88m",
-      "anchor": "If you found this useful, by",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">88m</span><span class=\"twn-cap\">If you have a team that wants to go back to the future, you know where to find me ☺ #88milesperhour</span></span>"
-    },
-    {
       "kind": "term",
       "trigger": "Technology",
       "anchor": "It all started when I got",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">Technology</span><span class=\"twn-def\">The applied tools, systems, and infrastructure through which scientific knowledge is put to practical use.</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
-    }
-  ],
-  "linkedin-is-just-like-dating-courtship-rules": [
-    {
-      "kind": "stat",
-      "trigger": "300 m",
-      "anchor": "Now that LinkedIn has surpassed the",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">300 m</span><span class=\"twn-cap\">Now that LinkedIn has surpassed the +300 million member club, this is no longer just a resume site, it is a behemoth content platform…</span></span>"
     }
   ],
   "callawaygolf-has-a-secret-weapon-innovation": [
@@ -4225,35 +4113,7 @@
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">API</span><span class=\"twn-def\">Application Programming Interface</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
     }
   ],
-  "say-viral-one-more-time-ill-punch-you-in-the-throat": [
-    {
-      "kind": "stat",
-      "trigger": "18 m",
-      "anchor": "So Mr. Viral, what’s your digital",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">18 m</span><span class=\"twn-cap\">92 now? &lt;sarcasm&gt;(based off of 78 new likes on the page through the ingenious viral campaign that took all of 18 minutes to schedule and…</span></span>"
-    },
-    {
-      "kind": "stat",
-      "trigger": "30 m",
-      "anchor": "This make you go viral business,",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">30 m</span><span class=\"twn-cap\">In one experiment conducted over a period of 30 months, I managed to get retweeted over a million times which resulted in just over 200…</span></span>"
-    }
-  ],
-  "dear-rich-white-people": [
-    {
-      "kind": "stat",
-      "trigger": "$600 m",
-      "anchor": "Other rich (white) people prefer boats,",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">$600 m</span><span class=\"twn-cap\">Loved it so much started combing the internets for used cruise ships for sale, everything below $600 million dollars, couldn’t go any…</span></span>"
-    }
-  ],
   "the-cult-ure-of-innovation": [
-    {
-      "kind": "stat",
-      "trigger": "15m",
-      "anchor": "Near the beginning of 2013, the",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">15m</span><span class=\"twn-cap\">Near the beginning of 2013, the average mobile user consumed 15mb of content</span></span>"
-    },
     {
       "kind": "term",
       "trigger": "Technology",
@@ -4273,14 +4133,6 @@
       "trigger": "BBC",
       "anchor": "Then came a show that I",
       "note_html": "<span class=\"tw-note tw-note--term\"><span class=\"twn-term\">BBC</span><span class=\"twn-def\">British Broadcasting Corporation</span><a class=\"twn-link\" href=\"/lexicon/\">In the Lexicon &rarr;</a></span>"
-    }
-  ],
-  "for-the-jet-bound-digital-nomads": [
-    {
-      "kind": "stat",
-      "trigger": "425,990 m",
-      "anchor": "In the past seven years I’ve",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">425,990 m</span><span class=\"twn-cap\">In the past seven years I’ve accumulated 425,990 miles over the course of 141 trips that lasted 1,688 days through 62 cities and 9 countries</span></span>"
     }
   ]
 }
