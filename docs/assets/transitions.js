@@ -47,7 +47,7 @@
     '  transition: transform 520ms cubic-bezier(0.19, 1, 0.22, 1);',
     '}',
     '#tw-tray.tw-peek-shown {',
-    '  transform: translateY(' + FOOT_SLIM + 'px);',
+    '  transform: translateY(calc(100% - ' + PEEK_SLIM + 'px));',
     '}',
     '#tw-tray.tw-foot-shown {',
     '  transform: translateY(0);',
@@ -163,50 +163,15 @@
     '}',
     '#tw-tray.tw-open #tw-peek-cta { opacity: 1; }',
 
-    /* Footer — bar at rest, expands with tray on hover */
+    /* Footer — just the colophon itself, no intermediate bar */
     '#tw-foot {',
     '  position: relative;',
-    '  overflow: hidden;',
-    '  height: ' + FOOT_SLIM + 'px;',
-    '  will-change: height;',
-    '  transition: height 520ms cubic-bezier(0.19, 1, 0.22, 1);',
+    '  overflow-y: auto;',
+    '  max-height: 60vh;',
     '}',
-    '#tw-tray.tw-open #tw-foot {',
-    '  height: var(--tw-foot-full, 400px);',
-    '}',
-    '#tw-foot-bar {',
-    '  position: relative;',
-    '  z-index: 1;',
-    '  height: ' + FOOT_SLIM + 'px;',
-    '  display: flex;',
-    '  align-items: center;',
-    '  justify-content: space-between;',
-    '  padding: 0 40px;',
-    '  background: var(--ink, #1a1814);',
-    '  max-width: 1080px;',
-    '  width: 100%;',
-    '  margin: 0 auto;',
-    '  box-sizing: border-box;',
-    '}',
-    '@media (max-width: 680px) {',
-    '  #tw-foot-bar { padding: 0 12px; }',
-    '}',
-    '#tw-foot-bar-mark, #tw-foot-bar-action {',
-    '  font-family: var(--mono, monospace);',
-    '  font-size: 10px;',
-    '  letter-spacing: 0.12em;',
-    '  text-transform: uppercase;',
-    '}',
-    '#tw-foot-bar-mark { color: rgba(255,255,255,0.45); }',
-    '#tw-foot-bar-action {',
-    '  color: rgba(255,255,255,0.35);',
-    '  transition: color 200ms ease;',
-    '}',
-    '#tw-tray.tw-open #tw-foot-bar-action { color: rgba(255,255,255,0.7); }',
     '#tw-foot footer.tw-colophon {',
     '  position: relative;',
     '  margin: 0;',
-    '  overflow-y: auto;',
     '}',
 
     /* No body padding needed — tray is hidden at rest and only reveals
@@ -300,25 +265,12 @@
     });
   }
 
-  /* ── Footer (bottom of unit) ── */
+  /* ── Footer (bottom of unit) — colophon direct, no intermediate bar ── */
   var foot = document.createElement('div');
   foot.id = 'tw-foot';
-
-  var bar = document.createElement('div');
-  bar.id = 'tw-foot-bar';
-  bar.innerHTML =
-    '<span id="tw-foot-bar-mark">🔮 Token Wisdom</span>' +
-    '<span id="tw-foot-bar-action">Explore ↑</span>';
-
-  foot.appendChild(bar);
   foot.appendChild(colophon);
   tray.appendChild(foot);
   body.appendChild(tray);
-
-  requestAnimationFrame(function () {
-    var fullH = FOOT_SLIM + colophon.offsetHeight;
-    foot.style.setProperty('--tw-foot-full', fullH + 'px');
-  });
 
   /* ── Unified hover on the whole unit (only when at least peek is shown) ── */
   tray.addEventListener('mouseenter', function () {
