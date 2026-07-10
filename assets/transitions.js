@@ -224,16 +224,6 @@
   window.addEventListener('resize', update);
   requestAnimationFrame(update);
 
-  /* ── Post-nav links ──────────────────────────────────────────────── */
-  document.querySelectorAll('.pn-prev, .pn-next').forEach(function (a) {
-    a.addEventListener('click', function (e) {
-      var href = a.getAttribute('href');
-      if (!href || a.getAttribute('target') === '_blank') return;
-      e.preventDefault();
-      fadeOutPage(function () { location.href = href; });
-    });
-  });
-
   /* ── Index→post links ────────────────────────────────────────────── */
   if (!/\/posts\//.test(location.pathname)) {
     document.querySelectorAll('a[href]').forEach(function (a) {

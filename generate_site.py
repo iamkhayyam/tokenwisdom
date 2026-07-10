@@ -2833,17 +2833,6 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
     <a class="ef-back" href="{back_href}">{back_label}</a>
   </footer>"""
 
-    nav_prev = (f"""
-    <a class="pn-prev" href="{prev_post['slug']}.html">
-      <span class="pn-label">← Previous</span>
-      <span class="pn-title">{esc(prev_post.get('title', ''))}</span>
-    </a>""" if prev_post else '<div></div>')
-    nav_next = (f"""
-    <a class="pn-next" href="{next_post['slug']}.html">
-      <span class="pn-label">Next →</span>
-      <span class="pn-title">{esc(next_post.get('title', ''))}</span>
-    </a>""" if next_post else '<div></div>')
-
     # AMA archive — a Reddit-style feed of every answered question, only
     # rendered on the "Ask Me Anything" hub post (ama_archive is set at the
     # main() call site by looking up the ask-me-anything tag's other posts).
@@ -2897,10 +2886,6 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
   {footer}
   {ama_archive_html}
   <section id="tw-responses" class="essay-col"></section>
-  <nav class="post-nav essay-col">
-    {nav_prev}
-    {nav_next}
-  </nav>
 </article>
 {INDEX_MARKUP}{INDEX_SCRIPT}
 """
@@ -2942,25 +2927,6 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
 
     content = replace_typeform(post.get("html") or f"<p>{esc(post.get('plaintext') or '')}</p>")
 
-    nav_prev = ""
-    nav_next = ""
-    if prev_post:
-        nav_prev = f"""
-    <a class="pn-prev" href="{prev_post['slug']}.html">
-      <span class="pn-label">← Previous Edition</span>
-      <span class="pn-title">{esc(clean_title(prev_post) or prev_post.get('title', ''))}</span>
-    </a>"""
-    else:
-        nav_prev = '<div></div>'
-    if next_post:
-        nav_next = f"""
-    <a class="pn-next" href="{next_post['slug']}.html">
-      <span class="pn-label">Next Edition →</span>
-      <span class="pn-title">{esc(clean_title(next_post) or next_post.get('title', ''))}</span>
-    </a>"""
-    else:
-        nav_next = '<div></div>'
-
     body = f"""
 <article class="nl-wrap">
   <header class="nl-masthead">
@@ -2976,10 +2942,6 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
   {tag_pills}
 </article>
 <section id="tw-responses"></section>
-<nav class="post-nav">
-  {nav_prev}
-  {nav_next}
-</nav>
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", noindex=is_hidden(post),
                       description=post.get("custom_excerpt") or post.get("excerpt") or None,
