@@ -49,6 +49,7 @@
     '  height: ' + PEEK_SLIM + 'px;',
     '  overflow: hidden;',
     '  cursor: pointer;',
+    '  background: var(--ink, #1a1814);',
     '  transition: height 400ms ease;',
     '}',
     '#tw-tray.tw-open #tw-peek {',
@@ -65,12 +66,26 @@
     '  z-index: 950;',
     '  transition: top 600ms ease-in-out;',
     '}',
+    /* Image sits at the top of the peek at destination scale.
+       Matches .essay-cover img exactly: width capped to essay-frame max
+       (--max-wide 1080px minus 2.5rem gutters), height 440px, cover,
+       50% 38% position. As the peek grows in height, more of the same-scale
+       image reveals downward — no zoom, no rescale past the actual post. */
     '#tw-peek-bg {',
     '  position: absolute;',
-    '  inset: 0;',
-    '  background-size: cover;',
-    '  background-position: center 30%;',
+    '  top: 0;',
+    '  left: 50%;',
+    '  transform: translateX(-50%);',
+    '  width: 100%;',
+    '  max-width: calc(var(--max-wide, 1080px) - 5rem);',
+    '  height: 440px;',
+    '  object-fit: cover;',
+    '  object-position: 50% 38%;',
     '  filter: brightness(0.5);',
+    '  display: block;',
+    '}',
+    '@media (max-width: 720px) {',
+    '  #tw-peek-bg { height: 280px; }',
     '}',
     '#tw-peek-label {',
     '  position: absolute;',
@@ -199,9 +214,10 @@
     peek.setAttribute('tabindex', '0');
     peek.setAttribute('aria-label', 'Read next: ' + nextTitle);
 
-    var bg = document.createElement('div');
+    var bg = document.createElement('img');
     bg.id = 'tw-peek-bg';
-    if (nextImage) bg.style.backgroundImage = 'url(' + nextImage + ')';
+    bg.alt = '';
+    if (nextImage) bg.src = nextImage;
 
     var lbl = document.createElement('div');
     lbl.id = 'tw-peek-label';
