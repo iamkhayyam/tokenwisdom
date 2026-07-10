@@ -325,7 +325,7 @@
       tray.classList.add('tw-foot-shown');
       body.classList.remove('tw-peek-shown');
       body.classList.add('tw-foot-shown');
-    } else if (pct >= 0.50) {
+    } else if (pct >= 0.75) {
       tray.classList.remove('tw-foot-shown');
       tray.classList.add('tw-peek-shown');
       body.classList.remove('tw-foot-shown');
