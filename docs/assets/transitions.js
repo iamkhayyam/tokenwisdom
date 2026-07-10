@@ -1,32 +1,29 @@
 /**
  * Token Wisdom — page transitions + bottom tray.
  *
- * Structure (post / interior pages):
+ * The tray is one unit with two stacked parts:
  *
- *   #tw-tray  (fixed, bottom 0, always visible on interior pages)
- *     #tw-peek          — next-post image strip; hover to expand image
- *     #tw-foot          — slim footer bar; hover to expand full colophon
- *       #tw-foot-bar    — always-visible strip (wordmark + subscribe)
- *       footer.tw-colophon — full colophon, revealed on hover
+ *   #tw-tray  (fixed, bottom 0)
+ *     #tw-peek     — next-post image (top half of unit)
+ *     #tw-foot     — footer bar → colophon (bottom half of unit)
  *
- * Hover zones are independent: peek hover ≠ footer hover.
- *
- * Page-exit transitions: .pn-prev/.pn-next and index→post links
- * fade the page out before navigating.
+ * Hover anywhere on the tray → both parts expand together.
+ * Click peek → sweep animation covers viewport with the next post's image.
+ * pn-prev/pn-next and index→post links get a page fade before navigation.
  */
 
 (function () {
   'use strict';
 
-  var PEEK_SLIM  = 52;   // px — peek sliver at rest
-  var PEEK_FULL  = 260;  // px — peek when hovered
-  var FOOT_SLIM  = 48;   // px — footer bar at rest
-  var DURATION   = 400;  // ms
+  var PEEK_SLIM  = 52;
+  var PEEK_FULL  = 260;
+  var FOOT_SLIM  = 48;
+  var DURATION   = 400;
 
   /* ── CSS ──────────────────────────────────────────────────────────── */
   var style = document.createElement('style');
   style.textContent = [
-    /* Page exit */
+    /* Page exit (used for pn-prev/pn-next and index links) */
     '.tw-fade-out {',
     '  opacity: 0 !important;',
     '  transform: scale(0.94) translate3d(0, -4%, 0) !important;',
@@ -35,34 +32,37 @@
     '  pointer-events: none !important;',
     '}',
 
-    /* Tray — always docked at bottom on interior pages */
+    /* Tray — one docked unit, flex-column so parts stack visually */
     '#tw-tray {',
     '  position: fixed;',
     '  bottom: 0;',
     '  left: 0;',
     '  right: 0;',
     '  z-index: 900;',
+    '  display: flex;',
+    '  flex-direction: column;',
     '}',
 
-    /* ── Peek strip ── */
-    /* Uses top+bottom instead of height so the strip sweeps upward from the
-       bottom edge of the viewport when navigating. */
+    /* Peek — sliver at rest, expands with tray on hover */
     '#tw-peek {',
+    '  position: relative;',
+    '  height: ' + PEEK_SLIM + 'px;',
+    '  overflow: hidden;',
+    '  cursor: pointer;',
+    '  transition: height 400ms ease;',
+    '}',
+    '#tw-tray.tw-open #tw-peek {',
+    '  height: ' + PEEK_FULL + 'px;',
+    '}',
+    /* Sweep — peek grows upward to fill the viewport */
+    '#tw-peek.tw-peek-sweeping {',
     '  position: fixed;',
     '  left: 0;',
     '  right: 0;',
     '  bottom: ' + FOOT_SLIM + 'px;',
-    '  top: calc(100vh - ' + (FOOT_SLIM + PEEK_SLIM) + 'px);',
-    '  overflow: hidden;',
-    '  cursor: pointer;',
-    '  z-index: 901;',
-    '  transition: top 300ms ease;',
-    '}',
-    '#tw-peek.tw-peek-open {',
-    '  top: calc(100vh - ' + (FOOT_SLIM + PEEK_FULL) + 'px);',
-    '}',
-    '#tw-peek.tw-peek-sweeping {',
     '  top: 0;',
+    '  height: auto;',
+    '  z-index: 950;',
     '  transition: top 600ms ease-in-out;',
     '}',
     '#tw-peek-bg {',
@@ -99,9 +99,9 @@
     '  overflow: hidden;',
     '  text-overflow: ellipsis;',
     '  max-width: 560px;',
-    '  transition: font-size 300ms ease, white-space 0ms;',
+    '  transition: font-size 300ms ease;',
     '}',
-    '#tw-peek.tw-peek-open #tw-peek-title {',
+    '#tw-tray.tw-open #tw-peek-title {',
     '  font-size: 22px;',
     '  white-space: normal;',
     '  line-height: 1.2;',
@@ -117,19 +117,18 @@
     '  opacity: 0;',
     '  transition: opacity 280ms ease 80ms;',
     '}',
-    '#tw-peek.tw-peek-open #tw-peek-cta { opacity: 1; }',
+    '#tw-tray.tw-open #tw-peek-cta { opacity: 1; }',
 
-    /* ── Footer zone ── */
+    /* Footer — bar at rest, expands with tray on hover */
     '#tw-foot {',
     '  position: relative;',
     '  overflow: hidden;',
     '  height: ' + FOOT_SLIM + 'px;',
-    '  transition: height 420ms cubic-bezier(0.165,0.84,0.44,1);',
+    '  transition: height 400ms ease;',
     '}',
-    '#tw-foot.tw-foot-open {',
+    '#tw-tray.tw-open #tw-foot {',
     '  height: var(--tw-foot-full, 400px);',
     '}',
-    /* Slim bar — always visible strip */
     '#tw-foot-bar {',
     '  position: relative;',
     '  z-index: 1;',
@@ -139,25 +138,19 @@
     '  justify-content: space-between;',
     '  padding: 0 2rem;',
     '  background: var(--ink, #1a1814);',
-    '  cursor: ns-resize;',
     '}',
-    '#tw-foot-bar-mark {',
+    '#tw-foot-bar-mark, #tw-foot-bar-action {',
     '  font-family: var(--mono, monospace);',
     '  font-size: 10px;',
     '  letter-spacing: 0.12em;',
     '  text-transform: uppercase;',
-    '  color: rgba(255,255,255,0.45);',
     '}',
+    '#tw-foot-bar-mark { color: rgba(255,255,255,0.45); }',
     '#tw-foot-bar-action {',
-    '  font-family: var(--mono, monospace);',
-    '  font-size: 10px;',
-    '  letter-spacing: 0.12em;',
-    '  text-transform: uppercase;',
     '  color: rgba(255,255,255,0.35);',
     '  transition: color 200ms ease;',
     '}',
-    '#tw-foot:hover #tw-foot-bar-action { color: rgba(255,255,255,0.7); }',
-    /* Colophon inside the foot zone */
+    '#tw-tray.tw-open #tw-foot-bar-action { color: rgba(255,255,255,0.7); }',
     '#tw-foot footer.tw-colophon {',
     '  position: relative;',
     '  margin: 0;',
@@ -165,12 +158,8 @@
     '}',
 
     /* Body clearance */
-    'body.has-tray {',
-    '  padding-bottom: ' + FOOT_SLIM + 'px;',
-    '}',
-    'body.has-tray.has-peek {',
-    '  padding-bottom: ' + (FOOT_SLIM + PEEK_SLIM) + 'px;',
-    '}'
+    'body.has-tray { padding-bottom: ' + FOOT_SLIM + 'px; }',
+    'body.has-tray.has-peek { padding-bottom: ' + (FOOT_SLIM + PEEK_SLIM) + 'px; }'
   ].join('\n');
   document.head.appendChild(style);
 
@@ -201,7 +190,7 @@
   var tray = document.createElement('div');
   tray.id = 'tw-tray';
 
-  /* ── Peek section ── */
+  /* ── Peek (top of unit) ── */
   var peek = null;
   if (nextHref && nextTitle) {
     peek = document.createElement('div');
@@ -225,20 +214,16 @@
     peek.appendChild(lbl);
     tray.appendChild(peek);
 
-    /* Independent hover for peek only */
-    peek.addEventListener('mouseenter', function () {
-      peek.classList.add('tw-peek-open');
-    });
-    peek.addEventListener('mouseleave', function (e) {
-      if (!peek.contains(e.relatedTarget)) {
-        peek.classList.remove('tw-peek-open');
-      }
-    });
-
     function navigate() {
       if (peek.classList.contains('tw-peek-sweeping')) return;
-      peek.classList.remove('tw-peek-open');
+      tray.classList.remove('tw-open');
+      /* Sweep: peek breaks out of the tray flow and covers the viewport */
+      var rect = peek.getBoundingClientRect();
+      peek.style.top = rect.top + 'px';
       peek.classList.add('tw-peek-sweeping');
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { peek.style.top = '0px'; });
+      });
       setTimeout(function () { location.href = nextHref; }, 620);
     }
     peek.addEventListener('click', navigate);
@@ -247,7 +232,7 @@
     });
   }
 
-  /* ── Footer section ── */
+  /* ── Footer (bottom of unit) ── */
   var foot = document.createElement('div');
   foot.id = 'tw-foot';
 
@@ -262,27 +247,25 @@
   tray.appendChild(foot);
   body.appendChild(tray);
 
-  /* Measure colophon height after it's in the DOM, set CSS var */
   requestAnimationFrame(function () {
     var fullH = FOOT_SLIM + colophon.offsetHeight;
     foot.style.setProperty('--tw-foot-full', fullH + 'px');
   });
 
-  /* Independent hover for footer only */
-  foot.addEventListener('mouseenter', function () {
-    foot.classList.add('tw-foot-open');
+  /* ── Unified hover on the whole unit ── */
+  tray.addEventListener('mouseenter', function () {
+    tray.classList.add('tw-open');
   });
-  foot.addEventListener('mouseleave', function (e) {
-    if (!foot.contains(e.relatedTarget)) {
-      foot.classList.remove('tw-foot-open');
+  tray.addEventListener('mouseleave', function (e) {
+    if (!tray.contains(e.relatedTarget)) {
+      tray.classList.remove('tw-open');
     }
   });
 
-  /* Body padding */
   body.classList.add('has-tray');
   if (peek) body.classList.add('has-peek');
 
-  /* ── Post-nav links ───────────────────────────────────────────────── */
+  /* ── Post-nav links ──────────────────────────────────────────────── */
   document.querySelectorAll('.pn-prev, .pn-next').forEach(function (a) {
     a.addEventListener('click', function (e) {
       var href = a.getAttribute('href');
