@@ -31,9 +31,10 @@
     '}',
 
     /* Peek — locked at bottom of viewport once revealed.
-       Full-viewport-width strip painted in the colophon base color so the
-       side gutters match the footer visually. The image + label inside
-       are centered and capped at the essay-index content slot. */
+       Full-viewport-width strip. Sides are transparent while reading the
+       essay (blending with the page background) and fill in with the
+       colophon base color as the colophon approaches — same 95% signal
+       we use to fade the progress bar. */
     '#tw-peek {',
     '  position: fixed;',
     '  bottom: 0;',
@@ -45,12 +46,19 @@
     '  height: ' + PEEK_SLIM + 'px;',
     '  overflow: hidden;',
     '  cursor: pointer;',
-    '  background: oklch(0.195 0.055 31);',
-    '  transition: transform 520ms cubic-bezier(0.19,1,0.22,1);',
+    '  background: transparent;',
+    '  transition: transform 520ms cubic-bezier(0.19,1,0.22,1),',
+    '              background-color 400ms ease;',
     '  will-change: transform;',
     '}',
     '#tw-peek.tw-shown {',
     '  transform: translateY(0);',
+    '}',
+    /* Bleed the fill 8px upward via box-shadow so any subpixel gap where
+       the fixed peek meets the in-flow colophon is covered — no hairline. */
+    'body.tw-progress-hidden #tw-peek {',
+    '  background-color: oklch(0.195 0.055 31);',
+    '  box-shadow: 0 -8px 0 oklch(0.195 0.055 31);',
     '}',
     /* Sweep — inner image + label unconstrain to fill viewport */
     '#tw-peek.tw-peek-sweeping {',
