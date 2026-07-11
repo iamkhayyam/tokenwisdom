@@ -794,6 +794,27 @@ def render_term(t, gs, ctx):
         constellation = (f'<div class="term-side-block"><a class="lex-seeall" '
                          f'href="constellation.html#{t["slug"]}">✦ See it in the Constellation &rarr;</a></div>')
 
+    # 'A Closer Look' essays that discuss this term (source-tagged "essay";
+    # separate from the newsletter glossary definitions above).
+    essays = t.get("essays") or []
+    essay_section = ""
+    if essays:
+        rows = "".join(
+            f'<div class="term-post"><span class="tp-title">'
+            f'<a href="../posts/{esc(e["slug"])}.html">{esc(e["title"])}</a></span>'
+            f'<span class="tp-meta">{gs.fmt_date_short(e["date"])}</span></div>'
+            for e in sorted(essays, key=lambda x: x["date"], reverse=True))
+        fs = t.get("first_seen")
+        earlier_note = ""
+        if fs and fs < first["date"]:
+            earlier_note = (f'<p class="term-arc-note">First surfaces in an essay '
+                            f'{gs.fmt_date(fs, "%b %Y")} — before it entered the glossary '
+                            f'({gs.fmt_date(first["date"], "%b %Y")}).</p>')
+        essay_section = (
+            f'<section class="term-section"><h3 class="term-h3">Also discussed in '
+            f'<span class="term-h3-count">({len(essays)} essay{"s" if len(essays) != 1 else ""})</span></h3>'
+            f'{earlier_note}<div class="term-posts">{rows}</div></section>')
+
     body = f'''
 <div class="term-wrap">
   <a class="term-back" href="index.html">&larr; The Lexicon</a>
@@ -812,6 +833,7 @@ def render_term(t, gs, ctx):
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">({t['edition_count']})</span></h3>
       <div class="term-posts">{ed_rows}</div></section>
+    {essay_section}
     <aside class="term-side">{role_block}{related}{constellation}
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
@@ -836,6 +858,13 @@ def build(posts, ctx, gs):
     ctx = dict(ctx, edition_count=len(editions))
     print(f"  {len(editions)} editions · {len(terms)} distinct terms · "
           f"{sum(t['edition_count'] >= 3 for t in terms)} recurring")
+
+    # Cross-reference 'A Closer Look' essays: attach essay appearances
+    # (source:"essay") to each term, leaving newsletter defined-in data intact.
+    import essay_xref
+    xref = essay_xref.attach_essay_appearances(terms, posts)
+    print(f"  Essays: {xref['terms_with_essays']} terms gain {xref['pairs']} "
+          f"'A Closer Look' mentions ({xref['terms_essay_earlier_than_first_def']} predate first-def)")
 
     with open(lex_dir / "index.html", "w") as f:
         f.write(render_index(terms, qkeys, gs, ctx))
