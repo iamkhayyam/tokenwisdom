@@ -145,30 +145,23 @@ def _stat_note(number: str, caption: str) -> str:
 def find_term_matches(text: str, term_index: list[dict]) -> list[dict]:
     """First occurrence of each lexicon term with a real definition.
 
-    Longer names win over shorter substrings (LLM vs LLM Ops), so terms
-    are searched longest-first. Case-sensitive for multi-word matches,
-    case-insensitive for single-word so 'quantum computing' catches
-    'Quantum computing'.
+    Term regexes are pre-compiled in build_term_index() to keep this
+    hot loop fast — re-compiling 1700+ patterns per paragraph was the
+    reason full runs took 8+ minutes.
     """
     matches = []
     for term in term_index:
-        name = term["name"]
-        if len(name) < 3:
-            continue
-        # Skip if we've already found a match for this exact position range
-        if " " in name:
-            pat = re.compile(r"\b" + re.escape(name) + r"\b")
-        else:
-            pat = re.compile(r"\b" + re.escape(name) + r"\b", re.IGNORECASE)
+        pat = term["_pat"]
         m = pat.search(text)
         if not m:
             continue
+        name = term["name"]
         matches.append({
             "kind": "term",
             "trigger": name,
             "position": m.start(),
-            "note_html": _term_note(term["name"], term["definition"]),
-            "score": 100 + len(name.split()) * 5,   # multi-word terms rank higher
+            "note_html": _term_note(name, term["definition"]),
+            "score": 100 + len(name.split()) * 5,
         })
     return matches
 
@@ -217,12 +210,13 @@ def find_quote_matches(post_html: str) -> list[dict]:
 
 # Multi-char units listed FIRST so alternation doesn't stop early on a
 # single-letter prefix (e.g. "2 ms" was matching just "2 m" because M
-# came before ms). Word-char units get a trailing \b so we don't match
-# mid-word (e.g. "2 million" falsely matching "2 m"). Symbol units (%, ×)
-# don't need \b — they end at a non-word char naturally.
+# came before ms). No word boundary at the end — single-letter units
+# like M/B/k are legitimately used as suffixes ("50M", "$3.5B") and \b
+# would either kill those or force adding it everywhere. Longest-first
+# ordering is the only correction needed.
 STAT_PAT = re.compile(
     r"(~?\$?[0-9]+(?:[.,][0-9]+)?\s*"
-    r"(?:(?:MHz|GHz|mph|ms|bn|mn|kW|MW|GW|Hz|nm|mm|km|mi|k|M|B|x)\b|[%×]))",
+    r"(?:MHz|GHz|mph|ms|bn|mn|kW|MW|GW|Hz|nm|mm|km|mi|%|×|x|k|M|B))",
     re.IGNORECASE,
 )
 
@@ -363,13 +357,27 @@ def build_acronym_map(lex_terms: list[dict]) -> dict[str, str]:
 
 
 def build_term_index(lex_terms: list[dict]) -> list[dict]:
-    """Longer names first so multi-word terms match before single-word substrings."""
-    filtered = [
-        t for t in lex_terms
-        if t.get("category") in ("Technologies", "Concepts", "Technical Terms")
-        and (t.get("definition") or "").strip()
-        and len((t.get("name") or "")) >= 3
-    ]
+    """Longer names first so multi-word terms match before single-word substrings.
+
+    Each entry gets a pre-compiled regex (`_pat`) — compiling per-term
+    inside the paragraph loop turned a 30s job into a 10-minute one.
+    Multi-word terms match case-sensitively (preserves proper-noun signal);
+    single-word terms use IGNORECASE so 'quantum computing' catches
+    'Quantum computing'.
+    """
+    filtered = []
+    for t in lex_terms:
+        if t.get("category") not in ("Technologies", "Concepts", "Technical Terms"):
+            continue
+        if not (t.get("definition") or "").strip():
+            continue
+        name = t.get("name") or ""
+        if len(name) < 3:
+            continue
+        flags = 0 if " " in name else re.IGNORECASE
+        t = dict(t)
+        t["_pat"] = re.compile(r"\b" + re.escape(name) + r"\b", flags)
+        filtered.append(t)
     filtered.sort(key=lambda t: -len(t.get("name") or ""))
     return filtered
 
