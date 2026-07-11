@@ -11,7 +11,7 @@ A weekly essay from a bucket of topics consisting of all things blockchain, arti
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/02/aCloserLook-1.gif
 **Local Image:** `images/tags/a-closer-look_feature__aCloserLook-1.gif`
 
-## Posts (129)
+## Posts (127)
 
 - [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
@@ -27,12 +27,10 @@ A weekly essay from a bucket of topics consisting of all things blockchain, arti
 - [The Room Was Already Set Before You Walked In](https://ghost-production-198e.up.railway.app/the-room-was-already-set-before-you-walked-in/) (2026-03-12)
 - [The Race That Eats Its Own Rules](https://ghost-production-198e.up.railway.app/the-race-that-eats-its-own-rules/) (2026-03-06)
 - [The Double Collapse](https://ghost-production-198e.up.railway.app/the-double-collapse/) (2026-02-26)
-- [Dear Sam,](https://ghost-production-198e.up.railway.app/dear-sam/) (2026-02-24)
 - [The Persistence of Inferior Standards](https://ghost-production-198e.up.railway.app/the-persistence-of-inferior-standards/) (2026-02-19)
 - [Threading a Very Fine Needle](https://ghost-production-198e.up.railway.app/threading-a-very-fine-needle/) (2026-02-12)
 - [How Does Order Emerge in a Universe Built for Chaos?](https://ghost-production-198e.up.railway.app/how-does-order-emerge-in-a-universe-built-for-chaos/) (2026-02-05)
 - [The Zombie Singularity of Intelligence Without Understanding](https://ghost-production-198e.up.railway.app/the-zombie-singularity-of-intelligence-without-understanding/) (2026-01-30)
-- [Dear Dario,](https://ghost-production-198e.up.railway.app/dear-dario/) (2026-01-27)
 - [The Greengrocer Goes To Davos](https://ghost-production-198e.up.railway.app/the-greengrocer-goes-to-davos/) (2026-01-22)
 - [AI Didn't Break Democracy. We Did. Four Decades Ago.](https://ghost-production-198e.up.railway.app/ai-didnt-break-democracy-we-did-four-decades-ago/) (2026-01-15)
 - [Building Without Blueprints](https://ghost-production-198e.up.railway.app/building-without-blueprints/) (2026-01-08)

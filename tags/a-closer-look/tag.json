@@ -146,15 +146,6 @@
       "reading_time": 12
     },
     {
-      "id": "6a4816fb7d31280001f4fb05",
-      "title": "Dear Sam,",
-      "slug": "dear-sam",
-      "published_at": "2026-02-24T22:32:30.000-08:00",
-      "url": "https://ghost-production-198e.up.railway.app/dear-sam/",
-      "featured": true,
-      "reading_time": 25
-    },
-    {
       "id": "6a4816fb7d31280001f4fb03",
       "title": "The Persistence of Inferior Standards",
       "slug": "the-persistence-of-inferior-standards",
@@ -189,15 +180,6 @@
       "url": "https://ghost-production-198e.up.railway.app/the-zombie-singularity-of-intelligence-without-understanding/",
       "featured": false,
       "reading_time": 19
-    },
-    {
-      "id": "6a4816fb7d31280001f4fafc",
-      "title": "Dear Dario,",
-      "slug": "dear-dario",
-      "published_at": "2026-01-27T22:36:11.000-08:00",
-      "url": "https://ghost-production-198e.up.railway.app/dear-dario/",
-      "featured": true,
-      "reading_time": 18
     },
     {
       "id": "6a4816fb7d31280001f4fafa",
@@ -1181,6 +1163,6 @@
       "reading_time": 6
     }
   ],
-  "post_count": 129,
+  "post_count": 127,
   "local_feature_image": "a-closer-look_feature__aCloserLook-1.gif"
 }

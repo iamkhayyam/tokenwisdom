@@ -1,11 +1,11 @@
 # Tag-to-Posts Cross Reference
 
-Generated: 2026-07-10T11:20:31.307183
+Generated: 2026-07-10T23:04:58.479196
 
 | Tag | Post Count | Posts |
 |-----|-----------|-------|
 | #Import 2026-07-03 20:09 | 280 | The Proof Was Never the Point, 159th Edition 🔮 Week 19, The Wrong Name on the Door, 158th Edition 🔮 Week 18, The Cost of Being Right (+275 more) |
-| 👁️ A Closer Look | 129 | Data Is Not the New Oil, Human-in-the-Room, The Proof Was Never the Point, The Wrong Name on the Door, The Cost of Being Right (+124 more) |
+| 👁️ A Closer Look | 127 | Data Is Not the New Oil, Human-in-the-Room, The Proof Was Never the Point, The Wrong Name on the Door, The Cost of Being Right (+122 more) |
 | Technology | 91 | Human-in-the-Room, The Proof Was Never the Point, The Sky Has Been Warning Us Since 1859, AI Didn't Break Democracy. We Did. Four , Building Without Blueprints (+86 more) |
 | ✨ Pearls of Wisdom | 85 | 159th Edition 🔮 Week 19, 158th Edition 🔮 Week 18, 157th Edition 🔮 Week 17, 156th Edition 🔮 Week 16, 155th Edition 🔮 Week 15 (+80 more) |
 | A.I. (and Subsets) | 76 | Data Is Not the New Oil, The Wrong Name on the Door, No Heir. No Lesson., Who's Mind Is It Anyway?, We Trained It on Human Weaponry (+71 more) |

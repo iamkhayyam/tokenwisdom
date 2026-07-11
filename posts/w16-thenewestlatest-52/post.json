@@ -14,30 +14,6 @@
   "custom_excerpt": "Explore a labyrinth of emerging technologies and cultural shifts in this week's Token Wisdom! Dive into analog allure, digital repatriation, AI innovations, and beyond. Unpack how today's tech reshapes our connections and values. ",
   "canonical_url": null,
   "comment_id": "6630b6dda7d59a000155ff3e",
-  "authors": [
-    {
-      "id": "1",
-      "name": "🌶️ @iamkhayyam",
-      "slug": "khayyam",
-      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
-      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
-      "bio": null,
-      "website": null,
-      "location": null,
-      "facebook": null,
-      "twitter": "@worthafortune",
-      "threads": null,
-      "bluesky": null,
-      "mastodon": null,
-      "tiktok": null,
-      "youtube": null,
-      "instagram": null,
-      "linkedin": null,
-      "meta_title": null,
-      "meta_description": null,
-      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
-    }
-  ],
   "tags": [
     {
       "id": "6a4816f97d31280001f4f9d1",
@@ -80,6 +56,30 @@
       "canonical_url": null,
       "accent_color": null,
       "url": "https://ghost-production-198e.up.railway.app/404/"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
   "url": "https://ghost-production-198e.up.railway.app/w16-thenewestlatest-52/",

@@ -14,30 +14,6 @@
   "custom_excerpt": "W04 - When Trump launched his meme coin, traditional politics died. For the first time ever, you can buy a direct stake in presidential success. Welcome to the Political Casino, where influence isn't wielded in corridors of power—it's flashed in market volatility.",
   "canonical_url": null,
   "comment_id": "6791ecbc81993f00014a74e3",
-  "authors": [
-    {
-      "id": "1",
-      "name": "🌶️ @iamkhayyam",
-      "slug": "khayyam",
-      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
-      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
-      "bio": null,
-      "website": null,
-      "location": null,
-      "facebook": null,
-      "twitter": "@worthafortune",
-      "threads": null,
-      "bluesky": null,
-      "mastodon": null,
-      "tiktok": null,
-      "youtube": null,
-      "instagram": null,
-      "linkedin": null,
-      "meta_title": null,
-      "meta_description": null,
-      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
-    }
-  ],
   "tags": [
     {
       "id": "6a4816f97d31280001f4f9cf",
@@ -206,6 +182,30 @@
       "canonical_url": null,
       "accent_color": null,
       "url": "https://ghost-production-198e.up.railway.app/404/"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
   "url": "https://ghost-production-198e.up.railway.app/the-political-singularity-welcome-to-the-first-algorithmic-state/",

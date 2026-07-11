@@ -30,8 +30,6 @@ tags:
     slug: philosophy
   - name: ANI \ AGI \ ASI
     slug: agi
-  - name: 👁️ A Closer Look
-    slug: a-closer-look
   - name: #Import 2026-07-03 20:09
     slug: hash-import-2026-07-03-20-09
 authors:

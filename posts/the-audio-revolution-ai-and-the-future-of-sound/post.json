@@ -14,30 +14,6 @@
   "custom_excerpt": "W37 - From waveforms to words, AI is rewriting the audio editing playbook. Imagine deleting podcast bloopers with a keystroke or conjuring the perfect soundtrack at will. Welcome to the audio revolution—where your next masterpiece is just a click away.",
   "canonical_url": null,
   "comment_id": "6742453b7cd66900012138dd",
-  "authors": [
-    {
-      "id": "1",
-      "name": "🌶️ @iamkhayyam",
-      "slug": "khayyam",
-      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
-      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
-      "bio": null,
-      "website": null,
-      "location": null,
-      "facebook": null,
-      "twitter": "@worthafortune",
-      "threads": null,
-      "bluesky": null,
-      "mastodon": null,
-      "tiktok": null,
-      "youtube": null,
-      "instagram": null,
-      "linkedin": null,
-      "meta_title": null,
-      "meta_description": null,
-      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
-    }
-  ],
   "tags": [
     {
       "id": "6a4816f97d31280001f4f9cf",
@@ -227,6 +203,30 @@
       "canonical_url": null,
       "accent_color": null,
       "url": "https://ghost-production-198e.up.railway.app/404/"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
   "url": "https://ghost-production-198e.up.railway.app/the-audio-revolution-ai-and-the-future-of-sound/",

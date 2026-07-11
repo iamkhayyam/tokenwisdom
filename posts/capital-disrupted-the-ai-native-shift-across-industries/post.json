@@ -14,30 +14,6 @@
   "custom_excerpt": "W14 — What once required fifty engineers, twenty million dollars, and three years can now be accomplished by five people, two million dollars, and six months. This isn't hyperbole—it's the mathematics of disruption unleashed by AI native businesses across every sector of the economy.\n",
   "canonical_url": null,
   "comment_id": "67eecdd590d96f000163b782",
-  "authors": [
-    {
-      "id": "1",
-      "name": "🌶️ @iamkhayyam",
-      "slug": "khayyam",
-      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
-      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
-      "bio": null,
-      "website": null,
-      "location": null,
-      "facebook": null,
-      "twitter": "@worthafortune",
-      "threads": null,
-      "bluesky": null,
-      "mastodon": null,
-      "tiktok": null,
-      "youtube": null,
-      "instagram": null,
-      "linkedin": null,
-      "meta_title": null,
-      "meta_description": null,
-      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
-    }
-  ],
   "tags": [
     {
       "id": "6a4816f97d31280001f4f9cf",
@@ -332,6 +308,30 @@
       "canonical_url": null,
       "accent_color": null,
       "url": "https://ghost-production-198e.up.railway.app/404/"
+    }
+  ],
+  "authors": [
+    {
+      "id": "1",
+      "name": "🌶️ @iamkhayyam",
+      "slug": "khayyam",
+      "profile_image": "https://tokenwisdom.ghost.io/content/images/2024/02/token_wisdom_orb-1.gif",
+      "cover_image": "https://tokenwisdom.ghost.io/content/images/2024/01/fortune_teller_worth_a_fortune-1.gif",
+      "bio": null,
+      "website": null,
+      "location": null,
+      "facebook": null,
+      "twitter": "@worthafortune",
+      "threads": null,
+      "bluesky": null,
+      "mastodon": null,
+      "tiktok": null,
+      "youtube": null,
+      "instagram": null,
+      "linkedin": null,
+      "meta_title": null,
+      "meta_description": null,
+      "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
     }
   ],
   "url": "https://ghost-production-198e.up.railway.app/capital-disrupted-the-ai-native-shift-across-industries/",

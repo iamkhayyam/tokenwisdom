@@ -346,6 +346,8 @@ def render_index(terms, qkeys, gs, ctx):
     core = [t for t in terms if _ac(t) >= CORE_MIN]
     total_entries = sum(t["edition_count"] for t in terms)
     total_mentions = sum(t.get("essay_count", 0) for t in terms)
+    pivotal = sum(1 for t in terms
+                  if _ac(t) >= CONSTELLATION_MIN or t.get("centrality", 0) >= CENTRALITY_INCLUDE)
     span = f"{qkeys[0].replace('-Q', ' Q')} – {qkeys[-1].replace('-Q', ' Q')}" if qkeys else ""
 
     chips = "".join(
@@ -392,7 +394,7 @@ def render_index(terms, qkeys, gs, ctx):
   <div class="kicker kicker-accent">The Lexicon</div>
   <h1 class="lex-h1">The Lexicon</h1>
   <p class="lex-lede">The working vocabulary of the future of now — {len(terms):,} terms, defined by hand in <em>The Less You Know</em> across {ctx['edition_count']} editions. Every definition is the newsletter's own; recurring terms trace how the language of the field accumulated, week over week.</p>
-  <div class="lex-metaline">{total_entries:,} definitions · {total_mentions:,} essay mentions · {len(core)} core terms · {span} · 100% authentic humanly chosen</div>
+  <div class="lex-metaline">{total_entries:,} definitions · {total_mentions:,} essay mentions · {len(core)} core terms · <a href="constellation.html">{pivotal} in the Constellation</a> · {span} · 100% authentic humanly chosen</div>
   <input id="lexSearch" class="lex-search" type="search" autocomplete="off" placeholder="Search all {len(terms):,} terms…" aria-label="Search the Lexicon">
   <div class="lex-chips">{chips}</div>
   <a class="lex-constellation-cta" href="constellation.html">✦ Open the Constellation — the Lexicon as a living map &rarr;</a>
@@ -788,7 +790,16 @@ def render_term(t, gs, ctx):
             link, klbl = _ed_link(a, ed_label(a)), "Defined"
         else:
             link, klbl = f'<a href="../posts/{esc(a["slug"])}.html">{esc(a["title"])}</a>', "Discussed"
-        wk = ('W%02d · ' % a['week']) if a.get('week') else ''
+        # newsletters carry an editorial week; essays derive the ISO calendar
+        # week from their date (Token Wisdom weeks track the ISO week) so every
+        # row reads "Wxx · date".
+        wk_num = a.get('week')
+        if not wk_num and a.get('date'):
+            try:
+                wk_num = datetime.strptime(a['date'], '%Y-%m-%d').isocalendar()[1]
+            except ValueError:
+                wk_num = None
+        wk = ('W%02d · ' % wk_num) if wk_num else ''
         ap_rows += (f'<div class="term-post"><span class="tp-title">'
                     f'<span class="ap-kind ap-{a["kind"]}">{klbl}</span> {link}</span>'
                     f'<span class="tp-meta">{wk}{gs.fmt_date_short(a["date"])}</span></div>')
