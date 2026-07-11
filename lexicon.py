@@ -356,10 +356,20 @@ def render_index(terms, qkeys, gs, ctx):
 
     core_cards = ""
     for t in core[:48]:
+        role = t.get("role", "")
+        role_html = (f'<div class="lex-cc-role role-{role.lower()}">{esc(role)}</div>'
+                     if role else '<div class="lex-cc-role"></div>')
+        ac, related_n = _ac(t), len(t.get("related") or [])
+        foot_bits = [f'<b>{ac}×</b> across the corpus']
+        if related_n:
+            foot_bits.append(f'travels with <b>{related_n}</b>')
+        foot_html = f'<div class="lex-cc-foot">{" · ".join(foot_bits)}</div>'
         core_cards += f'''
     <a class="lex-cc" href="{t['slug']}.html">
+      {role_html}
       <div class="lex-cc-term">{esc(t['name'])}</div>
-      <p class="lex-cc-def">{esc(_clamp(t['definition'], 140))}</p>
+      <p class="lex-cc-def">{esc(_clamp(t['definition'], 130))}</p>
+      {foot_html}
       <div class="lex-cc-spark">{sparkline(t['timeline'], t.get('color', 'accent'), w=130, h=30)}</div>
     </a>'''
 
@@ -391,13 +401,19 @@ def render_index(terms, qkeys, gs, ctx):
     all_data = json.dumps([[t["name"], t["slug"]] for t in terms], ensure_ascii=False)
     body = f'''
 <header class="lex-hero">
-  <div class="kicker kicker-accent">The Lexicon</div>
+  <div class="kicker kicker-accent">A Living Glossary · {span}</div>
   <h1 class="lex-h1">The Lexicon</h1>
-  <p class="lex-lede">The working vocabulary of the future of now — {len(terms):,} terms, defined by hand in <em>The Less You Know</em> across {ctx['edition_count']} editions. Every definition is the newsletter's own; recurring terms trace how the language of the field accumulated, week over week.</p>
-  <div class="lex-metaline">{total_entries:,} definitions · {total_mentions:,} essay mentions · {len(core)} core terms · <a href="constellation.html">{pivotal} in the Constellation</a> · {span} · 100% authentic humanly chosen</div>
+  <p class="lex-lede">The working vocabulary of the future of now: hand-defined in <em>The Less You Know</em>, week over week, growing into a living index of what the field is actually talking about.</p>
+  <div class="lex-stats" role="group" aria-label="Corpus totals">
+    <div class="lex-stat"><span class="ls-num">{len(terms):,}</span><span class="ls-lbl">Terms</span><span class="ls-sub">humanly defined</span></div>
+    <div class="lex-stat"><span class="ls-num">{total_entries:,}</span><span class="ls-lbl">Definitions</span><span class="ls-sub">across {ctx['edition_count']} editions</span></div>
+    <div class="lex-stat"><span class="ls-num">{total_mentions:,}</span><span class="ls-lbl">Essay discussions</span><span class="ls-sub">in A Closer Look</span></div>
+    <a class="lex-stat is-link" href="constellation.html"><span class="ls-num">{pivotal}</span><span class="ls-lbl">In the Constellation</span><span class="ls-sub">the map, live &rarr;</span></a>
+  </div>
+  <div class="lex-metaline">{len(core)} core terms · 100% authentic humanly chosen</div>
   <input id="lexSearch" class="lex-search" type="search" autocomplete="off" placeholder="Search all {len(terms):,} terms…" aria-label="Search the Lexicon">
   <div class="lex-chips">{chips}</div>
-  <a class="lex-constellation-cta" href="constellation.html">✦ Open the Constellation — the Lexicon as a living map &rarr;</a>
+  <a class="lex-constellation-cta" href="constellation.html">✦ Open the Constellation, the Lexicon as a living map &rarr;</a>
 </header>
 <div id="lexResults" class="lex-results" hidden></div>
 <div id="lexBrowse">
@@ -411,7 +427,7 @@ def render_index(terms, qkeys, gs, ctx):
 </main>
 <div class="lex-soon"><div class="lex-soon-inner">
   <h3>From the Lab</h3>
-  <p>The Lexicon is the data layer. <strong><a href="constellation.html">The Constellation</a></strong> is now live — browse the vocabulary as a map of what's talked about together across newsletters and essays. Next on the bench, both powered by the same data: <strong>Ask the Archive</strong> (question three years of writing), and <strong>the Zeitgeist Tracker</strong> (what mattered when, across {len(qkeys)} quarters).</p>
+  <p>The Lexicon is the data layer. <strong><a href="constellation.html">The Constellation</a></strong> is now live: browse the vocabulary as a map of what's talked about together across newsletters and essays. Next on the bench, both powered by the same data: <strong>Ask the Archive</strong> (question three years of writing), and <strong>the Zeitgeist Tracker</strong> (what mattered when, across {len(qkeys)} quarters).</p>
 </div></div>
 </div>
 <script>window.LEX_BASE="";window.LEX_ALL={all_data};</script>
@@ -686,13 +702,23 @@ def render_constellation(terms, gs, ctx):
     payload = json.dumps({"nodes": nodes, "links": links, "cats": legend_data},
                          ensure_ascii=False, separators=(",", ":"))
 
+    # role counts across the whole lexicon so the strip reads the structure, not just the size
+    keystone_n = sum(1 for t in terms if t.get("role") == "Keystone")
+    connector_n = sum(1 for t in terms if t.get("role") == "Connector")
+
     body = f'''
 <style>{CONSTELLATION_CSS}</style>
 <header class="cst-hero">
   <a class="cst-back" href="index.html">&larr; The Lexicon</a>
   <div class="kicker kicker-accent">The Lexicon · The Constellation</div>
   <h1 class="lex-h1">The Constellation</h1>
-  <p class="cst-lede">The Lexicon as a map of what's talked about together — across both the newsletters and the essays. Each of these {len(nodes)} pivotal terms is a star, sized by how often it appears and how much the rest of the vocabulary leans on it; a line ties two terms that show up in the same newsletter or essay, brighter the more often they travel together. Drag a star, search to find one, click through to its full entry.</p>
+  <p class="cst-lede">The Lexicon as a map of what's talked about together, across the newsletters and the essays. Each star is a term; edges tie the ones that recur in the same piece. Drag, zoom, search, or click a star through to its full entry.</p>
+  <div class="lex-stats" role="group" aria-label="Constellation totals">
+    <div class="lex-stat"><span class="ls-num">{len(nodes)}</span><span class="ls-lbl">Stars</span><span class="ls-sub">pivotal terms</span></div>
+    <div class="lex-stat"><span class="ls-num">{len(links):,}</span><span class="ls-lbl">Edges</span><span class="ls-sub">co-occurrences</span></div>
+    <div class="lex-stat"><span class="ls-num">{keystone_n}</span><span class="ls-lbl">Keystone</span><span class="ls-sub">central &amp; recurring</span></div>
+    <div class="lex-stat"><span class="ls-num">{connector_n}</span><span class="ls-lbl">Connectors</span><span class="ls-sub">bridging terms</span></div>
+  </div>
 </header>
 <div class="cst-stage">
   <div id="cstWrap" class="cst-canvas-wrap">
@@ -705,9 +731,7 @@ def render_constellation(terms, gs, ctx):
   </div>
 </div>
 <div class="cst-bar">
-  <span><b>{len(nodes)}</b> terms</span>
-  <span><b>{len(links)}</b> co-occurrence links</span>
-  <span>drag · scroll to zoom · click a star to open it</span>
+  <span>Drag · scroll to zoom · click a star to open it</span>
   <button id="cstReset" class="cst-reset">Reset view</button>
 </div>
 <script>window.CONSTELLATION={payload};</script>
@@ -729,12 +753,27 @@ def render_category(c, items, gs, ctx):
         <span class="lex-line-term">{esc(t['name'])}{badge}</span>
         <span class="lex-line-def">{esc(_clamp(t['definition'], 150))}</span>
       </a>'''
+    recurring = sum(1 for t in items if _ac(t) >= CORE_MIN)
+    keystone_n = sum(1 for t in items if t.get("role") == "Keystone")
+    essay_hits = sum(t.get("essay_count", 0) for t in items)
+    dates = [ed["date"] for t in items for ed in (t.get("editions") or [])]
+    dates += [a["date"] for t in items for a in (t.get("appearances") or []) if a.get("date")]
+    span = ""
+    if dates:
+        d0, d1 = min(dates), max(dates)
+        span = f"{d0[:4]}Q{(int(d0[5:7])-1)//3+1} – {d1[:4]}Q{(int(d1[5:7])-1)//3+1}"
     body = f'''
 <header class="lex-hero">
   <a class="lex-back" href="index.html">&larr; The Lexicon</a>
   <div class="kicker kicker-accent">Lexicon · Category</div>
   <h1 class="lex-h1">{esc(c)}</h1>
-  <div class="lex-metaline">{len(items)} terms · sorted by how often they appear across the corpus</div>
+  <p class="lex-lede">Every {esc(c).lower()} term the Lexicon knows about, sorted by how often it appears across the corpus.</p>
+  <div class="lex-stats lex-stats--compact" role="group" aria-label="Category totals">
+    <div class="lex-stat"><span class="ls-num">{len(items):,}</span><span class="ls-lbl">Terms</span></div>
+    <div class="lex-stat"><span class="ls-num">{recurring}</span><span class="ls-lbl">Recurring</span><span class="ls-sub">3+ appearances</span></div>
+    <div class="lex-stat"><span class="ls-num">{keystone_n}</span><span class="ls-lbl">Keystone</span><span class="ls-sub">central &amp; recurring</span></div>
+    <div class="lex-stat"><span class="ls-num">{essay_hits:,}</span><span class="ls-lbl">Essay hits</span><span class="ls-sub">{span}</span></div>
+  </div>
 </header>
 <main class="wrap"><section class="block"><div class="lex-lines" data-paginate>{lines}
 </div></section></main>
@@ -763,7 +802,7 @@ def render_term(t, gs, ctx):
     chart = bar_timeline(t["timeline"], color, h=130) if ap_count > 1 else ""
     arc = (f'''
   <section class="term-section"><h3 class="term-h3">The arc</h3>
-    <p class="term-arc-note">Appears across {ap_count} pieces ({breakdown}) — when this term was part of the conversation. First surfaces {gs.fmt_date(first_seen, "%b %Y")}.</p>
+    <p class="term-arc-note">Appears across {ap_count} pieces ({breakdown}): when this term was part of the conversation. First surfaces {gs.fmt_date(first_seen, "%b %Y")}.</p>
     {chart}</section>''' if chart else "")
 
     hist = ""
@@ -815,7 +854,7 @@ def render_term(t, gs, ctx):
     role_block = ""
     if role:
         notes = {
-            "Keystone":  "Central to the network and frequently re-defined — part of the corpus's backbone.",
+            "Keystone":  "Central to the network and frequently re-defined: part of the corpus's backbone.",
             "Connector": "Wires many terms together, though it's rarely re-defined on its own.",
             "Headliner": "Re-defined often across editions, but lightly linked to the rest.",
         }
@@ -829,7 +868,7 @@ def render_term(t, gs, ctx):
     constellation = ""
     if t["edition_count"] >= CONSTELLATION_MIN or t.get("centrality", 0) >= CENTRALITY_INCLUDE:
         constellation = (f'<div class="term-side-block"><a class="lex-seeall" '
-                         f'href="constellation.html#{t["slug"]}">✦ See it in the Constellation &rarr;</a></div>')
+                         f'href="constellation.html#{t["slug"]}">✦ Open in the Constellation&nbsp;&rarr;</a></div>')
 
     ap_hdr = (f"{ap_count} — {ed_c} defined · {es_c} discussed" if es_c else f"{ed_c} defined")
 
