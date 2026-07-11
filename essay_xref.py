@@ -64,10 +64,14 @@ def build_strict_patterns(terms: list[dict]):
     pats = []
     for t in terms:
         name = t["name"]
-        if len(name) < 3 or not (t.get("definition") or "").strip():
+        if not (t.get("definition") or "").strip():
             continue
         multi = " " in name
         acro = _is_acronym(name)
+        # acronyms (AI, ML, VR, 5G…) are safe at 2 chars because they match
+        # case-sensitively as whole words; regular words keep a 3-char floor.
+        if len(name) < (2 if acro else 3):
+            continue
         if not (multi or acro):
             # single-word, non-acronym: must be Capitalized and not generic
             if name[:1].islower() or name.lower() in GENERIC_BLOCKLIST:

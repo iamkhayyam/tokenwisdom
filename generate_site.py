@@ -1559,14 +1559,18 @@ img { max-width: 100%; height: auto; }
   line-height: 1.6;
 }
 .essay-row.has-thumb { display: flex; gap: 1.2rem; align-items: flex-start; }
+.essay-row-thumb-link { display: block; flex-shrink: 0; }
 .essay-row-thumb {
+  display: block;
   width: 112px;
   height: 112px;
   object-fit: cover;
   flex-shrink: 0;
   border-radius: 2px;
   background: var(--paper-warm);
+  transition: opacity .15s;
 }
+.essay-row-thumb-link:hover .essay-row-thumb { opacity: .85; }
 .essay-row-body { flex: 1; min-width: 0; }
 @media (max-width: 640px) {
   .essay-row-thumb { width: 76px; height: 76px; }
@@ -3249,7 +3253,10 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
         if meta:
             cat = f'<span class="cat">{esc(meta)}</span><span>·</span>'
         thumb_url = localize_url(p.get("feature_image") or "")
-        thumb_html = f'<img class="essay-row-thumb" src="{esc(thumb_url)}" alt="" loading="lazy">' if thumb_url else ""
+        thumb_html = (
+            f'<a class="essay-row-thumb-link" href="../posts/{p["slug"]}.html" tabindex="-1" aria-hidden="true">'
+            f'<img class="essay-row-thumb" src="{esc(thumb_url)}" alt="" loading="lazy"></a>'
+        ) if thumb_url else ""
         row_class = "essay-row has-thumb" if thumb_html else "essay-row"
         rows += f"""
   <article class="{row_class}">
