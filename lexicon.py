@@ -336,13 +336,16 @@ def _constellation_data(terms, min_ed=CONSTELLATION_MIN):
 
 
 def render_index(terms, qkeys, gs, ctx):
+    def _ac(t):
+        return t.get("appearance_count", t["edition_count"])  # combined: defined + discussed
     by_cat = defaultdict(list)
     for t in terms:
         by_cat[t["category"]].append(t)
     for c in by_cat:
-        by_cat[c].sort(key=lambda t: (-t["edition_count"], t["name"].lower()))
-    core = [t for t in terms if t["edition_count"] >= CORE_MIN]
+        by_cat[c].sort(key=lambda t: (-_ac(t), t["name"].lower()))
+    core = [t for t in terms if _ac(t) >= CORE_MIN]
     total_entries = sum(t["edition_count"] for t in terms)
+    total_mentions = sum(t.get("essay_count", 0) for t in terms)
     span = f"{qkeys[0].replace('-Q', ' Q')} – {qkeys[-1].replace('-Q', ' Q')}" if qkeys else ""
 
     chips = "".join(
@@ -366,7 +369,8 @@ def render_index(terms, qkeys, gs, ctx):
         shown = items[:TOP_N]
         lines = ""
         for t in shown:
-            badge = f'<span class="lex-badge">{t["edition_count"]}×</span>' if t["edition_count"] > 1 else ""
+            ac = _ac(t)
+            badge = f'<span class="lex-badge">{ac}×</span>' if ac > 1 else ""
             lines += f'''
       <a class="lex-line" href="{t['slug']}.html">
         <span class="lex-line-term">{esc(t['name'])}{badge}</span>
@@ -388,7 +392,7 @@ def render_index(terms, qkeys, gs, ctx):
   <div class="kicker kicker-accent">The Lexicon</div>
   <h1 class="lex-h1">The Lexicon</h1>
   <p class="lex-lede">The working vocabulary of the future of now — {len(terms):,} terms, defined by hand in <em>The Less You Know</em> across {ctx['edition_count']} editions. Every definition is the newsletter's own; recurring terms trace how the language of the field accumulated, week over week.</p>
-  <div class="lex-metaline">{total_entries:,} definitions · {len(core)} recurring terms · {span} · 100% authentic humanly chosen</div>
+  <div class="lex-metaline">{total_entries:,} definitions · {total_mentions:,} essay mentions · {len(core)} core terms · {span} · 100% authentic humanly chosen</div>
   <input id="lexSearch" class="lex-search" type="search" autocomplete="off" placeholder="Search all {len(terms):,} terms…" aria-label="Search the Lexicon">
   <div class="lex-chips">{chips}</div>
   <a class="lex-constellation-cta" href="constellation.html">✦ Open the Constellation — the Lexicon as a living map &rarr;</a>
@@ -397,7 +401,7 @@ def render_index(terms, qkeys, gs, ctx):
 <div id="lexBrowse">
 <main class="wrap">
   <section class="block lex-core-sec">
-    <div class="rule-head"><h2 class="rule-label">Core Vocabulary</h2><span class="rule-meta">Recurring in 3+ editions</span></div>
+    <div class="rule-head"><h2 class="rule-label">Core Vocabulary</h2><span class="rule-meta">Referenced in 3+ pieces</span></div>
     <div class="lex-core-grid">{core_cards}
     </div>
   </section>
@@ -711,10 +715,13 @@ def render_constellation(terms, gs, ctx):
 
 
 def render_category(c, items, gs, ctx):
-    items = sorted(items, key=lambda t: (-t["edition_count"], t["name"].lower()))
+    def _ac(t):
+        return t.get("appearance_count", t["edition_count"])  # combined: defined + discussed
+    items = sorted(items, key=lambda t: (-_ac(t), t["name"].lower()))
     lines = ""
     for t in items:
-        badge = f'<span class="lex-badge">{t["edition_count"]}×</span>' if t["edition_count"] > 1 else ""
+        ac = _ac(t)
+        badge = f'<span class="lex-badge">{ac}×</span>' if ac > 1 else ""
         lines += f'''
       <a class="lex-line" href="{t['slug']}.html">
         <span class="lex-line-term">{esc(t['name'])}{badge}</span>
@@ -725,7 +732,7 @@ def render_category(c, items, gs, ctx):
   <a class="lex-back" href="index.html">&larr; The Lexicon</a>
   <div class="kicker kicker-accent">Lexicon · Category</div>
   <h1 class="lex-h1">{esc(c)}</h1>
-  <div class="lex-metaline">{len(items)} terms · sorted by how often they're glossed</div>
+  <div class="lex-metaline">{len(items)} terms · sorted by how often they appear across the corpus</div>
 </header>
 <main class="wrap"><section class="block"><div class="lex-lines" data-paginate>{lines}
 </div></section></main>
