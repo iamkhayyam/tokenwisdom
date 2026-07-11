@@ -727,7 +727,7 @@ def render_category(c, items, gs, ctx):
   <h1 class="lex-h1">{esc(c)}</h1>
   <div class="lex-metaline">{len(items)} terms · sorted by how often they're glossed</div>
 </header>
-<main class="wrap"><section class="block"><div class="lex-lines">{lines}
+<main class="wrap"><section class="block"><div class="lex-lines" data-paginate>{lines}
 </div></section></main>
 '''
     return theme.page(f"{c} — The Lexicon", body, prefix="../", lex=True, active="lexicon")
@@ -745,10 +745,16 @@ def render_term(t, gs, ctx):
     src_line = (f'<div class="term-def-src">— defined in '
                 f'{_ed_link(latest, ed_label(latest))}, {gs.fmt_date_short(latest["date"])}</div>')
 
-    chart = bar_timeline(t["timeline"], color, h=130) if t["edition_count"] > 1 else ""
+    # combined metrics, computed + stored in the DB (essay_xref.attach)
+    ap_count = t.get("appearance_count", t["edition_count"])
+    ed_c, es_c = t["edition_count"], t.get("essay_count", 0)
+    first_seen = t.get("first_seen") or first["date"]
+    latest_seen = t.get("latest_seen") or latest["date"]
+    breakdown = f"{ed_c} defined it" + (f" · {es_c} discussed it in essays" if es_c else "")
+    chart = bar_timeline(t["timeline"], color, h=130) if ap_count > 1 else ""
     arc = (f'''
   <section class="term-section"><h3 class="term-h3">The arc</h3>
-    <p class="term-arc-note">Glossed in {t['edition_count']} editions — when this term was part of the working vocabulary. First defined in {_ed_link(first, ed_label(first))}.</p>
+    <p class="term-arc-note">Appears across {ap_count} pieces ({breakdown}) — when this term was part of the conversation. First surfaces {gs.fmt_date(first_seen, "%b %Y")}.</p>
     {chart}</section>''' if chart else "")
 
     hist = ""
@@ -761,11 +767,24 @@ def render_term(t, gs, ctx):
                 f'<span class="term-h3-count">({len(t["definition_history"])} versions)</span></h3>'
                 f'<ul class="def-history">{rows}</ul></section>')
 
-    ed_rows = ""
-    for ed in sorted(t["editions"], key=lambda d: d["date"], reverse=True):
-        wk = ('W%02d' % ed['week']) if ed.get('week') else ''
-        ed_rows += (f'<div class="term-post"><span class="tp-title">{_ed_link(ed, ed_label(ed))}</span>'
-                    f'<span class="tp-meta">{wk} · {gs.fmt_date_short(ed["date"])}</span></div>')
+    # one merged, chronological list — newsletter definitions and essay
+    # discussions interleaved in order of appearance (falls back to editions
+    # if the DB predates the appearances field).
+    appearances = t.get("appearances") or [
+        {"kind": "defined", "date": ed["date"], "slug": ed.get("slug"),
+         "title": ed.get("title"), "edition": ed.get("edition"),
+         "week": ed.get("week"), "source": ed.get("source")}
+        for ed in sorted(t["editions"], key=lambda d: d["date"])]
+    ap_rows = ""
+    for a in appearances:
+        if a["kind"] == "defined":
+            link, klbl = _ed_link(a, ed_label(a)), "Defined"
+        else:
+            link, klbl = f'<a href="../posts/{esc(a["slug"])}.html">{esc(a["title"])}</a>', "Discussed"
+        wk = ('W%02d · ' % a['week']) if a.get('week') else ''
+        ap_rows += (f'<div class="term-post"><span class="tp-title">'
+                    f'<span class="ap-kind ap-{a["kind"]}">{klbl}</span> {link}</span>'
+                    f'<span class="tp-meta">{wk}{gs.fmt_date_short(a["date"])}</span></div>')
 
     related = ""
     if t["related"]:
@@ -794,26 +813,7 @@ def render_term(t, gs, ctx):
         constellation = (f'<div class="term-side-block"><a class="lex-seeall" '
                          f'href="constellation.html#{t["slug"]}">✦ See it in the Constellation &rarr;</a></div>')
 
-    # 'A Closer Look' essays that discuss this term (source-tagged "essay";
-    # separate from the newsletter glossary definitions above).
-    essays = t.get("essays") or []
-    essay_section = ""
-    if essays:
-        rows = "".join(
-            f'<div class="term-post"><span class="tp-title">'
-            f'<a href="../posts/{esc(e["slug"])}.html">{esc(e["title"])}</a></span>'
-            f'<span class="tp-meta">{gs.fmt_date_short(e["date"])}</span></div>'
-            for e in sorted(essays, key=lambda x: x["date"], reverse=True))
-        fs = t.get("first_seen")
-        earlier_note = ""
-        if fs and fs < first["date"]:
-            earlier_note = (f'<p class="term-arc-note">First surfaces in an essay '
-                            f'{gs.fmt_date(fs, "%b %Y")} — before it entered the glossary '
-                            f'({gs.fmt_date(first["date"], "%b %Y")}).</p>')
-        essay_section = (
-            f'<section class="term-section"><h3 class="term-h3">Also discussed in '
-            f'<span class="term-h3-count">({len(essays)} essay{"s" if len(essays) != 1 else ""})</span></h3>'
-            f'{earlier_note}<div class="term-posts">{rows}</div></section>')
+    ap_hdr = (f"{ap_count} — {ed_c} defined · {es_c} discussed" if es_c else f"{ed_c} defined")
 
     body = f'''
 <div class="term-wrap">
@@ -823,17 +823,16 @@ def render_term(t, gs, ctx):
   <p class="term-def">{esc(defn)}</p>
   {src_line}
   <div class="term-stats">
-    <div class="term-stat"><span class="ts-num">{t['edition_count']}</span><span class="ts-lbl">editions defined</span></div>
-    <div class="term-stat"><span class="ts-num">{gs.fmt_date(first['date'], '%b %Y')}</span><span class="ts-lbl">first defined</span></div>
-    <div class="term-stat"><span class="ts-num">{gs.fmt_date(latest['date'], '%b %Y')}</span><span class="ts-lbl">most recent</span></div>
+    <div class="term-stat"><span class="ts-num">{ap_count}</span><span class="ts-lbl">appearances</span></div>
+    <div class="term-stat"><span class="ts-num">{gs.fmt_date(first_seen, '%b %Y')}</span><span class="ts-lbl">first appeared</span></div>
+    <div class="term-stat"><span class="ts-num">{gs.fmt_date(latest_seen, '%b %Y')}</span><span class="ts-lbl">most recent</span></div>
     <div class="term-stat"><span class="ts-num">{esc(t['category'])}</span><span class="ts-lbl">category</span></div>
   </div>
 {arc}
 {hist}
   <div class="term-body">
-    <section class="term-section"><h3 class="term-h3">Defined in <span class="term-h3-count">({t['edition_count']})</span></h3>
-      <div class="term-posts">{ed_rows}</div></section>
-    {essay_section}
+    <section class="term-section"><h3 class="term-h3">Across the corpus <span class="term-h3-count">({ap_hdr})</span></h3>
+      <div class="term-posts" data-paginate>{ap_rows}</div></section>
     <aside class="term-side">{role_block}{related}{constellation}
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>

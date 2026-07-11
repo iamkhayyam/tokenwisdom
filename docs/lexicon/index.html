@@ -316,6 +316,20 @@ html.nav-open .nto-close-glyph{opacity:1;transition:opacity .5s ease .5s,color .
   html.nav-open .nto-close-glyph{transition:opacity .2s ease;transform:none}
 }
 
+/* reusable client-side pagination — activates on any [data-paginate] list */
+.pgn{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.4rem;margin:1.5rem 0 .3rem;padding-top:1.1rem;border-top:1px solid var(--rule);font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
+.pgn-info{color:var(--ink-muted)}
+.pgn-sizes,.pgn-nav{display:flex;align-items:center;gap:.4em}
+.pgn-sizes>span{margin-right:.15em}
+.pgn button{font-family:var(--mono);font-size:.64rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-muted);background:transparent;border:1px solid var(--rule);padding:.42em .62em;min-width:2.1em;cursor:pointer;transition:border-color .15s,color .15s}
+.pgn button:hover:not(:disabled){border-color:var(--ink);color:var(--ink)}
+.pgn button.on{border-color:var(--accent);color:var(--accent)}
+.pgn button:disabled{opacity:.33;cursor:default}
+.pgn-nav{margin-left:auto}
+.pgn-pages{display:flex;gap:.3em;align-items:center}
+.pgn-gap{color:var(--ink-faint);padding:0 .1em}
+@media(max-width:640px){.pgn-nav{margin-left:0;width:100%}.pgn-pages .pgn-p{display:none}.pgn-pages .pgn-p.on{display:inline-block}}
+
 .lex-hero{max-width:var(--w);margin:0 auto;padding:50px 28px 6px}
 .lex-h1{font-family:var(--display);font-weight:var(--display-weight);font-size:clamp(3rem,8.5vw,6.2rem);line-height:.88;letter-spacing:-.03em;margin:.5rem 0 .7rem}
 .lex-lede{font-family:var(--serif);font-size:1.26rem;line-height:1.5;color:var(--ink-muted);max-width:62ch;margin-bottom:.8rem}
@@ -405,6 +419,10 @@ html.nav-open .nto-close-glyph{opacity:1;transition:opacity .5s ease .5s,color .
 .term-post a{color:var(--ink)} .term-post a:hover{color:var(--accent)}
 .tp-title{font-family:var(--serif);font-size:1rem}
 .tp-meta{font-family:var(--mono);font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+/* appearance kind badge — Defined (newsletter) vs Discussed (essay) */
+.ap-kind{display:inline-block;font-family:var(--mono);font-size:.5rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:.2em .5em;border-radius:2px;margin-right:.6em;vertical-align:.12em}
+.ap-defined{background:color-mix(in oklch,var(--accent) 15%,transparent);color:var(--accent-deep,var(--accent))}
+.ap-discussed{background:color-mix(in oklch,var(--teal) 15%,transparent);color:var(--teal)}
 .term-side{position:sticky;top:70px}
 .term-side-block{margin-bottom:1.8rem}
 .term-side-block h4{font-family:var(--mono);font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-muted);margin-bottom:.7rem}
@@ -478,17 +496,17 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="ai.html">
       <div class="lex-cc-term">AI</div>
       <p class="lex-cc-def">Artificial Intelligence</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,26.1 16.0,26.1 30.0,28.0 44.0,28.0 58.0,11.3 72.0,2.0 86.0,11.3 100.0,7.6 114.0,11.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,26.1 16.0,26.1 30.0,28.0 44.0,28.0 58.0,11.3 72.0,2.0 86.0,11.3 100.0,7.6 114.0,11.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,26.0 16.0,26.0 30.0,28.0 44.0,28.0 58.0,10.0 72.0,2.0 86.0,10.0 100.0,6.0 114.0,10.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,26.0 16.0,26.0 30.0,28.0 44.0,28.0 58.0,10.0 72.0,2.0 86.0,10.0 100.0,6.0 114.0,10.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="quantum-computing.html">
       <div class="lex-cc-term">Quantum Computing</div>
       <p class="lex-cc-def">Theoretical foundations</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,2.0 100.0,7.2 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,2.0 100.0,7.2 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,23.7 30.0,28.0 44.0,15.0 58.0,2.0 72.0,23.7 86.0,6.3 100.0,10.7 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,23.7 30.0,28.0 44.0,15.0 58.0,2.0 72.0,23.7 86.0,6.3 100.0,10.7 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
     </a>
     <a class="lex-cc" href="ceo.html">
       <div class="lex-cc-term">CEO</div>
       <p class="lex-cc-def">Chief Executive Officer</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,10.7 72.0,2.0 86.0,23.7 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,10.7 72.0,2.0 86.0,23.7 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,24.3 30.0,24.3 44.0,20.6 58.0,2.0 72.0,2.0 86.0,13.1 100.0,24.3 114.0,20.6 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,24.3 30.0,24.3 44.0,20.6 58.0,2.0 72.0,2.0 86.0,13.1 100.0,24.3 114.0,20.6 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="darpa.html">
       <div class="lex-cc-term">DARPA</div>
@@ -498,12 +516,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="llm.html">
       <div class="lex-cc-term">LLM</div>
       <p class="lex-cc-def">Large Language Model</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,22.8 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,23.7 44.0,23.7 58.0,6.3 72.0,23.7 86.0,23.7 100.0,23.7 114.0,2.0 128.0,23.7 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,23.7 44.0,23.7 58.0,6.3 72.0,23.7 86.0,23.7 100.0,23.7 114.0,2.0 128.0,23.7" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="114.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="mit.html">
       <div class="lex-cc-term">MIT</div>
       <p class="lex-cc-def">Massachusetts Institute of Technology</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,22.8 72.0,2.0 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,22.8 72.0,2.0 86.0,22.8 100.0,22.8 114.0,17.6 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,23.7 16.0,23.7 30.0,19.3 44.0,23.7 58.0,19.3 72.0,2.0 86.0,23.7 100.0,10.7 114.0,6.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,23.7 16.0,23.7 30.0,19.3 44.0,23.7 58.0,19.3 72.0,2.0 86.0,23.7 100.0,10.7 114.0,6.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="3d.html">
       <div class="lex-cc-term">3D</div>
@@ -513,12 +531,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="vc.html">
       <div class="lex-cc-term">VC</div>
       <p class="lex-cc-def">Venture Capital</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,2.0 86.0,19.3 100.0,28.0 114.0,10.7 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,2.0 86.0,19.3 100.0,28.0 114.0,10.7 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,10.7 86.0,19.3 100.0,28.0 114.0,10.7 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,10.7 86.0,19.3 100.0,28.0 114.0,10.7 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="cybersecurity.html">
       <div class="lex-cc-term">Cybersecurity</div>
       <p class="lex-cc-def">Sports technology</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,19.3 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,19.3 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,19.3 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,19.3 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,19.3 16.0,19.3 30.0,28.0 44.0,28.0 58.0,28.0 72.0,19.3 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,19.3 16.0,19.3 30.0,28.0 44.0,28.0 58.0,28.0 72.0,19.3 86.0,2.0 100.0,10.7 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
     </a>
     <a class="lex-cc" href="digital-privacy.html">
       <div class="lex-cc-term">Digital Privacy</div>
@@ -528,22 +546,22 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="gpu.html">
       <div class="lex-cc-term">GPU</div>
       <p class="lex-cc-def">Graphics Processing Unit: the compute hardware into which displaced payroll is being converted across the 2026 layoff wave. &quot;Mathematical…</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,15.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,15.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,21.5 72.0,21.5 86.0,21.5 100.0,2.0 114.0,15.0 128.0,21.5 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,21.5 72.0,21.5 86.0,21.5 100.0,2.0 114.0,15.0 128.0,21.5" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="vpn.html">
       <div class="lex-cc-term">VPN</div>
       <p class="lex-cc-def">Virtual Private Network</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,10.7 114.0,19.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,10.7 114.0,19.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,10.7 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,10.7 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="bbc.html">
       <div class="lex-cc-term">BBC</div>
       <p class="lex-cc-def">British Broadcasting Corporation</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,10.7 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,10.7 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,10.7 114.0,19.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,10.7 114.0,19.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="cia.html">
       <div class="lex-cc-term">CIA</div>
       <p class="lex-cc-def">Central Intelligence Agency</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,19.3 100.0,19.3 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,19.3 100.0,19.3 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,19.3 58.0,28.0 72.0,2.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,19.3 58.0,28.0 72.0,2.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="consciousness-research.html">
       <div class="lex-cc-term">Consciousness Research</div>
@@ -558,7 +576,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="environmental-impact.html">
       <div class="lex-cc-term">Environmental Impact</div>
       <p class="lex-cc-def">Technology costs</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,22.8 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,22.8 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,21.5 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,21.5 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
     </a>
     <a class="lex-cc" href="tpu.html">
       <div class="lex-cc-term">TPU</div>
@@ -568,32 +586,32 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="tsmc.html">
       <div class="lex-cc-term">TSMC</div>
       <p class="lex-cc-def">Taiwan Semiconductor Manufacturing Company</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,19.3 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,19.3 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,19.3 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,19.3 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,19.3 16.0,19.3 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,19.3 100.0,19.3 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,19.3 16.0,19.3 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,19.3 100.0,19.3 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="agi.html">
       <div class="lex-cc-term">AGI</div>
       <p class="lex-cc-def">Artificial General Intelligence</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,15.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,15.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,23.7 16.0,23.7 30.0,23.7 44.0,23.7 58.0,28.0 72.0,19.3 86.0,28.0 100.0,15.0 114.0,2.0 128.0,23.7 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,23.7 16.0,23.7 30.0,23.7 44.0,23.7 58.0,28.0 72.0,19.3 86.0,28.0 100.0,15.0 114.0,2.0 128.0,23.7" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="114.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="ai-development.html">
       <div class="lex-cc-term">AI Development</div>
       <p class="lex-cc-def">Architecture optimization</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,10.7 58.0,10.7 72.0,28.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,10.7 58.0,10.7 72.0,28.0 86.0,19.3 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
     </a>
     <a class="lex-cc" href="ai-ethics.html">
       <div class="lex-cc-term">AI Ethics</div>
       <p class="lex-cc-def">Implications of AI in surveillance and law enforcement</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,21.5 16.0,28.0 30.0,28.0 44.0,21.5 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,21.5 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,21.5 16.0,28.0 30.0,28.0 44.0,21.5 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,21.5 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
     </a>
     <a class="lex-cc" href="amd.html">
       <div class="lex-cc-term">AMD</div>
       <p class="lex-cc-def">Advanced Micro Devices</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,15.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="artificial-intelligence.html">
       <div class="lex-cc-term">Artificial Intelligence</div>
       <p class="lex-cc-def">Impact on industries and decision-making processes</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,17.6 16.0,7.2 30.0,17.6 44.0,17.6 58.0,12.4 72.0,28.0 86.0,2.0 100.0,22.8 114.0,28.0 128.0,22.8 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,17.6 16.0,7.2 30.0,17.6 44.0,17.6 58.0,12.4 72.0,28.0 86.0,2.0 100.0,22.8 114.0,28.0 128.0,22.8" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
     </a>
     <a class="lex-cc" href="bci.html">
       <div class="lex-cc-term">BCI</div>
@@ -608,7 +626,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="entropy.html">
       <div class="lex-cc-term">Entropy</div>
       <p class="lex-cc-def">Measure of disorder; second law of thermodynamics states entropy always increases</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,2.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,15.0 114.0,2.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="114.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,21.5 100.0,21.5 114.0,2.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,21.5 100.0,21.5 114.0,2.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="114.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
     </a>
     <a class="lex-cc" href="euv.html">
       <div class="lex-cc-term">EUV</div>
@@ -618,22 +636,22 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="fbi.html">
       <div class="lex-cc-term">FBI</div>
       <p class="lex-cc-def">Federal Bureau of Investigation</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,19.3 30.0,28.0 44.0,19.3 58.0,2.0 72.0,19.3 86.0,28.0 100.0,28.0 114.0,19.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,19.3 30.0,28.0 44.0,19.3 58.0,2.0 72.0,19.3 86.0,28.0 100.0,28.0 114.0,19.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="gps.html">
       <div class="lex-cc-term">GPS</div>
       <p class="lex-cc-def">Global Positioning System: the signal a jammer in Iran was degrading, and that NASA science satellites turned out to be able to locate from…</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,2.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,2.0 114.0,28.0 128.0,2.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,10.7 44.0,10.7 58.0,19.3 72.0,10.7 86.0,19.3 100.0,2.0 114.0,19.3 128.0,19.3 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,10.7 44.0,10.7 58.0,19.3 72.0,10.7 86.0,19.3 100.0,2.0 114.0,19.3 128.0,19.3" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="ice.html">
       <div class="lex-cc-term">ICE</div>
       <p class="lex-cc-def">Immigration and Customs Enforcement</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,2.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,2.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="iot.html">
       <div class="lex-cc-term">IoT</div>
       <p class="lex-cc-def">Internet of Things</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,8.5 16.0,21.5 30.0,15.0 44.0,21.5 58.0,28.0 72.0,21.5 86.0,2.0 100.0,8.5 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,8.5 16.0,21.5 30.0,15.0 44.0,21.5 58.0,28.0 72.0,21.5 86.0,2.0 100.0,8.5 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="mcp.html">
       <div class="lex-cc-term">MCP</div>
@@ -643,17 +661,17 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="nasa.html">
       <div class="lex-cc-term">NASA</div>
       <p class="lex-cc-def">National Aeronautics and Space Administration</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,15.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,15.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,19.3 100.0,28.0 114.0,19.3 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,19.3 100.0,28.0 114.0,19.3 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="saas.html">
       <div class="lex-cc-term">SaaS</div>
       <p class="lex-cc-def">Software as a Service</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,15.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,19.3 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,19.3 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="semiconductor.html">
       <div class="lex-cc-term">Semiconductor</div>
       <p class="lex-cc-def">Material with electrical conductivity between a conductor and an insulator</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,2.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
     </a>
     <a class="lex-cc" href="ai-ethics-and-development.html">
       <div class="lex-cc-term">AI Ethics and Development</div>
@@ -668,12 +686,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="ai-powered-video-creation.html">
       <div class="lex-cc-term">AI-Powered Video Creation</div>
       <p class="lex-cc-def">Tools making video production more accessible to brands and content creators.</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,19.3 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,19.3 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,15.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
     </a>
     <a class="lex-cc" href="aip.html">
       <div class="lex-cc-term">AIP</div>
       <p class="lex-cc-def">American Institute of Physics</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,19.3 72.0,2.0 86.0,28.0 100.0,28.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="brain-computer-interfaces.html">
       <div class="lex-cc-term">Brain-Computer Interfaces</div>
@@ -683,12 +701,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="chatgpt.html">
       <div class="lex-cc-term">ChatGPT</div>
       <p class="lex-cc-def">Chat Generative Pre-trained Transformer</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,2.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,2.0 100.0,28.0 114.0,2.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,17.6 72.0,12.4 86.0,7.2 100.0,2.0 114.0,12.4 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,17.6 72.0,12.4 86.0,7.2 100.0,2.0 114.0,12.4 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="digital-security.html">
       <div class="lex-cc-term">Digital Security</div>
       <p class="lex-cc-def">Massive exploit campaigns</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,15.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,2.0 100.0,15.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,28.0 86.0,2.0 100.0,15.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--accent)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,15.0 72.0,28.0 86.0,2.0 100.0,15.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--accent)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="86.0" cy="2.0" r="2.4" fill="var(--accent)"/></svg></div>
     </a>
     <a class="lex-cc" href="digital-twin.html">
       <div class="lex-cc-term">Digital Twin</div>
@@ -698,12 +716,12 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="dna.html">
       <div class="lex-cc-term">DNA</div>
       <p class="lex-cc-def">Deoxyribonucleic Acid</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,15.0 86.0,28.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,19.3 30.0,19.3 44.0,10.7 58.0,28.0 72.0,2.0 86.0,19.3 100.0,10.7 114.0,19.3 128.0,19.3 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,28.0 16.0,19.3 30.0,19.3 44.0,10.7 58.0,28.0 72.0,2.0 86.0,19.3 100.0,10.7 114.0,19.3 128.0,19.3" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="72.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     <a class="lex-cc" href="encryption.html">
       <div class="lex-cc-term">Encryption</div>
       <p class="lex-cc-def">Data protection</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="100.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,28.0 16.0,28.0 30.0,15.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0 128.0,28.0" fill="var(--gold)" opacity="0.10"/><polyline points="2.0,28.0 16.0,28.0 30.0,15.0 44.0,28.0 58.0,2.0 72.0,28.0 86.0,15.0 100.0,2.0 114.0,28.0 128.0,28.0" fill="none" stroke="var(--gold)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="58.0" cy="2.0" r="2.4" fill="var(--gold)"/></svg></div>
     </a>
     <a class="lex-cc" href="esp32.html">
       <div class="lex-cc-term">ESP32</div>
@@ -713,7 +731,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <a class="lex-cc" href="fcc.html">
       <div class="lex-cc-term">FCC</div>
       <p class="lex-cc-def">Federal Communications Commission: the U.S. regulatory agency governing interstate communications by radio, television, wire, satellite,…</p>
-      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,2.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,2.0 128.0,2.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,2.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,2.0 128.0,2.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="2.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
+      <div class="lex-cc-spark"><svg class="spark" viewBox="0 0 130 30" preserveAspectRatio="none" aria-hidden="true"><polygon points="2,28.0 2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,2.0 128.0,28.0" fill="var(--teal)" opacity="0.10"/><polyline points="2.0,15.0 16.0,28.0 30.0,28.0 44.0,28.0 58.0,28.0 72.0,28.0 86.0,28.0 100.0,28.0 114.0,15.0 128.0,2.0" fill="none" stroke="var(--teal)" stroke-width="1.6" stroke-linejoin="round" stroke-linecap="round"/><circle cx="128.0" cy="2.0" r="2.4" fill="var(--teal)"/></svg></div>
     </a>
     </div>
   </section>
@@ -1138,5 +1156,59 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <p class="foot-tag">The Newsletter of Record for the Future of Now · Knowware is measured in lifetimes.</p>
   </div>
 </footer>
+
+
+<script>
+(function(){
+  var SIZES=[25,50,75,100];
+  function pageList(cur,count){
+    if(count<=7){var a=[];for(var i=1;i<=count;i++)a.push(i);return a;}
+    var out=[1],lo=Math.max(2,cur-1),hi=Math.min(count-1,cur+1);
+    if(lo>2)out.push('…');
+    for(var i=lo;i<=hi;i++)out.push(i);
+    if(hi<count-1)out.push('…');
+    out.push(count);return out;
+  }
+  function init(box){
+    var sel=box.getAttribute('data-item');           // optional: paginate only matching children
+    var items=[].filter.call(box.children,function(n){return n.nodeType===1&&(!sel||(n.matches&&n.matches(sel)));});
+    var total=items.length;
+    if(total<=SIZES[0])return;                       // short list: no controls
+    var size=parseInt(box.getAttribute('data-page-size'),10)||parseInt(localStorage.getItem('pgnSize'),10)||SIZES[0];
+    if(SIZES.indexOf(size)<0)size=SIZES[0];
+    var page=1;
+    var bar=document.createElement('div');bar.className='pgn';
+    bar.innerHTML='<div class="pgn-info"></div>'
+      +'<div class="pgn-sizes"><span>View</span>'+SIZES.map(function(s){return '<button type="button" data-s="'+s+'">'+s+'</button>';}).join('')+'</div>'
+      +'<div class="pgn-nav"><button type="button" class="pgn-prev">‹ Prev</button><span class="pgn-pages"></span><button type="button" class="pgn-next">Next ›</button></div>';
+    box.parentNode.insertBefore(bar,box.nextSibling);
+    var info=bar.querySelector('.pgn-info'),pagesEl=bar.querySelector('.pgn-pages');
+    function render(scroll){
+      var pageCount=Math.max(1,Math.ceil(total/size));
+      if(page>pageCount)page=pageCount;if(page<1)page=1;
+      var start=(page-1)*size,end=Math.min(start+size,total);
+      for(var i=0;i<total;i++)items[i].style.display=(i>=start&&i<end)?'':'none';
+      info.textContent='Showing '+(start+1)+'–'+end+' of '+total;
+      [].forEach.call(bar.querySelectorAll('.pgn-sizes button'),function(b){b.classList.toggle('on',+b.getAttribute('data-s')===size);});
+      pagesEl.innerHTML=pageList(page,pageCount).map(function(p){
+        return p==='…'?'<span class="pgn-gap">…</span>':'<button type="button" class="pgn-p'+(p===page?' on':'')+'" data-p="'+p+'">'+p+'</button>';
+      }).join('');
+      bar.querySelector('.pgn-prev').disabled=page<=1;
+      bar.querySelector('.pgn-next').disabled=page>=pageCount;
+      if(scroll){var y=box.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:y,behavior:'smooth'});}
+    }
+    bar.addEventListener('click',function(e){
+      var b=e.target.closest&&e.target.closest('button');if(!b)return;
+      if(b.hasAttribute('data-s')){size=+b.getAttribute('data-s');localStorage.setItem('pgnSize',size);page=1;render(true);}
+      else if(b.classList.contains('pgn-prev')){page--;render(true);}
+      else if(b.classList.contains('pgn-next')){page++;render(true);}
+      else if(b.hasAttribute('data-p')){page=+b.getAttribute('data-p');render(true);}
+    });
+    render(false);
+  }
+  function boot(){[].forEach.call(document.querySelectorAll('[data-paginate]'),init);}
+  if(document.readyState!=='loading')boot();else document.addEventListener('DOMContentLoaded',boot);
+})();
+</script>
 
 </body></html>

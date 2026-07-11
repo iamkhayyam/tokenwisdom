@@ -48,6 +48,12 @@ GENERIC_BLOCKLIST = {
 }
 
 
+def _quarter_of(date_str: str) -> str:
+    """'2024-08-22' -> '2024-Q3' (matches lexicon.py's timeline period keys)."""
+    y, m = date_str[:4], int(date_str[5:7])
+    return f"{y}-Q{(m - 1) // 3 + 1}"
+
+
 def _is_acronym(name: str) -> bool:
     letters = [c for c in name if c.isalpha()]
     return bool(letters) and all(c.isupper() for c in letters) and len(name) <= 6
@@ -104,10 +110,42 @@ def attach_essay_appearances(terms: list[dict], posts: list[dict]) -> dict:
         t["essay_count"] = len(hits)
         nl_first = (t.get("first") or {}).get("date") or "9999"
         e_first = hits[0]["date"] if hits else None
-        seen_dates = [d for d in ([nl_first] + [h["date"] for h in hits]) if d and d != "9999"]
-        t["first_seen"] = min(seen_dates) if seen_dates else nl_first
         if e_first and e_first < nl_first:
             earlier += 1
+
+        # ── merged, chronological appearances (defined = newsletter glossary,
+        #    discussed = essay). One source of truth for the combined metrics. ──
+        appearances = []
+        for ed in t.get("editions", []):
+            appearances.append({
+                "date": ed.get("date", ""), "kind": "defined",
+                "slug": ed.get("slug"), "title": ed.get("title"),
+                "edition": ed.get("edition"), "week": ed.get("week"),
+                "source": ed.get("source"),
+            })
+        for h in hits:
+            appearances.append({
+                "date": h["date"], "kind": "discussed",
+                "slug": h["slug"], "title": h["title"],
+                "edition": None, "week": None, "source": "essay",
+            })
+        appearances.sort(key=lambda a: a["date"] or "9999")
+        t["appearances"] = appearances
+        t["appearance_count"] = len(appearances)
+        dates = [a["date"] for a in appearances if a["date"]]
+        t["first_seen"] = min(dates) if dates else (nl_first if nl_first != "9999" else None)
+        t["latest_seen"] = max(dates) if dates else None
+
+        # rebuild the per-quarter timeline to count ALL appearances (so the
+        # "arc" chart reflects essays too), over the existing global periods.
+        periods = [p["period"] for p in t.get("timeline", [])]
+        counts = {p: 0 for p in periods}
+        for a in appearances:
+            q = _quarter_of(a["date"]) if a["date"] else None
+            if q in counts:
+                counts[q] += 1
+        if periods:
+            t["timeline"] = [{"period": p, "count": counts[p]} for p in periods]
 
     return {
         "essays_scanned": len(essays),

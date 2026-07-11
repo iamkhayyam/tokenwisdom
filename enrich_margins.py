@@ -221,17 +221,68 @@ STAT_PAT = re.compile(
 )
 
 
+# When the regex captures a short unit (m, mi, M) that turns out to be
+# the prefix of a longer written-out word ("million", "milliseconds",
+# "milligrams"), the raw display label is nonsense. Normalize by looking
+# at the full word after the number and swapping to the correct abbrev,
+# or dropping the match if it's not a real stat.
+_UNIT_WORD_MAP = {
+    "millisecond":   "ms",
+    "milliseconds":  "ms",
+    "millimeter":    "mm",
+    "millimeters":   "mm",
+    "million":       "M",
+    "millions":      "M",
+    "billion":       "B",
+    "billions":      "B",
+    "kilometer":     "km",
+    "kilometers":    "km",
+    "kilogram":      None,   # not a display unit we want as a stat
+    "kilograms":     None,
+    "minute":        None,   # bare "N minutes" isn't a punchy stat
+    "minutes":       None,
+    "mile":          "mi",
+    "miles":         "mi",
+}
+
+
+def _normalize_stat(num: str, text: str, unit_pos: int) -> str | None:
+    """Look at the full word starting at unit_pos in the source text.
+    If it's a known written-out unit (millisecond, million, …), rewrite
+    the captured num to use its correct abbreviation. Return None to
+    reject stats that aren't display-worthy (bare 'N minutes')."""
+    word_match = re.match(r"[A-Za-z]+", text[unit_pos:])
+    if not word_match:
+        return num
+    word = word_match.group(0).lower()
+    if word not in _UNIT_WORD_MAP:
+        return num
+    replacement = _UNIT_WORD_MAP[word]
+    if replacement is None:
+        return None
+    stripped = re.sub(r"[A-Za-z]+$", "", num).rstrip()
+    joiner = " " if " " in num else ""
+    return f"{stripped}{joiner}{replacement}"
+
+
 def find_stat_matches(text: str) -> list[dict]:
     matches = []
     seen = set()
     for m in STAT_PAT.finditer(text):
         num = m.group(1).strip()
+        # Find where the unit letters start inside the match
+        unit_match = re.search(r"[A-Za-z%×]+$", num)
+        if unit_match:
+            unit_start = m.start() + m.group(1).index(unit_match.group(0))
+            normalized = _normalize_stat(num, text, unit_start)
+            if normalized is None:
+                continue
+            num = normalized
         key = num.lower()
         if key in seen:
             continue
         seen.add(key)
-        caption = sentence_containing(text, num)
-        # Trim caption; keep it terse for the gutter
+        caption = sentence_containing(text, m.group(1).strip())
         if len(caption) > 140:
             caption = caption[:137].rsplit(" ", 1)[0] + "…"
         matches.append({

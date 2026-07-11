@@ -2670,7 +2670,8 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
         handle="@iamkhayyam",
         ama=get_ama_cta(),
     )
-    return foot + "\n</body>\n</html>\n"
+    import tw_theme as _theme
+    return foot + _theme.PAGINATE_JS + "\n</body>\n</html>\n"
 
 
 def page_shell(title, body, css_path, from_dir="root", theme_toggle=False, noindex=False,
@@ -3301,7 +3302,7 @@ def render_tag_page(tag, posts_for_tag, posts_count, tags_count, years_span, top
   <span class="meta">{meta_line}</span>
 </header>"""
     body = f"""{hero}
-<div class="tag-list">
+<div class="tag-list" data-paginate data-item="article">
   <div class="tag-list-heading">All posts</div>
   {rows}
 </div>

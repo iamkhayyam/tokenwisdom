@@ -78,7 +78,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     <span class="meta">1 Post · Feb 16, 2023 – Feb 16, 2023</span>
   </div>
 </header>
-<div class="tag-list">
+<div class="tag-list" data-paginate data-item="article">
   <div class="tag-list-heading">All posts</div>
   
   <article class="essay-row has-thumb">
@@ -173,5 +173,59 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
     </div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var SIZES=[25,50,75,100];
+  function pageList(cur,count){
+    if(count<=7){var a=[];for(var i=1;i<=count;i++)a.push(i);return a;}
+    var out=[1],lo=Math.max(2,cur-1),hi=Math.min(count-1,cur+1);
+    if(lo>2)out.push('…');
+    for(var i=lo;i<=hi;i++)out.push(i);
+    if(hi<count-1)out.push('…');
+    out.push(count);return out;
+  }
+  function init(box){
+    var sel=box.getAttribute('data-item');           // optional: paginate only matching children
+    var items=[].filter.call(box.children,function(n){return n.nodeType===1&&(!sel||(n.matches&&n.matches(sel)));});
+    var total=items.length;
+    if(total<=SIZES[0])return;                       // short list: no controls
+    var size=parseInt(box.getAttribute('data-page-size'),10)||parseInt(localStorage.getItem('pgnSize'),10)||SIZES[0];
+    if(SIZES.indexOf(size)<0)size=SIZES[0];
+    var page=1;
+    var bar=document.createElement('div');bar.className='pgn';
+    bar.innerHTML='<div class="pgn-info"></div>'
+      +'<div class="pgn-sizes"><span>View</span>'+SIZES.map(function(s){return '<button type="button" data-s="'+s+'">'+s+'</button>';}).join('')+'</div>'
+      +'<div class="pgn-nav"><button type="button" class="pgn-prev">‹ Prev</button><span class="pgn-pages"></span><button type="button" class="pgn-next">Next ›</button></div>';
+    box.parentNode.insertBefore(bar,box.nextSibling);
+    var info=bar.querySelector('.pgn-info'),pagesEl=bar.querySelector('.pgn-pages');
+    function render(scroll){
+      var pageCount=Math.max(1,Math.ceil(total/size));
+      if(page>pageCount)page=pageCount;if(page<1)page=1;
+      var start=(page-1)*size,end=Math.min(start+size,total);
+      for(var i=0;i<total;i++)items[i].style.display=(i>=start&&i<end)?'':'none';
+      info.textContent='Showing '+(start+1)+'–'+end+' of '+total;
+      [].forEach.call(bar.querySelectorAll('.pgn-sizes button'),function(b){b.classList.toggle('on',+b.getAttribute('data-s')===size);});
+      pagesEl.innerHTML=pageList(page,pageCount).map(function(p){
+        return p==='…'?'<span class="pgn-gap">…</span>':'<button type="button" class="pgn-p'+(p===page?' on':'')+'" data-p="'+p+'">'+p+'</button>';
+      }).join('');
+      bar.querySelector('.pgn-prev').disabled=page<=1;
+      bar.querySelector('.pgn-next').disabled=page>=pageCount;
+      if(scroll){var y=box.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:y,behavior:'smooth'});}
+    }
+    bar.addEventListener('click',function(e){
+      var b=e.target.closest&&e.target.closest('button');if(!b)return;
+      if(b.hasAttribute('data-s')){size=+b.getAttribute('data-s');localStorage.setItem('pgnSize',size);page=1;render(true);}
+      else if(b.classList.contains('pgn-prev')){page--;render(true);}
+      else if(b.classList.contains('pgn-next')){page++;render(true);}
+      else if(b.hasAttribute('data-p')){page=+b.getAttribute('data-p');render(true);}
+    });
+    render(false);
+  }
+  function boot(){[].forEach.call(document.querySelectorAll('[data-paginate]'),init);}
+  if(document.readyState!=='loading')boot();else document.addEventListener('DOMContentLoaded',boot);
+})();
+</script>
+
 </body>
 </html>
