@@ -153,10 +153,27 @@ for _ep in _eps:
     if _w and (_y, _w) not in epB_by_yw:
         epB_by_yw[(_y, _w)] = _ep
 
+# (year, week) -> that week's •A• essay-dive episode — the essay's own audio
+# narration, distinct from the edition-wide •B•. Preferred pairing for a story
+# card, since it's about that specific essay rather than the week's newsletter.
+epA_by_yw = {}
+for _ep in _eps:
+    if "•A•" not in (_ep.get("title", "") or ""):
+        continue
+    _w = _ep_week(_ep)
+    _y = str(_ep.get("pub_date") or "")[:4]
+    if _w and (_y, _w) not in epA_by_yw:
+        epA_by_yw[(_y, _w)] = _ep
+
 
 def paired_audio(p):
+    """That week's collection: prefer the essay's own •A• dive, fall back to
+    the edition's •B• if this week never got its own essay narration."""
     wk = _week_of(p)
-    return epB_by_yw.get(((p.get("published_at") or "")[:4], wk)) if wk else None
+    if not wk:
+        return None
+    key = ((p.get("published_at") or "")[:4], wk)
+    return epA_by_yw.get(key) or epB_by_yw.get(key)
 
 
 def ep_title(ep):
@@ -167,14 +184,23 @@ def ep_title(ep):
     return _re.sub(r"\s*✨\s*$", "", t).strip() or t
 
 
-def kicker(p):
-    code, label = gs.section_code(p)
-    pt = gs.primary_tag(p)
-    extra = ""
+def week_label(p):
+    wk = _week_of(p)
+    yr = (p.get("published_at") or "")[:4]
+    return f"Week {wk} · {yr}" if wk and yr else ""
+
+
+def topic_tag(p):
+    """The post's first non-section, non-internal tag (e.g. 'Philosophical')."""
     for t in (p.get("tags") or []):
         if t.get("slug") not in gs.SECTION_TAGS and not (t.get("name", "") or "").startswith("#"):
-            extra = t["name"]
-            break
+            return t["name"]
+    return ""
+
+
+def kicker(p):
+    _, label = gs.section_code(p)
+    extra = topic_tag(p)
     return f"{label}" + (f" · {extra}" if extra else "")
 
 
@@ -310,12 +336,20 @@ def render_listen():
 
 def _story_card(p):
     ep = paired_audio(p)
-    ed_post = paired_edition(p)
-    audio = (render_player(ep, "Paired edition",
-                           href(ed_post) if ed_post else "podcast.html", rail=True)
-             if ep else pair_link(p))
+    if ep and "•A•" in (ep.get("title", "") or ""):
+        anchor = "ep-" + e(ep.get("guid", "") or "")[:24]
+        audio = render_player(ep, "This week, aloud", f"podcast.html#{anchor}", rail=True)
+    elif ep:
+        ed_post = paired_edition(p)
+        audio = render_player(ep, "Paired edition",
+                               href(ed_post) if ed_post else "podcast.html", rail=True)
+    else:
+        audio = pair_link(p)
+    wk_label = week_label(p)
+    badge = f'<div class="week-badge">{e(wk_label)}</div>' if wk_label else ""
     return f"""
     <div class="story-wrap">
+    {badge}
     <a class="story" href="{href(p)}">
       <div class="story-figure"><img src="{e(img(p.get('feature_image')))}" alt="{e(p.get('title'))}" loading="lazy"></div>
       <div class="kicker kicker-accent">{e(kicker(p))}</div>
@@ -334,20 +368,20 @@ def render_recent():
     for p in more:
         rows += f"""
       <a class="list-row" href="{href(p)}">
-        <span class="list-kicker">{e(gs.section_code(p)[1])}</span>
+        <span class="list-kicker">{e(topic_tag(p) or gs.section_code(p)[1])}</span>
         <span class="list-title">{e(p.get('title'))}</span>
         <span class="list-meta">{e(gs.reading_time(p))} · {e(gs.fmt_date_short(p.get('published_at')))}</span>
       </a>"""
     return f"""
 <section class="block">
-  <div class="rule-head"><h2 class="rule-label">A Closer Look</h2><span class="rule-meta">Essays &amp; OP-EDs</span></div>
+  <div class="rule-head"><h2 class="rule-label">Week-by-Week</h2><span class="rule-meta">Essays &amp; OP-EDs</span></div>
   <div class="top-three-cards">{top_cards}
   </div>
   <div class="recent">
     <div class="recent-cards">{cards}
     </div>
     <div class="recent-list">
-      <div class="kicker">More to read</div>{rows}
+      <div class="kicker">A Closer Look</div>{rows}
     </div>
   </div>
 </section>"""
@@ -618,6 +652,7 @@ a{color:inherit;text-decoration:none}
 
 /* recent */
 .top-three-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-bottom:44px}
+.week-badge{font-family:var(--mono);font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
 .recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
@@ -677,14 +712,14 @@ a{color:inherit;text-decoration:none}
 .block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
 .lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
 .lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
-.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s;display:flex;flex-direction:column}
 .lexcard:nth-child(4n){border-right:none}
 .lexcard:hover{background:var(--bg)}
 .lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
 .lexcard:hover .lexcard-term{color:var(--accent)}
 .lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
 .lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
-.lexcard-spark{opacity:.9}
+.lexcard-spark{opacity:.9;margin-top:auto}
 .spark{display:block;width:100%;height:auto}
 
 /* featured — curated picks, 3-up framed cards before Browse by Idea */

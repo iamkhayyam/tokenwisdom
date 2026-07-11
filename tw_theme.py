@@ -166,14 +166,14 @@ a{color:inherit;text-decoration:none}
 .block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
 .lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
 .lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
-.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s;display:flex;flex-direction:column}
 .lexcard:nth-child(4n){border-right:none}
 .lexcard:hover{background:var(--bg)}
 .lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
 .lexcard:hover .lexcard-term{color:var(--accent)}
 .lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
 .lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
-.lexcard-spark{opacity:.9}
+.lexcard-spark{opacity:.9;margin-top:auto}
 .spark{display:block;width:100%;height:auto}
 
 /* subscribe — the Fortune Brand crystal ball glowing in the background */

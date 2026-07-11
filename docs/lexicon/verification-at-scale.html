@@ -149,14 +149,14 @@ a{color:inherit;text-decoration:none}
 .block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
 .lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
 .lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
-.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s;display:flex;flex-direction:column}
 .lexcard:nth-child(4n){border-right:none}
 .lexcard:hover{background:var(--bg)}
 .lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
 .lexcard:hover .lexcard-term{color:var(--accent)}
 .lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
 .lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
-.lexcard-spark{opacity:.9}
+.lexcard-spark{opacity:.9;margin-top:auto}
 .spark{display:block;width:100%;height:auto}
 
 /* subscribe — the Fortune Brand crystal ball glowing in the background */
@@ -495,7 +495,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Across the corpus <span class="term-h3-count">(1 defined)</span></h3>
       <div class="term-posts" data-paginate><div class="term-post"><span class="tp-title"><span class="ap-kind ap-defined">Defined</span> <span>161th Edition</span></span><span class="tp-meta">W21 · May 17, 2026</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="spintronics.html">Spintronics <span>1</span></a><a class="lex-chip" href="the-leash.html">The Leash <span>1</span></a><a class="lex-chip" href="non-line-of-sight-nlos-imaging.html">Non-Line-of-Sight (NLOS) Imaging <span>1</span></a><a class="lex-chip" href="conceptualism-bessis.html">Conceptualism (Bessis) <span>1</span></a><a class="lex-chip" href="rsi.html">RSI <span>1</span></a><a class="lex-chip" href="proof-as-scaffolding.html">Proof-as-Scaffolding <span>1</span></a><a class="lex-chip" href="labor-to-capital-substitution.html">Labor-to-Capital Substitution <span>1</span></a><a class="lex-chip" href="lean-4-interactive-theorem-prover.html">Lean 4 (Interactive Theorem Prover) <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="nlos.html">NLOS <span>1</span></a><a class="lex-chip" href="gpu.html">GPU <span>1</span></a><a class="lex-chip" href="the-formal-layer-vs-the-intuitive-layer.html">The Formal Layer vs. the Intuitive Layer <span>1</span></a><a class="lex-chip" href="rsi.html">RSI <span>1</span></a><a class="lex-chip" href="labor-to-capital-substitution.html">Labor-to-Capital Substitution <span>1</span></a><a class="lex-chip" href="the-leash.html">The Leash <span>1</span></a><a class="lex-chip" href="dram.html">DRAM <span>1</span></a><a class="lex-chip" href="lean-4-interactive-theorem-prover.html">Lean 4 (Interactive Theorem Prover) <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>

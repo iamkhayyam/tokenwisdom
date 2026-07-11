@@ -137,6 +137,7 @@ a{color:inherit;text-decoration:none}
 
 /* recent */
 .top-three-cards{display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;margin-bottom:44px}
+.week-badge{font-family:var(--mono);font-weight:600;font-size:.62rem;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem}
 .recent{display:grid;grid-template-columns:1.8fr 1fr;gap:44px}
 .recent-cards{display:grid;grid-template-columns:1fr 1fr;gap:32px}
 .lead-col,.story-wrap{min-width:0;display:flex;flex-direction:column}
@@ -196,14 +197,14 @@ a{color:inherit;text-decoration:none}
 .block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
 .lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
 .lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
-.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s;display:flex;flex-direction:column}
 .lexcard:nth-child(4n){border-right:none}
 .lexcard:hover{background:var(--bg)}
 .lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
 .lexcard:hover .lexcard-term{color:var(--accent)}
 .lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
 .lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
-.lexcard-spark{opacity:.9}
+.lexcard-spark{opacity:.9;margin-top:auto}
 .spark{display:block;width:100%;height:auto}
 
 /* featured — curated picks, 3-up framed cards before Browse by Idea */
@@ -548,7 +549,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <div class="meta">13 min read · May 28, 2026</div>
     </div>
   </a>
-  <a class="pairlink" href="podcast.html#ep-b7194691-5963-4e18-ac01-">&#127911; Hear the 162nd Edition &rarr;</a>
+  <a class="pairlink" href="podcast.html#ep-5a3489e6-2535-46d1-b738-">&#127911; Hear the the edition &rarr;</a>
   </div>
   <aside class="lead-side">
     <div class="side-list">
@@ -811,9 +812,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 <div class="wrap">
 
 <section class="block">
-  <div class="rule-head"><h2 class="rule-label">A Closer Look</h2><span class="rule-meta">Essays &amp; OP-EDs</span></div>
+  <div class="rule-head"><h2 class="rule-label">Week-by-Week</h2><span class="rule-meta">Essays &amp; OP-EDs</span></div>
   <div class="top-three-cards">
     <div class="story-wrap">
+    <div class="week-badge">Week 21 · 2026</div>
     <a class="story" href="posts/human-in-the-room.html">
       <div class="story-figure"><img src="../content/images/human-in-the-room_feature__1780557962336.jpeg" alt="Human-in-the-Room" loading="lazy"></div>
       <div class="kicker kicker-accent">A Closer Look · Philosophical</div>
@@ -822,17 +824,18 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <div class="meta">15 min read · May 21, 2026</div>
     </a>
     
-    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/00948b67-5c7c-471a-a144-5f1a75101382.mp3">
-      <div class="pkicker"><span class="pk-tag">Paired edition</span> · NotebookLM · 52:23</div>
-      <a class="ptitle" href="podcast.html">161st Edition</a>
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/9e6b5387-72cb-4bbb-9568-e66fcce672a2.mp3">
+      <div class="pkicker"><span class="pk-tag">This week, aloud</span> · NotebookLM · 47:16</div>
+      <a class="ptitle" href="podcast.html#ep-9e6b5387-72cb-4bbb-9568-">Human-in-the-Room</a>
       <div class="prow">
         <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
         <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
-        <span class="ptime"><span class="pcur">0:00</span> / 52:23</span>
+        <span class="ptime"><span class="pcur">0:00</span> / 47:16</span>
       </div>
     </div>
     </div>
     <div class="story-wrap">
+    <div class="week-badge">Week 20 · 2026</div>
     <a class="story" href="posts/the-proof-was-never-the-point.html">
       <div class="story-figure"><img src="../content/images/the-proof-was-never-the-point_feature__a-translucent-human-hand-and-a-circuit-b_HzBEKOrJX0Ol4A24bZfN8Q_yaf52QhpQ3-mmxu5oi-0UA_sd-1.jpeg" alt="The Proof Was Never the Point" loading="lazy"></div>
       <div class="kicker kicker-accent">A Closer Look · Philosophical</div>
@@ -841,17 +844,18 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <div class="meta">19 min read · May 15, 2026</div>
     </a>
     
-    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/7041242b-e3e9-42fd-9364-d3fa61c6dc61.mp3">
-      <div class="pkicker"><span class="pk-tag">Paired edition</span> · NotebookLM · 41:35</div>
-      <a class="ptitle" href="podcast.html">160th Edition</a>
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/9632e740-40f4-4c1d-99cf-1d6316e76118.mp3">
+      <div class="pkicker"><span class="pk-tag">This week, aloud</span> · NotebookLM · 34:24</div>
+      <a class="ptitle" href="podcast.html#ep-9632e740-40f4-4c1d-99cf-">The Proof Was Never the Point</a>
       <div class="prow">
         <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
         <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
-        <span class="ptime"><span class="pcur">0:00</span> / 41:35</span>
+        <span class="ptime"><span class="pcur">0:00</span> / 34:24</span>
       </div>
     </div>
     </div>
     <div class="story-wrap">
+    <div class="week-badge">Week 19 · 2026</div>
     <a class="story" href="posts/the-wrong-name-on-the-door.html">
       <div class="story-figure"><img src="../content/images/the-wrong-name-on-the-door_feature__w19-the-wrong-name-on-the-door.jpg" alt="The Wrong Name on the Door" loading="lazy"></div>
       <div class="kicker kicker-accent">A Closer Look · Educate \ Learn</div>
@@ -860,13 +864,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <div class="meta">21 min read · May 7, 2026</div>
     </a>
     
-    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/7a16fcf1-3eb0-4a4c-aa80-94aa6a7aa116.mp3">
-      <div class="pkicker"><span class="pk-tag">Paired edition</span> · NotebookLM · 44:57</div>
-      <a class="ptitle" href="posts/159th-edition-token-wisdom-week-19.html">159th Edition</a>
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/9a9d619a-2987-41ce-b5fe-7baca18c4203.mp3">
+      <div class="pkicker"><span class="pk-tag">This week, aloud</span> · NotebookLM · 37:34</div>
+      <a class="ptitle" href="podcast.html#ep-9a9d619a-2987-41ce-b5fe-">The Wrong Name on the Door</a>
       <div class="prow">
         <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
         <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
-        <span class="ptime"><span class="pcur">0:00</span> / 44:57</span>
+        <span class="ptime"><span class="pcur">0:00</span> / 37:34</span>
       </div>
     </div>
     </div>
@@ -874,6 +878,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="recent">
     <div class="recent-cards">
     <div class="story-wrap">
+    <div class="week-badge">Week 18 · 2026</div>
     <a class="story" href="posts/the-cost-of-being-right.html">
       <div class="story-figure"><img src="../content/images/the-cost-of-being-right_feature__w18-the-cost-of-being-right.jpg" alt="The Cost of Being Right" loading="lazy"></div>
       <div class="kicker kicker-accent">A Closer Look · Ethics \ Principles</div>
@@ -882,17 +887,18 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <div class="meta">20 min read · May 1, 2026</div>
     </a>
     
-    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/703e838b-2c9c-47ad-b793-d041019cf5ba.mp3">
-      <div class="pkicker"><span class="pk-tag">Paired edition</span> · NotebookLM · 43:38</div>
-      <a class="ptitle" href="posts/158th-edition-token-wisdom-week-18.html">158th Edition</a>
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/444dc93f-c04f-4205-ad61-670406aa6cd5.mp3">
+      <div class="pkicker"><span class="pk-tag">This week, aloud</span> · NotebookLM · 45:15</div>
+      <a class="ptitle" href="podcast.html#ep-444dc93f-c04f-4205-ad61-">The Cost of Being Wrong</a>
       <div class="prow">
         <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
         <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
-        <span class="ptime"><span class="pcur">0:00</span> / 43:38</span>
+        <span class="ptime"><span class="pcur">0:00</span> / 45:15</span>
       </div>
     </div>
     </div>
     <div class="story-wrap">
+    <div class="week-badge">Week 17 · 2026</div>
     <a class="story" href="posts/no-heir-no-lesson.html">
       <div class="story-figure"><img src="../content/images/no-heir-no-lesson_feature__w17-no-heir-no-lesson.jpg" alt="No Heir. No Lesson." loading="lazy"></div>
       <div class="kicker kicker-accent">A Closer Look · Future of Work</div>
@@ -901,46 +907,46 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <div class="meta">14 min read · Apr 24, 2026</div>
     </a>
     
-    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/240b226f-9a62-4104-abda-fd628624eaa9.mp3">
-      <div class="pkicker"><span class="pk-tag">Paired edition</span> · NotebookLM · 42:35</div>
-      <a class="ptitle" href="posts/157th-edition-token-wisdom-week-17.html">157th Edition</a>
+    <div class="player player-rail" data-src="https://episodes.captivate.fm/episode/75017918-3804-4564-8f85-5aa50ccf162a.mp3">
+      <div class="pkicker"><span class="pk-tag">This week, aloud</span> · NotebookLM · 52:24</div>
+      <a class="ptitle" href="podcast.html#ep-75017918-3804-4564-8f85-">No Heir, No Lesson</a>
       <div class="prow">
         <button class="pp" aria-label="Play"><span class="pp-icon"></span></button>
         <div class="ptrack"><div class="pfill"></div><div class="pknob"></div></div>
-        <span class="ptime"><span class="pcur">0:00</span> / 42:35</span>
+        <span class="ptime"><span class="pcur">0:00</span> / 52:24</span>
       </div>
     </div>
     </div>
     </div>
     <div class="recent-list">
-      <div class="kicker">More to read</div>
+      <div class="kicker">A Closer Look</div>
       <a class="list-row" href="posts/whos-mind-is-it-anyway.html">
-        <span class="list-kicker">A Closer Look</span>
+        <span class="list-kicker">Philosophical</span>
         <span class="list-title">Who&#x27;s Mind Is It Anyway?</span>
         <span class="list-meta">14 min read · Apr 16, 2026</span>
       </a>
       <a class="list-row" href="posts/we-trained-it-on-human-weaponry.html">
-        <span class="list-kicker">A Closer Look</span>
+        <span class="list-kicker">ANI \ AGI \ ASI</span>
         <span class="list-title">We Trained It on Human Weaponry</span>
         <span class="list-meta">15 min read · Apr 10, 2026</span>
       </a>
       <a class="list-row" href="posts/the-cow-came-last.html">
-        <span class="list-kicker">A Closer Look</span>
+        <span class="list-kicker">A Story to Tell</span>
         <span class="list-title">The Cow Came Last</span>
         <span class="list-meta">14 min read · Apr 2, 2026</span>
       </a>
       <a class="list-row" href="posts/the-sky-has-been-warning-us-since-1859.html">
-        <span class="list-kicker">A Closer Look</span>
+        <span class="list-kicker">Technology</span>
         <span class="list-title">The Sky Has Been Warning Us Since 1859</span>
         <span class="list-meta">9 min read · Mar 26, 2026</span>
       </a>
       <a class="list-row" href="posts/the-proentropic-weed-manifesto.html">
-        <span class="list-kicker">A Closer Look</span>
+        <span class="list-kicker">A.I. (and Subsets)</span>
         <span class="list-title">The Proentropic Weed Manifesto</span>
         <span class="list-meta">10 min read · Mar 20, 2026</span>
       </a>
       <a class="list-row" href="posts/the-room-was-already-set-before-you-walked-in.html">
-        <span class="list-kicker">A Closer Look</span>
+        <span class="list-kicker">Persuasion</span>
         <span class="list-title">The Room Was Already Set Before You Walked In</span>
         <span class="list-meta">9 min read · Mar 12, 2026</span>
       </a>

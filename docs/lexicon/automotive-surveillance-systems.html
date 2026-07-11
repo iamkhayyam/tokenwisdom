@@ -149,14 +149,14 @@ a{color:inherit;text-decoration:none}
 .block-lex>.rule-head,.block-lex>.lex-intro,.block-lex>.lexcards{max-width:var(--w);margin-left:auto;margin-right:auto}
 .lex-intro{font-family:var(--serif);font-size:1.1rem;color:var(--ink-muted);max-width:60ch;margin:-.6rem 0 1.6rem}
 .lexcards{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--rule)}
-.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s}
+.lexcard{padding:1.3rem 1.3rem 1.4rem;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);transition:background .15s;display:flex;flex-direction:column}
 .lexcard:nth-child(4n){border-right:none}
 .lexcard:hover{background:var(--bg)}
 .lexcard-term{font-family:var(--display);font-weight:var(--display-weight);font-size:1.3rem;line-height:1.08;letter-spacing:-.01em}
 .lexcard:hover .lexcard-term{color:var(--accent)}
 .lexcard-cat{font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);margin:.35rem 0 .6rem}
 .lexcard-def{font-family:var(--serif);font-size:.9rem;line-height:1.45;color:var(--ink-muted);margin-bottom:1rem;min-height:3.8em}
-.lexcard-spark{opacity:.9}
+.lexcard-spark{opacity:.9;margin-top:auto}
 .spark{display:block;width:100%;height:auto}
 
 /* subscribe — the Fortune Brand crystal ball glowing in the background */
@@ -495,7 +495,7 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
   <div class="term-body">
     <section class="term-section"><h3 class="term-h3">Across the corpus <span class="term-h3-count">(1 defined)</span></h3>
       <div class="term-posts" data-paginate><div class="term-post"><span class="tp-title"><span class="ap-kind ap-defined">Defined</span> <a href="../posts/144th-edition-token-wisdom-week-04.html">144th Edition</a></span><span class="tp-meta">W04 · Jan 25, 2026</span></div></div></section>
-    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="accelerated-human-development.html">Accelerated Human Development <span>1</span></a><a class="lex-chip" href="mathematical-incompleteness.html">Mathematical Incompleteness <span>1</span></a><a class="lex-chip" href="particle-transmutation.html">Particle Transmutation <span>1</span></a><a class="lex-chip" href="nba.html">NBA <span>1</span></a><a class="lex-chip" href="transmutation.html">Transmutation <span>1</span></a><a class="lex-chip" href="cern.html">CERN <span>1</span></a><a class="lex-chip" href="mirror-cells.html">Mirror Cells <span>1</span></a><a class="lex-chip" href="navier-stokes-equations.html">Navier-Stokes Equations <span>1</span></a></div></div>
+    <aside class="term-side"><div class="term-side-block"><h4>Travels with</h4><div class="lex-chips"><a class="lex-chip" href="training-data-extraction.html">Training Data Extraction <span>1</span></a><a class="lex-chip" href="chirality.html">Chirality <span>1</span></a><a class="lex-chip" href="mirror-molecule-synthesis.html">Mirror-Molecule Synthesis <span>1</span></a><a class="lex-chip" href="gunn-diode.html">Gunn Diode <span>1</span></a><a class="lex-chip" href="existential-biorisks.html">Existential Biorisks <span>1</span></a><a class="lex-chip" href="transmutation.html">Transmutation <span>1</span></a><a class="lex-chip" href="singularity-detection-algorithms.html">Singularity Detection Algorithms <span>1</span></a><a class="lex-chip" href="economic-extraction-systems.html">Economic Extraction Systems <span>1</span></a></div></div>
       <div class="term-side-block"><a class="term-back" href="index.html">← The full Lexicon</a></div>
     </aside>
   </div>
