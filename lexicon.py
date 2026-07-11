@@ -311,12 +311,12 @@ def _constellation_data(terms, min_ed=CONSTELLATION_MIN):
     the node set. Node size is driven by the blended keystone weight (row[6]),
     so connectors that are rarely re-defined still read as prominent."""
     nodes = [t for t in terms
-             if t["edition_count"] >= min_ed
+             if t.get("appearance_count", t["edition_count"]) >= min_ed
              or t.get("centrality", 0) >= CENTRALITY_INCLUDE]
     idx = {t["slug"]: i for i, t in enumerate(nodes)}
     node_rows = [
         [t["slug"], t["name"], t.get("color", "accent"),
-         t["category"], t["edition_count"], _clamp(t["definition"], 90),
+         t["category"], t.get("appearance_count", t["edition_count"]), _clamp(t["definition"], 90),
          t.get("keystone", t["edition_count"]), t.get("centrality", 0)]
         for t in nodes
     ]
@@ -409,7 +409,7 @@ def render_index(terms, qkeys, gs, ctx):
 </main>
 <div class="lex-soon"><div class="lex-soon-inner">
   <h3>From the Lab</h3>
-  <p>The Lexicon is the data layer. <strong><a href="constellation.html">The Constellation</a></strong> is now live — browse the recurring terms as a map of what's glossed together. Next on the bench, both powered by the same data: <strong>Ask the Archive</strong> (question three years of writing), and <strong>the Zeitgeist Tracker</strong> (what mattered when, across {len(qkeys)} quarters).</p>
+  <p>The Lexicon is the data layer. <strong><a href="constellation.html">The Constellation</a></strong> is now live — browse the vocabulary as a map of what's talked about together across newsletters and essays. Next on the bench, both powered by the same data: <strong>Ask the Archive</strong> (question three years of writing), and <strong>the Zeitgeist Tracker</strong> (what mattered when, across {len(qkeys)} quarters).</p>
 </div></div>
 </div>
 <script>window.LEX_BASE="";window.LEX_ALL={all_data};</script>
@@ -690,7 +690,7 @@ def render_constellation(terms, gs, ctx):
   <a class="cst-back" href="index.html">&larr; The Lexicon</a>
   <div class="kicker kicker-accent">The Lexicon · The Constellation</div>
   <h1 class="lex-h1">The Constellation</h1>
-  <p class="cst-lede">The Lexicon as a map of what's glossed together. Each of these {len(nodes)} pivotal terms is a star — sized by how much the rest of the vocabulary leans on it, not just how often it recurs; a line ties two terms defined in the same editions, brighter the more often they travel together. Drag a star, search to find one, click through to its full entry.</p>
+  <p class="cst-lede">The Lexicon as a map of what's talked about together — across both the newsletters and the essays. Each of these {len(nodes)} pivotal terms is a star, sized by how often it appears and how much the rest of the vocabulary leans on it; a line ties two terms that show up in the same newsletter or essay, brighter the more often they travel together. Drag a star, search to find one, click through to its full entry.</p>
 </header>
 <div class="cst-stage">
   <div id="cstWrap" class="cst-canvas-wrap">

@@ -24,7 +24,8 @@ Also exposes attach_essay_appearances(terms, posts) for the lexicon.py pipeline.
 """
 from __future__ import annotations
 import argparse, json, re, shutil
-from collections import defaultdict
+from collections import defaultdict, Counter
+from itertools import combinations
 from datetime import datetime
 from pathlib import Path
 
@@ -99,13 +100,16 @@ def attach_essay_appearances(terms: list[dict], posts: list[dict]) -> dict:
     by_slug = {t["slug"]: t for t in terms}
 
     term_hits: dict[str, list[dict]] = defaultdict(list)
+    essay_terms: dict[str, set] = defaultdict(set)   # essay slug -> {term slugs in it}
     for p in essays:
         text = em.strip_tags(p.get("html") or "")
-        meta = {"slug": p.get("slug"), "title": p.get("title"),
+        pslug = p.get("slug")
+        meta = {"slug": pslug, "title": p.get("title"),
                 "date": (p.get("published_at") or "")[:10], "source": "essay"}
         for t, pat in pats:
             if pat.search(text):
                 term_hits[t["slug"]].append(meta)
+                essay_terms[pslug].add(t["slug"])
 
     earlier = 0
     for t in terms:
@@ -151,7 +155,42 @@ def attach_essay_appearances(terms: list[dict], posts: list[dict]) -> dict:
         if periods:
             t["timeline"] = [{"period": p, "count": counts[p]} for p in periods]
 
+    # ── essay co-occurrence → Constellation edges ───────────────────────────
+    # Two terms discussed in the same essay form an edge (weight = shared
+    # essays), merged with the newsletter glossary co-occurrence already in
+    # `related`. Then recompute centrality/keystone/role over the combined
+    # graph so the Constellation reflects essays in both size and structure.
+    import lexicon as _lex
+    essay_cooc: dict[str, Counter] = defaultdict(Counter)
+    for tslugs in essay_terms.values():
+        for a, b in combinations(sorted(tslugs), 2):
+            essay_cooc[a][b] += 1
+            essay_cooc[b][a] += 1
+    for t in terms:
+        combined = Counter()
+        for r in t.get("related", []):
+            combined[r["slug"]] += int(r.get("shared", 0) or 0)     # shared editions
+        for oslug, n in essay_cooc.get(t["slug"], {}).items():
+            combined[oslug] += n                                    # + shared essays
+        t["related"] = [
+            {"name": by_slug[s]["name"], "slug": s,
+             "color": by_slug[s]["color"], "shared": n}
+            for s, n in combined.most_common(8) if s in by_slug
+        ]
+    indeg = Counter()
+    for t in terms:
+        for r in t["related"]:
+            indeg[r["slug"]] += 1
+    for t in terms:
+        c = indeg.get(t["slug"], 0)
+        t["centrality"] = c
+        # keystone (node size) now blends TOTAL appearances with connectivity
+        t["keystone"] = round(t.get("appearance_count", t["edition_count"]) + _lex.KEYSTONE_W * c, 1)
+        t["role"] = _lex._role(t["edition_count"], c)
+    essay_edges = sum(len(v) for v in essay_cooc.values()) // 2
+
     return {
+        "essay_cooc_edges": essay_edges,
         "essays_scanned": len(essays),
         "eligible_terms": len(pats),
         "terms_with_essays": sum(1 for t in terms if t["essay_count"]),
