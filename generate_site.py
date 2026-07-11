@@ -4584,8 +4584,12 @@ def main():
     # Write CSS
     print("Writing stylesheet…")
     import tw_theme
+    # PAGINATE_CSS's var(--rule) → var(--paper-rule) for the main-site
+    # palette (tw_theme uses --rule; generate_site's tokens use --paper-rule).
+    paginate_css_main = tw_theme.PAGINATE_CSS.replace("var(--rule)", "var(--paper-rule)")
     with open(DOCS_DIR / "style.css", "w") as f:
-        f.write(CSS + READING_APPARATUS_CSS + COLOPHON_CSS + tw_theme.OVERLAY_CSS)
+        f.write(CSS + READING_APPARATUS_CSS + COLOPHON_CSS
+                + tw_theme.OVERLAY_CSS + paginate_css_main)
 
     posts_count = len(listable)
     tags_count = len(public_tags)
