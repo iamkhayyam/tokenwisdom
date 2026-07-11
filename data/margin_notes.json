@@ -2,9 +2,9 @@
   "del-icio-us-was-right-we-built-claudacious": [
     {
       "kind": "stat",
-      "trigger": "1.5 m",
+      "trigger": "109M parameters",
       "anchor": "Cloudflare Workers handles the asynchronous backbone:",
-      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">1.5 m</span><span class=\"twn-cap\">Cloudflare Vectorize stores semantic embeddings (768-dim BAAI/BGE-base-en-v1.5 model) for semantic search</span></span>"
+      "note_html": "<span class=\"tw-note tw-note--stat\"><span class=\"twn-num\">109M</span><span class=\"twn-cap\">parameters — BAAI/BGE-base-en-v1.5, the embedding model powering semantic search</span></span>"
     },
     {
       "kind": "stat",
