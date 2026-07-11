@@ -205,31 +205,43 @@
     if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); navigate(); }
   });
 
-  /* ── Scroll-based reveal ─────────────────────────────────────────── */
-  function update() {
+  /* ── Peek reveal: 67% scroll (last third of the reader's runway) ── */
+  function updatePeek() {
     var scrollable = document.documentElement.scrollHeight - window.innerHeight;
-    if (scrollable <= 0) {
-      peek.classList.add('tw-shown');
-      body.classList.add('tw-peek-shown', 'tw-progress-hidden');
-      return;
-    }
-    var pct = window.scrollY / scrollable;
-    if (pct >= 0.67) {
+    if (scrollable <= 0 || window.scrollY / scrollable >= 0.67) {
       peek.classList.add('tw-shown');
       body.classList.add('tw-peek-shown');
     } else {
       peek.classList.remove('tw-shown');
       body.classList.remove('tw-peek-shown');
     }
-    if (pct >= 0.95) {
-      body.classList.add('tw-progress-hidden');
-    } else {
-      body.classList.remove('tw-progress-hidden');
-    }
   }
-  window.addEventListener('scroll', update, { passive: true });
-  window.addEventListener('resize', update);
-  requestAnimationFrame(update);
+  window.addEventListener('scroll', updatePeek, { passive: true });
+  window.addEventListener('resize', updatePeek);
+  requestAnimationFrame(updatePeek);
+
+  /* ── Progress-bar fade + peek-side fill: triggered by the colophon
+       actually entering the viewport, not a hardcoded scroll percent.
+       When the colophon is intersecting, add tw-progress-hidden to the
+       body — same class the CSS already reacts to. ─────────────── */
+  var colophon = document.querySelector('footer.tw-colophon');
+  if (colophon && 'IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      var visible = entries[0].isIntersecting;
+      body.classList.toggle('tw-progress-hidden', visible);
+    }, { rootMargin: '0px 0px -' + PEEK_SLIM + 'px 0px', threshold: 0 });
+    io.observe(colophon);
+  } else if (colophon) {
+    /* No IntersectionObserver support → fall back to a bounding-rect check. */
+    function updateFill() {
+      var r = colophon.getBoundingClientRect();
+      var visible = r.top < window.innerHeight - PEEK_SLIM;
+      body.classList.toggle('tw-progress-hidden', visible);
+    }
+    window.addEventListener('scroll', updateFill, { passive: true });
+    window.addEventListener('resize', updateFill);
+    requestAnimationFrame(updateFill);
+  }
 
   /* ── Index→post links ────────────────────────────────────────────── */
   if (!/\/posts\//.test(location.pathname)) {
