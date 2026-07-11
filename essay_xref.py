@@ -38,15 +38,19 @@ ESSAY_TAG = "a-closer-look"
 
 # Generic single words that are Lexicon entries but too common to trust as an
 # essay "mention" (they'd match sentence-initial capitals everywhere).
+# Trimmed to the genuinely generic single words. Case-sensitivity already keeps
+# specific terms low-noise (Consciousness=7, Manufacturing=5 essays), so those
+# are un-blocked; only words too generic to be a meaningful "mention" remain.
 GENERIC_BLOCKLIST = {
-    "technology", "silicon", "basic", "consciousness", "optimization",
-    "manufacturing", "innovation", "automation", "infrastructure", "computing",
-    "hardware", "software", "internet", "digital", "algorithm", "network",
-    "platform", "cloud", "security", "privacy", "energy", "climate",
-    "intelligence", "learning", "productivity", "efficiency", "sustainability",
-    "creativity", "experience", "engineering", "development", "science",
-    "research", "design", "data", "led", "optimization",
+    "technology", "silicon", "data", "algorithm", "computing", "software",
+    "hardware", "digital", "internet", "network", "platform", "cloud",
+    "intelligence", "infrastructure", "automation",
 }
+
+# Terms to never count as an essay "mention" regardless of shape — the
+# publication's own name appears in mastheads/self-references across nearly
+# every essay, which is noise, not discussion.
+ALWAYS_SKIP = {"token wisdom"}
 
 
 def _quarter_of(date_str: str) -> str:
@@ -67,6 +71,8 @@ def build_strict_patterns(terms: list[dict]):
         name = t["name"]
         if not (t.get("definition") or "").strip():
             continue
+        if name.lower() in ALWAYS_SKIP:      # publication self-references, not "discussed" terms
+            continue
         multi = " " in name
         acro = _is_acronym(name)
         # acronyms (AI, ML, VR, 5G…) are safe at 2 chars because they match
@@ -77,7 +83,13 @@ def build_strict_patterns(terms: list[dict]):
             # single-word, non-acronym: must be Capitalized and not generic
             if name[:1].islower() or name.lower() in GENERIC_BLOCKLIST:
                 continue
-        pats.append((t, re.compile(r"\b" + re.escape(name) + r"\b")))  # case-sensitive
+        # Multi-word phrases are unambiguous, so match them case-insensitively;
+        # single words / acronyms stay case-sensitive (keeps LED≠"led"). Plurals
+        # count only for acronyms (LLMs, GPUs) — a plural 's' on multi-word terms
+        # would double-count singular/plural pairs already in the lexicon.
+        flags = re.IGNORECASE if multi else 0
+        suffix = r"s?\b" if acro else r"\b"
+        pats.append((t, re.compile(r"\b" + re.escape(name) + suffix, flags)))
     return pats
 
 

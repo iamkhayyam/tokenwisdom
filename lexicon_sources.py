@@ -60,6 +60,26 @@ def canon_category(label):
     return CANON.get(key, label.strip() if label else "Concepts")
 
 
+def _fuzzy_category(low):
+    """Map a glossary sub-header to a canonical category. Exact CANON first, then
+    keyword inference so drifted labels ('Latest Technologies', 'Key Terms') still
+    harvest. Returns None for headers that name no glossary category, so genuine
+    non-glossary headings inside the section are still skipped."""
+    if low in CANON:
+        return CANON[low]
+    if "acronym" in low or "abbrev" in low:
+        return "Acronyms"
+    if "technolog" in low or "innovation" in low:
+        return "Technologies"
+    if "technical" in low or "term" in low:
+        return "Technical Terms"
+    if "people" in low or "work" in low or "cited" in low:
+        return "People & Works"
+    if "concept" in low or "topic" in low or "theme" in low:
+        return "Concepts"
+    return None
+
+
 def _clean(s):
     s = re.sub(r"<[^>]+>", " ", s or "")
     s = ihtml.unescape(s)
@@ -127,7 +147,7 @@ def _parse_html_entries(section):
             low = re.sub(r"\s+", " ", txt.lower()).strip(" :")
             if SECTION_TITLE_RX.search(txt) or low == "the more you learn" or not low:
                 continue
-            cur = CANON.get(low)          # None for non-glossary headings -> skip entries
+            cur = _fuzzy_category(low)     # None for non-glossary headings -> skip entries
             continue
         if cur is None:
             continue
