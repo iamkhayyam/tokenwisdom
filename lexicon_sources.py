@@ -195,6 +195,67 @@ def from_corpus(posts):
 
 
 # ============================================================
+# INLINE SOURCE — acronyms glossed in body prose, e.g. "Retrieval-Augmented
+# Generation (RAG)". High precision: the acronym must match the phrase's
+# word-initials, which both trims boundary garbage and rejects coincidences.
+# ============================================================
+
+_INLINE_PAREN_RX = re.compile(r"((?:[A-Za-z][\w-]*\s+){1,6}[A-Za-z][\w-]*)\s*\(([A-Z][A-Za-z]{1,5})\)")
+
+
+def _validate_acronym(phrase, acr):
+    """Return the trailing run of words whose initials spell `acr` (so
+    'Innovations Retrieval-Augmented Generation (RAG)' → 'Retrieval Augmented
+    Generation'); None if no run matches."""
+    parts = re.findall(r"[A-Za-z]+", phrase)
+    a = acr.lower()
+    for start in range(len(parts)):
+        if "".join(p[0] for p in parts[start:]).lower() == a:
+            run = parts[start:]
+            if 1 < len(run) <= 6:
+                return " ".join(run)
+    return None
+
+
+def _is_newsletter(p):
+    slugs = {t.get("slug") for t in (p.get("tags") or []) if t.get("slug")}
+    return bool(slugs & {"worthafortune", "pearls-of-wisdom"})
+
+
+def from_inline(posts):
+    """Supplementary editions from validated parenthetical acronym glosses in the
+    newsletter article prose. Marked source='inline' so they're auditable and
+    never override a real glossary definition (harvest() merges them, glossary
+    wins). Newsletters only — essay acronyms are handled by essay_xref."""
+    editions = []
+    for p in posts:
+        if not _is_newsletter(p):
+            continue
+        body = _clean(p.get("html") or "")
+        entries, seen = [], set()
+        for m in _INLINE_PAREN_RX.finditer(body):
+            acr = m.group(2).strip()
+            expansion = _validate_acronym(m.group(1).strip(), acr)
+            if not expansion or acr.lower() in seen or clean.is_artifact_name(acr):
+                continue
+            seen.add(acr.lower())
+            entries.append({"term": acr, "definition": expansion, "category": "Acronyms"})
+        if not entries:
+            continue
+        title = p.get("title") or ""
+        em = EDITION_RX.search(title)
+        wm = WEEK_RX.search(title) or WEEK_RX.search(p.get("slug") or "")
+        editions.append({
+            "edition": int(em.group(1)) if em else None,
+            "week": int(wm.group(1)) if wm else None,
+            "date": (p.get("published_at") or "")[:10],
+            "title": title, "slug": p.get("slug") or "",
+            "source": "inline", "entries": entries,
+        })
+    return editions
+
+
+# ============================================================
 # PDF SOURCE
 # ============================================================
 
@@ -349,7 +410,7 @@ def from_pdfs(pdf_paths):
 # ============================================================
 
 def harvest(posts, pdf_paths=()):
-    """Return normalized editions from corpus + PDFs, de-duplicated by edition no."""
+    """Return normalized editions from corpus + PDFs + inline glosses, de-duped."""
     eds = from_corpus(posts)
     seen = {e["edition"] for e in eds if e["edition"]}
     for e in from_pdfs(pdf_paths):
@@ -358,6 +419,18 @@ def harvest(posts, pdf_paths=()):
         eds.append(e)
         if e["edition"]:
             seen.add(e["edition"])
+    # Supplementary inline acronym glosses: append to the matching edition
+    # (skipping any term already defined there — glossary wins), else add.
+    by_num = {e["edition"]: e for e in eds if e["edition"]}
+    for e in from_inline(posts):
+        tgt = by_num.get(e["edition"]) if e["edition"] else None
+        if tgt:
+            have = {en["term"].lower() for en in tgt["entries"]}
+            tgt["entries"].extend(en for en in e["entries"] if en["term"].lower() not in have)
+        else:
+            eds.append(e)
+            if e["edition"]:
+                by_num[e["edition"]] = e
     eds.sort(key=lambda e: e["date"] or "")
     return eds
 
