@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -72,81 +72,123 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
 })();</script>
 
 <style>
-.nf-wrap { max-width: 680px; margin: 0 auto; padding: 5.5rem 28px 7rem; text-align: center; position: relative; }
-.nf-orb { width: 168px; margin: 0 auto 2.6rem; position: relative; }
-.nf-orb::before {
-  content: ''; position: absolute; inset: -58px; border-radius: 50%;
-  background: radial-gradient(circle, var(--mint-glow) 0%, transparent 62%);
-  opacity: .4; filter: blur(9px); mix-blend-mode: screen;
-  animation: nf-pulse 3.6s ease-in-out infinite;
+/* Nameplate — the 404's own front-page moment, mirroring index.html's
+   .nameplate but scoped so it doesn't collide. */
+.nf-plate { border-top: 1px solid var(--ink); border-bottom: 1px solid var(--ink);
+  background: var(--paper); margin-top: 6px; }
+.nf-plate-inner { max-width: 1080px; margin: 0 auto; padding: 22px 28px 24px;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 22px; }
+.nf-plate-left, .nf-plate-right { font-family: var(--mono); font-weight: 400;
+  font-size: .62rem; letter-spacing: .13em; text-transform: uppercase;
+  color: var(--ink-muted); line-height: 1.55; white-space: nowrap; }
+.nf-plate-left { justify-self: start; }
+.nf-plate-right { justify-self: end; text-align: right; }
+.nf-plate-right b { color: var(--ink); font-weight: 500; }
+.nf-plate-right .acc { color: var(--accent); }
+.nf-plate-mark { font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.4rem, 6.8vw, 4.7rem); letter-spacing: -.025em;
+  color: var(--ink); white-space: nowrap; line-height: .88; }
+@media (max-width: 620px) {
+  .nf-plate-inner { grid-template-columns: 1fr; gap: 14px; }
+  .nf-plate-left, .nf-plate-right { justify-self: center; text-align: center; }
 }
-@keyframes nf-pulse { 0%, 100% { opacity: .3; } 50% { opacity: .58; } }
-.nf-orb img { width: 100%; height: auto; position: relative; }
-.nf-motes { position: absolute; inset: -74px; pointer-events: none; }
-.nf-mote {
-  position: absolute; width: 5px; height: 5px; border-radius: 50%;
-  background: var(--mint-glow); box-shadow: 0 0 9px 2.5px var(--mint-glow);
-  opacity: 0; animation: nf-float ease-in-out infinite;
-}
-.nf-mote:nth-child(1) { top: 10%;  left: 14%;  animation-duration: 7s;   animation-delay: 0s; }
-.nf-mote:nth-child(2) { top: 66%;  left: 2%;   animation-duration: 8.5s; animation-delay: 1.3s; }
-.nf-mote:nth-child(3) { top: 12%;  left: 84%;  animation-duration: 6.5s; animation-delay: 2.6s; }
-.nf-mote:nth-child(4) { top: 76%;  left: 88%;  animation-duration: 9s;   animation-delay: .7s; }
-.nf-mote:nth-child(5) { top: 44%;  left: -6%;  animation-duration: 7.5s; animation-delay: 3.3s; }
-.nf-mote:nth-child(6) { top: 42%;  left: 100%; animation-duration: 8s;   animation-delay: 1.9s; }
-@keyframes nf-float {
-  0%, 100% { opacity: 0; transform: translate(0,0) scale(.6); }
-  18% { opacity: .9; }
-  50% { opacity: .55; transform: translate(9px,-18px) scale(1); }
-  84% { opacity: .75; }
-}
-.nf-kicker { font-family: var(--mono); font-size: .7rem; letter-spacing: .22em;
-  text-transform: uppercase; margin-bottom: 1.1rem; }
-.nf-kicker .dim { color: var(--ink-faint); }
-.nf-kicker .accent { color: var(--brand-orange); }
-.nf-kicker .mint { color: var(--mint-glow); }
-.nf-title { font-family: var(--display, 'Libre Caslon Display', Georgia, serif); font-weight: 400;
-  font-size: clamp(2.6rem, 7vw, 4.4rem); line-height: .95; letter-spacing: -.02em;
-  color: var(--ink); margin: 0 0 1.4rem; border: none; padding: 0; }
-.nf-dek { font-family: var(--serif, 'Source Serif 4', Georgia, serif); font-size: 1.15rem;
-  line-height: 1.6; color: var(--ink-muted); max-width: 46ch; margin: 0 auto 1.1rem; }
-.nf-dek .mint { color: var(--mint-glow); }
-.nf-path { font-family: var(--mono); font-size: .82rem; color: var(--ink-faint);
-  word-break: break-all; margin-bottom: 2.6rem; }
-.nf-links { display: flex; gap: .8rem; justify-content: center; flex-wrap: wrap;
-  position: relative; padding-top: 2.3rem; }
-.nf-links::before {
-  content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
-  width: 140px; height: 1px;
-  background: linear-gradient(90deg, transparent, var(--mint) 50%, transparent);
-  opacity: .6;
-}
-.nf-links a { font-family: var(--mono); font-size: .72rem; letter-spacing: .1em;
-  text-transform: uppercase; color: var(--ink); padding: .65rem 1.1rem; transition: all .15s ease;
-  border: 0.5px solid color-mix(in srgb, var(--mint) 30%, var(--paper-rule)); }
-.nf-links a:first-child { border-color: color-mix(in srgb, var(--brand-orange) 35%, var(--paper-rule)); }
-.nf-links a:hover { color: var(--mint-glow); border-color: var(--mint); box-shadow: 0 0 0 1px var(--mint) inset; }
-.nf-links a:first-child:hover { color: var(--brand-orange); border-color: var(--brand-orange); box-shadow: 0 0 0 1px var(--brand-orange) inset; }
+
+/* Editor's-note column */
+.nf-wrap { max-width: 640px; margin: 0 auto; padding: 5rem 28px 6rem; text-align: center; }
+.nf-kicker { font-family: var(--mono); font-weight: 400; font-size: .72rem;
+  letter-spacing: .26em; text-transform: uppercase; margin-bottom: 2rem; }
+.nf-kicker .acc { color: var(--accent); }
+.nf-kicker .dim { color: var(--ink-faint); margin: 0 .55em; }
+.nf-kicker .ink { color: var(--ink-muted); }
+.nf-title { font-family: var(--display); font-weight: 400;
+  font-size: clamp(2.6rem, 7vw, 4.2rem); line-height: 1.02; letter-spacing: -.015em;
+  color: var(--ink); margin: 0 0 1.6rem; border: none; padding: 0; }
+.nf-dek { font-family: var(--serif); font-size: 1.15rem; line-height: 1.65;
+  color: var(--ink-muted); max-width: 44ch; margin: 0 auto 2.4rem;
+  font-optical-sizing: none; font-variation-settings: "opsz" 17; }
+.nf-dek em { color: var(--accent); font-style: italic; }
+.nf-req { display: inline-flex; align-items: baseline; gap: .8em; padding: .65rem 1.1rem;
+  border: 1px solid var(--paper-rule); border-radius: 2px; background: var(--paper-warm);
+  margin-bottom: 2.6rem; max-width: 100%; }
+.nf-req .lbl { font-family: var(--mono); font-weight: 400; font-size: .64rem;
+  letter-spacing: .18em; text-transform: uppercase; color: var(--ink-faint); }
+.nf-req .path { font-family: var(--mono); font-weight: 400; font-size: .82rem;
+  color: var(--ink); word-break: break-all; }
+.nf-req .path::before { content: '/'; color: var(--accent); }
+.nf-req[hidden] { display: none; }
+
+.nf-rule { display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 2.2rem; max-width: 300px; color: var(--accent); }
+.nf-rule::before, .nf-rule::after { content: ''; flex: 1; height: 1px;
+  background: var(--paper-rule); }
+.nf-rule span { padding: 0 .8em; font-size: .7rem; }
+
+.nf-links { display: flex; gap: .55rem; justify-content: center; flex-wrap: wrap;
+  margin-bottom: 3.6rem; }
+.nf-links a { font-family: var(--mono); font-weight: 400; font-size: .68rem;
+  letter-spacing: .14em; text-transform: uppercase; color: var(--ink);
+  padding: .7rem 1.05rem; border: 1px solid var(--paper-rule);
+  background: var(--paper); transition: all .15s ease; }
+.nf-links a:hover { color: var(--accent); border-color: var(--accent); background: var(--paper-warm); }
+.nf-links a.primary { color: var(--paper); background: var(--ink); border-color: var(--ink); }
+.nf-links a.primary:hover { background: var(--accent); border-color: var(--accent); color: var(--paper); }
+
+/* Fortune-teller wink — the crystal ball as a colophon signature. */
+.nf-signature { display: inline-flex; align-items: center; gap: .8em;
+  font-family: var(--serif); font-style: italic; font-size: .95rem;
+  color: var(--ink-faint); font-optical-sizing: none; font-variation-settings: "opsz" 17; }
+.nf-signature img { width: 36px; height: 40px; opacity: .8; }
+.nf-signature .dia { color: var(--accent); font-style: normal; margin-right: .1em; }
 </style>
-<main class="nf-wrap">
-  <div class="nf-orb">
-    <div class="nf-motes"><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span><span class="nf-mote"></span></div>
-    <img src="/assets/crystal-ball.svg" alt="The Token Wisdom crystal ball">
+
+<section class="nf-plate">
+  <div class="nf-plate-inner">
+    <div class="nf-plate-left">Non-Publication<br>Notice</div>
+    <a class="nf-plate-mark" href="/index.html">Token&nbsp;Wisdom</a>
+    <div class="nf-plate-right"><b>No. 404</b><br><span class="acc">Never</span> &middot; Printed</div>
   </div>
-  <div class="nf-kicker"><span class="accent">Error 404</span><span class="dim"> &middot; </span><span class="mint">Nothing Foretold Here</span></div>
-  <h1 class="nf-title">The ball has gone cloudy.</h1>
-  <p class="nf-dek">Whatever you were looking for isn&rsquo;t in the cards &mdash;
-  moved, renamed, or never written. <span class="mint">The archive, however, sees all.</span></p>
-  <div class="nf-path" data-nf-path></div>
+</section>
+
+<main class="nf-wrap">
+  <div class="nf-kicker">
+    <span class="acc">Editor's Note</span><span class="dim">&middot;</span><span class="ink">This edition never went to press</span>
+  </div>
+  <h1 class="nf-title">The page you asked for isn&rsquo;t in the cards.</h1>
+  <p class="nf-dek">It was either moved, renamed, or &mdash; likelier still &mdash;
+  never written. <em>The ball has gone cloudy.</em> The archive, however,
+  sees all.</p>
+
+  <div class="nf-req" data-nf-req hidden>
+    <span class="lbl">You asked for</span>
+    <span class="path" data-nf-path></span>
+  </div>
+
+  <div class="nf-rule"><span>&#9670;</span></div>
+
   <nav class="nf-links">
-    <a href="/index.html">Front Page</a>
+    <a href="/index.html" class="primary">Front Page</a>
     <a href="/archive.html">The Archive</a>
     <a href="/lexicon/index.html">The Lexicon</a>
     <a href="/tags/index.html">All Topics</a>
+    <a href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe</a>
   </nav>
+
+  <div class="nf-signature">
+    <img src="/assets/crystal-ball.svg" alt="">
+    <span><span class="dia">&#9670;</span> Even the ball doesn&rsquo;t foresee this one.</span>
+  </div>
 </main>
-<script>(function(){var p=document.querySelector('[data-nf-path]');
-if(p&&location.pathname&&location.pathname!=='/404.html')p.textContent=location.pathname;})();</script>
+
+<script>(function(){
+  var p = location.pathname;
+  if (!p || p === '/404.html') return;
+  var slot = document.querySelector('[data-nf-path]');
+  var wrap = document.querySelector('[data-nf-req]');
+  if (slot && wrap) {
+    slot.textContent = p.replace(/^\//, '');
+    wrap.hidden = false;
+  }
+})();</script>
 
 <footer class="tw-colophon">
   <div class="col-inner">

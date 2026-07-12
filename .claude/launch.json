@@ -21,6 +21,13 @@
       "runtimeArgs": ["--prefix", "/Users/theusual_pro/claude-code/token-wisdom/api", "start"],
       "port": 3000,
       "autoPort": true
+    },
+    {
+      "name": "tw-og-src",
+      "runtimeExecutable": "sh",
+      "runtimeArgs": ["-c", "python3 -m http.server \"$PORT\" --directory images/social/src"],
+      "port": 8801,
+      "autoPort": true
     }
   ]
 }

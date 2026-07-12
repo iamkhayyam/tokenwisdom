@@ -1,6 +1,6 @@
 # Ghost Blog Backup: https://ghost-production-198e.up.railway.app
 
-**Backup Date:** 2026-07-10T11:20:31.308033
+**Backup Date:** 2026-07-10T23:04:58.480201
 
 ## Summary
 
@@ -141,7 +141,7 @@ ghost-io-backup/
 - **[XR (Pirate Talk)](tags/pirate-talk/)** (6 posts)
 - **[✨ Pearls of Wisdom](tags/worthafortune/)** (85 posts)
 - **[🎉 Newest / Latest](tags/newestlatest/)** (12 posts)
-- **[👁️ A Closer Look](tags/a-closer-look/)** (129 posts)
+- **[👁️ A Closer Look](tags/a-closer-look/)** (127 posts)
 - **[📣 Ask Me Anything](tags/ask-me-anything/)** (1 posts)
 - **[📺 Time Well Spent](tags/timewellspent/)** (12 posts)
 - **[🚨 OP-ED](tags/opinionated-editorials/)** (50 posts)
@@ -174,7 +174,7 @@ ghost-io-backup/
 - **[The Race That Eats Its Own Rules](posts/the-race-that-eats-its-own-rules/)** (2026-03-06) [A.I. (and Subsets), Big Tech, ANI \ AGI \ ASI, Ethics \ Principles, Risk \ Reward, OpenAI + e/acc, Failing Up \ Often, Future of Work, Philosophical, 👁️ A Closer Look, #Import 2026-07-03 20:09]
 - **[149th Edition 🔮 Week 09](posts/149th-edition-token-wisdom-week-09/)** (2026-03-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Double Collapse](posts/the-double-collapse/)** (2026-02-26) [Privacy, A.I. (and Subsets), Future of Work, Ethics \ Principles, All the Data, Cyber \ Security, Philosophical, ANI \ AGI \ ASI, 👁️ A Closer Look, A Story to Tell, #Import 2026-07-03 20:09]
-- **[Dear Sam,](posts/dear-sam/)** (2026-02-24) [Dear ______ Letters, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Ethics \ Principles, Deep Tech, Strategic Measures, Business Models, Philosophical, ANI \ AGI \ ASI, 👁️ A Closer Look, #Import 2026-07-03 20:09]
+- **[Dear Sam,](posts/dear-sam/)** (2026-02-24) [Dear ______ Letters, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Ethics \ Principles, Deep Tech, Strategic Measures, Business Models, Philosophical, ANI \ AGI \ ASI, #Import 2026-07-03 20:09]
 - **[148th Edition 🔮 Week 08](posts/148th-edition-token-wisdom-week-08/)** (2026-02-23) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Persistence of Inferior Standards](posts/the-persistence-of-inferior-standards/)** (2026-02-19) [Lessons Learned, Challenges, A Story to Tell, User Experience, Provenance, Philosophical, Educate \ Learn, 🚨 OP-ED, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09]
 - **[147th Edition 🔮 Week 07](posts/147th-edition-token-wisdom-week-07/)** (2026-02-16) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
@@ -183,7 +183,7 @@ ghost-io-backup/
 - **[How Does Order Emerge in a Universe Built for Chaos?](posts/how-does-order-emerge-in-a-universe-built-for-chaos/)** (2026-02-05) [A.I. (and Subsets), Philosophical, Ethics \ Principles, A Story to Tell, Deep Tech, ANI \ AGI \ ASI, Challenges, Future Trends, Unsolicited Advice, In Flow State, 👁️ A Closer Look, #Import 2026-07-03 20:09]
 - **[145th Edition 🔮 Week 05](posts/145th-edition-token-wisdom-week-05/)** (2026-02-02) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Zombie Singularity of Intelligence Without Understanding](posts/the-zombie-singularity-of-intelligence-without-understanding/)** (2026-01-30) [ANI \ AGI \ ASI, Ethics \ Principles, Risk \ Reward, LLMs - Language Models, A.I. (and Subsets), A Story to Tell, Big Tech, Strategic Measures, 🚨 OP-ED, 👁️ A Closer Look, #Import 2026-07-03 20:09]
-- **[Dear Dario,](posts/dear-dario/)** (2026-01-27) [Dear ______ Letters, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Ethics \ Principles, Deep Tech, Strategic Measures, Business Models, Philosophical, ANI \ AGI \ ASI, 👁️ A Closer Look, #Import 2026-07-03 20:09]
+- **[Dear Dario,](posts/dear-dario/)** (2026-01-27) [Dear ______ Letters, 🚨 OP-ED, A.I. (and Subsets), Big Tech, Ethics \ Principles, Deep Tech, Strategic Measures, Business Models, Philosophical, ANI \ AGI \ ASI, #Import 2026-07-03 20:09]
 - **[144th Edition 🔮 Week 04](posts/144th-edition-token-wisdom-week-04/)** (2026-01-25) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
 - **[The Greengrocer Goes To Davos](posts/the-greengrocer-goes-to-davos/)** (2026-01-22) [Strategic Measures, Unsolicited Advice, Philosophical, Future Trends, Challenges, Risk \ Reward, Ethics \ Principles, Culture Club, 👁️ A Closer Look, 🚨 OP-ED, #Import 2026-07-03 20:09]
 - **[143rd Edition 🔮 Week 03](posts/143rd-edition-token-wisdom-week-03/)** (2026-01-18) [✨ Pearls of Wisdom, #Import 2026-07-03 20:09]
