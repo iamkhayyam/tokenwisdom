@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Social Card Preview — Token Wisdom</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #111; color: #eee; font-family: system-ui, sans-serif; padding: 24px; }
+h1 { font-size: 18px; margin-bottom: 8px; color: #f3ecdd; }
+.meta { font-size: 13px; color: #888; margin-bottom: 32px; }
+.filter { margin-bottom: 24px; display: flex; gap: 8px; align-items: center; }
+.filter label { font-size: 13px; color: #aaa; }
+.filter input { background: #222; border: 1px solid #333; color: #eee; padding: 6px 10px; border-radius: 4px; font-size: 13px; width: 280px; }
+.card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px; padding: 16px; margin-bottom: 24px; }
+.card-title { font-size: 15px; font-weight: 600; margin-bottom: 4px; }
+.card-slug { font-size: 11px; color: #666; margin-bottom: 12px; font-family: monospace; }
+.badge { font-size: 10px; font-weight: 700; padding: 2px 6px; border-radius: 3px; text-transform: uppercase; letter-spacing: .08em; }
+.badge.nl { background: #2a1f0e; color: #d98a4e; }
+.badge.es { background: #0e1a2a; color: #6ab0d4; }
+.formats { display: grid; grid-template-columns: 2fr 1fr 0.75fr; gap: 12px; align-items: start; }
+.fmt-label { font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: .1em; margin-bottom: 6px; }
+.fmt img { width: 100%; border-radius: 4px; display: block; cursor: pointer; }
+.fmt img:hover { opacity: .85; }
+.missing { background: #222; border-radius: 4px; padding: 16px; font-size: 12px; color: #555; text-align: center; }
+</style>
+</head>
+<body>
+<h1>Social Card Preview — Token Wisdom</h1>
+<div class="meta">7 posts · click any card to open full size</div>
+<div class="filter"><label>Filter:</label><input type="text" id="q" placeholder="slug or title…" oninput="filter()"></div>
+<div id="grid">
+    <div class="card">
+      <div class="card-title"><span class="badge nl">NL</span> 156th Edition 🔮 Week 16</div>
+      <div class="card-slug">156th-edition-token-wisdom-week-16</div>
+      <div class="formats">
+        <div class="fmt"><div class="fmt-label">Landscape</div><a href="posts/156th-edition-token-wisdom-week-16.png" target="_blank"><img src="posts/156th-edition-token-wisdom-week-16.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Portrait</div><a href="posts/156th-edition-token-wisdom-week-16-portrait.png" target="_blank"><img src="posts/156th-edition-token-wisdom-week-16-portrait.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Story</div><a href="posts/156th-edition-token-wisdom-week-16-story.png" target="_blank"><img src="posts/156th-edition-token-wisdom-week-16-story.png" loading="lazy"></a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="badge nl">NL</span> 159th Edition 🔮 Week 19</div>
+      <div class="card-slug">159th-edition-token-wisdom-week-19</div>
+      <div class="formats">
+        <div class="fmt"><div class="fmt-label">Landscape</div><a href="posts/159th-edition-token-wisdom-week-19.png" target="_blank"><img src="posts/159th-edition-token-wisdom-week-19.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Portrait</div><a href="posts/159th-edition-token-wisdom-week-19-portrait.png" target="_blank"><img src="posts/159th-edition-token-wisdom-week-19-portrait.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Story</div><a href="posts/159th-edition-token-wisdom-week-19-story.png" target="_blank"><img src="posts/159th-edition-token-wisdom-week-19-story.png" loading="lazy"></a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="badge es">ES</span> Data Is Not the New Oil</div>
+      <div class="card-slug">data-is-not-the-new-oil</div>
+      <div class="formats">
+        <div class="fmt"><div class="fmt-label">Landscape</div><a href="posts/data-is-not-the-new-oil.png" target="_blank"><img src="posts/data-is-not-the-new-oil.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Portrait</div><a href="posts/data-is-not-the-new-oil-portrait.png" target="_blank"><img src="posts/data-is-not-the-new-oil-portrait.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Story</div><a href="posts/data-is-not-the-new-oil-story.png" target="_blank"><img src="posts/data-is-not-the-new-oil-story.png" loading="lazy"></a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="badge es">ES</span> del.icio.us Was Right. It Was Just Twenty Years Too Early.</div>
+      <div class="card-slug">del-icio-us-was-right-we-built-claudacious</div>
+      <div class="formats">
+        <div class="fmt"><div class="fmt-label">Landscape</div><a href="posts/del-icio-us-was-right-we-built-claudacious.png" target="_blank"><img src="posts/del-icio-us-was-right-we-built-claudacious.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Portrait</div><a href="posts/del-icio-us-was-right-we-built-claudacious-portrait.png" target="_blank"><img src="posts/del-icio-us-was-right-we-built-claudacious-portrait.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Story</div><a href="posts/del-icio-us-was-right-we-built-claudacious-story.png" target="_blank"><img src="posts/del-icio-us-was-right-we-built-claudacious-story.png" loading="lazy"></a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="badge es">ES</span> How Does Order Emerge in a Universe Built for Chaos?</div>
+      <div class="card-slug">how-does-order-emerge-in-a-universe-built-for-chaos</div>
+      <div class="formats">
+        <div class="fmt"><div class="fmt-label">Landscape</div><a href="posts/how-does-order-emerge-in-a-universe-built-for-chaos.png" target="_blank"><img src="posts/how-does-order-emerge-in-a-universe-built-for-chaos.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Portrait</div><a href="posts/how-does-order-emerge-in-a-universe-built-for-chaos-portrait.png" target="_blank"><img src="posts/how-does-order-emerge-in-a-universe-built-for-chaos-portrait.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Story</div><a href="posts/how-does-order-emerge-in-a-universe-built-for-chaos-story.png" target="_blank"><img src="posts/how-does-order-emerge-in-a-universe-built-for-chaos-story.png" loading="lazy"></a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="badge es">ES</span> Human-in-the-Room</div>
+      <div class="card-slug">human-in-the-room</div>
+      <div class="formats">
+        <div class="fmt"><div class="fmt-label">Landscape</div><a href="posts/human-in-the-room.png" target="_blank"><img src="posts/human-in-the-room.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Portrait</div><a href="posts/human-in-the-room-portrait.png" target="_blank"><img src="posts/human-in-the-room-portrait.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Story</div><a href="posts/human-in-the-room-story.png" target="_blank"><img src="posts/human-in-the-room-story.png" loading="lazy"></a></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-title"><span class="badge es">ES</span> The Room Was Already Set Before You Walked In</div>
+      <div class="card-slug">the-room-was-already-set-before-you-walked-in</div>
+      <div class="formats">
+        <div class="fmt"><div class="fmt-label">Landscape</div><a href="posts/the-room-was-already-set-before-you-walked-in.png" target="_blank"><img src="posts/the-room-was-already-set-before-you-walked-in.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Portrait</div><a href="posts/the-room-was-already-set-before-you-walked-in-portrait.png" target="_blank"><img src="posts/the-room-was-already-set-before-you-walked-in-portrait.png" loading="lazy"></a></div>
+        <div class="fmt"><div class="fmt-label">Story</div><a href="posts/the-room-was-already-set-before-you-walked-in-story.png" target="_blank"><img src="posts/the-room-was-already-set-before-you-walked-in-story.png" loading="lazy"></a></div>
+      </div>
+    </div></div>
+<script>
+function filter() {
+  const q = document.getElementById('q').value.toLowerCase();
+  document.querySelectorAll('.card').forEach(c => {
+    c.style.display = c.textContent.toLowerCase().includes(q) ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

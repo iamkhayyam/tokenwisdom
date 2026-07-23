@@ -55,6 +55,18 @@ def is_hidden(post):
     return (post.get("slug") or "") in HIDDEN_POST_SLUGS
 
 
+def post_social_card_url(post):
+    """Return the absolute URL for a per-post social card if it has been
+    rendered (docs/social/posts/<slug>.png exists), else None."""
+    slug = post.get("slug") or ""
+    if not slug:
+        return None
+    card = DOCS_DIR / "social" / "posts" / f"{slug}.png"
+    if card.exists():
+        return f"{SITE_URL}/social/posts/{slug}.png"
+    return None
+
+
 # ---------------------------------------------------------------------------
 # Image localization — rewrite tokenwisdom.ghost.io URLs to local paths
 # ---------------------------------------------------------------------------
@@ -2555,7 +2567,7 @@ def _prefix(from_dir):
     return {"root": "", "sub": "../", "abs": "/"}.get(from_dir, "../")
 
 
-def head_tag(title, prefix="", noindex=False, description=None, og_url=None, theme=None):
+def head_tag(title, prefix="", noindex=False, description=None, og_url=None, og_image=None, theme=None):
     from tw_theme import meta_head
     fonts = (
         "https://fonts.googleapis.com/css2?"
@@ -2572,7 +2584,7 @@ def head_tag(title, prefix="", noindex=False, description=None, og_url=None, the
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{esc(title)} — {SITE_NAME}</title>
-{meta_head(title, description=description, prefix=prefix, url=og_url)}{robots}
+{meta_head(title, description=description, prefix=prefix, url=og_url, image=og_image)}{robots}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="{fonts}" rel="stylesheet">
@@ -2679,9 +2691,9 @@ def colophon(posts_count, tags_count, years_span, top_tags, from_dir="root"):
 
 
 def page_shell(title, body, css_path, from_dir="root", theme_toggle=False, noindex=False,
-               description=None, og_url=None, theme=None):
+               description=None, og_url=None, og_image=None, theme=None):
     head = head_tag(title, prefix=_prefix(from_dir), noindex=noindex, description=description,
-                    og_url=og_url, theme=theme).format(css_path=css_path)
+                    og_url=og_url, og_image=og_image, theme=theme).format(css_path=css_path)
     return head + site_top(from_dir, theme_toggle=theme_toggle) + body
 
 
@@ -3075,7 +3087,8 @@ def render_essay_post(post, prev_post, next_post, posts_count, tags_count,
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", theme_toggle=True, noindex=is_hidden(post),
                       description=post.get("custom_excerpt") or post.get("excerpt") or None,
-                      og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html")
+                      og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html",
+                      og_image=post_social_card_url(post))
     page = page.replace('<body>', '<body' + next_post_body_attrs(next_post, prefix='../') + '>', 1)
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
     page = page.replace("</body>", community_assets() + "\n</body>", 1)
@@ -3134,7 +3147,8 @@ def render_newsletter_post(post, prev_post, next_post, posts_count, tags_count, 
 """
     page = page_shell(post.get("title", ""), body, "../style.css", from_dir="sub", noindex=is_hidden(post),
                       description=post.get("custom_excerpt") or post.get("excerpt") or None,
-                      og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html")
+                      og_url=f"{SITE_URL}/posts/{post.get('slug', '')}.html",
+                      og_image=post_social_card_url(post))
     page = page.replace('<body>', '<body' + next_post_body_attrs(next_post, prefix='../') + '>', 1)
     page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="sub")
     page = page.replace("</body>", community_assets() + "\n</body>", 1)
