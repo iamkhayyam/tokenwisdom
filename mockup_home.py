@@ -527,6 +527,9 @@ def render_masthead():
       {''.join(f'<a href="{href}">{label}</a>' for _, label, href in tw_theme.NAV)}
       <a class="mast-sub" href="{gs.GHOST_URL}/subscribe">Subscribe</a>
     </nav>
+    <button class="site-top-search" data-tws-open aria-label="Search" aria-controls="tws">
+      <span aria-hidden="true">⌕</span><span class="tws-lbl">Search</span><span class="tws-key" aria-hidden="true">⌘K</span>
+    </button>
     <button class="mast-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
       <span class="ham"><span></span><span></span><span></span></span>
       <span class="mtxt">Menu</span>

@@ -316,6 +316,79 @@ html.nav-open .nto-close-glyph{opacity:1;transition:opacity .5s ease .5s,color .
   html.nav-open .nto-close-glyph{transition:opacity .2s ease;transform:none}
 }
 
+/* ===== SEARCH ===== */
+/* Deliberately a light instrument panel, not a second dark takeover — the nav
+   overlay is for browsing, this is for aiming. Shared by the ⌘K overlay and
+   search.html; the .tws-* result classes are emitted by assets/search.js.
+
+   This block ships into two stylesheets with different token names — tw_theme's
+   (--bg/--rule) and generate_site's paper palette (--paper/--paper-rule) — so
+   every surface color resolves through a --tws-* alias with a fallback chain
+   instead of assuming either one. Nothing here needs per-site string patching. */
+:root{
+  --tws-bg:var(--bg,var(--paper,#faf8f4));
+  --tws-rule:var(--rule,var(--paper-rule,#e6e2d9));
+  --tws-wash:color-mix(in srgb,var(--accent) 12%,transparent);
+  --tws-mark:color-mix(in srgb,var(--accent) 24%,transparent);
+  /* Fixed dark, NOT derived from --ink. Post pages run a dark theme where
+     --ink inverts to near-white, which turned the scrim into a white wash and
+     the drop shadow into a glow. A scrim is dark in both themes by definition. */
+  --tws-shadow:#0a0907;
+}
+.site-top-search{display:inline-flex;align-items:center;gap:.55em;height:34px;padding:0 12px;background:transparent;border:1px solid var(--tws-rule);cursor:pointer;color:var(--ink-muted);font-family:var(--mono);font-weight:300;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;-webkit-tap-highlight-color:transparent;transition:border-color .15s,color .15s}
+.site-top-search:hover{border-color:var(--ink);color:var(--accent)}
+.site-top-search .tws-key{font-size:.62rem;letter-spacing:.06em;color:var(--ink-faint);border:1px solid var(--tws-rule);padding:.1em .4em;line-height:1}
+@media(max-width:720px){.site-top-search .tws-lbl,.site-top-search .tws-key{display:none}.site-top-search{padding:0 10px}}
+
+html.tws-open{overflow:hidden}
+.tws-scrim{position:fixed;inset:0;z-index:210;background:color-mix(in srgb,var(--tws-shadow) 55%,transparent);backdrop-filter:blur(4px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility 0s linear .18s}
+html.tws-open .tws-scrim{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .18s ease}
+.tws-panel{position:relative;max-width:760px;margin:min(9vh,88px) auto 0;background:var(--tws-bg);border:2px solid var(--ink);box-shadow:0 24px 70px -20px color-mix(in srgb,var(--tws-shadow) 45%,transparent);display:flex;flex-direction:column;max-height:min(76vh,720px);transform:translateY(-10px);opacity:0;transition:transform .28s cubic-bezier(.16,1,.3,1),opacity .18s ease}
+html.tws-open .tws-panel{transform:none;opacity:1}
+@media(max-width:820px){.tws-panel{margin:0;max-width:none;height:100%;max-height:none;border:none;border-bottom:2px solid var(--ink)}}
+
+.tws-inputrow{display:flex;align-items:center;gap:.7rem;padding:14px 18px;border-bottom:2px solid var(--ink);flex-shrink:0}
+.tws-glyph{font-size:1.1rem;color:var(--accent);line-height:1}
+.tws-input{flex:1;border:none;outline:none;background:transparent;color:var(--ink);font-family:var(--sans);font-size:1.12rem;font-weight:500;letter-spacing:-.01em;min-width:0}
+.tws-input::placeholder{color:var(--ink-faint);font-weight:400}
+.tws-input::-webkit-search-cancel-button{display:none}
+.tws-esc{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);border:1px solid var(--tws-rule);padding:.25em .5em;background:transparent;cursor:pointer;flex-shrink:0}
+.tws-esc:hover{color:var(--accent);border-color:var(--accent)}
+
+.tws-results{overflow-y:auto;overscroll-behavior:contain;flex:1}
+.tws-group + .tws-group{border-top:1px solid var(--tws-rule)}
+.tws-grouphead{position:sticky;top:0;z-index:1;display:flex;align-items:baseline;gap:.6em;padding:.7rem 18px .45rem;background:color-mix(in oklch,var(--tws-bg) 94%,transparent);backdrop-filter:blur(6px);font-family:var(--mono);font-weight:300;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.tws-grouphead .tws-count{color:var(--ink-faint)}
+.tws-hit{display:flex;align-items:baseline;gap:1rem;padding:.6rem 18px;border-top:1px solid var(--tws-rule);color:var(--ink);scroll-margin:44px}
+.tws-group .tws-hit:first-of-type{border-top:none}
+.tws-hit-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:.16rem}
+.tws-hit-title{font-family:var(--sans);font-weight:600;font-size:.95rem;line-height:1.3}
+.tws-term .tws-hit-title{font-family:var(--mono);font-weight:400;letter-spacing:.01em}
+.tws-hit-sub{font-family:var(--serif);font-size:.85rem;line-height:1.45;color:var(--ink-muted);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.tws-hit-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+.tws-hit:hover,.tws-hit.is-sel{background:var(--tws-wash)}
+.tws-hit.is-sel .tws-hit-title{color:var(--accent-deep)}
+.tws-hit mark{background:var(--tws-mark);color:inherit;padding:0 .08em}
+.tws-more{padding:.5rem 18px .7rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.tws-more a{color:var(--accent);border-bottom:1px solid var(--tws-rule)}
+.tws-status{padding:.6rem 18px;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);border-top:1px solid var(--tws-rule)}
+.tws-empty{padding:2rem 18px;text-align:center}
+.tws-empty p{font-family:var(--serif);color:var(--ink-muted)}
+.tws-empty em{color:var(--ink)}
+.tws-empty-hint{font-family:var(--mono)!important;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)!important;margin-top:.6rem}
+.tws-hint{padding:1.4rem 18px;font-family:var(--serif);font-size:.92rem;line-height:1.6;color:var(--ink-muted)}
+.tws-hint b{font-family:var(--mono);font-weight:400;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.5rem}
+.tws-seeds{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.tws-seed{font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;color:var(--ink-muted);border:1px solid var(--tws-rule);padding:.3em .7em;cursor:pointer;background:transparent;transition:border-color .15s,color .15s}
+.tws-seed:hover{border-color:var(--accent);color:var(--accent)}
+.tws-foot{flex-shrink:0;display:flex;align-items:center;gap:1.2rem;padding:.55rem 18px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.tws-foot .tws-corpus{margin-left:auto}
+@media(max-width:560px){.tws-foot .tws-keys{display:none}}
+@media(prefers-reduced-motion:reduce){
+  .tws-panel,html.tws-open .tws-panel{transform:none;transition:opacity .15s ease}
+  .tws-scrim{backdrop-filter:none}
+}
+
 /* reusable client-side pagination — activates on any [data-paginate] list */
 .pgn{display:flex;flex-wrap:wrap;align-items:center;gap:.9rem 1.4rem;margin:1.5rem 0 .3rem;padding-top:1.1rem;border-top:1px solid var(--rule);font-family:var(--mono);font-size:.64rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint)}
 .pgn-info{color:var(--ink-muted)}
@@ -470,6 +543,9 @@ html.nav-open .nto-close-glyph{opacity:1;transition:opacity .5s ease .5s,color .
       <span class="ham"><span></span><span></span><span></span></span>
       <span class="mtxt">Menu</span>
     </button>
+    <button class="site-top-search" data-tws-open aria-label="Search" aria-controls="tws">
+      <span aria-hidden="true">⌕</span><span class="tws-lbl">Search</span><span class="tws-key" aria-hidden="true">⌘K</span>
+    </button>
     <a class="site-top-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe</a>
   </div>
 </header>
@@ -483,7 +559,7 @@ html.nav-open .nto-close-glyph{opacity:1;transition:opacity .5s ease .5s,color .
     <span class="nto-eyebrow">The Index <b>·</b> Token Wisdom</span>
     <button class="nto-close" data-nav-close aria-label="Close menu">Close <span class="x">✕</span></button>
   </div>
-  <nav class="nto-nav"><a class="nto-row" style="--i:0" href="../archive.html"><span class="nto-num">01</span><span class="nto-label">Archive</span><span class="nto-desc">Every edition, dated</span></a><a class="nto-row" style="--i:1" href="../tags/index.html"><span class="nto-num">02</span><span class="nto-label">Topics</span><span class="nto-desc">Browse by idea</span></a><a class="nto-row" style="--i:2" href="../lexicon/index.html"><span class="nto-num">03</span><span class="nto-label">Lexicon</span><span class="nto-desc">The working vocabulary</span></a><a class="nto-row" style="--i:3" href="../links/index.html"><span class="nto-num">04</span><span class="nto-label">Links</span><span class="nto-desc">The reading room</span></a><a class="nto-row" style="--i:4" href="../tags/a-closer-look.html"><span class="nto-num">05</span><span class="nto-label">Essays</span><span class="nto-desc">A closer look</span></a><a class="nto-row" style="--i:5" href="../tags/worthafortune.html"><span class="nto-num">06</span><span class="nto-label">Newsletters</span><span class="nto-desc">Worth a fortune</span></a><a class="nto-row" style="--i:6" href="../podcast.html"><span class="nto-num">07</span><span class="nto-label">Podcast</span><span class="nto-desc">Listen in</span></a><a class="nto-row" style="--i:7" href="../metrics.html"><span class="nto-num">08</span><span class="nto-label">Report</span><span class="nto-desc">The corpus, quantified</span></a><a class="nto-row" style="--i:8" href="../about/index.html"><span class="nto-num">09</span><span class="nto-label">About</span><span class="nto-desc">Who & why</span></a></nav>
+  <nav class="nto-nav"><a class="nto-row" style="--i:0" href="../search.html"><span class="nto-num">01</span><span class="nto-label">Search</span><span class="nto-desc">Find anything, instantly</span></a><a class="nto-row" style="--i:1" href="../archive.html"><span class="nto-num">02</span><span class="nto-label">Archive</span><span class="nto-desc">Every edition, dated</span></a><a class="nto-row" style="--i:2" href="../tags/index.html"><span class="nto-num">03</span><span class="nto-label">Topics</span><span class="nto-desc">Browse by idea</span></a><a class="nto-row" style="--i:3" href="../lexicon/index.html"><span class="nto-num">04</span><span class="nto-label">Lexicon</span><span class="nto-desc">The working vocabulary</span></a><a class="nto-row" style="--i:4" href="../links/index.html"><span class="nto-num">05</span><span class="nto-label">Links</span><span class="nto-desc">The reading room</span></a><a class="nto-row" style="--i:5" href="../tags/a-closer-look.html"><span class="nto-num">06</span><span class="nto-label">Essays</span><span class="nto-desc">A closer look</span></a><a class="nto-row" style="--i:6" href="../tags/worthafortune.html"><span class="nto-num">07</span><span class="nto-label">Newsletters</span><span class="nto-desc">Worth a fortune</span></a><a class="nto-row" style="--i:7" href="../podcast.html"><span class="nto-num">08</span><span class="nto-label">Podcast</span><span class="nto-desc">Listen in</span></a><a class="nto-row" style="--i:8" href="../metrics.html"><span class="nto-num">09</span><span class="nto-label">Report</span><span class="nto-desc">The corpus, quantified</span></a><a class="nto-row" style="--i:9" href="../about/index.html"><span class="nto-num">10</span><span class="nto-label">About</span><span class="nto-desc">Who & why</span></a></nav>
   <div class="nto-foot">
     <a class="nto-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe →</a>
     <div class="nto-foot-meta">
@@ -505,25 +581,113 @@ ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
 })();</script>
 
+<div class="tws-scrim" id="tws" role="dialog" aria-modal="true" aria-label="Search Token Wisdom" aria-hidden="true">
+  <div class="tws-panel">
+    <div class="tws-inputrow">
+      <span class="tws-glyph" aria-hidden="true">⌕</span>
+      <input id="tws-input" class="tws-input" type="search" autocomplete="off" autocorrect="off"
+             spellcheck="false" placeholder="Search the Lexicon and every edition…" aria-label="Search">
+      <button type="button" class="tws-esc" data-tws-close>Esc</button>
+    </div>
+    <div class="tws-results" id="tws-results" hidden></div>
+    <div class="tws-hint" id="tws-hint">
+      <b>Search everything</b>
+      Every Lexicon term and the full text of every published edition and essay — indexed locally, no third party involved.
+      <div class="tws-seeds"><button type="button" class="tws-seed">quantum computing</button><button type="button" class="tws-seed">AGI</button><button type="button" class="tws-seed">digital privacy</button><button type="button" class="tws-seed">consciousness</button></div>
+    </div>
+    <div class="tws-foot">
+      <span class="tws-keys">↑↓ Navigate · ↵ Open · Esc Close</span>
+      <span class="tws-corpus" id="tws-corpus">Loading index…</span>
+    </div>
+  </div>
+</div>
+<script>window.TW_BASE="../";</script>
+<script src="../assets/search.js" defer></script>
+<script>window.addEventListener('DOMContentLoaded',function(){(function(){
+var root=document.documentElement;
+var scrim=document.getElementById('tws'),input=document.getElementById('tws-input');
+if(!scrim||!input)return;
+var results=document.getElementById('tws-results'),hint=document.getElementById('tws-hint');
+var corpus=document.getElementById('tws-corpus');
+var open=false,sel=-1,hits=[],last='',timer=null,loaded=false;
+
+function setOpen(o){
+  open=o;root.classList.toggle('tws-open',o);
+  scrim.setAttribute('aria-hidden',o?'false':'true');
+  if(o){
+    if(!loaded){loaded=true;TWSearch.load(window.TW_BASE||'').then(function(){
+      var s=TWSearch.stats();
+      if(s&&corpus)corpus.textContent=s.posts+' pieces · '+s.terms+' terms';
+      if(input.value.trim())run();
+    });
+    TWSearch.onUpgrade(function(){if(input.value.trim())run();});}
+    setTimeout(function(){input.focus();input.select();},60);
+  }else{sel=-1;}
+}
+function run(){
+  var q=input.value.trim();
+  if(q.length<2){results.innerHTML='';results.hidden=true;hint.hidden=false;sel=-1;hits=[];return;}
+  hint.hidden=true;results.hidden=false;
+  if(!TWSearch.ready()){results.innerHTML='<div class="tws-status">Loading the index…</div>';return;}
+  var out=TWSearch.render(TWSearch.search(q),{limit:6,seeAllHref:(window.TW_BASE||'')+'search.html?q='+encodeURIComponent(q)});
+  results.innerHTML=out.html;
+  hits=[].slice.call(results.querySelectorAll('.tws-hit'));
+  sel=hits.length?0:-1;paint();
+}
+function paint(){hits.forEach(function(a,i){a.classList.toggle('is-sel',i===sel);});
+  if(sel>-1&&hits[sel])hits[sel].scrollIntoView({block:'nearest'});}
+function move(d){if(!hits.length)return;sel=(sel+d+hits.length)%hits.length;paint();}
+
+input.addEventListener('input',function(){
+  if(input.value===last)return;last=input.value;
+  clearTimeout(timer);timer=setTimeout(run,90);
+});
+input.addEventListener('keydown',function(e){
+  if(e.key==='ArrowDown'){e.preventDefault();move(1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();move(-1);}
+  else if(e.key==='Enter'){
+    if(sel>-1&&hits[sel]){e.preventDefault();location.href=hits[sel].href;}
+    else if(input.value.trim()){e.preventDefault();
+      location.href=(window.TW_BASE||'')+'search.html?q='+encodeURIComponent(input.value.trim());}
+  }
+});
+document.querySelectorAll('[data-tws-open]').forEach(function(b){
+  b.addEventListener('click',function(e){e.preventDefault();setOpen(true);});});
+scrim.addEventListener('click',function(e){if(e.target===scrim)setOpen(false);});
+scrim.querySelectorAll('[data-tws-close]').forEach(function(b){
+  b.addEventListener('click',function(){setOpen(false);});});
+scrim.querySelectorAll('.tws-seed').forEach(function(b){
+  b.addEventListener('click',function(){input.value=b.textContent;last='';run();input.focus();});});
+document.addEventListener('keydown',function(e){
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();setOpen(!open);return;}
+  if(open&&e.key==='Escape'){e.preventDefault();setOpen(false);return;}
+  if(open)return;
+  // "/" is the other muscle memory, but never steal it mid-typing.
+  var t=e.target,tag=t&&t.tagName;
+  if(e.key==='/'&&tag!=='INPUT'&&tag!=='TEXTAREA'&&!(t&&t.isContentEditable)){
+    e.preventDefault();setOpen(true);}
+});
+})();});</script>
+
 <header class="lex-hero">
   <a class="lex-back" href="index.html">&larr; The Lexicon</a>
   <div class="kicker kicker-accent">Lexicon · Category</div>
   <h1 class="lex-h1">Concepts</h1>
   <p class="lex-lede">Every concepts term the Lexicon knows about, sorted by how often it appears across the corpus.</p>
   <div class="lex-stats lex-stats--compact" role="group" aria-label="Category totals">
-    <div class="lex-stat"><span class="ls-num">559</span><span class="ls-lbl">Terms</span></div>
-    <div class="lex-stat"><span class="ls-num">54</span><span class="ls-lbl">Recurring</span><span class="ls-sub">3+ appearances</span></div>
-    <div class="lex-stat"><span class="ls-num">3</span><span class="ls-lbl">Keystone</span><span class="ls-sub">central &amp; recurring</span></div>
-    <div class="lex-stat"><span class="ls-num">334</span><span class="ls-lbl">Essay hits</span><span class="ls-sub">2024Q1 – 2026Q2</span></div>
+    <div class="lex-stat"><span class="ls-num">612</span><span class="ls-lbl">Terms</span></div>
+    <div class="lex-stat"><span class="ls-num">64</span><span class="ls-lbl">Recurring</span><span class="ls-sub">3+ appearances</span></div>
+    <div class="lex-stat"><span class="ls-num">5</span><span class="ls-lbl">Keystone</span><span class="ls-sub">central &amp; recurring</span></div>
+    <div class="lex-stat"><span class="ls-num">366</span><span class="ls-lbl">Essay hits</span><span class="ls-sub">2024Q1 – 2026Q2</span></div>
   </div>
 </header>
 <main class="wrap"><section class="block"><div class="lex-lines" data-paginate>
       <a class="lex-line" href="artificial-intelligence.html">
-        <span class="lex-line-term">Artificial Intelligence<span class="lex-badge">73×</span></span>
+        <span class="lex-line-term">Artificial Intelligence<span class="lex-badge">74×</span></span>
         <span class="lex-line-def">Impact on industries and decision-making processes</span>
       </a>
       <a class="lex-line" href="ai-development.html">
-        <span class="lex-line-term">AI Development<span class="lex-badge">29×</span></span>
+        <span class="lex-line-term">AI Development<span class="lex-badge">30×</span></span>
         <span class="lex-line-def">Architecture optimization</span>
       </a>
       <a class="lex-line" href="privacy-concerns.html">
@@ -534,25 +698,37 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">AI Ethics<span class="lex-badge">11×</span></span>
         <span class="lex-line-def">Implications of AI in surveillance and law enforcement</span>
       </a>
+      <a class="lex-line" href="data-privacy.html">
+        <span class="lex-line-term">Data Privacy<span class="lex-badge">11×</span></span>
+        <span class="lex-line-def">Mass surveillance implications</span>
+      </a>
       <a class="lex-line" href="environmental-impact.html">
         <span class="lex-line-term">Environmental Impact<span class="lex-badge">11×</span></span>
         <span class="lex-line-def">Technology costs</span>
-      </a>
-      <a class="lex-line" href="data-privacy.html">
-        <span class="lex-line-term">Data Privacy<span class="lex-badge">10×</span></span>
-        <span class="lex-line-def">Mass surveillance implications</span>
       </a>
       <a class="lex-line" href="data-protection.html">
         <span class="lex-line-term">Data Protection<span class="lex-badge">9×</span></span>
         <span class="lex-line-def">Personal information</span>
       </a>
+      <a class="lex-line" href="digital-privacy.html">
+        <span class="lex-line-term">Digital Privacy<span class="lex-badge">9×</span></span>
+        <span class="lex-line-def">Data sovereignty</span>
+      </a>
       <a class="lex-line" href="ethical-considerations.html">
         <span class="lex-line-term">Ethical Considerations<span class="lex-badge">9×</span></span>
         <span class="lex-line-def">In every evolution, especially with AI, the interactive entertainment world has to tread carefully.</span>
       </a>
-      <a class="lex-line" href="digital-privacy.html">
-        <span class="lex-line-term">Digital Privacy<span class="lex-badge">8×</span></span>
-        <span class="lex-line-def">Data sovereignty</span>
+      <a class="lex-line" href="neuroscience.html">
+        <span class="lex-line-term">Neuroscience<span class="lex-badge">9×</span></span>
+        <span class="lex-line-def">New insights into neurological diseases like Parkinson&#x27;s</span>
+      </a>
+      <a class="lex-line" href="consciousness-research.html">
+        <span class="lex-line-term">Consciousness Research<span class="lex-badge">8×</span></span>
+        <span class="lex-line-def">Electromagnetic fields and cellular membranes as seat of mind</span>
+      </a>
+      <a class="lex-line" href="cybersecurity.html">
+        <span class="lex-line-term">Cybersecurity<span class="lex-badge">8×</span></span>
+        <span class="lex-line-def">Sports technology</span>
       </a>
       <a class="lex-line" href="national-security.html">
         <span class="lex-line-term">National Security<span class="lex-badge">8×</span></span>
@@ -562,18 +738,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Cognitive Sovereignty<span class="lex-badge">7×</span></span>
         <span class="lex-line-def">the capacity of an individual to participate meaningfully in the shaping of their own mind rather than being a passive site on which shaping occurs.</span>
       </a>
-      <a class="lex-line" href="consciousness-research.html">
-        <span class="lex-line-term">Consciousness Research<span class="lex-badge">7×</span></span>
-        <span class="lex-line-def">Electromagnetic fields and cellular membranes as seat of mind</span>
-      </a>
-      <a class="lex-line" href="cybersecurity.html">
-        <span class="lex-line-term">Cybersecurity<span class="lex-badge">7×</span></span>
-        <span class="lex-line-def">Sports technology</span>
-      </a>
-      <a class="lex-line" href="neuroscience.html">
-        <span class="lex-line-term">Neuroscience<span class="lex-badge">7×</span></span>
-        <span class="lex-line-def">New insights into neurological diseases like Parkinson&#x27;s</span>
-      </a>
       <a class="lex-line" href="scientific-breakthroughs.html">
         <span class="lex-line-term">Scientific Breakthroughs<span class="lex-badge">7×</span></span>
         <span class="lex-line-def">Mathematical proof of time&#x27;s directional nature</span>
@@ -581,6 +745,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="surveillance-capitalism.html">
         <span class="lex-line-term">Surveillance Capitalism<span class="lex-badge">7×</span></span>
         <span class="lex-line-def">Economic system extracting behavioral data for profit</span>
+      </a>
+      <a class="lex-line" href="cognitive-science.html">
+        <span class="lex-line-term">Cognitive Science<span class="lex-badge">6×</span></span>
+        <span class="lex-line-def">Impact of writing methods on brain function</span>
+      </a>
+      <a class="lex-line" href="digital-security.html">
+        <span class="lex-line-term">Digital Security<span class="lex-badge">6×</span></span>
+        <span class="lex-line-def">Massive exploit campaigns</span>
       </a>
       <a class="lex-line" href="manufacturing.html">
         <span class="lex-line-term">Manufacturing<span class="lex-badge">6×</span></span>
@@ -590,6 +762,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Public Safety<span class="lex-badge">6×</span></span>
         <span class="lex-line-def">Drone threat mitigation</span>
       </a>
+      <a class="lex-line" href="quantum-physics.html">
+        <span class="lex-line-term">Quantum Physics<span class="lex-badge">6×</span></span>
+        <span class="lex-line-def">Hidden reality exploration</span>
+      </a>
+      <a class="lex-line" href="renewable-energy.html">
+        <span class="lex-line-term">Renewable Energy<span class="lex-badge">6×</span></span>
+        <span class="lex-line-def">Residential power generation innovation</span>
+      </a>
       <a class="lex-line" href="systems-thinking.html">
         <span class="lex-line-term">Systems Thinking<span class="lex-badge">6×</span></span>
         <span class="lex-line-def">An approach to analysis that focuses on how parts of a system interrelate</span>
@@ -598,21 +778,21 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Unintended Consequences<span class="lex-badge">6×</span></span>
         <span class="lex-line-def">Solutions that create new categories of problems</span>
       </a>
+      <a class="lex-line" href="urban-planning.html">
+        <span class="lex-line-term">Urban Planning<span class="lex-badge">6×</span></span>
+        <span class="lex-line-def">Transportation system optimization</span>
+      </a>
       <a class="lex-line" href="cognitive-biases.html">
         <span class="lex-line-term">Cognitive Biases<span class="lex-badge">5×</span></span>
         <span class="lex-line-def">Understanding and mitigating confirmation bias</span>
-      </a>
-      <a class="lex-line" href="cognitive-science.html">
-        <span class="lex-line-term">Cognitive Science<span class="lex-badge">5×</span></span>
-        <span class="lex-line-def">Impact of writing methods on brain function</span>
       </a>
       <a class="lex-line" href="corporate-surveillance.html">
         <span class="lex-line-term">Corporate Surveillance<span class="lex-badge">5×</span></span>
         <span class="lex-line-def">Private companies collecting and utilizing personal data</span>
       </a>
-      <a class="lex-line" href="digital-security.html">
-        <span class="lex-line-term">Digital Security<span class="lex-badge">5×</span></span>
-        <span class="lex-line-def">Massive exploit campaigns</span>
+      <a class="lex-line" href="digital-rights.html">
+        <span class="lex-line-term">Digital Rights<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">AI training data and intellectual property</span>
       </a>
       <a class="lex-line" href="human-computer-interaction.html">
         <span class="lex-line-term">Human-Computer Interaction<span class="lex-badge">5×</span></span>
@@ -622,13 +802,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Privacy and Security<span class="lex-badge">5×</span></span>
         <span class="lex-line-def">Encryption of police radio feeds and messaging app security</span>
       </a>
-      <a class="lex-line" href="renewable-energy.html">
-        <span class="lex-line-term">Renewable Energy<span class="lex-badge">5×</span></span>
-        <span class="lex-line-def">Energy derived from sources that are naturally replenished, such as solar, wind, hydro, and geothermal power.</span>
-      </a>
       <a class="lex-line" href="space-exploration.html">
         <span class="lex-line-term">Space Exploration<span class="lex-badge">5×</span></span>
         <span class="lex-line-def">Innovative approaches to mapping space objects</span>
+      </a>
+      <a class="lex-line" href="wireless-technology.html">
+        <span class="lex-line-term">Wireless Technology<span class="lex-badge">5×</span></span>
+        <span class="lex-line-def">Development and implications of 6G technology</span>
       </a>
       <a class="lex-line" href="ai-ethics-and-development.html">
         <span class="lex-line-term">AI Ethics and Development<span class="lex-badge">4×</span></span>
@@ -650,10 +830,6 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Cybersecurity Threats<span class="lex-badge">4×</span></span>
         <span class="lex-line-def">Range and sophistication of attacks facing digital infrastructure</span>
       </a>
-      <a class="lex-line" href="digital-rights.html">
-        <span class="lex-line-term">Digital Rights<span class="lex-badge">4×</span></span>
-        <span class="lex-line-def">AI scraping of cultural institutions and privacy concerns</span>
-      </a>
       <a class="lex-line" href="drug-discovery.html">
         <span class="lex-line-term">Drug Discovery<span class="lex-badge">4×</span></span>
         <span class="lex-line-def">AI-powered research for personalized medicine</span>
@@ -661,6 +837,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="economic-uncertainty.html">
         <span class="lex-line-term">Economic Uncertainty<span class="lex-badge">4×</span></span>
         <span class="lex-line-def">Employment trends</span>
+      </a>
+      <a class="lex-line" href="energy-innovation.html">
+        <span class="lex-line-term">Energy Innovation<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">Wireless power transmission and sustainable energy</span>
       </a>
       <a class="lex-line" href="ethical-ai-development.html">
         <span class="lex-line-term">Ethical AI Development<span class="lex-badge">4×</span></span>
@@ -673,6 +853,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="fundamental-physics.html">
         <span class="lex-line-term">Fundamental Physics<span class="lex-badge">4×</span></span>
         <span class="lex-line-def">Particle accelerator discoveries</span>
+      </a>
+      <a class="lex-line" href="intelligence-research.html">
+        <span class="lex-line-term">Intelligence Research<span class="lex-badge">4×</span></span>
+        <span class="lex-line-def">IARPA leadership changes</span>
       </a>
       <a class="lex-line" href="learning-patterns.html">
         <span class="lex-line-term">Learning Patterns<span class="lex-badge">4×</span></span>
@@ -694,13 +878,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Semiconductor Innovation<span class="lex-badge">4×</span></span>
         <span class="lex-line-def">Patent system and industry protection</span>
       </a>
-      <a class="lex-line" href="wireless-technology.html">
-        <span class="lex-line-term">Wireless Technology<span class="lex-badge">4×</span></span>
-        <span class="lex-line-def">Development and implications of 6G technology</span>
-      </a>
       <a class="lex-line" href="ai-designed-computer-chips.html">
         <span class="lex-line-term">AI-Designed Computer Chips<span class="lex-badge">3×</span></span>
         <span class="lex-line-def">Efficiency surpassing human-designed counterparts.</span>
+      </a>
+      <a class="lex-line" href="algorithmic-monoculture.html">
+        <span class="lex-line-term">Algorithmic Monoculture<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">the regime where many decision-makers run the same model, which can lower collective decision quality even when the model is more accurate per user…</span>
       </a>
       <a class="lex-line" href="architectural-innovation.html">
         <span class="lex-line-term">Architectural Innovation<span class="lex-badge">3×</span></span>
@@ -714,17 +898,33 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Corporate Research<span class="lex-badge">3×</span></span>
         <span class="lex-line-def">Innovation model analysis</span>
       </a>
+      <a class="lex-line" href="dark-data.html">
+        <span class="lex-line-term">Dark Data<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">the industry term for data that is collected and then never used. Most collected data is dark. It is a cost center — storage, breach surface,…</span>
+      </a>
       <a class="lex-line" href="economic-inequality.html">
         <span class="lex-line-term">Economic Inequality<span class="lex-badge">3×</span></span>
         <span class="lex-line-def">Wealth distribution analysis</span>
       </a>
-      <a class="lex-line" href="energy-innovation.html">
-        <span class="lex-line-term">Energy Innovation<span class="lex-badge">3×</span></span>
-        <span class="lex-line-def">Underwater battery storage solutions</span>
-      </a>
       <a class="lex-line" href="energy-optimization.html">
         <span class="lex-line-term">Energy Optimization<span class="lex-badge">3×</span></span>
         <span class="lex-line-def">The process of maximizing energy efficiency and minimizing waste through intelligent systems and strategies.</span>
+      </a>
+      <a class="lex-line" href="international-relations.html">
+        <span class="lex-line-term">International Relations<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">Resource management conflicts</span>
+      </a>
+      <a class="lex-line" href="latent-persuasion.html">
+        <span class="lex-line-term">Latent Persuasion<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">cumulative opinion-shaping by an opinionated language model, building across turns and invisible to any single-output audit (Jakesch et al., CHI…</span>
+      </a>
+      <a class="lex-line" href="neuromorphic-computing.html">
+        <span class="lex-line-term">Neuromorphic Computing<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">hardware that mimics the brain&#x27;s spiking, event- driven architecture rather than the clocked von Neumann model. The Sandia result matters because it…</span>
+      </a>
+      <a class="lex-line" href="rounded-off.html">
+        <span class="lex-line-term">Rounded Off<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">the issue&#x27;s verdict on what a modeling system does to a person — not surveillance in the watched sense, but the quieter erasure of everything that…</span>
       </a>
       <a class="lex-line" href="sustainability.html">
         <span class="lex-line-term">Sustainability<span class="lex-badge">3×</span></span>
@@ -733,6 +933,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="technological-breakthroughs.html">
         <span class="lex-line-term">Technological Breakthroughs<span class="lex-badge">3×</span></span>
         <span class="lex-line-def">Advancements in microchip technology and their implications</span>
+      </a>
+      <a class="lex-line" href="the-residual.html">
+        <span class="lex-line-term">The Residual<span class="lex-badge">3×</span></span>
+        <span class="lex-line-def">in statistics, the part of the data a model fails to fit — not garbage, but precisely where you discover the model is wrong. Applied to a person, the…</span>
       </a>
       <a class="lex-line" href="agricultural-innovation.html">
         <span class="lex-line-term">Agricultural Innovation<span class="lex-badge">2×</span></span>
@@ -765,6 +969,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="ai-in-healthcare.html">
         <span class="lex-line-term">AI in Healthcare<span class="lex-badge">2×</span></span>
         <span class="lex-line-def">The potential of AI to revolutionize drug discovery and treatment</span>
+      </a>
+      <a class="lex-line" href="ai-integration.html">
+        <span class="lex-line-term">AI Integration<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Critical thinking in automated decision-making</span>
       </a>
       <a class="lex-line" href="ai-generated-authorship-and-legal-identity.html">
         <span class="lex-line-term">AI-Generated Authorship and Legal Identity<span class="lex-badge">2×</span></span>
@@ -822,6 +1030,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Cryptocurrency Regulation<span class="lex-badge">2×</span></span>
         <span class="lex-line-def">Regulatory bodies developing frameworks for digital asset governance.</span>
       </a>
+      <a class="lex-line" href="data-infrastructure.html">
+        <span class="lex-line-term">Data Infrastructure<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Advanced transmission technologies</span>
+      </a>
+      <a class="lex-line" href="defense-technology.html">
+        <span class="lex-line-term">Defense Technology<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Military AI applications</span>
+      </a>
       <a class="lex-line" href="democratic-systems.html">
         <span class="lex-line-term">Democratic Systems<span class="lex-badge">2×</span></span>
         <span class="lex-line-def">Mathematical analysis of voting methods</span>
@@ -874,6 +1090,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Historical Research<span class="lex-badge">2×</span></span>
         <span class="lex-line-def">Disease evolution</span>
       </a>
+      <a class="lex-line" href="information-security.html">
+        <span class="lex-line-term">Information Security<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Hardware and software protection methods</span>
+      </a>
       <a class="lex-line" href="infrastructure-as-law.html">
         <span class="lex-line-term">Infrastructure as Law<span class="lex-badge">2×</span></span>
         <span class="lex-line-def">The FCC&#x27;s copper phase-out is the moment a technological transition becomes legally irreversible. Fiber is no longer a market preference — it is the…</span>
@@ -897,6 +1117,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="memory-formation.html">
         <span class="lex-line-term">Memory Formation<span class="lex-badge">2×</span></span>
         <span class="lex-line-def">Neural information storage</span>
+      </a>
+      <a class="lex-line" href="military-technology.html">
+        <span class="lex-line-term">Military Technology<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">GPS-independent navigation</span>
       </a>
       <a class="lex-line" href="natural-disasters.html">
         <span class="lex-line-term">Natural Disasters<span class="lex-badge">2×</span></span>
@@ -953,6 +1177,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="surveillance-expansion.html">
         <span class="lex-line-term">Surveillance Expansion<span class="lex-badge">2×</span></span>
         <span class="lex-line-def">Government spyware civilian targeting</span>
+      </a>
+      <a class="lex-line" href="sustainable-energy.html">
+        <span class="lex-line-term">Sustainable Energy<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Novel approaches to wind power generation</span>
+      </a>
+      <a class="lex-line" href="sustainable-power.html">
+        <span class="lex-line-term">Sustainable Power<span class="lex-badge">2×</span></span>
+        <span class="lex-line-def">Tidal and nuclear energy developments</span>
       </a>
       <a class="lex-line" href="swarm-intelligence.html">
         <span class="lex-line-term">Swarm Intelligence<span class="lex-badge">2×</span></span>
@@ -1034,6 +1266,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Abstract Coding of Emotions</span>
         <span class="lex-line-def">The study revealing that emotions are constructed by the brain through an abstract coding system, independent of sensory input.</span>
       </a>
+      <a class="lex-line" href="academic-innovation.html">
+        <span class="lex-line-term">Academic Innovation</span>
+        <span class="lex-line-def">Research-to-market transformation</span>
+      </a>
       <a class="lex-line" href="accelerated-human-development.html">
         <span class="lex-line-term">Accelerated Human Development</span>
         <span class="lex-line-def">Prodigy education trajectories</span>
@@ -1049,6 +1285,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="advancements-in-language-model-scaling.html">
         <span class="lex-line-term">Advancements in Language Model Scaling</span>
         <span class="lex-line-def">Comprehensive guides emerging to optimize large language model performance on specialized hardware.</span>
+      </a>
+      <a class="lex-line" href="adversarial-audio.html">
+        <span class="lex-line-term">Adversarial Audio</span>
+        <span class="lex-line-def">perturbations engineered into the inaudible band that steer a model&#x27;s behavior while a human hears nothing wrong. The residual — what the model…</span>
       </a>
       <a class="lex-line" href="agricultural-evolution.html">
         <span class="lex-line-term">Agricultural Evolution</span>
@@ -1165,6 +1405,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="ai-investment-shift.html">
         <span class="lex-line-term">AI Investment Shift</span>
         <span class="lex-line-def">Focus moving from hardware (chips) to software companies in the AI sector.</span>
+      </a>
+      <a class="lex-line" href="ai-isn-t-automating-tasks.html">
+        <span class="lex-line-term">AI isn&#x27;t automating tasks</span>
+        <span class="lex-line-def">it&#x27;s reshaping how minds trained on formal methods relate to their own expertise when the formal methods get automated</span>
       </a>
       <a class="lex-line" href="ai-learning-mechanisms.html">
         <span class="lex-line-term">AI Learning Mechanisms</span>
@@ -1322,6 +1566,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Boltzmann Brain</span>
         <span class="lex-line-def">a thought experiment in statistical physics proposing that in a sufficiently large universe, disembodied conscious observers could form by chance,…</span>
       </a>
+      <a class="lex-line" href="brain-plasticity.html">
+        <span class="lex-line-term">Brain Plasticity</span>
+        <span class="lex-line-def">Adult neurological development</span>
+      </a>
       <a class="lex-line" href="brand-identity-evolution.html">
         <span class="lex-line-term">Brand Identity Evolution</span>
         <span class="lex-line-def">How established brands like Twix adapt their visual identities for modern markets.</span>
@@ -1394,6 +1642,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Cloud Computing Security</span>
         <span class="lex-line-def">The growing importance of robust security in multi-cloud environments</span>
       </a>
+      <a class="lex-line" href="cognitive-displacement-vs-labor-displacement.html">
+        <span class="lex-line-term">Cognitive Displacement (vs. Labor Displacement)</span>
+        <span class="lex-line-def">The restructuring of human cognition by AI systems, as distinct from the replacement of human labor. Baillie Gifford&#x27;s framing</span>
+      </a>
       <a class="lex-line" href="cognitive-offloading-and-fatigue.html">
         <span class="lex-line-term">Cognitive Offloading and Fatigue</span>
         <span class="lex-line-def">How patterns of AI use shape whether cognition is augmented or depleted</span>
@@ -1410,6 +1662,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Commercial Real Estate Crisis</span>
         <span class="lex-line-def">The potential crisis in the commercial real estate sector due to excessive supply, declining property values, and mounting debt, which could have…</span>
       </a>
+      <a class="lex-line" href="compute-as-the-real-oil.html">
+        <span class="lex-line-term">Compute as the Real Oil</span>
+        <span class="lex-line-def">the essay&#x27;s relocation of the metaphor. The finite, rival, consumed, smuggled, export-controlled resource isn&#x27;t data — it&#x27;s the chips and the power,…</span>
+      </a>
       <a class="lex-line" href="computing-energy-efficiency.html">
         <span class="lex-line-term">Computing Energy Efficiency</span>
         <span class="lex-line-def">Analog alternatives to traditional digital processing</span>
@@ -1417,6 +1673,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="computing-security-fundamentals.html">
         <span class="lex-line-term">Computing Security Fundamentals</span>
         <span class="lex-line-def">Unresolvable vulnerabilities in systems</span>
+      </a>
+      <a class="lex-line" href="conceptualism-bessis.html">
+        <span class="lex-line-term">Conceptualism (Bessis)</span>
+        <span class="lex-line-def">David Bessis&#x27;s definition of mathematics as a cognitive practice — a technique for transforming intuition — rather than the study of Platonic objects…</span>
       </a>
       <a class="lex-line" href="consciousness-and-technology.html">
         <span class="lex-line-term">Consciousness and Technology</span>
@@ -1449,6 +1709,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="consumer-technology-optimization.html">
         <span class="lex-line-term">Consumer Technology Optimization</span>
         <span class="lex-line-def">Awareness gaps in networking equipment selection</span>
+      </a>
+      <a class="lex-line" href="content-control.html">
+        <span class="lex-line-term">Content Control</span>
+        <span class="lex-line-def">Media censorship evolution</span>
       </a>
       <a class="lex-line" href="convergence-of-streaming.html">
         <span class="lex-line-term">Convergence of Streaming</span>
@@ -1582,13 +1846,13 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Data Privacy Concerns</span>
         <span class="lex-line-def">Web inventor&#x27;s critique of user exploitation</span>
       </a>
+      <a class="lex-line" href="data-storage-revolution.html">
+        <span class="lex-line-term">Data Storage Revolution</span>
+        <span class="lex-line-def">Molecular-level breakthroughs</span>
+      </a>
       <a class="lex-line" href="decision-making-with-cognitive-strategies.html">
         <span class="lex-line-term">Decision Making with Cognitive Strategies</span>
         <span class="lex-line-def">Approaching problem-solving and decision-making by applying a combination of statistical, interactive, chaotic, and complex thought models for bes t…</span>
-      </a>
-      <a class="lex-line" href="defense-technology.html">
-        <span class="lex-line-term">Defense Technology</span>
-        <span class="lex-line-def">Military spending trends and technological development</span>
       </a>
       <a class="lex-line" href="deferred-complexity.html">
         <span class="lex-line-term">Deferred Complexity</span>
@@ -1682,6 +1946,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Electric Vehicle Market Competition</span>
         <span class="lex-line-def">BYD&#x27;s rise as a challenger to Tesla&#x27;s dominance.</span>
       </a>
+      <a class="lex-line" href="electrodermal-affective-sensing.html">
+        <span class="lex-line-term">Electrodermal / Affective Sensing</span>
+        <span class="lex-line-def">measuring involuntary physiological arousal (skin conductance, sweat) as a proxy for emotional state. The frontier of data capture precisely because…</span>
+      </a>
+      <a class="lex-line" href="emergent-laws.html">
+        <span class="lex-line-term">Emergent Laws</span>
+        <span class="lex-line-def">João Magueijo&#x27;s cosmological proposal that the laws of physics are not eternal axioms but properties that crystallized from prior conditions —…</span>
+      </a>
       <a class="lex-line" href="emerging-design-trends.html">
         <span class="lex-line-term">Emerging Design Trends</span>
         <span class="lex-line-def">The unveiling of upcoming design trends for 2025, indicating shifts in visual and user experience preferences.</span>
@@ -1750,6 +2022,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Eugenics Crusade</span>
         <span class="lex-line-def">The dark history of the American eugenics movement and its impact on society.</span>
       </a>
+      <a class="lex-line" href="euv-lithography-extreme-ultraviolet.html">
+        <span class="lex-line-term">EUV Lithography (Extreme Ultraviolet)</span>
+        <span class="lex-line-def">the process behind &quot;the world&#x27;s most important machine,&quot; the single class of tool that prints the most advanced chips. 5 The physical chokepoint…</span>
+      </a>
       <a class="lex-line" href="evolution-and-altruism.html">
         <span class="lex-line-term">Evolution and Altruism</span>
         <span class="lex-line-def">Hamilton&#x27;s rule in complex systems</span>
@@ -1809,6 +2085,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="generational-skill-shifts.html">
         <span class="lex-line-term">Generational Skill Shifts</span>
         <span class="lex-line-def">The changing landscape of skills across generations, such as the decline in handwriting among Gen Z.</span>
+      </a>
+      <a class="lex-line" href="generative-ai-animation-netflix-inkubator.html">
+        <span class="lex-line-term">Generative-AI Animation (Netflix INKubator)</span>
+        <span class="lex-line-def">the application of generative models to produce animated content at near-feature quality, automating the reproducible labor of animation while…</span>
       </a>
       <a class="lex-line" href="geopolitical-power-transitions.html">
         <span class="lex-line-term">Geopolitical Power Transitions</span>
@@ -1918,6 +2198,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Infrastructure Inscription</span>
         <span class="lex-line-def">Building capability into physical systems</span>
       </a>
+      <a class="lex-line" href="innovation-barriers.html">
+        <span class="lex-line-term">Innovation Barriers</span>
+        <span class="lex-line-def">Organizational challenges and solutions</span>
+      </a>
       <a class="lex-line" href="innovative-filmmaking-techniques.html">
         <span class="lex-line-term">Innovative Filmmaking Techniques</span>
         <span class="lex-line-def">RC cars in filmmaking</span>
@@ -1942,6 +2226,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">International Tech Expansion</span>
         <span class="lex-line-def">Global growth of tech companies</span>
       </a>
+      <a class="lex-line" href="internet-architecture.html">
+        <span class="lex-line-term">Internet Architecture</span>
+        <span class="lex-line-def">AI access modifications</span>
+      </a>
       <a class="lex-line" href="internet-control-systems.html">
         <span class="lex-line-term">Internet Control Systems</span>
         <span class="lex-line-def">Satellite communication disruption</span>
@@ -1953,6 +2241,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="knowledge-models.html">
         <span class="lex-line-term">Knowledge Models</span>
         <span class="lex-line-def">Reality interpretation frameworks</span>
+      </a>
+      <a class="lex-line" href="labor-to-capital-substitution.html">
+        <span class="lex-line-term">Labor-to-Capital Substitution</span>
+        <span class="lex-line-def">the reframing of mass layoffs not as cost-cutting but as conversion — payroll turned into compute. The bet is that the GPU returns more than the…</span>
       </a>
       <a class="lex-line" href="land-ownership-concentration.html">
         <span class="lex-line-term">Land Ownership Concentration</span>
@@ -2013,6 +2305,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="manufacturing-and-trade-policies.html">
         <span class="lex-line-term">Manufacturing and Trade Policies</span>
         <span class="lex-line-def">New perspectives on global economic challenges</span>
+      </a>
+      <a class="lex-line" href="manufacturing-automation.html">
+        <span class="lex-line-term">Manufacturing Automation</span>
+        <span class="lex-line-def">Drone deployment in industry</span>
       </a>
       <a class="lex-line" href="manufacturing-renaissance.html">
         <span class="lex-line-term">Manufacturing Renaissance</span>
@@ -2114,6 +2410,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Mental Health Research</span>
         <span class="lex-line-def">Brain model advancements</span>
       </a>
+      <a class="lex-line" href="mental-health-technology.html">
+        <span class="lex-line-term">Mental Health Technology</span>
+        <span class="lex-line-def">Digital behavior monitoring and analysis</span>
+      </a>
       <a class="lex-line" href="metadata-threat.html">
         <span class="lex-line-term">Metadata Threat</span>
         <span class="lex-line-def">Information extraction without content access</span>
@@ -2214,6 +2514,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Newton&#x27;s Laws Reexamined</span>
         <span class="lex-line-def">New insights into historical misinterpretation of fundamental physics principles.</span>
       </a>
+      <a class="lex-line" href="non-line-of-sight-nlos-imaging.html">
+        <span class="lex-line-term">Non-Line-of-Sight (NLOS) Imaging</span>
+        <span class="lex-line-def">reconstructing scenes hidden from direct view by analyzing indirect, bounced light. Emerging on low-cost smartphone-grade lidar. A formal method for…</span>
+      </a>
+      <a class="lex-line" href="non-rivalry.html">
+        <span class="lex-line-term">Non-Rivalry</span>
+        <span class="lex-line-def">the property that many parties can use a thing at once without depleting it. Data is non-rival; oil is rival. This is the single word the slogan…</span>
+      </a>
       <a class="lex-line" href="office-design-and-its-impact-on-worker-performance-and-well.html">
         <span class="lex-line-term">Office design and its impact on worker performance and well</span>
         <span class="lex-line-def">being.</span>
@@ -2282,6 +2590,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Personalization and Customization through 3D Printing and AI</span>
         <span class="lex-line-def">in motors and educational content</span>
       </a>
+      <a class="lex-line" href="photometric-redshift-rubin-lsst.html">
+        <span class="lex-line-term">Photometric Redshift (Rubin / LSST)</span>
+        <span class="lex-line-def">a technique for estimating an astronomical object&#x27;s distance from how far its light has stretched toward red. Rubin will use it to map roughly four…</span>
+      </a>
       <a class="lex-line" href="photonic-communication.html">
         <span class="lex-line-term">Photonic Communication</span>
         <span class="lex-line-def">Femtosecond laser technology</span>
@@ -2338,6 +2650,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Private Ownership of Gaming Companies</span>
         <span class="lex-line-def">Saudi influence in entertainment industry</span>
       </a>
+      <a class="lex-line" href="proof-as-scaffolding.html">
+        <span class="lex-line-term">Proof-as-Scaffolding</span>
+        <span class="lex-line-def">Bessis&#x27;s thesis that a formal proof is the residue of intuitive understanding, not its source — evidence that something was understood, not the…</span>
+      </a>
+      <a class="lex-line" href="proof-as-waste-product.html">
+        <span class="lex-line-term">Proof-as-Waste-Product</span>
+        <span class="lex-line-def">Bessis&#x27;s thesis that mathematical proof is the residue of intuitive understanding, not its source. Proof is to mathematics what a receipt is to a…</span>
+      </a>
       <a class="lex-line" href="pure-mathematics.html">
         <span class="lex-line-term">Pure Mathematics</span>
         <span class="lex-line-def">Century-old formula relevance</span>
@@ -2370,6 +2690,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Reality Simulation Questions</span>
         <span class="lex-line-def">Mathematical evidence against universe simulation</span>
       </a>
+      <a class="lex-line" href="recursive-self-improvement-rsi.html">
+        <span class="lex-line-term">Recursive Self-Improvement (RSI)</span>
+        <span class="lex-line-def">the hypothesized capacity of an AI system to improve its own design in a compounding loop. Currently emerging only with a human still in the loop —…</span>
+      </a>
       <a class="lex-line" href="redundancy-elimination.html">
         <span class="lex-line-term">Redundancy Elimination</span>
         <span class="lex-line-def">Trading safety for speed and efficiency</span>
@@ -2397,6 +2721,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="rlhf-manipulator-selection.html">
         <span class="lex-line-term">RLHF Manipulator Selection</span>
         <span class="lex-line-def">RLHF rewards whatever generates positive human ratings in the short term. Short-term ratings favor flattery, agreement, and mirroring over pushback…</span>
+      </a>
+      <a class="lex-line" href="robotic-intelligence.html">
+        <span class="lex-line-term">Robotic Intelligence</span>
+        <span class="lex-line-def">Physical capability enhancement</span>
       </a>
       <a class="lex-line" href="robotics-control.html">
         <span class="lex-line-term">Robotics Control</span>
@@ -2466,6 +2794,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Space Access Innovation</span>
         <span class="lex-line-def">Revolutionary satellite deployment methods</span>
       </a>
+      <a class="lex-line" href="space-observation.html">
+        <span class="lex-line-term">Space Observation</span>
+        <span class="lex-line-def">Confirmation of Einstein&#x27;s theories</span>
+      </a>
       <a class="lex-line" href="space-pollution.html">
         <span class="lex-line-term">Space Pollution</span>
         <span class="lex-line-def">Satellite interference with astronomical observations</span>
@@ -2473,6 +2805,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="space-technology-race.html">
         <span class="lex-line-term">Space Technology Race</span>
         <span class="lex-line-def">AI processing in orbit</span>
+      </a>
+      <a class="lex-line" href="spintronics.html">
+        <span class="lex-line-term">Spintronics</span>
+        <span class="lex-line-def">electronics that encode information in electron spin rather than charge. The laser-driven device referenced this week switches in ~40 picoseconds…</span>
       </a>
       <a class="lex-line" href="spiralism-gpt-4o-april-august-2025.html">
         <span class="lex-line-term">Spiralism (GPT-4o, April–August 2025)</span>
@@ -2614,6 +2950,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Temporal Perception Variance</span>
         <span class="lex-line-def">How metabolic rate determines time experience across species—and what this implies for machine cognition</span>
       </a>
+      <a class="lex-line" href="the-automation-of-the-formal-layer.html">
+        <span class="lex-line-term">The Automation of the Formal Layer</span>
+        <span class="lex-line-def">this week&#x27;s frame — that every domain whose reproducible, rule-governed component can be automated is being automated (animation, AI research, much…</span>
+      </a>
       <a class="lex-line" href="the-capital-formation-gap.html">
         <span class="lex-line-term">The Capital Formation Gap</span>
         <span class="lex-line-def">Why Canada&#x27;s innovation output consistently gets commercialized elsewhere, and whether the satellite sovereignty move signals a shift in how the…</span>
@@ -2625,6 +2965,22 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="the-corpus-selection-problem.html">
         <span class="lex-line-term">The Corpus Selection Problem</span>
         <span class="lex-line-def">LLMs weren&#x27;t trained on human knowledge — they were trained on human output. The selection criterion was propagation. What propagates is weaponry:…</span>
+      </a>
+      <a class="lex-line" href="the-formal-layer-vs-the-intuitive-layer.html">
+        <span class="lex-line-term">The Formal Layer vs. the Intuitive Layer</span>
+        <span class="lex-line-def">the essay&#x27;s central distinction. The formal layer is machine-checkable derivation; the intuitive layer is human meaning- making. They are usually…</span>
+      </a>
+      <a class="lex-line" href="the-formalism-trap.html">
+        <span class="lex-line-term">The Formalism Trap</span>
+        <span class="lex-line-def">The tendency to mistake the record of understanding for understanding itself. From Euclid&#x27;s axioms to peer review to LLM benchmarks — the proof…</span>
+      </a>
+      <a class="lex-line" href="the-leash.html">
+        <span class="lex-line-term">The Leash</span>
+        <span class="lex-line-def">a dependency embedded inside an apparent gift, unpriced at the moment of acceptance. OpenAI&#x27;s $2M token grants to YC startups are distribution…</span>
+      </a>
+      <a class="lex-line" href="the-opacity-test.html">
+        <span class="lex-line-term">The Opacity Test</span>
+        <span class="lex-line-def">the falsification move — a true commodity grows transparent institutions (public registries, standard units, price discovery), so the data economy&#x27;s…</span>
       </a>
       <a class="lex-line" href="the-outsider-advantage.html">
         <span class="lex-line-term">The Outsider Advantage</span>
@@ -2649,6 +3005,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="the-second-law-as-design-principle.html">
         <span class="lex-line-term">The Second Law as Design Principle</span>
         <span class="lex-line-def">Whether the failure of AI systems, institutions, and strategies optimized for controlled conditions is a technical problem or a philosophical one —…</span>
+      </a>
+      <a class="lex-line" href="the-verification-paradox.html">
+        <span class="lex-line-term">The Verification Paradox</span>
+        <span class="lex-line-def">The gap between what can be formally proven and what can be intuitively understood. This week&#x27;s central thesis: Tooby-Smith proved formalization…</span>
       </a>
       <a class="lex-line" href="theoretical-breakthroughs.html">
         <span class="lex-line-term">Theoretical Breakthroughs</span>
@@ -2694,6 +3054,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Unreal Game Creation</span>
         <span class="lex-line-def">Creating a game in Unreal Engine in a short period with no prior experience.</span>
       </a>
+      <a class="lex-line" href="urban-development.html">
+        <span class="lex-line-term">Urban Development</span>
+        <span class="lex-line-def">Smart city surveillance systems</span>
+      </a>
       <a class="lex-line" href="urban-manufacturing-renaissance.html">
         <span class="lex-line-term">Urban Manufacturing Renaissance</span>
         <span class="lex-line-def">Bringing high-tech production to city centers</span>
@@ -2722,6 +3086,14 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
         <span class="lex-line-term">Venture Capital Trends</span>
         <span class="lex-line-def">The shift in solo VC strategies, favoring deal-by-deal investing over traditional fund-raising models.</span>
       </a>
+      <a class="lex-line" href="verification-at-scale.html">
+        <span class="lex-line-term">Verification at Scale</span>
+        <span class="lex-line-def">the industrialization of the checking layer, as in Rubin&#x27;s seven-million-alerts-a-night survey. The proof can now be produced faster than humans can…</span>
+      </a>
+      <a class="lex-line" href="verification-theater.html">
+        <span class="lex-line-term">Verification Theater</span>
+        <span class="lex-line-def">The deployment of formal compliance structures — privacy policies, consent dialogs, audit trails — that satisfy the proof requirement without…</span>
+      </a>
       <a class="lex-line" href="vpn-security-concerns.html">
         <span class="lex-line-term">VPN Security Concerns</span>
         <span class="lex-line-def">Evolving landscape of online privacy protection.</span>
@@ -2741,6 +3113,10 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classL
       <a class="lex-line" href="weather-commercialization.html">
         <span class="lex-line-term">Weather Commercialization</span>
         <span class="lex-line-def">Data as infrastructure for business decisions</span>
+      </a>
+      <a class="lex-line" href="wifi-sensing-device-free-localization.html">
+        <span class="lex-line-term">WiFi Sensing (Device-Free Localization)</span>
+        <span class="lex-line-def">identifying and tracking people by how their bodies perturb ambient radio waves — no device, no consent surface. The body itself becomes the captured…</span>
       </a>
       <a class="lex-line" href="wireless-communication-stability.html">
         <span class="lex-line-term">Wireless Communication Stability</span>

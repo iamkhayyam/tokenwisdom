@@ -2611,6 +2611,9 @@ def site_top(from_dir="root", theme_toggle=False):
       <span class="ham"><span></span><span></span><span></span></span>
       <span class="mtxt">Menu</span>
     </button>
+    <button class="site-top-search" data-tws-open aria-label="Search" aria-controls="tws">
+      <span aria-hidden="true">⌕</span><span class="tws-lbl">Search</span><span class="tws-key" aria-hidden="true">⌘K</span>
+    </button>
     {theme_btn}
     <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
   </div>
@@ -2695,6 +2698,112 @@ def page_shell(title, body, css_path, from_dir="root", theme_toggle=False, noind
     head = head_tag(title, prefix=_prefix(from_dir), noindex=noindex, description=description,
                     og_url=og_url, og_image=og_image, theme=theme).format(css_path=css_path)
     return head + site_top(from_dir, theme_toggle=theme_toggle) + body
+
+
+# ============================================================
+# SEARCH
+# ============================================================
+
+def render_search(posts_count, tags_count, years_span, top_tags, terms_count,
+                  indexed_count):
+    """docs/search.html — the permanent home of search, so a result set can be
+    linked, bookmarked and shared (/search.html?q=quantum).
+
+    The ⌘K overlay is the fast path; this is the deep one — same engine and the
+    same docs/search/*.json, just a bigger result budget and a URL that survives
+    being sent to someone. Every page already loads assets/search.js via
+    search_overlay(), so this page adds no second copy of the engine."""
+    body = f"""
+<style>
+.sp-hero{{max-width:var(--max-wide);margin:0 auto;padding:44px 28px 0}}
+.sp-eyebrow{{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem}}
+.sp-h1{{font-family:var(--display);font-size:clamp(2.6rem,6vw,4.4rem);line-height:.95;letter-spacing:-.03em;color:var(--ink);margin-bottom:.7rem}}
+.sp-lede{{font-family:var(--serif);font-size:1.05rem;line-height:1.55;color:var(--ink-muted);max-width:62ch}}
+.sp-box{{display:flex;align-items:center;gap:.8rem;margin:1.8rem 0 .5rem;border:2px solid var(--ink);background:var(--tws-bg);padding:14px 18px}}
+.sp-box .tws-glyph{{font-size:1.3rem}}
+.sp-in{{flex:1;border:none;outline:none;background:transparent;color:var(--ink);font-family:var(--sans);font-size:1.25rem;font-weight:500;letter-spacing:-.015em;min-width:0}}
+.sp-in::placeholder{{color:var(--ink-faint);font-weight:400}}
+.sp-in::-webkit-search-cancel-button{{display:none}}
+.sp-stat{{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);min-height:1.2em}}
+.sp-results{{max-width:var(--max-wide);margin:1.4rem auto 4rem;padding:0 28px}}
+.sp-results .tws-hit{{padding-left:0;padding-right:0}}
+.sp-results .tws-grouphead{{padding-left:0;padding-right:0}}
+.sp-results .tws-more,.sp-results .tws-status{{padding-left:0;padding-right:0}}
+.sp-results .tws-hit:hover,.sp-results .tws-hit.is-sel{{background:var(--tws-wash)}}
+.sp-noscript{{max-width:var(--max-wide);margin:0 auto;padding:1.4rem 28px;font-family:var(--serif);color:var(--ink-muted)}}
+.sp-noscript a{{color:var(--accent);border-bottom:1px solid var(--tws-rule)}}
+</style>
+<div class="sp-hero">
+  <div class="sp-eyebrow">Search</div>
+  <h1 class="sp-h1">Find anything</h1>
+  <p class="sp-lede">{terms_count:,} Lexicon terms and the full text of {indexed_count} published editions and essays, indexed locally and searched in your browser. No third party sees what you look for.</p>
+  <div class="sp-box">
+    <span class="tws-glyph" aria-hidden="true">⌕</span>
+    <input id="sp-in" class="sp-in" type="search" autocomplete="off" autocorrect="off" spellcheck="false"
+           placeholder="Try a term, a title, or a phrase…" aria-label="Search Token Wisdom">
+  </div>
+  <div class="sp-stat" id="sp-stat"></div>
+</div>
+<noscript>
+  <div class="sp-noscript">Search runs in your browser, so it needs JavaScript. Without it, the
+  <a href="archive.html">Archive</a> lists every edition by year and the
+  <a href="lexicon/index.html">Lexicon</a> lists every term by category.</div>
+</noscript>
+<div class="sp-results" id="sp-results"></div>
+<script>
+window.addEventListener('DOMContentLoaded', function () {{
+  var input = document.getElementById('sp-in'),
+      out = document.getElementById('sp-results'),
+      stat = document.getElementById('sp-stat');
+  var timer = null, last = null;
+
+  function run(push) {{
+    var q = input.value.trim();
+    if (q.length < 2) {{
+      out.innerHTML = ''; stat.textContent = TWSearch.full() ? '' : 'Indexing…';
+      if (push) sync('');
+      return;
+    }}
+    if (!TWSearch.ready()) {{ stat.textContent = 'Loading the index…'; return; }}
+    var res = TWSearch.search(q);
+    var r = TWSearch.render(res, {{ limit: 50 }});
+    out.innerHTML = r.html;
+    stat.textContent = r.count
+      ? (res.terms.length + res.posts.length) + ' results'
+        + (res.full ? '' : ' so far — full text still loading')
+      : 'No results';
+    if (push) sync(q);
+  }}
+
+  // Keep the URL shareable without stacking a history entry per keystroke.
+  function sync(q) {{
+    var url = location.pathname + (q ? '?q=' + encodeURIComponent(q) : '');
+    if (url !== last) {{ history.replaceState(null, '', url); last = url; }}
+  }}
+
+  input.addEventListener('input', function () {{
+    clearTimeout(timer); timer = setTimeout(function () {{ run(true); }}, 110);
+  }});
+  input.addEventListener('keydown', function (e) {{
+    if (e.key === 'Enter') {{ e.preventDefault(); clearTimeout(timer); run(true); }}
+  }});
+
+  var q0 = new URLSearchParams(location.search).get('q') || '';
+  if (q0) input.value = q0;
+  input.focus();
+  stat.textContent = 'Loading the index…';
+  TWSearch.load('').then(function () {{ run(false); }});
+  // Re-run once full text lands so an early query silently gains body matches.
+  TWSearch.onUpgrade(function () {{ if (input.value.trim()) run(false); }});
+}});
+</script>
+"""
+    page = page_shell(
+        "Search", body, "style.css", from_dir="root",
+        description=f"Search {terms_count:,} Lexicon terms and the full text of "
+                    f"{indexed_count} Token Wisdom editions and essays.")
+    page += colophon(posts_count, tags_count, years_span, top_tags, from_dir="root")
+    return page
 
 
 # ============================================================
@@ -4632,10 +4741,52 @@ def main():
         nxt = same[idx + 1] if idx < len(same) - 1 else None
         return prev, nxt
 
-    # Clean output
-    if DOCS_DIR.exists():
-        shutil.rmtree(DOCS_DIR)
-    DOCS_DIR.mkdir()
+    # Clean output.
+    #
+    # docs/social/ is carried across the wipe instead of being destroyed with
+    # everything else. The cards are rendered by a separate script
+    # (make_social_cards.py, headless Chrome, minutes per run) and committed —
+    # they are *source*, not build output, and this is the only directory under
+    # docs/ that a rebuild cannot reproduce.
+    #
+    # The ordering matters and is the whole point: post_social_card_url() picks
+    # each post's og:image by testing whether docs/social/posts/<slug>.png is on
+    # disk *at render time*. With a plain rmtree the cards were always absent
+    # during rendering, so all 795 card references silently fell back to
+    # og-default.png on every single build — locally and in the Ghost rebuild
+    # workflow alike. Moving them aside and putting them back before any page is
+    # rendered is what keeps per-post OG images correct.
+    social_dir = DOCS_DIR / "social"
+    social_stash = BACKUP_DIR / ".social_stash"
+
+    # Recover first. If an earlier run died in the narrow window between the
+    # move-out and the move-back, the cards are sitting in the stash and docs/
+    # has none — take the stash as the source of truth rather than deleting it.
+    if social_stash.exists() and not social_dir.exists():
+        DOCS_DIR.mkdir(exist_ok=True)
+        shutil.move(str(social_stash), str(social_dir))
+        print("  recovered social cards from an interrupted run")
+    elif social_stash.exists():
+        shutil.rmtree(social_stash)  # stale; docs/social/ is authoritative
+
+    stashed = False
+    if social_dir.exists():
+        shutil.move(str(social_dir), str(social_stash))
+        stashed = True
+
+    try:
+        if DOCS_DIR.exists():
+            shutil.rmtree(DOCS_DIR)
+        DOCS_DIR.mkdir()
+    finally:
+        # Always put them back, even if the wipe raised — never strand the one
+        # directory here that a rebuild can't regenerate.
+        if stashed:
+            DOCS_DIR.mkdir(exist_ok=True)
+            shutil.move(str(social_stash), str(social_dir))
+            n_cards = sum(1 for f in social_dir.rglob("*") if f.is_file())
+            print(f"  {n_cards} social cards preserved across rebuild")
+
     (DOCS_DIR / "posts").mkdir()
     (DOCS_DIR / "tags").mkdir()
 
@@ -4784,7 +4935,7 @@ def main():
         }, f, indent=2)
     # Community layer client (highlights / notes / responses) — source lives in
     # assets/ (outside docs/, which is wiped on every build).
-    for asset in ("annotate.js", "annotate.css", "transitions.js"):
+    for asset in ("annotate.js", "annotate.css", "transitions.js", "search.js"):
         src_asset = BACKUP_DIR / "assets" / asset
         if src_asset.exists():
             shutil.copy(src_asset, assets_dir / asset)
@@ -4796,6 +4947,18 @@ def main():
     import mockup_home
     mockup_home.build("index.html")
     mockup_home.build_featured("featured.html")
+
+    # Search — our own index, built from the same JSON as everything else and
+    # served as static files. Must run before the search page so the page can
+    # quote real corpus totals. See search_index.py.
+    print("Search index…")
+    import search_index
+    search_stats = search_index.build(posts=posts, out_dir=DOCS_DIR / "search")
+
+    print("Search page…")
+    with open(DOCS_DIR / "search.html", "w") as f:
+        f.write(render_search(posts_count, tags_count, years_span, top_tags,
+                              search_stats["terms"], search_stats["posts"]))
 
     # 404 — Cloudflare Pages picks up docs/404.html for every missing route
     print("404 page…")
@@ -4816,15 +4979,11 @@ def main():
     except Exception as e:  # noqa: BLE001 — distribution must never fail the build
         print(f"  [WARN] Zernio distribution skipped: {e}")
 
-    # Search index (Algolia) — push lexicon + public posts to the two TW indices.
-    # Dry-runs until ALGOLIA_APP_ID + ALGOLIA_ADMIN_API_KEY are set. Never allowed
-    # to break the build. See algolia_index.py.
-    print("Search index (Algolia)…")
-    try:
-        import algolia_index
-        algolia_index.main()
-    except Exception as e:  # noqa: BLE001 — indexing must never fail the build
-        print(f"  [WARN] Algolia indexing skipped: {e}")
+    # Site search is ours now — search_index.py above builds docs/search/*.json
+    # and assets/search.js queries it in the browser. algolia_index.py is kept
+    # on disk but no longer called: it was never run live (no credentials were
+    # ever set), and a hosted index would now duplicate the local one. Wire it
+    # back in here only if the corpus outgrows a client-side index.
 
     html_count = len(list(DOCS_DIR.glob("**/*.html")))
     print()

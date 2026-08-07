@@ -418,6 +418,7 @@ SEARCH_JS = r'''
 GHOST_URL = os.environ.get("GHOST_URL", "https://ghost-production-198e.up.railway.app")
 
 NAV = [
+    ("search",      "Search",      "search.html"),
     ("archive",     "Archive",     "archive.html"),
     ("topics",      "Topics",      "tags/index.html"),
     ("lexicon",     "Lexicon",     "lexicon/index.html"),
@@ -431,6 +432,7 @@ NAV = [
 
 # Short descriptor revealed on hover in the full-page takeover
 NAV_DESC = {
+    "search":      "Find anything, instantly",
     "archive":     "Every edition, dated",
     "topics":      "Browse by idea",
     "lexicon":     "The working vocabulary",
@@ -512,6 +514,79 @@ html.nav-open .nto-close-glyph{opacity:1;transition:opacity .5s ease .5s,color .
   .nto-row,html.nav-open .nto-row,.nto-foot,html.nav-open .nto-foot{transform:none;transition:opacity .2s ease;transition-delay:0s}
   html.nav-open .nto-close-glyph{transition:opacity .2s ease;transform:none}
 }
+
+/* ===== SEARCH ===== */
+/* Deliberately a light instrument panel, not a second dark takeover — the nav
+   overlay is for browsing, this is for aiming. Shared by the ⌘K overlay and
+   search.html; the .tws-* result classes are emitted by assets/search.js.
+
+   This block ships into two stylesheets with different token names — tw_theme's
+   (--bg/--rule) and generate_site's paper palette (--paper/--paper-rule) — so
+   every surface color resolves through a --tws-* alias with a fallback chain
+   instead of assuming either one. Nothing here needs per-site string patching. */
+:root{
+  --tws-bg:var(--bg,var(--paper,#faf8f4));
+  --tws-rule:var(--rule,var(--paper-rule,#e6e2d9));
+  --tws-wash:color-mix(in srgb,var(--accent) 12%,transparent);
+  --tws-mark:color-mix(in srgb,var(--accent) 24%,transparent);
+  /* Fixed dark, NOT derived from --ink. Post pages run a dark theme where
+     --ink inverts to near-white, which turned the scrim into a white wash and
+     the drop shadow into a glow. A scrim is dark in both themes by definition. */
+  --tws-shadow:#0a0907;
+}
+.site-top-search{display:inline-flex;align-items:center;gap:.55em;height:34px;padding:0 12px;background:transparent;border:1px solid var(--tws-rule);cursor:pointer;color:var(--ink-muted);font-family:var(--mono);font-weight:300;font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;-webkit-tap-highlight-color:transparent;transition:border-color .15s,color .15s}
+.site-top-search:hover{border-color:var(--ink);color:var(--accent)}
+.site-top-search .tws-key{font-size:.62rem;letter-spacing:.06em;color:var(--ink-faint);border:1px solid var(--tws-rule);padding:.1em .4em;line-height:1}
+@media(max-width:720px){.site-top-search .tws-lbl,.site-top-search .tws-key{display:none}.site-top-search{padding:0 10px}}
+
+html.tws-open{overflow:hidden}
+.tws-scrim{position:fixed;inset:0;z-index:210;background:color-mix(in srgb,var(--tws-shadow) 55%,transparent);backdrop-filter:blur(4px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility 0s linear .18s}
+html.tws-open .tws-scrim{opacity:1;visibility:visible;pointer-events:auto;transition:opacity .18s ease}
+.tws-panel{position:relative;max-width:760px;margin:min(9vh,88px) auto 0;background:var(--tws-bg);border:2px solid var(--ink);box-shadow:0 24px 70px -20px color-mix(in srgb,var(--tws-shadow) 45%,transparent);display:flex;flex-direction:column;max-height:min(76vh,720px);transform:translateY(-10px);opacity:0;transition:transform .28s cubic-bezier(.16,1,.3,1),opacity .18s ease}
+html.tws-open .tws-panel{transform:none;opacity:1}
+@media(max-width:820px){.tws-panel{margin:0;max-width:none;height:100%;max-height:none;border:none;border-bottom:2px solid var(--ink)}}
+
+.tws-inputrow{display:flex;align-items:center;gap:.7rem;padding:14px 18px;border-bottom:2px solid var(--ink);flex-shrink:0}
+.tws-glyph{font-size:1.1rem;color:var(--accent);line-height:1}
+.tws-input{flex:1;border:none;outline:none;background:transparent;color:var(--ink);font-family:var(--sans);font-size:1.12rem;font-weight:500;letter-spacing:-.01em;min-width:0}
+.tws-input::placeholder{color:var(--ink-faint);font-weight:400}
+.tws-input::-webkit-search-cancel-button{display:none}
+.tws-esc{font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);border:1px solid var(--tws-rule);padding:.25em .5em;background:transparent;cursor:pointer;flex-shrink:0}
+.tws-esc:hover{color:var(--accent);border-color:var(--accent)}
+
+.tws-results{overflow-y:auto;overscroll-behavior:contain;flex:1}
+.tws-group + .tws-group{border-top:1px solid var(--tws-rule)}
+.tws-grouphead{position:sticky;top:0;z-index:1;display:flex;align-items:baseline;gap:.6em;padding:.7rem 18px .45rem;background:color-mix(in oklch,var(--tws-bg) 94%,transparent);backdrop-filter:blur(6px);font-family:var(--mono);font-weight:300;font-size:.6rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.tws-grouphead .tws-count{color:var(--ink-faint)}
+.tws-hit{display:flex;align-items:baseline;gap:1rem;padding:.6rem 18px;border-top:1px solid var(--tws-rule);color:var(--ink);scroll-margin:44px}
+.tws-group .tws-hit:first-of-type{border-top:none}
+.tws-hit-main{flex:1;min-width:0;display:flex;flex-direction:column;gap:.16rem}
+.tws-hit-title{font-family:var(--sans);font-weight:600;font-size:.95rem;line-height:1.3}
+.tws-term .tws-hit-title{font-family:var(--mono);font-weight:400;letter-spacing:.01em}
+.tws-hit-sub{font-family:var(--serif);font-size:.85rem;line-height:1.45;color:var(--ink-muted);overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.tws-hit-meta{font-family:var(--mono);font-size:.58rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-faint);white-space:nowrap;flex-shrink:0}
+.tws-hit:hover,.tws-hit.is-sel{background:var(--tws-wash)}
+.tws-hit.is-sel .tws-hit-title{color:var(--accent-deep)}
+.tws-hit mark{background:var(--tws-mark);color:inherit;padding:0 .08em}
+.tws-more{padding:.5rem 18px .7rem;font-family:var(--mono);font-size:.6rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.tws-more a{color:var(--accent);border-bottom:1px solid var(--tws-rule)}
+.tws-status{padding:.6rem 18px;font-family:var(--mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);border-top:1px solid var(--tws-rule)}
+.tws-empty{padding:2rem 18px;text-align:center}
+.tws-empty p{font-family:var(--serif);color:var(--ink-muted)}
+.tws-empty em{color:var(--ink)}
+.tws-empty-hint{font-family:var(--mono)!important;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)!important;margin-top:.6rem}
+.tws-hint{padding:1.4rem 18px;font-family:var(--serif);font-size:.92rem;line-height:1.6;color:var(--ink-muted)}
+.tws-hint b{font-family:var(--mono);font-weight:400;font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);display:block;margin-bottom:.5rem}
+.tws-seeds{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.9rem}
+.tws-seed{font-family:var(--mono);font-size:.66rem;letter-spacing:.04em;color:var(--ink-muted);border:1px solid var(--tws-rule);padding:.3em .7em;cursor:pointer;background:transparent;transition:border-color .15s,color .15s}
+.tws-seed:hover{border-color:var(--accent);color:var(--accent)}
+.tws-foot{flex-shrink:0;display:flex;align-items:center;gap:1.2rem;padding:.55rem 18px;border-top:2px solid var(--ink);font-family:var(--mono);font-size:.56rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.tws-foot .tws-corpus{margin-left:auto}
+@media(max-width:560px){.tws-foot .tws-keys{display:none}}
+@media(prefers-reduced-motion:reduce){
+  .tws-panel,html.tws-open .tws-panel{transform:none;transition:opacity .15s ease}
+  .tws-scrim{backdrop-filter:none}
+}
 '''
 
 OVERLAY_JS = r'''(function(){
@@ -525,6 +600,111 @@ toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefa
 ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
 document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
 })();'''
+
+
+# Example queries offered on the empty state — real, high-frequency Lexicon
+# entries, so the first thing a reader clicks always lands on something rich.
+SEARCH_SEEDS = ["quantum computing", "AGI", "digital privacy", "consciousness"]
+
+# The ⌘K overlay. Markup + behaviour live here so nav_overlay() can drop them on
+# every page at once (interior pages via masthead(), home via
+# mockup_home.render_masthead()). Ranking and rendering are in assets/search.js;
+# this only owns opening, keys, and selection.
+SEARCH_OVERLAY_JS = r'''(function(){
+var root=document.documentElement;
+var scrim=document.getElementById('tws'),input=document.getElementById('tws-input');
+if(!scrim||!input)return;
+var results=document.getElementById('tws-results'),hint=document.getElementById('tws-hint');
+var corpus=document.getElementById('tws-corpus');
+var open=false,sel=-1,hits=[],last='',timer=null,loaded=false;
+
+function setOpen(o){
+  open=o;root.classList.toggle('tws-open',o);
+  scrim.setAttribute('aria-hidden',o?'false':'true');
+  if(o){
+    if(!loaded){loaded=true;TWSearch.load(window.TW_BASE||'').then(function(){
+      var s=TWSearch.stats();
+      if(s&&corpus)corpus.textContent=s.posts+' pieces · '+s.terms+' terms';
+      if(input.value.trim())run();
+    });
+    TWSearch.onUpgrade(function(){if(input.value.trim())run();});}
+    setTimeout(function(){input.focus();input.select();},60);
+  }else{sel=-1;}
+}
+function run(){
+  var q=input.value.trim();
+  if(q.length<2){results.innerHTML='';results.hidden=true;hint.hidden=false;sel=-1;hits=[];return;}
+  hint.hidden=true;results.hidden=false;
+  if(!TWSearch.ready()){results.innerHTML='<div class="tws-status">Loading the index…</div>';return;}
+  var out=TWSearch.render(TWSearch.search(q),{limit:6,seeAllHref:(window.TW_BASE||'')+'search.html?q='+encodeURIComponent(q)});
+  results.innerHTML=out.html;
+  hits=[].slice.call(results.querySelectorAll('.tws-hit'));
+  sel=hits.length?0:-1;paint();
+}
+function paint(){hits.forEach(function(a,i){a.classList.toggle('is-sel',i===sel);});
+  if(sel>-1&&hits[sel])hits[sel].scrollIntoView({block:'nearest'});}
+function move(d){if(!hits.length)return;sel=(sel+d+hits.length)%hits.length;paint();}
+
+input.addEventListener('input',function(){
+  if(input.value===last)return;last=input.value;
+  clearTimeout(timer);timer=setTimeout(run,90);
+});
+input.addEventListener('keydown',function(e){
+  if(e.key==='ArrowDown'){e.preventDefault();move(1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();move(-1);}
+  else if(e.key==='Enter'){
+    if(sel>-1&&hits[sel]){e.preventDefault();location.href=hits[sel].href;}
+    else if(input.value.trim()){e.preventDefault();
+      location.href=(window.TW_BASE||'')+'search.html?q='+encodeURIComponent(input.value.trim());}
+  }
+});
+document.querySelectorAll('[data-tws-open]').forEach(function(b){
+  b.addEventListener('click',function(e){e.preventDefault();setOpen(true);});});
+scrim.addEventListener('click',function(e){if(e.target===scrim)setOpen(false);});
+scrim.querySelectorAll('[data-tws-close]').forEach(function(b){
+  b.addEventListener('click',function(){setOpen(false);});});
+scrim.querySelectorAll('.tws-seed').forEach(function(b){
+  b.addEventListener('click',function(){input.value=b.textContent;last='';run();input.focus();});});
+document.addEventListener('keydown',function(e){
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();setOpen(!open);return;}
+  if(open&&e.key==='Escape'){e.preventDefault();setOpen(false);return;}
+  if(open)return;
+  // "/" is the other muscle memory, but never steal it mid-typing.
+  var t=e.target,tag=t&&t.tagName;
+  if(e.key==='/'&&tag!=='INPUT'&&tag!=='TEXTAREA'&&!(t&&t.isContentEditable)){
+    e.preventDefault();setOpen(true);}
+});
+})();'''
+
+
+def search_overlay(prefix=""):
+    """⌘K search panel — emitted on every page by nav_overlay()."""
+    seeds = "".join(
+        f'<button type="button" class="tws-seed">{s}</button>' for s in SEARCH_SEEDS)
+    return f'''
+<div class="tws-scrim" id="tws" role="dialog" aria-modal="true" aria-label="Search Token Wisdom" aria-hidden="true">
+  <div class="tws-panel">
+    <div class="tws-inputrow">
+      <span class="tws-glyph" aria-hidden="true">⌕</span>
+      <input id="tws-input" class="tws-input" type="search" autocomplete="off" autocorrect="off"
+             spellcheck="false" placeholder="Search the Lexicon and every edition…" aria-label="Search">
+      <button type="button" class="tws-esc" data-tws-close>Esc</button>
+    </div>
+    <div class="tws-results" id="tws-results" hidden></div>
+    <div class="tws-hint" id="tws-hint">
+      <b>Search everything</b>
+      Every Lexicon term and the full text of every published edition and essay — indexed locally, no third party involved.
+      <div class="tws-seeds">{seeds}</div>
+    </div>
+    <div class="tws-foot">
+      <span class="tws-keys">↑↓ Navigate · ↵ Open · Esc Close</span>
+      <span class="tws-corpus" id="tws-corpus">Loading index…</span>
+    </div>
+  </div>
+</div>
+<script>window.TW_BASE="{prefix}";</script>
+<script src="{prefix}assets/search.js" defer></script>
+<script>window.addEventListener('DOMContentLoaded',function(){{{SEARCH_OVERLAY_JS}}});</script>'''
 
 
 def nav_overlay(prefix=""):
@@ -554,7 +734,8 @@ def nav_overlay(prefix=""):
   </div>
   <button class="nto-close-glyph" data-nav-close aria-label="Close menu">✕</button>
 </div>
-<script>{OVERLAY_JS}</script>'''
+<script>{OVERLAY_JS}</script>
+{search_overlay(prefix)}'''
 
 
 def masthead(prefix="", active=""):
@@ -566,6 +747,9 @@ def masthead(prefix="", active=""):
     <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
       <span class="ham"><span></span><span></span><span></span></span>
       <span class="mtxt">Menu</span>
+    </button>
+    <button class="site-top-search" data-tws-open aria-label="Search" aria-controls="tws">
+      <span aria-hidden="true">⌕</span><span class="tws-lbl">Search</span><span class="tws-key" aria-hidden="true">⌘K</span>
     </button>
     <a class="site-top-sub" href="{GHOST_URL}/subscribe">Subscribe</a>
   </div>

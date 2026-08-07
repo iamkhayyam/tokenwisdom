@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search — Token Wisdom</title>
+<meta name="description" content="Search 2,058 Lexicon terms and the full text of 252 Token Wisdom editions and essays.">
+<link rel="icon" href="favicon.ico" sizes="48x48">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta property="og:site_name" content="Token Wisdom">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Search">
+<meta property="og:description" content="Search 2,058 Lexicon terms and the full text of 252 Token Wisdom editions and essays.">
+<meta property="og:image" content="https://tokenwisdom.org/assets/og-default.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@worthafortune">
+<meta name="twitter:title" content="Search">
+<meta name="twitter:description" content="Search 2,058 Lexicon terms and the full text of 252 Token Wisdom editions and essays.">
+<meta name="twitter:image" content="https://tokenwisdom.org/assets/og-default.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Archivo:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-top">
+  <div class="site-top-inner">
+    <a class="site-top-back" href="index.html" data-back aria-label="Back">&larr;<span>Back</span></a>
+    <a href="index.html" class="site-top-mark" aria-label="Token Wisdom — home"><img src="assets/crystal-ball.svg" alt="" class="tw-orb"></a>
+    <button class="site-top-toggle" data-nav-toggle aria-label="Open menu" aria-expanded="false" aria-controls="nav-takeover">
+      <span class="ham"><span></span><span></span><span></span></span>
+      <span class="mtxt">Menu</span>
+    </button>
+    <button class="site-top-search" data-tws-open aria-label="Search" aria-controls="tws">
+      <span aria-hidden="true">⌕</span><span class="tws-lbl">Search</span><span class="tws-key" aria-hidden="true">⌘K</span>
+    </button>
+    
+    <a class="site-top-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe</a>
+  </div>
+</header>
+
+<div class="nav-takeover" id="nav-takeover" role="dialog" aria-modal="true" aria-label="Site index" aria-hidden="true">
+  <div class="nto-bg" aria-hidden="true">
+    <div class="nto-glow"></div>
+    <div class="nto-monogram">&amp;</div>
+  </div>
+  <div class="nto-bar">
+    <span class="nto-eyebrow">The Index <b>·</b> Token Wisdom</span>
+    <button class="nto-close" data-nav-close aria-label="Close menu">Close <span class="x">✕</span></button>
+  </div>
+  <nav class="nto-nav"><a class="nto-row" style="--i:0" href="search.html"><span class="nto-num">01</span><span class="nto-label">Search</span><span class="nto-desc">Find anything, instantly</span></a><a class="nto-row" style="--i:1" href="archive.html"><span class="nto-num">02</span><span class="nto-label">Archive</span><span class="nto-desc">Every edition, dated</span></a><a class="nto-row" style="--i:2" href="tags/index.html"><span class="nto-num">03</span><span class="nto-label">Topics</span><span class="nto-desc">Browse by idea</span></a><a class="nto-row" style="--i:3" href="lexicon/index.html"><span class="nto-num">04</span><span class="nto-label">Lexicon</span><span class="nto-desc">The working vocabulary</span></a><a class="nto-row" style="--i:4" href="links/index.html"><span class="nto-num">05</span><span class="nto-label">Links</span><span class="nto-desc">The reading room</span></a><a class="nto-row" style="--i:5" href="tags/a-closer-look.html"><span class="nto-num">06</span><span class="nto-label">Essays</span><span class="nto-desc">A closer look</span></a><a class="nto-row" style="--i:6" href="tags/worthafortune.html"><span class="nto-num">07</span><span class="nto-label">Newsletters</span><span class="nto-desc">Worth a fortune</span></a><a class="nto-row" style="--i:7" href="podcast.html"><span class="nto-num">08</span><span class="nto-label">Podcast</span><span class="nto-desc">Listen in</span></a><a class="nto-row" style="--i:8" href="metrics.html"><span class="nto-num">09</span><span class="nto-label">Report</span><span class="nto-desc">The corpus, quantified</span></a><a class="nto-row" style="--i:9" href="about/index.html"><span class="nto-num">10</span><span class="nto-label">About</span><span class="nto-desc">Who & why</span></a></nav>
+  <div class="nto-foot">
+    <a class="nto-sub" href="https://ghost-production-198e.up.railway.app/subscribe">Subscribe →</a>
+    <div class="nto-foot-meta">
+      <span class="nto-tag">Knowware is measured in lifetimes</span>
+      <span class="nto-elsewhere"><a href="https://ghost-production-198e.up.railway.app" target="_blank" rel="noopener">Ghost</a> · <a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub</a></span>
+    </div>
+  </div>
+  <button class="nto-close-glyph" data-nav-close aria-label="Close menu">✕</button>
+</div>
+<script>(function(){
+var root=document.documentElement,ov=document.getElementById('nav-takeover');
+var back=document.querySelector('[data-back]');
+if(back){back.addEventListener('click',function(e){try{if(history.length>1&&document.referrer&&new URL(document.referrer).origin===location.origin){e.preventDefault();history.back();}}catch(_){}});}
+if(!ov)return;
+var toggles=document.querySelectorAll('[data-nav-toggle]');
+function set(o){root.classList.toggle('nav-open',o);ov.setAttribute('aria-hidden',o?'false':'true');toggles.forEach(function(b){b.setAttribute('aria-expanded',o?'true':'false');});}
+toggles.forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();set(!root.classList.contains('nav-open'));});});
+ov.querySelectorAll('[data-nav-close],.nto-row,.nto-sub').forEach(function(a){a.addEventListener('click',function(){set(false);});});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&root.classList.contains('nav-open'))set(false);});
+})();</script>
+
+<div class="tws-scrim" id="tws" role="dialog" aria-modal="true" aria-label="Search Token Wisdom" aria-hidden="true">
+  <div class="tws-panel">
+    <div class="tws-inputrow">
+      <span class="tws-glyph" aria-hidden="true">⌕</span>
+      <input id="tws-input" class="tws-input" type="search" autocomplete="off" autocorrect="off"
+             spellcheck="false" placeholder="Search the Lexicon and every edition…" aria-label="Search">
+      <button type="button" class="tws-esc" data-tws-close>Esc</button>
+    </div>
+    <div class="tws-results" id="tws-results" hidden></div>
+    <div class="tws-hint" id="tws-hint">
+      <b>Search everything</b>
+      Every Lexicon term and the full text of every published edition and essay — indexed locally, no third party involved.
+      <div class="tws-seeds"><button type="button" class="tws-seed">quantum computing</button><button type="button" class="tws-seed">AGI</button><button type="button" class="tws-seed">digital privacy</button><button type="button" class="tws-seed">consciousness</button></div>
+    </div>
+    <div class="tws-foot">
+      <span class="tws-keys">↑↓ Navigate · ↵ Open · Esc Close</span>
+      <span class="tws-corpus" id="tws-corpus">Loading index…</span>
+    </div>
+  </div>
+</div>
+<script>window.TW_BASE="";</script>
+<script src="assets/search.js" defer></script>
+<script>window.addEventListener('DOMContentLoaded',function(){(function(){
+var root=document.documentElement;
+var scrim=document.getElementById('tws'),input=document.getElementById('tws-input');
+if(!scrim||!input)return;
+var results=document.getElementById('tws-results'),hint=document.getElementById('tws-hint');
+var corpus=document.getElementById('tws-corpus');
+var open=false,sel=-1,hits=[],last='',timer=null,loaded=false;
+
+function setOpen(o){
+  open=o;root.classList.toggle('tws-open',o);
+  scrim.setAttribute('aria-hidden',o?'false':'true');
+  if(o){
+    if(!loaded){loaded=true;TWSearch.load(window.TW_BASE||'').then(function(){
+      var s=TWSearch.stats();
+      if(s&&corpus)corpus.textContent=s.posts+' pieces · '+s.terms+' terms';
+      if(input.value.trim())run();
+    });
+    TWSearch.onUpgrade(function(){if(input.value.trim())run();});}
+    setTimeout(function(){input.focus();input.select();},60);
+  }else{sel=-1;}
+}
+function run(){
+  var q=input.value.trim();
+  if(q.length<2){results.innerHTML='';results.hidden=true;hint.hidden=false;sel=-1;hits=[];return;}
+  hint.hidden=true;results.hidden=false;
+  if(!TWSearch.ready()){results.innerHTML='<div class="tws-status">Loading the index…</div>';return;}
+  var out=TWSearch.render(TWSearch.search(q),{limit:6,seeAllHref:(window.TW_BASE||'')+'search.html?q='+encodeURIComponent(q)});
+  results.innerHTML=out.html;
+  hits=[].slice.call(results.querySelectorAll('.tws-hit'));
+  sel=hits.length?0:-1;paint();
+}
+function paint(){hits.forEach(function(a,i){a.classList.toggle('is-sel',i===sel);});
+  if(sel>-1&&hits[sel])hits[sel].scrollIntoView({block:'nearest'});}
+function move(d){if(!hits.length)return;sel=(sel+d+hits.length)%hits.length;paint();}
+
+input.addEventListener('input',function(){
+  if(input.value===last)return;last=input.value;
+  clearTimeout(timer);timer=setTimeout(run,90);
+});
+input.addEventListener('keydown',function(e){
+  if(e.key==='ArrowDown'){e.preventDefault();move(1);}
+  else if(e.key==='ArrowUp'){e.preventDefault();move(-1);}
+  else if(e.key==='Enter'){
+    if(sel>-1&&hits[sel]){e.preventDefault();location.href=hits[sel].href;}
+    else if(input.value.trim()){e.preventDefault();
+      location.href=(window.TW_BASE||'')+'search.html?q='+encodeURIComponent(input.value.trim());}
+  }
+});
+document.querySelectorAll('[data-tws-open]').forEach(function(b){
+  b.addEventListener('click',function(e){e.preventDefault();setOpen(true);});});
+scrim.addEventListener('click',function(e){if(e.target===scrim)setOpen(false);});
+scrim.querySelectorAll('[data-tws-close]').forEach(function(b){
+  b.addEventListener('click',function(){setOpen(false);});});
+scrim.querySelectorAll('.tws-seed').forEach(function(b){
+  b.addEventListener('click',function(){input.value=b.textContent;last='';run();input.focus();});});
+document.addEventListener('keydown',function(e){
+  if((e.metaKey||e.ctrlKey)&&e.key.toLowerCase()==='k'){e.preventDefault();setOpen(!open);return;}
+  if(open&&e.key==='Escape'){e.preventDefault();setOpen(false);return;}
+  if(open)return;
+  // "/" is the other muscle memory, but never steal it mid-typing.
+  var t=e.target,tag=t&&t.tagName;
+  if(e.key==='/'&&tag!=='INPUT'&&tag!=='TEXTAREA'&&!(t&&t.isContentEditable)){
+    e.preventDefault();setOpen(true);}
+});
+})();});</script>
+
+<style>
+.sp-hero{max-width:var(--max-wide);margin:0 auto;padding:44px 28px 0}
+.sp-eyebrow{font-family:var(--mono);font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);margin-bottom:.9rem}
+.sp-h1{font-family:var(--display);font-size:clamp(2.6rem,6vw,4.4rem);line-height:.95;letter-spacing:-.03em;color:var(--ink);margin-bottom:.7rem}
+.sp-lede{font-family:var(--serif);font-size:1.05rem;line-height:1.55;color:var(--ink-muted);max-width:62ch}
+.sp-box{display:flex;align-items:center;gap:.8rem;margin:1.8rem 0 .5rem;border:2px solid var(--ink);background:var(--tws-bg);padding:14px 18px}
+.sp-box .tws-glyph{font-size:1.3rem}
+.sp-in{flex:1;border:none;outline:none;background:transparent;color:var(--ink);font-family:var(--sans);font-size:1.25rem;font-weight:500;letter-spacing:-.015em;min-width:0}
+.sp-in::placeholder{color:var(--ink-faint);font-weight:400}
+.sp-in::-webkit-search-cancel-button{display:none}
+.sp-stat{font-family:var(--mono);font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-faint);min-height:1.2em}
+.sp-results{max-width:var(--max-wide);margin:1.4rem auto 4rem;padding:0 28px}
+.sp-results .tws-hit{padding-left:0;padding-right:0}
+.sp-results .tws-grouphead{padding-left:0;padding-right:0}
+.sp-results .tws-more,.sp-results .tws-status{padding-left:0;padding-right:0}
+.sp-results .tws-hit:hover,.sp-results .tws-hit.is-sel{background:var(--tws-wash)}
+.sp-noscript{max-width:var(--max-wide);margin:0 auto;padding:1.4rem 28px;font-family:var(--serif);color:var(--ink-muted)}
+.sp-noscript a{color:var(--accent);border-bottom:1px solid var(--tws-rule)}
+</style>
+<div class="sp-hero">
+  <div class="sp-eyebrow">Search</div>
+  <h1 class="sp-h1">Find anything</h1>
+  <p class="sp-lede">2,058 Lexicon terms and the full text of 252 published editions and essays, indexed locally and searched in your browser. No third party sees what you look for.</p>
+  <div class="sp-box">
+    <span class="tws-glyph" aria-hidden="true">⌕</span>
+    <input id="sp-in" class="sp-in" type="search" autocomplete="off" autocorrect="off" spellcheck="false"
+           placeholder="Try a term, a title, or a phrase…" aria-label="Search Token Wisdom">
+  </div>
+  <div class="sp-stat" id="sp-stat"></div>
+</div>
+<noscript>
+  <div class="sp-noscript">Search runs in your browser, so it needs JavaScript. Without it, the
+  <a href="archive.html">Archive</a> lists every edition by year and the
+  <a href="lexicon/index.html">Lexicon</a> lists every term by category.</div>
+</noscript>
+<div class="sp-results" id="sp-results"></div>
+<script>
+window.addEventListener('DOMContentLoaded', function () {
+  var input = document.getElementById('sp-in'),
+      out = document.getElementById('sp-results'),
+      stat = document.getElementById('sp-stat');
+  var timer = null, last = null;
+
+  function run(push) {
+    var q = input.value.trim();
+    if (q.length < 2) {
+      out.innerHTML = ''; stat.textContent = TWSearch.full() ? '' : 'Indexing…';
+      if (push) sync('');
+      return;
+    }
+    if (!TWSearch.ready()) { stat.textContent = 'Loading the index…'; return; }
+    var res = TWSearch.search(q);
+    var r = TWSearch.render(res, { limit: 50 });
+    out.innerHTML = r.html;
+    stat.textContent = r.count
+      ? (res.terms.length + res.posts.length) + ' results'
+        + (res.full ? '' : ' so far — full text still loading')
+      : 'No results';
+    if (push) sync(q);
+  }
+
+  // Keep the URL shareable without stacking a history entry per keystroke.
+  function sync(q) {
+    var url = location.pathname + (q ? '?q=' + encodeURIComponent(q) : '');
+    if (url !== last) { history.replaceState(null, '', url); last = url; }
+  }
+
+  input.addEventListener('input', function () {
+    clearTimeout(timer); timer = setTimeout(function () { run(true); }, 110);
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') { e.preventDefault(); clearTimeout(timer); run(true); }
+  });
+
+  var q0 = new URLSearchParams(location.search).get('q') || '';
+  if (q0) input.value = q0;
+  input.focus();
+  stat.textContent = 'Loading the index…';
+  TWSearch.load('').then(function () { run(false); });
+  // Re-run once full text lands so an early query silently gains body matches.
+  TWSearch.onUpgrade(function () { if (input.value.trim()) run(false); });
+});
+</script>
+
+<footer class="tw-colophon">
+  <div class="col-inner">
+    <div class="col-t1">
+      <div class="col-ghost-wrap"><div class="col-ghost">Token Wisdom</div></div>
+      <div class="col-pitch">
+        <div class="col-eyebrow"><img src="assets/crystal-ball.svg" alt=""><span>The Newsletter of Record · Est. 2013</span></div>
+        <h2 class="col-h2">A field guide to the future of now.</h2>
+      </div>
+      <div class="col-sub">
+        <div class="col-sub-label">One weekly transmission · Humanly chosen</div>
+        <form class="col-subform" action="https://ghost-production-198e.up.railway.app/subscribe" method="get" onsubmit="window.location.href='https://ghost-production-198e.up.railway.app/subscribe';return false">
+          <input type="email" name="email" placeholder="you@future.now" aria-label="Email address">
+          <button type="submit">Subscribe &rarr;</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-t2">
+      <div class="col-cols">
+        <div class="col-group">
+          <div class="col-group-label">Explore</div>
+          <ul class="col-group-links"><li><a href="index.html">Home</a></li><li><a href="archive.html">Archive</a></li><li><a href="tags/index.html">All Topics</a></li><li><a href="lexicon/index.html">The Lexicon</a></li><li><a href="tags/a-closer-look.html">Essays</a></li><li><a href="tags/worthafortune.html">Newsletters</a></li><li><a href="podcast.html">Podcast</a></li></ul>
+        </div>
+        <div class="col-group">
+          <div class="col-group-label">More</div>
+          <ul class="col-group-links"><li><a href="about/index.html">About</a></li><li><a href="links/index.html">Links</a></li><li><a href="metrics.html">Corpus Report</a></li><li><a href="https://ghost-production-198e.up.railway.app" target="_blank" rel="noopener">Ghost CMS</a></li><li><a href="https://github.com/iamkhayyam/tokenwisdom" target="_blank" rel="noopener">GitHub Archive</a></li></ul>
+        </div>
+        
+        <div class="col-group col-group--ama">
+          <div class="col-group-label">Have a question?</div>
+          <button type="button" class="col-ama-ad" data-ama-toggle aria-expanded="false" aria-controls="col-ama-panel">
+            <img class="col-ama-thumb" src="content/images/ask-me-anything_feature__Halpern_final.gif" alt="" loading="lazy">
+            <span class="col-ama-copy"><span class="col-ama-title">📣 Ask Me Anything</span><span class="col-ama-sub">Ask it &rarr;</span></span>
+            <span class="col-ama-chevron" aria-hidden="true">&#9662;</span>
+          </button>
+        </div>
+      </div>
+      
+      <div id="col-ama-panel" class="col-ama-panel" hidden>
+        <div class="col-ama-panel-bg" style="background-image:url(content/images/ask-me-anything_feature__Halpern_final.gif)"></div>
+        <div class="col-ama-frost">
+          <p class="col-ama-hint">Type your question below and hit ask — or highlight anything that sparked it first.</p>
+          <form class="col-ama-form" action="posts/no-really-ask-me-anything.html" method="get">
+            <input type="text" name="q" placeholder="What do you want to know?" aria-label="Your question">
+            <button type="submit">Ask &rarr;</button>
+          </form>
+          <a class="col-ama-full" href="posts/no-really-ask-me-anything.html">Read the full AMA thread &rarr;</a>
+        </div>
+      </div>
+      <script>(function(){
+        var btn=document.querySelector('[data-ama-toggle]'),panel=document.getElementById('col-ama-panel');
+        if(!btn||!panel)return;
+        btn.addEventListener('click',function(){
+          var open=panel.hasAttribute('hidden');
+          if(open){panel.removeAttribute('hidden');btn.setAttribute('aria-expanded','true');}
+          else{panel.setAttribute('hidden','');btn.setAttribute('aria-expanded','false');}
+        });
+      })();</script>
+      <div class="col-tags"><span class="col-tags-label">Popular tags</span><a href="tags/a-closer-look.html">👁️ A Closer Look</a><a href="tags/technology.html">Technology</a><a href="tags/worthafortune.html">✨ Pearls of Wisdom</a><a href="tags/ai.html">A.I. (and Subsets)</a><a href="tags/future-trends.html">Future Trends</a><a href="tags/ethical.html">Ethics \ Principles</a><a href="tags/challenges.html">Challenges</a></div>
+    </div>
+
+    <div class="col-t3">
+      <p class="col-signoff">Until next time: stay smart, and kind, and definitely stay weird!</p>
+      <div class="col-bar">
+        <div class="col-bar-l">
+          <span class="col-strong">© 2013–2026 Token Wisdom</span>
+          <span class="col-dot"></span><span>284 Posts · 83 Tags</span>
+          <span class="col-dot"></span><span class="col-chosen"><span class="col-dia">◆</span>100% Humanly Chosen</span>
+        </div>
+        <div class="col-bar-r">
+          <a href="https://x.com/worthafortune" target="_blank" rel="noopener">X</a><a href="https://www.linkedin.com/company/token-wisdom-newsletter/" target="_blank" rel="noopener">LinkedIn</a><a href="https://ghost-production-198e.up.railway.app/rss/" target="_blank" rel="noopener">RSS</a>
+          <span class="col-vr"></span><span class="col-handle">@iamkhayyam</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  var SIZES=[25,50,75,100];
+  function pageList(cur,count){
+    if(count<=7){var a=[];for(var i=1;i<=count;i++)a.push(i);return a;}
+    var out=[1],lo=Math.max(2,cur-1),hi=Math.min(count-1,cur+1);
+    if(lo>2)out.push('…');
+    for(var i=lo;i<=hi;i++)out.push(i);
+    if(hi<count-1)out.push('…');
+    out.push(count);return out;
+  }
+  function init(box){
+    var sel=box.getAttribute('data-item');           // optional: paginate only matching children
+    var items=[].filter.call(box.children,function(n){return n.nodeType===1&&(!sel||(n.matches&&n.matches(sel)));});
+    var total=items.length;
+    if(total<=SIZES[0])return;                       // short list: no controls
+    var size=parseInt(box.getAttribute('data-page-size'),10)||parseInt(localStorage.getItem('pgnSize'),10)||SIZES[0];
+    if(SIZES.indexOf(size)<0)size=SIZES[0];
+    var page=1;
+    var bar=document.createElement('div');bar.className='pgn';
+    bar.innerHTML='<div class="pgn-info"></div>'
+      +'<div class="pgn-sizes"><span>View</span>'+SIZES.map(function(s){return '<button type="button" data-s="'+s+'">'+s+'</button>';}).join('')+'</div>'
+      +'<div class="pgn-nav"><button type="button" class="pgn-prev">‹ Prev</button><span class="pgn-pages"></span><button type="button" class="pgn-next">Next ›</button></div>';
+    box.parentNode.insertBefore(bar,box.nextSibling);
+    var info=bar.querySelector('.pgn-info'),pagesEl=bar.querySelector('.pgn-pages');
+    function render(scroll){
+      var pageCount=Math.max(1,Math.ceil(total/size));
+      if(page>pageCount)page=pageCount;if(page<1)page=1;
+      var start=(page-1)*size,end=Math.min(start+size,total);
+      for(var i=0;i<total;i++)items[i].style.display=(i>=start&&i<end)?'':'none';
+      info.textContent='Showing '+(start+1)+'–'+end+' of '+total;
+      [].forEach.call(bar.querySelectorAll('.pgn-sizes button'),function(b){b.classList.toggle('on',+b.getAttribute('data-s')===size);});
+      pagesEl.innerHTML=pageList(page,pageCount).map(function(p){
+        return p==='…'?'<span class="pgn-gap">…</span>':'<button type="button" class="pgn-p'+(p===page?' on':'')+'" data-p="'+p+'">'+p+'</button>';
+      }).join('');
+      bar.querySelector('.pgn-prev').disabled=page<=1;
+      bar.querySelector('.pgn-next').disabled=page>=pageCount;
+      if(scroll){var y=box.getBoundingClientRect().top+window.scrollY-80;window.scrollTo({top:y,behavior:'smooth'});}
+    }
+    bar.addEventListener('click',function(e){
+      var b=e.target.closest&&e.target.closest('button');if(!b)return;
+      if(b.hasAttribute('data-s')){size=+b.getAttribute('data-s');localStorage.setItem('pgnSize',size);page=1;render(true);}
+      else if(b.classList.contains('pgn-prev')){page--;render(true);}
+      else if(b.classList.contains('pgn-next')){page++;render(true);}
+      else if(b.hasAttribute('data-p')){page=+b.getAttribute('data-p');render(true);}
+    });
+    render(false);
+  }
+  function boot(){[].forEach.call(document.querySelectorAll('[data-paginate]'),init);}
+  if(document.readyState!=='loading')boot();else document.addEventListener('DOMContentLoaded',boot);
+})();
+</script>
+
+</body>
+</html>

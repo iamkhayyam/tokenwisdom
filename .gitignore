@@ -18,3 +18,7 @@ data/.algolia_state.json
 
 # Scratch screenshots
 titles/
+
+# Transient holding dir for docs/social/ during a rebuild (see generate_site.py).
+# Should never survive a run; ignored so a crashed build can't commit it.
+.social_stash/
