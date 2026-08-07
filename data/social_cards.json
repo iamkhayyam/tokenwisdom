@@ -1,0 +1,3223 @@
+{
+ "base": "https://cdn.tokenwisdom.org",
+ "bucket": "tokenwisdom-social",
+ "cards": {
+  "100th-edition-pearls-of-wisdom-w12-portrait.png": {
+   "md5": "da94565becc893a6c570358948bafb13",
+   "size": 5046474
+  },
+  "100th-edition-pearls-of-wisdom-w12-story.png": {
+   "md5": "35dac03cdfd189bb98850b2a78aaaff5",
+   "size": 6479907
+  },
+  "100th-edition-pearls-of-wisdom-w12.png": {
+   "md5": "a0e2e253d34883b681c8934811ec2222",
+   "size": 2947264
+  },
+  "101st-edition-pearls-of-wisdom-w13-portrait.png": {
+   "md5": "bddad98a3c48a549b699f7857f7ff6c8",
+   "size": 4421132
+  },
+  "101st-edition-pearls-of-wisdom-w13-story.png": {
+   "md5": "60d4ba9b711f0e8d9e7de929ab02b54e",
+   "size": 5677047
+  },
+  "101st-edition-pearls-of-wisdom-w13.png": {
+   "md5": "5843ba184ebc7f42d1e22b3178f757db",
+   "size": 2561854
+  },
+  "102nd-edition-pearls-of-wisdom-w14-portrait.png": {
+   "md5": "4a03fd748f256e12d20b3c7abe88ffd9",
+   "size": 4883053
+  },
+  "102nd-edition-pearls-of-wisdom-w14-story.png": {
+   "md5": "44809567cea62c17e569ded483bc455a",
+   "size": 6528738
+  },
+  "102nd-edition-pearls-of-wisdom-w14.png": {
+   "md5": "769929b74b7ed6b3014ddb750638f18f",
+   "size": 2542798
+  },
+  "103rd-edition-pearls-of-wisdom-w15-portrait.png": {
+   "md5": "c7e77fc5336a06adc5980d61566c526f",
+   "size": 5113547
+  },
+  "103rd-edition-pearls-of-wisdom-w15-story.png": {
+   "md5": "438f487bc71712457396f28032199e1d",
+   "size": 6420836
+  },
+  "103rd-edition-pearls-of-wisdom-w15.png": {
+   "md5": "59d39d6f2855762d4e04a9f459842ab0",
+   "size": 2499429
+  },
+  "104th-edition-pearls-of-wisdom-w16-portrait.png": {
+   "md5": "28556558cad553d081f6204cce12d2ce",
+   "size": 4867093
+  },
+  "104th-edition-pearls-of-wisdom-w16-story.png": {
+   "md5": "8beb2f904cf16a565865cfe09000bddf",
+   "size": 6006217
+  },
+  "104th-edition-pearls-of-wisdom-w16.png": {
+   "md5": "a4be349d5f91c7a675f79c8024f9fc26",
+   "size": 2679372
+  },
+  "105th-edition-pearls-of-wisdom-w17-portrait.png": {
+   "md5": "85826c4aff37db8333ed540430d6418b",
+   "size": 4863405
+  },
+  "105th-edition-pearls-of-wisdom-w17-story.png": {
+   "md5": "6423927d96da25da991e1729c807591d",
+   "size": 6155394
+  },
+  "105th-edition-pearls-of-wisdom-w17.png": {
+   "md5": "ee085032e191f174cf5bfc452b43d4dc",
+   "size": 2943817
+  },
+  "106th-edition-pearls-of-wisdom-w18-portrait.png": {
+   "md5": "70d12345fdcb63fe7cba8468fbb04e69",
+   "size": 5618350
+  },
+  "106th-edition-pearls-of-wisdom-w18-story.png": {
+   "md5": "e9a7cfb46603b63c28d5e08cf989131d",
+   "size": 6695061
+  },
+  "106th-edition-pearls-of-wisdom-w18.png": {
+   "md5": "c660151cc7fef3d1f9172d5deded8ae0",
+   "size": 3057440
+  },
+  "107th-edition-pearls-of-wisdom-w19-portrait.png": {
+   "md5": "07b337e8331043b9231a4aa20bb6aeee",
+   "size": 5059613
+  },
+  "107th-edition-pearls-of-wisdom-w19-story.png": {
+   "md5": "444cbd00e8badc115a5e3ef635cbfd8c",
+   "size": 6244195
+  },
+  "107th-edition-pearls-of-wisdom-w19.png": {
+   "md5": "fe87f6f5aa02b8248cd059fe77e38ab6",
+   "size": 2648576
+  },
+  "108th-edition-pearls-of-wisdom-w20-portrait.png": {
+   "md5": "4c30213c81eae380a077d48b66a1d38f",
+   "size": 5185987
+  },
+  "108th-edition-pearls-of-wisdom-w20-story.png": {
+   "md5": "1b3ec43ce4c89557016194cb387fe32c",
+   "size": 6614121
+  },
+  "108th-edition-pearls-of-wisdom-w20.png": {
+   "md5": "0f096f0003983ea93060fb0a787ff02c",
+   "size": 3014326
+  },
+  "109th-edition-pearls-of-wisdom-w21-portrait.png": {
+   "md5": "d16d9589427069b0fcd75e5cd5f15db8",
+   "size": 4440069
+  },
+  "109th-edition-pearls-of-wisdom-w21-story.png": {
+   "md5": "f51d674fb050d604dbf62e5ef17aab75",
+   "size": 6299711
+  },
+  "109th-edition-pearls-of-wisdom-w21.png": {
+   "md5": "1e6c892191fad71d8987f747748c4a2f",
+   "size": 2371216
+  },
+  "110th-edition-pearls-of-wisdom-w22-portrait.png": {
+   "md5": "7cef5f07aba54d3f985b48949c349f97",
+   "size": 4011444
+  },
+  "110th-edition-pearls-of-wisdom-w22-story.png": {
+   "md5": "f375abf2533981d892717d28616fc7f4",
+   "size": 5060462
+  },
+  "110th-edition-pearls-of-wisdom-w22.png": {
+   "md5": "7d71cd74a330464aa61b8c5d0e029ac5",
+   "size": 2452655
+  },
+  "111th-edition-pearls-of-wisdom-w23-portrait.png": {
+   "md5": "72f4340274e5e3563ab0136fca76387a",
+   "size": 3729063
+  },
+  "111th-edition-pearls-of-wisdom-w23-story.png": {
+   "md5": "40c96e13c531488faff7ae9e3ddabb32",
+   "size": 5066938
+  },
+  "111th-edition-pearls-of-wisdom-w23.png": {
+   "md5": "3394a5b169718c481a1aef3e915ebdae",
+   "size": 2238114
+  },
+  "112th-edition-pearls-of-wisdom-w24-portrait.png": {
+   "md5": "04f1132a271b0a4b6a35cbd612d8eab9",
+   "size": 3435604
+  },
+  "112th-edition-pearls-of-wisdom-w24-story.png": {
+   "md5": "b98800b63cb73f7beab28ff3af54dff3",
+   "size": 4027263
+  },
+  "112th-edition-pearls-of-wisdom-w24.png": {
+   "md5": "0ebbf756c22ef5d8b9f953480dadab7a",
+   "size": 2589429
+  },
+  "113th-edition-pearls-of-wisdom-w25-portrait.png": {
+   "md5": "8827f62a8470c804a5c3b94fe44d9d21",
+   "size": 3893707
+  },
+  "113th-edition-pearls-of-wisdom-w25-story.png": {
+   "md5": "349db98cb921def9140640aa87aaf824",
+   "size": 5052023
+  },
+  "113th-edition-pearls-of-wisdom-w25.png": {
+   "md5": "0328d3d62919d610b8e1570286a4cb98",
+   "size": 2262294
+  },
+  "114th-edition-pearls-of-wisdom-w26-portrait.png": {
+   "md5": "ee6276b8e00f3605cb9094b1ce8970ee",
+   "size": 4338719
+  },
+  "114th-edition-pearls-of-wisdom-w26-story.png": {
+   "md5": "fb4afcc09027046b18bed8ac92418aaa",
+   "size": 5466615
+  },
+  "114th-edition-pearls-of-wisdom-w26.png": {
+   "md5": "5a967fe0b3b174ccf52c59f459d1c7ca",
+   "size": 2567969
+  },
+  "115th-edition-pearls-of-wisdom-w27-portrait.png": {
+   "md5": "7e09892d9b5e808c94a7477a404507d3",
+   "size": 4000895
+  },
+  "115th-edition-pearls-of-wisdom-w27-story.png": {
+   "md5": "4b8086f9668b6a95bdf04d9028a74d1c",
+   "size": 5055583
+  },
+  "115th-edition-pearls-of-wisdom-w27.png": {
+   "md5": "8b9a72cf83e77724a7ec1c812de0c375",
+   "size": 2270284
+  },
+  "116th-edition-pearls-of-wisdom-w28-copy-portrait.png": {
+   "md5": "d90452a6bac9e7514c5ea1cfb1af2998",
+   "size": 3830239
+  },
+  "116th-edition-pearls-of-wisdom-w28-copy-story.png": {
+   "md5": "ee7a840d813f9243313fc62c426380f7",
+   "size": 4885945
+  },
+  "116th-edition-pearls-of-wisdom-w28-copy.png": {
+   "md5": "dd17c66a325c9dd9c50d5bd240d2af07",
+   "size": 2396247
+  },
+  "117th-edition-pearls-of-wisdom-w29-portrait.png": {
+   "md5": "7959f2e11465c8b6128b757a907c03a1",
+   "size": 3862365
+  },
+  "117th-edition-pearls-of-wisdom-w29-story.png": {
+   "md5": "75f1f3a89b4e89cd0424dd0b18ea13b6",
+   "size": 4596410
+  },
+  "117th-edition-pearls-of-wisdom-w29.png": {
+   "md5": "d749df4ecffbd8b337a6944946d7da1a",
+   "size": 2198691
+  },
+  "118th-edition-pearls-of-wisdom-w30-portrait.png": {
+   "md5": "2832e4032a15c5a3ca782484bcf2d301",
+   "size": 5547195
+  },
+  "118th-edition-pearls-of-wisdom-w30-story.png": {
+   "md5": "a495056884ec8b16af45e642359baa7c",
+   "size": 7196881
+  },
+  "118th-edition-pearls-of-wisdom-w30.png": {
+   "md5": "31f2d0a62d56d895a5f3963981c10a60",
+   "size": 3070111
+  },
+  "119th-edition-token-wisdom-week-31-portrait.png": {
+   "md5": "ff328f1146a58f0c86fc32a00e52852d",
+   "size": 4923958
+  },
+  "119th-edition-token-wisdom-week-31-story.png": {
+   "md5": "9b22cb63cd9bdd41b7a1820da707ae59",
+   "size": 6385409
+  },
+  "119th-edition-token-wisdom-week-31.png": {
+   "md5": "129ca416f5f963e59f3448c2656b0fb8",
+   "size": 2635253
+  },
+  "120th-edition-token-wisdom-week-32-portrait.png": {
+   "md5": "9dd4e88d3a3b82c92298cd566f5fd8fa",
+   "size": 6448025
+  },
+  "120th-edition-token-wisdom-week-32-story.png": {
+   "md5": "f0a4a17dcf3fb347134c4c6bd310efaf",
+   "size": 7725687
+  },
+  "120th-edition-token-wisdom-week-32.png": {
+   "md5": "6fac0bcb271e26b2c77e844edad3ad8a",
+   "size": 3004347
+  },
+  "121st-edition-token-wisdom-week-33-portrait.png": {
+   "md5": "35c1466d42ec438f708265d3c1861ce3",
+   "size": 4962205
+  },
+  "121st-edition-token-wisdom-week-33-story.png": {
+   "md5": "d6951c62ba3dd977613f05056f7efeae",
+   "size": 6353293
+  },
+  "121st-edition-token-wisdom-week-33.png": {
+   "md5": "542dafcd33c9603489d9ef2db4e39f6f",
+   "size": 2854846
+  },
+  "122nd-edition-token-wisdom-week-34-portrait.png": {
+   "md5": "af950fc524c098e7d32a5d8917b32231",
+   "size": 2789209
+  },
+  "122nd-edition-token-wisdom-week-34-story.png": {
+   "md5": "eff2ca6d1892c8b43304897b34b639ed",
+   "size": 3460630
+  },
+  "122nd-edition-token-wisdom-week-34.png": {
+   "md5": "9eb1e03d37fb6e0daf22dc942dcc91ba",
+   "size": 1780681
+  },
+  "123rd-edition-token-wisdom-week-35-portrait.png": {
+   "md5": "b012675da921eda2c8bff1cf68d00e4b",
+   "size": 5320792
+  },
+  "123rd-edition-token-wisdom-week-35-story.png": {
+   "md5": "f77daace44a6aea251f2a6973bec13ae",
+   "size": 6558609
+  },
+  "123rd-edition-token-wisdom-week-35.png": {
+   "md5": "b29dccd4a3702838c08551034bed0d03",
+   "size": 3268036
+  },
+  "124th-edition-token-wisdom-week-36-portrait.png": {
+   "md5": "6ec558694ca54a4f95c5c60d7c949e28",
+   "size": 3898809
+  },
+  "124th-edition-token-wisdom-week-36-story.png": {
+   "md5": "07950d3dc34a2b0607319171b93fc9c3",
+   "size": 5188197
+  },
+  "124th-edition-token-wisdom-week-36.png": {
+   "md5": "121dd05e7bfc5ae093fcacb4ac020fda",
+   "size": 2197208
+  },
+  "125th-edition-token-wisdom-week-37-portrait.png": {
+   "md5": "5bbeb3883f5684c34b6c93a40c3a8498",
+   "size": 4976369
+  },
+  "125th-edition-token-wisdom-week-37-story.png": {
+   "md5": "eaef3d48743efdf3dff23f0eebb58079",
+   "size": 6367493
+  },
+  "125th-edition-token-wisdom-week-37.png": {
+   "md5": "4abc915daf0db4b9a2f25bb72caaf514",
+   "size": 2889964
+  },
+  "126th-edition-token-wisdom-week-38-portrait.png": {
+   "md5": "9347a983bc3b15506dfdddae4dc67435",
+   "size": 4177610
+  },
+  "126th-edition-token-wisdom-week-38-story.png": {
+   "md5": "79aee0fae35a390d29da16e9f01ac572",
+   "size": 5827817
+  },
+  "126th-edition-token-wisdom-week-38.png": {
+   "md5": "5a824b1b9a570b1105bf1136e9ffa543",
+   "size": 2702265
+  },
+  "127th-edition-token-wisdom-week-39-portrait.png": {
+   "md5": "cb27de9340de84025d9d9619bfa99f7c",
+   "size": 4448435
+  },
+  "127th-edition-token-wisdom-week-39-story.png": {
+   "md5": "86573b804cd9a6359ae9bee1b8c3b106",
+   "size": 5484305
+  },
+  "127th-edition-token-wisdom-week-39.png": {
+   "md5": "aed96536c9560dbb8fc4564f353f31c3",
+   "size": 2665621
+  },
+  "128th-edition-token-wisdom-week-40-portrait.png": {
+   "md5": "25ac080f12cabc93417b5dd67864fdc7",
+   "size": 5227590
+  },
+  "128th-edition-token-wisdom-week-40-story.png": {
+   "md5": "5a8be19f2d48724ef39fc7a239550939",
+   "size": 7041358
+  },
+  "128th-edition-token-wisdom-week-40.png": {
+   "md5": "7298f0ed6f7ca96d0324fd699eccb834",
+   "size": 2745518
+  },
+  "129th-edition-token-wisdom-week-41-portrait.png": {
+   "md5": "452ea98e8fe28abc6dccb74eb5c3ae19",
+   "size": 3411794
+  },
+  "129th-edition-token-wisdom-week-41-story.png": {
+   "md5": "a64576e1295416111f913c3cc30fc8a2",
+   "size": 4479138
+  },
+  "129th-edition-token-wisdom-week-41.png": {
+   "md5": "ff04f99b20b02452e9e46c2a827a00ed",
+   "size": 2109972
+  },
+  "130th-edition-token-wisdom-week-42-portrait.png": {
+   "md5": "4e5a67be3d08b96309add030519f70c9",
+   "size": 4848617
+  },
+  "130th-edition-token-wisdom-week-42-story.png": {
+   "md5": "b74d645ab0c7ace3b0edd4ebd497a35f",
+   "size": 6336382
+  },
+  "130th-edition-token-wisdom-week-42.png": {
+   "md5": "e2a6b0a51710822da2705f0895d13da0",
+   "size": 2519589
+  },
+  "131st-edition-token-wisdom-week-43-portrait.png": {
+   "md5": "9537dfba4ce63b27791eb20d4cb4ba74",
+   "size": 2528503
+  },
+  "131st-edition-token-wisdom-week-43-story.png": {
+   "md5": "b0767844e90d6812007c4757b1903aad",
+   "size": 3088731
+  },
+  "131st-edition-token-wisdom-week-43.png": {
+   "md5": "fc69106954adeafccb9aca907f7893a8",
+   "size": 1385208
+  },
+  "132nd-edition-token-wisdom-week-44-portrait.png": {
+   "md5": "e4fd7dd5725066ced6d3348c2af54844",
+   "size": 3812604
+  },
+  "132nd-edition-token-wisdom-week-44-story.png": {
+   "md5": "76bf51f5bee692fe011e58e1d466fafc",
+   "size": 4955124
+  },
+  "132nd-edition-token-wisdom-week-44.png": {
+   "md5": "406f683590adddf0b67f0a1683079423",
+   "size": 2232530
+  },
+  "133rd-edition-token-wisdom-week-45-portrait.png": {
+   "md5": "9aecf39ceb0809c2e7383ede30cfd2f4",
+   "size": 3864852
+  },
+  "133rd-edition-token-wisdom-week-45-story.png": {
+   "md5": "dfad84a23222380636e00525081a1d06",
+   "size": 4890729
+  },
+  "133rd-edition-token-wisdom-week-45.png": {
+   "md5": "6d568f42d91935819139bf8da4af68d9",
+   "size": 2524456
+  },
+  "134th-edition-token-wisdom-week-46-portrait.png": {
+   "md5": "98450806badf6ca15800ccab73715fa6",
+   "size": 3921894
+  },
+  "134th-edition-token-wisdom-week-46-story.png": {
+   "md5": "14055cc918f4ce9ac49cc34625a63ee4",
+   "size": 4870496
+  },
+  "134th-edition-token-wisdom-week-46.png": {
+   "md5": "7ac09f10458493aa8121867b5bb83e9d",
+   "size": 2516832
+  },
+  "135th-edition-token-wisdom-week-47-portrait.png": {
+   "md5": "6e67eec99fc4aff0eba92016b580e3a6",
+   "size": 5182057
+  },
+  "135th-edition-token-wisdom-week-47-story.png": {
+   "md5": "3cb0cd7dbeab04c3b5946e73279f9540",
+   "size": 6305170
+  },
+  "135th-edition-token-wisdom-week-47.png": {
+   "md5": "0ed2216d67f680c98e7381dbe7f3520e",
+   "size": 3046781
+  },
+  "136th-edition-token-wisdom-week-48-portrait.png": {
+   "md5": "39b82aa57706a9ba06fc8f45964d4ebe",
+   "size": 4461543
+  },
+  "136th-edition-token-wisdom-week-48-story.png": {
+   "md5": "8972340cbe36a848c09043839541ba98",
+   "size": 5393507
+  },
+  "136th-edition-token-wisdom-week-48.png": {
+   "md5": "29a35057825ac803d449c6e898473aa2",
+   "size": 2949327
+  },
+  "137th-edition-token-wisdom-week-49-portrait.png": {
+   "md5": "bec454a6d3977437c7c4ac39e20ff58c",
+   "size": 4164952
+  },
+  "137th-edition-token-wisdom-week-49-story.png": {
+   "md5": "c66b7b0fbc052cfd4c4e103743fdb3c5",
+   "size": 5284538
+  },
+  "137th-edition-token-wisdom-week-49.png": {
+   "md5": "1cf165a58da37bdf98b9d1d330425c9c",
+   "size": 2378685
+  },
+  "138th-edition-token-wisdom-week-50-2-portrait.png": {
+   "md5": "53a38266517fd2e9e8fc696fda5faa3d",
+   "size": 4270838
+  },
+  "138th-edition-token-wisdom-week-50-2-story.png": {
+   "md5": "eb5c2e851780fcdc664dc6682286a7a2",
+   "size": 5372303
+  },
+  "138th-edition-token-wisdom-week-50-2.png": {
+   "md5": "d04834958033b4ee1b68b5fda8b2e432",
+   "size": 2688956
+  },
+  "139th-edition-token-wisdom-week-51-portrait.png": {
+   "md5": "1151b61a8bd35927f099ec8c9310143c",
+   "size": 4278552
+  },
+  "139th-edition-token-wisdom-week-51-story.png": {
+   "md5": "bf3a06d2250d7712eb6e748a4cc83e59",
+   "size": 5124831
+  },
+  "139th-edition-token-wisdom-week-51.png": {
+   "md5": "f8c573740334a2cbe6191c208e03df1b",
+   "size": 2646210
+  },
+  "140th-edition-token-wisdom-week-52-portrait.png": {
+   "md5": "aa25a9edafdb6a5557116db66d704125",
+   "size": 3019225
+  },
+  "140th-edition-token-wisdom-week-52-story.png": {
+   "md5": "10a503c635a0681cb592c3ac8775e827",
+   "size": 3681492
+  },
+  "140th-edition-token-wisdom-week-52.png": {
+   "md5": "4e580d5aa76805135baa0ee471176651",
+   "size": 1863474
+  },
+  "141st-edition-token-wisdom-week-01-portrait.png": {
+   "md5": "37f05dba9a4930006f682c259b9124a2",
+   "size": 3519585
+  },
+  "141st-edition-token-wisdom-week-01-story.png": {
+   "md5": "70eb47234290f1070142fc2dfd5ee82f",
+   "size": 4374784
+  },
+  "141st-edition-token-wisdom-week-01.png": {
+   "md5": "7b6d8fee5580675415fcc8dd08755047",
+   "size": 2038260
+  },
+  "142nd-edition-token-wisdom-week-02-portrait.png": {
+   "md5": "2d31907b50037ada6252a3f755ccca7e",
+   "size": 4830428
+  },
+  "142nd-edition-token-wisdom-week-02-story.png": {
+   "md5": "14c12526377a551fde1483d43e9db0c7",
+   "size": 6075771
+  },
+  "142nd-edition-token-wisdom-week-02.png": {
+   "md5": "a9720b11b8493ebec671e8bd3be5a08d",
+   "size": 2973341
+  },
+  "143rd-edition-token-wisdom-week-03-portrait.png": {
+   "md5": "4535d637555b278c599de567d94ec3c5",
+   "size": 3814788
+  },
+  "143rd-edition-token-wisdom-week-03-story.png": {
+   "md5": "8ba1e6da83a376583da0af4eed0fca76",
+   "size": 5033170
+  },
+  "143rd-edition-token-wisdom-week-03.png": {
+   "md5": "4f5a00d17f163f1c5a994e53adf7973d",
+   "size": 2076419
+  },
+  "144th-edition-token-wisdom-week-04-portrait.png": {
+   "md5": "2f776196d546fc154834723144a06632",
+   "size": 3593401
+  },
+  "144th-edition-token-wisdom-week-04-story.png": {
+   "md5": "69c82f377da3e56cdf48a80b832e0c6e",
+   "size": 4493527
+  },
+  "144th-edition-token-wisdom-week-04.png": {
+   "md5": "0e4690e757045281305eb38d6e691a6f",
+   "size": 2091709
+  },
+  "145th-edition-token-wisdom-week-05-portrait.png": {
+   "md5": "9f0f4ec71ee2a22d45eeb73149836da6",
+   "size": 3912545
+  },
+  "145th-edition-token-wisdom-week-05-story.png": {
+   "md5": "bd3e3bc37323260afca8488a120e1cc0",
+   "size": 5250299
+  },
+  "145th-edition-token-wisdom-week-05.png": {
+   "md5": "fc273c8fb0dc67169ac695f2116929ba",
+   "size": 2460434
+  },
+  "146th-edition-token-wisdom-week-06-portrait.png": {
+   "md5": "64eda323d382034918e0227343f510c5",
+   "size": 3897610
+  },
+  "146th-edition-token-wisdom-week-06-story.png": {
+   "md5": "a91a6dcf6504fa40514682eaee2c8b29",
+   "size": 5124029
+  },
+  "146th-edition-token-wisdom-week-06.png": {
+   "md5": "03d4d8df0416b93d46682fea91e6a42e",
+   "size": 2114528
+  },
+  "147th-edition-token-wisdom-week-07-portrait.png": {
+   "md5": "7926364b2f6cd67bc66f2a043f1c39a3",
+   "size": 2079513
+  },
+  "147th-edition-token-wisdom-week-07-story.png": {
+   "md5": "816abcec279ebb15320eed13e2b9064a",
+   "size": 2390045
+  },
+  "147th-edition-token-wisdom-week-07.png": {
+   "md5": "add54973b710f1767b06f5e4f6cf8fb1",
+   "size": 1299507
+  },
+  "148th-edition-token-wisdom-week-08-portrait.png": {
+   "md5": "13df151763a8904a903d9549beb4b169",
+   "size": 3318394
+  },
+  "148th-edition-token-wisdom-week-08-story.png": {
+   "md5": "1d158d68eaedb7e8700c4b79fd45fcfe",
+   "size": 3742792
+  },
+  "148th-edition-token-wisdom-week-08.png": {
+   "md5": "f790825238b12c9e2c8c368d47fdc95a",
+   "size": 1912575
+  },
+  "149th-edition-token-wisdom-week-09-portrait.png": {
+   "md5": "b12a1350fd45df200f4cb3d97734e528",
+   "size": 4000849
+  },
+  "149th-edition-token-wisdom-week-09-story.png": {
+   "md5": "8b07199076fd7d1645fdec29af7605e0",
+   "size": 5203359
+  },
+  "149th-edition-token-wisdom-week-09.png": {
+   "md5": "992b7a2f0ddf610854cf209fd6fdab9d",
+   "size": 2443434
+  },
+  "150th-edition-token-wisdom-week-10-portrait.png": {
+   "md5": "8bf23cfae2a8b1827dab33d7ad4038a7",
+   "size": 3437371
+  },
+  "150th-edition-token-wisdom-week-10-story.png": {
+   "md5": "89aeeb1b5166ef297e857db073ba8c19",
+   "size": 4532594
+  },
+  "150th-edition-token-wisdom-week-10.png": {
+   "md5": "376961287e80a916ccb8b4d4a3b9798b",
+   "size": 2125104
+  },
+  "151st-edition-token-wisdom-week-11-portrait.png": {
+   "md5": "57c0c3b44ca3ed2abecfae6189652788",
+   "size": 3506301
+  },
+  "151st-edition-token-wisdom-week-11-story.png": {
+   "md5": "f4237055caf22e9db379ea715372fca6",
+   "size": 4478472
+  },
+  "151st-edition-token-wisdom-week-11.png": {
+   "md5": "1c9981665bab6204f78466376cb4103f",
+   "size": 2119402
+  },
+  "152nd-edition-token-wisdom-week-12-portrait.png": {
+   "md5": "0828f2fedac8ab397091e711c61cebf9",
+   "size": 1776544
+  },
+  "152nd-edition-token-wisdom-week-12-story.png": {
+   "md5": "11843e8b828c8479a23483646c7ce09a",
+   "size": 2208232
+  },
+  "152nd-edition-token-wisdom-week-12.png": {
+   "md5": "91cf529098c696fbbaefccfab783abb1",
+   "size": 1145523
+  },
+  "153rd-edition-token-wisdom-week-13-portrait.png": {
+   "md5": "f686aa4bfaffdbbed95ea5c7866cdea2",
+   "size": 3552350
+  },
+  "153rd-edition-token-wisdom-week-13-story.png": {
+   "md5": "73b525f0deebe8a568b408b2ddfb4bba",
+   "size": 4430992
+  },
+  "153rd-edition-token-wisdom-week-13.png": {
+   "md5": "45b251d500b416aa47903fd982e730c9",
+   "size": 2277305
+  },
+  "154th-edition-token-wisdom-week-14-portrait.png": {
+   "md5": "99b3827b2b0c6247dff9500eb2335bfe",
+   "size": 3448786
+  },
+  "154th-edition-token-wisdom-week-14-story.png": {
+   "md5": "f5d3fefca35235bbef3a25b685346193",
+   "size": 3882082
+  },
+  "154th-edition-token-wisdom-week-14.png": {
+   "md5": "550aebd6e6552d177b8096295936d1aa",
+   "size": 2382102
+  },
+  "155th-edition-token-wisdom-week-15-portrait.png": {
+   "md5": "c02f295f5e0bbeb908927a5bcb0f7787",
+   "size": 4421182
+  },
+  "155th-edition-token-wisdom-week-15-story.png": {
+   "md5": "ea33367993a3a9c9f54a5136455dcc6b",
+   "size": 5409944
+  },
+  "155th-edition-token-wisdom-week-15.png": {
+   "md5": "8d710032332c5f9a7dc6da0d1bad3455",
+   "size": 2539490
+  },
+  "156th-edition-token-wisdom-week-16-portrait.png": {
+   "md5": "204fd15c415f6140549846943bb7b843",
+   "size": 3295115
+  },
+  "156th-edition-token-wisdom-week-16-story.png": {
+   "md5": "f5041ece4ff27784f54bb33bbbff19de",
+   "size": 4171312
+  },
+  "156th-edition-token-wisdom-week-16.png": {
+   "md5": "22b2669d2c03802a7881a7e0d8f7febb",
+   "size": 2119965
+  },
+  "157th-edition-token-wisdom-week-17-portrait.png": {
+   "md5": "790bdd042dc4657ef94fe3e856b05744",
+   "size": 4435882
+  },
+  "157th-edition-token-wisdom-week-17-story.png": {
+   "md5": "396e2b71b75095fc7b4f3c23713f7583",
+   "size": 5521565
+  },
+  "157th-edition-token-wisdom-week-17.png": {
+   "md5": "3c1d525ed2ecccf5133959d7c630be9c",
+   "size": 2508466
+  },
+  "158th-edition-token-wisdom-week-18-portrait.png": {
+   "md5": "0148c67301b8243929b85b26691f4a58",
+   "size": 3903037
+  },
+  "158th-edition-token-wisdom-week-18-story.png": {
+   "md5": "70ebd7260d676ac680587babb10e0627",
+   "size": 5126962
+  },
+  "158th-edition-token-wisdom-week-18.png": {
+   "md5": "4dc65a48af40013170ec8a9eaa9e7290",
+   "size": 2114036
+  },
+  "159th-edition-token-wisdom-week-19-portrait.png": {
+   "md5": "c7e5bcd818ac2849ec0efc0ad51b952f",
+   "size": 4690172
+  },
+  "159th-edition-token-wisdom-week-19-story.png": {
+   "md5": "e227ba83588675837a0f50be37d2138b",
+   "size": 6023003
+  },
+  "159th-edition-token-wisdom-week-19.png": {
+   "md5": "d7371454809c25ab2ae3f8aa33441427",
+   "size": 2773422
+  },
+  "39th-edition-token-wisdom-portrait.png": {
+   "md5": "0a9570269d0ec7969715e51be5cbfce9",
+   "size": 6553034
+  },
+  "39th-edition-token-wisdom-story.png": {
+   "md5": "cf6d48c947f4474e7093f657de4c3144",
+   "size": 8020131
+  },
+  "39th-edition-token-wisdom.png": {
+   "md5": "4a4cfebfb4325e7fe7a14cd665252c12",
+   "size": 3164253
+  },
+  "40th-edition-token-wisdom-portrait.png": {
+   "md5": "96c53bb4c54487645d68df44963280a5",
+   "size": 5958018
+  },
+  "40th-edition-token-wisdom-story.png": {
+   "md5": "15e4f0137d2dc63571e7c18e26986a4e",
+   "size": 7202938
+  },
+  "40th-edition-token-wisdom.png": {
+   "md5": "00fe4b14ae1258e703643213338a783d",
+   "size": 2848247
+  },
+  "41st-edition-token-wisdom-portrait.png": {
+   "md5": "e0817e7089bc907ff19985efee0e7740",
+   "size": 4791062
+  },
+  "41st-edition-token-wisdom-story.png": {
+   "md5": "4a9843dd5603d0d089a87be6dda1a797",
+   "size": 5469665
+  },
+  "41st-edition-token-wisdom.png": {
+   "md5": "cf6d0c1683cbe6dd480f4e9d8e93bf51",
+   "size": 2538277
+  },
+  "43rd-edition-token-wisdom-portrait.png": {
+   "md5": "9eed3588ffde2a635fde222bdc360325",
+   "size": 5005574
+  },
+  "43rd-edition-token-wisdom-story.png": {
+   "md5": "4029662ae93be120916f50c31f8108d2",
+   "size": 6382498
+  },
+  "43rd-edition-token-wisdom.png": {
+   "md5": "5f418e6acfafb115eaf05e8b23f4e41f",
+   "size": 3019698
+  },
+  "44th-edition-token-wisdom-portrait.png": {
+   "md5": "54b40ccaba97a062ce12b7b12f03b2be",
+   "size": 4161877
+  },
+  "44th-edition-token-wisdom-story.png": {
+   "md5": "f2cdf65f8a45ac3ba743b47ebfa6e3ac",
+   "size": 5057492
+  },
+  "44th-edition-token-wisdom.png": {
+   "md5": "88a58c44da70d5af27d8d5c327035876",
+   "size": 2377391
+  },
+  "45th-edition-token-wisdom-portrait.png": {
+   "md5": "5027259f33073371a7e44201f3c1eb8d",
+   "size": 5473926
+  },
+  "45th-edition-token-wisdom-story.png": {
+   "md5": "bb72f1d1df24bcafbd948bf7153ee4b4",
+   "size": 6960637
+  },
+  "45th-edition-token-wisdom.png": {
+   "md5": "04c5e323a3982843e4c3b3a09cfeeae3",
+   "size": 3165789
+  },
+  "46th-edition-token-wisdom-portrait.png": {
+   "md5": "98033136eadfaf47fb7fcace7fdd4cda",
+   "size": 4820043
+  },
+  "46th-edition-token-wisdom-story.png": {
+   "md5": "7a204a35da658a69bd4b7d2533e94fde",
+   "size": 6303255
+  },
+  "46th-edition-token-wisdom.png": {
+   "md5": "e05429253962c897d6ea657db20af76f",
+   "size": 2523636
+  },
+  "47th-edition-token-wisdom-portrait.png": {
+   "md5": "5cff06fdc80d5a693e0f3584d80c625d",
+   "size": 5582101
+  },
+  "47th-edition-token-wisdom-story.png": {
+   "md5": "715a61038b4e6afece48ab35fc28e427",
+   "size": 6910392
+  },
+  "47th-edition-token-wisdom.png": {
+   "md5": "46ada413dbc2202273584dd256da086f",
+   "size": 2538435
+  },
+  "48th-edition-token-wisdom-portrait.png": {
+   "md5": "f682c7e2bc6d532d5c0030c5574f5d3c",
+   "size": 6023474
+  },
+  "48th-edition-token-wisdom-story.png": {
+   "md5": "75d30da79ff38cf7a1ea76e45de58f13",
+   "size": 7413240
+  },
+  "48th-edition-token-wisdom.png": {
+   "md5": "eff5df7a3a69474dc1d0c238c47e1161",
+   "size": 3540166
+  },
+  "49th-edition-token-wisdom-portrait.png": {
+   "md5": "65ee6841533843b719c15850a4db5389",
+   "size": 3743594
+  },
+  "49th-edition-token-wisdom-story.png": {
+   "md5": "6614051d429ad693df4dcf36b6594c6b",
+   "size": 4713189
+  },
+  "49th-edition-token-wisdom.png": {
+   "md5": "047203a2f92008676ea57bc4db8a026d",
+   "size": 2250223
+  },
+  "50th-edition-token-wisdom-portrait.png": {
+   "md5": "4189402f9d7f20736b588bb4cf6d5e53",
+   "size": 3631681
+  },
+  "50th-edition-token-wisdom-story.png": {
+   "md5": "27f22d8c2d899330bb86228fd322e0f7",
+   "size": 4404169
+  },
+  "50th-edition-token-wisdom.png": {
+   "md5": "c9eb0e7fd203d310ed29bc931feda83e",
+   "size": 2183339
+  },
+  "51st-edition-token-wisdom-2-portrait.png": {
+   "md5": "eb9ff1ef85a5c25ebd5056e4ced491d2",
+   "size": 5731711
+  },
+  "51st-edition-token-wisdom-2-story.png": {
+   "md5": "cd2a83cbb87229a4f03ddfeefa436897",
+   "size": 7271530
+  },
+  "51st-edition-token-wisdom-2.png": {
+   "md5": "38ff11d3fe670f1a0dd98c78bab505d5",
+   "size": 2847592
+  },
+  "52nd-edition-token-wisdom-portrait.png": {
+   "md5": "91cfb7944d73f25d700898a63c428f94",
+   "size": 6151743
+  },
+  "52nd-edition-token-wisdom-story.png": {
+   "md5": "3d43020ff45e2e71745ea9663e21d9d5",
+   "size": 7358730
+  },
+  "52nd-edition-token-wisdom.png": {
+   "md5": "443d491b76a7ce41cab1064ad5a0cf7c",
+   "size": 2867367
+  },
+  "91st-edition-pearls-of-wisdom-w02-portrait.png": {
+   "md5": "614dfb2d5148fc96ad6e56ec4a0f1419",
+   "size": 5184330
+  },
+  "91st-edition-pearls-of-wisdom-w02-story.png": {
+   "md5": "7ed02eff445e5a46cfafc4531247f128",
+   "size": 6372613
+  },
+  "91st-edition-pearls-of-wisdom-w02.png": {
+   "md5": "fde386de0051b3f386c49298b40d8c47",
+   "size": 2846688
+  },
+  "92nd-edition-pearls-of-wisdom-w03-portrait.png": {
+   "md5": "a725640a2d0fb75bb6dfeb0b5960604f",
+   "size": 3891727
+  },
+  "92nd-edition-pearls-of-wisdom-w03-story.png": {
+   "md5": "df14f8cfc45bfe7d262d2d56b0e2793b",
+   "size": 4934961
+  },
+  "92nd-edition-pearls-of-wisdom-w03.png": {
+   "md5": "035bb42d14fbfcee4be0cbbb480a625b",
+   "size": 1992818
+  },
+  "93rd-edition-pearls-of-wisdom-w04-portrait.png": {
+   "md5": "42ba69994d821221fff357e376bac17b",
+   "size": 4298962
+  },
+  "93rd-edition-pearls-of-wisdom-w04-story.png": {
+   "md5": "1f99c7f1dd424ae97e11f66bf0e96b5c",
+   "size": 6106789
+  },
+  "93rd-edition-pearls-of-wisdom-w04.png": {
+   "md5": "525fb464c9dd2b1cdf7bc7ae5cc3485b",
+   "size": 2160382
+  },
+  "94th-edition-pearls-of-wisdom-w05-portrait.png": {
+   "md5": "6d57dd2bc90956e6b71d80bb3aeaf376",
+   "size": 4185495
+  },
+  "94th-edition-pearls-of-wisdom-w05-story.png": {
+   "md5": "9727efb887ee8aa069608b828442cb30",
+   "size": 5462368
+  },
+  "94th-edition-pearls-of-wisdom-w05.png": {
+   "md5": "02a43c3501df7fc9dd195b0085eba8e3",
+   "size": 2236667
+  },
+  "95th-edition-pearls-of-wisdom-w07-portrait.png": {
+   "md5": "181d825f94b96778b6ca5aa2f82d8e12",
+   "size": 5780544
+  },
+  "95th-edition-pearls-of-wisdom-w07-story.png": {
+   "md5": "71a3ea23553fd83926bacd0f36bd8285",
+   "size": 7152819
+  },
+  "95th-edition-pearls-of-wisdom-w07.png": {
+   "md5": "f8e84369f60aada3addfeef82976ef60",
+   "size": 2826326
+  },
+  "96th-edition-pearls-of-wisdom-w08-portrait.png": {
+   "md5": "7c1d7a2ec50edd228a394975785dd182",
+   "size": 4012619
+  },
+  "96th-edition-pearls-of-wisdom-w08-story.png": {
+   "md5": "14a56bf55fbccb65f3c056b41f8e8a42",
+   "size": 5056627
+  },
+  "96th-edition-pearls-of-wisdom-w08.png": {
+   "md5": "0ced4e3e70c1235d8f805662729de87d",
+   "size": 2455007
+  },
+  "97th-edition-pearls-of-wisdom-w09-portrait.png": {
+   "md5": "0a1d139b616c73a53ad458ebaf4bc9c5",
+   "size": 6440096
+  },
+  "97th-edition-pearls-of-wisdom-w09-story.png": {
+   "md5": "bb9e4040cf165506713976ff3b6d42af",
+   "size": 7965546
+  },
+  "97th-edition-pearls-of-wisdom-w09.png": {
+   "md5": "ac67b7e49560c1b1a6f20f9f720480f6",
+   "size": 2949151
+  },
+  "98th-edition-pearls-of-wisdom-w10-portrait.png": {
+   "md5": "8c176486177054bd8ad8431b856369e6",
+   "size": 6866087
+  },
+  "98th-edition-pearls-of-wisdom-w10-story.png": {
+   "md5": "e045789f0c8bac7fe8512d3e4886ca9b",
+   "size": 8331764
+  },
+  "98th-edition-pearls-of-wisdom-w10.png": {
+   "md5": "8640e3529735aeb078de3d873b79be3b",
+   "size": 3211195
+  },
+  "99th-edition-pearls-of-wisdom-w11-portrait.png": {
+   "md5": "2e456e74288ea2b558ed10c53d15227d",
+   "size": 5130643
+  },
+  "99th-edition-pearls-of-wisdom-w11-story.png": {
+   "md5": "e83042e718c6deb0199f8f0c8d94c556",
+   "size": 6334282
+  },
+  "99th-edition-pearls-of-wisdom-w11.png": {
+   "md5": "2c821b42038fbc6829d195d80d93ac5a",
+   "size": 3047068
+  },
+  "again-no-one-leaves-a-good-company-portrait.png": {
+   "md5": "0ad09cdd755a12838d22d1fa04ad3af5",
+   "size": 3624398
+  },
+  "again-no-one-leaves-a-good-company-story.png": {
+   "md5": "9e02bbe9f53aae6972b4f0c37b738726",
+   "size": 4458300
+  },
+  "again-no-one-leaves-a-good-company.png": {
+   "md5": "6f046da39d0dd1eec690998021ab91e4",
+   "size": 2236904
+  },
+  "ai-didnt-break-democracy-we-did-four-decades-ago-portrait.png": {
+   "md5": "3b9490546096c4b7e8a5b9053388bb7e",
+   "size": 3298664
+  },
+  "ai-didnt-break-democracy-we-did-four-decades-ago-story.png": {
+   "md5": "b6da3b101e7a802aa03fc946b840babb",
+   "size": 4154626
+  },
+  "ai-didnt-break-democracy-we-did-four-decades-ago.png": {
+   "md5": "f616154c6c0be2dce50aecfb6669e8be",
+   "size": 2266168
+  },
+  "ai-wont-take-your-job-itll-take-your-purpose-thats-worse-portrait.png": {
+   "md5": "a387e869aed11f88c6790d1c4af03c86",
+   "size": 4874671
+  },
+  "ai-wont-take-your-job-itll-take-your-purpose-thats-worse-story.png": {
+   "md5": "a8d203449711af8dc44f03ec1b80bf9c",
+   "size": 5990317
+  },
+  "ai-wont-take-your-job-itll-take-your-purpose-thats-worse.png": {
+   "md5": "51ece03df66d6e70a6d268c4eeee8dce",
+   "size": 2926919
+  },
+  "amazons-ai-adventures-the-potential-consequences-for-financial-creditors-in-the-ftx-market-portrait.png": {
+   "md5": "dc910e984bed15583bcfc76dda9bfc6c",
+   "size": 4362137
+  },
+  "amazons-ai-adventures-the-potential-consequences-for-financial-creditors-in-the-ftx-market-story.png": {
+   "md5": "f87a528de96dc6b0156b66687ad4df89",
+   "size": 5252264
+  },
+  "amazons-ai-adventures-the-potential-consequences-for-financial-creditors-in-the-ftx-market.png": {
+   "md5": "b11e863145334e1c73564891b94fb7e7",
+   "size": 2682770
+  },
+  "americas-broken-funny-bone-portrait.png": {
+   "md5": "d0d3c8a7f16059c3b7b2c92466833f1c",
+   "size": 4506425
+  },
+  "americas-broken-funny-bone-story.png": {
+   "md5": "97d02f364790a2f5147ab7d23bb2512c",
+   "size": 5496767
+  },
+  "americas-broken-funny-bone.png": {
+   "md5": "5f6746d8a98fd3ab199ccc4ba950416a",
+   "size": 2578811
+  },
+  "an-apple-a-day-keeps-the-privacy-away-portrait.png": {
+   "md5": "ffa6ce12148fdf6ec6ccf62b919baa01",
+   "size": 5968149
+  },
+  "an-apple-a-day-keeps-the-privacy-away-story.png": {
+   "md5": "d07038ddf9d62f1776e888d391c479cf",
+   "size": 6738495
+  },
+  "an-apple-a-day-keeps-the-privacy-away.png": {
+   "md5": "f9f10b6103b259289c32517eb59b991b",
+   "size": 3732086
+  },
+  "apples-privacy-stretching-across-an-ultra-wideband-portrait.png": {
+   "md5": "88f7b1e663b64fddbd8e28b30d3c02a8",
+   "size": 6937912
+  },
+  "apples-privacy-stretching-across-an-ultra-wideband-story.png": {
+   "md5": "631af191b3a7299eb234d5be1036720d",
+   "size": 8480873
+  },
+  "apples-privacy-stretching-across-an-ultra-wideband.png": {
+   "md5": "6748f3b22b52f55b7d30a60596decc5c",
+   "size": 4373894
+  },
+  "apples-resilience-in-an-unpredictable-market-portrait.png": {
+   "md5": "25b8c5649631cf1f37c7d1a16b5597e3",
+   "size": 4264748
+  },
+  "apples-resilience-in-an-unpredictable-market-story.png": {
+   "md5": "e4ce485acfe1a5ccc6c01b6690ccd11d",
+   "size": 5331911
+  },
+  "apples-resilience-in-an-unpredictable-market.png": {
+   "md5": "b339de2a4f65f73b93551571836228bb",
+   "size": 2797673
+  },
+  "art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai-portrait.png": {
+   "md5": "593847a3439a94fbb76736de83e41b66",
+   "size": 3843071
+  },
+  "art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai-story.png": {
+   "md5": "89f7a0793f2b808504f79916c535033f",
+   "size": 4739369
+  },
+  "art-technology-the-longest-romance-going-and-what-it-means-in-the-era-of-ai.png": {
+   "md5": "852003f9db0bcfe596eda8b7d1886a9a",
+   "size": 2161815
+  },
+  "beyond-the-silicon-dream-why-consciousness-cant-be-computed-portrait.png": {
+   "md5": "108875e40c71e419da068ef8650aa19a",
+   "size": 5774930
+  },
+  "beyond-the-silicon-dream-why-consciousness-cant-be-computed-story.png": {
+   "md5": "2195937dd5eb527796d0fc6d1dcea6ec",
+   "size": 7552843
+  },
+  "beyond-the-silicon-dream-why-consciousness-cant-be-computed.png": {
+   "md5": "67e31596af7a7c77a093fbcbaf09c55b",
+   "size": 2954467
+  },
+  "bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences-portrait.png": {
+   "md5": "2cb82d253b60c4b1f44970572dc41e50",
+   "size": 4334601
+  },
+  "bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences-story.png": {
+   "md5": "19fffe2c2a0a44dd26f5ee5711e4fbad",
+   "size": 5126427
+  },
+  "bridging-the-digital-divide-creating-equitable-and-inclusive-digital-experiences.png": {
+   "md5": "8db985889da7bf39868070eb4a77a062",
+   "size": 2754797
+  },
+  "building-without-blueprints-portrait.png": {
+   "md5": "6fa658fb8d06cb57c9459f82e86834e2",
+   "size": 4085191
+  },
+  "building-without-blueprints-story.png": {
+   "md5": "7e1f4c174a81a3cabb40f8087f7a33de",
+   "size": 4991634
+  },
+  "building-without-blueprints.png": {
+   "md5": "2ce0bb008342b3549ac76f36247bdf27",
+   "size": 2607472
+  },
+  "callawaygolf-has-a-secret-weapon-innovation-portrait.png": {
+   "md5": "41de791dbfd6f6f41c42dce54aa48198",
+   "size": 3831448
+  },
+  "callawaygolf-has-a-secret-weapon-innovation-story.png": {
+   "md5": "d7f684f9a99b039d1f3ca005d0b002a8",
+   "size": 4674695
+  },
+  "callawaygolf-has-a-secret-weapon-innovation.png": {
+   "md5": "c9978494c2fd588997ddc97e9402ea53",
+   "size": 2478446
+  },
+  "capital-disrupted-the-ai-native-shift-across-industries-portrait.png": {
+   "md5": "de821536a4a989851e017cf4d5b69ea3",
+   "size": 3301153
+  },
+  "capital-disrupted-the-ai-native-shift-across-industries-story.png": {
+   "md5": "1d4be07496afb4c19d75dac605470a2f",
+   "size": 3971901
+  },
+  "capital-disrupted-the-ai-native-shift-across-industries.png": {
+   "md5": "f947430535a4550608e207312f23ae43",
+   "size": 2312753
+  },
+  "chatgpt-transforming-ai-technology-portrait.png": {
+   "md5": "16ce4dcf82bf97fba89268a5c60bba13",
+   "size": 5414383
+  },
+  "chatgpt-transforming-ai-technology-story.png": {
+   "md5": "33e2789546b7e7cf3af1cb38c1a62196",
+   "size": 6713374
+  },
+  "chatgpt-transforming-ai-technology.png": {
+   "md5": "3b69f8d2a3c6fa6fbe1ec564f0c66a66",
+   "size": 3302767
+  },
+  "co-pilot-x-the-ai-powered-developer-experience-portrait.png": {
+   "md5": "06a24fc667363d9b2ccd3571e9c4832b",
+   "size": 1491468
+  },
+  "co-pilot-x-the-ai-powered-developer-experience-story.png": {
+   "md5": "af09d561af48f82ee343ec98bb10bbcb",
+   "size": 2224094
+  },
+  "co-pilot-x-the-ai-powered-developer-experience.png": {
+   "md5": "b17cfdd4d951b8d6129e4a6b3826eb50",
+   "size": 643694
+  },
+  "compliance-is-an-evidence-problem-portrait.png": {
+   "md5": "f4879f57d223b434e70b1300d350ff98",
+   "size": 4023820
+  },
+  "compliance-is-an-evidence-problem-story.png": {
+   "md5": "0d4a18a02a415bd865a57463d83b058b",
+   "size": 4923555
+  },
+  "compliance-is-an-evidence-problem.png": {
+   "md5": "d816edc5afc58ba24c36fa3a0e05bc47",
+   "size": 2807640
+  },
+  "constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation-portrait.png": {
+   "md5": "3ccb60e2a9057986f39bee9e4fcb3ca0",
+   "size": 2221015
+  },
+  "constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation-story.png": {
+   "md5": "19a76587cd8243cf3499be9aa6c1c9a5",
+   "size": 2900531
+  },
+  "constraint-as-a-catalyst-unlocking-legos-innovation-through-limitation.png": {
+   "md5": "c782e97fe781f03ea4e72a289277c466",
+   "size": 1293306
+  },
+  "consuming-connections-how-corporations-colonized-our-third-place-portrait.png": {
+   "md5": "0e7a43b85cbda404333634ff6ebf2996",
+   "size": 3428416
+  },
+  "consuming-connections-how-corporations-colonized-our-third-place-story.png": {
+   "md5": "d2572a984cb1c7a7dbc28584b597429c",
+   "size": 4164776
+  },
+  "consuming-connections-how-corporations-colonized-our-third-place.png": {
+   "md5": "9a2295873bdf311ef0acd2282f305eec",
+   "size": 2415363
+  },
+  "crash-course-on-whats-coming-portrait.png": {
+   "md5": "51738a39253f38139949ba24d547a402",
+   "size": 4046007
+  },
+  "crash-course-on-whats-coming-story.png": {
+   "md5": "d23002fbea4d53e437d3413ec0376da1",
+   "size": 4762392
+  },
+  "crash-course-on-whats-coming.png": {
+   "md5": "2fe2c8b67803bf351e351f1d76c5acfc",
+   "size": 2702499
+  },
+  "crowdstrike-authorization-not-recognized-portrait.png": {
+   "md5": "1d7989dc458c4614194d86a84704534b",
+   "size": 5173337
+  },
+  "crowdstrike-authorization-not-recognized-story.png": {
+   "md5": "6c1351a64d487650b0926ea18897f330",
+   "size": 6532155
+  },
+  "crowdstrike-authorization-not-recognized.png": {
+   "md5": "1126f5a4078f131225440894ad50ad21",
+   "size": 2949232
+  },
+  "data-is-not-the-new-oil-portrait.png": {
+   "md5": "54f26d9f79b4a4f91b84a9392afbe878",
+   "size": 3913466
+  },
+  "data-is-not-the-new-oil-story.png": {
+   "md5": "9d1d26e22003f4f13f689e01d1886acb",
+   "size": 5115853
+  },
+  "data-is-not-the-new-oil.png": {
+   "md5": "711b78e2c9422087bc6e520019d8385f",
+   "size": 2463135
+  },
+  "dear-dario-portrait.png": {
+   "md5": "72a22f428df2ff0a8cbde415959b0e1f",
+   "size": 3777926
+  },
+  "dear-dario-story.png": {
+   "md5": "e92f927e3c87ed9999414bc8a3ce627f",
+   "size": 4423553
+  },
+  "dear-dario.png": {
+   "md5": "e81f11f4031ca87ba63824aa9f4d0c31",
+   "size": 2601284
+  },
+  "dear-medium-what-are-you-doing-portrait.png": {
+   "md5": "876cfc33d62d28c55466465342625961",
+   "size": 2143219
+  },
+  "dear-medium-what-are-you-doing-story.png": {
+   "md5": "892e1c41bf054e60884ec9d2e2e2b365",
+   "size": 2667721
+  },
+  "dear-medium-what-are-you-doing.png": {
+   "md5": "3f8eddad84bd4d75b510e403d50139eb",
+   "size": 1564980
+  },
+  "dear-rich-white-people-portrait.png": {
+   "md5": "51231d085c08a8199bd032bca05204d2",
+   "size": 1953325
+  },
+  "dear-rich-white-people-story.png": {
+   "md5": "853d459272858eccfaec8211018bff39",
+   "size": 2739976
+  },
+  "dear-rich-white-people.png": {
+   "md5": "f318c3a4958c4df7385520c670d9019c",
+   "size": 751123
+  },
+  "dear-sam-portrait.png": {
+   "md5": "6d398f678c9fe620fb64cd4238352e68",
+   "size": 3947559
+  },
+  "dear-sam-story.png": {
+   "md5": "d4b7d75b1808209d3d3c4ea31df7d85f",
+   "size": 4715307
+  },
+  "dear-sam.png": {
+   "md5": "d072805017f10911427d6699a1e9ac42",
+   "size": 2739833
+  },
+  "decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning-portrait.png": {
+   "md5": "0d5c1893ff1d9141852d6f35ff672c51",
+   "size": 1738335
+  },
+  "decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning-story.png": {
+   "md5": "2c118e2760e86be182cbddbf33bb2f46",
+   "size": 2485614
+  },
+  "decoding-ai-why-transparent-models-matter-in-the-age-of-machine-learning.png": {
+   "md5": "c71df34bb3eb61bf8d489841df9aad09",
+   "size": 913855
+  },
+  "del-icio-us-was-right-we-built-claudacious-portrait.png": {
+   "md5": "f90435ee13ba3fbc3610d4e8157bc0be",
+   "size": 1019236
+  },
+  "del-icio-us-was-right-we-built-claudacious-story.png": {
+   "md5": "14feddd7365957648224503bf6706f60",
+   "size": 1156925
+  },
+  "del-icio-us-was-right-we-built-claudacious.png": {
+   "md5": "da5dd2de9931f71a06d3464fb57efc0d",
+   "size": 738226
+  },
+  "disneys-autonomatronics-odyssey-portrait.png": {
+   "md5": "25f970caf79e7ada660dd23656adc2e4",
+   "size": 2674293
+  },
+  "disneys-autonomatronics-odyssey-story.png": {
+   "md5": "4feafa3d43a42958a46e152a8a3ed425",
+   "size": 3248932
+  },
+  "disneys-autonomatronics-odyssey.png": {
+   "md5": "f91cbbf870cbe0303317f65ad9abf98e",
+   "size": 1551108
+  },
+  "divided-we-stand-united-we-fall-portrait.png": {
+   "md5": "323202c1dfe34c099db4d2dd3f7aa863",
+   "size": 2701773
+  },
+  "divided-we-stand-united-we-fall-story.png": {
+   "md5": "0470e09dac67c51db00614eabcf6e733",
+   "size": 3359097
+  },
+  "divided-we-stand-united-we-fall.png": {
+   "md5": "ad0976087302cc324b13d2fa75c85e3b",
+   "size": 1875368
+  },
+  "economic-uncharted-territory-moving-beyond-obsolete-maps-portrait.png": {
+   "md5": "a146afefcf9f7561feb95831155652f2",
+   "size": 5295005
+  },
+  "economic-uncharted-territory-moving-beyond-obsolete-maps-story.png": {
+   "md5": "c578d520a5b49ad873300c8aaca70d9f",
+   "size": 6530445
+  },
+  "economic-uncharted-territory-moving-beyond-obsolete-maps.png": {
+   "md5": "def7adc05dd76040a3ebe0e72ce9b26c",
+   "size": 3322917
+  },
+  "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2-portrait.png": {
+   "md5": "26eeed99035bd293b15ed89bbf163c7f",
+   "size": 6113306
+  },
+  "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2-story.png": {
+   "md5": "3c76bbb80f6971e56bf71bfd49bd31d7",
+   "size": 7304701
+  },
+  "embracing-creativity-your-gateway-to-success-in-the-digital-landscape-2.png": {
+   "md5": "dca39b5e1547564ae518ef11bcc8ca88",
+   "size": 3848760
+  },
+  "experience-futures-the-rise-of-human-experience-hx-portrait.png": {
+   "md5": "99e3c8bd0e977b1b0285a325d6a01990",
+   "size": 878591
+  },
+  "experience-futures-the-rise-of-human-experience-hx-story.png": {
+   "md5": "b1e54c69e47a16c36db6e201f0206421",
+   "size": 1109015
+  },
+  "experience-futures-the-rise-of-human-experience-hx.png": {
+   "md5": "32915b62dbd334ca06157eb5d5bd6950",
+   "size": 462682
+  },
+  "explainable-ai-illuminating-the-black-box-portrait.png": {
+   "md5": "82b753a39389c6673cf9bf067d9066a6",
+   "size": 3286593
+  },
+  "explainable-ai-illuminating-the-black-box-story.png": {
+   "md5": "e361e4164bbb54c531852ea5829be424",
+   "size": 4133212
+  },
+  "explainable-ai-illuminating-the-black-box.png": {
+   "md5": "2a7d8437f691038c2df5080a2dcb2cdc",
+   "size": 2235604
+  },
+  "for-the-jet-bound-digital-nomads-portrait.png": {
+   "md5": "8299095b094e7462abac6c3029cf28ea",
+   "size": 4753613
+  },
+  "for-the-jet-bound-digital-nomads-story.png": {
+   "md5": "3455f3df8715c627fcd071b10755257f",
+   "size": 6615563
+  },
+  "for-the-jet-bound-digital-nomads.png": {
+   "md5": "3916b41df42e75bd7390e49849761d90",
+   "size": 2840884
+  },
+  "from-ar-glasses-to-reality-bending-lenses-portrait.png": {
+   "md5": "58c32539cd9222bc07411a2a7b36f34d",
+   "size": 4862170
+  },
+  "from-ar-glasses-to-reality-bending-lenses-story.png": {
+   "md5": "b4dede2c0871ec78bc07db1bae9868ce",
+   "size": 6147690
+  },
+  "from-ar-glasses-to-reality-bending-lenses.png": {
+   "md5": "6c54301f778724e4673b9874fabc5944",
+   "size": 3045035
+  },
+  "from-likes-to-leaves-when-trust-became-the-ultimate-unfriend-portrait.png": {
+   "md5": "06cabf5e767c707a56f29d48bc45aa50",
+   "size": 4829157
+  },
+  "from-likes-to-leaves-when-trust-became-the-ultimate-unfriend-story.png": {
+   "md5": "83daddb27e319948ac86d48a16b29328",
+   "size": 5775600
+  },
+  "from-likes-to-leaves-when-trust-became-the-ultimate-unfriend.png": {
+   "md5": "419d29fc310b680d216bbc4baf8feb53",
+   "size": 2945657
+  },
+  "from-tasks-to-systems-the-true-ai-revolution-in-services-portrait.png": {
+   "md5": "9c9e0a750b26258d3361177305322e9f",
+   "size": 2521988
+  },
+  "from-tasks-to-systems-the-true-ai-revolution-in-services-story.png": {
+   "md5": "9e4dde33bd774c6eade24a7578021d30",
+   "size": 2861603
+  },
+  "from-tasks-to-systems-the-true-ai-revolution-in-services.png": {
+   "md5": "e4dfef58d57632b9fa1ef451a2ec5971",
+   "size": 2039705
+  },
+  "get-real-youre-20-years-late-and-the-problem-is-200-times-worse-portrait.png": {
+   "md5": "d5d02101a7db7d2ec628415d4820b2ed",
+   "size": 4687514
+  },
+  "get-real-youre-20-years-late-and-the-problem-is-200-times-worse-story.png": {
+   "md5": "d09beec5d716976c9cb2912d45951892",
+   "size": 5833375
+  },
+  "get-real-youre-20-years-late-and-the-problem-is-200-times-worse.png": {
+   "md5": "8f5960a64284b49a05073c1171f67da8",
+   "size": 3076854
+  },
+  "google-just-admitted-i-was-right-i-didnt-even-flinch-portrait.png": {
+   "md5": "5be540bc165140281b4bec9cd932550b",
+   "size": 5223992
+  },
+  "google-just-admitted-i-was-right-i-didnt-even-flinch-story.png": {
+   "md5": "49ce728c7eff058d935656d307be3725",
+   "size": 6346347
+  },
+  "google-just-admitted-i-was-right-i-didnt-even-flinch.png": {
+   "md5": "7a3a0b20fc56a5d891d37a6682758e0b",
+   "size": 3405965
+  },
+  "gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage-portrait.png": {
+   "md5": "2ff61e7b4926c8cfb14a44788d822f63",
+   "size": 3354427
+  },
+  "gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage-story.png": {
+   "md5": "762e47fb716d2643bc8b2d77581f0115",
+   "size": 4172704
+  },
+  "gravity-batteries-harnessing-the-power-of-weight-as-a-renewable-energy-storage.png": {
+   "md5": "15b799a08ca3a23fadbefc14b5107cb3",
+   "size": 2163231
+  },
+  "how-apple-and-companion-ai-killed-privacy-without-anyone-noticing-portrait.png": {
+   "md5": "c57ee386aeeb598afca0b341a1515c57",
+   "size": 2109178
+  },
+  "how-apple-and-companion-ai-killed-privacy-without-anyone-noticing-story.png": {
+   "md5": "45918c747312742ca74f309820b59ea4",
+   "size": 2237914
+  },
+  "how-apple-and-companion-ai-killed-privacy-without-anyone-noticing.png": {
+   "md5": "05e71f93932b16995c13fc489f30c055",
+   "size": 1851336
+  },
+  "how-beautiful-failures-create-innovation-breakthroughs-portrait.png": {
+   "md5": "2e7a14b7db2acb5736ef58c29e451209",
+   "size": 1149258
+  },
+  "how-beautiful-failures-create-innovation-breakthroughs-story.png": {
+   "md5": "8d1b4da0361b874d3b96be13385f68af",
+   "size": 1274497
+  },
+  "how-beautiful-failures-create-innovation-breakthroughs.png": {
+   "md5": "46cefb561f82c27a07ead1adf59a379d",
+   "size": 1018637
+  },
+  "how-cnns-work-wonders-and-bypasses-copyright-portrait.png": {
+   "md5": "a9b89b9bc85c46fe5a79edac88a7946f",
+   "size": 4543248
+  },
+  "how-cnns-work-wonders-and-bypasses-copyright-story.png": {
+   "md5": "cb7c2c22b16e76592a37995f2416071b",
+   "size": 5649305
+  },
+  "how-cnns-work-wonders-and-bypasses-copyright.png": {
+   "md5": "85a6049ea8816f940fc91bc17cac858e",
+   "size": 2707580
+  },
+  "how-does-order-emerge-in-a-universe-built-for-chaos-portrait.png": {
+   "md5": "c1c4f95595f3988e717f5f80ad2e09a2",
+   "size": 3714557
+  },
+  "how-does-order-emerge-in-a-universe-built-for-chaos-story.png": {
+   "md5": "d2af3a40265c9ac49e72d98cf13a0fee",
+   "size": 4641593
+  },
+  "how-does-order-emerge-in-a-universe-built-for-chaos.png": {
+   "md5": "f12ad0538190bec4b6edf1e5cc7ed9d8",
+   "size": 2589479
+  },
+  "how-vector-embeddings-are-reshaping-the-internet-portrait.png": {
+   "md5": "850b4d1427bbad3e81aa82e795aa6409",
+   "size": 2884202
+  },
+  "how-vector-embeddings-are-reshaping-the-internet-story.png": {
+   "md5": "948e699b984ea15573bf0a2a4ea3c951",
+   "size": 3407205
+  },
+  "how-vector-embeddings-are-reshaping-the-internet.png": {
+   "md5": "a0a7278f193ec581f58e3643054c031b",
+   "size": 2074952
+  },
+  "how-your-drivers-license-is-just-santa-claus-with-government-backing-portrait.png": {
+   "md5": "76b16cc58773dee91d0a6f9a3f0672e6",
+   "size": 3925251
+  },
+  "how-your-drivers-license-is-just-santa-claus-with-government-backing-story.png": {
+   "md5": "eed1f0ee73fef2b1b5afe5a627827838",
+   "size": 4670081
+  },
+  "how-your-drivers-license-is-just-santa-claus-with-government-backing.png": {
+   "md5": "693a2d8076c9edfecba4e084cdf6e83b",
+   "size": 2744093
+  },
+  "human-in-the-room-portrait.png": {
+   "md5": "c95290a380636b0feb2a20032842f975",
+   "size": 2962213
+  },
+  "human-in-the-room-story.png": {
+   "md5": "3cb52c3c8cc8fbad82c7c311a5e74905",
+   "size": 3638021
+  },
+  "human-in-the-room.png": {
+   "md5": "ea6c5e5f6a336bf8416ba78e33f055df",
+   "size": 2219891
+  },
+  "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you-portrait.png": {
+   "md5": "c5b7bf5f09b6c817beeb909e1888d9f0",
+   "size": 2978578
+  },
+  "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you-story.png": {
+   "md5": "80e279139f05b1a9782b7788718b7935",
+   "size": 3983875
+  },
+  "i-asked-chatgpt-to-write-my-anti-ai-op-ed-and-the-results-will-shock-you.png": {
+   "md5": "863313704e3cb76189aab5533d7cdbed",
+   "size": 2209844
+  },
+  "i-call-dibs-an-intellectual-property-paradox-portrait.png": {
+   "md5": "5b1c5c91956d09d621689861d11ab201",
+   "size": 5809293
+  },
+  "i-call-dibs-an-intellectual-property-paradox-story.png": {
+   "md5": "1887dfe1c4ef0ba56975e21b18963fad",
+   "size": 7537807
+  },
+  "i-call-dibs-an-intellectual-property-paradox.png": {
+   "md5": "fc9c52a9a01f2cffc5c40f2377f6faa2",
+   "size": 3106425
+  },
+  "im-an-elevenlabs-pro-portrait.png": {
+   "md5": "78f1d7ae0773179efc9a4ce519280965",
+   "size": 2150032
+  },
+  "im-an-elevenlabs-pro-story.png": {
+   "md5": "8fa27acab34d69e5bd70362271762679",
+   "size": 2377368
+  },
+  "im-an-elevenlabs-pro.png": {
+   "md5": "e6ac80894593e787d04e1cd29d898a7c",
+   "size": 1325643
+  },
+  "innovations-and-challenges-in-wban-for-healthcare-copy-portrait.png": {
+   "md5": "56c8629c71ddf01fb7881239160b1a0a",
+   "size": 5544435
+  },
+  "innovations-and-challenges-in-wban-for-healthcare-copy-story.png": {
+   "md5": "2c446389e18f4d41080d57b2f0bcabf5",
+   "size": 6720288
+  },
+  "innovations-and-challenges-in-wban-for-healthcare-copy.png": {
+   "md5": "1bb3e7448e60ee3a6da0384ef0d66a88",
+   "size": 3337710
+  },
+  "innovations-and-challenges-in-wban-for-healthcare-portrait.png": {
+   "md5": "98e599924bb906e6baa4a7a0d2b67522",
+   "size": 4556978
+  },
+  "innovations-and-challenges-in-wban-for-healthcare-story.png": {
+   "md5": "fbf706b0d2aaf8a095c4f91b620f0705",
+   "size": 5929838
+  },
+  "innovations-and-challenges-in-wban-for-healthcare.png": {
+   "md5": "3e1255d774e825e42272a53752128cc1",
+   "size": 2705826
+  },
+  "intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind-portrait.png": {
+   "md5": "6eaf2d399f4a38c06806407d610c19ea",
+   "size": 4043058
+  },
+  "intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind-story.png": {
+   "md5": "ad90b79e400992d28809af2fa009cbdf",
+   "size": 5020693
+  },
+  "intelligence-at-the-edge-of-chaos-beyond-the-mechanical-mind.png": {
+   "md5": "03d23067494c297f47476d5a5948b434",
+   "size": 2386537
+  },
+  "intelligence-without-experience-portrait.png": {
+   "md5": "521203715c9d4fa8d9d7a77122c9b57a",
+   "size": 3200121
+  },
+  "intelligence-without-experience-story.png": {
+   "md5": "fc3fef0cba8ff20a676e6e8e9b8a6591",
+   "size": 3970342
+  },
+  "intelligence-without-experience.png": {
+   "md5": "93ca8c2d9cc80b29c6bbd4b123680d1a",
+   "size": 1341432
+  },
+  "is-layerzeros-stargate-a-portal-to-the-next-big-thing-portrait.png": {
+   "md5": "340d6bf72feef85b1a6bd67b5ee11f56",
+   "size": 1554385
+  },
+  "is-layerzeros-stargate-a-portal-to-the-next-big-thing-story.png": {
+   "md5": "e6619f8d2c5a875d6d2aed815a12faf9",
+   "size": 1940652
+  },
+  "is-layerzeros-stargate-a-portal-to-the-next-big-thing.png": {
+   "md5": "90437252bd644fb36d3c9efe2b410343",
+   "size": 903449
+  },
+  "linkedin-is-just-like-dating-courtship-rules-portrait.png": {
+   "md5": "aa6581d19f22e6339b57e2995ad4c011",
+   "size": 3390736
+  },
+  "linkedin-is-just-like-dating-courtship-rules-story.png": {
+   "md5": "bd67311a4787d6c0f854172c4eb7f80d",
+   "size": 4290399
+  },
+  "linkedin-is-just-like-dating-courtship-rules.png": {
+   "md5": "c64836c568f05b6fb13866660bda3a48",
+   "size": 2287570
+  },
+  "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day-portrait.png": {
+   "md5": "fac1d384c2e00bddec45e994394bd9f0",
+   "size": 4259822
+  },
+  "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day-story.png": {
+   "md5": "801d33001464ba85f4aac1c35fae0e82",
+   "size": 5755491
+  },
+  "love-in-the-time-of-algorithms-an-open-letter-to-valentines-day.png": {
+   "md5": "dff2b81029703c59adefa0c2e12e6e4f",
+   "size": 2423314
+  },
+  "meta-doubles-down-on-agi-portrait.png": {
+   "md5": "45c8cd3c5a09bb4fa5956f4cf3a23ffb",
+   "size": 5041685
+  },
+  "meta-doubles-down-on-agi-story.png": {
+   "md5": "49ada84d0dee65479c352539f9b6d007",
+   "size": 6230446
+  },
+  "meta-doubles-down-on-agi.png": {
+   "md5": "d1a16e0cecfe368f46b63bec79fcce05",
+   "size": 3138697
+  },
+  "mirror-world-of-the-three-body-problem-portrait.png": {
+   "md5": "3de735393e8a9625cb9d6657a303edba",
+   "size": 5084916
+  },
+  "mirror-world-of-the-three-body-problem-story.png": {
+   "md5": "0996e2a46ebc28a44f8cb8d69aed6890",
+   "size": 5869483
+  },
+  "mirror-world-of-the-three-body-problem.png": {
+   "md5": "8bd5aa30934c69c2a68acfc18d599de7",
+   "size": 3355581
+  },
+  "move-fast-and-build-things-why-engineers-build-not-code-portrait.png": {
+   "md5": "92c394807ad41b01102eaed29f7dfa2a",
+   "size": 4153683
+  },
+  "move-fast-and-build-things-why-engineers-build-not-code-story.png": {
+   "md5": "081904ea7e9ac413503ed207e467dcaf",
+   "size": 4976376
+  },
+  "move-fast-and-build-things-why-engineers-build-not-code.png": {
+   "md5": "83735fd7162bec942e4749a9a4a45a0f",
+   "size": 2691465
+  },
+  "my-love-affair-with-the-ellipsis-portrait.png": {
+   "md5": "19621e9608db8014b471284d6eeb9fa6",
+   "size": 3164231
+  },
+  "my-love-affair-with-the-ellipsis-story.png": {
+   "md5": "4ab47449bbda986c9f1f07d5a1b6bae5",
+   "size": 3988339
+  },
+  "my-love-affair-with-the-ellipsis.png": {
+   "md5": "ef08e746f0477201f6c6ebd40ffec16a",
+   "size": 2299349
+  },
+  "navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure-portrait.png": {
+   "md5": "153522fbd7b93dc22bb32271ef601a3b",
+   "size": 2792007
+  },
+  "navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure-story.png": {
+   "md5": "5caddeefb997760b2d04951bcb7029f3",
+   "size": 3435690
+  },
+  "navigating-the-tightrope-of-ai-transparency-and-the-risk-of-overexposure.png": {
+   "md5": "5429a803964624dda0f2e99bfe98d86c",
+   "size": 1832854
+  },
+  "no-collar-jobs-beyond-the-ai-disruption-portrait.png": {
+   "md5": "18ff47f71c1f57812e66ec6e9b664b29",
+   "size": 3941476
+  },
+  "no-collar-jobs-beyond-the-ai-disruption-story.png": {
+   "md5": "746497729379f4f7c68350410cfb6bd6",
+   "size": 4891078
+  },
+  "no-collar-jobs-beyond-the-ai-disruption.png": {
+   "md5": "2127d0ca0368424f8d00382ed1067f7e",
+   "size": 2915872
+  },
+  "no-heir-no-lesson-portrait.png": {
+   "md5": "1b5e0bdb4ec9b76c30a7c500ab608fee",
+   "size": 3479642
+  },
+  "no-heir-no-lesson-story.png": {
+   "md5": "8e83098905a44ebb93f121e2ecc78357",
+   "size": 4196855
+  },
+  "no-heir-no-lesson.png": {
+   "md5": "e91480666e90f3d7609bf3d93f8c841a",
+   "size": 2348789
+  },
+  "no-one-leaves-a-good-company-an-openai-story-portrait.png": {
+   "md5": "7b6e5ffc06cab0c846680480c45544a8",
+   "size": 4364636
+  },
+  "no-one-leaves-a-good-company-an-openai-story-story.png": {
+   "md5": "c0b4695cdc7b52aac95336ccc325b5bd",
+   "size": 5215010
+  },
+  "no-one-leaves-a-good-company-an-openai-story.png": {
+   "md5": "6feb7e0590d7a9e6272d4fb78c1d2f9b",
+   "size": 2770050
+  },
+  "no-really-ask-me-anything-portrait.png": {
+   "md5": "d777da4397c9e6e208c8332451d19bd9",
+   "size": 3657798
+  },
+  "no-really-ask-me-anything-story.png": {
+   "md5": "67df65390b47ac917e47367f05bab6f3",
+   "size": 4576876
+  },
+  "no-really-ask-me-anything.png": {
+   "md5": "2418086aed64f9dcf4e447a8974761fb",
+   "size": 2439941
+  },
+  "not-just-another-essay-about-deepseek-a-ransomware-edition-portrait.png": {
+   "md5": "6a8d5083d766ced76e70d7b7fbb28aa9",
+   "size": 4718124
+  },
+  "not-just-another-essay-about-deepseek-a-ransomware-edition-story.png": {
+   "md5": "659ad7d436c9fb96b4e1905da21786c8",
+   "size": 5805958
+  },
+  "not-just-another-essay-about-deepseek-a-ransomware-edition.png": {
+   "md5": "b67300309e653faf80d748077697826f",
+   "size": 2892945
+  },
+  "pearls-of-wisdom-90th-edition-portrait.png": {
+   "md5": "f2653349e0e1d28b05fa051eef8ab068",
+   "size": 3401101
+  },
+  "pearls-of-wisdom-90th-edition-story.png": {
+   "md5": "a21a8b212025e211f2e7558803598436",
+   "size": 4278371
+  },
+  "pearls-of-wisdom-90th-edition.png": {
+   "md5": "c359c46b1c3f3a1b12e16c3d713c0b56",
+   "size": 2272652
+  },
+  "pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality-portrait.png": {
+   "md5": "d8dcb08d51981e5a20b4654317aec3fe",
+   "size": 2622480
+  },
+  "pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality-story.png": {
+   "md5": "f7558f9c0757944306f3cdd8a410f842",
+   "size": 3334318
+  },
+  "pixels-and-perceptions-unraveling-ais-influence-on-childrens-reality.png": {
+   "md5": "1eb32bd16ee5566df6152e39f2de718f",
+   "size": 1720631
+  },
+  "power-in-the-background-portrait.png": {
+   "md5": "7137c9d7d672804124c0e0d001917b4f",
+   "size": 3473645
+  },
+  "power-in-the-background-story.png": {
+   "md5": "636dba9e36c4d0719349e51e7dcb84e2",
+   "size": 4135163
+  },
+  "power-in-the-background.png": {
+   "md5": "a06628b63e064843e59c60bf568db3c1",
+   "size": 2555157
+  },
+  "revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals-portrait.png": {
+   "md5": "c93945475fb5a08a8ee07b8cc3f319b2",
+   "size": 3156464
+  },
+  "revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals-story.png": {
+   "md5": "9dd06939e415ca2b43ef7eeed48a6447",
+   "size": 3993499
+  },
+  "revolutionary-technology-allows-seeing-through-walls-using-wi-fi-signals.png": {
+   "md5": "411963effa2c61c47544cf13bf68acc2",
+   "size": 1895846
+  },
+  "revolutionizing-omnichain-transactions-with-layerzero-portrait.png": {
+   "md5": "1b38b76ebc08235af380fd994ff5ae31",
+   "size": 4234470
+  },
+  "revolutionizing-omnichain-transactions-with-layerzero-story.png": {
+   "md5": "18f59066b35eace99e8682e7f7ae8fcb",
+   "size": 4952984
+  },
+  "revolutionizing-omnichain-transactions-with-layerzero.png": {
+   "md5": "f1b2ab4147e1fd1ec22a1be8acb991ff",
+   "size": 2406802
+  },
+  "role-of-ai-in-eco-energy-portrait.png": {
+   "md5": "f10b9182bfc8ecc7b3d3d648a895bbb5",
+   "size": 4805190
+  },
+  "role-of-ai-in-eco-energy-story.png": {
+   "md5": "cfa2018751337f2aa3b48ece633fca22",
+   "size": 5713394
+  },
+  "role-of-ai-in-eco-energy.png": {
+   "md5": "493a94101b082ca9d2c0a016a7baaff0",
+   "size": 2880141
+  },
+  "say-viral-one-more-time-ill-punch-you-in-the-throat-portrait.png": {
+   "md5": "b90af4a15244e6e522375fefc8db806b",
+   "size": 2389213
+  },
+  "say-viral-one-more-time-ill-punch-you-in-the-throat-story.png": {
+   "md5": "67525ccc412a9c9a0a1fbb25d41efb72",
+   "size": 3176641
+  },
+  "say-viral-one-more-time-ill-punch-you-in-the-throat.png": {
+   "md5": "f94034fe781f6dd6fb872ddb1c7be2cf",
+   "size": 1637349
+  },
+  "scrapyard-futures-in-the-digital-ruins-portrait.png": {
+   "md5": "57dfb6094f3d52596ab5a5cf540fd5df",
+   "size": 4688040
+  },
+  "scrapyard-futures-in-the-digital-ruins-story.png": {
+   "md5": "32d64726ca4378addeb3c36087efcb39",
+   "size": 5531305
+  },
+  "scrapyard-futures-in-the-digital-ruins.png": {
+   "md5": "6cedc7c47c6efff6343d2084f9600e82",
+   "size": 3056752
+  },
+  "silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years-portrait.png": {
+   "md5": "9a387a95d77080ef4a9bec45c9865a20",
+   "size": 4919679
+  },
+  "silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years-story.png": {
+   "md5": "9382aa6dccd4b6cc71c3d17bfd9ccd5c",
+   "size": 6515291
+  },
+  "silicon-valley-is-building-a-600-billion-casino-with-chips-that-expire-in-three-years.png": {
+   "md5": "e5f755f050f6b521de590fda360b73c6",
+   "size": 2769738
+  },
+  "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do-portrait.png": {
+   "md5": "b1091f91563ee47a607d2000835d09c8",
+   "size": 1257923
+  },
+  "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do-story.png": {
+   "md5": "11bd17f3aa9688afc61fc990b99d4ff6",
+   "size": 1455175
+  },
+  "sometimes-life-thrusts-you-into-what-you-were-always-meant-to-do.png": {
+   "md5": "27fd0346912c2c32796b80a20c281ebc",
+   "size": 948360
+  },
+  "tech-titans-exposed-for-profiting-from-our-personal-secrets-portrait.png": {
+   "md5": "60bf5dcf13f0e8d36cc4a31e13837638",
+   "size": 2151984
+  },
+  "tech-titans-exposed-for-profiting-from-our-personal-secrets-story.png": {
+   "md5": "8f5421b592b4f03436887c46e71d4555",
+   "size": 2572422
+  },
+  "tech-titans-exposed-for-profiting-from-our-personal-secrets.png": {
+   "md5": "052cb20addbdbf921b25743a8c423542",
+   "size": 1607896
+  },
+  "thanks-be-given-portrait.png": {
+   "md5": "58fec1d842dfa5f1b8d5e744a59993af",
+   "size": 1954000
+  },
+  "thanks-be-given-story.png": {
+   "md5": "0bc948b507abe1a7ce020cfe24f59b52",
+   "size": 2274990
+  },
+  "thanks-be-given.png": {
+   "md5": "e83ed0b03637c2b1101fcaf7c933724b",
+   "size": 1618449
+  },
+  "the-1-5-billion-fishing-trip-portrait.png": {
+   "md5": "25c58c7836dd93d20a6a1af1818693d2",
+   "size": 4150990
+  },
+  "the-1-5-billion-fishing-trip-story.png": {
+   "md5": "b766779647f711ad4f366f94b0a30feb",
+   "size": 5018757
+  },
+  "the-1-5-billion-fishing-trip.png": {
+   "md5": "2e735fd8b0489ce62c7dbce3202b32e9",
+   "size": 2689791
+  },
+  "the-10-delusion-portrait.png": {
+   "md5": "324e21a008b855874576de14efa9afcc",
+   "size": 5533254
+  },
+  "the-10-delusion-story.png": {
+   "md5": "d067d6a773b5a6e3248aff24f5466011",
+   "size": 6656130
+  },
+  "the-10-delusion.png": {
+   "md5": "f9118b23b7ee5a29bb42658bf4a6b059",
+   "size": 3341482
+  },
+  "the-20-billion-distraction-portrait.png": {
+   "md5": "1f0d82891988b91b69ba38d51fabac6b",
+   "size": 3909064
+  },
+  "the-20-billion-distraction-story.png": {
+   "md5": "5a82c03bf2b7895c4eeb893ac008f71f",
+   "size": 5052533
+  },
+  "the-20-billion-distraction.png": {
+   "md5": "f7964a6cd61e5bc3278575d01bb5ac82",
+   "size": 2197358
+  },
+  "the-5-whys-guys-toyotas-ingeniously-persistent-curiosity-portrait.png": {
+   "md5": "1cea2868f56b3bf10881964a2ec880f1",
+   "size": 4301921
+  },
+  "the-5-whys-guys-toyotas-ingeniously-persistent-curiosity-story.png": {
+   "md5": "99d71e2787c749892dc081a5f5612ab1",
+   "size": 5449244
+  },
+  "the-5-whys-guys-toyotas-ingeniously-persistent-curiosity.png": {
+   "md5": "89c580b4d7278e9e126017e651567253",
+   "size": 2828777
+  },
+  "the-age-of-experience-portrait.png": {
+   "md5": "e09a47bb9d1a5808324fcc4c009aa6aa",
+   "size": 2474183
+  },
+  "the-age-of-experience-story.png": {
+   "md5": "72be143498fab5b1a3996e485d929e6b",
+   "size": 2893383
+  },
+  "the-age-of-experience.png": {
+   "md5": "2b0673facaf8a28edef4155ccebfe12b",
+   "size": 1800840
+  },
+  "the-ai-powerhouses-amazon-microsoft-and-the-battle-for-ai-supremacy-portrait.png": {
+   "md5": "192328abf6e470f15e7b28c71cb0dbb8",
+   "size": 4620263
+  },
+  "the-ai-powerhouses-amazon-microsoft-and-the-battle-for-ai-supremacy-story.png": {
+   "md5": "797266934869065f378299caef4a7fd3",
+   "size": 5964910
+  },
+  "the-ai-powerhouses-amazon-microsoft-and-the-battle-for-ai-supremacy.png": {
+   "md5": "022d2c7faacdc2fda6c19d74c9aa0c3c",
+   "size": 2623811
+  },
+  "the-ai-revolution-isnt-what-you-think-it-is-portrait.png": {
+   "md5": "2479bcdd05ffa53a1f8392fea48c978f",
+   "size": 4139137
+  },
+  "the-ai-revolution-isnt-what-you-think-it-is-story.png": {
+   "md5": "666d4b3deca8463ca5bc2d03b3dcd6e6",
+   "size": 5433159
+  },
+  "the-ai-revolution-isnt-what-you-think-it-is.png": {
+   "md5": "76178185a7fe151b41a888c485bbed85",
+   "size": 2409721
+  },
+  "the-amnesia-machine-2-portrait.png": {
+   "md5": "2232dc8e52532e420240488f875a6619",
+   "size": 3356104
+  },
+  "the-amnesia-machine-2-story.png": {
+   "md5": "f034bc0246ee9b925e3c4b5fed8b1c71",
+   "size": 4045247
+  },
+  "the-amnesia-machine-2.png": {
+   "md5": "8ab92195248d8942745eb7f17de7e283",
+   "size": 1891951
+  },
+  "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance-portrait.png": {
+   "md5": "c6d1010f245700a163c26575edec0fa5",
+   "size": 2096619
+  },
+  "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance-story.png": {
+   "md5": "9ebfb19a1d993c893e0ea6734f633984",
+   "size": 2763090
+  },
+  "the-architecture-of-invisibility-privacy-in-the-age-of-ultra-wideband-surveillance.png": {
+   "md5": "262931e3dbfb54505611be062aee5f75",
+   "size": 1266842
+  },
+  "the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world-portrait.png": {
+   "md5": "d2dc82ce2572598a92cc47674042fa77",
+   "size": 3262913
+  },
+  "the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world-story.png": {
+   "md5": "1ec01f72b69fd6cc86f1066abd318778",
+   "size": 4247390
+  },
+  "the-art-of-persuasion-how-aristotles-ancient-wisdom-still-shapes-our-world.png": {
+   "md5": "6f2126553ae1d24d1fa199b9d3f4cc81",
+   "size": 1707501
+  },
+  "the-art-of-productive-theft-steve-jobs-real-genius-portrait.png": {
+   "md5": "1941760bf5236837ad1eea7144ab1d4b",
+   "size": 1569595
+  },
+  "the-art-of-productive-theft-steve-jobs-real-genius-story.png": {
+   "md5": "e432607faf3a6dde199cce3250e7daf5",
+   "size": 1723972
+  },
+  "the-art-of-productive-theft-steve-jobs-real-genius.png": {
+   "md5": "8447e50bbc5b2dc39dc94c0c85df7260",
+   "size": 1113614
+  },
+  "the-audio-revolution-ai-and-the-future-of-sound-portrait.png": {
+   "md5": "e39bd976ae18e98a03c49f0396037ef5",
+   "size": 3838778
+  },
+  "the-audio-revolution-ai-and-the-future-of-sound-story.png": {
+   "md5": "89d69640c68d8d24bae270fc956bfb2d",
+   "size": 4480596
+  },
+  "the-audio-revolution-ai-and-the-future-of-sound.png": {
+   "md5": "8a032bb960f0777331e88b9ced297767",
+   "size": 2437210
+  },
+  "the-bible-humanitys-first-large-language-model-2-portrait.png": {
+   "md5": "f5f3a517e15c14285be530e84324864f",
+   "size": 4268731
+  },
+  "the-bible-humanitys-first-large-language-model-2-story.png": {
+   "md5": "3265a7ac6dc59c473e5a055e57f7cb2d",
+   "size": 5498353
+  },
+  "the-bible-humanitys-first-large-language-model-2.png": {
+   "md5": "688f6a70c9095b4c0cf89981616451e0",
+   "size": 2240448
+  },
+  "the-blindness-of-the-visionary-why-most-people-cant-see-around-corners-portrait.png": {
+   "md5": "1af783a14e5b8bb1ffe6cc20792a9862",
+   "size": 3630634
+  },
+  "the-blindness-of-the-visionary-why-most-people-cant-see-around-corners-story.png": {
+   "md5": "cc03ae08cbb5e4be5a0a76fc292deba8",
+   "size": 4461579
+  },
+  "the-blindness-of-the-visionary-why-most-people-cant-see-around-corners.png": {
+   "md5": "86ae240d82d4704b50f710955f8e3719",
+   "size": 2304979
+  },
+  "the-bullet-holes-we-cant-see-portrait.png": {
+   "md5": "c1c142ae494ba8d492b5ee76e16db13c",
+   "size": 2621859
+  },
+  "the-bullet-holes-we-cant-see-story.png": {
+   "md5": "76656db8982f3a1b6eea3b18b84c7477",
+   "size": 3072929
+  },
+  "the-bullet-holes-we-cant-see.png": {
+   "md5": "29dbc36384f3604eec9745254688c3ac",
+   "size": 1650265
+  },
+  "the-computational-autocracy-portrait.png": {
+   "md5": "dd49bb6feba1d9b97e7bcfb62013a95a",
+   "size": 3890009
+  },
+  "the-computational-autocracy-story.png": {
+   "md5": "10b8e7a2bdd0cf7c21283a70487d4049",
+   "size": 4613475
+  },
+  "the-computational-autocracy.png": {
+   "md5": "3c47a1e767ffac7f771f9074a94f2b9b",
+   "size": 2477936
+  },
+  "the-consulting-industrys-terminal-diagnosis-portrait.png": {
+   "md5": "9398172da0144e626fd921a45ccea8d0",
+   "size": 4021396
+  },
+  "the-consulting-industrys-terminal-diagnosis-story.png": {
+   "md5": "e89bba1cdda2df9d392cef0f1fc6c99d",
+   "size": 5246433
+  },
+  "the-consulting-industrys-terminal-diagnosis.png": {
+   "md5": "69557a080706270c40b2d305eeae0da7",
+   "size": 2399892
+  },
+  "the-cost-of-being-right-portrait.png": {
+   "md5": "5d257fbf733a0ae2fca04a6c39158739",
+   "size": 3657130
+  },
+  "the-cost-of-being-right-story.png": {
+   "md5": "eadfff5c188a36ba627d65b691607750",
+   "size": 4314153
+  },
+  "the-cost-of-being-right.png": {
+   "md5": "f57da0909788fd5b818519b93dd368a5",
+   "size": 2616725
+  },
+  "the-cow-came-last-portrait.png": {
+   "md5": "67eaac6b1efa08d9828d62d56718b590",
+   "size": 2888012
+  },
+  "the-cow-came-last-story.png": {
+   "md5": "68c7266022bbc3c89e5ace8717e5e946",
+   "size": 3432415
+  },
+  "the-cow-came-last.png": {
+   "md5": "a28506c2e6da9386ad6f229c43802603",
+   "size": 1646231
+  },
+  "the-creator-economy-from-experience-to-creation-portrait.png": {
+   "md5": "15fcf45b097028bb31cd843212bf9c9b",
+   "size": 3110430
+  },
+  "the-creator-economy-from-experience-to-creation-story.png": {
+   "md5": "6dacc2243466b2b69c2f9d2fccb1eed5",
+   "size": 3898906
+  },
+  "the-creator-economy-from-experience-to-creation.png": {
+   "md5": "c0fc177153489cc8d9b3e25c5912aada",
+   "size": 1941913
+  },
+  "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake-portrait.png": {
+   "md5": "7b554470d5d01ce67e54ec4a5092baab",
+   "size": 4247901
+  },
+  "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake-story.png": {
+   "md5": "7711590383827ba009bd0a7df3e2d46c",
+   "size": 5651368
+  },
+  "the-dangerous-delusion-of-digital-spatial-intelligence-silicon-valleys-trillion-dollar-mistake.png": {
+   "md5": "18cc846edcbfa2de6c766a4c2ead37a3",
+   "size": 2529793
+  },
+  "the-day-we-made-ourselves-obsolete-portrait.png": {
+   "md5": "6df60191ef8dac2d29e50187ed84f52e",
+   "size": 3289030
+  },
+  "the-day-we-made-ourselves-obsolete-story.png": {
+   "md5": "b0479356fb4d4c0c6e0a6f689c8006e5",
+   "size": 3902810
+  },
+  "the-day-we-made-ourselves-obsolete.png": {
+   "md5": "1f0b77e5d5af5bc63ffe0b8b859dd381",
+   "size": 2406582
+  },
+  "the-digital-biomarker-revolution-transforming-healthcare-by-2030-portrait.png": {
+   "md5": "22592aa2512ca724174a3e515f05dea5",
+   "size": 4821781
+  },
+  "the-digital-biomarker-revolution-transforming-healthcare-by-2030-story.png": {
+   "md5": "17541088e1db7d6c3e6a7590b579d901",
+   "size": 6150281
+  },
+  "the-digital-biomarker-revolution-transforming-healthcare-by-2030.png": {
+   "md5": "848c93f7efb2fcbbf55400449b2cc321",
+   "size": 2776330
+  },
+  "the-digital-coup-portrait.png": {
+   "md5": "8eba7a60a5082605e4475f8b93233001",
+   "size": 5392009
+  },
+  "the-digital-coup-story.png": {
+   "md5": "a44c9883cb3e63508095505d78031299",
+   "size": 6832334
+  },
+  "the-digital-coup.png": {
+   "md5": "fb117a12bb936bc60b886ffe16fea04c",
+   "size": 3066381
+  },
+  "the-double-collapse-portrait.png": {
+   "md5": "43b550c49c66a4abe414ed34d4e646ac",
+   "size": 4172290
+  },
+  "the-double-collapse-story.png": {
+   "md5": "358a3cd1ea41bf051d4f5b4dba66fbfd",
+   "size": 5079707
+  },
+  "the-double-collapse.png": {
+   "md5": "923a565e401473fd0d3ef82b99a987a2",
+   "size": 2883028
+  },
+  "the-emerging-security-paradigm-in-ai-development-portrait.png": {
+   "md5": "9dd408fa0a6965bfbb909dee7ff3d60b",
+   "size": 3552615
+  },
+  "the-emerging-security-paradigm-in-ai-development-story.png": {
+   "md5": "5763c408385feb1075e32285ddee5faa",
+   "size": 4268833
+  },
+  "the-emerging-security-paradigm-in-ai-development.png": {
+   "md5": "74739e4fa36517251419055bb351a8f2",
+   "size": 2630183
+  },
+  "the-explosive-growth-of-ai-portrait.png": {
+   "md5": "95b4d49b60ef723dfe0d552d39d12b82",
+   "size": 2727386
+  },
+  "the-explosive-growth-of-ai-story.png": {
+   "md5": "a21e4366ef051b69d3c62307abafcec0",
+   "size": 3935489
+  },
+  "the-explosive-growth-of-ai.png": {
+   "md5": "c121bdd59bbe523d7499540a9b390c61",
+   "size": 1053603
+  },
+  "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self-portrait.png": {
+   "md5": "aec241b52b721bcd62c5f82e55f78a75",
+   "size": 5878353
+  },
+  "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self-story.png": {
+   "md5": "3407b98e1c44f929cf6384625bd780d7",
+   "size": 7445565
+  },
+  "the-fatal-flaw-in-how-we-introduce-ourselves-why-corporate-americas-obsession-with-self.png": {
+   "md5": "61ef516013b818f5c00daabd297f249a",
+   "size": 3117244
+  },
+  "the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete-portrait.png": {
+   "md5": "bf2c65c992506f295188ebc89b0a3d8a",
+   "size": 4545720
+  },
+  "the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete-story.png": {
+   "md5": "1b51e50289485924f6db4df6d5c29997",
+   "size": 5410164
+  },
+  "the-grand-delusion-why-our-models-of-reality-are-fundamentally-incomplete.png": {
+   "md5": "cdbd2a32f00eaa281c15cfc9032269a2",
+   "size": 2913995
+  },
+  "the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow-portrait.png": {
+   "md5": "efdac36e6208bb6d920c7e153c5bd419",
+   "size": 3444180
+  },
+  "the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow-story.png": {
+   "md5": "ab0d4b1d17bcf8fa6faff9bc440cc4dc",
+   "size": 4022629
+  },
+  "the-great-hollywood-heist-streamings-struggle-to-generate-cash-flow.png": {
+   "md5": "840ffc566f2755bf44b19f0b23053e35",
+   "size": 2442435
+  },
+  "the-great-marketing-delusion-portrait.png": {
+   "md5": "628db947eb05637573a44cdc1325bce8",
+   "size": 3941665
+  },
+  "the-great-marketing-delusion-story.png": {
+   "md5": "c4cd892ed6710a1c36558689fe53bdfb",
+   "size": 4757941
+  },
+  "the-great-marketing-delusion.png": {
+   "md5": "72f8be1343c78ced2627498a5ec38dd7",
+   "size": 2879156
+  },
+  "the-greengrocer-goes-to-davos-portrait.png": {
+   "md5": "84821ffb59c4f8a888f2d08c6e1766a9",
+   "size": 3876450
+  },
+  "the-greengrocer-goes-to-davos-story.png": {
+   "md5": "2a4766b42a8fdb2b33c9dc27998e7790",
+   "size": 4655503
+  },
+  "the-greengrocer-goes-to-davos.png": {
+   "md5": "39936c5e06bad8dcd6b30e116e7ce65f",
+   "size": 2456998
+  },
+  "the-hard-truths-about-our-technological-moment-portrait.png": {
+   "md5": "de499f4008a062a07b59bdf8dec8ae3d",
+   "size": 4843444
+  },
+  "the-hard-truths-about-our-technological-moment-story.png": {
+   "md5": "a6b3e3a2a7a2b7c4c6e67fe9499cb7bf",
+   "size": 5794145
+  },
+  "the-hard-truths-about-our-technological-moment.png": {
+   "md5": "9184c74eb6ca426b6dcce43eb4d6c4cf",
+   "size": 2905771
+  },
+  "the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation-portrait.png": {
+   "md5": "6a2e386793cf345210f25a239eda9616",
+   "size": 4363694
+  },
+  "the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation-story.png": {
+   "md5": "6d93e3f094668150ade0f359ecf6696d",
+   "size": 5335932
+  },
+  "the-home-depot-revolution-amazons-unconventional-path-to-chip-innovation.png": {
+   "md5": "511fd82e282b3206928f65249e3d5e19",
+   "size": 2737300
+  },
+  "the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing-portrait.png": {
+   "md5": "5a31393d0edcdaab76981870b03dbe4c",
+   "size": 2854617
+  },
+  "the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing-story.png": {
+   "md5": "b6a687d5f034fd240718cda675571cfe",
+   "size": 3910178
+  },
+  "the-internet-of-things-why-our-obsession-with-connected-devices-may-be-our-undoing.png": {
+   "md5": "2409de3aef0bff62a693a266851d2c9f",
+   "size": 1477692
+  },
+  "the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it-portrait.png": {
+   "md5": "9876e04d91bce2fec705d41c55995df3",
+   "size": 5181076
+  },
+  "the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it-story.png": {
+   "md5": "b4d5d1e65fdb4b122558f8fca10303f3",
+   "size": 6447848
+  },
+  "the-invisible-resolution-nvidias-neural-optics-and-the-death-of-computing-as-we-know-it.png": {
+   "md5": "a11abf4b15f895e7ff1c0d3adb529085",
+   "size": 2952136
+  },
+  "the-last-human-standing-and-how-we-learned-to-stop-thinking-portrait.png": {
+   "md5": "de453fff7ce6ae384f78c7a85c74b33d",
+   "size": 2635551
+  },
+  "the-last-human-standing-and-how-we-learned-to-stop-thinking-story.png": {
+   "md5": "a88361a6f1a5da201df3b713b6e1630a",
+   "size": 3075823
+  },
+  "the-last-human-standing-and-how-we-learned-to-stop-thinking.png": {
+   "md5": "3fb77de6a797a449df3bc7d438d630be",
+   "size": 1956627
+  },
+  "the-loyalty-revolution-from-punch-cards-to-predictive-analytics-portrait.png": {
+   "md5": "ee5214930fc4e4d3f64c25298ec8132c",
+   "size": 4017547
+  },
+  "the-loyalty-revolution-from-punch-cards-to-predictive-analytics-story.png": {
+   "md5": "a8f0af941ca22e024b90cee2bdf53020",
+   "size": 4556839
+  },
+  "the-loyalty-revolution-from-punch-cards-to-predictive-analytics.png": {
+   "md5": "3daff90887215de4973f109e00fadebf",
+   "size": 2794315
+  },
+  "the-luddites-last-stand-portrait.png": {
+   "md5": "5a881ee35ff407c1354843da06983f03",
+   "size": 4086414
+  },
+  "the-luddites-last-stand-story.png": {
+   "md5": "b190a34ed7d875b8b71a396d4935200d",
+   "size": 5105730
+  },
+  "the-luddites-last-stand.png": {
+   "md5": "cb94a351e8eba452d219a07ef1288b86",
+   "size": 2857372
+  },
+  "the-magic-kingdom-crumbles-in-corporate-cowardice-portrait.png": {
+   "md5": "b8ab48ae0479c04a7213a962bc877e2c",
+   "size": 3079224
+  },
+  "the-magic-kingdom-crumbles-in-corporate-cowardice-story.png": {
+   "md5": "58ac345c5f1baf9d0425584d2d4058bc",
+   "size": 3923103
+  },
+  "the-magic-kingdom-crumbles-in-corporate-cowardice.png": {
+   "md5": "3905494762634c1dbf27bc06360ea8fa",
+   "size": 1984209
+  },
+  "the-misinformation-industrial-complex-portrait.png": {
+   "md5": "da4bcc61d0f17d07de92e56b29c641fb",
+   "size": 2850217
+  },
+  "the-misinformation-industrial-complex-story.png": {
+   "md5": "7d26c9a7e6c4c2c2096a97b77cc63d2b",
+   "size": 3632404
+  },
+  "the-misinformation-industrial-complex.png": {
+   "md5": "d261edb31005cb03351ef0879d06310e",
+   "size": 1817697
+  },
+  "the-moral-bankruptcy-of-cheat-on-everything-ai-portrait.png": {
+   "md5": "b480417acf6cf9fc63bbc3e4d88b3602",
+   "size": 3126103
+  },
+  "the-moral-bankruptcy-of-cheat-on-everything-ai-story.png": {
+   "md5": "97ce82105d88d88d6caa2902a2f6ede0",
+   "size": 3891401
+  },
+  "the-moral-bankruptcy-of-cheat-on-everything-ai.png": {
+   "md5": "8d4a8345f8bfb9709f95ca126238a155",
+   "size": 1693926
+  },
+  "the-perfect-platform-heist-the-greatest-trick-google-ever-pulled-portrait.png": {
+   "md5": "0071f03c63b77a2a3e606f8856752c14",
+   "size": 301554
+  },
+  "the-perfect-platform-heist-the-greatest-trick-google-ever-pulled-story.png": {
+   "md5": "f82234690058917e8db320007fc57651",
+   "size": 344474
+  },
+  "the-perfect-platform-heist-the-greatest-trick-google-ever-pulled.png": {
+   "md5": "4eb3343a2c025c703aed6d8068003201",
+   "size": 190337
+  },
+  "the-persistence-of-inferior-standards-portrait.png": {
+   "md5": "366a06100ad24a68b0542aef245fd390",
+   "size": 4407128
+  },
+  "the-persistence-of-inferior-standards-story.png": {
+   "md5": "dfcccf79617df03ec1aafeabcb3e020d",
+   "size": 5324807
+  },
+  "the-persistence-of-inferior-standards.png": {
+   "md5": "9b5a199a8a5124364ce31e8ee56af9a2",
+   "size": 2600828
+  },
+  "the-political-singularity-welcome-to-the-first-algorithmic-state-portrait.png": {
+   "md5": "3bb04b66784ca5d8810f27dd7c1993c6",
+   "size": 5258565
+  },
+  "the-political-singularity-welcome-to-the-first-algorithmic-state-story.png": {
+   "md5": "9540873ba2ca5e18c020e8a7c46333db",
+   "size": 6395313
+  },
+  "the-political-singularity-welcome-to-the-first-algorithmic-state.png": {
+   "md5": "34265c6b2823c49143739b9d8271e227",
+   "size": 3394892
+  },
+  "the-power-of-questioning-revolutionizing-learning-in-the-ai-era-portrait.png": {
+   "md5": "d983ae108427b20e634d77a08cb668b0",
+   "size": 4630403
+  },
+  "the-power-of-questioning-revolutionizing-learning-in-the-ai-era-story.png": {
+   "md5": "e2006615c63a5d630a9920bf66453480",
+   "size": 6024344
+  },
+  "the-power-of-questioning-revolutionizing-learning-in-the-ai-era.png": {
+   "md5": "ba65beeeb3b807a6a402924eb123c7f4",
+   "size": 2953188
+  },
+  "the-power-of-what-if-exploring-the-world-through-through-experiments-portrait.png": {
+   "md5": "baeea079f401f4865dd4526dadaa0f1f",
+   "size": 2472467
+  },
+  "the-power-of-what-if-exploring-the-world-through-through-experiments-story.png": {
+   "md5": "7aa9625f9c04d9cae69ad8762fd4d9ce",
+   "size": 3075399
+  },
+  "the-power-of-what-if-exploring-the-world-through-through-experiments.png": {
+   "md5": "ab04dea93050835f8526c4fd0c6cea4c",
+   "size": 1404162
+  },
+  "the-proentropic-weed-manifesto-portrait.png": {
+   "md5": "5a6d110a5c4988fcd270a91d47aade70",
+   "size": 3267448
+  },
+  "the-proentropic-weed-manifesto-story.png": {
+   "md5": "c21b64b332fc05dfa592c3fecb39c0de",
+   "size": 4050295
+  },
+  "the-proentropic-weed-manifesto.png": {
+   "md5": "2452757ee1bcf9e12ea36e9dbedb21e4",
+   "size": 2270792
+  },
+  "the-promise-of-perovskite-solar-cells-solar-3-0-portrait.png": {
+   "md5": "de737a2e480919f538bfac47f15d8571",
+   "size": 2969185
+  },
+  "the-promise-of-perovskite-solar-cells-solar-3-0-story.png": {
+   "md5": "55c44fb7fee8937ca75c1506e531739a",
+   "size": 3532690
+  },
+  "the-promise-of-perovskite-solar-cells-solar-3-0.png": {
+   "md5": "5b4c8996c3a3fd5b593d052b1c527c15",
+   "size": 1903698
+  },
+  "the-proof-was-never-the-point-portrait.png": {
+   "md5": "4353e4248ec3a0335330b000832d8ffc",
+   "size": 2208634
+  },
+  "the-proof-was-never-the-point-story.png": {
+   "md5": "4799da759e35e95538d53046121fd88e",
+   "size": 2332926
+  },
+  "the-proof-was-never-the-point.png": {
+   "md5": "f9f0e7de91ffdae22b86a8d8aa3ff5c0",
+   "size": 1683368
+  },
+  "the-quantum-dance-shattering-our-understanding-of-matter-portrait.png": {
+   "md5": "ff0d6647adc3e0262f494c3bf066ac46",
+   "size": 4056528
+  },
+  "the-quantum-dance-shattering-our-understanding-of-matter-story.png": {
+   "md5": "9b35b9966d1d56f9a85fb73aafbe2241",
+   "size": 4826830
+  },
+  "the-quantum-dance-shattering-our-understanding-of-matter.png": {
+   "md5": "05149706d275738c06f856e625327678",
+   "size": 2618840
+  },
+  "the-race-that-eats-its-own-rules-portrait.png": {
+   "md5": "0c64f2b9b89a2b6be9321e6693bbf01a",
+   "size": 2925405
+  },
+  "the-race-that-eats-its-own-rules-story.png": {
+   "md5": "926506750cb9ba98a1129d7ec3625b99",
+   "size": 3554765
+  },
+  "the-race-that-eats-its-own-rules.png": {
+   "md5": "8c5a0c359cc1b2e7fc8e95ef7e4e3f29",
+   "size": 2049353
+  },
+  "the-rise-of-command-engineering-portrait.png": {
+   "md5": "cb0016b9e1d36536db3ab5a8ced04ad6",
+   "size": 2876527
+  },
+  "the-rise-of-command-engineering-story.png": {
+   "md5": "4cfe0528aebe605375f0eca75a59383a",
+   "size": 3297809
+  },
+  "the-rise-of-command-engineering.png": {
+   "md5": "50df8a842d89be8e6f1c1431b3b3874a",
+   "size": 1930112
+  },
+  "the-room-was-already-set-before-you-walked-in-portrait.png": {
+   "md5": "f82598dae5b5409ca6924eec23ee57c0",
+   "size": 4255244
+  },
+  "the-room-was-already-set-before-you-walked-in-story.png": {
+   "md5": "5180599259b082a5806a5041a10ab42b",
+   "size": 5131688
+  },
+  "the-room-was-already-set-before-you-walked-in.png": {
+   "md5": "72ece36ba0a6d0984a53ba6645aa2bb3",
+   "size": 2442669
+  },
+  "the-science-of-subjective-value-2-portrait.png": {
+   "md5": "e0b7b46f8a9d17df261a25903ca886aa",
+   "size": 5012184
+  },
+  "the-science-of-subjective-value-2-story.png": {
+   "md5": "9174921803e58dc450e87630e425187c",
+   "size": 6383449
+  },
+  "the-science-of-subjective-value-2.png": {
+   "md5": "6fe43b811434da3fb3e45eb33caf02c0",
+   "size": 2913103
+  },
+  "the-simulation-trap-how-virtual-tourism-is-killing-real-culture-portrait.png": {
+   "md5": "0b00db698a2faebfbc6b0c1122acf614",
+   "size": 5496878
+  },
+  "the-simulation-trap-how-virtual-tourism-is-killing-real-culture-story.png": {
+   "md5": "c0c14347a369beb99039651e0607dc9e",
+   "size": 6565030
+  },
+  "the-simulation-trap-how-virtual-tourism-is-killing-real-culture.png": {
+   "md5": "71665a880788fa935313d7d1b13d03e6",
+   "size": 3423663
+  },
+  "the-sky-has-been-warning-us-since-1859-portrait.png": {
+   "md5": "34485bf7d66ad9a378e18ff5ad076ac8",
+   "size": 4728668
+  },
+  "the-sky-has-been-warning-us-since-1859-story.png": {
+   "md5": "85bc2f86fd678edd40627307df1d5f80",
+   "size": 5975616
+  },
+  "the-sky-has-been-warning-us-since-1859.png": {
+   "md5": "02e73c03f762fac6834fd0e41b0158b8",
+   "size": 2713545
+  },
+  "the-speed-trap-portrait.png": {
+   "md5": "143e355707d7a970cf6dd618142cf5f1",
+   "size": 3362525
+  },
+  "the-speed-trap-story.png": {
+   "md5": "bacf0cf1ae5f3c2b7c043995d516c24f",
+   "size": 4182179
+  },
+  "the-speed-trap.png": {
+   "md5": "ca4b66b1534bc97d5b681755d81ac83e",
+   "size": 2079393
+  },
+  "the-startup-states-of-america-portrait.png": {
+   "md5": "3db98d453bfa564772d5ecd715763bb1",
+   "size": 2868223
+  },
+  "the-startup-states-of-america-story.png": {
+   "md5": "df829301a9ee7a6c2dcbdd063e2dcd57",
+   "size": 3333966
+  },
+  "the-startup-states-of-america.png": {
+   "md5": "91fb1ecdedf42e644a4931e436814dcc",
+   "size": 1922936
+  },
+  "the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race-portrait.png": {
+   "md5": "6b69e4e551a05c1538d171f61f0ab119",
+   "size": 4416098
+  },
+  "the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race-story.png": {
+   "md5": "440311c3965391c6e862d938c86ee785",
+   "size": 5521299
+  },
+  "the-strategic-manifesto-anthropics-calculated-move-in-the-ai-race.png": {
+   "md5": "a703c2146ff564453979d036eaad2ad1",
+   "size": 2669370
+  },
+  "the-stupidity-subsidy-portrait.png": {
+   "md5": "cdacfc1ce85822daea698bd0896625d2",
+   "size": 5135324
+  },
+  "the-stupidity-subsidy-story.png": {
+   "md5": "639533119454322075d7dd8955440fa3",
+   "size": 6486518
+  },
+  "the-stupidity-subsidy.png": {
+   "md5": "08730051f8ea0fe9025f0492ae73cefb",
+   "size": 3099978
+  },
+  "the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up-portrait.png": {
+   "md5": "d83549fdd786ae293eeb8a8ad4916b08",
+   "size": 4110178
+  },
+  "the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up-story.png": {
+   "md5": "d5ee92dacb4efa958dc0c5844cba854b",
+   "size": 5223455
+  },
+  "the-time-travelers-blues-living-eight-years-ahead-while-the-world-catches-up.png": {
+   "md5": "e06ec986029574a05fcbdd731459fed2",
+   "size": 2672778
+  },
+  "the-wrong-name-on-the-door-portrait.png": {
+   "md5": "e4ab41a852327bdb28069ce45ae7f4e3",
+   "size": 3609141
+  },
+  "the-wrong-name-on-the-door-story.png": {
+   "md5": "505e99f8e7526ef05f85240acbca84f9",
+   "size": 4530010
+  },
+  "the-wrong-name-on-the-door.png": {
+   "md5": "4588f654ae45a71f3fc5dfb7243c80b4",
+   "size": 1943910
+  },
+  "the-zombie-singularity-of-intelligence-without-understanding-portrait.png": {
+   "md5": "d4322114de4aa08838b25599a8106269",
+   "size": 3475167
+  },
+  "the-zombie-singularity-of-intelligence-without-understanding-story.png": {
+   "md5": "b82d768cb986c993dc72fdbcb391d642",
+   "size": 4186499
+  },
+  "the-zombie-singularity-of-intelligence-without-understanding.png": {
+   "md5": "acd0aa357f05e5261349859aaff1e3ef",
+   "size": 2343312
+  },
+  "threading-a-very-fine-needle-portrait.png": {
+   "md5": "54b2b07a5e35c94da8c7b0981d5b8d3f",
+   "size": 4647271
+  },
+  "threading-a-very-fine-needle-story.png": {
+   "md5": "676ea8fb2c73482a9e2a0488a27b9e28",
+   "size": 6022813
+  },
+  "threading-a-very-fine-needle.png": {
+   "md5": "dc1af86b6ae474b98604f7f6645d3306",
+   "size": 2692870
+  },
+  "token-the-ultimate-reading-guide-portrait.png": {
+   "md5": "7f307bd2e3d22b058f4d9a718c176771",
+   "size": 3160299
+  },
+  "token-the-ultimate-reading-guide-story.png": {
+   "md5": "009f468762d3711c941cfeb6285d9f15",
+   "size": 5006772
+  },
+  "token-the-ultimate-reading-guide.png": {
+   "md5": "539cd61ea8c8ebe742bcfe687e622782",
+   "size": 1654037
+  },
+  "token-wisdom-38th-edition-portrait.png": {
+   "md5": "d405011d1a67518fc4261e53344c2e5d",
+   "size": 6286513
+  },
+  "token-wisdom-38th-edition-story.png": {
+   "md5": "ec725e7c3c4a552cfd5581a0fd0f0822",
+   "size": 7585874
+  },
+  "token-wisdom-38th-edition.png": {
+   "md5": "fdebf1980e2c19522b0cd56aefc3fb6d",
+   "size": 3626058
+  },
+  "tokenwisdom-w06-24-portrait.png": {
+   "md5": "70f9e65187624043b7292da1e927cd85",
+   "size": 5458460
+  },
+  "tokenwisdom-w06-24-story.png": {
+   "md5": "2bb03b093f109ad5d4de086037c705a5",
+   "size": 6852534
+  },
+  "tokenwisdom-w06-24.png": {
+   "md5": "42bddb3bd5e17a76b3334a6b2fc0a467",
+   "size": 2907368
+  },
+  "truth-or-deception-the-double-edged-sword-of-digital-authenticity-portrait.png": {
+   "md5": "2250c44f81912364297be38b65df8a36",
+   "size": 3094598
+  },
+  "truth-or-deception-the-double-edged-sword-of-digital-authenticity-story.png": {
+   "md5": "f70c63320c3c87bb073814ff0f52aef5",
+   "size": 3865065
+  },
+  "truth-or-deception-the-double-edged-sword-of-digital-authenticity.png": {
+   "md5": "c104b0546644f96f2c9517230fdcc218",
+   "size": 2274270
+  },
+  "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things-portrait.png": {
+   "md5": "79ee864dbf4b2a248318e1b443e9ebc9",
+   "size": 4494189
+  },
+  "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things-story.png": {
+   "md5": "ce927e0625e4807f7eb867e50a55941c",
+   "size": 5140931
+  },
+  "ultra-wideband-uwb-technology-revolutionizing-the-internet-of-things.png": {
+   "md5": "452fed52767d85a7f832fbe782020a3c",
+   "size": 3242656
+  },
+  "vrs-quest-for-50-million-portrait.png": {
+   "md5": "1b6fff2abddbadc22b7e1c6a5f73e04f",
+   "size": 3838326
+  },
+  "vrs-quest-for-50-million-story.png": {
+   "md5": "d8ceb500d8ab2bd6d6cd0c04e60b10ac",
+   "size": 4954813
+  },
+  "vrs-quest-for-50-million.png": {
+   "md5": "7d21b3266223ae1563c59b4cdc89aa58",
+   "size": 2480500
+  },
+  "w06-thenewestlatest-42-portrait.png": {
+   "md5": "10c974dfae4772bd57fb0c2682080fa3",
+   "size": 5691830
+  },
+  "w06-thenewestlatest-42-story.png": {
+   "md5": "28ebd580617f7d60d079df49f8ff9a95",
+   "size": 6927122
+  },
+  "w06-thenewestlatest-42.png": {
+   "md5": "dd0b6cfb991fcef38eb866b5724466a9",
+   "size": 3289541
+  },
+  "w06-timewellspent-42-portrait.png": {
+   "md5": "e39dde628a0911537528ab7f55c6491e",
+   "size": 3176489
+  },
+  "w06-timewellspent-42-story.png": {
+   "md5": "97d662b3c9c1338d75d7aa975388760f",
+   "size": 3375902
+  },
+  "w06-timewellspent-42.png": {
+   "md5": "707dbf0c48f1948d9321abad5999ec8d",
+   "size": 1544494
+  },
+  "w07-thenewestlatest-43-portrait.png": {
+   "md5": "291112e796e393b93e0bcc293905487d",
+   "size": 5653303
+  },
+  "w07-thenewestlatest-43-story.png": {
+   "md5": "c79e385a1738656d2e150819f748be51",
+   "size": 6933840
+  },
+  "w07-thenewestlatest-43.png": {
+   "md5": "35ce2e6c97b725c9af19efed498439ba",
+   "size": 3374666
+  },
+  "w07-timewellspent-43-portrait.png": {
+   "md5": "a2f29c4b1912d4bf2a12d5f6918bf47f",
+   "size": 1668263
+  },
+  "w07-timewellspent-43-story.png": {
+   "md5": "a44b6b5a2cd5566105343066440124d7",
+   "size": 2549145
+  },
+  "w07-timewellspent-43.png": {
+   "md5": "b283a8a862316cf6d92090b3f4dd400d",
+   "size": 924640
+  },
+  "w08-thenewestlatest-44-portrait.png": {
+   "md5": "cbb4566d481bf1c6d474df163603ebe6",
+   "size": 5170578
+  },
+  "w08-thenewestlatest-44-story.png": {
+   "md5": "8a7ca4e3220e07d58fd7f03695a968c9",
+   "size": 6241546
+  },
+  "w08-thenewestlatest-44.png": {
+   "md5": "dcce018ebe4fc1d908d234deb41c7870",
+   "size": 2966456
+  },
+  "w08-timewellspent-44-portrait.png": {
+   "md5": "97fc69943af752d9a9e445c6691089c0",
+   "size": 5553884
+  },
+  "w08-timewellspent-44-story.png": {
+   "md5": "1b3a53d84687f3e3abcc4ebca75bd7ed",
+   "size": 5628688
+  },
+  "w08-timewellspent-44.png": {
+   "md5": "384d38c3093aa9b3aba8bf236863c824",
+   "size": 2489318
+  },
+  "w08-timewellspent-45-portrait.png": {
+   "md5": "a8f4e9c2c02c8ca9b28192590a7af058",
+   "size": 3929015
+  },
+  "w08-timewellspent-45-story.png": {
+   "md5": "43936e9888ceee06d02f4c63bb248c80",
+   "size": 5240984
+  },
+  "w08-timewellspent-45.png": {
+   "md5": "5166aec52c72c3fc6e474992bb40571d",
+   "size": 2560023
+  },
+  "w09-thenewestlatest-45-portrait.png": {
+   "md5": "b39c6630f8e351c066cc7d7b2e137e5e",
+   "size": 4797984
+  },
+  "w09-thenewestlatest-45-story.png": {
+   "md5": "1e514eaa94bee79c99864d2b49c15831",
+   "size": 5779508
+  },
+  "w09-thenewestlatest-45.png": {
+   "md5": "a323d5a8efeb34e043da99375547107e",
+   "size": 3275362
+  },
+  "w10-thenewestlatest-46-portrait.png": {
+   "md5": "50ef2de5b65d4dcd20b9b934857bb3fc",
+   "size": 4222655
+  },
+  "w10-thenewestlatest-46-story.png": {
+   "md5": "4a56903f6baaeccdd217f66b3c0496f9",
+   "size": 5143862
+  },
+  "w10-thenewestlatest-46.png": {
+   "md5": "7d2f828db08b679964ac2773ab0c7bac",
+   "size": 2865366
+  },
+  "w10-timewellspent-46-portrait.png": {
+   "md5": "d76dcffe32257c43c3629f0af7ac2124",
+   "size": 1419724
+  },
+  "w10-timewellspent-46-story.png": {
+   "md5": "5f7642539a9c7d8ebc6bd8502c6a4d57",
+   "size": 3005986
+  },
+  "w10-timewellspent-46.png": {
+   "md5": "8534d86837c06a91f777900978c17392",
+   "size": 1188274
+  },
+  "w11-thenewestlatest-47-portrait.png": {
+   "md5": "790fb0a919e9c74d57ca8fe603a77e2d",
+   "size": 1018406
+  },
+  "w11-thenewestlatest-47-story.png": {
+   "md5": "0f221be8171e7c943895fb6fea0aec76",
+   "size": 1427141
+  },
+  "w11-thenewestlatest-47.png": {
+   "md5": "7ef9d9da40071b137c07fc9918c328c0",
+   "size": 870584
+  },
+  "w11-timewellspent-47-portrait.png": {
+   "md5": "f5c066e5880d7c262bb638cea6647680",
+   "size": 2183911
+  },
+  "w11-timewellspent-47-story.png": {
+   "md5": "34585f2651df74165544db81a9025a48",
+   "size": 2645708
+  },
+  "w11-timewellspent-47.png": {
+   "md5": "4c4636374c0502604f641ffea6af876e",
+   "size": 1193434
+  },
+  "w12-thenewestlatest-48-portrait.png": {
+   "md5": "32f0555d2b01e4dbabf73d458eb58513",
+   "size": 11482327
+  },
+  "w12-thenewestlatest-48-story.png": {
+   "md5": "c9bb5c819643ff1daec23c44c68b8898",
+   "size": 14602407
+  },
+  "w12-thenewestlatest-48.png": {
+   "md5": "29b6c0c37debd3ebc5df14258e79228a",
+   "size": 5656290
+  },
+  "w12-timewellspent-48-portrait.png": {
+   "md5": "638cf6c9066eccbf6066fdc53ee5d644",
+   "size": 3628585
+  },
+  "w12-timewellspent-48-story.png": {
+   "md5": "8c5af149a43ebf90c8e4b9b490430ae7",
+   "size": 4212267
+  },
+  "w12-timewellspent-48.png": {
+   "md5": "06949b5c47cc4ecf28bb573832a52b2a",
+   "size": 2639293
+  },
+  "w13-thenewestlatest-49-portrait.png": {
+   "md5": "c82b327e74a52f0baa27e4b2e777f4d8",
+   "size": 2189320
+  },
+  "w13-thenewestlatest-49-story.png": {
+   "md5": "67700489c8e0e882cc6ecc477858c548",
+   "size": 2803591
+  },
+  "w13-thenewestlatest-49.png": {
+   "md5": "730277a56d303ec23cc5c2c53bb8f1a9",
+   "size": 1415310
+  },
+  "w13-timewellspent-49-portrait.png": {
+   "md5": "ffba0e364e90089c66ecd7b42d4d8874",
+   "size": 3450055
+  },
+  "w13-timewellspent-49-story.png": {
+   "md5": "723275701db940f5a029b7627ba7e477",
+   "size": 4123685
+  },
+  "w13-timewellspent-49.png": {
+   "md5": "5f84d06d0f470584aea31304aa7ac719",
+   "size": 2130231
+  },
+  "w14-thenewestlatest-50-portrait.png": {
+   "md5": "255fac425f5a02d580184d4d1ec1e2da",
+   "size": 701756
+  },
+  "w14-thenewestlatest-50-story.png": {
+   "md5": "e2a026aaa05b9b85271894a91a7180e0",
+   "size": 920821
+  },
+  "w14-thenewestlatest-50.png": {
+   "md5": "7713e49ec3749da5ce6ded1d8a710e32",
+   "size": 377529
+  },
+  "w14-timewellspent-50-portrait.png": {
+   "md5": "d68bcf460c98af1098645ef09df37653",
+   "size": 3543487
+  },
+  "w14-timewellspent-50-story.png": {
+   "md5": "0686f5d05852f989f18e05fec6e8d656",
+   "size": 4473875
+  },
+  "w14-timewellspent-50.png": {
+   "md5": "dd6c08e446bb7e895e7b937164d69e66",
+   "size": 2676671
+  },
+  "w15-thenewestlatest-51-portrait.png": {
+   "md5": "c264f6eb0f2edab126e69644a2cf987a",
+   "size": 4024559
+  },
+  "w15-thenewestlatest-51-story.png": {
+   "md5": "3d5af27ec448f5c1a227ceb00f2246e4",
+   "size": 4753080
+  },
+  "w15-thenewestlatest-51.png": {
+   "md5": "2f7453dc8449df640d4d019449ba8865",
+   "size": 2291050
+  },
+  "w15-timewellspent-51-portrait.png": {
+   "md5": "463654d07acfd6a3e269af8491fe366f",
+   "size": 3658547
+  },
+  "w15-timewellspent-51-story.png": {
+   "md5": "2e980a63607f04927c63e0b26cf23f95",
+   "size": 4781632
+  },
+  "w15-timewellspent-51.png": {
+   "md5": "e69a6c3760b04847f964d488408ebe05",
+   "size": 2361402
+  },
+  "w16-thenewestlatest-52-portrait.png": {
+   "md5": "66d6db743bf64d8ccac611cde60027f8",
+   "size": 5038368
+  },
+  "w16-thenewestlatest-52-story.png": {
+   "md5": "2b35797a6e6386b6904d92b02962fd45",
+   "size": 6077939
+  },
+  "w16-thenewestlatest-52.png": {
+   "md5": "c683e4cdda4424d7549e8fd5f3c9ff6a",
+   "size": 3352397
+  },
+  "w16-timewellspent-52-portrait.png": {
+   "md5": "367fca20f3e6c3a56cba4a6b18b8cade",
+   "size": 1785736
+  },
+  "w16-timewellspent-52-story.png": {
+   "md5": "0679bf9e7e7a0faaa6a89d3f472f2dff",
+   "size": 4371941
+  },
+  "w16-timewellspent-52.png": {
+   "md5": "8daeb586ae5f1fd895391d5191c4db40",
+   "size": 961685
+  },
+  "w17-54th-edition-side-a-portrait.png": {
+   "md5": "d5e5740c0f79018312d89b9994fef1ff",
+   "size": 5267469
+  },
+  "w17-54th-edition-side-a-story.png": {
+   "md5": "96c241108e134719a93804a45769e0ac",
+   "size": 7051739
+  },
+  "w17-54th-edition-side-a.png": {
+   "md5": "e4cad914a31626bcbc83a0e7d46e00f3",
+   "size": 3063670
+  },
+  "w17-54th-edition-side-b-portrait.png": {
+   "md5": "ddd180ccdbf2ba53d46331a117f0d238",
+   "size": 5346988
+  },
+  "w17-54th-edition-side-b-story.png": {
+   "md5": "12abc06c9cfbbfa9f9530cef3cc5fc8f",
+   "size": 6439876
+  },
+  "w17-54th-edition-side-b.png": {
+   "md5": "23e8ecabed5d933e955980643a7a8df0",
+   "size": 3068103
+  },
+  "we-trained-it-on-human-weaponry-portrait.png": {
+   "md5": "f171816b3421c6781826efdf339e373e",
+   "size": 2977543
+  },
+  "we-trained-it-on-human-weaponry-story.png": {
+   "md5": "b996a552da0223b6ce5ddfbe832ff7d1",
+   "size": 3510373
+  },
+  "we-trained-it-on-human-weaponry.png": {
+   "md5": "82d948ec71759ec060b15baf9b3afd85",
+   "size": 2312019
+  },
+  "were-not-creating-god-were-discovering-god-portrait.png": {
+   "md5": "6f58fc31249613159bb97f10c855a993",
+   "size": 3923509
+  },
+  "were-not-creating-god-were-discovering-god-story.png": {
+   "md5": "5d851110c3854441ea6a45a53f037274",
+   "size": 4938923
+  },
+  "were-not-creating-god-were-discovering-god.png": {
+   "md5": "c3dc48dfd717965edeb03e43f66f38b4",
+   "size": 2308222
+  },
+  "when-intelligence-becomes-its-own-enemy-portrait.png": {
+   "md5": "b362d031a016928fa8f3d50739f75c42",
+   "size": 2810408
+  },
+  "when-intelligence-becomes-its-own-enemy-story.png": {
+   "md5": "f5963bf6157bb4f71155acd3bac84762",
+   "size": 3344590
+  },
+  "when-intelligence-becomes-its-own-enemy.png": {
+   "md5": "7d37312f881a2900e2de0c3206be4fa4",
+   "size": 1894800
+  },
+  "when-silicon-valleys-children-go-to-war-portrait.png": {
+   "md5": "42b9803622c8002135ec9478abaece02",
+   "size": 2479824
+  },
+  "when-silicon-valleys-children-go-to-war-story.png": {
+   "md5": "c36a46c2438c8ce54e1b5c7bb4a158b7",
+   "size": 2471191
+  },
+  "when-silicon-valleys-children-go-to-war.png": {
+   "md5": "020e6d9bc755d645ba31ca24c70769ee",
+   "size": 2162729
+  },
+  "when-twos-company-threes-a-revolution-portrait.png": {
+   "md5": "0dd50fbe8608067c3fb27a55998fbbdd",
+   "size": 3261063
+  },
+  "when-twos-company-threes-a-revolution-story.png": {
+   "md5": "5a98d2dc17d63c4826c6d34b84dcaea3",
+   "size": 3688552
+  },
+  "when-twos-company-threes-a-revolution.png": {
+   "md5": "0ccb4fab7df98164b8a384d658b1bb96",
+   "size": 2336354
+  },
+  "whos-mind-is-it-anyway-portrait.png": {
+   "md5": "25a16cf3cb3f47a641dc540fee8ae5ff",
+   "size": 2896101
+  },
+  "whos-mind-is-it-anyway-story.png": {
+   "md5": "5d7b0754b0ccd4e89fe44f39a434913e",
+   "size": 3531479
+  },
+  "whos-mind-is-it-anyway.png": {
+   "md5": "f7309d735038a15457175a8ebada7e79",
+   "size": 1939002
+  },
+  "why-everyone-should-hire-an-amateur-once-portrait.png": {
+   "md5": "0d9bf5abdb0c2a48241b0b19b4bdda23",
+   "size": 1192415
+  },
+  "why-everyone-should-hire-an-amateur-once-story.png": {
+   "md5": "e9ee923c1ea84aeb6d970293945fc6d0",
+   "size": 1403589
+  },
+  "why-everyone-should-hire-an-amateur-once.png": {
+   "md5": "5663078ef24aa8ba7232cbd7e2ff8a1e",
+   "size": 931502
+  },
+  "why-everything-you-think-about-deep-tech-is-right-and-wrong-portrait.png": {
+   "md5": "534cc1afcb7938f93ee68897cb938891",
+   "size": 3432981
+  },
+  "why-everything-you-think-about-deep-tech-is-right-and-wrong-story.png": {
+   "md5": "3a0a3cb1addee17c78bec9dd74892d01",
+   "size": 3341191
+  },
+  "why-everything-you-think-about-deep-tech-is-right-and-wrong.png": {
+   "md5": "8dbeac8b7ffa2138cca7d3a25736c6d4",
+   "size": 2370435
+  },
+  "writing-as-a-process-of-self-discovery-portrait.png": {
+   "md5": "c50d9bbd1cd1f4274efc21d87086851b",
+   "size": 5006733
+  },
+  "writing-as-a-process-of-self-discovery-story.png": {
+   "md5": "3e297cfaeed733aa2535eefdb75ebf3c",
+   "size": 6017013
+  },
+  "writing-as-a-process-of-self-discovery.png": {
+   "md5": "cd7cc185f8b876c2fb23991e16621195",
+   "size": 2949237
+  },
+  "yes-chef-the-startup-chefs-guide-to-tam-sam-and-som-portrait.png": {
+   "md5": "8247e463340d116619ded34c60507e45",
+   "size": 3385580
+  },
+  "yes-chef-the-startup-chefs-guide-to-tam-sam-and-som-story.png": {
+   "md5": "5ce1079b16821d7f6d2f93653cbda7b5",
+   "size": 3923177
+  },
+  "yes-chef-the-startup-chefs-guide-to-tam-sam-and-som.png": {
+   "md5": "b54ac45e9890f3f0575a90618e8c0d46",
+   "size": 2213897
+  },
+  "youre-not-special-human-irrelevance-in-the-age-of-exponential-ai-portrait.png": {
+   "md5": "9f90e984b41ae8b6c9b9592121f9a547",
+   "size": 3226297
+  },
+  "youre-not-special-human-irrelevance-in-the-age-of-exponential-ai-story.png": {
+   "md5": "1fced2c98c94c71c8ceeb79addd4f7be",
+   "size": 3979296
+  },
+  "youre-not-special-human-irrelevance-in-the-age-of-exponential-ai.png": {
+   "md5": "8eeee0e3bc599115f1eaf97e9c80f4b9",
+   "size": 1979667
+  }
+ },
+ "prefix": "posts"
+}

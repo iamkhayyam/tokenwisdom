@@ -40,20 +40,27 @@ no credentials, and never raises into the build.
 from __future__ import annotations
 
 import hashlib
+import hmac
 import json
 import os
 import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
 from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 CARDS_DIR = ROOT / "docs" / "social" / "posts"
 MANIFEST = ROOT / "data" / "social_cards.json"
 
-BUCKET = os.environ.get("R2_BUCKET", "tokenwisdom-social")
 PREFIX = "posts"                      # object key prefix inside the bucket
-PUBLIC_BASE = os.environ.get("R2_PUBLIC_BASE", "https://cdn.tokenwisdom.org")
 MAX_WORKERS = 8
+
+DEFAULT_BUCKET = "tokenwisdom-social"
+DEFAULT_PUBLIC_BASE = "https://cdn.tokenwisdom.org"
 
 
 def _load_env():
@@ -67,6 +74,18 @@ def _load_env():
             continue
         k, v = line.split("=", 1)
         os.environ.setdefault(k.strip(), v.strip().strip('"').strip("'"))
+
+
+# Read AFTER .env is loaded, not at import time. As module-level constants these
+# silently fell back to their defaults whenever the values lived only in .env —
+# harmless while the defaults happened to match, and a wrong-bucket upload the
+# moment they didn't.
+def _bucket() -> str:
+    return os.environ.get("R2_BUCKET") or DEFAULT_BUCKET
+
+
+def _public_base() -> str:
+    return os.environ.get("R2_PUBLIC_BASE") or DEFAULT_PUBLIC_BASE
 
 
 def _md5(path: Path) -> str:
@@ -88,32 +107,81 @@ def load_manifest() -> dict:
 
 def public_url(name: str) -> str:
     """Public URL for a card file name (e.g. 'the-stupidity-subsidy.png')."""
-    return f"{PUBLIC_BASE.rstrip('/')}/{PREFIX}/{name}"
+    return f"{_public_base().rstrip('/')}/{PREFIX}/{name}"
 
 
-def _client():
-    """S3-compatible client pointed at R2. Returns None if unconfigured, which
-    is the normal state until the bucket and token exist."""
-    acct = os.environ.get("R2_ACCOUNT_ID")
-    key = os.environ.get("R2_ACCESS_KEY_ID")
-    secret = os.environ.get("R2_SECRET_ACCESS_KEY")
-    if not (acct and key and secret):
+def _creds():
+    """(account, key, secret) from the environment, or None if unconfigured —
+    the normal state until the bucket and token exist."""
+    needed = ("R2_ACCOUNT_ID", "R2_ACCESS_KEY_ID", "R2_SECRET_ACCESS_KEY")
+    missing = [k for k in needed if not os.environ.get(k)]
+    if missing:
+        # Name them. "set R2_* in .env" sends you hunting through five keys to
+        # find the two that are actually blank.
+        print(f"  missing/empty in .env: {', '.join(missing)}")
         return None
-    try:
-        import boto3
-    except ImportError:
-        print("  [WARN] boto3 not installed — cannot sync (pip install boto3)")
-        return None
-    from botocore.config import Config
-    return boto3.client(
-        "s3",
-        endpoint_url=f"https://{acct}.r2.cloudflarestorage.com",
-        aws_access_key_id=key,
-        aws_secret_access_key=secret,
-        region_name="auto",
-        config=Config(retries={"max_attempts": 5, "mode": "standard"},
-                      max_pool_connections=MAX_WORKERS * 2),
-    )
+    return tuple(os.environ[k] for k in needed)
+
+
+# ── AWS SigV4, stdlib only ──────────────────────────────────────────────────
+#
+# R2 speaks the S3 API, so uploads are signed PUTs. Deliberately not boto3:
+# this repo already talks to REST APIs with urllib (see algolia_index.py), and
+# on the machine this was written for, boto3 1.35 was paired with botocore 1.34
+# inside Anaconda and segfaulted on import-and-connect. Signing by hand is ~40
+# lines, adds no dependency, and cannot be broken by someone else's pip state.
+
+def _sign(key: bytes, msg: str) -> bytes:
+    return hmac.new(key, msg.encode(), hashlib.sha256).digest()
+
+
+def _put_object(acct: str, key_id: str, secret: str, bucket: str,
+                obj_key: str, body: bytes, content_type: str,
+                cache_control: str, timeout: int = 120):
+    host = f"{acct}.r2.cloudflarestorage.com"
+    region, service = "auto", "s3"
+    now = datetime.now(timezone.utc)
+    amzdate = now.strftime("%Y%m%dT%H%M%SZ")
+    datestamp = now.strftime("%Y%m%d")
+    payload_hash = hashlib.sha256(body).hexdigest()
+    canonical_uri = "/" + urllib.parse.quote(f"{bucket}/{obj_key}", safe="/~")
+
+    # Header order matters: canonical_headers must be sorted by lowercased name,
+    # and signed_headers must list exactly those names in the same order.
+    headers = {
+        "cache-control": cache_control,
+        "content-type": content_type,
+        "host": host,
+        "x-amz-content-sha256": payload_hash,
+        "x-amz-date": amzdate,
+    }
+    signed_headers = ";".join(sorted(headers))
+    canonical_headers = "".join(f"{k}:{headers[k]}\n" for k in sorted(headers))
+    canonical_request = (f"PUT\n{canonical_uri}\n\n{canonical_headers}\n"
+                         f"{signed_headers}\n{payload_hash}")
+
+    scope = f"{datestamp}/{region}/{service}/aws4_request"
+    string_to_sign = ("AWS4-HMAC-SHA256\n"
+                      f"{amzdate}\n{scope}\n"
+                      f"{hashlib.sha256(canonical_request.encode()).hexdigest()}")
+
+    k_date = _sign(f"AWS4{secret}".encode(), datestamp)
+    k_region = _sign(k_date, region)
+    k_service = _sign(k_region, service)
+    k_signing = _sign(k_service, "aws4_request")
+    signature = hmac.new(k_signing, string_to_sign.encode(),
+                         hashlib.sha256).hexdigest()
+
+    req = urllib.request.Request(
+        f"https://{host}{canonical_uri}", data=body, method="PUT")
+    for k, v in headers.items():
+        if k != "host":
+            req.add_header(k, v)
+    req.add_header("Authorization",
+                   f"AWS4-HMAC-SHA256 Credential={key_id}/{scope}, "
+                   f"SignedHeaders={signed_headers}, Signature={signature}")
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.status
 
 
 def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
@@ -133,9 +201,9 @@ def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
     digests = {p.name: _md5(p) for p in local}
 
     changed = [p for p in local if prev.get(p.name, {}).get("md5") != digests[p.name]]
-    client = _client()
+    creds = _creds()
 
-    if client is None:
+    if creds is None:
         if not quiet:
             size = sum(p.stat().st_size for p in changed) / 1048576
             print(f"  [dry-run] {len(local)} cards, {len(changed)} would upload "
@@ -143,15 +211,28 @@ def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
         return {"uploaded": 0, "skipped": len(local) - len(changed),
                 "total": len(local), "dry_run": True}
 
+    acct, key_id, secret = creds
+
     def put(p: Path):
-        client.upload_file(
-            str(p), BUCKET, f"{PREFIX}/{p.name}",
-            ExtraArgs={"ContentType": "image/png",
-                       # Cards are immutable per slug-render; if art changes the
-                       # bytes change and so does the manifest entry.
-                       "CacheControl": "public, max-age=31536000, immutable"},
-        )
-        return p.name
+        body = p.read_bytes()
+        last = None
+        for attempt in range(4):  # transient 5xx / connection resets
+            try:
+                return _put_object(
+                    acct, key_id, secret, _bucket(), f"{PREFIX}/{p.name}", body,
+                    "image/png",
+                    # Cards are immutable per slug-render; if the art changes the
+                    # bytes change and so does the manifest entry.
+                    "public, max-age=31536000, immutable")
+            except urllib.error.HTTPError as e:
+                # 4xx is our bug (bad signature, wrong bucket) — don't retry it.
+                if e.code < 500:
+                    raise RuntimeError(f"HTTP {e.code}: {e.read()[:200].decode(errors='replace')}")
+                last = e
+            except (urllib.error.URLError, TimeoutError, OSError) as e:
+                last = e
+            time.sleep(2 ** attempt)
+        raise RuntimeError(str(last))
 
     uploaded, errors = 0, []
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
@@ -171,7 +252,7 @@ def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
              for p in local}
     MANIFEST.parent.mkdir(exist_ok=True)
     MANIFEST.write_text(json.dumps(
-        {"base": PUBLIC_BASE, "prefix": PREFIX, "bucket": BUCKET, "cards": cards},
+        {"base": _public_base(), "prefix": PREFIX, "bucket": _bucket(), "cards": cards},
         indent=1, sort_keys=True))
 
     if not quiet:

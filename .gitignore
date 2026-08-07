@@ -27,3 +27,6 @@ titles/
 # not git; data/social_cards.json is the manifest that maps them to URLs.
 # See r2_sync.py.
 docs/social/posts/*.png
+
+# Wrangler local cache/state (miniflare sqlite, CF metadata) — machine-local
+.wrangler/
