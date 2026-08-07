@@ -1,9 +1,7 @@
 # Token Wisdom — The Newsletter of Record for the Future of Now
-# AI-crawler policy is managed at the edge (Cloudflare AI Crawl Control):
+# Crawl policy (Content-Signal + AI-crawler blocks) is managed at the edge by
+# Cloudflare AI Crawl Control and prepended above this file's contents:
 # search and reference use are permitted, training is not.
-
-User-agent: *
-Allow: /
 
 Sitemap: https://tokenwisdom.org/sitemap.xml
 

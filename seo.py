@@ -283,12 +283,13 @@ def _write_robots(out: Path) -> None:
     Cloudflare replaces this outright, the Sitemap line has to move into the
     dashboard instead.
     """
+    # No User-agent group here on purpose. Sitemap is a group-independent
+    # directive, and Cloudflare prepends its own "User-agent: *" record —
+    # adding a second one just produces a duplicate group for the same agent.
     out.write_text(f"""# {SITE_NAME} — {SITE_TAGLINE}
-# AI-crawler policy is managed at the edge (Cloudflare AI Crawl Control):
+# Crawl policy (Content-Signal + AI-crawler blocks) is managed at the edge by
+# Cloudflare AI Crawl Control and prepended above this file's contents:
 # search and reference use are permitted, training is not.
-
-User-agent: *
-Allow: /
 
 Sitemap: {SITE_URL}/sitemap.xml
 
