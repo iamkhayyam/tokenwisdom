@@ -1,0 +1,96 @@
+name: Backfill missing social cards
+
+# Backstop for the inline render+sync in ghost-rebuild.yml. That step runs on
+# every publish but `continue-on-error: true` — a Chrome crash or an R2 blip
+# shouldn't hold back a post going live — so a card can go missing silently.
+# This sweeps up anything still uncovered: a post whose inline render failed,
+# one added straight to data/all_posts.json outside the Ghost webhook, or a
+# render that succeeded locally but never made it to R2.
+#
+# Every 6 hours: frequent enough that a missed card doesn't sit broken for a
+# full day, infrequent enough not to burn Actions minutes on a site that
+# publishes a few times a week. Adjust the cron below if that cadence is wrong
+# for how often posts actually go out.
+on:
+  schedule:
+    - cron: "17 */6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  # Shares the ghost-rebuild group on purpose: both workflows push to master,
+  # and running them at the same time would race two pushes against each
+  # other. GitHub serializes any workflows that declare the same group name,
+  # regardless of which file declares it.
+  group: ghost-rebuild
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install Python deps
+        run: pip install Pillow
+
+      - uses: browser-actions/setup-chrome@v1
+        id: setup-chrome
+
+      # No backup.py here — this workflow doesn't pull fresh Ghost content, it
+      # only renders cards for posts already in data/all_posts.json. Real
+      # content changes arrive through ghost-rebuild.yml; this is card-only.
+      - name: Render any cards still missing
+        continue-on-error: true
+        env:
+          SOCIAL_CARD_CHROME: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: python3 make_social_cards.py
+
+      - name: Sync to R2
+        continue-on-error: true
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ vars.R2_BUCKET }}
+          R2_PUBLIC_BASE: ${{ vars.R2_PUBLIC_BASE }}
+        run: python3 r2_sync.py
+
+      # generate_site.py stamps feed.xml's <lastBuildDate> and the sitemap's
+      # <lastmod> with the current run time — running it unconditionally would
+      # produce a no-op commit every 6 hours even when nothing was actually
+      # missing. Only rebuild (and only push) when the manifest genuinely
+      # changed, so this workflow is silent on the common case.
+      - name: Check whether anything was actually backfilled
+        id: check
+        run: |
+          if git diff --quiet -- data/social_cards.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Manifest unchanged — nothing was missing."
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Manifest updated — rebuilding to pick up the new card(s)."
+          fi
+
+      - name: Regenerate static site
+        if: steps.check.outputs.changed == 'true'
+        run: python3 generate_site.py
+
+      - name: Commit and push if changed
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config user.name "tw-ghost-bot"
+          git config user.email "tw-ghost-bot@users.noreply.github.com"
+          git add docs/ data/
+          if git diff --cached --quiet; then
+            echo "Nothing to commit."
+            exit 0
+          fi
+          git commit -m "Backfill missing social cards"
+          git push

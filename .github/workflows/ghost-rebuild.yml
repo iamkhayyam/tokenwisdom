@@ -22,8 +22,40 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install Python deps
+        run: pip install Pillow
+
+      - uses: browser-actions/setup-chrome@v1
+        id: setup-chrome
+
       - name: Pull latest content from Ghost
         run: python3 backup.py
+
+      # Cards render and sync BEFORE generate_site.py — data/social_cards.json
+      # must already reflect any new post's card when generate_site.py resolves
+      # og:image, or the newly published post ships with the generic default
+      # until the next rebuild happens to run.
+      #
+      # Both steps continue on error rather than block the run: a Chrome or R2
+      # hiccup shouldn't hold back publishing the post itself. The card-backfill
+      # workflow (.github/workflows/card-backfill.yml) sweeps up anything missed
+      # here, and post_social_card_url() already treats "no manifest entry" as
+      # the safe, well-tested fallback to og-default.png.
+      - name: Render new social cards
+        continue-on-error: true
+        env:
+          SOCIAL_CARD_CHROME: ${{ steps.setup-chrome.outputs.chrome-path }}
+        run: python3 make_social_cards.py
+
+      - name: Sync social cards to R2
+        continue-on-error: true
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          R2_ACCESS_KEY_ID: ${{ secrets.R2_ACCESS_KEY_ID }}
+          R2_SECRET_ACCESS_KEY: ${{ secrets.R2_SECRET_ACCESS_KEY }}
+          R2_BUCKET: ${{ vars.R2_BUCKET }}
+          R2_PUBLIC_BASE: ${{ vars.R2_PUBLIC_BASE }}
+        run: python3 r2_sync.py
 
       - name: Regenerate static site
         run: python3 generate_site.py

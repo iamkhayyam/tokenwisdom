@@ -116,26 +116,36 @@ def make_jpegs(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> int:
             print("  [WARN] Pillow not installed — skipping JPEG derivatives")
         return 0
 
-    written = 0
+    written, failed = 0, []
     for png in sorted(cards_dir.glob("*.png")):
         jpg = png.with_suffix(".jpg")
         # Regenerate only when missing or older than its source.
         if jpg.exists() and jpg.stat().st_mtime >= png.stat().st_mtime:
             continue
-        im = Image.open(png)
-        if im.mode in ("RGBA", "LA", "P"):
-            # JPEG has no alpha. Flatten onto white explicitly — convert('RGB')
-            # alone composites against black and muddies light-background cards.
-            im = im.convert("RGBA")
-            bg = Image.new("RGB", im.size, (255, 255, 255))
-            bg.paste(im, mask=im.split()[-1])
-            im = bg
-        else:
-            im = im.convert("RGB")
-        im.save(jpg, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
-        written += 1
+        try:
+            im = Image.open(png)
+            if im.mode in ("RGBA", "LA", "P"):
+                # JPEG has no alpha. Flatten onto white explicitly —
+                # convert('RGB') alone composites against black and muddies
+                # light-background cards.
+                im = im.convert("RGBA")
+                bg = Image.new("RGB", im.size, (255, 255, 255))
+                bg.paste(im, mask=im.split()[-1])
+                im = bg
+            else:
+                im = im.convert("RGB")
+            im.save(jpg, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
+            written += 1
+        except Exception as e:  # noqa: BLE001 — one bad render (e.g. a Chrome
+            # screenshot that came out truncated) shouldn't sink the whole
+            # sync; the PNG still uploads, this post just keeps its PNG as
+            # card_url()'s fallback until the source render is fixed.
+            failed.append(png.name)
+            if not quiet:
+                print(f"  [WARN] JPEG derivative failed for {png.name}: {e}")
     if not quiet and written:
-        print(f"  {written} JPEG derivatives written (q{JPEG_QUALITY})")
+        print(f"  {written} JPEG derivatives written (q{JPEG_QUALITY})"
+              + (f", {len(failed)} failed" if failed else ""))
     return written
 
 
@@ -311,7 +321,7 @@ def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
             time.sleep(2 ** attempt)
         raise RuntimeError(str(last))
 
-    uploaded, errors = 0, []
+    uploaded, failed_names, errors = 0, set(), []
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as ex:
         futs = {ex.submit(put, p): p for p in changed}
         for i, fut in enumerate(as_completed(futs), 1):
@@ -319,26 +329,38 @@ def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
                 fut.result()
                 uploaded += 1
             except Exception as e:  # noqa: BLE001 — report, don't abort the batch
+                failed_names.add(futs[fut].name)
                 errors.append(f"{futs[fut].name}: {e}")
             if not quiet and i % 50 == 0:
                 print(f"    {i}/{len(changed)} uploaded…", flush=True)
 
-    # Manifest records every card present locally, not just the uploaded ones,
-    # so a fresh clone that never renders anything still resolves every URL.
-    cards = {p.name: {"md5": digests[p.name], "size": p.stat().st_size}
-             for p in local}
+    # Merge into the EXISTING manifest — never replace it wholesale. `local` is
+    # only what's on disk in *this* run, which on a fresh CI checkout is just
+    # the handful of cards that got rendered this time (make_social_cards.py
+    # skips anything the manifest already covers). Rebuilding the manifest from
+    # `local` alone would silently drop every entry for a card that isn't
+    # sitting on this particular runner — wiping og:image for the whole site
+    # the first time this ran outside the machine that originally rendered
+    # everything. A failed upload keeps its previous entry rather than losing
+    # it: the old object is still live in R2 even though this render didn't
+    # replace it.
+    cards = dict(prev)
+    for p in local:
+        if p.name in failed_names:
+            continue
+        cards[p.name] = {"md5": digests[p.name], "size": p.stat().st_size}
     MANIFEST.parent.mkdir(exist_ok=True)
     MANIFEST.write_text(json.dumps(
         {"base": _public_base(), "prefix": PREFIX, "bucket": _bucket(), "cards": cards},
         indent=1, sort_keys=True))
 
     if not quiet:
-        print(f"  {uploaded} uploaded, {len(local) - len(changed)} unchanged, "
-              f"{len(local)} in manifest")
+        print(f"  {uploaded} uploaded, {len(local) - len(changed)} unchanged locally, "
+              f"{len(cards)} total in manifest")
         for e in errors[:5]:
             print(f"  [WARN] {e}")
     return {"uploaded": uploaded, "skipped": len(local) - len(changed),
-            "total": len(local), "errors": errors, "dry_run": False}
+            "total": len(cards), "errors": errors, "dry_run": False}
 
 
 if __name__ == "__main__":

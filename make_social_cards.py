@@ -26,7 +26,9 @@ Usage:
 import argparse
 import html as _html
 import json
+import os
 import re
+import shutil
 import subprocess
 import sys
 import textwrap
@@ -41,7 +43,28 @@ SRC   = OUT / "src"
 IMAGES = ROOT / "images"
 POSTS_IMGS = IMAGES / "posts"
 
-CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+def _find_chrome() -> str:
+    """Locate a headless-capable Chrome/Chromium binary.
+
+    Checked in order: explicit override (what the CI workflow sets, pointed at
+    whatever browser-actions/setup-chrome installed — its path varies by
+    runner and isn't worth hardcoding), the macOS app bundle this was
+    originally written for, then common Linux binary names on PATH.
+    """
+    env = os.environ.get("SOCIAL_CARD_CHROME")
+    if env:
+        return env
+    mac = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
+    if Path(mac).exists():
+        return mac
+    for name in ("google-chrome-stable", "google-chrome", "chromium-browser", "chromium"):
+        found = shutil.which(name)
+        if found:
+            return found
+    return mac  # fall through to the mac path; render_card will error clearly
+
+
+CHROME = _find_chrome()
 
 SITE_NAME = "Token Wisdom"
 DOMAIN    = "tokenwisdom.org"
@@ -544,14 +567,21 @@ FORMATS = {
 
 
 def render_card(slug: str, suffix: str, html_str: str, w: int, h: int,
-                force=False, keep_src=False) -> bool:
+                force=False, keep_src=False, synced: set = frozenset()) -> bool:
+    """`synced` is the set of filenames already in data/social_cards.json — the
+    R2 manifest, not the local filesystem. Checking it (not just out_png on
+    disk) is what makes this cheap on a fresh CI checkout: docs/social/posts/
+    is gitignored and starts empty on every runner, so a filesystem-only check
+    would think all ~800 cards are missing and re-render the entire site every
+    single run. The manifest is what actually tracks "does this card exist
+    somewhere real" once R2 is the source of truth."""
     OUT.mkdir(parents=True, exist_ok=True)
     SRC.mkdir(parents=True, exist_ok=True)
 
     out_png  = OUT / f"{slug}{suffix}.png"
     src_html = SRC / f"{slug}{suffix}.html"
 
-    if out_png.exists() and not force:
+    if not force and (out_png.exists() or f"{slug}{suffix}.png" in synced):
         return False
 
     src_html.write_text(html_str)
@@ -588,6 +618,13 @@ def main():
 
     posts = json.loads((DATA / "all_posts.json").read_text())
 
+    try:
+        import r2_sync
+        synced = set(r2_sync.load_manifest())
+    except Exception:  # noqa: BLE001 — a manifest read failure should degrade
+        # to "render everything", not crash the script.
+        synced = set()
+
     if args.slug:
         posts = [p for p in posts if p.get("slug") == args.slug]
         if not posts:
@@ -609,20 +646,33 @@ def main():
         has_img = local_feature_image(post) is not None
 
         for fmt_name, (fn, suffix) in formats.items():
-            try:
-                w, h, html = fn(post)
+            out_name = f"{slug}{suffix}.png"
+            already = not args.force and (
+                (OUT / out_name).exists() or out_name in synced)
 
+            try:
                 if args.dry_run:
                     img_mark = "🖼" if has_img else "·"
-                    print(f"  {kind} {img_mark} [{fmt_name:9s}]  {slug}{suffix}.png")
+                    tag = "skip" if already else "render"
+                    print(f"  {kind} {img_mark} [{fmt_name:9s}] [{tag:6s}]  {out_name}")
                     skipped += 1
                     continue
 
+                if already:
+                    skipped += 1
+                    continue
+
+                # Only build the HTML (and pull in the feature image, fonts,
+                # etc.) for cards actually being rendered — the manifest check
+                # above is what keeps a steady-state CI run to "1 new post = 3
+                # renders" instead of walking every post's full render path.
+                w, h, html = fn(post)
                 did = render_card(slug, suffix, html, w, h,
-                                  force=args.force, keep_src=args.keep_src)
+                                  force=args.force, keep_src=args.keep_src,
+                                  synced=synced)
                 if did:
                     rendered += 1
-                    print(f"  ✓  {slug}{suffix}.png")
+                    print(f"  ✓  {out_name}")
                 else:
                     skipped += 1
 
