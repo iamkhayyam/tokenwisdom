@@ -55,16 +55,47 @@ def is_hidden(post):
     return (post.get("slug") or "") in HIDDEN_POST_SLUGS
 
 
+_CARD_MANIFEST = None
+
+
+def _card_manifest():
+    """data/social_cards.json — which cards exist and where they're served.
+
+    Written by r2_sync.py and committed. The manifest, not the filesystem, is
+    the authority: it's ~64 KB, so CI can resolve every og:image without the
+    2.8 GB of PNGs ever being present. That decoupling is the fix for cards
+    disappearing from builds."""
+    global _CARD_MANIFEST
+    if _CARD_MANIFEST is None:
+        f = BACKUP_DIR / "data" / "social_cards.json"
+        try:
+            _CARD_MANIFEST = json.loads(f.read_text())
+        except (OSError, ValueError):
+            _CARD_MANIFEST = {"cards": {}}
+    return _CARD_MANIFEST
+
+
 def post_social_card_url(post):
-    """Return the absolute URL for a per-post social card if it has been
-    rendered (docs/social/posts/<slug>.png exists), else None."""
+    """Absolute URL for a post's social card, or None if it has none.
+
+    The manifest is the ONLY authority, deliberately. Resolving this from the
+    local filesystem is what produced the bug this replaces: cards existed on
+    disk but were never deployed, so 268 posts advertised og:image URLs that
+    404'd — strictly worse than the generic default, because a broken image
+    means platforms render no preview at all. A card earns its URL by being
+    synced (r2_sync.py writes the manifest only after a successful upload);
+    anything else falls back to og-default.png, which always resolves.
+    """
     slug = post.get("slug") or ""
     if not slug:
         return None
-    card = DOCS_DIR / "social" / "posts" / f"{slug}.png"
-    if card.exists():
-        return f"{SITE_URL}/social/posts/{slug}.png"
-    return None
+    man = _card_manifest()
+    entry = man.get("cards", {}).get(f"{slug}.png")
+    base = (man.get("base") or "").rstrip("/")
+    if not entry or not base:
+        return None
+    prefix = (man.get("prefix") or "posts").strip("/")
+    return f"{base}/{prefix}/{slug}.png"
 
 
 # ---------------------------------------------------------------------------

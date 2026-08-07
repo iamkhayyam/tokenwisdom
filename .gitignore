@@ -22,3 +22,8 @@ titles/
 # Transient holding dir for docs/social/ during a rebuild (see generate_site.py).
 # Should never survive a run; ignored so a crashed build can't commit it.
 .social_stash/
+
+# Rendered social cards — 2.8 GB of generated PNGs. They live in Cloudflare R2,
+# not git; data/social_cards.json is the manifest that maps them to URLs.
+# See r2_sync.py.
+docs/social/posts/*.png

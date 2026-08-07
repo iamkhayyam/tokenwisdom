@@ -412,9 +412,28 @@ def build(posts=None, terms=None, docs_dir: Path = DOCS, quiet: bool = False) ->
     return stats
 
 
+_MANIFEST = None
+
+
 def _social_card(slug: str, docs_dir: Path) -> str | None:
-    return (f"{SITE_URL}/social/posts/{slug}.png"
-            if (docs_dir / "social" / "posts" / f"{slug}.png").exists() else None)
+    """Card URL from data/social_cards.json, or None.
+
+    Same rule as post_social_card_url() in generate_site.py and for the same
+    reason: resolving this from disk advertised images that were never deployed.
+    Structured data pointing at a 404 is worse than omitting the field, since
+    consumers treat a declared image as a promise.
+    """
+    global _MANIFEST
+    if _MANIFEST is None:
+        try:
+            _MANIFEST = json.loads((ROOT / "data" / "social_cards.json").read_text())
+        except (OSError, ValueError):
+            _MANIFEST = {"cards": {}}
+    if f"{slug}.png" not in _MANIFEST.get("cards", {}):
+        return None
+    base = (_MANIFEST.get("base") or "").rstrip("/")
+    prefix = (_MANIFEST.get("prefix") or "posts").strip("/")
+    return f"{base}/{prefix}/{slug}.png" if base else None
 
 
 if __name__ == "__main__":
