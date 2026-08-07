@@ -4965,6 +4965,13 @@ def main():
     with open(DOCS_DIR / "404.html", "w") as f:
         f.write(render_404(posts_count, tags_count, years_span, top_tags))
 
+    # Discoverability — canonicals, sitemaps, JSON-LD, feed, llms.txt. Must run
+    # LAST: it post-processes every .html in docs/, so any page written after it
+    # would miss its canonical and go unlisted. See seo.py.
+    print("Discoverability (sitemap, canonicals, JSON-LD, feed)…")
+    import seo
+    seo.build(posts=posts, docs_dir=DOCS_DIR)
+
     # .nojekyll
     with open(DOCS_DIR / ".nojekyll", "w") as f:
         f.write("")

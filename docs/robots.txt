@@ -1,0 +1,11 @@
+# Token Wisdom — The Newsletter of Record for the Future of Now
+# AI-crawler policy is managed at the edge (Cloudflare AI Crawl Control):
+# search and reference use are permitted, training is not.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://tokenwisdom.org/sitemap.xml
+
+# Plain-text site map for models reading this as reference (llmstxt.org)
+# https://tokenwisdom.org/llms.txt
