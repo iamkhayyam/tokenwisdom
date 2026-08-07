@@ -23,10 +23,11 @@ titles/
 # Should never survive a run; ignored so a crashed build can't commit it.
 .social_stash/
 
-# Rendered social cards — 2.8 GB of generated PNGs. They live in Cloudflare R2,
-# not git; data/social_cards.json is the manifest that maps them to URLs.
-# See r2_sync.py.
+# Rendered social cards — PNG masters (2.8 GB) and their JPEG derivatives
+# (385 MB, see r2_sync.make_jpegs). Both live in Cloudflare R2, not git;
+# data/social_cards.json is the manifest that maps them to URLs. See r2_sync.py.
 docs/social/posts/*.png
+docs/social/posts/*.jpg
 
 # Wrangler local cache/state (miniflare sqlite, CF metadata) — machine-local
 .wrangler/

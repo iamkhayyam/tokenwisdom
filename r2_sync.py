@@ -33,6 +33,13 @@ Setup (once, from your account — none of this can be done from here):
        R2_PUBLIC_BASE=https://cdn.tokenwisdom.org
   4. python3 r2_sync.py            # first run uploads everything
 
+Before uploading, every PNG gets a JPEG derivative rendered alongside it
+(make_jpegs(), Pillow, q85 — chosen over macOS `sips` so this runs in CI too).
+Both formats sync to R2; card_url() prefers the .jpg for anything that displays
+a card rather than archiving it — og:image, JSON-LD, a manual share — since q85
+measured ~88% smaller with no visible difference at preview size, and it drops
+the worst master from 13.9 MB to 2.6 MB, under X's 5 MB cap.
+
 Follows the same safety pattern as the rest of the build: dry-runs cleanly with
 no credentials, and never raises into the build.
 """
@@ -58,6 +65,14 @@ MANIFEST = ROOT / "data" / "social_cards.json"
 
 PREFIX = "posts"                      # object key prefix inside the bucket
 MAX_WORKERS = 8
+
+# JPEG derivatives. The PNGs are the masters and stay in R2 untouched, but
+# nothing that *consumes* a card needs lossless: og:image and manual posting
+# both render small and recompress anyway. q85 measured ~88% smaller with no
+# visible difference, and it drops the worst card from 13.9 MB to 2.6 MB —
+# under X's 5 MB preview cap, which 145 of the PNGs exceeded.
+JPEG_QUALITY = 85
+CONTENT_TYPES = {".png": "image/png", ".jpg": "image/jpeg"}
 
 DEFAULT_BUCKET = "tokenwisdom-social"
 DEFAULT_PUBLIC_BASE = "https://cdn.tokenwisdom.org"
@@ -88,6 +103,42 @@ def _public_base() -> str:
     return os.environ.get("R2_PUBLIC_BASE") or DEFAULT_PUBLIC_BASE
 
 
+def make_jpegs(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> int:
+    """Derive a .jpg beside every .png. Returns how many were (re)written.
+
+    Pillow rather than macOS `sips` on purpose — this has to be able to run on
+    a Linux CI runner, and sips cannot.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        if not quiet:
+            print("  [WARN] Pillow not installed — skipping JPEG derivatives")
+        return 0
+
+    written = 0
+    for png in sorted(cards_dir.glob("*.png")):
+        jpg = png.with_suffix(".jpg")
+        # Regenerate only when missing or older than its source.
+        if jpg.exists() and jpg.stat().st_mtime >= png.stat().st_mtime:
+            continue
+        im = Image.open(png)
+        if im.mode in ("RGBA", "LA", "P"):
+            # JPEG has no alpha. Flatten onto white explicitly — convert('RGB')
+            # alone composites against black and muddies light-background cards.
+            im = im.convert("RGBA")
+            bg = Image.new("RGB", im.size, (255, 255, 255))
+            bg.paste(im, mask=im.split()[-1])
+            im = bg
+        else:
+            im = im.convert("RGB")
+        im.save(jpg, "JPEG", quality=JPEG_QUALITY, optimize=True, progressive=True)
+        written += 1
+    if not quiet and written:
+        print(f"  {written} JPEG derivatives written (q{JPEG_QUALITY})")
+    return written
+
+
 def _md5(path: Path) -> str:
     h = hashlib.md5()
     with path.open("rb") as f:
@@ -108,6 +159,30 @@ def load_manifest() -> dict:
 def public_url(name: str) -> str:
     """Public URL for a card file name (e.g. 'the-stupidity-subsidy.png')."""
     return f"{_public_base().rstrip('/')}/{PREFIX}/{name}"
+
+
+def card_url(slug: str, manifest: dict | None = None, prefer: str = "jpg") -> str | None:
+    """The URL a consumer (og:image, JSON-LD, a manual share) should use for a
+    slug — JPEG by default, since nothing that displays a card at social-preview
+    size needs the PNG master. Falls back to .png if no .jpg was synced (e.g.
+    Pillow was unavailable at sync time), then to None if neither exists.
+
+    This is the one place that decides format preference — generate_site.py and
+    seo.py both call it instead of hand-rolling the fallback, so the two can't
+    drift.
+    """
+    if manifest is None:
+        manifest = json.loads(MANIFEST.read_text()) if MANIFEST.exists() else {"cards": {}}
+    cards = manifest.get("cards", {})
+    base = (manifest.get("base") or "").rstrip("/")
+    prefix = (manifest.get("prefix") or PREFIX).strip("/")
+    if not base:
+        return None
+    order = [prefer, "png" if prefer == "jpg" else "jpg"]
+    for ext in order:
+        if f"{slug}.{ext}" in cards:
+            return f"{base}/{prefix}/{slug}.{ext}"
+    return None
 
 
 def _creds():
@@ -196,7 +271,9 @@ def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
             print(f"  no cards at {cards_dir} — nothing to sync")
         return {"uploaded": 0, "skipped": 0, "total": 0, "dry_run": True}
 
-    local = sorted(p for p in cards_dir.glob("*.png"))
+    make_jpegs(cards_dir, quiet=quiet)
+    local = sorted(p for p in cards_dir.iterdir()
+                   if p.suffix.lower() in CONTENT_TYPES)
     prev = load_manifest()
     digests = {p.name: _md5(p) for p in local}
 
@@ -220,7 +297,7 @@ def sync(cards_dir: Path = CARDS_DIR, quiet: bool = False) -> dict:
             try:
                 return _put_object(
                     acct, key_id, secret, _bucket(), f"{PREFIX}/{p.name}", body,
-                    "image/png",
+                    CONTENT_TYPES[p.suffix.lower()],
                     # Cards are immutable per slug-render; if the art changes the
                     # bytes change and so does the manifest entry.
                     "public, max-age=31536000, immutable")

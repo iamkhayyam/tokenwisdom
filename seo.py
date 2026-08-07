@@ -421,7 +421,9 @@ def _social_card(slug: str, docs_dir: Path) -> str | None:
     Same rule as post_social_card_url() in generate_site.py and for the same
     reason: resolving this from disk advertised images that were never deployed.
     Structured data pointing at a 404 is worse than omitting the field, since
-    consumers treat a declared image as a promise.
+    consumers treat a declared image as a promise. Delegates to
+    r2_sync.card_url() so the JPEG-preferred fallback lives in exactly one
+    place and can't drift between the two call sites.
     """
     global _MANIFEST
     if _MANIFEST is None:
@@ -429,11 +431,8 @@ def _social_card(slug: str, docs_dir: Path) -> str | None:
             _MANIFEST = json.loads((ROOT / "data" / "social_cards.json").read_text())
         except (OSError, ValueError):
             _MANIFEST = {"cards": {}}
-    if f"{slug}.png" not in _MANIFEST.get("cards", {}):
-        return None
-    base = (_MANIFEST.get("base") or "").rstrip("/")
-    prefix = (_MANIFEST.get("prefix") or "posts").strip("/")
-    return f"{base}/{prefix}/{slug}.png" if base else None
+    import r2_sync
+    return r2_sync.card_url(slug, manifest=_MANIFEST)
 
 
 if __name__ == "__main__":

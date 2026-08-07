@@ -85,17 +85,16 @@ def post_social_card_url(post):
     means platforms render no preview at all. A card earns its URL by being
     synced (r2_sync.py writes the manifest only after a successful upload);
     anything else falls back to og-default.png, which always resolves.
+
+    Prefers the JPEG derivative — og:image is displayed small, not archived,
+    and the PNG masters are 6-13x heavier for no visible difference at preview
+    size. See r2_sync.card_url() for the fallback order.
     """
     slug = post.get("slug") or ""
     if not slug:
         return None
-    man = _card_manifest()
-    entry = man.get("cards", {}).get(f"{slug}.png")
-    base = (man.get("base") or "").rstrip("/")
-    if not entry or not base:
-        return None
-    prefix = (man.get("prefix") or "posts").strip("/")
-    return f"{base}/{prefix}/{slug}.png"
+    import r2_sync
+    return r2_sync.card_url(slug, manifest=_card_manifest())
 
 
 # ---------------------------------------------------------------------------
