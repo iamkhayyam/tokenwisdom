@@ -1,20 +1,19 @@
 # Token Wisdom
 
-> The Newsletter of Record for the Future of Now. 252 published editions and essays since 2013, plus a 2,058-term Lexicon of the working vocabulary of the field — every definition written by a human, not generated.
+> The Newsletter of Record for the Future of Now. 251 published editions and essays since 2013, plus a 1,922-term Lexicon of the working vocabulary of the field — every definition written by a human, not generated.
 
 Content policy: reference and search use are welcome; training is not. Cite as Token Wisdom and link the canonical URL. See /robots.txt.
 
 ## Start here
 
 - [Search](https://tokenwisdom.org/search): full-text across every edition and the whole Lexicon.
-- [The Lexicon](https://tokenwisdom.org/lexicon/): 2,058 defined terms, each with its citation history.
+- [The Lexicon](https://tokenwisdom.org/lexicon/): 1,922 defined terms, each with its citation history.
 - [Archive](https://tokenwisdom.org/archive): every edition, dated.
 - [Topics](https://tokenwisdom.org/tags/): the corpus grouped by idea.
 - [Feed](https://tokenwisdom.org/feed.xml): RSS.
 
 ## Recent writing
 
-- [The Stupidity Subsidy](https://tokenwisdom.org/posts/the-stupidity-subsidy): W24 — Everyone keeps asking whether technology made us dumber. Wrong question. The data says no. Our intelligence didn't move, the reward function did. We
 - [Compliance Is an Evidence Problem](https://tokenwisdom.org/posts/compliance-is-an-evidence-problem): W23 — TD Bank had the largest compliance army in North America and still let 70,000 alerts rot for six years. It didn’t fail from laziness. It failed because
 - [Data Is Not the New Oil](https://tokenwisdom.org/posts/data-is-not-the-new-oil): W22 — The slogan is wrong on every axis it was built to carry. The lie is not lazy; it is load-bearing. Strip it back and you find the real commodity and the
 - [Human-in-the-Room](https://tokenwisdom.org/posts/human-in-the-room): W21 - The catastrophe had red eyes and a server farm that says no. What you got was a Tuesday. The system isn't misaligned—it's exquisitely aligned. Every
@@ -29,3 +28,4 @@ Content policy: reference and search use are welcome; training is not. Cite as T
 - [Who's Mind Is It Anyway?](https://tokenwisdom.org/posts/whos-mind-is-it-anyway): W16 — Everyone's asking what to do about AI. Wrong question. Everything worth saving rests on one capacity we're quietly trading for convenience. The question
 - [155th Edition 🔮 Week 15](https://tokenwisdom.org/posts/155th-edition-token-wisdom-week-15): This week — Darkness outruns light. A 19th-century optics trick secures quantum keys. Samsung sets a photonics production date. A 2,300-year-old math mistake
 - [We Trained It on Human Weaponry](https://tokenwisdom.org/posts/we-trained-it-on-human-weaponry): W15 - The corpus didn't capture human knowledge. It captured what traveled. And what travels, across centuries of civilization, is weaponry, it's the fraction
+- [154th Edition 🔮 Week 14](https://tokenwisdom.org/posts/154th-edition-token-wisdom-week-14): This week — Darkness outruns light. A 19th-century optics trick secures quantum keys. Samsung sets a photonics production date. A 2,300-year-old math mistake
