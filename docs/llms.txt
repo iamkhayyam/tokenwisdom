@@ -1,13 +1,13 @@
 # Token Wisdom
 
-> The Newsletter of Record for the Future of Now. 251 published editions and essays since 2013, plus a 1,922-term Lexicon of the working vocabulary of the field — every definition written by a human, not generated.
+> The Newsletter of Record for the Future of Now. 251 published editions and essays since 2013, plus a 2,058-term Lexicon of the working vocabulary of the field — every definition written by a human, not generated.
 
 Content policy: reference and search use are welcome; training is not. Cite as Token Wisdom and link the canonical URL. See /robots.txt.
 
 ## Start here
 
 - [Search](https://tokenwisdom.org/search): full-text across every edition and the whole Lexicon.
-- [The Lexicon](https://tokenwisdom.org/lexicon/): 1,922 defined terms, each with its citation history.
+- [The Lexicon](https://tokenwisdom.org/lexicon/): 2,058 defined terms, each with its citation history.
 - [Archive](https://tokenwisdom.org/archive): every edition, dated.
 - [Topics](https://tokenwisdom.org/tags/): the corpus grouped by idea.
 - [Feed](https://tokenwisdom.org/feed.xml): RSS.
