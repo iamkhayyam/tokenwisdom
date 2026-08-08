@@ -4773,49 +4773,62 @@ def main():
 
     # Clean output.
     #
-    # docs/social/ is carried across the wipe instead of being destroyed with
-    # everything else. The cards are rendered by a separate script
-    # (make_social_cards.py, headless Chrome, minutes per run) and committed —
-    # they are *source*, not build output, and this is the only directory under
-    # docs/ that a rebuild cannot reproduce.
+    # Some subdirectories of docs/ can't be correctly reproduced by every
+    # machine that might run this build, so they're carried across the wipe
+    # instead of being destroyed with everything else:
     #
-    # The ordering matters and is the whole point: post_social_card_url() picks
-    # each post's og:image by testing whether docs/social/posts/<slug>.png is on
-    # disk *at render time*. With a plain rmtree the cards were always absent
-    # during rendering, so all 795 card references silently fell back to
-    # og-default.png on every single build — locally and in the Ghost rebuild
-    # workflow alike. Moving them aside and putting them back before any page is
-    # rendered is what keeps per-post OG images correct.
-    social_dir = DOCS_DIR / "social"
-    social_stash = BACKUP_DIR / ".social_stash"
+    #   social/    cards are rendered by a separate script (make_social_cards.py,
+    #              headless Chrome) and committed — they're source, not build
+    #              output. post_social_card_url() picks each post's og:image by
+    #              testing whether the file is on disk *at render time*, so with
+    #              a plain rmtree the cards were always absent during rendering
+    #              and every card reference silently fell back to
+    #              og-default.png — on every build, local and CI alike.
+    #
+    #   lexicon/   the full Lexicon (2058 terms, 81 editions) depends on 9
+    #              gap-filling PDFs that exist ONLY on the machine that
+    #              originally curated them — deliberately never committed, they
+    #              were sourced for editorial direction, not as a build input
+    #              other machines should have to satisfy. lexicon.build() is
+    #              only called below when lexicon.PDF_DIR exists; everywhere
+    #              else (including every CI runner) this stash is what keeps
+    #              the last real build's term pages in place instead of
+    #              silently shrinking. This is not a hypothetical: an automated
+    #              CI rebuild did exactly that once, deleting ~130 live pages
+    #              because its build had no PDFs and nothing preserved the gap.
+    stash_specs = [("social", DOCS_DIR / "social", BACKUP_DIR / ".social_stash"),
+                   ("lexicon", DOCS_DIR / "lexicon", BACKUP_DIR / ".lexicon_stash")]
 
-    # Recover first. If an earlier run died in the narrow window between the
-    # move-out and the move-back, the cards are sitting in the stash and docs/
-    # has none — take the stash as the source of truth rather than deleting it.
-    if social_stash.exists() and not social_dir.exists():
-        DOCS_DIR.mkdir(exist_ok=True)
-        shutil.move(str(social_stash), str(social_dir))
-        print("  recovered social cards from an interrupted run")
-    elif social_stash.exists():
-        shutil.rmtree(social_stash)  # stale; docs/social/ is authoritative
+    stashed = []
+    for name, live_dir, stash_dir in stash_specs:
+        # Recover first. If an earlier run died in the narrow window between
+        # the move-out and the move-back, the content is sitting in the stash
+        # and docs/ has none — take the stash as the source of truth rather
+        # than deleting it.
+        if stash_dir.exists() and not live_dir.exists():
+            DOCS_DIR.mkdir(exist_ok=True)
+            shutil.move(str(stash_dir), str(live_dir))
+            print(f"  recovered {name}/ from an interrupted run")
+        elif stash_dir.exists():
+            shutil.rmtree(stash_dir)  # stale; the live dir is authoritative
 
-    stashed = False
-    if social_dir.exists():
-        shutil.move(str(social_dir), str(social_stash))
-        stashed = True
+        if live_dir.exists():
+            shutil.move(str(live_dir), str(stash_dir))
+            stashed.append((name, live_dir, stash_dir))
 
     try:
         if DOCS_DIR.exists():
             shutil.rmtree(DOCS_DIR)
         DOCS_DIR.mkdir()
     finally:
-        # Always put them back, even if the wipe raised — never strand the one
-        # directory here that a rebuild can't regenerate.
-        if stashed:
+        # Always put them back, even if the wipe raised — never strand a
+        # directory a rebuild can't (or, for lexicon/, might not be able to)
+        # regenerate.
+        for name, live_dir, stash_dir in stashed:
             DOCS_DIR.mkdir(exist_ok=True)
-            shutil.move(str(social_stash), str(social_dir))
-            n_cards = sum(1 for f in social_dir.rglob("*") if f.is_file())
-            print(f"  {n_cards} social cards preserved across rebuild")
+            shutil.move(str(stash_dir), str(live_dir))
+            n = sum(1 for f in live_dir.rglob("*") if f.is_file())
+            print(f"  {n} {name} files preserved across rebuild")
 
     (DOCS_DIR / "posts").mkdir()
     (DOCS_DIR / "tags").mkdir()
@@ -4905,12 +4918,32 @@ def main():
     # The Lexicon — living glossary built from the corpus
     print("Lexicon…")
     import lexicon
-    lex_ctx = {
-        "posts_count": posts_count, "tags_count": tags_count,
-        "years_span": years_span, "top_tags": top_tags,
-        "now": datetime.now().strftime("%Y-%m-%d"),
-    }
-    lexicon.build(posts, lex_ctx, __import__("sys").modules[__name__])
+    if lexicon.PDF_DIR.exists():
+        lex_ctx = {
+            "posts_count": posts_count, "tags_count": tags_count,
+            "years_span": years_span, "top_tags": top_tags,
+            "now": datetime.now().strftime("%Y-%m-%d"),
+        }
+        lexicon.build(posts, lex_ctx, __import__("sys").modules[__name__])
+    else:
+        # lexicon.PDF_DIR is an external drive with 9 gap-filling PDFs that
+        # exist on exactly one machine — curated as editorial direction, never
+        # meant to be a build dependency other machines (including every CI
+        # runner) have to satisfy. Without them the harvest is real but
+        # structurally smaller (1922 terms/74 editions vs. 2058/81), and this
+        # function's caller already wipes docs/ unconditionally — so silently
+        # calling lexicon.build() here would silently regress the Lexicon on
+        # every machine that doesn't have the drive mounted.
+        #
+        # docs/lexicon/ was already stashed and restored across the wipe above
+        # (see the stash_specs loop), so skipping this call simply leaves the
+        # last real build's ~2058 term pages and data/lexicon.json in place —
+        # unchanged, not regenerated. This is not a hypothetical: an automated
+        # rebuild without this guard once deleted ~130 live term pages in a
+        # single run.
+        n = len(json.loads((DATA_DIR / "lexicon.json").read_text())["terms"])
+        print(f"  [SKIP] PDF source not mounted — keeping the last published "
+              f"Lexicon as-is ({n} terms, not regenerated)")
 
     # The Corpus Report — Feltron-style quantified portrait of the corpus
     print("Corpus Report…")

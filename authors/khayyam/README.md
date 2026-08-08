@@ -1,9 +1,10 @@
 # 🌶️ @iamkhayyam
 
 
-## Posts (283)
+## Posts (284)
 
 - [del.icio.us Was Right. It Was Just Twenty Years Too Early.](https://ghost-production-198e.up.railway.app/del-icio-us-was-right-we-built-claudacious/) (2026-06-23)
+- [Compliance Is an Evidence Problem](https://ghost-production-198e.up.railway.app/compliance-is-an-evidence-problem/) (2026-06-04)
 - [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)

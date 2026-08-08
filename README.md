@@ -1,18 +1,18 @@
 # Ghost Blog Backup: https://ghost-production-198e.up.railway.app
 
-**Backup Date:** 2026-07-10T23:04:58.480201
+**Backup Date:** 2026-08-07T18:08:10.218067
 
 ## Summary
 
 | Resource | Count |
 |----------|-------|
-| Posts | 283 |
+| Posts | 284 |
 | Pages | 15 |
 | Tags | 86 |
 | Authors | 1 |
 | Tag Images | 83 |
 | Author Images | 2 |
-| Post Images | 2861 |
+| Post Images | 2864 |
 
 ## Directory Structure
 
@@ -141,14 +141,15 @@ ghost-io-backup/
 - **[XR (Pirate Talk)](tags/pirate-talk/)** (6 posts)
 - **[✨ Pearls of Wisdom](tags/worthafortune/)** (85 posts)
 - **[🎉 Newest / Latest](tags/newestlatest/)** (12 posts)
-- **[👁️ A Closer Look](tags/a-closer-look/)** (127 posts)
+- **[👁️ A Closer Look](tags/a-closer-look/)** (128 posts)
 - **[📣 Ask Me Anything](tags/ask-me-anything/)** (1 posts)
 - **[📺 Time Well Spent](tags/timewellspent/)** (12 posts)
 - **[🚨 OP-ED](tags/opinionated-editorials/)** (50 posts)
 
-## All Posts (283)
+## All Posts (284)
 
 - **[del.icio.us Was Right. It Was Just Twenty Years Too Early.](posts/del-icio-us-was-right-we-built-claudacious/)** (2026-06-23) [#unlisted]
+- **[Compliance Is an Evidence Problem](posts/compliance-is-an-evidence-problem/)** (2026-06-04) [👁️ A Closer Look]
 - **[Data Is Not the New Oil](posts/data-is-not-the-new-oil/)** (2026-05-28) [All the Data, Economic  ≠, Big Tech, Semiconductor, Provenance, Privacy, A.I. (and Subsets), Ethics \ Principles, Persuasion, 👁️ A Closer Look]
 - **[Human-in-the-Room](posts/human-in-the-room/)** (2026-05-21) [Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look]
 - **[The Proof Was Never the Point](posts/the-proof-was-never-the-point/)** (2026-05-15) [Philosophical, Deep Tech, Educate \ Learn, Challenges, Ethics \ Principles, Technology, Neuroscience, Lessons Learned, Math + Physics, 👁️ A Closer Look, #Import 2026-07-03 20:09]
@@ -452,4 +453,4 @@ ghost-io-backup/
 
 ## All Authors (1)
 
-- **[🌶️ @iamkhayyam](authors/khayyam/)** (283 posts)
+- **[🌶️ @iamkhayyam](authors/khayyam/)** (284 posts)

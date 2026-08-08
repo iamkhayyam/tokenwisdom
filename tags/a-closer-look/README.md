@@ -11,8 +11,9 @@ A weekly essay from a bucket of topics consisting of all things blockchain, arti
 **Feature Image:** https://ghost-production-198e.up.railway.app/content/images/2024/02/aCloserLook-1.gif
 **Local Image:** `images/tags/a-closer-look_feature__aCloserLook-1.gif`
 
-## Posts (127)
+## Posts (128)
 
+- [Compliance Is an Evidence Problem](https://ghost-production-198e.up.railway.app/compliance-is-an-evidence-problem/) (2026-06-04)
 - [Data Is Not the New Oil](https://ghost-production-198e.up.railway.app/data-is-not-the-new-oil/) (2026-05-28)
 - [Human-in-the-Room](https://ghost-production-198e.up.railway.app/human-in-the-room/) (2026-05-21)
 - [The Proof Was Never the Point](https://ghost-production-198e.up.railway.app/the-proof-was-never-the-point/) (2026-05-15)

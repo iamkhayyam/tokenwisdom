@@ -14,29 +14,6 @@
   "custom_excerpt": "In 2003, del.icio.us proved that human curation beats algorithmic ranking. Then Yahoo bought it, the feed arrived, and we forgot. We didn't forget. We built Claudacious—social bookmarking with a real Claude reading every link you save. Here's everything that went into it.",
   "canonical_url": null,
   "comment_id": "6a4824217d31280001f508a0",
-  "tags": [
-    {
-      "id": "6a4816f97d31280001f4f9d3",
-      "name": "#unlisted",
-      "slug": "hash-unlisted",
-      "description": null,
-      "feature_image": null,
-      "visibility": "internal",
-      "og_image": null,
-      "og_title": null,
-      "og_description": null,
-      "twitter_image": null,
-      "twitter_title": null,
-      "twitter_description": null,
-      "meta_title": null,
-      "meta_description": null,
-      "codeinjection_head": null,
-      "codeinjection_foot": null,
-      "canonical_url": null,
-      "accent_color": null,
-      "url": "https://ghost-production-198e.up.railway.app/404/"
-    }
-  ],
   "authors": [
     {
       "id": "1",
@@ -59,6 +36,29 @@
       "meta_title": null,
       "meta_description": null,
       "url": "https://ghost-production-198e.up.railway.app/author/khayyam/"
+    }
+  ],
+  "tags": [
+    {
+      "id": "6a4816f97d31280001f4f9d3",
+      "name": "#unlisted",
+      "slug": "hash-unlisted",
+      "description": null,
+      "feature_image": null,
+      "visibility": "internal",
+      "og_image": null,
+      "og_title": null,
+      "og_description": null,
+      "twitter_image": null,
+      "twitter_title": null,
+      "twitter_description": null,
+      "meta_title": null,
+      "meta_description": null,
+      "codeinjection_head": null,
+      "codeinjection_foot": null,
+      "canonical_url": null,
+      "accent_color": null,
+      "url": "https://ghost-production-198e.up.railway.app/404/"
     }
   ],
   "url": "https://ghost-production-198e.up.railway.app/del-icio-us-was-right-we-built-claudacious/",
