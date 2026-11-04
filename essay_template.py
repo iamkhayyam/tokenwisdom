@@ -880,16 +880,20 @@ def _sample_doc() -> EssayDoc:
         epigraph_cite="Augustus De Morgan · A Budget of Paradoxes, 1872",
         edition_number=153,
         edition_week=23,
-        edition_url="issues/153/",
+        edition_url="posts/153rd-edition-token-wisdom-week-13.html",
         issue_code="ACL.153 · W13 · Mar 26, 2026",
         back_label="← Back to Issue 153",
-        back_url="issues/153/",
+        back_url="posts/153rd-edition-token-wisdom-week-13.html",
     )
 
 
 def main():
     import generate_site as gs
     doc = _sample_doc()
+    # This is a developer demo that re-renders a real essay. Keep it out of search
+    # indexes and the sitemap (seo.py skips noindex pages) so it can't compete
+    # with the actual post as duplicate content.
+    doc.extra_head = '<meta name="robots" content="noindex">'
     out = ROOT / "docs" / "essay-template.html"
     out.write_text(gs.localize_images(render_essay(doc)))
     print(f"Wrote {out}")
