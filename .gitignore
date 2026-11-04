@@ -8,12 +8,14 @@ ghost-webhook/node_modules/
 .env
 *.env
 .dev.vars
-data/.zernio_state.json
 
-# Zernio distribution audit log (grows; state file IS committed)
+# Zernio distribution audit log (grows). The state file, data/.zernio_state.json,
+# is deliberately NOT ignored: it must be committed so CI builds see which posts
+# were already distributed (see DISTRIBUTION.md §2). Ignoring it makes every
+# fresh checkout re-seed and silently never distribute a new post.
 data/zernio_outbox.jsonl
 
-# Algolia indexer sidecar state (mirrors the zernio state pattern)
+# Algolia indexer sidecar state (local-only; tracks objectIDs for deletes)
 data/.algolia_state.json
 
 # Scratch screenshots
