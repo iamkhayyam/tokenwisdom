@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write   # re-arm card-backfill.yml (see first step)
 
 concurrency:
   group: ghost-rebuild
@@ -16,16 +17,29 @@ jobs:
   rebuild:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      # GitHub auto-disables a scheduled workflow after 60 days without a commit
+      # (card-backfill.yml went `disabled_inactivity` on 2026-10-07 after a quiet
+      # stretch), and it stays off until someone notices and clicks Enable. Every
+      # publish comes through here, so re-arm the backstop on each run: a quiet
+      # spell can still disable it, but the next post turns it back on. The
+      # enable endpoint is idempotent (204 whether or not it was disabled), and
+      # this step must never block the publish itself.
+      - name: Re-arm the card-backfill schedule
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X PUT "repos/${GITHUB_REPOSITORY}/actions/workflows/card-backfill.yml/enable"
 
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
       - name: Install Python deps
         run: pip install Pillow
 
-      - uses: browser-actions/setup-chrome@v1
+      - uses: browser-actions/setup-chrome@v2
         id: setup-chrome
 
       - name: Pull latest content from Ghost
