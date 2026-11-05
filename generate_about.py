@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """Generate docs/about/index.html — the Token Wisdom About page."""
 
+import re
+import shutil
 from pathlib import Path
 from tw_theme import page
 
-DOCS = Path(__file__).parent / "docs"
+ROOT = Path(__file__).parent
+DOCS = ROOT / "docs"
 
 ABOUT_CSS = """
 /* Match the shared page width (--w, 1080px) like Links/Lexicon/the rest;
@@ -130,9 +133,28 @@ BODY = """
 """.format(css=ABOUT_CSS)
 
 
+def copy_images():
+    """Copy the images BODY references into docs/content/images/.
+
+    They live in images/posts/ but are NOT in data/post_image_map.json (the Ghost
+    "about" page no longer points at them), so generate_site.copy_local_images()
+    never copies them, and the About page shipped three broken images from the
+    Jul 2026 Ghost migration on. This page owns its assets instead.
+    """
+    dest = DOCS / "content" / "images"
+    dest.mkdir(parents=True, exist_ok=True)
+    for name in sorted(set(re.findall(r'content/images/([^"\'\s)]+)', BODY))):
+        src = ROOT / "images" / "posts" / name
+        if src.exists():
+            shutil.copy2(src, dest / name)
+        else:
+            print(f"  [WARN] About image missing from images/posts/: {name}")
+
+
 def build():
     out_dir = DOCS / "about"
     out_dir.mkdir(exist_ok=True)
+    copy_images()
     html = page("About — Token Wisdom", BODY, prefix="../")
     (out_dir / "index.html").write_text(html)
     print(f"Wrote {out_dir / 'index.html'}")
